@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/brianpage/Documents/Research/Distrubuted_SpMV/main.cpp
+iostream
+-
+cstdlib
+-
+vector
+-
+fstream
+-
+algorithm
+-
+iomanip
+-
+sstream
+-
+mpi.h
+/home/brianpage/Documents/Research/Distrubuted_SpMV/mpi.h
+
