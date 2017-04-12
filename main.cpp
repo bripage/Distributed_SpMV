@@ -80,9 +80,9 @@ int main(int argc, char *argv[]) {
     //**********************************//
 
     // create vectors to hold sparse matrix data once converted to CSR format
-    std::vector<int> csr_row;
-    std::vector<int> csr_col;
-    std::vector<double> csr_data;
+    std::vector<int> csr_row, masterRow;
+    std::vector<int> csr_col, masterCol;
+    std::vector<double> csr_data, masterData;
     int rowCount, colCount, nonZeros;
 
     if (!myId) {
@@ -91,35 +91,88 @@ int main(int argc, char *argv[]) {
     }
 
     // Let everyone know the size of the vectors we will be sending them
-    MPI_Bcast(&rowCount, 1, MPI_INT, 0, MPI_COMM_WORLD);
-    MPI_Bcast(&colCount, 1, MPI_INT, 0, MPI_COMM_WORLD);
-    MPI_Bcast(&nonZeros, 1, MPI_INT, 0, MPI_COMM_WORLD);
+    //MPI_Bcast(&rowCount, 1, MPI_INT, 0, MPI_COMM_WORLD);
+    //MPI_Bcast(&colCount, 1, MPI_INT, 0, MPI_COMM_WORLD);
+    //MPI_Bcast(&nonZeros, 1, MPI_INT, 0, MPI_COMM_WORLD);
 
-    // resize vectors on non master nodes, as they have not yet done this.
-    if (myId) {
-        csr_row.resize(rowCount);
-        csr_col.resize(colCount);
-        csr_data.resize(nonZeros);
+    // create arrays for individual nodes to hold their data.
+    int nodeColCount;
+    int rowsPerNode = rowCount / clusterRows;
+    if (!myId) {
+        std::vector<int> colToSend;
+        std::vector<double> dataToSend;
+        int rowToSend[rowsPerNode];
+
+
+        for (int i = 1; i < processCount; i++) {
+            int count = 0;
+            for (int j = i*rowsPerNode; j < (i+1)*rowsPerNode; j++){
+                for (int k = 0; k < rowsPerNode; k++){
+                    colToSend.push_back(csr_col[csr_row[j]+k]);
+                    dataToSend.push_back(csr_data[csr_row[j]+k]);
+                }
+                rowToSend[count] = csr_row[j] - csr_row[i*rowsPerNode];
+                count++;
+            }
+
+            nodeColCount = colToSend.size();
+
+            MPI_Send(&nodeColCount, 1, MPI_INT, i, 0, MPI_COMM_WORLD);
+            MPI_Send(&rowToSend[0], rowsPerNode, MPI_INT, i, 0, MPI_COMM_WORLD);
+            MPI_Send(&colToSend[0], nodeColCount, MPI_INT, i, 0, MPI_COMM_WORLD);
+            MPI_Send(&dataToSend[0], nodeColCount, MPI_INT, i, 0, MPI_COMM_WORLD);
+
+            colToSend.clear();
+            dataToSend.clear();
+        }
+
+        int count = 0;
+        for (int j = 0; j < rowsPerNode; j++){
+            for (int k = 0; k < rowsPerNode; k++){
+                masterCol.push_back(csr_col[csr_row[j]+k]);
+                masterData.push_back(csr_data[csr_row[j]+k]);
+            }
+            masterRow.push_back(csr_row[j] - csr_row[0]);
+            count++;
+        }
+
+        csr_col.clear();
+        csr_row.clear();
+        csr_data.clear();
     }
+
+    if(myId) {
+        MPI_Recv(&nodeColCount, 1, MPI_INT, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+        csr_col.resize(nodeColCount);
+        csr_data.resize(nodeColCount);
+
+        MPI_Recv(&csr_col, nodeColCount, MPI_INT, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+        MPI_Recv(&csr_data, nodeColCount, MPI_DOUBLE, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+    }
+
+
+
 
     //if (!myId) std::cout << "Broadcasting array data from process myId to all other processes" << std::endl;
     //send data to every cluster node
+    /*
     MPI_Bcast(&csr_row[0], rowCount, MPI_INT, 0, MPI_COMM_WORLD);
     MPI_Bcast(&csr_col[0], colCount, MPI_INT, 0, MPI_COMM_WORLD);
     MPI_Bcast(&csr_data[0], nonZeros, MPI_DOUBLE, 0, MPI_COMM_WORLD);
     MPI_Barrier(MPI_COMM_WORLD);
-
+    */
     int vecElementsPerCol = rowCount / clusterRows;
     int matrixRowsPerNode = rowCount / clusterRows;
-    double *denseVector;
+    double denseVector[rowCount];
     if (!myId) {
-        denseVector = new double[rowCount];
+        //denseVector = new double[rowCount];
 
         for (int i = 0; i < rowCount; i++) {
             denseVector[i] = rand();
         }
     }
 
+    /*
     double denseVecColPiece[vecElementsPerCol];
     //std::cout << "denseVector size = " << rowCount << ", denseVecColPeice size = " << rowsPerCol << std::endl;
     if (myId < clusterRows) {
@@ -137,68 +190,28 @@ int main(int argc, char *argv[]) {
     int myWorkRowStart = myRow * matrixRowsPerNode;
     int myWorkColStart = myCol * vecElementsPerCol;
 
-    if (!myId)std::cout << "myId = " << myId << ", rows = "<<  myWorkRowStart << "-" << myWorkRowStart+matrixRowsPerNode << std::endl;
-    MPI_Barrier(MPI_COMM_WORLD);
-    if (!myId) std::cout << "myId = " << myId << ", col = "<<  myWorkColStart << "-" << myWorkColStart+vecElementsPerCol << std::endl;
-    MPI_Barrier(MPI_COMM_WORLD);
-
-
-    int *myCSR_Row;
-    int *myCSR_Col;
-    double *myCSR_Data;
-/*
-    if (!myId) std::cout << csr_row[0] << std::endl;
-    if (!myId) std::cout << csr_col[0] << std::endl;
-    if (!myId) std::cout << csr_data[0] << std::endl << std::endl << std::endl;
-
-    if (!myId) std::cout << csr_row[1] << std::endl;
-    if (!myId) std::cout << csr_col[1] << std::endl;
-    if (!myId) std::cout << csr_data[1] << std::endl;
-
-    for (int i = 0; i < 2; i++){
-        if (!myId) std::cout << csr_row[i] << std::endl;
-    }
+    std::cout << "myId = " << myId << ", rows = "<<  myWorkRowStart << "-" << myWorkRowStart+matrixRowsPerNode << std::endl;
+    std::cout << "myId = " << myId << ", col = "<<  myWorkColStart << "-" << myWorkColStart+vecElementsPerCol << std::endl;
 */
-
-    myCSR_Row = new int[matrixRowsPerNode];
-    int firstData = csr_row[myWorkRowStart];
-    int lastData = csr_row[myWorkRowStart+matrixRowsPerNode]-1;
-    int numOfElements = lastData-firstData;
-    std::cout << firstData << "-" << lastData << ", numOfElements = " << numOfElements << std::endl;
-    myCSR_Col = new int[numOfElements];
-    myCSR_Data = new double[numOfElements];
-
-    int count = 0;
-    for (int i = myWorkRowStart; i < myWorkRowStart+matrixRowsPerNode; i++){
-        myCSR_Row[count] = csr_row[i];
-        count++;
-    }
-
-    count = 0;
-    for (int i = firstData; i < numOfElements; i++){
-        //std::cout << count << ", " << i << std::endl;
-        myCSR_Col[count] = csr_col[i];
-        myCSR_Data[count] = csr_data[i];
-        count++;
-    }
-
-    int k = 0;
-    double colY[matrixRowsPerNode] = {0.0};
-    for (int i = 0; i < matrixRowsPerNode; i++){
-        int j = 0;
-
-        while ((myCSR_Col[myCSR_Row[i]+j] >= myWorkColStart) &&
-                (myCSR_Row[myCSR_Row[i]+j] <= myWorkColStart+vecElementsPerCol)){
-            std::cout << "colY[" << k << "] += myCSR_Data[" << myCSR_Row[i] << " + "
-                      << j << "] * denseVecColPiece[" << j << "]" << std::endl;
-            colY[k] += myCSR_Data[myCSR_Row[i] + j] * denseVecColPiece[j];
-            j++;
-        }
-        k++;
-    }
-
-
+    MPI_Bcast(&denseVector[0], rowCount, MPI_DOUBLE, 0, MPI_COMM_WORLD);
     MPI_Barrier(MPI_COMM_WORLD);
+
+    double nodeResult[rowsPerNode] = {0.0};
+
+    if(!myId){
+        for (int i = 0; i < rowsPerNode; i++){
+            for (int j = 0; j < nodeColCount; j++){
+                nodeResult[i] += masterData[j] * denseVector[masterCol[j]];
+            }
+        }
+    } else {
+        for (int i = 0; i < rowsPerNode; i++){
+            for (int j = 0; j < nodeColCount; j++){
+                nodeResult[i] += csr_data[j] * denseVector[csr_col[j]];
+            }
+        }
+    }
+
     std::cout << "DONE CALCULATING SHIT" << std::endl;
 /*
     double *rowY;
