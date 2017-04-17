@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/main.cpp" line="381" />
+  </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" buildAllGenerated="true">
     <generated>
       <config projectName="Distrubuted_SpMV" targetName="Distrubuted_SpMV" />
@@ -12,11 +15,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c65b864-9431-4078-9657-58a0aa3c15cb" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/a.out" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main" afterPath="$PROJECT_DIR$/main" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output" afterPath="$PROJECT_DIR$/output" />
     </list>
     <ignored path="Distrubuted_SpMV.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,8 +51,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="367" column="29" lean-forward="true" selection-start-line="367" selection-start-column="29" selection-end-line="367" selection-end-column="29" />
+            <state relative-caret-position="981">
+              <caret line="392" column="87" lean-forward="false" selection-start-line="392" selection-start-column="87" selection-end-line="392" selection-end-column="87" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -360,12 +361,12 @@
       <workItem from="1492137205098" duration="8330000" />
       <workItem from="1492179397513" duration="3923000" />
       <workItem from="1492185972850" duration="20467000" />
-      <workItem from="1492448508338" duration="357000" />
+      <workItem from="1492448508338" duration="3164000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132284000" />
+    <option name="totallyTimeSpent" value="135091000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1922" height="1201" extended-state="6" />
@@ -752,8 +753,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="367" column="29" lean-forward="true" selection-start-line="367" selection-start-column="29" selection-end-line="367" selection-end-column="29" />
+        <state relative-caret-position="981">
+          <caret line="392" column="87" lean-forward="false" selection-start-line="392" selection-start-column="87" selection-end-line="392" selection-end-column="87" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>

@@ -255,7 +255,7 @@ int main(int argc, char *argv[]) {
         //std::cout << myId << "  received data" << std::endl;
     }
 
-    // column masters to send column nodes individual
+    // column masters to send column nodes their individual data
     if (myId < clusterRows) {
         for (int i = 1; i < clusterRows;i++){
             int j = 0;
@@ -324,7 +324,8 @@ int main(int argc, char *argv[]) {
 
     double nodeResult[rowCount/clusterRows] = {0.0};
     if (nodeColCount > 0) { // check if this node has any data to work on at all
-        for (int i = 0; i < csr_row.size(); i++) { // iterate through all rows node is to work on
+        //for (int i = 0; i < csr_row.size(); i++) { // iterate through all rows node is to work on
+        for (int i = 0; i < rowCount/clusterRows; i++) { // iterate through all rows node is to work on
             if (csr_row[i] != -1) { // check is i points to row that has no data on this node
                 if (i == (rowCount/clusterRows) - 1) { // check if i is last row of node
                     for (int j = csr_row[i]; j < csr_col.size(); j++) { // go from last row start to end of data
@@ -376,16 +377,20 @@ int main(int argc, char *argv[]) {
         }
 
         int miscalculations = 0;
-        int zeros = 0;
+        int localZeros = 0, distributedZeros = 0;
         for (int i = 0; i < numToGather; i++){
-            if (masterOnly_SpMV[i] == 0 || SpMVResult[i] == 0) {
-                zeros++;
+            if (SpMVResult[i] == 0.0) {
+                distributedZeros++;
+            }
+            if (masterOnly_SpMV[i] == 0.0) {
+                localZeros++;
             }
             if (SpMVResult[i] != masterOnly_SpMV[i]){
                 miscalculations++;
             }
         }
-        if (zeros) std::cout << "*** " << zeros << " Zeros Value Rows ***" << std::endl;
+        if (localZeros) std::cout << "*** " << localZeros << " Local Zero Value Rows ***" << std::endl;
+        if (distributedZeros) std::cout << "*** " << distributedZeros << " Distributed Zero Value Rows ***" << std::endl;
         if (miscalculations) std::cout << "*** " << miscalculations << " Miscalculations ***" << std::endl;
     }
 
