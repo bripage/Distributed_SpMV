@@ -8,6 +8,7 @@
 #ifndef DISTRUBUTED_SPMV_CLUSTERSPMV_H
 #define DISTRUBUTED_SPMV_CLUSTERSPMV_H
 
-void clusterSpMV(int ompThreads, std::vector<int> csr_row, std::vector<int> csr_col, std::vector<double> csr_data, double *denseVector, double *nodeResult, int rowsPerNode);
+void clusterSpMV(int ompThreads, std::vector<int> csr_row, std::vector<int> csr_col, std::vector<double> csr_data,
+                 double *denseVector, double *nodeResult, int rowsPerNode, bool colMajor);
 
 #endif //DISTRUBUTED_SPMV_CLUSTERSPMV_H

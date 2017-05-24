@@ -4,18 +4,61 @@
 #include <algorithm>
 #include <iomanip>
 #include <sstream>
+#include <iomanip>
 #include "csrClusterSplit.h"
 #include "clusterSpMV.h"
+#include <string>
 
 int main(int argc, char *argv[]) {
 
-    int ompThreads = atoi(argv[2]);
-    std::string argTemp = argv[3];
-    bool masterOnly;
-    if (argTemp == "true"){
-        masterOnly = true;
-    } else {
-        masterOnly = false;
+    std::string argTemp, distributionMethod;
+    bool masterOnly = false, colMajor = false;
+    int ompThreads = 1;
+    char *matrixFile, *vectorFile;
+    for (int i = 1; i < argc; i= i+2){
+        argTemp = argv[i];
+        if (argTemp == "-lm"){
+            // load matrix from file.
+            matrixFile = argv[i+1];
+        } else if (argTemp == "-lv"){
+            // load dense vector from file.
+            vectorFile = argv[i+1];
+        } else if (argTemp == "-s"){
+            //run on MPI master only (no distribution, OpenMP as normal).
+            if (argv[i+1] == "true"){
+                masterOnly = true;
+            }
+        } else if (argTemp == "--distribution-method"){
+            //set number of OpenMP threads per node
+            distributionMethod = argv[i+1];
+        } else if (argTemp == "--major-order") {
+            std::string temp = argv[i + 1];
+            if (temp == "col") {
+                colMajor = true;
+            }
+        } else if (argTemp == "--omp-threads"){
+                //set number of OpenMP threads per node
+                ompThreads = atoi(argv[i+1]);
+        } else if (argTemp == "--help"){
+            std::cout << "Usage: distSpMV [OPTION] <argument> ..." << std::endl << std::endl;
+            std::cout << "Options:" << std::endl;
+            std::cout << " -lm <file>" << std::setw(15) << "" << R"(Load sparse matrix from <file>)" << std::endl;
+            std::cout << " -lv <file>" << std::setw(15) << "" << R"(Load dense vector from <file>)" << std::endl;
+            std::cout << " -s <arg>" << std::setw(15) << "" << R"(Set master only computation. In master only computation no
+            distribution to cluster members will occur, however OpenMP will still operate with the set number of threads
+            per node)" << std::endl;
+
+            std::cout << " --distribution-method <arg>" << std::setw(15) << "" << R"(Set the work distribution
+            algorotithm to be used for partitioning work amongst cluster nodes)" << std::endl;
+            std::cout << " --major-order <arg>" << std::setw(15) << "" << R"(Set the major order of the input matrix, as
+            well as compression and calculations. This application supports both row and col major order. )" << std::endl;
+            std::cout << " --omp-threads <arg>" << std::setw(15) << "" << R"(Set the number of OpenMP threads per node)" << std::endl;
+
+            exit(0);
+        } else {
+            printf("%s Is not a valid parameter. EXITING!\n", argv[i]);
+            exit(0);
+        }
     }
 
     //Initialize the MPI environment
@@ -42,52 +85,52 @@ int main(int argc, char *argv[]) {
         exit(0);
     }
 
-        //**************************************************//
-        //  Create comm for each column of compute nodes    //
-        //**************************************************//
-        // get the number of MPI processes for work split and distribution
-        int clusterRows = sqrt(processCount);
-        int clusterCols = clusterRows; // works becuase cluster is expected to be square
-        int myCol = myId % clusterRows;
+    //**************************************************//
+    //  Create comm for each column of compute nodes    //
+    //**************************************************//
+    // get the number of MPI processes for work split and distribution
+    int clusterRows = sqrt(processCount);
+    int clusterCols = clusterRows; // works becuase cluster is expected to be square
+    int myCol = myId % clusterRows;
 
-        // Create a duplicate of MPI_COMM_WORLD that can be used to split
-        MPI_Comm dupCommWorldCol;
-        MPI_Comm_dup(MPI_COMM_WORLD, &dupCommWorldCol);
+    // Create a duplicate of MPI_COMM_WORLD that can be used to split
+    MPI_Comm dupCommWorldCol;
+    MPI_Comm_dup(MPI_COMM_WORLD, &dupCommWorldCol);
 
-        // Split dupCommWorld into comm's for each node column, based on each processes original myId
-        MPI_Comm col_comm;
-        MPI_Comm_split(dupCommWorldCol, myCol, myId, &col_comm);
+    // Split dupCommWorld into comm's for each node column, based on each processes original myId
+    MPI_Comm col_comm;
+    MPI_Comm_split(dupCommWorldCol, myCol, myId, &col_comm);
 
-        int col_rank, col_size;
-        MPI_Comm_rank(col_comm, &col_rank);
-        MPI_Comm_size(col_comm, &col_size);
+    int col_rank, col_size;
+    MPI_Comm_rank(col_comm, &col_rank);
+    MPI_Comm_size(col_comm, &col_size);
 
-        //printf("WORLD RANK/SIZE: %d/%d \t COL RANK/SIZE: %d/%d\n", myId, processCount, col_rank, col_size);
-        //*************************************//
-        //     End creation of column comms    //
-        //************************************ //
+    //printf("WORLD RANK/SIZE: %d/%d \t COL RANK/SIZE: %d/%d\n", myId, processCount, col_rank, col_size);
+    //*************************************//
+    //     End creation of column comms    //
+    //************************************ //
 
-        //*********************************************//
-        //  Create comm for each row of compute nodes  //
-        //*********************************************//
-        // get the number of MPI processes for work split and distribution
-        int myRow = myId / clusterRows;
-        // Create a duplicate of MPI_COMM_WORLD that can be used to split
-        MPI_Comm dupCommWorldRow;
-        MPI_Comm_dup(MPI_COMM_WORLD, &dupCommWorldRow);
+    //*********************************************//
+    //  Create comm for each row of compute nodes  //
+    //*********************************************//
+    // get the number of MPI processes for work split and distribution
+    int myRow = myId / clusterRows;
+    // Create a duplicate of MPI_COMM_WORLD that can be used to split
+    MPI_Comm dupCommWorldRow;
+    MPI_Comm_dup(MPI_COMM_WORLD, &dupCommWorldRow);
 
-        // Split dupCommWorld into comm's for each node column, based on each processes original myId
-        MPI_Comm row_comm;
-        MPI_Comm_split(dupCommWorldRow, myRow, myId, &row_comm);
+    // Split dupCommWorld into comm's for each node column, based on each processes original myIdhttps://duckduckgo.com/?t=canonical&atb=v53-4__
+    MPI_Comm row_comm;
+    MPI_Comm_split(dupCommWorldRow, myRow, myId, &row_comm);
 
-        int row_rank, row_size;
-        MPI_Comm_rank(row_comm, &row_rank);
-        MPI_Comm_size(row_comm, &row_size);
+    int row_rank, row_size;
+    MPI_Comm_rank(row_comm, &row_rank);
+    MPI_Comm_size(row_comm, &row_size);
 
-        //printf("WORLD RANK/SIZE: %d/%d \t ROW RANK/SIZE: %d/%d\n", myId, processCount, row_rank, row_size);
-        //**********************************//
-        //     End creation of row comms    //
-        //**********************************//
+    //printf("WORLD RANK/SIZE: %d/%d \t ROW RANK/SIZE: %d/%d\n", myId, processCount, row_rank, row_size);
+    //**********************************//
+    //     End creation of row comms    //
+    //**********************************//
 
     // create vectors to hold sparse matrix data once converted to CSR format
     std::vector<int> origin_row, csr_row, colMasterTemp_row, origin_col, csr_col, colMasterTemp_col;
@@ -95,14 +138,13 @@ int main(int argc, char *argv[]) {
     std::vector<std::vector<int> > temp_row,temp_col;
     std::vector<std::vector<double> > temp_data;
 
-
     int rowCount, colCount, nonZeros;
     int colsPerNode;
 
     if(!myId) {
-        csrClusterSplit(argv[1], origin_row, origin_col, origin_data, temp_row, temp_col, temp_data, colMasterTemp_row,
-                        colMasterTemp_col, colMasterTemp_data, rowCount, colCount, nonZeros, colsPerNode, clusterRows,
-                        clusterCols);
+        csrClusterSplit(matrixFile, colMajor, distributionMethod, origin_row, origin_col, origin_data, temp_row,
+                        temp_col, temp_data, colMasterTemp_row, colMasterTemp_col, colMasterTemp_data, rowCount,
+                        colCount, nonZeros, colsPerNode, clusterRows, clusterCols);
 
         //std::cout << "rowCount = " << rowCount << ", nonZeros = " << nonZeros  << std::endl;
         //std::cout << "origin_row.size() = " << origin_row.size() << ", origin_col.size() = " << origin_col.size() << ", origin_data.size() = " << origin_data.size() << std::endl;
@@ -136,12 +178,26 @@ int main(int argc, char *argv[]) {
         for (int i = 0; i < rowCount; i++) {
             temp = 0.0;
             if (i != rowCount - 1) {
-                for (int j = origin_row[i]; j < origin_row[i + 1]; j++) {
-                    temp += origin_data[j] * denseVector[origin_col[j]];
+                if (colMajor) { //col major order selected
+                    for (int j = origin_row[i]; j < origin_row[i + 1]; j++) {   // go to end of current row
+                        // entire row is multiplied by a single dense vector element
+                        temp += origin_data[j] * denseVector[i];
+                    }
+                } else {    // row major order selected
+                    for (int j = origin_row[i]; j < origin_row[i + 1]; j++) {   // go to end of current row
+                        temp += origin_data[j] * denseVector[origin_col[j]];
+                    }
                 }
             } else {
-                for (int j = origin_row[i]; j < origin_data.size(); j++) {
-                    temp += origin_data[j] * denseVector[origin_col[j]];
+                if (colMajor) { //col major order selected
+                    for (int j = origin_row[i]; j < origin_data.size(); j++) {  // go to end of data vector
+                        // entire row is multiplied by a single dense vector element
+                        temp += origin_data[j] * denseVector[i];
+                    }
+                } else {    // row major order selected
+                    for (int j = origin_row[i]; j < origin_data.size(); j++) {  // go to end of data vector
+                        temp += origin_data[j] * denseVector[origin_col[j]];
+                    }
                 }
             }
             masterOnly_SpMV[i] = temp;
@@ -274,7 +330,7 @@ int main(int argc, char *argv[]) {
     }
 
     if (nodeColCount > 0) { // check if this node has any data to work on at all
-        clusterSpMV(ompThreads, csr_row, csr_col, csr_data, denseVector, nodeResult, rowsPerNode);
+        clusterSpMV(ompThreads, csr_row, csr_col, csr_data, denseVector, nodeResult, rowsPerNode, colMajor);
 
         csr_row.clear();
         csr_col.clear();
