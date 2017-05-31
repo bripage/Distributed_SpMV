@@ -12,9 +12,11 @@
 #include <sstream>
 #include <cmath>
 #include <omp.h>
+#include <string>
 #include "mpi.h"
 #include "mm_to_csr.h"
-#include <string>
+#include "nodeTree.h"
+
 
 
 void csrClusterSplit_Overflow(char *filename, bool colMajor, std::string distributionMethod,
@@ -32,9 +34,13 @@ void csrClusterSplit_ElementBalanced(char *filename, bool colMajor, std::string 
                                      std::vector<std::vector<double> >& temp_data, std::vector<int>& colMasterTemp_row,
                                      std::vector<int>& colMasterTemp_col, std::vector<double>& colMasterTemp_data,
                                      int& rowCount, int& colCount, int& nonZeros, int& colsPerNode, int clusterRows,
-                                     int clusterCols, std::vector<std::vector <int> >& nodeRowOwnership);
+                                     int clusterCols, std::vector<std::vector <std::vector <int> > >& nodeRowOwnership);
 
-void balanceDistribution(int processCount, int nodeBalanceElementCount, std::vector<std::vector <int> >& nodeElementCount,
-                         std::vector<std::vector <int> >& nodeRowOwnership);
+void balanceDistribution(int processCount, int nodeBalanceElementCount, std::vector<std::vector <int> >& rowLengths,
+                         std::vector<std::vector <std::vector <int> > >& nodeRowOwnership);
+
+void splitDenseVector_ElementBalanced(std::vector<double> denseVector,
+                                      std::vector<std::vector<double> >& splitDenseVector,
+                                      std::vector<std::vector <std::vector <int> > >& nodeRowOwnership);
 
 #endif //DISTRUBUTED_SPMV_CSRCLUSTERSPLIT_H

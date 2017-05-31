@@ -174,3 +174,27 @@ void clusterSpMV(int ompThreads, std::vector<int> csr_row, std::vector<int> csr_
         }   /* END of omp parallel for  */
     }
 }
+
+void clusterSpMV_ElementBalanced(int ompThreads, std::vector<int> csr_row, std::vector<int> csr_col,
+                                 std::vector<double> csr_data, std::vector<double> denseVector,
+                                 std::vector<double>& nodeResult, bool colMajor){
+
+    int i, j, rowStart, rowEnd, nextValidRow, ompId, firstRow, lastRow;
+
+    for (i = 0; i < csr_row.size(); i++) { // iterate through all rows node is to work on
+        rowStart = csr_row[i];
+        if (i == csr_row.size()-1){
+            rowEnd = csr_data.size();
+        } else {
+            rowEnd = csr_row[i+1];
+        }
+
+        std::cout << "i = " << i << ", rowStart = " << rowStart << ", rowEnd = " << rowEnd << std::endl;
+        for (j = rowStart; j < rowEnd; j++) {
+            nodeResult[i] += csr_data[j] * denseVector[i];
+            std::cout << "nodeResult[" << i << "] += " << csr_data[j] << " * " << denseVector[i] << " --> nodeResult["
+                      << i << "] = " << nodeResult[i] << std::endl;
+        }
+    }
+
+}

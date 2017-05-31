@@ -173,9 +173,9 @@ void MMCOO_to_CSR_colMajor(char *matrixFile, std::vector<int> &csr_row, std::vec
                     line.erase(0, pos + 1);
 
                     if (i == 0) {
-                        tempElement.col = ::atoi(token.c_str()) - 1;    // rows become columns
+                        tempElement.row = ::atoi(token.c_str()) - 1;
                     } else {
-                        tempElement.row = ::atoi(token.c_str()) - 1;    // columns become rows
+                        tempElement.col = ::atoi(token.c_str()) - 1;
                     }
 
                     i++;
@@ -193,26 +193,41 @@ void MMCOO_to_CSR_colMajor(char *matrixFile, std::vector<int> &csr_row, std::vec
     printf("%d rows, %d cols, and %d non-zeros\n", rowCount, colCount, nonZeros);
 
     // sort the vector of elements by row, and then each row, based on column
-    std::stable_sort(elements.begin(), elements.end(), sortByCol);
+    //std::stable_sort(elements.begin(), elements.end(), sortByCol);
 
     // add to csr vectors for use as CSR Format
-    int previousRow = -1;
-    for (i = 0; i < nonZeros; i++) {
-        csr_data.push_back(elements[i].data);
-        csr_col.push_back(elements[i].col);
+    csr_col.resize(nonZeros);
+    csr_data.resize(nonZeros);
+    int rowsAdded = -1;
+    for (int k = 0; k < elements.size(); k++) {
+        std::cout << "k = " << k << std::endl;
 
-        if (previousRow == -1) {
-            csr_row.push_back(elements[i].row);
+        if (k == 0){
+            std::cout << k << ", " << elements[k].col << ", " << elements[k].data << std::endl;
+            csr_row.push_back(k);
+            rowsAdded++;
         } else {
-            if (previousRow == elements[i].row) {
+            if (elements[k].col != elements[k-1].col){
+                std::cout << k << ", " << elements[k].col << ", " << csr_row[rowsAdded-1] << std::endl;
 
-            } else {
-                csr_row.push_back(i);
+                csr_row.push_back(k);
+                rowsAdded++;
             }
         }
 
-        previousRow = elements[i].row;
+        csr_col[k] = elements[k].row;
+        csr_data[k] = elements[k].data;
+        std::cout << "Added " << csr_data[k] << " to row " << csr_row.size()-1 << std::endl;
     }
+
+    for (int k = 0; k < csr_row.size(); k++) {
+        std::cout << csr_row[k] << std::endl;
+    }
+
+    for (int k = 0; k < csr_data.size(); k++) {
+        std::cout << csr_data[k] << std::endl;
+    }
+
 
     if (rowCount != csr_row.size()){
         std::cout << "Actual row count does NOT match reported rowCount" << std::endl;
