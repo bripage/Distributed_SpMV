@@ -15,14 +15,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c65b864-9431-4078-9657-58a0aa3c15cb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeTree.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeTree.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main" afterPath="$PROJECT_DIR$/main" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clusterSpMV.cpp" afterPath="$PROJECT_DIR$/clusterSpMV.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clusterSpMV.h" afterPath="$PROJECT_DIR$/clusterSpMV.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/csrClusterSplit.cpp" afterPath="$PROJECT_DIR$/csrClusterSplit.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/csrClusterSplit.h" afterPath="$PROJECT_DIR$/csrClusterSplit.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mm_to_csr.cpp" afterPath="$PROJECT_DIR$/mm_to_csr.cpp" />
     </list>
@@ -45,11 +41,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2727">
-              <caret line="540" column="14" lean-forward="false" selection-start-line="540" selection-start-column="14" selection-end-line="540" selection-end-column="14" />
+            <state relative-caret-position="486">
+              <caret line="36" column="32" lean-forward="true" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -60,8 +56,8 @@
       <file leaf-file-name="clusterSpMV.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/clusterSpMV.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="864">
-              <caret line="189" column="9" lean-forward="true" selection-start-line="189" selection-start-column="9" selection-end-line="189" selection-end-column="9" />
+            <state relative-caret-position="1575">
+              <caret line="176" column="0" lean-forward="true" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -70,11 +66,9 @@
       <file leaf-file-name="clusterSpMV.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/clusterSpMV.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="65" lean-forward="false" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
-              <folding>
-                <element signature="e#42#59#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="72">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -82,18 +76,20 @@
       <file leaf-file-name="csrClusterSplit.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/csrClusterSplit.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="342">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding>
+                <element signature="e#129#148#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="csrClusterSplit.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="csrClusterSplit.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/csrClusterSplit.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="266" column="28" lean-forward="true" selection-start-line="266" selection-start-column="28" selection-end-line="266" selection-end-column="28" />
+            <state relative-caret-position="2520">
+              <caret line="140" column="57" lean-forward="true" selection-start-line="140" selection-start-column="57" selection-end-line="140" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -102,8 +98,8 @@
       <file leaf-file-name="mm_to_csr.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mm_to_csr.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="485">
-              <caret line="206" column="16" lean-forward="true" selection-start-line="206" selection-start-column="16" selection-end-line="206" selection-end-column="16" />
+            <state relative-caret-position="665">
+              <caret line="219" column="10" lean-forward="false" selection-start-line="219" selection-start-column="10" selection-end-line="219" selection-end-column="10" />
               <folding>
                 <element signature="e#41#60#0" expanded="true" />
               </folding>
@@ -117,7 +113,7 @@
             <state relative-caret-position="342">
               <caret line="19" column="6" lean-forward="false" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
               <folding>
-                <element signature="e#78#97#0" expanded="true" />
+                <element signature="e#78#97#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -153,10 +149,10 @@
         <option value="$PROJECT_DIR$/nodeTree.h" />
         <option value="$PROJECT_DIR$/nodeTree.cpp" />
         <option value="$PROJECT_DIR$/clusterSpMV.h" />
+        <option value="$PROJECT_DIR$/csrClusterSplit.cpp" />
         <option value="$PROJECT_DIR$/mm_to_csr.cpp" />
         <option value="$PROJECT_DIR$/clusterSpMV.cpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
-        <option value="$PROJECT_DIR$/csrClusterSplit.cpp" />
       </list>
     </option>
   </component>
@@ -438,7 +434,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="325901000" />
+    <option name="totallyTimeSpent" value="328716000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1922" height="1201" extended-state="6" />
@@ -530,7 +526,7 @@
         <state relative-caret-position="252">
           <caret line="14" column="51" lean-forward="false" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
           <folding>
-            <element signature="e#78#97#0" expanded="true" />
+            <element signature="e#78#97#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -581,7 +577,7 @@
         <state relative-caret-position="252">
           <caret line="14" column="51" lean-forward="false" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
           <folding>
-            <element signature="e#78#97#0" expanded="true" />
+            <element signature="e#78#97#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -645,7 +641,7 @@
         <state relative-caret-position="252">
           <caret line="14" column="51" lean-forward="false" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
           <folding>
-            <element signature="e#78#97#0" expanded="true" />
+            <element signature="e#78#97#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -682,7 +678,7 @@
         <state relative-caret-position="252">
           <caret line="14" column="51" lean-forward="false" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
           <folding>
-            <element signature="e#78#97#0" expanded="true" />
+            <element signature="e#78#97#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -719,7 +715,7 @@
         <state relative-caret-position="252">
           <caret line="14" column="51" lean-forward="false" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
           <folding>
-            <element signature="e#78#97#0" expanded="true" />
+            <element signature="e#78#97#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -771,7 +767,7 @@
         <state relative-caret-position="342">
           <caret line="19" column="6" lean-forward="false" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
           <folding>
-            <element signature="e#78#97#0" expanded="true" />
+            <element signature="e#78#97#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -794,57 +790,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/csrClusterSplit.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="e#129#148#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/clusterSpMV.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="65" lean-forward="false" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
-          <folding>
-            <element signature="e#42#59#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="72">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mm_to_csr.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="206" column="16" lean-forward="true" selection-start-line="206" selection-start-column="16" selection-end-line="206" selection-end-column="16" />
+        <state relative-caret-position="665">
+          <caret line="219" column="10" lean-forward="false" selection-start-line="219" selection-start-column="10" selection-end-line="219" selection-end-column="10" />
           <folding>
             <element signature="e#41#60#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clusterSpMV.cpp">
+    <entry file="file://$PROJECT_DIR$/csrClusterSplit.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="189" column="9" lean-forward="true" selection-start-line="189" selection-start-column="9" selection-end-line="189" selection-end-column="9" />
+        <state relative-caret-position="2520">
+          <caret line="140" column="57" lean-forward="true" selection-start-line="140" selection-start-column="57" selection-end-line="140" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/csrClusterSplit.h">
+    <entry file="file://$PROJECT_DIR$/clusterSpMV.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="1575">
+          <caret line="176" column="0" lean-forward="true" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2727">
-          <caret line="540" column="14" lean-forward="false" selection-start-line="540" selection-start-column="14" selection-end-line="540" selection-end-column="14" />
+        <state relative-caret-position="486">
+          <caret line="36" column="32" lean-forward="true" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/csrClusterSplit.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="266" column="28" lean-forward="true" selection-start-line="266" selection-start-column="28" selection-end-line="266" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>

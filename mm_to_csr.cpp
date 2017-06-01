@@ -200,15 +200,15 @@ void MMCOO_to_CSR_colMajor(char *matrixFile, std::vector<int> &csr_row, std::vec
     csr_data.resize(nonZeros);
     int rowsAdded = -1;
     for (int k = 0; k < elements.size(); k++) {
-        std::cout << "k = " << k << std::endl;
+        //std::cout << "k = " << k << std::endl;
 
         if (k == 0){
-            std::cout << k << ", " << elements[k].col << ", " << elements[k].data << std::endl;
+            //std::cout << k << ", " << elements[k].col << ", " << elements[k].data << std::endl;
             csr_row.push_back(k);
             rowsAdded++;
         } else {
             if (elements[k].col != elements[k-1].col){
-                std::cout << k << ", " << elements[k].col << ", " << csr_row[rowsAdded-1] << std::endl;
+                //std::cout << k << ", " << elements[k].col << ", " << csr_row[rowsAdded-1] << std::endl;
 
                 csr_row.push_back(k);
                 rowsAdded++;
@@ -217,9 +217,10 @@ void MMCOO_to_CSR_colMajor(char *matrixFile, std::vector<int> &csr_row, std::vec
 
         csr_col[k] = elements[k].row;
         csr_data[k] = elements[k].data;
-        std::cout << "Added " << csr_data[k] << " to row " << csr_row.size()-1 << std::endl;
+        //std::cout << "Added " << csr_data[k] << " to row " << csr_row.size()-1 << std::endl;
     }
 
+    /*
     for (int k = 0; k < csr_row.size(); k++) {
         std::cout << csr_row[k] << std::endl;
     }
@@ -227,7 +228,7 @@ void MMCOO_to_CSR_colMajor(char *matrixFile, std::vector<int> &csr_row, std::vec
     for (int k = 0; k < csr_data.size(); k++) {
         std::cout << csr_data[k] << std::endl;
     }
-
+    */
 
     if (rowCount != csr_row.size()){
         std::cout << "Actual row count does NOT match reported rowCount" << std::endl;

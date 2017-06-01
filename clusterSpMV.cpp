@@ -189,11 +189,11 @@ void clusterSpMV_ElementBalanced(int ompThreads, std::vector<int> csr_row, std::
             rowEnd = csr_row[i+1];
         }
 
-        std::cout << "i = " << i << ", rowStart = " << rowStart << ", rowEnd = " << rowEnd << std::endl;
+        //std::cout << "i = " << i << ", rowStart = " << rowStart << ", rowEnd = " << rowEnd << std::endl;
         for (j = rowStart; j < rowEnd; j++) {
             nodeResult[i] += csr_data[j] * denseVector[i];
-            std::cout << "nodeResult[" << i << "] += " << csr_data[j] << " * " << denseVector[i] << " --> nodeResult["
-                      << i << "] = " << nodeResult[i] << std::endl;
+            //std::cout << "nodeResult[" << i << "] += " << csr_data[j] << " * " << denseVector[i] << " --> nodeResult["
+            //          << i << "] = " << nodeResult[i] << std::endl;
         }
     }
 

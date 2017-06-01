@@ -109,6 +109,7 @@ void csrClusterSplit_ElementBalanced(char *matrixFile, bool colMajor, std::strin
         MMCOO_to_CSR(matrixFile, origin_row, origin_col, origin_data, rowCount, colCount, nonZeros);
     }
 
+    /*
     // out put converted format
     for (int i = 0; i < rowCount; i++){
         std::cout << "Row " << i << ": ";
@@ -123,6 +124,7 @@ void csrClusterSplit_ElementBalanced(char *matrixFile, bool colMajor, std::strin
         }
         std::cout << std::endl;
     }
+    */
 
     colsPerNode = rowCount / clusterRows;
     int rowOverFlow = rowCount % colsPerNode;
@@ -132,7 +134,7 @@ void csrClusterSplit_ElementBalanced(char *matrixFile, bool colMajor, std::strin
 
     std::vector<std::vector <int> > rowLengths;
     int elementCount = 0;
-    std::cout << "about to add rows to rowLengths vector" << std::endl;
+    //std::cout << "about to add rows to rowLengths vector" << std::endl;
     for (int i = 0; i < rowCount; i++){
         std::vector<int> temp(3);
         if(i == rowCount-1){
@@ -148,13 +150,14 @@ void csrClusterSplit_ElementBalanced(char *matrixFile, bool colMajor, std::strin
         elementCount += temp[0];
     }
 
+    /*
     for (int i = 0; i < rowLengths.size(); i++){
         std::cout << "Row " << rowLengths[i][1] << " has " << rowLengths[i][0] << " elements and starts at "
                   << rowLengths[i][2] << std::endl;
     }
-
+    */
     balanceDistribution(processCount, nodeBalanceElementCount, rowLengths, nodeRowOwnership);
-
+    /*
     for (int i = 0; i < rowLengths.size(); i++){
         std::cout << "Row " << rowLengths[i][1] << " has " << rowLengths[i][0] << " elements and starts at "
                   << rowLengths[i][2] << std::endl;
@@ -180,6 +183,7 @@ void csrClusterSplit_ElementBalanced(char *matrixFile, bool colMajor, std::strin
     }
     std::cout << std::endl;
     std::cout << std::endl;
+    */
 
     // add rows and elements to the proper temp vectors
     for (int i = 0; i < processCount; i++) {
@@ -203,8 +207,8 @@ void csrClusterSplit_ElementBalanced(char *matrixFile, bool colMajor, std::strin
             //}
 
             for (int k = start; k < stop; k++){
-                std::cout << "i = " << i << ", j = " << j << ", k = " << k << ", start = " << start << ", stop = " << stop
-                          << std::endl;
+                //std::cout << "i = " << i << ", j = " << j << ", k = " << k << ", start = " << start << ", stop = " << stop
+                //          << std::endl;
                 cols.push_back(origin_col[k]);
                 data.push_back(origin_data[k]);
             }
@@ -219,8 +223,8 @@ void csrClusterSplit_ElementBalanced(char *matrixFile, bool colMajor, std::strin
 void balanceDistribution(int processCount, int nodeBalanceElementCount, std::vector<std::vector <int> >& rowLengths,
                          std::vector<std::vector <std::vector <int> > >& tempPacking){
 
-    std::cout << "Inside balanceDitribution()" << std::endl;
-    std::cout << "rowlenghts.size() = " << rowLengths.size() << std::endl;
+    //std::cout << "Inside balanceDitribution()" << std::endl;
+    //std::cout << "rowlenghts.size() = " << rowLengths.size() << std::endl;
     //
     // do a bin packing/set partitioning of the rows up to nodeBalanceElementCount. For the bin packing, put the rows
     // into nodeRowOwnership and update the first element of that vector with the sum of the elements given to that node
@@ -312,6 +316,7 @@ void balanceDistribution(int processCount, int nodeBalanceElementCount, std::vec
         rowLengths[rowLengths.size()-(i+1)] = temp;
     }
 
+    /*
     std::cout << std::endl;
     std::cout << std::endl;
     std::cout << "----- RowLengths has the following rows/data -----" << std::endl;
@@ -320,6 +325,8 @@ void balanceDistribution(int processCount, int nodeBalanceElementCount, std::vec
     }
     std::cout << std::endl;
     std::cout << std::endl;
+    */
+
     // we now have rows no larger than nodeBalanceElement's value and the rows have been sorted according to their
     // lengths. Next we want to perform a bin packing in an effort to balance the number of elements as evenly as
     // possible across all nodes in the cluster
@@ -356,7 +363,7 @@ void balanceDistribution(int processCount, int nodeBalanceElementCount, std::vec
         tempPacking.push_back(temp2dVec);
     }
 
-    std::cout << 1 << std::endl;
+    //std::cout << 1 << std::endl;
 /*
 
     // Greedy set partitioning using AVL tree to keep track of total elements assigned to each node as we assign rows or
@@ -405,7 +412,7 @@ void balanceDistribution(int processCount, int nodeBalanceElementCount, std::vec
 */
 
     int nodeAssignment;
-    std::cout << 3 << std::endl;
+    //std::cout << 3 << std::endl;
     for (int i = 0; i < rowLengths.size(); i++){
         //std::cout << "i = " << i << std::endl;
 
@@ -426,6 +433,7 @@ void balanceDistribution(int processCount, int nodeBalanceElementCount, std::vec
         //std::cout << 8 << std::endl;
     }
 
+    /*
     std::cout << std::endl;
     std::cout << std::endl;
     std::cout << "----- TempPacking Layout -----" << std::endl;
@@ -439,7 +447,7 @@ void balanceDistribution(int processCount, int nodeBalanceElementCount, std::vec
     }
     std::cout << std::endl;
     std::cout << std::endl;
-
+    */
 }
 
 void splitDenseVector_ElementBalanced(std::vector<double> denseVector,

@@ -404,7 +404,13 @@ int main(int argc, char *argv[]) {
             }
 
             splitDenseVector_ElementBalanced(denseVector, splitDenseVector, nodeRowOwnership);
+
+            std::cout << "Distribution of non-zero elements:" << std::endl;
+            for (int i = 0; i < processCount; i++){
+                std::cout << "Node " << i << ": " << nodeRowOwnership[i][0][0] << std::endl;
+            }
         }
+
 
         // perform SpMV on master only, without any segmentation or distribution
         // for verification purposes.
@@ -481,6 +487,7 @@ int main(int argc, char *argv[]) {
             splitDenseVector.clear();
         }
 
+        /*
         if(!myId){
             // out put converted format
             std::cout << std::endl;
@@ -502,6 +509,7 @@ int main(int argc, char *argv[]) {
             std::cout << std::endl;
             std::cout << std::endl;
         }
+        */
 
         if (myId) {
             //std::cout << "Non-master " << myId << " about to read data " << std::endl;
@@ -550,8 +558,7 @@ int main(int argc, char *argv[]) {
             clusterResults.push_back(nodeResult);
 
             for (int i = 1; i < processCount; i++){
-                //std::cout << "Read results from " << myId << std::endl;
-
+                std::cout << "Read results from " << myId << std::endl;
                 std::vector<double> tempResults(nodeRowOwnership[i][1].size());
                 MPI_Recv(&tempResults[0], nodeRowOwnership[i][1].size(), MPI_DOUBLE, i, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
                 clusterResults.push_back(tempResults);
@@ -574,8 +581,8 @@ int main(int argc, char *argv[]) {
             //  Combine results from slaves and any split rows
             for (int i = 0; i < processCount; i++) {
                 for (int j = 0; j < nodeRowOwnership[i][1].size(); j++) {
-                    std::cout << "SpMVResult[" << nodeRowOwnership[i][1][j] << "] += clusterResults[" << i << "][" << j
-                              << "]" << std::endl;
+                    //std::cout << "SpMVResult[" << nodeRowOwnership[i][1][j] << "] += clusterResults[" << i << "][" << j
+                    //          << "]" << std::endl;
                     SpMVResult[nodeRowOwnership[i][1][j]] += clusterResults[i][j];
                 }
             }
@@ -591,7 +598,7 @@ int main(int argc, char *argv[]) {
                 if (masterOnly_SpMV[i] == 0.0) {
                     localZeros++;
                 }
-                if (SpMVResult[i] != masterOnly_SpMV[i]) {
+                if (SpMVResult[i] != masterOnly_SpMV[i] || (SpMVResult[i] == 0.0 || masterOnly_SpMV[i] == 0.0)) {
                     std::cout << "row " << i << ": " << SpMVResult[i] << " != " << masterOnly_SpMV[i] << std::endl;
                     miscalculations++;
                 }
@@ -602,11 +609,6 @@ int main(int argc, char *argv[]) {
             if (distributedZeros)
                 std::cout << "*** " << distributedZeros << " Distributed Zero Value Rows ***" << std::endl;
             if (miscalculations) std::cout << "*** " << miscalculations << " Miscalculations ***" << std::endl;
-
-            std::cout << "Distribution of non-zero elements:" << std::endl;
-            for (int i = 0; i < processCount; i++){
-                std::cout << "Node " << i << ": " << nodeRowOwnership[i][0][0] << std::endl;
-            }
         }
     }
 
