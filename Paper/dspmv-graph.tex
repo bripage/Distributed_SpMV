@@ -1,0 +1,55 @@
+\section{Graph Kernels and Benchmarks}\label{sec:sga-graph}
+
+\begin{figure*}\begin{centering}
+\includegraphics{../figures/sga-benchmarks-revised.eps}
+\caption{The Spectrum of Existing kernels.}
+\label{fig:sga-benchmarks}
+\end{centering}\end{figure*}
+
+For this paper we define a \textbf{kernel} as a function that is typical of the kinds of functions that are found in real applications, but simplified in some way. Likewise a \textbf{benchmark} is a collection of one or more kernels applied in a relatively structured way to data sets with well-controlled characteristics, with the goal of using the controlled environment to gain insight into performance characteristics of the underlying system.
+
+In a typical kernel or benchmark today, graph objects are largely defined by  generic vertices and edges of single classes, with at best a few vertex \textbf{properties} (values attached to the vertex) such as in and out-degree, and a few overall graph metrics such as diameter considered. In real applications, there are often many different classes of vertices and/or edges, vertices may have 1000’s of properties, and edges may have time-stamps in addition to properties.
+
+Likewise, academic operations as found in graph kernels are relatively straightforward, with common ones as follows:
+\begin{enumerate}
+\item Compute vertex properties
+\item Search vertex properties
+\item Follow an edge to a neighbor
+\item Determine a neighborhood
+\item Find a path
+\item Look at all paths
+\item Compute global properties of graph
+\item Identify subgraphs in a larger graph
+\end{enumerate}
+
+Algorithms for benchmarking graph analytics are more complex:
+\begin{enumerate}
+\item Search for a/all vertices with a particular property or neighborhood
+\item Explore the region around some number of vertices
+\item Compute a new property for each vertex
+\item Compute/output a list of vertices and/or edges
+\item Compute/output a list of all subgraphs with certain properties
+\end{enumerate}
+
+\textbf{Streaming} graph algorithms come in two forms: perform incremental targeted graph updates or answer a stream of independent local queries. The former typically refer to an incoming stream of edges and/or vertices that are incrementally added to or deleted from a large graph. In the latter, many streaming applications have for each stream input a specification of some vertex to search for, and an operation to perform to some property(ies) of that vertex, once found. 
+
+Either form may actually have several stages. First is the basic operation; next is a test of some sort that, if passed, may trigger larger computations.
+
+Fig. \ref{fig:sga-benchmarks} attempts to provide some comparison between existing kernels (the rows) and current benchmark suites that contain them. The rows in the table specify a variety of kernel operations.
+
+The table has three sets of columns. First is a set of columns that indicate in what general category of graph operations the kernel is part of. Connectedness kernels (CCW, CCS, BFS) look for subsets of the graph whose edges satisfy some property. Path kernels (SSSP, APSP) are a variant of this, and look at aggregations of the properties of the edges that connect certain vertices. Centrality metrics (BC, CD, PR) look for the ``most important'' vertices in a graph, based on some combination of the vertex degrees, length of paths to other vertices, how often vertices are on paths between other vertices, or a derived ``influence'' of each vertex. Clustering kernels (CCO, Jaccard) look for the degree to which groups of vertices ``cluster'' together. Jaccard coefficients \cite{bigdata:bank-cole:jaccard,bigdata:burkhardt:jaccard,kogge-refs:GABB16-Jaccard} are a growing subset of this where for pairs of vertices what is computed is the fraction of all neighboring vertices that the two vertices have in common.  Graph contraction and partitioning kernels (CD, GC, GP) attempt to find higher level views of graphs where vertices are in fact subgraphs of the original graph. Subgraph isomorphism looks for subgraphs of certain shapes, of which triangle counting (GTC, TL) are the most well-known.
+
+It should be clear that in terms of the above kernel classification, many of these kernels ``overlap'' in functionality.
+
+Next is a series of columns that identify benchmark suites, taken from  \cite{bigdata:burkhardt:jaccard,sga-firehose,sga-graph500,sga-graphblas,sga-graphchallenge,sga-gap,sga-graphanalysis,
+kepner-gilbert,sga-stinger}. An ``S'' in an intersection indicates that the specified kernel is used in the associated benchmark in a ``Streaming'' mode; a ``B'' indicates a ``Batch'' mode.
+
+Streaming forms of centrality metrics address questions such as ``if edge e is added, how does it change its associated vertex centrality metrics, and does that cause a change in the ``top n'' vertices in terms of the metric.'' Streaming forms of triangle counting look to identify the change in either/both the associated vertices triangle count or the overall number of triangles in the graph.
+
+Streaming Jaccard coefficient kernels may take both forms of streaming. On addition of an edge, a Jaccard kernel may ask what the graph modification does to the maximum Jaccard coefficient the two vertices may have with any other, or (less frequently) update all the coefficients with all other vertices (infrequent because of the near quadratic storage requirements to remember all coefficients). The second form of streaming for Jaccard may be a sequence of vertices, where for each provided vertex the kernel should return what other vertices have a non-zero Jaccard coefficient (perhaps greater than some threshold).
+
+The third set of columns specify the type of graph modification and/or output that a kernel may form. An ``X'' indicates that a particular kernel may have the specified effect. The ``Output O(*) Events'' columns are particularly relevant to streaming where the local streaming process passes some threshold which causes reporting of an event. The $O(1)$ column specify that some fixed amount of data is generated from each event. The $O(|V|)$ column specifies that an output may grow in size proportional to the number of vertices in the graph. The $O(|V|^*)$ may generate data that grows far faster, but where typically only some ``top k'' values are chosen.
+
+There are other benchmarking efforts that define problems requiring the composition of many of these kernels. VAST\cite{sga-vast} is one such example that changes the problem each year, with recent years including both batch and streaming benchmark descriptions.
+
+The key take-away from this table is that no one kernel is universal, and that there is a significant difference between streaming and batch kernels. This lays the rationale for the next section.

@@ -143,6 +143,9 @@ int main(int argc, char *argv[]) {
     int rowCount, colCount, nonZeros;
     int colsPerNode;
 
+    //***********************************************//
+    //     Select distribution method and actions    //
+    //***********************************************//
     if (distributionMethod == "overflow") {
         if (!myId){
             csrClusterSplit_Overflow(matrixFile, colMajor, distributionMethod, origin_row, origin_col, origin_data,
@@ -155,7 +158,7 @@ int main(int argc, char *argv[]) {
         MPI_Bcast(&rowCount, 1, MPI_INT, 0, MPI_COMM_WORLD); // need this in order to allocate denseVector memory
         MPI_Barrier(MPI_COMM_WORLD);
 
-        std::cout << myId << "creating Dense Vector" << std::endl;
+        //std::cout << myId << "creating Dense Vector" << std::endl;
         double denseVector[rowCount];
         if (!myId) {
             std::cout << "Populating Dense Vector" << std::endl;
@@ -214,6 +217,38 @@ int main(int argc, char *argv[]) {
         int rowsPerNode = rowCount / clusterRows;
 
         if (!myId) {
+            // output the work distribution pattern
+            std::cout << "Distribution of non-zero elements:" << std::endl;
+            //std::cout << "temp.size() = " << temp_data.size() << std::endl;
+            for (int i = 0; i < clusterCols; i++) {
+                std::cout << "Column " << i<< ": " << temp_data[i].size() << " elements assigned" << std::endl;
+                for (int j = 0; j < clusterRows; j++) {
+                    if (temp_data[i].size() == 0) {
+                        std::cout << "\tRow " << j << ": 0" << std::endl;
+                    } else {
+                        int start, stop, k = 0, l = 0;
+                        while (temp_row[i][(j * rowsPerNode) + k] == -1) {
+                            k++;
+                        }
+                        start = temp_row[i][(j * rowsPerNode) + k];
+
+                        if (j == clusterRows - 1) {
+                            stop = temp_data[i].size();
+                        } else {
+                            while (temp_row[i][((j + 1) * rowsPerNode) + l] == -1) {
+                                l++;
+                            }
+                            stop = temp_row[i][((j + 1) * rowsPerNode) + l];
+                        }
+
+                        std::cout << "\tRow " << j << ": " << stop - start << std::endl;
+                    }
+                }
+            }
+            std::cout << std::endl;
+
+
+
             // Send column data to column masters
             for (int i = 1; i < clusterRows; i++) {
                 nodeColCount = temp_data[i].size();
@@ -382,6 +417,9 @@ int main(int argc, char *argv[]) {
                 std::cout << "*** " << distributedZeros << " Distributed Zero Value Rows ***" << std::endl;
             if (miscalculations) std::cout << "*** " << miscalculations << " Miscalculations ***" << std::endl;
         }
+    } else if (distributionMethod == "splitmatrix") {
+
+
 
     } else if (distributionMethod == "colbalanced"){
         double *masterOnly_SpMV, temp;
@@ -395,9 +433,9 @@ int main(int argc, char *argv[]) {
                                             colMasterTemp_col, colMasterTemp_data, rowCount, colCount, nonZeros,
                                             colsPerNode, clusterRows, clusterCols, nodeRowOwnership);
 
-            std::cout << myId << "creating Dense Vector" << std::endl;
+            //std::cout << "Creating Dense Vector" << std::endl;
             if (!myId) {
-                std::cout << "Populating Dense Vector" << std::endl;
+                //std::cout << "Populating Dense Vector" << std::endl;
                 for (int i = 0; i < rowCount; i++) {
                     denseVector.push_back(1.0);
                 }
@@ -557,8 +595,9 @@ int main(int argc, char *argv[]) {
             //copy master's local results into clusterResults
             clusterResults.push_back(nodeResult);
 
+            std::cout << "Read results from " << myId << std::endl;
             for (int i = 1; i < processCount; i++){
-                std::cout << "Read results from " << myId << std::endl;
+                //std::cout << "Read results from " << i << std::endl;
                 std::vector<double> tempResults(nodeRowOwnership[i][1].size());
                 MPI_Recv(&tempResults[0], nodeRowOwnership[i][1].size(), MPI_DOUBLE, i, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
                 clusterResults.push_back(tempResults);

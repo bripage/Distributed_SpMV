@@ -19,6 +19,7 @@ void csrClusterSplit_Overflow(char *matrixFile, bool colMajor, std::string distr
         MMCOO_to_CSR(matrixFile, origin_row, origin_col, origin_data, rowCount, colCount, nonZeros);
     }
 
+/*
     // out put converted format
     for (int i = 0; i < rowCount; i++){
         std::cout << "Row " << i << ": ";
@@ -33,9 +34,28 @@ void csrClusterSplit_Overflow(char *matrixFile, bool colMajor, std::string distr
         }
         std::cout << std::endl;
     }
+*/
+    int maxRowLength = 0, rowLength = 0;
+    for (int i = 0; i < rowCount; i++){
+        int start = origin_row[i], stop = 0;
 
-    colsPerNode = rowCount / clusterRows;
-    int rowOverFlow = rowCount % colsPerNode;
+        if (i == rowCount-1){
+            stop = origin_data.size();
+        } else {
+            stop = origin_row[i+1];
+        }
+
+        rowLength = stop-start;
+
+        if (rowLength > maxRowLength){
+            maxRowLength = rowLength;
+        }
+    }
+    std::cout << "Max Row Length = " << maxRowLength << std::endl;
+
+    //colsPerNode = rowCount / clusterRows;
+    colsPerNode = maxRowLength / clusterCols;
+    //int rowOverFlow = rowCount % colsPerNode;
 
     for (int i = 0; i < clusterCols; i++) {
         std::vector<int> a, b;
@@ -45,7 +65,10 @@ void csrClusterSplit_Overflow(char *matrixFile, bool colMajor, std::string distr
         temp_data.push_back(c);
     }
 
+    std::cout << "Debug 1" << std::endl;
     for (int i = 0; i < rowCount; i++) {
+        std::cout << "i = " << i << std::endl;
+
         int firstData = origin_row[i];
         int lastData, rowElements;
 
@@ -57,25 +80,34 @@ void csrClusterSplit_Overflow(char *matrixFile, bool colMajor, std::string distr
             rowElements = lastData - firstData;
         }
 
-        int maxMatCols = colsPerNode;
-
-        int clusterColsNeeded = rowElements / maxMatCols;
+        std::cout << "Debug 2" << std::endl;
+        int clusterColsNeeded = rowElements / colsPerNode;
         for (int k = 0; k < clusterCols; k++) {
+            std::cout << "k = " << k << std::endl;
             if (k <= clusterColsNeeded) {
                 temp_row[k].push_back(temp_data[k].size());
+                std::cout << "3a" << std::endl;
             } else {
                 temp_row[k].push_back(-1);
+                std::cout << "3b" << std::endl;
             }
         }
+        std::cout << "Debug 4" << std::endl;
+
 
         int count = 0;
         for (int j = firstData; j <= lastData; j++) {
-            temp_data[count / maxMatCols].push_back(origin_data[j]);
-            temp_col[count / maxMatCols].push_back(origin_col[j]);
+            //std::cout << "j = " << j << std::endl;
+            temp_data[count / colsPerNode].push_back(origin_data[j]);
+            //std::cout << "temp_data[" << count/maxMatCols << "] =  origin_data[" << j << "]" << std::endl;
+            temp_col[count / colsPerNode].push_back(origin_col[j]);
+            //std::cout << "temp_col[" << count/maxMatCols << "] =  origin_data[" << j << "]" << std::endl;
             count++;
         }
+
     }
 
+    //std::cout << "Debug 4" << std::endl;
     for (int k = 0; k < temp_data[0].size(); k++) {
         colMasterTemp_data.push_back(temp_data[0][k]);
         colMasterTemp_col.push_back(temp_col[0][k]);
@@ -83,12 +115,14 @@ void csrClusterSplit_Overflow(char *matrixFile, bool colMajor, std::string distr
     for (int k = 0; k < rowCount; k++) {
         colMasterTemp_row.push_back(temp_row[0][k]);
     }
+    //std::cout << "Debug 5" << std::endl;
 
-    //std::cout << "rowCount = " << rowCount << ", nonZeros = " << nonZeros  << std::endl;
+    std::cout << "rowCount = " << rowCount << ", nonZeros = " << nonZeros  << std::endl;
     //std::cout << "origin_row.size() = " << origin_row.size() << ", origin_col.size() = " << origin_col.size() <<
     // ", origin_data.size() = " << origin_data.size() << std::endl;
     //std::cout << "temp_row.size() = " << temp_row.size() << ", temp_col.size() = " << temp_col.size()
     // << ", temp_data.size() = " << temp_data.size() << std::endl;
+
 }
 
 void csrClusterSplit_ElementBalanced(char *matrixFile, bool colMajor, std::string distributionMethod, int processCount,
@@ -150,40 +184,8 @@ void csrClusterSplit_ElementBalanced(char *matrixFile, bool colMajor, std::strin
         elementCount += temp[0];
     }
 
-    /*
-    for (int i = 0; i < rowLengths.size(); i++){
-        std::cout << "Row " << rowLengths[i][1] << " has " << rowLengths[i][0] << " elements and starts at "
-                  << rowLengths[i][2] << std::endl;
-    }
-    */
+    // find the balanced element distribution for the given cluster and matrix size
     balanceDistribution(processCount, nodeBalanceElementCount, rowLengths, nodeRowOwnership);
-    /*
-    for (int i = 0; i < rowLengths.size(); i++){
-        std::cout << "Row " << rowLengths[i][1] << " has " << rowLengths[i][0] << " elements and starts at "
-                  << rowLengths[i][2] << std::endl;
-    }
-
-    std::cout << nodeRowOwnership.size() << std::endl;
-    for (int i = 0; i < processCount; i++) {
-        std::cout << nodeRowOwnership[i][1].size() << " rows assigned to " << i << std::endl;
-    }
-
-
-    std::cout << std::endl;
-    std::cout << std::endl;
-    std::cout << "----- nodeRowOwnership Layout -----" << std::endl;
-    for (int i = 0; i < nodeRowOwnership.size(); i++){
-        std::cout << "Process " << i << std::endl;
-        for (int j = 0; j < nodeRowOwnership[i][1].size(); j++){
-            std::cout << "Row " << nodeRowOwnership[i][1][j] << ", length " << nodeRowOwnership[i][2][j]
-                      << " starts at " << nodeRowOwnership[i][3][j] << std::endl;
-        }
-        std::cout << std::endl;
-
-    }
-    std::cout << std::endl;
-    std::cout << std::endl;
-    */
 
     // add rows and elements to the proper temp vectors
     for (int i = 0; i < processCount; i++) {
@@ -225,6 +227,7 @@ void balanceDistribution(int processCount, int nodeBalanceElementCount, std::vec
 
     //std::cout << "Inside balanceDitribution()" << std::endl;
     //std::cout << "rowlenghts.size() = " << rowLengths.size() << std::endl;
+
     //
     // do a bin packing/set partitioning of the rows up to nodeBalanceElementCount. For the bin packing, put the rows
     // into nodeRowOwnership and update the first element of that vector with the sum of the elements given to that node
@@ -232,51 +235,6 @@ void balanceDistribution(int processCount, int nodeBalanceElementCount, std::vec
 
     // If any row exceeds the balanced element count, split the row into smaller chunks. That is, we create new "rows"
     // such that their contents are the separate chunks of the original row.
-    /*
-    int count = 0;
-    for (int i = 0; i < rowLengths.size(); i++){
-        if (rowLengths[i][0] > nodeBalanceElementCount){
-            std::vector<std::vector <int> > splitRow;
-            std::vector <int> temp(3);
-
-            int splitCount =  rowLengths.size()/nodeBalanceElementCount;
-            if (splitCount > 1) {
-                for (int j = 0; j < splitCount; j++) {
-                    if (j == splitCount-1){
-                        temp[0] = rowLengths.size() % nodeBalanceElementCount; // last split gets overflow
-                    } else {
-                        temp[0] = nodeBalanceElementCount;
-                    }
-                    temp[1] = rowLengths[i][1];
-                    //temp[2] = j*nodeBalanceElementCount;
-                    temp[2] = count;
-                    rowLengths.push_back(temp);
-                    count += temp[0];
-                }
-                rowLengths[i][0] = nodeBalanceElementCount; // original row gets new length
-                count += rowLengths.size() % nodeBalanceElementCount;
-            } else {
-                temp[0] = rowLengths[i][0] - nodeBalanceElementCount;   // give split row the overflow
-                temp[1] = rowLengths[i][1]; // make sure new split row has the same row number
-                temp[2] = count;
-                rowLengths.push_back(temp);
-
-                rowLengths[i][0] = nodeBalanceElementCount; // original row gets new length
-                count += temp[0];
-            }
-        } else {
-            std::vector <int> temp(3);
-            temp[0] = rowLengths[i][0] - nodeBalanceElementCount;   // give split row the overflow
-            temp[1] = rowLengths[i][1]; // make sure new split row has the same row number
-            temp[2] = count;
-            rowLengths.push_back(temp);
-
-            rowLengths[i][0] = nodeBalanceElementCount; // original row gets new length
-            count += temp[0];
-        }
-    }
-    */
-
     for (int i = 0; i < rowLengths.size(); i++){
         if (rowLengths[i][0] > nodeBalanceElementCount){
             std::vector <int> temp(3);
@@ -294,14 +252,11 @@ void balanceDistribution(int processCount, int nodeBalanceElementCount, std::vec
                     temp[2] = rowStart +(j*nodeBalanceElementCount);
                     rowLengths.push_back(temp);
                 }
-                //rowLengths[i][0] = nodeBalanceElementCount; // original row gets new length
             } else {
                 temp[0] = rowLengths[i][0] - nodeBalanceElementCount;   // give split row the overflow
                 temp[1] = rowLengths[i][1]; // make sure new split row has the same row number
                 temp[2] = rowStart + nodeBalanceElementCount;
                 rowLengths.push_back(temp);
-
-                //rowLengths[i][0] = rowStart + nodeBalanceElementCount; // original row gets new length
             }
         }
     }
