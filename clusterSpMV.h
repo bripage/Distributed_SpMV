@@ -11,6 +11,10 @@
 void clusterSpMV(int ompThreads, std::vector<int> csr_row, std::vector<int> csr_col, std::vector<double> csr_data,
                  double *denseVector, double *nodeResult, int rowsPerNode, bool colMajor);
 
+void clusterSpMV_SplitMatrix(int ompThreads, std::vector<int> csr_row, std::vector<int> csr_col,
+                             std::vector<double> csr_data, std::vector<double> denseVector,
+                             std::vector<double>& nodeResult, bool colMajor);
+
 void clusterSpMV_ElementBalanced(int ompThreads, std::vector<int> csr_row, std::vector<int> csr_col,
                                  std::vector<double> csr_data, std::vector<double> denseVector,
                                  std::vector<double>& nodeResult, bool colMajor);

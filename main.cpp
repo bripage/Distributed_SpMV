@@ -7,6 +7,7 @@
 #include <iomanip>
 #include "csrClusterSplit.h"
 #include "clusterSpMV.h"
+#include "mm_to_csr.h"
 #include <string>
 
 int main(int argc, char *argv[]) {
@@ -135,110 +136,111 @@ int main(int argc, char *argv[]) {
     //**********************************//
 
     // create vectors to hold sparse matrix data once converted to CSR format
-    std::vector<int> origin_row, csr_row, colMasterTemp_row, origin_col, csr_col, colMasterTemp_col;
-    std::vector<double> origin_data, csr_data, colMasterTemp_data;
-    std::vector<std::vector<int> > temp_row, temp_col;
-    std::vector<std::vector<double> > temp_data;
+    std::vector<int> origin_row, csr_row, origin_col, csr_col;
+    std::vector<double> origin_data, csr_data;
+    std::vector<std::vector<int> > temp_row, temp_col,colMasterTemp_row, colMasterTemp_col;
+    std::vector<std::vector<double> > temp_data, colMasterTemp_data;
+
+    double *masterOnly_SpMV, temp;
+    std::vector<double> denseVector;
 
     int rowCount, colCount, nonZeros;
     int colsPerNode;
 
+    if (!myId) {
+        //convert sparse matrix from Matrix Market to Compressed Sparse Row format
+        if (colMajor) {
+            std::cout << "*** Using column major order of input matrix ***" << std::endl;
+            MMCOO_to_CSR_colMajor(matrixFile, origin_row, origin_col, origin_data, rowCount, colCount, nonZeros);
+        } else {
+            MMCOO_to_CSR(matrixFile, origin_row, origin_col, origin_data, rowCount, colCount, nonZeros);
+        }
+
+        //std::cout << "Creating Dense Vector" << std::endl;
+        if (!myId) {
+            //std::cout << "Populating Dense Vector" << std::endl;
+            for (int i = 0; i < rowCount; i++) {
+                denseVector.push_back(1.0);
+            }
+        }
+
+        std::cout << "Performing Master Only SpMV" << std::endl;
+        masterOnly_SpMV = new double[rowCount];
+        for (int i = 0; i < rowCount; i++) {
+            temp = 0.0;
+            if (i != rowCount - 1) {
+                if (colMajor) { //col major order selected
+                    for (int j = origin_row[i]; j < origin_row[i + 1]; j++) {   // go to end of current row
+                        // entire row is multiplied by a single dense vector element
+                        temp += origin_data[j] * denseVector[i];
+                    }
+                } else {    // row major order selected
+                    for (int j = origin_row[i]; j < origin_row[i + 1]; j++) {   // go to end of current row
+                        temp += origin_data[j] * denseVector[origin_col[j]];
+                    }
+                }
+            } else {
+                if (colMajor) { //col major order selected
+                    for (int j = origin_row[i]; j < origin_data.size(); j++) {  // go to end of data vector
+                        // entire row is multiplied by a single dense vector element
+                        temp += origin_data[j] * denseVector[i];
+                    }
+                } else {    // row major order selected
+                    for (int j = origin_row[i]; j < origin_data.size(); j++) {  // go to end of data vector
+                        temp += origin_data[j] * denseVector[origin_col[j]];
+                    }
+                }
+            }
+            masterOnly_SpMV[i] = temp;
+        }
+    }
+
+
     //***********************************************//
     //     Select distribution method and actions    //
     //***********************************************//
-    if (distributionMethod == "overflow") {
-        if (!myId){
-            csrClusterSplit_Overflow(matrixFile, colMajor, distributionMethod, origin_row, origin_col, origin_data,
-                                     temp_row, temp_col, temp_data, colMasterTemp_row, colMasterTemp_col,
-                                     colMasterTemp_data, rowCount, colCount, nonZeros, colsPerNode, clusterRows,
-                                     clusterCols);
-        }
+    MPI_Barrier(MPI_COMM_WORLD);
 
-        MPI_Barrier(MPI_COMM_WORLD);
-        MPI_Bcast(&rowCount, 1, MPI_INT, 0, MPI_COMM_WORLD); // need this in order to allocate denseVector memory
-        MPI_Barrier(MPI_COMM_WORLD);
+    if (distributionMethod == "splitmatrix") {
+        std::vector<std::vector <std::vector <int> > > nodeRowOwnership;
+        std::vector<std::vector <double> > splitDenseVector;
+        int colsLastColumn, colsPerColumn, nodeElementCount, nodeRowCount, colElementCount;
 
-        //std::cout << myId << "creating Dense Vector" << std::endl;
-        double denseVector[rowCount];
         if (!myId) {
-            std::cout << "Populating Dense Vector" << std::endl;
-            for (int i = 0; i < rowCount; i++) {
-                denseVector[i] = 1.0;
-            }
-        }
-
-
-        double *SpMVResult, *masterOnly_SpMV, temp;
-        int elementsPerRow = rowCount / clusterRows;
-        int numToGather = elementsPerRow * clusterRows;
-
-        // perform SpMV on master only, without any segmentation or distribution
-        // for verification purposes.
-        if (!myId) {
-            std::cout << "Performing Master Only SpMV" << std::endl;
-            masterOnly_SpMV = new double[rowCount];
-            for (int i = 0; i < rowCount; i++) {
-                temp = 0.0;
-                if (i != rowCount - 1) {
-                    if (colMajor) { //col major order selected
-                        for (int j = origin_row[i]; j < origin_row[i + 1]; j++) {   // go to end of current row
-                            // entire row is multiplied by a single dense vector element
-                            temp += origin_data[j] * denseVector[i];
-                        }
-                    } else {    // row major order selected
-                        for (int j = origin_row[i]; j < origin_row[i + 1]; j++) {   // go to end of current row
-                            temp += origin_data[j] * denseVector[origin_col[j]];
-                        }
-                    }
-                } else {
-                    if (colMajor) { //col major order selected
-                        for (int j = origin_row[i]; j < origin_data.size(); j++) {  // go to end of data vector
-                            // entire row is multiplied by a single dense vector element
-                            temp += origin_data[j] * denseVector[i];
-                        }
-                    } else {    // row major order selected
-                        for (int j = origin_row[i]; j < origin_data.size(); j++) {  // go to end of data vector
-                            temp += origin_data[j] * denseVector[origin_col[j]];
-                        }
-                    }
-                }
-                masterOnly_SpMV[i] = temp;
+            colsPerColumn = rowCount / clusterCols;
+            if (rowCount % clusterCols != 0) {
+                colsLastColumn = colsPerColumn + (rowCount % clusterCols);
+            } else {
+                colsLastColumn = rowCount / clusterCols;
             }
 
-            origin_row.clear();
-            origin_col.clear();
-            origin_data.clear();
-        }
+            csrClusterSplit_SplitMatrix(matrixFile, colMajor, distributionMethod, origin_row, origin_col, origin_data,
+                                        colMasterTemp_row, colMasterTemp_col, colMasterTemp_data, rowCount, colCount,
+                                        nonZeros, colsPerNode, clusterRows, clusterCols);
 
-        MPI_Barrier(MPI_COMM_WORLD);
 
-        // create arrays for individual nodes to hold their data.
-        int nodeColCount, colRowCount;
-        int rowsPerNode = rowCount / clusterRows;
-
-        if (!myId) {
-            // output the work distribution pattern
             std::cout << "Distribution of non-zero elements:" << std::endl;
             //std::cout << "temp.size() = " << temp_data.size() << std::endl;
             for (int i = 0; i < clusterCols; i++) {
-                std::cout << "Column " << i<< ": " << temp_data[i].size() << " elements assigned" << std::endl;
+                std::cout << "Column " << i << ": " << colMasterTemp_data[i].size() << " elements assigned"
+                          << std::endl;
                 for (int j = 0; j < clusterRows; j++) {
-                    if (temp_data[i].size() == 0) {
+                    if (colMasterTemp_data[i].size() == 0) {
                         std::cout << "\tRow " << j << ": 0" << std::endl;
                     } else {
                         int start, stop, k = 0, l = 0;
-                        while (temp_row[i][(j * rowsPerNode) + k] == -1) {
+                        while (colMasterTemp_row[i][(j * colsPerColumn) + k] == -1) {
                             k++;
                         }
-                        start = temp_row[i][(j * rowsPerNode) + k];
+                        start = colMasterTemp_row[i][(j * colsPerColumn) + k];
 
                         if (j == clusterRows - 1) {
-                            stop = temp_data[i].size();
+                            stop = colMasterTemp_data[i].size();
                         } else {
-                            while (temp_row[i][((j + 1) * rowsPerNode) + l] == -1) {
+                            while (colMasterTemp_row[i][((j + 1) * colsPerColumn) + l] == -1) {
                                 l++;
                             }
-                            stop = temp_row[i][((j + 1) * rowsPerNode) + l];
+                            stop = colMasterTemp_row[i][((j + 1) * colsPerColumn) + l];
                         }
 
                         std::cout << "\tRow " << j << ": " << stop - start << std::endl;
@@ -247,199 +249,55 @@ int main(int argc, char *argv[]) {
             }
             std::cout << std::endl;
 
+            // send column master data to individual column masters
+            for (int i = 1; i < clusterCols; i++) {
+                colElementCount = colMasterTemp_data[i].size(); // how many elements clusterCol i has to work with
+                std::cout << "colElementCount = " <<  colElementCount << std::endl;
+                std::cout << "colMasterTemp_row[" << i << "].size() = " <<  colMasterTemp_row[i].size() << ", rowCount = " << rowCount << std::endl;
 
+                MPI_Send(&colElementCount, 1, MPI_INT, i, 0, row_comm);
+                MPI_Send(&rowCount, 1, MPI_INT, i, 0, row_comm);
+                MPI_Send(&colMasterTemp_row[i][0], rowCount, MPI_INT, i, 0, row_comm);
+                //MPI_Send(&colMasterTemp_col[i][0], colElementCount, MPI_INT, i, 0, row_comm);
+                //MPI_Send(&colMasterTemp_data[i][0], colElementCount, MPI_DOUBLE, i, 0, row_comm);
 
-            // Send column data to column masters
-            for (int i = 1; i < clusterRows; i++) {
-                nodeColCount = temp_data[i].size();
-                colRowCount = temp_row[i].size();
-
-                MPI_Send(&nodeColCount, 1, MPI_INT, i, 0, row_comm);
-                MPI_Send(&colRowCount, 1, MPI_INT, i, 0, row_comm);
-                MPI_Send(&temp_row[i][0], rowCount, MPI_INT, i, 0, row_comm);
-                MPI_Send(&temp_col[i][0], nodeColCount, MPI_INT, i, 0, row_comm);
-                MPI_Send(&temp_data[i][0], nodeColCount, MPI_DOUBLE, i, 0, row_comm);
+                // Dont need to keep this data on the column master once its sent to the proper node!
+                //colMasterTemp_row[i].clear();
+                //colMasterTemp_col[i].clear();
+                //colMasterTemp_data[i].clear();
             }
-
-            for (int i = 0; i < clusterCols; i++) {
-                temp_row[i].clear();
-                temp_col[i].clear();
-                temp_data[i].clear();
-            }
-            temp_row.clear();
-            temp_col.clear();
-            temp_data.clear();
         }
 
         // column masters recieve data from cluster master
         if (myId < clusterRows && myId != 0) {
             std::cout << myId << "column master reading data" << std::endl;
-            MPI_Recv(&nodeColCount, 1, MPI_INT, 0, 0, row_comm, MPI_STATUS_IGNORE);
-            MPI_Recv(&colRowCount, 1, MPI_INT, 0, 0, row_comm, MPI_STATUS_IGNORE);
-            colMasterTemp_col.resize(nodeColCount);
-            colMasterTemp_data.resize(nodeColCount);
-            colMasterTemp_row.resize(colRowCount);
+            MPI_Recv(&colElementCount, 1, MPI_INT, 0, 0, row_comm, MPI_STATUS_IGNORE);  // get number of elements
+            MPI_Recv(&rowCount, 1, MPI_INT, 0, 0, row_comm, MPI_STATUS_IGNORE); // get number of rows (should be all)
 
-            MPI_Recv(&colMasterTemp_row[0], colRowCount, MPI_INT, 0, 0, row_comm, MPI_STATUS_IGNORE);
-            MPI_Recv(&colMasterTemp_col[0], nodeColCount, MPI_INT, 0, 0, row_comm, MPI_STATUS_IGNORE);
-            MPI_Recv(&colMasterTemp_data[0], nodeColCount, MPI_DOUBLE, 0, 0, row_comm, MPI_STATUS_IGNORE);
-        }
+            std::cout << "rowCount = " << rowCount << std::endl;
+            // resize the vectors to allow for the incoming data to be recieved
+            colMasterTemp_col.resize(colElementCount);
+            colMasterTemp_data.resize(colElementCount);
+            colMasterTemp_row.resize(rowCount);
 
-        if (myId < clusterRows) {
-            for (int k = 0; k < rowsPerNode; k++) {
-                csr_row.push_back(csr_data.size());
-
-                for (int l = colMasterTemp_row[k]; l < colMasterTemp_row[k + 1]; l++) {
-                    csr_data.push_back(colMasterTemp_data[l]);
-                    csr_col.push_back(colMasterTemp_col[l]);
-                }
-            }
-        }
-
-        // column masters to send column nodes their individual data
-        if (myId < clusterRows) {
-            for (int i = 1; i < clusterRows; i++) {
-                if (colMasterTemp_data.size() == 0) {
-                    int nothingToSend = 0;
-                    MPI_Send(&nothingToSend, 1, MPI_INT, i, 0, col_comm);
-                } else {
-                    int j = 0;
-                    while (colMasterTemp_row[(i * rowsPerNode) + j] == -1) { ;
-                        j++;
-                    }
-
-                    int firstDataAt = colMasterTemp_row[(i * rowsPerNode) + j];
-                    int lastDataAt;
-                    if (i == clusterRows - 1) {
-                        lastDataAt = colMasterTemp_col.size();
-                    } else {
-                        int k = 0;
-                        while (colMasterTemp_row[((i + 1) * (rowCount / clusterRows)) - k] == -1) {
-                            k++;
-                        }
-                        lastDataAt = colMasterTemp_row[((i + 1) * (rowCount / clusterRows)) - k];
-                    }
-
-                    int numElements = (lastDataAt - firstDataAt);
-                    MPI_Send(&numElements, 1, MPI_INT, i, 0, col_comm);
-
-                    if (numElements > 0) {
-                        MPI_Send(&colMasterTemp_row[i * (rowCount / clusterRows)], rowCount / clusterRows, MPI_INT, i,
-                                 0,
-                                 col_comm);
-                        MPI_Send(&colMasterTemp_col[firstDataAt], numElements, MPI_INT, i, 0, col_comm);
-                        MPI_Send(&colMasterTemp_data[firstDataAt], numElements, MPI_DOUBLE, i, 0, col_comm);
-                    }
-                }
-            }
-
-
-        }
-
-        if (myId >= clusterRows) {
-            std::cout << "Non-master " << myId << " about to read data sent from column master" << std::endl;
-            MPI_Recv(&nodeColCount, 1, MPI_INT, 0, 0, col_comm, MPI_STATUS_IGNORE);
-
-            csr_col.resize(nodeColCount);
-            csr_data.resize(nodeColCount);
-            csr_row.resize(rowCount / clusterRows);
-
-            if (nodeColCount > 0) {
-                MPI_Recv(&csr_row[0], rowCount / clusterRows, MPI_INT, 0, 0, col_comm, MPI_STATUS_IGNORE);
-                MPI_Recv(&csr_col[0], nodeColCount, MPI_INT, 0, 0, col_comm, MPI_STATUS_IGNORE);
-                MPI_Recv(&csr_data[0], nodeColCount, MPI_DOUBLE, 0, 0, col_comm, MPI_STATUS_IGNORE);
-            }
-            std::cout << myId << "  DONE RECIEVING DATA " << std::endl;
+            MPI_Recv(&colMasterTemp_row[0], rowCount, MPI_INT, 0, 0, row_comm, MPI_STATUS_IGNORE);
+            //MPI_Recv(&colMasterTemp_col[0], colElementCount, MPI_INT, 0, 0, row_comm, MPI_STATUS_IGNORE);
+           //MPI_Recv(&colMasterTemp_data[0], colElementCount, MPI_DOUBLE, 0, 0, row_comm, MPI_STATUS_IGNORE);
         }
 
         MPI_Barrier(MPI_COMM_WORLD);
-        if (!myId) std::cout << "Broadcasting dense vector to all nodes" << std::endl;
-        MPI_Bcast(&denseVector[0], rowCount, MPI_DOUBLE, 0, MPI_COMM_WORLD);
-        MPI_Barrier(MPI_COMM_WORLD);
-
-        std::cout << myId << " About to calculate node results" << std::endl;
-
-        double nodeResult[rowsPerNode] = {0.0};
-        if (!myId) {
-            nodeColCount = csr_data.size();
-        }
-
-        if (nodeColCount > 0) { // check if this node has any data to work on at all
-            clusterSpMV(ompThreads, csr_row, csr_col, csr_data, denseVector, nodeResult, rowsPerNode, colMajor);
-
-            csr_row.clear();
-            csr_col.clear();
-            csr_data.clear();
-        }
-
-        std::cout << myId << " - DONE CALCULATING" << std::endl;
-        MPI_Barrier(MPI_COMM_WORLD);
-
-        double *rowResult;
-        if (((myId % clusterRows) == 0) || myId == 0) {
-            rowResult = new double[rowsPerNode];
-        }
-
-        MPI_Reduce(&nodeResult, rowResult, rowsPerNode, MPI_DOUBLE, MPI_SUM, 0, row_comm);
-        if ((myId % clusterRows) == 0) {
-            if (!myId) {
-                SpMVResult = new double[rowCount];
-                std::cout << myId << "Master will gather " << rowsPerNode << " elements from row masters" << std::endl;
-            }
-
-            MPI_Barrier(col_comm);
-            MPI_Gather(&rowResult[0], rowsPerNode, MPI_DOUBLE, &SpMVResult[0], elementsPerRow, MPI_DOUBLE, 0, col_comm);
-        }
-
         MPI_Comm_free(&col_comm);
         MPI_Comm_free(&row_comm);
         MPI_Finalize();
 
-        if (!myId) {
-            int miscalculations = 0;
-            int localZeros = 0, distributedZeros = 0;
-            for (int i = 0; i < rowCount; i++) {
-                if (SpMVResult[i] == 0.0) {
-                    distributedZeros++;
-                }
-                if (masterOnly_SpMV[i] == 0.0) {
-                    localZeros++;
-                }
-                if (SpMVResult[i] != masterOnly_SpMV[i]) {
-                    std::cout << "row " << i << ": " << SpMVResult[i] << " != " << masterOnly_SpMV[i] << std::endl;
-                    miscalculations++;
-                }
-                //std::cout << "row " << i << ": " << SpMVResult[i] << " and  " << masterOnly_SpMV[i] << std::endl;
-            }
-
-            if (localZeros) std::cout << "*** " << localZeros << " Local Zero Value Rows ***" << std::endl;
-            if (distributedZeros)
-                std::cout << "*** " << distributedZeros << " Distributed Zero Value Rows ***" << std::endl;
-            if (miscalculations) std::cout << "*** " << miscalculations << " Miscalculations ***" << std::endl;
-        }
-    } else if (distributionMethod == "splitmatrix") {
-
-
-
     } else if (distributionMethod == "colbalanced"){
-        double *masterOnly_SpMV, temp;
         std::vector<std::vector <std::vector <int> > > nodeRowOwnership;
-        std::vector<double> denseVector;
         std::vector<std::vector <double> > splitDenseVector;
 
         if (!myId) {
             csrClusterSplit_ElementBalanced(matrixFile, colMajor, distributionMethod, processCount, origin_row,
-                                            origin_col, origin_data, temp_row, temp_col, temp_data, colMasterTemp_row,
-                                            colMasterTemp_col, colMasterTemp_data, rowCount, colCount, nonZeros,
-                                            colsPerNode, clusterRows, clusterCols, nodeRowOwnership);
-
-            //std::cout << "Creating Dense Vector" << std::endl;
-            if (!myId) {
-                //std::cout << "Populating Dense Vector" << std::endl;
-                for (int i = 0; i < rowCount; i++) {
-                    denseVector.push_back(1.0);
-                }
-            }
+                                            origin_col, origin_data, temp_row, temp_col, temp_data, rowCount, colCount,
+                                            nonZeros, colsPerNode, clusterRows, clusterCols, nodeRowOwnership);
 
             splitDenseVector_ElementBalanced(denseVector, splitDenseVector, nodeRowOwnership);
 
@@ -453,36 +311,6 @@ int main(int argc, char *argv[]) {
         // perform SpMV on master only, without any segmentation or distribution
         // for verification purposes.
         if (!myId) {
-            std::cout << "Performing Master Only SpMV" << std::endl;
-            masterOnly_SpMV = new double[rowCount];
-            for (int i = 0; i < rowCount; i++) {
-                temp = 0.0;
-                if (i != rowCount - 1) {
-                    if (colMajor) { //col major order selected
-                        for (int j = origin_row[i]; j < origin_row[i + 1]; j++) {   // go to end of current row
-                            // entire row is multiplied by a single dense vector element
-                            temp += origin_data[j] * denseVector[i];
-                        }
-                    } else {    // row major order selected
-                        for (int j = origin_row[i]; j < origin_row[i + 1]; j++) {   // go to end of current row
-                            temp += origin_data[j] * denseVector[origin_col[j]];
-                        }
-                    }
-                } else {
-                    if (colMajor) { //col major order selected
-                        for (int j = origin_row[i]; j < origin_data.size(); j++) {  // go to end of data vector
-                            // entire row is multiplied by a single dense vector element
-                            temp += origin_data[j] * denseVector[i];
-                        }
-                    } else {    // row major order selected
-                        for (int j = origin_row[i]; j < origin_data.size(); j++) {  // go to end of data vector
-                            temp += origin_data[j] * denseVector[origin_col[j]];
-                        }
-                    }
-                }
-                masterOnly_SpMV[i] = temp;
-            }
-
             origin_row.clear();
             origin_col.clear();
             origin_data.clear();

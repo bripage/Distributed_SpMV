@@ -3,6 +3,12 @@
 //
 #include "csrClusterSplit.h"
 
+
+//
+//
+//  Distribute sparse matrix amongst cluster nodes via OVERFLOW Distribution
+//
+//
 void csrClusterSplit_Overflow(char *matrixFile, bool colMajor, std::string distributionMethod,
                               std::vector<int>& origin_row, std::vector<int>& origin_col,
                               std::vector<double>& origin_data, std::vector<std::vector<int> >& temp_row,
@@ -11,15 +17,7 @@ void csrClusterSplit_Overflow(char *matrixFile, bool colMajor, std::string distr
                               std::vector<double>& colMasterTemp_data, int& rowCount, int& colCount, int& nonZeros,
                               int& colsPerNode, int clusterRows, int clusterCols) {
 
-    //convert sparse matrix from Matrix Market to Compressed Sparse Row format
-    if (colMajor) {
-        std::cout << "*** Using column major order of input matrix ***" << std::endl;
-        MMCOO_to_CSR_colMajor(matrixFile, origin_row, origin_col, origin_data, rowCount, colCount, nonZeros);
-    } else {
-        MMCOO_to_CSR(matrixFile, origin_row, origin_col, origin_data, rowCount, colCount, nonZeros);
-    }
 
-/*
     // out put converted format
     for (int i = 0; i < rowCount; i++){
         std::cout << "Row " << i << ": ";
@@ -34,7 +32,7 @@ void csrClusterSplit_Overflow(char *matrixFile, bool colMajor, std::string distr
         }
         std::cout << std::endl;
     }
-*/
+
     int maxRowLength = 0, rowLength = 0;
     for (int i = 0; i < rowCount; i++){
         int start = origin_row[i], stop = 0;
@@ -53,9 +51,10 @@ void csrClusterSplit_Overflow(char *matrixFile, bool colMajor, std::string distr
     }
     std::cout << "Max Row Length = " << maxRowLength << std::endl;
 
-    //colsPerNode = rowCount / clusterRows;
     colsPerNode = maxRowLength / clusterCols;
-    //int rowOverFlow = rowCount % colsPerNode;
+    if (colsPerNode < 1){
+        colsPerNode = 1;
+    }
 
     for (int i = 0; i < clusterCols; i++) {
         std::vector<int> a, b;
@@ -65,83 +64,200 @@ void csrClusterSplit_Overflow(char *matrixFile, bool colMajor, std::string distr
         temp_data.push_back(c);
     }
 
-    std::cout << "Debug 1" << std::endl;
+    //std::cout << "Debug 1" << std::endl;
     for (int i = 0; i < rowCount; i++) {
-        std::cout << "i = " << i << std::endl;
+        int start = origin_row[i];
 
-        int firstData = origin_row[i];
-        int lastData, rowElements;
-
-        if (i == rowCount - 1) {
-            lastData = origin_data.size() - 1;
-            rowElements = origin_data.size() - firstData;
+        int stop;
+        if (i == rowCount -1){
+            stop = origin_data.size();
         } else {
-            lastData = origin_row[i + 1] - 1;
-            rowElements = lastData - firstData;
+            stop = origin_row[i+1];
         }
 
-        std::cout << "Debug 2" << std::endl;
-        int clusterColsNeeded = rowElements / colsPerNode;
-        for (int k = 0; k < clusterCols; k++) {
-            std::cout << "k = " << k << std::endl;
-            if (k <= clusterColsNeeded) {
-                temp_row[k].push_back(temp_data[k].size());
-                std::cout << "3a" << std::endl;
+        int rowLength = stop - start;
+        //std::cout  << "start = " << start << ", stop = " << stop << std::endl;
+        int clusterColsNeededForRow = (rowLength/colsPerNode);
+        for (int j = 0; j < clusterCols; j++) {
+            if (j > clusterColsNeededForRow || rowLength <= j*colsPerNode) {
+                //std::cout << "temp[" << j << "].push_back(-1)" << std::endl;
+                temp_row[j].push_back(-1);
             } else {
-                temp_row[k].push_back(-1);
-                std::cout << "3b" << std::endl;
+                //std::cout << "temp[" << j << "].push_back(" << temp_data[j].size() << ")" << std::endl;
+                temp_row[j].push_back(temp_data[j].size());
             }
         }
-        std::cout << "Debug 4" << std::endl;
-
-
         int count = 0;
-        for (int j = firstData; j <= lastData; j++) {
-            //std::cout << "j = " << j << std::endl;
-            temp_data[count / colsPerNode].push_back(origin_data[j]);
-            //std::cout << "temp_data[" << count/maxMatCols << "] =  origin_data[" << j << "]" << std::endl;
-            temp_col[count / colsPerNode].push_back(origin_col[j]);
-            //std::cout << "temp_col[" << count/maxMatCols << "] =  origin_data[" << j << "]" << std::endl;
+        for (int k = start; k < stop; k++){
+            int col = count/colsPerNode;
+            if (col == clusterCols){
+                col--;
+            }
+            //std::cout << "adding " << origin_col[k] << " to temp_col[" << count/colsPerNode << "]" << std::endl;
+            temp_col[col].push_back(origin_col[k]);
+            //std::cout << "adding " << origin_data[k] << " to temp_data[" << count/colsPerNode << "]" << std::endl;
+            temp_data[col].push_back(origin_data[k]);
             count++;
+        }
+    }
+    std::cout << "DONE SPLITTING STUFF" << std::endl;
+}
+
+
+//
+//
+//  Distribute sparse matrix amongst cluster nodes via SPLIT MATRIX Distribution
+//
+//
+void csrClusterSplit_SplitMatrix(char *matrixFile, bool colMajor, std::string distributionMethod,
+                                 std::vector<int>& origin_row, std::vector<int>& origin_col,
+                                 std::vector<double>& origin_data, std::vector<std::vector<int> >& colMasterTemp_row,
+                                 std::vector<std::vector<int> >& colMasterTemp_col,
+                                 std::vector<std::vector<double> >& colMasterTemp_data, int& rowCount, int& colCount,
+                                 int& nonZeros, int& colsPerNode, int clusterRows, int clusterCols){
+    int colsLastColumn, colsPerColumn;
+
+    // out put converted format
+    for (int i = 0; i < rowCount; i++){
+        std::cout << "Row " << i << ": ";
+        if (i != rowCount-1){
+            for (int j = origin_row[i]; j < origin_row[i+1]; j++){
+                std::cout << origin_data[j] << ", ";
+            }
+        } else {
+            for (int j = origin_row[i]; j < origin_data.size(); j++){
+                std::cout << origin_data[j] << ", ";
+            }
+        }
+        std::cout << std::endl;
+    }
+
+    int maxRowLength = 0, rowLength = 0;
+    for (int i = 0; i < rowCount; i++){
+        int start = origin_row[i], stop = 0;
+
+        if (i == rowCount-1){
+            stop = origin_data.size();
+        } else {
+            stop = origin_row[i+1];
+        }
+
+        rowLength = stop-start;
+
+        if (rowLength > maxRowLength){
+            maxRowLength = rowLength;
+        }
+    }
+    std::cout << "Max Row Length = " << maxRowLength << std::endl;
+
+    colsPerColumn = rowCount / clusterCols;
+    if (rowCount % clusterCols != 0){
+        colsLastColumn = colsPerColumn + (rowCount % clusterCols);
+    } else {
+        colsLastColumn = rowCount / clusterCols;
+    }
+
+
+    for (int i = 0; i < clusterCols; i++) {
+        std::vector<int> a, b;
+        std::vector<double> c;
+        colMasterTemp_row.push_back(a);
+        colMasterTemp_col.push_back(b);
+        colMasterTemp_data.push_back(c);
+    }
+
+    for (int i = 0; i < rowCount; i++) {
+        int start, stop;
+
+        start = origin_row[i];
+        if (i == rowCount-1){
+            stop = origin_data.size();
+        } else {
+            stop = origin_row[i+1];
+        }
+
+        //std::cout << "start = " << start << ", stop = " << stop << std::endl;
+
+        int rowStarts[clusterCols];
+        for (int c = 0; c < clusterCols; c++){
+            rowStarts[c] = -1;
+        }
+
+        for (int j = start; j < stop; j++){
+            //indicate that the row actually has something in it for this column of cluster nodes
+            //std::cout << "origin_col[" << j << "] = " << origin_col[j] << std::endl;
+            if (rowStarts[origin_col[j]/(rowCount / clusterCols)] == -1){
+                //std::cout << "rowStarts[" << origin_col[j]/(rowCount / clusterCols) << "] = " << colMasterTemp_data[origin_col[j]/(rowCount / clusterCols)].size() << std::endl;
+                rowStarts[origin_col[j]/(rowCount / clusterCols)] = colMasterTemp_data[origin_col[j]/(rowCount / clusterCols)].size();
+            }
+
+            colMasterTemp_col[origin_col[j]/(rowCount / clusterCols)].push_back(origin_col[j]);
+            colMasterTemp_data[origin_col[j]/(rowCount / clusterCols)].push_back(origin_data[j]);
+        }
+
+        for (int j = 0; j < clusterCols; j++){
+            colMasterTemp_row[j].push_back(rowStarts[j]);
+            //std::cout << "colMasterTemp_row[" << j << "][" << i << "] = " << colMasterTemp_row[j][colMasterTemp_row[j].size()-1] << std::endl;
+            //std::cout << "colMasterTemp_row[" << j << "].size() = " << colMasterTemp_row[j].size() << std::endl;
         }
 
     }
 
-    //std::cout << "Debug 4" << std::endl;
-    for (int k = 0; k < temp_data[0].size(); k++) {
-        colMasterTemp_data.push_back(temp_data[0][k]);
-        colMasterTemp_col.push_back(temp_col[0][k]);
-    }
-    for (int k = 0; k < rowCount; k++) {
-        colMasterTemp_row.push_back(temp_row[0][k]);
-    }
-    //std::cout << "Debug 5" << std::endl;
+    std::cout << "DONE SPLITTING STUFF" << std::endl;
+    /*
+    for (int i = 0; i < colMasterTemp_row.size(); i++){
+        std::cout << "Cluster Column " << i << std::endl;
 
-    std::cout << "rowCount = " << rowCount << ", nonZeros = " << nonZeros  << std::endl;
-    //std::cout << "origin_row.size() = " << origin_row.size() << ", origin_col.size() = " << origin_col.size() <<
-    // ", origin_data.size() = " << origin_data.size() << std::endl;
-    //std::cout << "temp_row.size() = " << temp_row.size() << ", temp_col.size() = " << temp_col.size()
-    // << ", temp_data.size() = " << temp_data.size() << std::endl;
+        for (int j = 0; j < colMasterTemp_row[i].size(); j++){
+            std::cout << "\tRow " << j << ": ";
 
+            if (colMasterTemp_row[i][j] != -1) {
+                int start, stop;
+
+                start = colMasterTemp_row[i][j];
+                if (i == colMasterTemp_row[i].size() - 1) {
+                    stop = colMasterTemp_data[i].size();
+                } else {
+                    int inc = 1;
+                    while (colMasterTemp_row[i][j+inc] == -1 && j+inc != colMasterTemp_row[i].size()){
+                        inc++;
+                    }
+                    if (j+inc != colMasterTemp_row[i].size()) {
+                        stop = colMasterTemp_row[i][j + inc];
+                    } else {
+                        stop = colMasterTemp_data[i].size();
+                    }
+                }
+                std::cout << "start = " << start << ", stop = " << stop << std::endl;
+
+                for (int k = start; k < stop; k++){
+                    std::cout << colMasterTemp_col[i][k] << ", " << std::endl;
+                }
+
+            }
+        }
+    }
+    */
 }
 
+
+
+
+//
+//
+//  Distribute sparse matrix amongst cluster nodes via BALANCED Distribution
+//
+//
 void csrClusterSplit_ElementBalanced(char *matrixFile, bool colMajor, std::string distributionMethod, int processCount,
                                      std::vector<int>& origin_row, std::vector<int>& origin_col,
                                      std::vector<double>& origin_data, std::vector<std::vector<int> >& temp_row,
                                      std::vector<std::vector<int> >& temp_col,
-                                     std::vector<std::vector<double> >& temp_data, std::vector<int>& colMasterTemp_row,
-                                     std::vector<int>& colMasterTemp_col, std::vector<double>& colMasterTemp_data,
-                                     int& rowCount, int& colCount, int& nonZeros, int& colsPerNode, int clusterRows,
+                                     std::vector<std::vector<double> >& temp_data, int& rowCount, int& colCount,
+                                     int& nonZeros, int& colsPerNode, int clusterRows,
                                      int clusterCols, std::vector<std::vector<std::vector <int> > >& nodeRowOwnership){
+
     std::cout << "Inside csrClusterSplit_ElementBalanced()" << std::endl;
 
-
-    if (colMajor) {
-        std::cout << "*** Using column major order of input matrix ***" << std::endl;
-        MMCOO_to_CSR_colMajor(matrixFile, origin_row, origin_col, origin_data, rowCount, colCount, nonZeros);
-    } else {
-        MMCOO_to_CSR(matrixFile, origin_row, origin_col, origin_data, rowCount, colCount, nonZeros);
-    }
 
     /*
     // out put converted format
@@ -221,6 +337,8 @@ void csrClusterSplit_ElementBalanced(char *matrixFile, bool colMajor, std::strin
         temp_data.push_back(data);
     }
 }
+
+
 
 void balanceDistribution(int processCount, int nodeBalanceElementCount, std::vector<std::vector <int> >& rowLengths,
                          std::vector<std::vector <std::vector <int> > >& tempPacking){

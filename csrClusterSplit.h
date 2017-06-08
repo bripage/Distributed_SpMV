@@ -14,10 +14,7 @@
 #include <omp.h>
 #include <string>
 #include "mpi.h"
-#include "mm_to_csr.h"
-#include "nodeTree.h"
-
-
+//#include "nodeTree.h"
 
 void csrClusterSplit_Overflow(char *filename, bool colMajor, std::string distributionMethod,
                               std::vector<int>& origin_row, std::vector<int>& origin_col,
@@ -27,12 +24,18 @@ void csrClusterSplit_Overflow(char *filename, bool colMajor, std::string distrib
                               std::vector<double>& colMasterTemp_data, int& rowCount, int& colCount, int& nonZeros,
                               int& colsPerNode, int clusterRows, int clusterCols);
 
+void csrClusterSplit_SplitMatrix(char *matrixFile, bool colMajor, std::string distributionMethod,
+                                 std::vector<int>& origin_row, std::vector<int>& origin_col,
+                                 std::vector<double>& origin_data, std::vector<std::vector<int> >& colMasterTemp_row,
+                                 std::vector<std::vector<int> >& colMasterTemp_col,
+                                 std::vector<std::vector<double> >& colMasterTemp_data, int& rowCount, int& colCount,
+                                 int& nonZeros, int& colsPerNode, int clusterRows, int clusterCols);
+
 void csrClusterSplit_ElementBalanced(char *filename, bool colMajor, std::string distributionMethod, int processCount,
                                      std::vector<int>& origin_row, std::vector<int>& origin_col,
                                      std::vector<double>& origin_data, std::vector<std::vector<int> >& temp_row,
                                      std::vector<std::vector<int> >& temp_col,
-                                     std::vector<std::vector<double> >& temp_data, std::vector<int>& colMasterTemp_row,
-                                     std::vector<int>& colMasterTemp_col, std::vector<double>& colMasterTemp_data,
+                                     std::vector<std::vector<double> >& temp_data,
                                      int& rowCount, int& colCount, int& nonZeros, int& colsPerNode, int clusterRows,
                                      int clusterCols, std::vector<std::vector <std::vector <int> > >& nodeRowOwnership);
 
