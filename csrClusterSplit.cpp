@@ -116,7 +116,7 @@ void csrClusterSplit_SplitMatrix(char *matrixFile, bool colMajor, std::string di
                                  std::vector<std::vector<double> >& colMasterTemp_data, int& rowCount, int& colCount,
                                  int& nonZeros, int& colsPerNode, int clusterRows, int clusterCols){
     int colsLastColumn, colsPerColumn;
-
+/*
     // out put converted format
     for (int i = 0; i < rowCount; i++){
         std::cout << "Row " << i << ": ";
@@ -131,7 +131,7 @@ void csrClusterSplit_SplitMatrix(char *matrixFile, bool colMajor, std::string di
         }
         std::cout << std::endl;
     }
-
+*/
     int maxRowLength = 0, rowLength = 0;
     for (int i = 0; i < rowCount; i++){
         int start = origin_row[i], stop = 0;
