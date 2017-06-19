@@ -69,6 +69,17 @@
 \usepackage{url}
 \usepackage{balance}
 
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage{xcolor}
+
+\makeatletter
+\def\BState{\State\hskip-\ALG@thistlm}
+\makeatother
+
+\newcommand\TODO[1]{\textcolor{red}{#1}}
+
 % Add the compsocconf option for Computer Society conferences.
 %
 % If IEEEtran.cls has not been installed into the LaTeX system files,
@@ -546,7 +557,7 @@ scalability;
 % (used to reserve space for the reference number labels box)
 
 \balance
-\bibliographystyle{abbrv}
+\bibliographystyle{IEEEtran}
 \bibliography{dspmv-refs}
 
 %\begin{thebibliography}{1}

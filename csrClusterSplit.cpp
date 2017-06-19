@@ -132,6 +132,7 @@ void csrClusterSplit_SplitMatrix(char *matrixFile, bool colMajor, std::string di
         std::cout << std::endl;
     }
 */
+
     int maxRowLength = 0, rowLength = 0;
     for (int i = 0; i < rowCount; i++){
         int start = origin_row[i], stop = 0;
@@ -187,18 +188,22 @@ void csrClusterSplit_SplitMatrix(char *matrixFile, bool colMajor, std::string di
             //indicate that the row actually has something in it for this column of cluster nodes
             //std::cout << "origin_col[" << j << "] = " << origin_col[j] << std::endl;
             if (rowStarts[origin_col[j]/(rowCount / clusterCols)] == -1){
-                //std::cout << "rowStarts[" << origin_col[j]/(rowCount / clusterCols) << "] = " << colMasterTemp_data[origin_col[j]/(rowCount / clusterCols)].size() << std::endl;
+                std::cout << "rowStarts[" << origin_col[j]/(rowCount / clusterCols) << "] = "
+                          << colMasterTemp_data[origin_col[j]/(rowCount / clusterCols)].size() << std::endl;
                 rowStarts[origin_col[j]/(rowCount / clusterCols)] = colMasterTemp_data[origin_col[j]/(rowCount / clusterCols)].size();
             }
 
+            std::cout << "colMasterTemp_col[" << origin_col[j]/(rowCount / clusterCols) << "].push_back(" << origin_col[j] << ")" << std::endl;
             colMasterTemp_col[origin_col[j]/(rowCount / clusterCols)].push_back(origin_col[j]);
+            std::cout << "colMasterTemp_col[" << origin_data[j]/(rowCount / clusterCols) << "].push_back(" << origin_data[j] << ")" << std::endl;
             colMasterTemp_data[origin_col[j]/(rowCount / clusterCols)].push_back(origin_data[j]);
         }
 
         for (int j = 0; j < clusterCols; j++){
+            std::cout << "colMasterTemp_row[" << j << "].push_back(" << rowStarts[j] << ")" << std::endl;
             colMasterTemp_row[j].push_back(rowStarts[j]);
-            //std::cout << "colMasterTemp_row[" << j << "][" << i << "] = " << colMasterTemp_row[j][colMasterTemp_row[j].size()-1] << std::endl;
-            //std::cout << "colMasterTemp_row[" << j << "].size() = " << colMasterTemp_row[j].size() << std::endl;
+            std::cout << "colMasterTemp_row[" << j << "][" << i << "] = " << colMasterTemp_row[j][colMasterTemp_row[j].size()-1] << std::endl;
+            std::cout << "colMasterTemp_row[" << j << "].size() = " << colMasterTemp_row[j].size() << std::endl;
         }
 
     }

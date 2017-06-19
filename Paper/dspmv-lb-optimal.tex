@@ -1,1 +1,81 @@
 \subsection{Optimal}\label{sec:dspmv-lb-optimal}
+
+In order to generate a work distribution with the highest balance, a greedy bin packing algorithm was utilized. A greedy algorithm was chosen for its simplicity of design and implementation. Once the sparse matrix being worked on has been converted into CSR format it can be segmented into $k$ portions, where $k$ is the number of nodes in the computing cluster. 
+
+The end outcome of computation is the dense vector resulting from the SpMV operation, therefore each element present in the CSR representation of the sparse matrix $A$, must be multiplied by the correct element in the dense vector $x$, to produce $b$. If a row or column is spread across multiple nodes it is necessary to send the corresponding element in $x$ to each cluster node to insure proper calculation. Similarly additional reductions may be required in order to compile the final value for the given column or row. This creates additional overhead that exists due to the extra data that must be distributed amongst the cluster. 
+
+To aid in the reduction of the aforementioned overhead our greedy bin packing algorithm seeks to maintain rows or columns in their entirety on a single node. The entire $i^{th}$ row/column may then be multiplied with a single element from the dense vector. Additionally only a single gather must be performed in order for the master to obtain the value $b_i$. There will however be cases in which it may prove impossible to avoid inordinately large rows/columns present within the matrix. In such cases we would like to see such a row/column distributed to the least number nodes possible. 
+
+The $node$ $balance$ $factor$, the optimal number of elements each cluster node should be given to work on, is determined from information known about the matrix and cluster size. 
+
+\medskip
+\begin{center}
+$nodeBalanceFactor = \frac{nonZeros}{\sqrt{clusterSize}}$
+\end{center}
+\medskip
+
+Once calculated $node$ $balance$ $factor$ is used as the metric for determining if a row should be split and sent to multiple nodes. A row split of this nature is necessary as the optimal work distribution mandates that the number of elements distributed to each node be as close to the $node$ $balance$ $factor$ as possible, therefore should a single row exceed this amount it must be split in order to achieve optimal distribution across all cluster nodes. 
+
+Should a row/col require splitting, it is split into the necessary number of sub rows with each sub row being placed into the row vector and treated the same as all other rows for the purpose of load balancing. These sub rows share the same row id but contain the elements unique to their portion of the original large row. After sorting the vector of rows by row size, we iterate over the sorted vector from largest to smallest row, assigning the $i^{th}$ row to the cluster nodes with the lowest number of assigned elements. If two or more nodes have the current minimum assignment, the $i^{th}$ is assigned arbitrarily to one node in the minimum set. 
+
+Upon balancing, the row-to-node assignments are used to control work load packing which will take all rows assigned to a given node and generate that node's private CSR representation of the data it shall work on. This was done in order to reduce the number of transfers between the master MPI process and slave processes, as well as to increase the locality of reference for accessing the data to be sent. 
+
+So that calculation is carried out correctly, each node must be sent the elements of the dense vector that correspond to the rows assigned to that node. We take advantage of the row-to-node assignment structure which contains the row ids and the node to which they have been assigned. In this it is possible to compile a private dense vector for each cluster node such that 
+
+\medskip
+\begin{center}
+	$nodeResult_i = row_i * denseVec_i$
+\end{center}
+\medskip
+
+Upon receipt of data each node proceeds with computation without regard to the actual rows it may be working on thanks to the prior knowledge contained within the node assignment structure. 
+
+%
+%\begin{algorithm}
+%	\caption{My algorithm}\label{euclid}
+%	\begin{algorithmic}[1]
+%		\Procedure{MyProcedure}{}
+%		\State $\textit{stringlen} \gets \text{length of }\textit{string}$
+%		\State $i \gets \textit{patlen}$
+%		\BState \emph{top}:
+%		\If {$i > \textit{stringlen}$} \Return false
+%		\EndIf
+%		\State $j \gets \textit{patlen}$
+%		\BState \emph{loop}:
+%		\If {$\textit{string}(i) = \textit{path}(j)$}
+%		\State $j \gets j-1$.
+%		\State $i \gets i-1$.
+%		\State \textbf{goto} \emph{loop}.
+%		\State \textbf{close};
+%		\EndIf
+%		\State $i \gets i+\max(\textit{delta}_1(\textit{string}(i)),\textit{delta}_2(j))$.
+%		\State \textbf{goto} \emph{top}.
+%		\EndProcedure
+%	\end{algorithmic}
+%\end{algorithm}
+%
+
+\TODO{To Do: update the following pseudo-code to represent the optimal balancing algorithm}
+
+\begin{algorithm}
+	\caption{My algorithm}\label{euclid}
+	\begin{algorithmic}[1]
+		\Procedure{MyProcedure}{}
+		\State $\textit{stringlen} \gets \text{length of }\textit{string}$
+		\State $i \gets \textit{patlen}$
+		\BState \emph{top}:
+		\If {$i > \textit{stringlen}$} \Return false
+		\EndIf
+		\State $j \gets \textit{patlen}$
+		\BState \emph{loop}:
+		\If {$\textit{string}(i) = \textit{path}(j)$}
+		\State $j \gets j-1$.
+		\State $i \gets i-1$.
+		\State \textbf{goto} \emph{loop}.
+		\State \textbf{close};
+		\EndIf
+		\State $i \gets i+\max(\textit{delta}_1(\textit{string}(i)),\textit{delta}_2(j))$.
+		\State \textbf{goto} \emph{top}.
+		\EndProcedure
+	\end{algorithmic}
+\end{algorithm}
