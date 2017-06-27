@@ -22,6 +22,7 @@ struct controlData {
     int colsPerNode;
     int clusterCols;
     int clusterRows;
+    int lastClusterColColStart;
 
     //MPI Stuff
     int processCount;

@@ -4,18 +4,17 @@
 #include <algorithm>
 #include <iomanip>
 #include <sstream>
-#include "csrClusterSplit.h"
-#include "clusterSpMV.h"
-#include "mm_to_csr.h"
 #include <string>
-#include "csrSpMV.h"
 #include "controlStruct.h"
+#include "csrSpMV.h"
+#include "distribution.h"
+#include "clusterSpMV.h"
+
 
 int main(int argc, char *argv[]) {
     controlData controlData;
-
-    std::cout << 1 << std::endl;
     std::string argTemp;
+
     for (int i = 1; i < argc; i= i+2){
         argTemp = argv[i];
         if (argTemp == "-lm"){
@@ -64,7 +63,6 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    std::cout << 2 << std::endl;
 
     //Initialize the MPI environment
     MPI_Init(&argc, &argv);
@@ -87,8 +85,6 @@ int main(int argc, char *argv[]) {
         exit(0);
     }
 
-    std::cout << 3 << std::endl;
-
     //****************************************************//
     //  Create comm for each column/row of compute nodes  //
     //****************************************************//
@@ -96,59 +92,44 @@ int main(int argc, char *argv[]) {
     controlData.clusterRows = sqrt(controlData.processCount);
     controlData.clusterCols = controlData.clusterRows; // works because cluster is expected to be square
     controlData.myCol = controlData.myId % controlData.clusterRows;
-    std::cout << "3a" << std::endl;
 
     // Create a duplicate of MPI_COMM_WORLD that can be used to split
     MPI_Comm dupCommWorldCol;
     MPI_Comm_dup(MPI_COMM_WORLD, &dupCommWorldCol);
-    std::cout << "3b" << std::endl;
 
     // Split dupCommWorld into comm's for each node column, based on each processes original myId
     //controlData.row_comm = new MPI_Comm;
     MPI_Comm_split(dupCommWorldCol, controlData.myCol, controlData.myId, &controlData.col_comm);
-    std::cout << "3c" << std::endl;
 
     //int col_rank, col_size;
     MPI_Comm_rank(controlData.col_comm, &controlData.col_rank);
     MPI_Comm_size(controlData.col_comm, &controlData.col_size);
-    std::cout << "3d" << std::endl;
 
     // get the number of MPI processes for work split and distribution
     controlData.myRow = controlData.myId / controlData.clusterRows;
     // Create a duplicate of MPI_COMM_WORLD that can be used to split
     MPI_Comm dupCommWorldRow;
     MPI_Comm_dup(MPI_COMM_WORLD, &dupCommWorldRow);
-    std::cout << "3e" << std::endl;
 
     // Split dupCommWorld into comm's for each node column, based on each processes original myId
     //controlData.row_comm = new MPI_Comm;
     MPI_Comm_split(dupCommWorldRow, controlData.myRow, controlData.myId, &controlData.row_comm);
-    std::cout << "3f" << std::endl;
 
     MPI_Comm_rank(controlData.row_comm, &controlData.row_rank);
     MPI_Comm_size(controlData.row_comm, &controlData.row_size);
-
-    std::cout << 4 << std::endl;
-
 
     // create vectors to hold sparse matrix data once converted to CSR format
     std::vector<int> origin_row, csr_row, origin_col, csr_col;
     std::vector<double> origin_data, csr_data;
     std::vector<std::vector<int> > temp_row, temp_col,colMasterTemp_row, colMasterTemp_col;
     std::vector<std::vector<double> > temp_data, colMasterTemp_data;
-
     std::vector<double> denseVector;
 
-    //int rowCount, colCount, nonZeros;
-    //int colsPerNode;
 
     csrSpMV masterData;
-
-    std::cout << "5" << std::endl;
     if (!controlData.myId) {
         masterData.masterOnlySpMV(controlData);
     }
-    std::cout << "6" << std::endl;
 
 
     //***********************************************//
@@ -156,24 +137,22 @@ int main(int argc, char *argv[]) {
     //***********************************************//
     MPI_Barrier(MPI_COMM_WORLD);
 
-    if (controlData.distributionMethod == "splitmatrix") {
         std::vector<std::vector <std::vector <int> > > nodeRowOwnership;
         std::vector<std::vector <double> > splitDenseVector;
-
         std::vector<csrSpMV*> clusterColData;
-        int colsLastColumn, colsPerColumn, nodeElementCount, nodeRowCount, colElementCount, nodeElements;
+        int colsPerColumn, colElementCount;
 
+    if (!controlData.myId) {
+        distribution_SplitMatrix(controlData, clusterColData);
+
+    }
+
+
+/*
         if (!controlData.myId) {
-
             colsPerColumn = controlData.rowCount / controlData.clusterCols;
-            if (controlData.rowCount % controlData.clusterCols != 0) {
-                colsLastColumn = colsPerColumn + (controlData.rowCount % controlData.clusterCols);
-            } else {
-                colsLastColumn = controlData.rowCount / controlData.clusterCols;
-            }
 
-            csrClusterSplit_SplitMatrix(controlData, clusterColData);
-
+            distribution_SplitMatrix(controlData, clusterColData);
 
             std::cout << "Distribution of non-zero elements:" << std::endl;
             //std::cout << "temp.size() = " << temp_data.size() << std::endl;
@@ -208,6 +187,7 @@ int main(int argc, char *argv[]) {
             origin_row.clear();
             origin_col.clear();
             origin_data.clear();
+
 
             // send column master data to individual column masters
             for (int i = 1; i < controlData.clusterCols; i++) {
@@ -263,7 +243,7 @@ int main(int argc, char *argv[]) {
             MPI_Recv(&colMasterTemp_col[0][0], colElementCount, MPI_INT, 0, 0, controlData.row_comm, MPI_STATUS_IGNORE);
             MPI_Recv(&colMasterTemp_data[0][0], colElementCount, MPI_DOUBLE, 0, 0, controlData.row_comm, MPI_STATUS_IGNORE);
         }
-
+*/
         // Copy colMasterTemp data to local csr vectors for the column masters to work on after distrubting data to rows
         if (controlData.myId < controlData.clusterRows) {
 
@@ -275,194 +255,6 @@ int main(int argc, char *argv[]) {
         MPI_Comm_free(&controlData.row_comm);
         MPI_Finalize();
 
-    } else if (controlData.distributionMethod == "colbalanced"){
-        std::vector<std::vector <std::vector <int> > > nodeRowOwnership;
-        std::vector<std::vector <double> > splitDenseVector;
-
-        if (!controlData.myId) {
-            csrClusterSplit_ElementBalanced(controlData.matrixFile, controlData.colMajor, controlData.distributionMethod, controlData.processCount, origin_row,
-                                            origin_col, origin_data, temp_row, temp_col, temp_data, controlData.rowCount, controlData.colCount,
-                                            controlData.nonZeros, controlData.colsPerNode, controlData.clusterRows, controlData.clusterCols, nodeRowOwnership);
-
-            splitDenseVector_ElementBalanced(denseVector, splitDenseVector, nodeRowOwnership);
-
-            std::cout << "Distribution of non-zero elements:" << std::endl;
-            for (int i = 0; i < controlData.processCount; i++){
-                std::cout << "Node " << i << ": " << nodeRowOwnership[i][0][0] << std::endl;
-            }
-        }
-
-
-        // perform SpMV on master only, without any segmentation or distribution
-        // for verification purposes.
-        if (!controlData.myId) {
-            origin_row.clear();
-            origin_col.clear();
-            origin_data.clear();
-        }
-
-
-        int nodeElementCount, nodeRowCount;
-        int rowsPerNode = controlData.rowCount / controlData.clusterRows;
-        //std::vector<int> myRows;
-
-        if (!controlData.myId) {
-            // give master its work data
-            csr_row = temp_row[0];
-            csr_col = temp_col[0];
-            csr_data = temp_data[0];
-
-            // Send column data to nodes
-            for (int i = 1; i < controlData.processCount; i++) {
-                nodeElementCount = temp_data[i].size();
-                nodeRowCount = temp_row[i].size();
-
-                MPI_Send(&nodeRowCount, 1, MPI_INT, i, 0, MPI_COMM_WORLD);
-                MPI_Send(&nodeElementCount, 1, MPI_INT, i, 0, MPI_COMM_WORLD);
-                //MPI_Send(&nodeRowOwnership[i][2], nodeRowCount, MPI_INT, i, 0, row_comm);
-                MPI_Send(&temp_row[i][0], nodeRowCount, MPI_INT, i, 0, MPI_COMM_WORLD);
-                MPI_Send(&temp_col[i][0], nodeElementCount, MPI_INT, i, 0, MPI_COMM_WORLD);
-                MPI_Send(&temp_data[i][0], nodeElementCount, MPI_DOUBLE, i, 0, MPI_COMM_WORLD);
-                MPI_Send(&splitDenseVector[i][0], nodeRowCount, MPI_DOUBLE, i, 0, MPI_COMM_WORLD);
-            }
-
-            for (int i = 0; i < controlData.clusterCols; i++) {
-                temp_row[i].clear();
-                temp_col[i].clear();
-                temp_data[i].clear();
-                splitDenseVector[i].clear();
-            }
-            temp_row.clear();
-            temp_col.clear();
-            temp_data.clear();
-            splitDenseVector.clear();
-        }
-
-        /*
-        if(!myId){
-            // out put converted format
-            std::cout << std::endl;
-            std::cout << std::endl;
-            std::cout << "----- Process " << myId << " has the following rows/data -----" << std::endl;
-            for (int i = 0; i < nodeRowCount; i++){
-                std::cout << "Row " << nodeRowOwnership[0][1][i] << ": ";
-                if (i != nodeRowCount-1){
-                    for (int j = csr_row[i]; j < csr_row[i+1]; j++){
-                        std::cout << csr_data[j] << ", ";
-                    }
-                } else {
-                    for (int j = csr_row[i]; j < csr_data.size(); j++){
-                        std::cout << csr_data[j] << ", ";
-                    }
-                }
-                std::cout << std::endl;
-            }
-            std::cout << std::endl;
-            std::cout << std::endl;
-        }
-        */
-
-        if (controlData.myId) {
-            //std::cout << "Non-master " << myId << " about to read data " << std::endl;
-            //std::cout << "0" << std::endl;
-            MPI_Recv(&nodeRowCount, 1, MPI_INT, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
-            //std::cout << "1" << std::endl;
-            MPI_Recv(&nodeElementCount, 1, MPI_INT, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
-            //std::cout << "2" << std::endl;
-            //myRows.resize(nodeRowCount);
-            csr_col.resize(nodeElementCount);
-            csr_data.resize(nodeElementCount);
-            csr_row.resize(nodeRowCount);
-            denseVector.resize(nodeRowCount);
-            //std::cout << "3" << std::endl;
-
-            if (nodeElementCount > 0) {
-                //MPI_Recv(&myRows[0], nodeRowCount, MPI_INT, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
-                MPI_Recv(&csr_row[0], nodeRowCount, MPI_INT, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
-                MPI_Recv(&csr_col[0], nodeElementCount, MPI_INT, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
-                MPI_Recv(&csr_data[0], nodeElementCount, MPI_DOUBLE, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
-                MPI_Recv(&denseVector[0], nodeRowCount, MPI_DOUBLE, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
-            }
-            //std::cout << myId << "  DONE RECIEVING DATA " << std::endl;
-        }
-
-        std::vector <double> nodeResult;
-        nodeResult.resize(nodeRowCount, 0.0);
-
-        if (nodeElementCount > 0) { // check if this node has any data to work on at all
-            //if (!myId) {
-                //std::cout << "Calculating on " << myId << std::endl;
-                clusterSpMV_ElementBalanced(controlData.ompThreads, csr_row, csr_col, csr_data, denseVector, nodeResult, controlData.colMajor);
-
-                csr_row.clear();
-                csr_col.clear();
-                csr_data.clear();
-            //}
-        }
-        //std::cout << "Done Calculating on " << myId << std::endl;
-
-        // Send results to row master
-        std::vector<std::vector <double> > clusterResults;
-        //  Send back result to master
-        if (!controlData.myId) {  // I am the master
-            //copy master's local results into clusterResults
-            clusterResults.push_back(nodeResult);
-
-            std::cout << "Read results from " << controlData.myId << std::endl;
-            for (int i = 1; i < controlData.processCount; i++){
-                //std::cout << "Read results from " << i << std::endl;
-                std::vector<double> tempResults(nodeRowOwnership[i][1].size());
-                MPI_Recv(&tempResults[0], nodeRowOwnership[i][1].size(), MPI_DOUBLE, i, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
-                clusterResults.push_back(tempResults);
-            }
-        } else {    // myId != 0, ie i am not the master
-            //std::cout << "Send results from " << myId << std::endl;
-
-            MPI_Send(&nodeResult[0], nodeRowCount, MPI_DOUBLE, 0, 0, MPI_COMM_WORLD);
-        }
-
-        MPI_Barrier(MPI_COMM_WORLD);
-        MPI_Comm_free(&controlData.col_comm);
-        MPI_Comm_free(&controlData.row_comm);
-        MPI_Finalize();
-
-        if(!controlData.myId) {
-            std::cout << "Done getting node data " << std::endl;
-
-            double SpMVResult[controlData.rowCount] = {0.0};
-            //  Combine results from slaves and any split rows
-            for (int i = 0; i < controlData.processCount; i++) {
-                for (int j = 0; j < nodeRowOwnership[i][1].size(); j++) {
-                    //std::cout << "SpMVResult[" << nodeRowOwnership[i][1][j] << "] += clusterResults[" << i << "][" << j
-                    //          << "]" << std::endl;
-                    SpMVResult[nodeRowOwnership[i][1][j]] += clusterResults[i][j];
-                }
-            }
-
-            std::cout << "Done combining results " << std::endl;
-
-            int miscalculations = 0;
-            int localZeros = 0, distributedZeros = 0;
-            for (int i = 0; i < controlData.rowCount; i++) {
-                if (SpMVResult[i] == 0.0) {
-                    distributedZeros++;
-                }
-                if (masterData.result[i] == 0.0) {
-                    localZeros++;
-                }
-                if (SpMVResult[i] != masterData.result[i] || (SpMVResult[i] == 0.0 || masterData.result[i] == 0.0)) {
-                    std::cout << "row " << i << ": " << SpMVResult[i] << " != " << masterData.result[i] << std::endl;
-                    miscalculations++;
-                }
-                //std::cout << "row " << i << ": " << SpMVResult[i] << " and  " << masterOnly_SpMV[i] << std::endl;
-            }
-
-            if (localZeros) std::cout << "*** " << localZeros << " Local Zero Value Rows ***" << std::endl;
-            if (distributedZeros)
-                std::cout << "*** " << distributedZeros << " Distributed Zero Value Rows ***" << std::endl;
-            if (miscalculations) std::cout << "*** " << miscalculations << " Miscalculations ***" << std::endl;
-        }
-    }
 
     return 0;
 }

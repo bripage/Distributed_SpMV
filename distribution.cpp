@@ -1,0 +1,131 @@
+//
+// Created by brianpage on 5/15/17.
+//
+#include "distribution.h"
+
+//
+//
+//  Distribute sparse matrix amongst cluster nodes via SPLIT MATRIX Distribution
+//
+//
+void distribution_SplitMatrix(controlData controlData, std::vector<csrSpMV*>& clusterColData) {
+    int colsLastColumn, colsPerColumn;
+
+    clusterColData.resize(controlData.clusterCols);
+    for (int i = 0; i < controlData.clusterCols; i++) {
+        clusterColData[i] = new csrSpMV;
+    }
+
+    //
+    // Read MMF file and insert elements into clusterColData as needed
+    //
+    int tempRow, tempCol, assignedCol = 0;
+    double tempData;
+
+    // Read in sparse matrix saved in Matrix Market Format
+    std::ifstream infile(controlData.matrixFile);
+    if (!infile) {
+        std::cout << "FAILED TO OPEN FILE!" << std::endl;
+        exit(1);
+    }
+    std::string line;
+
+    int i = 0, j = 0;
+    bool previousLineCommented = false;
+    while (std::getline(infile, line)) {
+        if (line[0] != '%') {
+            if (previousLineCommented == true) {
+                //some stuff to get row,col and size data, etc.
+                previousLineCommented = false;
+
+                size_t pos = 0;
+                std::string token;
+                i = 0;
+                while ((pos = line.find(' ')) != std::string::npos) {
+                    token = line.substr(0, pos);
+                    line.erase(0, pos + 1);
+
+                    if (i == 0) {
+                        controlData.rowCount = std::stoi(token);
+                    } else {
+                        controlData.colCount = std::stoi(token);
+                    }
+
+                    i++;
+                }
+
+                controlData.nonZeros = std::stoi(line);
+
+                printf("%d rows, %d cols, and %d non-zeros\n", controlData.rowCount, controlData.colCount, controlData.nonZeros);
+
+                controlData.colsPerNode = ceil(controlData.rowCount / (float)controlData.clusterCols);
+                std::cout << "colsPerNode = " << controlData.colsPerNode << std::endl;
+                if (controlData.rowCount % controlData.clusterCols != 0) {
+                    colsLastColumn = colsPerColumn + (controlData.rowCount % controlData.clusterCols);
+                } else {
+                    colsLastColumn = controlData.rowCount / controlData.clusterCols;
+                }
+                controlData.lastClusterColColStart = controlData.colCount - colsLastColumn;
+
+                std::cout << " colsLastColumn = " << colsLastColumn << ", lastClusterColColStart = " << controlData.lastClusterColColStart << std::endl;
+            } else {
+                size_t pos = 0;
+                std::string token;
+                i = 0;
+                while ((pos = line.find(' ')) != std::string::npos) {
+                    token = line.substr(0, pos);
+                    line.erase(0, pos + 1);
+
+                    if (i == 0) {
+                        tempCol = ::atoi(token.c_str()) - 1;
+                    } else {
+                        tempRow = ::atoi(token.c_str()) - 1;
+                    }
+
+                    i++;
+                }
+                tempData = ::atof(line.c_str());
+
+                std::cout << "made it this far" << std::endl;
+
+                // if the number of columns does not event divide amongst the number of cluster columns, the final
+                // cluster column is given the excess whereas all other columns receive the same amount of columns to
+                // work over.
+                if (tempCol > controlData.lastClusterColColStart) {
+                    assignedCol = controlData.clusterCols - 1;
+                } else {
+                    assignedCol = tempCol / controlData.colsPerNode;
+                }
+
+                std::cout << "tempCol = " << tempCol << ", assignedCol = " << assignedCol << std::endl;
+
+                // if the row is
+                //
+                if (clusterColData[assignedCol]->csrRows.empty()) {
+                    clusterColData[assignedCol]->csrRows.push_back(clusterColData[assignedCol]->csrData.size());
+                } else {
+                    if (tempRow == clusterColData[assignedCol]->csrRows.back()) {
+                        // Do nothing, row is already present in list
+                    } else {
+                        // Add new row to cluster Column, as it has not been seen previously
+                        clusterColData[assignedCol]->csrRows.push_back(clusterColData[assignedCol]->csrData.size());
+                    }
+                }
+
+                // assign the column and data to the correct csrSpMV object for the cluster column it belongs to
+                clusterColData[assignedCol]->csrCols.push_back(tempCol);
+                clusterColData[assignedCol]->csrData.push_back(tempData);
+
+            }
+        } else {
+            previousLineCommented = true;
+        }
+    }
+
+    std::cout << "DONE SPLITTING MATRIX AMONGST CLUSTER COLUMNS" << std::endl;
+
+
+    for (int i = 0; i < controlData.clusterCols; i++){
+        std::cout << "Column " << i << ": " << clusterColData[i]->csrData.size() << std::endl;
+    }
+}
