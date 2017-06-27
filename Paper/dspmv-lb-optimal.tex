@@ -10,7 +10,7 @@ The $node$ $balance$ $factor$, the optimal number of elements each cluster node 
 
 \medskip
 \begin{center}
-$nodeBalanceFactor = \frac{nonZeros}{\sqrt{clusterSize}}$
+$nodeBalanceFactor = \frac{nonZeros}{proc}$
 \end{center}
 \medskip
 
@@ -30,52 +30,36 @@ So that calculation is carried out correctly, each node must be sent the element
 
 Upon receipt of data each node proceeds with computation without regard to the actual rows it may be working on thanks to the prior knowledge contained within the node assignment structure. 
 
-%
-%\begin{algorithm}
-%	\caption{My algorithm}\label{euclid}
-%	\begin{algorithmic}[1]
-%		\Procedure{MyProcedure}{}
-%		\State $\textit{stringlen} \gets \text{length of }\textit{string}$
-%		\State $i \gets \textit{patlen}$
-%		\BState \emph{top}:
-%		\If {$i > \textit{stringlen}$} \Return false
-%		\EndIf
-%		\State $j \gets \textit{patlen}$
-%		\BState \emph{loop}:
-%		\If {$\textit{string}(i) = \textit{path}(j)$}
-%		\State $j \gets j-1$.
-%		\State $i \gets i-1$.
-%		\State \textbf{goto} \emph{loop}.
-%		\State \textbf{close};
-%		\EndIf
-%		\State $i \gets i+\max(\textit{delta}_1(\textit{string}(i)),\textit{delta}_2(j))$.
-%		\State \textbf{goto} \emph{top}.
-%		\EndProcedure
-%	\end{algorithmic}
-%\end{algorithm}
-%
-
-\TODO{To Do: update the following pseudo-code to represent the optimal balancing algorithm}
-
 \begin{algorithm}
-	\caption{My algorithm}\label{euclid}
+	\caption{Greedy Balanced Distribution}\label{euclid}
 	\begin{algorithmic}[1]
-		\Procedure{MyProcedure}{}
-		\State $\textit{stringlen} \gets \text{length of }\textit{string}$
-		\State $i \gets \textit{patlen}$
-		\BState \emph{top}:
-		\If {$i > \textit{stringlen}$} \Return false
-		\EndIf
-		\State $j \gets \textit{patlen}$
-		\BState \emph{loop}:
-		\If {$\textit{string}(i) = \textit{path}(j)$}
-		\State $j \gets j-1$.
-		\State $i \gets i-1$.
-		\State \textbf{goto} \emph{loop}.
-		\State \textbf{close};
-		\EndIf
-		\State $i \gets i+\max(\textit{delta}_1(\textit{string}(i)),\textit{delta}_2(j))$.
-		\State \textbf{goto} \emph{top}.
+		\Procedure{GreedyPack}{}
+		\State \textbf{Input}: matrixCSR $\textit{A[3]}$, $\textit{distribution[p][4][k]}$
+		\medskip
+		\State $nBF \gets \frac{nonZeros}{processCount}$
+		\For{$i \gets 0-\textit{n}$}
+			\If {$rowLengths_i.size()$ $>$ $nBF$}
+				\State $\textit{splitRow(i,rowLengths)}$
+			\EndIf
+		\EndFor
+		
+		\State Sort($\textit{rowLengths}$)
+		
+		\For{$i \gets 0-\textit{rowLengths.size()}$}
+			\State $node \gets 0$
+			\State $min \gets distribution[node][0][0]$
+			
+			%find node with least assigned elements
+			\medskip
+			\For{$j \gets 0-\textit{processCount}$}
+				\If {$distribution[j][0][0] < min$}
+					\State $node \gets j$
+					\State $min \gets distribution[j][0][0]$
+				\EndIf
+			\EndFor
+			
+			\State $distribution[node] \gets rowLengths_i$
+		\EndFor
 		\EndProcedure
 	\end{algorithmic}
 \end{algorithm}

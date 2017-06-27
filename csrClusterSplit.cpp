@@ -109,12 +109,8 @@ void csrClusterSplit_Overflow(char *matrixFile, bool colMajor, std::string distr
 //  Distribute sparse matrix amongst cluster nodes via SPLIT MATRIX Distribution
 //
 //
-void csrClusterSplit_SplitMatrix(char *matrixFile, bool colMajor, std::string distributionMethod,
-                                 std::vector<int>& origin_row, std::vector<int>& origin_col,
-                                 std::vector<double>& origin_data, std::vector<std::vector<int> >& colMasterTemp_row,
-                                 std::vector<std::vector<int> >& colMasterTemp_col,
-                                 std::vector<std::vector<double> >& colMasterTemp_data, int& rowCount, int& colCount,
-                                 int& nonZeros, int& colsPerNode, int clusterRows, int clusterCols){
+void csrClusterSplit_SplitMatrix(controlData controlData, std::vector<csrSpMV*>& clusterColData){
+
     int colsLastColumn, colsPerColumn;
 /*
     // out put converted format
@@ -133,39 +129,142 @@ void csrClusterSplit_SplitMatrix(char *matrixFile, bool colMajor, std::string di
     }
 */
 
-    int maxRowLength = 0, rowLength = 0;
-    for (int i = 0; i < rowCount; i++){
-        int start = origin_row[i], stop = 0;
+    clusterColData.resize(controlData.clusterCols);
+    for (int i = 0; i < controlData.clusterCols; i++) {
+        clusterColData[i] = new csrSpMV;
+    }
 
-        if (i == rowCount-1){
-            stop = origin_data.size();
+    //
+    // Read MMF file and insert elements into clusterColData as needed
+    //
+    int tempRow, tempCol;
+    double tempData;
+
+    // Read in sparse matrix saved in Matrix Market Format
+    std::ifstream infile(controlData.matrixFile);
+    if (!infile){
+        std::cout << "FAILED TO OPEN FILE!" << std::endl;
+        exit(1);
+    }
+    std::string line;
+
+    int i = 0, j = 0;
+    bool previousLineCommented = false;
+    while (std::getline(infile, line)) {
+        if (line[0] != '%') {
+            if (previousLineCommented == true) {
+                //some stuff to get row,col and size data, etc.
+                previousLineCommented = false;
+
+                size_t pos = 0;
+                std::string token;
+                i = 0;
+                while ((pos = line.find(' ')) != std::string::npos) {
+                    token = line.substr(0, pos);
+                    line.erase(0, pos + 1);
+
+                    if (i == 0) {
+                        controlData.rowCount = std::stoi(token);
+                    } else {
+                        controlData.colCount = std::stoi(token);
+                    }
+
+                    i++;
+                }
+
+                controlData.nonZeros = std::stoi(line);
+            } else {
+                size_t pos = 0;
+                std::string token;
+                i = 0;
+                while ((pos = line.find(' ')) != std::string::npos) {
+                    token = line.substr(0, pos);
+                    line.erase(0, pos + 1);
+
+                    if (i == 0) {
+                        tempRow = ::atoi(token.c_str()) - 1;
+                    } else {
+                        tempCol = ::atoi(token.c_str()) - 1;
+                    }
+
+                    i++;
+                }
+                tempData = ::atof(line.c_str());
+
+                if (!(tempRow == 0 && tempCol == 0 && tempData == 0.0)) {
+                    elements.push_back(tempElement);
+                }
+            }
         } else {
-            stop = origin_row[i+1];
-        }
-
-        rowLength = stop-start;
-
-        if (rowLength > maxRowLength){
-            maxRowLength = rowLength;
+            previousLineCommented = true;
         }
     }
-    std::cout << "Max Row Length = " << maxRowLength << std::endl;
+    printf("%d rows, %d cols, and %d non-zeros\n", rowCount, colCount, nonZeros);
 
-    colsPerColumn = rowCount / clusterCols;
-    if (rowCount % clusterCols != 0){
-        colsLastColumn = colsPerColumn + (rowCount % clusterCols);
+    // sort the vector of elements by row, and then each row, based on column
+    //std::stable_sort(elements.begin(), elements.end(), sortByCol);
+
+    // add to csr vectors for use as CSR Format
+    for (int k = 0; k < elements.size(); k++) {
+        //std::cout << "k = " << k << std::endl;
+
+        if (k == 0){
+            //std::cout << k << ", " << elements[k].col << ", " << elements[k].data << std::endl;
+            csr_row.push_back(k);
+        } else {
+            if (elements[k].col != elements[k-1].col){
+                //std::cout << k << ", " << elements[k].col << ", " << csr_row[rowsAdded-1] << std::endl;
+
+                csr_row.push_back(k);
+            }
+        }
+
+        csr_col[k] = elements[k].row;
+        csr_data[k] = elements[k].data;
+    }
+
+    /*
+    for (int k = 0; k < csr_row.size(); k++) {
+        std::cout << csr_row[k] << std::endl;
+    }
+
+    for (int k = 0; k < csr_data.size(); k++) {
+        std::cout << csr_data[k] << std::endl;
+    }
+    */
+
+    if (rowCount != csr_row.size()){
+        std::cout << "Actual row count does NOT match reported rowCount" << std::endl;
+    }
+
+    //
+    // DONE
+    //
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    colsPerColumn = controlData.rowCount / controlData.clusterCols;
+    if (controlData.rowCount % controlData.clusterCols != 0){
+        colsLastColumn = colsPerColumn + (controlData.rowCount % controlData.clusterCols);
     } else {
-        colsLastColumn = rowCount / clusterCols;
+        colsLastColumn = controlData.rowCount / controlData.clusterCols;
     }
 
-
-    for (int i = 0; i < clusterCols; i++) {
-        std::vector<int> a, b;
-        std::vector<double> c;
-        colMasterTemp_row.push_back(a);
-        colMasterTemp_col.push_back(b);
-        colMasterTemp_data.push_back(c);
-    }
 
     for (int i = 0; i < rowCount; i++) {
         int start, stop;
@@ -187,62 +286,31 @@ void csrClusterSplit_SplitMatrix(char *matrixFile, bool colMajor, std::string di
         for (int j = start; j < stop; j++){
             //indicate that the row actually has something in it for this column of cluster nodes
             //std::cout << "origin_col[" << j << "] = " << origin_col[j] << std::endl;
-            if (rowStarts[origin_col[j]/(rowCount / clusterCols)] == -1){
-                std::cout << "rowStarts[" << origin_col[j]/(rowCount / clusterCols) << "] = "
-                          << colMasterTemp_data[origin_col[j]/(rowCount / clusterCols)].size() << std::endl;
-                rowStarts[origin_col[j]/(rowCount / clusterCols)] = colMasterTemp_data[origin_col[j]/(rowCount / clusterCols)].size();
+            int col = origin_col[j]/(rowCount / clusterCols);
+            if (col == clusterCols){
+                col -= 1;
+            }
+            if (rowStarts[col] == -1){
+                //std::cout << "rowStarts[" << col << "] = " << colMasterTemp_data[col].size() << std::endl;
+                rowStarts[col] = colMasterTemp_data[col].size();
             }
 
-            std::cout << "colMasterTemp_col[" << origin_col[j]/(rowCount / clusterCols) << "].push_back(" << origin_col[j] << ")" << std::endl;
-            colMasterTemp_col[origin_col[j]/(rowCount / clusterCols)].push_back(origin_col[j]);
-            std::cout << "colMasterTemp_col[" << origin_data[j]/(rowCount / clusterCols) << "].push_back(" << origin_data[j] << ")" << std::endl;
-            colMasterTemp_data[origin_col[j]/(rowCount / clusterCols)].push_back(origin_data[j]);
+            //std::cout << "colMasterTemp_col[" << col << "].push_back(" << origin_col[j] << ")" << std::endl;
+            colMasterTemp_col[col].push_back(origin_col[j]);
+            //std::cout << "colMasterTemp_data[" << col << "].push_back(" << origin_data[j] << ")" << std::endl;
+            colMasterTemp_data[col].push_back(origin_data[j]);
         }
 
         for (int j = 0; j < clusterCols; j++){
-            std::cout << "colMasterTemp_row[" << j << "].push_back(" << rowStarts[j] << ")" << std::endl;
+            //std::cout << "colMasterTemp_row[" << j << "].push_back(" << rowStarts[j] << ")" << std::endl;
             colMasterTemp_row[j].push_back(rowStarts[j]);
-            std::cout << "colMasterTemp_row[" << j << "][" << i << "] = " << colMasterTemp_row[j][colMasterTemp_row[j].size()-1] << std::endl;
-            std::cout << "colMasterTemp_row[" << j << "].size() = " << colMasterTemp_row[j].size() << std::endl;
+            //std::cout << "colMasterTemp_row[" << j << "][" << i << "] = " << colMasterTemp_row[j][colMasterTemp_row[j].size()-1] << std::endl;
+            //std::cout << "colMasterTemp_row[" << j << "].size() = " << colMasterTemp_row[j].size() << std::endl;
         }
 
     }
 
     std::cout << "DONE SPLITTING STUFF" << std::endl;
-    /*
-    for (int i = 0; i < colMasterTemp_row.size(); i++){
-        std::cout << "Cluster Column " << i << std::endl;
-
-        for (int j = 0; j < colMasterTemp_row[i].size(); j++){
-            std::cout << "\tRow " << j << ": ";
-
-            if (colMasterTemp_row[i][j] != -1) {
-                int start, stop;
-
-                start = colMasterTemp_row[i][j];
-                if (i == colMasterTemp_row[i].size() - 1) {
-                    stop = colMasterTemp_data[i].size();
-                } else {
-                    int inc = 1;
-                    while (colMasterTemp_row[i][j+inc] == -1 && j+inc != colMasterTemp_row[i].size()){
-                        inc++;
-                    }
-                    if (j+inc != colMasterTemp_row[i].size()) {
-                        stop = colMasterTemp_row[i][j + inc];
-                    } else {
-                        stop = colMasterTemp_data[i].size();
-                    }
-                }
-                std::cout << "start = " << start << ", stop = " << stop << std::endl;
-
-                for (int k = start; k < stop; k++){
-                    std::cout << colMasterTemp_col[i][k] << ", " << std::endl;
-                }
-
-            }
-        }
-    }
-    */
 }
 
 

@@ -5,24 +5,20 @@ bla bla blah \cite{bylina_bylina_stpiczyński_szałkowski_2014}
 
 \TODO{To Do: update the following pseudo-code to represent the Split Matrix algorithm}
 \begin{algorithm}
-	\caption{My algorithm}\label{euclid}
+	\caption{Distributed Sub Matrix}\label{euclid}
 	\begin{algorithmic}[1]
-		\Procedure{MyProcedure}{}
-		\State $\textit{stringlen} \gets \text{length of }\textit{string}$
-		\State $i \gets \textit{patlen}$
-		\BState \emph{top}:
-		\If {$i > \textit{stringlen}$} \Return false
+		\Procedure{splitMatrix}{}
+		\State \textbf{Input}: matrixCSR $\textit{A[3]}$, $\textit{distribution[p][3][k]}$
+		\medskip
+		\For{$i \gets 0-\textit{matrixCSR[i].size()}$}
+			\For{$j \gets matrixCSR[i][1][0]-\textit{}$}
+			\EndFor
+		\If {$rowLengths_i.size()$ $>$ $nBF$}
+		\State $\textit{splitRow(i,rowLengths)}$
 		\EndIf
-		\State $j \gets \textit{patlen}$
-		\BState \emph{loop}:
-		\If {$\textit{string}(i) = \textit{path}(j)$}
-		\State $j \gets j-1$.
-		\State $i \gets i-1$.
-		\State \textbf{goto} \emph{loop}.
-		\State \textbf{close};
-		\EndIf
-		\State $i \gets i+\max(\textit{delta}_1(\textit{string}(i)),\textit{delta}_2(j))$.
-		\State \textbf{goto} \emph{top}.
+		\EndFor
+
 		\EndProcedure
 	\end{algorithmic}
 \end{algorithm}
+
