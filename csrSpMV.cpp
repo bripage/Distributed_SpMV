@@ -20,19 +20,20 @@ csrSpMV::~csrSpMV() {
     result.clear();
 }
 
-void csrSpMV::nodeSpMV(controlData controlData1) {
+void csrSpMV::nodeSpMV(controlData control) {
 
+//stuffff
 
 }
 
-void csrSpMV::masterOnlySpMV(controlData controlData) {
+void csrSpMV::masterOnlySpMV(controlData control) {
     //convert sparse matrix from Matrix Market to Compressed Sparse Row format
     std::vector <Element> elements; //holds each matrix element as read from the Matrix Market format file
     int tempRow, tempCol;
     double tempData;
 
     // Read in sparse matrix saved in Matrix Market Format
-    std::ifstream infile(controlData.matrixFile);
+    std::ifstream infile(control.matrixFile);
     if (!infile){
         std::cout << "FAILED TO OPEN FILE!" << std::endl;
         exit(1);
@@ -55,15 +56,15 @@ void csrSpMV::masterOnlySpMV(controlData controlData) {
                     line.erase(0, pos + 1);
 
                     if (i == 0) {
-                        controlData.rowCount = std::stoi(token);
+                        control.rowCount = std::stoi(token);
                     } else {
-                        controlData.colCount = std::stoi(token);
+                        control.colCount = std::stoi(token);
                     }
 
                     i++;
                 }
 
-                controlData.nonZeros = std::stoi(line);
+                control.nonZeros = std::stoi(line);
             } else {
                 Element tempElement(0, 0, 0.0);
                 size_t pos = 0;
@@ -91,11 +92,11 @@ void csrSpMV::masterOnlySpMV(controlData controlData) {
             previousLineCommented = true;
         }
     }
-    printf("%d rows, %d cols, and %d non-zeros\n", controlData.rowCount, controlData.colCount, controlData.nonZeros);
+    printf("%d rows, %d cols, and %d non-zeros\n", control.rowCount, control.colCount, control.nonZeros);
 
     // add to csr vectors for use as CSR Format
-    csrCols.resize(controlData.nonZeros);
-    csrData.resize(controlData.nonZeros);
+    csrCols.resize(control.nonZeros);
+    csrData.resize(control.nonZeros);
 
     int rowsAdded = -1;
     for (int k = 0; k < elements.size(); k++) {
@@ -119,28 +120,28 @@ void csrSpMV::masterOnlySpMV(controlData controlData) {
         //std::cout << "Added " << csr_data[k] << " to row " << csr_row.size()-1 << std::endl;
     }
 
-    if (controlData.rowCount != csrRows.size()){
+    if (control.rowCount != csrRows.size()){
         std::cout << "Actual row count does NOT match reported rowCount" << std::endl;
     }
 
 
     //std::cout << "Creating Dense Vector" << std::endl;
-    if (!controlData.myId) {
+    if (!control.myId) {
         //std::cout << "Populating Dense Vector" << std::endl;
-        for (int i = 0; i < controlData.rowCount; i++) {
+        for (int i = 0; i < control.rowCount; i++) {
             denseVec.push_back(1.0);
         }
     }
 
     std::cout << "Performing Master Only SpMV" << std::endl;
-    result.resize(controlData.rowCount);
+    result.resize(control.rowCount);
 
-    std::cout << "rowcount = " << controlData.rowCount << ", csrRows.size() = " << csrRows.size() << std::endl;
-    for (int i = 0; i < controlData.rowCount; i++) {
+    std::cout << "rowcount = " << control.rowCount << ", csrRows.size() = " << csrRows.size() << std::endl;
+    for (int i = 0; i < control.rowCount; i++) {
         //std::cout << "i = " << i << std::endl;
         int temp = 0.0;
-        if (i != controlData.rowCount - 1) {
-            if (controlData.colMajor) { //col major order selected
+        if (i != control.rowCount - 1) {
+            if (control.colMajor) { //col major order selected
                 for (int j = csrRows[i]; j < csrRows[i + 1]; j++) {   // go to end of current row
                     // entire row is multiplied by a single dense vector element
                     //std::cout << "i = " << i << " j = " << j << ", origin_row["<< i << "] = " << origin_row[i] << std::endl;
@@ -153,7 +154,7 @@ void csrSpMV::masterOnlySpMV(controlData controlData) {
                 }
             }
         } else {
-            if (controlData.colMajor) { //col major order selected
+            if (control.colMajor) { //col major order selected
                 for (int j = csrRows[i]; j < csrData.size(); j++) {  // go to end of data vector
                     // entire row is multiplied by a single dense vector element
                     //std::cout << "i = " << i << " j = " << j << ", origin_row["<< i << "] = " << origin_row[i] << std::endl;

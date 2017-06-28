@@ -21,8 +21,8 @@ class csrSpMV {
         std::vector <double> denseVec;
         std::vector <double> result;
 
-        void nodeSpMV(controlData controlData);
-        void masterOnlySpMV(controlData controlData);
+        void nodeSpMV(controlData control);
+        void masterOnlySpMV(controlData control);
         ~csrSpMV();
 };
 

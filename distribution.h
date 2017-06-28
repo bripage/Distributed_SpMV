@@ -18,6 +18,6 @@
 #include "controlStruct.h"
 #include "csrSpMV.h"
 
-void distribution_SplitMatrix(controlData controlData, std::vector<csrSpMV*>& clusterColData);
+void distribution_SplitMatrix(controlData& controlData, std::vector<csrSpMV*>& clusterColData);
 
 #endif //DISTRUBUTION_H

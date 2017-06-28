@@ -8,11 +8,11 @@
 //  Distribute sparse matrix amongst cluster nodes via SPLIT MATRIX Distribution
 //
 //
-void distribution_SplitMatrix(controlData controlData, std::vector<csrSpMV*>& clusterColData) {
-    int colsLastColumn, colsPerColumn;
+void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clusterColData) {
+    int rowsLastRow, rowsPerRow, colsLastColumn, colsPerColumn;
 
-    clusterColData.resize(controlData.clusterCols);
-    for (int i = 0; i < controlData.clusterCols; i++) {
+    clusterColData.resize(control.clusterCols);
+    for (int i = 0; i < control.clusterCols; i++) {
         clusterColData[i] = new csrSpMV;
     }
 
@@ -23,7 +23,7 @@ void distribution_SplitMatrix(controlData controlData, std::vector<csrSpMV*>& cl
     double tempData;
 
     // Read in sparse matrix saved in Matrix Market Format
-    std::ifstream infile(controlData.matrixFile);
+    std::ifstream infile(control.matrixFile);
     if (!infile) {
         std::cout << "FAILED TO OPEN FILE!" << std::endl;
         exit(1);
@@ -46,28 +46,40 @@ void distribution_SplitMatrix(controlData controlData, std::vector<csrSpMV*>& cl
                     line.erase(0, pos + 1);
 
                     if (i == 0) {
-                        controlData.rowCount = std::stoi(token);
+                        control.rowCount = std::stoi(token);
                     } else {
-                        controlData.colCount = std::stoi(token);
+                        control.colCount = std::stoi(token);
                     }
 
                     i++;
                 }
 
-                controlData.nonZeros = std::stoi(line);
+                control.nonZeros = std::stoi(line);
 
-                printf("%d rows, %d cols, and %d non-zeros\n", controlData.rowCount, controlData.colCount, controlData.nonZeros);
+                printf("%d rows, %d cols, and %d non-zeros\n", control.rowCount, control.colCount, control.nonZeros);
 
-                controlData.colsPerNode = ceil(controlData.rowCount / (float)controlData.clusterCols);
-                std::cout << "colsPerNode = " << controlData.colsPerNode << std::endl;
-                if (controlData.rowCount % controlData.clusterCols != 0) {
-                    colsLastColumn = colsPerColumn + (controlData.rowCount % controlData.clusterCols);
+                control.rowsPerNode = ceil(control.rowCount / (float)control.clusterRows);
+                control.colsPerNode = ceil(control.colCount / (float)control.clusterCols);
+                std::cout << "rowsPerNode = " << control.rowsPerNode << ", colsPerNode = " << control.colsPerNode << std::endl;
+
+                // determine where to test overflow for extra rows that must be added to the last cluster row's work
+                if (control.rowCount % control.clusterCols != 0) {
+                    rowsLastRow = control.rowsPerNode + (control.rowCount % control.clusterRows);
                 } else {
-                    colsLastColumn = controlData.rowCount / controlData.clusterCols;
+                    rowsLastRow = control.rowCount / control.clusterCols;
                 }
-                controlData.lastClusterColColStart = controlData.colCount - colsLastColumn;
+                control.lastClusterRowRowStart = control.colCount - rowsLastRow;
+                // determine where to test overflow for extra columns that must be added to the last cluster column's
+                // work
+                if (control.colCount % control.clusterCols != 0) {
+                    colsLastColumn = control.colsPerNode + (control.colCount % control.clusterCols);
+                } else {
+                    colsLastColumn = control.colCount / control.clusterCols;
+                }
+                control.lastClusterColColStart = control.colCount - colsLastColumn;
 
-                std::cout << " colsLastColumn = " << colsLastColumn << ", lastClusterColColStart = " << controlData.lastClusterColColStart << std::endl;
+                std::cout << " rowsLastRow = " << colsLastColumn << ", lastClusterRowRowStart = " << control.lastClusterRowRowStart << std::endl;
+                std::cout << " colsLastColumn = " << colsLastColumn << ", lastClusterColColStart = " << control.lastClusterColColStart << std::endl;
             } else {
                 size_t pos = 0;
                 std::string token;
@@ -86,18 +98,14 @@ void distribution_SplitMatrix(controlData controlData, std::vector<csrSpMV*>& cl
                 }
                 tempData = ::atof(line.c_str());
 
-                std::cout << "made it this far" << std::endl;
-
                 // if the number of columns does not event divide amongst the number of cluster columns, the final
                 // cluster column is given the excess whereas all other columns receive the same amount of columns to
                 // work over.
-                if (tempCol > controlData.lastClusterColColStart) {
-                    assignedCol = controlData.clusterCols - 1;
+                if (tempCol > control.lastClusterColColStart) {
+                    assignedCol = control.clusterCols - 1;
                 } else {
-                    assignedCol = tempCol / controlData.colsPerNode;
+                    assignedCol = tempCol / control.colsPerNode;
                 }
-
-                std::cout << "tempCol = " << tempCol << ", assignedCol = " << assignedCol << std::endl;
 
                 // if the row is
                 //
@@ -125,7 +133,7 @@ void distribution_SplitMatrix(controlData controlData, std::vector<csrSpMV*>& cl
     std::cout << "DONE SPLITTING MATRIX AMONGST CLUSTER COLUMNS" << std::endl;
 
 
-    for (int i = 0; i < controlData.clusterCols; i++){
+    for (int i = 0; i < control.clusterCols; i++){
         std::cout << "Column " << i << ": " << clusterColData[i]->csrData.size() << std::endl;
     }
 }
