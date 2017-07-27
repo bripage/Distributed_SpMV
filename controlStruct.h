@@ -24,6 +24,7 @@ struct controlData {
     int clusterCols;
     int lastClusterRowRowStart; // can be calculated locally
     int lastClusterColColStart; // can be calculated locally
+    int elementCount;
 
     //MPI Stuff
     int processCount;

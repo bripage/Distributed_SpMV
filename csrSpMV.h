@@ -12,6 +12,8 @@
 #include <iostream>
 #include <vector>
 #include "controlStruct.h"
+#include <chrono>
+#include <thread>
 
 class csrSpMV {
     public:

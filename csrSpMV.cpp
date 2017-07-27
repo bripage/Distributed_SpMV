@@ -22,8 +22,29 @@ csrSpMV::~csrSpMV() {
 
 void csrSpMV::nodeSpMV(controlData control) {
 
-//stuffff
+    //std::this_thread::sleep_for(std::chrono::milliseconds(control.myId * 2000));
+    //std::cout << "myID = " << control.myId << ", data length = " << csrData.size() << std::endl;
 
+    if (csrData.size() > 0) {
+        for (int i = 0; i < csrRows.size(); i++) {
+            if (i == csrRows.size() - 1) {
+                for (int j = csrRows[i]-csrRows[0]; j < csrData.size(); j++) {
+                    //std::cout << "last row, " << i << ", " << j << ", rowSize = " << csrRows.size() << ", start = "
+                    //          << csrRows[i] << ", end = " << csrData.size() << ", csrData[" << j << "] = " << csrData[j]
+                    //          << std::endl;
+                    result[i] += csrData[j] * (double)denseVec[i];
+                }
+            } else {
+                for (int j = csrRows[i]-csrRows[0]; j < csrRows[i + 1]-csrRows[0]; j++) {
+                    //std::cout << i << ", " << j << ", result size = " << result.size() << ", rowSize = " << csrRows.size()
+                    //          << " denseVec size = "
+                    //          << denseVec.size() << ", csrData size = " << csrData.size() << " , start = " << csrRows[i]
+                    //          << ", end = " << csrRows[i + 1] << ", csrData[" << j << "] = " << csrData[j] << std::endl;
+                    result[i] += csrData[j] * (double)denseVec[i];
+                }
+            }
+        }
+    }
 }
 
 void csrSpMV::masterOnlySpMV(controlData control) {
@@ -139,18 +160,18 @@ void csrSpMV::masterOnlySpMV(controlData control) {
     std::cout << "rowcount = " << control.rowCount << ", csrRows.size() = " << csrRows.size() << std::endl;
     for (int i = 0; i < control.rowCount; i++) {
         //std::cout << "i = " << i << std::endl;
-        int temp = 0.0;
+        double temp = 0.0;
         if (i != control.rowCount - 1) {
             if (control.colMajor) { //col major order selected
                 for (int j = csrRows[i]; j < csrRows[i + 1]; j++) {   // go to end of current row
                     // entire row is multiplied by a single dense vector element
                     //std::cout << "i = " << i << " j = " << j << ", origin_row["<< i << "] = " << origin_row[i] << std::endl;
-                    temp += csrData[j] * denseVec[i];
+                    temp += csrData[j] * (double)denseVec[i];
                 }
             } else {    // row major order selected
                 for (int j = csrRows[i]; j < csrRows[i + 1]; j++) {   // go to end of current row
                     //std::cout << "i = " << i << " j = " << j << ", origin_row["<< i << "] = " << origin_row[i] << std::endl;
-                    temp += csrData[j] * denseVec[csrCols[j]];
+                    temp += csrData[j] * (double)denseVec[csrCols[j]];
                 }
             }
         } else {
@@ -158,12 +179,12 @@ void csrSpMV::masterOnlySpMV(controlData control) {
                 for (int j = csrRows[i]; j < csrData.size(); j++) {  // go to end of data vector
                     // entire row is multiplied by a single dense vector element
                     //std::cout << "i = " << i << " j = " << j << ", origin_row["<< i << "] = " << origin_row[i] << std::endl;
-                    temp += csrData[j] * denseVec[i];
+                    temp += csrData[j] * (double)denseVec[i];
                 }
             } else {    // row major order selected
                 for (int j = csrRows[i]; j < csrData.size(); j++) {  // go to end of data vector
                     //std::cout << "i = " << i << " j = " << j << ", origin_row["<< i << "] = " << origin_row[i] << std::endl;
-                    temp += csrData[j] * denseVec[csrCols[j]];
+                    temp += csrData[j] * (double)denseVec[csrCols[j]];
                 }
             }
         }
