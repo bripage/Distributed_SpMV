@@ -11,6 +11,16 @@ struct Element {
 
     Element(int r, int c, double d) : row(r), col(c), data(d) {}
 };
+csrSpMV::csrSpMV(){
+
+}
+
+csrSpMV::csrSpMV(const csrSpMV& objToCopy){
+	csrRows = objToCopy.csrRows;
+	csrCols = objToCopy.csrCols;
+	csrData = objToCopy.csrData;
+}
+
 
 csrSpMV::~csrSpMV() {
     csrRows.clear();
@@ -20,7 +30,7 @@ csrSpMV::~csrSpMV() {
     result.clear();
 }
 
-void csrSpMV::nodeSpMV(controlData control) {
+void csrSpMV::nodeSpMV(controlData control, std::vector <double>& result) {
 
     //std::this_thread::sleep_for(std::chrono::milliseconds(control.myId * 2000));
     //std::cout << "myID = " << control.myId << ", data length = " << csrData.size() << std::endl;
@@ -28,11 +38,9 @@ void csrSpMV::nodeSpMV(controlData control) {
     if (csrData.size() > 0) {
 		int ompThreadId, start, end, i, j;
 
-	    std::cout << "ompThreads = " << control.ompThreads << std::endl;
-	    
-		#pragma parallel for num_threads(control.ompThreads)
-		//#pragma parallel for num_threads(control.ompThreads) shared(result, denseVec, csrRows, csrCols, csrData) \
-		//	private(ompThreadId, start, end, i, j)
+	    std::cout << "omp_get_max_threads() = " << omp_get_max_threads() << std::endl;
+
+		#pragma omp parallel num_threads(control.ompThreads) shared(result) private(ompThreadId, start, end, i, j)
 	    {
 		    ompThreadId = omp_get_thread_num();
 

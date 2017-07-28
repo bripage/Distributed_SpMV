@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
 	// Get the rank of the process
 	MPI_Comm_rank(MPI_COMM_WORLD, &control.myId);
 
-	double startTime = MPI_Wtime();
+	double overallStartTime = MPI_Wtime();
 
 	// Get the name of the processor
 	//char processor_name[MPI_MAX_PROCESSOR_NAME];
@@ -138,12 +138,16 @@ int main(int argc, char *argv[]) {
     std::vector<csrSpMV*> clusterColData;
     int colsPerColumn;
 
+	double distributionStartTime = MPI_Wtime();
+
     if (!control.myId) {
         distribution_SplitMatrix(control, clusterColData);
 
         //std::cout << control.rowCount << " rows, " << control.colCount << " cols, and " << control.nonZeros
         //          << " non-zeros" << std::endl;
     }
+
+	double distributionEndTime = MPI_Wtime();
 
     // Create a pointer to the nodes csr object. Using pointers so that we do not have to copy any data on the
     // master node in order to assign it to this name
@@ -179,11 +183,11 @@ int main(int argc, char *argv[]) {
         MPI_Recv(&control.elementCount, 1, MPI_INT, 0, 0, control.row_comm, MPI_STATUS_IGNORE);  // get number of elements
         MPI_Recv(&control.rowCount, 1, MPI_INT, 0, 0, control.row_comm, MPI_STATUS_IGNORE); // get number of rows (should be all)
 
-        // resize the vectors to allow for the incoming data to be recieved
+        // resize the vectors to allow for the incoming data to be received
         nodeCSR->csrRows.resize(control.rowCount);
         nodeCSR->csrCols.resize(control.elementCount);
         nodeCSR->csrData.resize(control.elementCount);
-        nodeCSR->result.resize(control.rowCount, 0.0);
+        //nodeCSR->result.resize(control.rowCount, 0.0);
         nodeCSR->denseVec.resize(control.rowCount, 0.0);
 
         //std::cout << "control.elementCount = " << control.elementCount << ", control.rowCount = " << control.rowCount << std::endl;
@@ -235,9 +239,9 @@ int main(int argc, char *argv[]) {
             MPI_Send(&control.elementCount, 1, MPI_INT, i, 0, control.col_comm);
             MPI_Send(&localRowCount, 1, MPI_INT, i, 0, control.col_comm);
 
-	        if (control.myId == 0){
+	        //if (control.myId == 0){
 		        MPI_Send(&control.rowsPerNode, 1, MPI_INT, i, 0, control.col_comm);
-	        }
+	        //}
 
             MPI_Send(&(nodeCSR->csrRows[control.rowsPerNode * i]), localRowCount, MPI_INT, i, 0, control.col_comm);
             MPI_Send(&(nodeCSR->csrCols[firstElement]), control.elementCount, MPI_INT, i, 0, control.col_comm);
@@ -258,7 +262,7 @@ int main(int argc, char *argv[]) {
 
     if (control.myId < control.clusterCols){
         nodeCSR->denseVec.erase(nodeCSR->denseVec.begin() + control.rowsPerNode, nodeCSR->denseVec.end());
-	    nodeCSR->result.resize(control.rowsPerNode, 0.0);
+	    //nodeCSR->result.resize(control.rowsPerNode, 0.0);
     }
 
     // row nodes to receive data from their column master
@@ -269,9 +273,9 @@ int main(int argc, char *argv[]) {
         MPI_Recv(&control.rowCount, 1, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE); // get number of rows
         //std::cout << control.myId << ": 2" << std::endl;
 
-	    if (control.row_rank == 0){
+	    //if (control.row_rank == 0){
 		    MPI_Recv(&control.rowsPerNode, 1, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
-	    }
+	    //}
 
         // resize the vectors to allow for the incoming data to be received
         //std::cout << control.myId << ": 3" << std::endl;
@@ -281,7 +285,7 @@ int main(int argc, char *argv[]) {
         //std::cout << control.myId << ": 5" << std::endl;
         nodeCSR->csrData.resize(control.elementCount);
         //std::cout << control.myId << ": 6" << std::endl;
-        nodeCSR->result.resize(control.rowCount, 0.0);
+        //nodeCSR->result.resize(control.rowCount, 0.0);
         nodeCSR->denseVec.resize(control.rowCount, 0.0);
 
         MPI_Recv(&nodeCSR->csrRows[0], control.rowCount, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
@@ -295,35 +299,89 @@ int main(int argc, char *argv[]) {
         //std::cout << control.myId << ": data length = " << nodeCSR->csrData.size() << std::endl;
     }
 
+	std::vector <double> result;
+	result.resize(control.rowsPerNode, 0.0);
 
     //MPI_Barrier(MPI_COMM_WORLD);
     //std::cout << control.myId << ": rows = " << nodeCSR->csrRows.size() << ", elements = " << nodeCSR->csrData.size() << std::endl;
-    nodeCSR->nodeSpMV(control);
+    //nodeCSR->nodeSpMV(control, result);
+
+	if (nodeCSR->csrData.size() > 0) {
+		int ompThreadId, start, end, i, j, rowsPerThread;
+		rowsPerThread = ceil(nodeCSR->csrRows.size() / control.ompThreads);
+
+		#pragma omp parallel num_threads(control.ompThreads) shared(nodeCSR, result) private(ompThreadId, start, end, i, j, rowsPerThread)
+		{
+			ompThreadId = omp_get_thread_num();
+			//std::cout << "Thread " << ompThreadId << " starting " << std::endl;
+			if (ompThreadId == control.ompThreads - 1){
+				for (i = ompThreadId * rowsPerThread; i < nodeCSR->csrRows.size(); i++) {
+					if (i == nodeCSR->csrRows.size() - 1) {
+						for (j = nodeCSR->csrRows[i]-nodeCSR->csrRows[0]; j < nodeCSR->csrData.size(); j++) {
+							//std::cout << i << ", " << j << ", result[" << i << "] += " << nodeCSR->csrData[j] << " * "
+							//          << (double)nodeCSR->denseVec[i] << std::endl;
+							#pragma omp atomic
+								result[i] += nodeCSR->csrData[j] * (double)nodeCSR->denseVec[i];
+						}
+					} else {
+						for (j = nodeCSR->csrRows[i]-nodeCSR->csrRows[0]; j < nodeCSR->csrRows[i + 1]-nodeCSR->csrRows[0]; j++) {
+							//std::cout << i << ", " << j << ", result[" << i << "] += " << nodeCSR->csrData[j] << " * "
+							//          << (double)nodeCSR->denseVec[i] << std::endl;
+							#pragma omp atomic
+								result[i] += nodeCSR->csrData[j] * (double)nodeCSR->denseVec[i];
+						}
+					}
+				}
+			} else {
+				for (i = ompThreadId * rowsPerThread; i < (i+1)*rowsPerThread; i++) {
+					if (i == nodeCSR->csrRows.size() - 1) {
+						for (j = nodeCSR->csrRows[i]-nodeCSR->csrRows[0]; j < nodeCSR->csrData.size(); j++) {
+							//std::cout << i << ", " << j << ", result[" << i << "] += " << nodeCSR->csrData[j] << " * "
+							//          << (double)nodeCSR->denseVec[i] << std::endl;
+							#pragma omp atomic
+								result[i] += nodeCSR->csrData[j] * (double)nodeCSR->denseVec[i];
+						}
+					} else {
+						for (j = nodeCSR->csrRows[i]-nodeCSR->csrRows[0]; j < nodeCSR->csrRows[i + 1]-nodeCSR->csrRows[0]; j++) {
+							//std::cout << i << ", " << j << ", result[" << i << "] += " << nodeCSR->csrData[j] << " * "
+							//          << (double)nodeCSR->denseVec[i] << std::endl;
+							#pragma omp atomic
+								result[i] += nodeCSR->csrData[j] * (double)nodeCSR->denseVec[i];
+						}
+					}
+				}
+			}
+		}
+	}
+
+
     //MPI_Barrier(MPI_COMM_WORLD);
+
 
 	if (control.myId == 0) {
 		//nodeCSR->denseVec.clear();
-		nodeCSR->result.resize(control.rowsPerNode * control.clusterRows, 0.0);
+		result.resize(control.rowsPerNode * control.clusterRows, 0.0);
 	}
 
 	/*
 	 *      MPI REDUCE w/ SUM FROM COLUMNS TO ROW MASTER(S)
 	 */
 	//std::cout << "About to reduce" << std::endl;
+
 	if (control.myId < control.clusterCols){
 		if (control.row_rank == 0){
-			MPI_Reduce(MPI_IN_PLACE, &nodeCSR->result[0], control.rowsPerNode, MPI_DOUBLE, MPI_SUM, 0,
+			MPI_Reduce(MPI_IN_PLACE, &result[0], control.rowsPerNode, MPI_DOUBLE, MPI_SUM, 0,
 			           control.row_comm);
 		} else {
-			MPI_Reduce(&nodeCSR->result[0], &nodeCSR->result[0], control.rowsPerNode, MPI_DOUBLE, MPI_SUM, 0,
+			MPI_Reduce(&result[0], &result[0], control.rowsPerNode, MPI_DOUBLE, MPI_SUM, 0,
 			           control.row_comm);
 		}
 	} else {
 		if (control.row_rank == 0){
-			MPI_Reduce(MPI_IN_PLACE, &nodeCSR->result[0], control.rowCount, MPI_DOUBLE, MPI_SUM, 0,
+			MPI_Reduce(MPI_IN_PLACE, &result[0], control.rowCount, MPI_DOUBLE, MPI_SUM, 0,
 			           control.row_comm);
 		} else {
-			MPI_Reduce(&nodeCSR->result[0], &nodeCSR->result[0], control.rowCount, MPI_DOUBLE, MPI_SUM, 0,
+			MPI_Reduce(&result[0], &result[0], control.rowCount, MPI_DOUBLE, MPI_SUM, 0,
 			           control.row_comm);
 		}
 	}
@@ -333,12 +391,13 @@ int main(int argc, char *argv[]) {
 	/*
 	 *      MPI GATHER FROM ROW MASTERS TO GLOBAL MASTER
 	 */
+
 	if (control.myId % control.clusterCols == 0) {
 		if (control.col_rank == 0) {
-			MPI_Gather(MPI_IN_PLACE, control.rowsPerNode, MPI_DOUBLE, &nodeCSR->result[0], control.rowsPerNode,
+			MPI_Gather(MPI_IN_PLACE, control.rowsPerNode, MPI_DOUBLE, &result[0], control.rowsPerNode,
 					   MPI_DOUBLE, 0, control.col_comm);
 		} else {
-			MPI_Gather(&nodeCSR->result[0], control.rowsPerNode, MPI_DOUBLE, &nodeCSR->result[0], control.rowsPerNode,
+			MPI_Gather(&result[0], control.rowsPerNode, MPI_DOUBLE, &result[0], control.rowsPerNode,
 					   MPI_DOUBLE, 0, control.col_comm);
 		}
 
@@ -349,10 +408,8 @@ int main(int argc, char *argv[]) {
 
 	MPI_Comm_free(&control.col_comm);
     MPI_Comm_free(&control.row_comm);
-
-	double endTime = MPI_Wtime();
-
-    MPI_Finalize();
+	double overallEndTime = MPI_Wtime();
+	MPI_Finalize();
 
 	/*
 	 for (int i = 0; i < masterData.result.size(); i++){
@@ -370,14 +427,16 @@ int main(int argc, char *argv[]) {
 		std::cout << std::endl;
 		for (int i = 0; i < control.rowCount; i++) {
 			//std::cout << "i = " << i << std::endl;
-			if (std::abs(masterData.result[i] - nodeCSR->result[i]) > 0.0001) {
+			if (std::abs(masterData.result[i] - result[i]) > 0.0001) {
 				std::cout << "--- ERROR: result[" << i << "] DOES NOT MATCH ---" << std::endl;
 			}
 		}
 	}
 
 	if (control.myId == 0){
-		std::cout << std::endl << "Complete, Time elapsed: " << endTime - startTime << std::endl;
+		std::cout << std::endl << "Complete!" << std::endl;
+		std::cout << "Element Distribution Time: " << distributionEndTime - distributionStartTime << std::endl;
+		std::cout << "Total time elapsed: " << overallEndTime - overallStartTime << std::endl;
 	}
 
 	return 0;

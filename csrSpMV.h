@@ -18,15 +18,17 @@
 
 class csrSpMV {
     public:
-        std::vector <int> csrRows;
-        std::vector <int> csrCols;
-        std::vector <double> csrData;
-        std::vector <double> denseVec;
+		std::vector <int> csrRows;
+		std::vector <int> csrCols;
+		std::vector <double> csrData;
+		std::vector <double> denseVec;
         std::vector <double> result;
 
-        void nodeSpMV(controlData control);
+        void nodeSpMV(controlData control, std::vector <double>& result);
         void masterOnlySpMV(controlData control);
-        ~csrSpMV();
+		csrSpMV();                          // generic constructor
+		csrSpMV(const csrSpMV& objToCopy);  //copy constructor
+        ~csrSpMV();                         // destructor
 };
 
 #endif //DISTRUBUTED_SPMV_CSRSPMV_H
