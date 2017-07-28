@@ -134,14 +134,27 @@ void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clust
         }
     }
 
-    std::cout << "DONE SPLITTING MATRIX AMONGST CLUSTER COLUMNS" << std::endl;
-
-
+    std::cout << std::endl << "Distribution of NonZero Elements" << std::endl;
     for (int i = 0; i < control.clusterCols; i++){
         std::cout << "Column " << i << ": " << clusterColData[i]->csrData.size() << std::endl;
+
+	    for (int j = 0; j < control.clusterRows; j++) {
+		    std::cout << "\tRow " << j << ": ";
+
+		    int start = clusterColData[i]->csrRows[j * control.rowsPerNode];
+		    int end;
+
+		    if (j == control.clusterRows - 1) {
+			    end = clusterColData[i]->csrData.size();
+		    } else {
+			    end = clusterColData[i]->csrRows[(j + 1) * control.rowsPerNode];
+		    }
+		    std::cout << end - start << std::endl;
+	    }
     }
-/*
-    for (int i = 0; i < control.clusterCols; i++){
+
+	/*
+	for (int i = 0; i < control.clusterCols; i++){
         std::cout << "ID = " << i << std::endl;
         for (int j = 0; j < clusterColData[i]->csrRows.size(); j++) {
             std::cout << "Row " << j << ": ";
@@ -163,5 +176,5 @@ void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clust
 
         std::cout << std::endl << std::endl;
     }
-	*/
+    */
  }

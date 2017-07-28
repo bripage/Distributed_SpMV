@@ -14,6 +14,7 @@
 #include "controlStruct.h"
 #include <chrono>
 #include <thread>
+#include <omp.h>
 
 class csrSpMV {
     public:

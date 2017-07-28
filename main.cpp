@@ -13,6 +13,29 @@
 
 int main(int argc, char *argv[]) {
     controlData control;
+
+	//Initialize the MPI environment
+	MPI_Init(&argc, &argv);
+	// Get the number of processes
+	MPI_Comm_size(MPI_COMM_WORLD, &control.processCount);
+	// Get the rank of the process
+	MPI_Comm_rank(MPI_COMM_WORLD, &control.myId);
+
+	double startTime = MPI_Wtime();
+
+	// Get the name of the processor
+	//char processor_name[MPI_MAX_PROCESSOR_NAME];
+	//int name_len;
+	//MPI_Get_processor_name(processor_name, &name_len);
+
+	// Verify MPI initialised properly
+	if (control.processCount == 1 && control.masterOnly == false) {
+		printf("MPI Initialization failed -- KILLING!");
+		MPI_Finalize();
+		exit(0);
+	}
+
+
     std::string argTemp;
 
     for (int i = 1; i < argc; i= i+2){
@@ -63,27 +86,6 @@ int main(int argc, char *argv[]) {
         }
     }
 
-
-    //Initialize the MPI environment
-    MPI_Init(&argc, &argv);
-
-    // Get the number of processes
-    MPI_Comm_size(MPI_COMM_WORLD, &control.processCount);
-
-    // Get the rank of the process
-    MPI_Comm_rank(MPI_COMM_WORLD, &control.myId);
-
-    // Get the name of the processor
-    char processor_name[MPI_MAX_PROCESSOR_NAME];
-    int name_len;
-    MPI_Get_processor_name(processor_name, &name_len);
-
-    // Verify MPI initialised properly
-    if (control.processCount == 1 && control.masterOnly == false) {
-        printf("MPI Initialization failed -- KILLING!");
-        MPI_Finalize();
-        exit(0);
-    }
 
     //****************************************************//
     //  Create comm for each column/row of compute nodes  //
@@ -147,7 +149,7 @@ int main(int argc, char *argv[]) {
     // master node in order to assign it to this name
     csrSpMV* nodeCSR;
 
-    if (!control.myId){
+    if (control.myId == 0){
         nodeCSR = clusterColData[0];
         //std::cout << "masterNodeCSR rows = " << nodeCSR->csrRows.size() << std::endl;
     } else {
@@ -155,7 +157,7 @@ int main(int argc, char *argv[]) {
     }
 
     // master to send data to cluster column masters
-    if (!control.myId){
+    if (control.myId == 0){
         for (int i = 1; i < control.clusterCols; i++){  // start at 1 since Master is the row master
             control.elementCount = clusterColData[i]->csrData.size();
             //std::cout << "sending " << control.elementCount << " elements to column " << i << std::endl;
@@ -172,8 +174,6 @@ int main(int argc, char *argv[]) {
             delete(clusterColData[i]);
         }
         clusterColData.erase(clusterColData.begin()+1, clusterColData.end()); // remove pointers from clusterColData
-
-        control.rowsPerNode = ceil(control.rowCount / (float)control.clusterRows);
     } else if (control.myId < control.clusterCols && control.myId != 0){
         //std::cout << control.myId << " column master reading data" << std::endl;
         MPI_Recv(&control.elementCount, 1, MPI_INT, 0, 0, control.row_comm, MPI_STATUS_IGNORE);  // get number of elements
@@ -258,11 +258,7 @@ int main(int argc, char *argv[]) {
 
     if (control.myId < control.clusterCols){
         nodeCSR->denseVec.erase(nodeCSR->denseVec.begin() + control.rowsPerNode, nodeCSR->denseVec.end());
-         if (control.myId == 0) {
-             nodeCSR->result.resize(control.rowsPerNode * control.clusterRows, 0.0);
-         } else {
-             nodeCSR->result.resize(control.rowsPerNode, 0.0);
-         }
+	    nodeCSR->result.resize(control.rowsPerNode, 0.0);
     }
 
     // row nodes to receive data from their column master
@@ -304,6 +300,11 @@ int main(int argc, char *argv[]) {
     //std::cout << control.myId << ": rows = " << nodeCSR->csrRows.size() << ", elements = " << nodeCSR->csrData.size() << std::endl;
     nodeCSR->nodeSpMV(control);
     //MPI_Barrier(MPI_COMM_WORLD);
+
+	if (control.myId == 0) {
+		//nodeCSR->denseVec.clear();
+		nodeCSR->result.resize(control.rowsPerNode * control.clusterRows, 0.0);
+	}
 
 	/*
 	 *      MPI REDUCE w/ SUM FROM COLUMNS TO ROW MASTER(S)
@@ -348,6 +349,9 @@ int main(int argc, char *argv[]) {
 
 	MPI_Comm_free(&control.col_comm);
     MPI_Comm_free(&control.row_comm);
+
+	double endTime = MPI_Wtime();
+
     MPI_Finalize();
 
 	/*
@@ -363,12 +367,17 @@ int main(int argc, char *argv[]) {
 	*/
 
 	if (control.myId == 0) {
+		std::cout << std::endl;
 		for (int i = 0; i < control.rowCount; i++) {
 			//std::cout << "i = " << i << std::endl;
 			if (std::abs(masterData.result[i] - nodeCSR->result[i]) > 0.0001) {
 				std::cout << "--- ERROR: result[" << i << "] DOES NOT MATCH ---" << std::endl;
 			}
 		}
+	}
+
+	if (control.myId == 0){
+		std::cout << std::endl << "Complete, Time elapsed: " << endTime - startTime << std::endl;
 	}
 
 	return 0;
