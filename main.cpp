@@ -308,18 +308,22 @@ int main(int argc, char *argv[]) {
 
 	if (nodeCSR->csrData.size() > 0) {
 		int ompThreadId, start, end, i, j, rowsPerThread;
-		rowsPerThread = ceil(nodeCSR->csrRows.size() / control.ompThreads);
+		//rowsPerThread = ceil(nodeCSR->csrRows.size() / control.ompThreads);
+		//std::cout << "rowsPerThread = " << rowsPerThread << std::endl;
 
 		#pragma omp parallel num_threads(control.ompThreads) shared(nodeCSR, result) private(ompThreadId, start, end, i, j, rowsPerThread)
 		{
+			rowsPerThread = ceil(nodeCSR->csrRows.size() / control.ompThreads);
 			ompThreadId = omp_get_thread_num();
 			//std::cout << "Thread " << ompThreadId << " starting " << std::endl;
 			if (ompThreadId == control.ompThreads - 1){
+				//std::cout << "(1)" << ompThreadId << " working on " << ompThreadId * rowsPerThread << " - " << nodeCSR->csrRows.size() << std::endl;
 				for (i = ompThreadId * rowsPerThread; i < nodeCSR->csrRows.size(); i++) {
 					if (i == nodeCSR->csrRows.size() - 1) {
 						for (j = nodeCSR->csrRows[i]-nodeCSR->csrRows[0]; j < nodeCSR->csrData.size(); j++) {
 							//std::cout << i << ", " << j << ", result[" << i << "] += " << nodeCSR->csrData[j] << " * "
 							//          << (double)nodeCSR->denseVec[i] << std::endl;
+							//if (ompThreadId != 3) std::cout << ompThreadId << " is doing stuff!" << std::endl;
 							#pragma omp atomic
 								result[i] += nodeCSR->csrData[j] * (double)nodeCSR->denseVec[i];
 						}
@@ -327,17 +331,21 @@ int main(int argc, char *argv[]) {
 						for (j = nodeCSR->csrRows[i]-nodeCSR->csrRows[0]; j < nodeCSR->csrRows[i + 1]-nodeCSR->csrRows[0]; j++) {
 							//std::cout << i << ", " << j << ", result[" << i << "] += " << nodeCSR->csrData[j] << " * "
 							//          << (double)nodeCSR->denseVec[i] << std::endl;
+							//if (ompThreadId != 3)std::cout << ompThreadId << " is doing stuff!" << std::endl;
 							#pragma omp atomic
 								result[i] += nodeCSR->csrData[j] * (double)nodeCSR->denseVec[i];
 						}
 					}
 				}
 			} else {
-				for (i = ompThreadId * rowsPerThread; i < (i+1)*rowsPerThread; i++) {
+				//std::cout << "rowsPerThread = " << rowsPerThread << std::endl;
+				//std::cout << "(2)" << ompThreadId << " working on " << ompThreadId * rowsPerThread << " - " << (ompThreadId+1)*rowsPerThread << std::endl;
+				for (i = ompThreadId * rowsPerThread; i < (ompThreadId+1)*rowsPerThread; i++) {
 					if (i == nodeCSR->csrRows.size() - 1) {
 						for (j = nodeCSR->csrRows[i]-nodeCSR->csrRows[0]; j < nodeCSR->csrData.size(); j++) {
 							//std::cout << i << ", " << j << ", result[" << i << "] += " << nodeCSR->csrData[j] << " * "
 							//          << (double)nodeCSR->denseVec[i] << std::endl;
+							//if (ompThreadId != 3)std::cout << ompThreadId << " is doing stuff!" << std::endl;
 							#pragma omp atomic
 								result[i] += nodeCSR->csrData[j] * (double)nodeCSR->denseVec[i];
 						}
@@ -345,6 +353,7 @@ int main(int argc, char *argv[]) {
 						for (j = nodeCSR->csrRows[i]-nodeCSR->csrRows[0]; j < nodeCSR->csrRows[i + 1]-nodeCSR->csrRows[0]; j++) {
 							//std::cout << i << ", " << j << ", result[" << i << "] += " << nodeCSR->csrData[j] << " * "
 							//          << (double)nodeCSR->denseVec[i] << std::endl;
+							//if (ompThreadId != 3)std::cout << ompThreadId << " is doing stuff!" << std::endl;
 							#pragma omp atomic
 								result[i] += nodeCSR->csrData[j] * (double)nodeCSR->denseVec[i];
 						}
