@@ -14,7 +14,6 @@
 #include <omp.h>
 #include <string>
 #include "mpi.h"
-//#include "nodeTree.h"
 #include "controlStruct.h"
 #include "csrSpMV.h"
 

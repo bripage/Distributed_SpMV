@@ -3,10 +3,9 @@
 //
 #include "distribution.h"
 
-//
+
 //
 //  Distribute sparse matrix amongst cluster nodes via SPLIT MATRIX Distribution
-//
 //
 void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clusterColData) {
     int rowsLastRow, rowsPerRow, colsLastColumn, colsPerColumn;
@@ -101,9 +100,6 @@ void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clust
                     assignedCol = tempCol / control.colsPerNode;
                 }
 
-                //std::cout << tempCol << ", " << tempRow << ", " << tempData << ", assignedCol = " << assignedCol
-                //fa          << std::endl;
-
                 // if the row is
                 //
                 if (tempRow == previousRow) {
@@ -134,6 +130,8 @@ void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clust
         }
     }
 
+	// Output the number of Non Zero elements that have been assigned to each cluster column, as well as each cluster
+	// node within that column. This will be used for memory transfer and performance evaluation calculations
     std::cout << std::endl << "Distribution of NonZero Elements" << std::endl;
     for (int i = 0; i < control.clusterCols; i++){
         std::cout << "Column " << i << ": " << clusterColData[i]->csrData.size() << std::endl;
@@ -153,28 +151,5 @@ void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clust
 	    }
     }
 
-	/*
-	for (int i = 0; i < control.clusterCols; i++){
-        std::cout << "ID = " << i << std::endl;
-        for (int j = 0; j < clusterColData[i]->csrRows.size(); j++) {
-            std::cout << "Row " << j << ": ";
 
-            int start = clusterColData[i]->csrRows[j];
-            int end;
-
-            if (j == clusterColData[i]->csrRows.size() - 1) {
-                end = clusterColData[i]->csrData.size();
-            } else {
-                end = clusterColData[i]->csrRows[j + 1];
-            }
-
-            for (int k = start; k < end; k++) {
-                std::cout << clusterColData[i]->csrData[k] << ", ";
-            }
-            std::cout << std::endl;
-        }
-
-        std::cout << std::endl << std::endl;
-    }
-    */
  }
