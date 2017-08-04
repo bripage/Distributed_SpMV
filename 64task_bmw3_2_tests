@@ -1,0 +1,192 @@
+#!/bin/tcsh
+#$ -M bpage1@nd.edu
+#$ -m abe
+#$ -cwd
+#$ -pe mpi-16 1024
+##$ -q *@@cswarm
+#$ -q long
+#$ -o 64task_bmw3_2_results.txt
+#$ -e errorurrmahgurd.err
+#$ -N BMW3_2_64task_Tests
+
+module purge
+#module load gcc/6.2.0 
+#module load mpich/3.2-gcc-6.2.0
+#module load mpich/3.2-intel-15.0
+module load hpx/4.0.0
+
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+echo “—————————————————————————————————————————————————“
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+echo “—————————————————————————————————————————————————“
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+echo “—————————————————————————————————————————————————“
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+echo “—————————————————————————————————————————————————“
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+echo “—————————————————————————————————————————————————“
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+echo “—————————————————————————————————————————————————“
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+echo “—————————————————————————————————————————————————“
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 2 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
+echo “—————————————————————————————————————————————————“
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+echo “—————————————————————————————————————————————————“
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+echo “—————————————————————————————————————————————————“
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+echo “—————————————————————————————————————————————————“
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+echo “—————————————————————————————————————————————————“
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+echo “—————————————————————————————————————————————————“
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+echo “—————————————————————————————————————————————————“
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+echo “—————————————————————————————————————————————————“
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
+mpirun -np 64 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix

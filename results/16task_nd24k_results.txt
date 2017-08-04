@@ -1,0 +1,4657 @@
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47038e+06, end = 6.47039e+06
+Element Distribution Time: 9.77116
+SmPV Time: 0.0400061
+Total time elapsed: 11.4089
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47039e+06, end = 6.4704e+06
+Element Distribution Time: 6.51724
+SmPV Time: 0.0400494
+Total time elapsed: 8.15537
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.4704e+06, end = 6.47041e+06
+Element Distribution Time: 6.07967
+SmPV Time: 0.0398451
+Total time elapsed: 7.71742
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47041e+06, end = 6.47042e+06
+Element Distribution Time: 6.08531
+SmPV Time: 0.0400266
+Total time elapsed: 7.72471
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47042e+06, end = 6.47042e+06
+Element Distribution Time: 6.12108
+SmPV Time: 0.039816
+Total time elapsed: 7.76017
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47043e+06, end = 6.47043e+06
+Element Distribution Time: 6.09904
+SmPV Time: 0.0399247
+Total time elapsed: 7.7372
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47043e+06, end = 6.47044e+06
+Element Distribution Time: 6.1566
+SmPV Time: 0.0400493
+Total time elapsed: 7.79382
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47044e+06, end = 6.47045e+06
+Element Distribution Time: 6.14015
+SmPV Time: 0.0401653
+Total time elapsed: 7.77873
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47045e+06, end = 6.47046e+06
+Element Distribution Time: 6.16478
+SmPV Time: 0.0406053
+Total time elapsed: 7.80445
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47046e+06, end = 6.47047e+06
+Element Distribution Time: 6.05486
+SmPV Time: 0.0403628
+Total time elapsed: 7.69072
+“—————————————————————————————————————————————————“
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47047e+06, end = 6.47048e+06
+Element Distribution Time: 6.0107
+SmPV Time: 0.029412
+Total time elapsed: 7.63799
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47048e+06, end = 6.47049e+06
+Element Distribution Time: 6.00154
+SmPV Time: 0.0297851
+Total time elapsed: 7.62671
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47049e+06, end = 6.47049e+06
+Element Distribution Time: 6.0029
+SmPV Time: 0.0299736
+Total time elapsed: 7.63072
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47049e+06, end = 6.4705e+06
+Element Distribution Time: 5.98896
+SmPV Time: 0.0298693
+Total time elapsed: 7.61597
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.4705e+06, end = 6.47051e+06
+Element Distribution Time: 6.04592
+SmPV Time: 0.0297797
+Total time elapsed: 7.67207
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47051e+06, end = 6.47052e+06
+Element Distribution Time: 6.00745
+SmPV Time: 0.0295732
+Total time elapsed: 7.63284
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47052e+06, end = 6.47053e+06
+Element Distribution Time: 6.03411
+SmPV Time: 0.0299981
+Total time elapsed: 7.66179
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47053e+06, end = 6.47054e+06
+Element Distribution Time: 6.0792
+SmPV Time: 0.0299411
+Total time elapsed: 7.70483
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47054e+06, end = 6.47054e+06
+Element Distribution Time: 6.05892
+SmPV Time: 0.0297217
+Total time elapsed: 7.68465
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47055e+06, end = 6.47055e+06
+Element Distribution Time: 5.98507
+SmPV Time: 0.0299323
+Total time elapsed: 7.61357
+“—————————————————————————————————————————————————“
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47055e+06, end = 6.47056e+06
+Element Distribution Time: 5.99905
+SmPV Time: 0.0223408
+Total time elapsed: 7.61893
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47056e+06, end = 6.47057e+06
+Element Distribution Time: 6.12126
+SmPV Time: 0.0220316
+Total time elapsed: 7.74322
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47057e+06, end = 6.47058e+06
+Element Distribution Time: 6.01776
+SmPV Time: 0.0222836
+Total time elapsed: 7.63855
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47058e+06, end = 6.47059e+06
+Element Distribution Time: 6.06054
+SmPV Time: 0.0226245
+Total time elapsed: 7.67934
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47059e+06, end = 6.4706e+06
+Element Distribution Time: 6.17183
+SmPV Time: 0.0219598
+Total time elapsed: 7.79341
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.4706e+06, end = 6.4706e+06
+Element Distribution Time: 5.98055
+SmPV Time: 0.0224535
+Total time elapsed: 7.6003
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.4706e+06, end = 6.47061e+06
+Element Distribution Time: 6.05272
+SmPV Time: 0.0218757
+Total time elapsed: 7.67432
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47061e+06, end = 6.47062e+06
+Element Distribution Time: 6.02221
+SmPV Time: 0.0219708
+Total time elapsed: 7.64298
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47062e+06, end = 6.47063e+06
+Element Distribution Time: 5.99012
+SmPV Time: 0.022245
+Total time elapsed: 7.61151
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47063e+06, end = 6.47064e+06
+Element Distribution Time: 6.06323
+SmPV Time: 0.0221975
+Total time elapsed: 7.68099
+“—————————————————————————————————————————————————“
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47064e+06, end = 6.47065e+06
+Element Distribution Time: 6.01095
+SmPV Time: 0.0181378
+Total time elapsed: 7.62537
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47065e+06, end = 6.47065e+06
+Element Distribution Time: 6.02848
+SmPV Time: 0.0180068
+Total time elapsed: 7.64253
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47066e+06, end = 6.47066e+06
+Element Distribution Time: 6.07438
+SmPV Time: 0.0181131
+Total time elapsed: 7.68897
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47066e+06, end = 6.47067e+06
+Element Distribution Time: 5.99802
+SmPV Time: 0.0181579
+Total time elapsed: 7.6137
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47067e+06, end = 6.47068e+06
+Element Distribution Time: 5.98735
+SmPV Time: 0.0183305
+Total time elapsed: 7.60089
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47068e+06, end = 6.47069e+06
+Element Distribution Time: 5.98883
+SmPV Time: 0.0183039
+Total time elapsed: 7.60523
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47069e+06, end = 6.4707e+06
+Element Distribution Time: 6.04638
+SmPV Time: 0.0180303
+Total time elapsed: 7.66136
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.4707e+06, end = 6.4707e+06
+Element Distribution Time: 6.07612
+SmPV Time: 0.0182581
+Total time elapsed: 7.69398
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47071e+06, end = 6.47071e+06
+Element Distribution Time: 6.00448
+SmPV Time: 0.0181805
+Total time elapsed: 7.62146
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47071e+06, end = 6.47072e+06
+Element Distribution Time: 6.00059
+SmPV Time: 0.0183328
+Total time elapsed: 7.61713
+“—————————————————————————————————————————————————“
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47072e+06, end = 6.47073e+06
+Element Distribution Time: 6.01274
+SmPV Time: 0.0148099
+Total time elapsed: 7.62375
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47073e+06, end = 6.47074e+06
+Element Distribution Time: 6.00546
+SmPV Time: 0.0150639
+Total time elapsed: 7.61838
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47074e+06, end = 6.47075e+06
+Element Distribution Time: 6.06259
+SmPV Time: 0.0147345
+Total time elapsed: 7.67343
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47075e+06, end = 6.47076e+06
+Element Distribution Time: 5.99911
+SmPV Time: 0.0150151
+Total time elapsed: 7.61253
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47076e+06, end = 6.47076e+06
+Element Distribution Time: 6.092
+SmPV Time: 0.0150995
+Total time elapsed: 7.70235
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47077e+06, end = 6.47077e+06
+Element Distribution Time: 6.06353
+SmPV Time: 0.01497
+Total time elapsed: 7.67665
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47077e+06, end = 6.47078e+06
+Element Distribution Time: 6.02515
+SmPV Time: 0.0150108
+Total time elapsed: 7.63853
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47078e+06, end = 6.47079e+06
+Element Distribution Time: 5.98989
+SmPV Time: 0.0147746
+Total time elapsed: 7.60264
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47079e+06, end = 6.4708e+06
+Element Distribution Time: 6.01152
+SmPV Time: 0.0151266
+Total time elapsed: 7.62337
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.4708e+06, end = 6.47081e+06
+Element Distribution Time: 6.02975
+SmPV Time: 0.0151971
+Total time elapsed: 7.63963
+“—————————————————————————————————————————————————“
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47081e+06, end = 6.47082e+06
+Element Distribution Time: 6.09269
+SmPV Time: 0.0134831
+Total time elapsed: 7.70037
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47082e+06, end = 6.47082e+06
+Element Distribution Time: 6.0449
+SmPV Time: 0.0132332
+Total time elapsed: 7.65642
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47082e+06, end = 6.47083e+06
+Element Distribution Time: 6.00049
+SmPV Time: 0.0133728
+Total time elapsed: 7.60883
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47083e+06, end = 6.47084e+06
+Element Distribution Time: 6.04912
+SmPV Time: 0.0135386
+Total time elapsed: 7.66013
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47084e+06, end = 6.47085e+06
+Element Distribution Time: 6.01073
+SmPV Time: 0.0136123
+Total time elapsed: 7.62294
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47085e+06, end = 6.47086e+06
+Element Distribution Time: 5.97652
+SmPV Time: 0.0135339
+Total time elapsed: 7.58913
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47086e+06, end = 6.47087e+06
+Element Distribution Time: 6.02465
+SmPV Time: 0.0134907
+Total time elapsed: 7.63338
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47087e+06, end = 6.47087e+06
+Element Distribution Time: 6.00376
+SmPV Time: 0.0136179
+Total time elapsed: 7.61622
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47087e+06, end = 6.47088e+06
+Element Distribution Time: 5.99118
+SmPV Time: 0.0134148
+Total time elapsed: 7.60209
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47088e+06, end = 6.47089e+06
+Element Distribution Time: 6.05234
+SmPV Time: 0.0135113
+Total time elapsed: 7.66309
+“—————————————————————————————————————————————————“
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47089e+06, end = 6.4709e+06
+Element Distribution Time: 6.04472
+SmPV Time: 0.0121841
+Total time elapsed: 7.65315
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.4709e+06, end = 6.47091e+06
+Element Distribution Time: 6.1683
+SmPV Time: 0.0122268
+Total time elapsed: 7.77913
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47091e+06, end = 6.47092e+06
+Element Distribution Time: 6.10906
+SmPV Time: 0.0121948
+Total time elapsed: 7.71746
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47092e+06, end = 6.47092e+06
+Element Distribution Time: 6.01127
+SmPV Time: 0.0121579
+Total time elapsed: 7.61812
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47093e+06, end = 6.47093e+06
+Element Distribution Time: 6.08782
+SmPV Time: 0.0121805
+Total time elapsed: 7.69708
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47093e+06, end = 6.47094e+06
+Element Distribution Time: 6.09487
+SmPV Time: 0.0118811
+Total time elapsed: 7.70453
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47094e+06, end = 6.47095e+06
+Element Distribution Time: 6.01406
+SmPV Time: 0.0119086
+Total time elapsed: 7.62473
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47095e+06, end = 6.47096e+06
+Element Distribution Time: 6.02903
+SmPV Time: 0.0119266
+Total time elapsed: 7.63987
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47096e+06, end = 6.47097e+06
+Element Distribution Time: 6.04922
+SmPV Time: 0.0118533
+Total time elapsed: 7.66075
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47097e+06, end = 6.47098e+06
+Element Distribution Time: 6.02358
+SmPV Time: 0.0118939
+Total time elapsed: 7.63426
+“—————————————————————————————————————————————————“
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47098e+06, end = 6.47098e+06
+Element Distribution Time: 6.00551
+SmPV Time: 0.0111698
+Total time elapsed: 7.61324
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47098e+06, end = 6.47099e+06
+Element Distribution Time: 6.0253
+SmPV Time: 0.0111402
+Total time elapsed: 7.63473
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47099e+06, end = 6.471e+06
+Element Distribution Time: 6.04562
+SmPV Time: 0.0109205
+Total time elapsed: 7.65113
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.471e+06, end = 6.47101e+06
+Element Distribution Time: 6.07287
+SmPV Time: 0.011106
+Total time elapsed: 7.68329
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47101e+06, end = 6.47102e+06
+Element Distribution Time: 6.05001
+SmPV Time: 0.0111545
+Total time elapsed: 7.65625
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47102e+06, end = 6.47103e+06
+Element Distribution Time: 6.02769
+SmPV Time: 0.0111947
+Total time elapsed: 7.63399
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47103e+06, end = 6.47103e+06
+Element Distribution Time: 5.99002
+SmPV Time: 0.011172
+Total time elapsed: 7.59903
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47104e+06, end = 6.47104e+06
+Element Distribution Time: 6.02904
+SmPV Time: 0.0111236
+Total time elapsed: 7.63763
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47104e+06, end = 6.47105e+06
+Element Distribution Time: 6.06792
+SmPV Time: 0.0111799
+Total time elapsed: 7.67455
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47105e+06, end = 6.47106e+06
+Element Distribution Time: 6.03014
+SmPV Time: 0.0108726
+Total time elapsed: 7.63776
+“—————————————————————————————————————————————————“
+“—————————————————————————————————————————————————“
+“—————————————————————————————————————————————————“
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47106e+06, end = 6.47107e+06
+Element Distribution Time: 6.01397
+SmPV Time: 0.0397646
+Total time elapsed: 7.71497
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47107e+06, end = 6.47108e+06
+Element Distribution Time: 6.05315
+SmPV Time: 0.0397579
+Total time elapsed: 7.75664
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47108e+06, end = 6.47109e+06
+Element Distribution Time: 6.12342
+SmPV Time: 0.0400279
+Total time elapsed: 7.8262
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47109e+06, end = 6.47109e+06
+Element Distribution Time: 6.07901
+SmPV Time: 0.0399574
+Total time elapsed: 7.78322
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.4711e+06, end = 6.4711e+06
+Element Distribution Time: 5.98907
+SmPV Time: 0.0398048
+Total time elapsed: 7.6931
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.4711e+06, end = 6.47111e+06
+Element Distribution Time: 5.99054
+SmPV Time: 0.0400849
+Total time elapsed: 7.69683
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47111e+06, end = 6.47112e+06
+Element Distribution Time: 6.02355
+SmPV Time: 0.0400993
+Total time elapsed: 7.72857
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47112e+06, end = 6.47113e+06
+Element Distribution Time: 6.10388
+SmPV Time: 0.0400292
+Total time elapsed: 7.8081
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47113e+06, end = 6.47114e+06
+Element Distribution Time: 6.22979
+SmPV Time: 0.0396455
+Total time elapsed: 7.9312
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47114e+06, end = 6.47115e+06
+Element Distribution Time: 6.13438
+SmPV Time: 0.0402891
+Total time elapsed: 7.83857
+“—————————————————————————————————————————————————“
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47115e+06, end = 6.47115e+06
+Element Distribution Time: 6.09008
+SmPV Time: 0.0293778
+Total time elapsed: 7.78301
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47116e+06, end = 6.47116e+06
+Element Distribution Time: 6.03029
+SmPV Time: 0.0296622
+Total time elapsed: 7.72187
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47116e+06, end = 6.47117e+06
+Element Distribution Time: 6.10228
+SmPV Time: 0.0293979
+Total time elapsed: 7.79576
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47117e+06, end = 6.47118e+06
+Element Distribution Time: 6.03332
+SmPV Time: 0.0298218
+Total time elapsed: 7.72726
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47118e+06, end = 6.47119e+06
+Element Distribution Time: 6.02865
+SmPV Time: 0.0296517
+Total time elapsed: 7.7211
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47119e+06, end = 6.4712e+06
+Element Distribution Time: 5.97089
+SmPV Time: 0.0297837
+Total time elapsed: 7.66428
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.4712e+06, end = 6.47121e+06
+Element Distribution Time: 6.02104
+SmPV Time: 0.0296327
+Total time elapsed: 7.71432
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47121e+06, end = 6.47121e+06
+Element Distribution Time: 6.01893
+SmPV Time: 0.0295773
+Total time elapsed: 7.7134
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47121e+06, end = 6.47122e+06
+Element Distribution Time: 6.02985
+SmPV Time: 0.0297325
+Total time elapsed: 7.72219
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47122e+06, end = 6.47123e+06
+Element Distribution Time: 6.02321
+SmPV Time: 0.0293927
+Total time elapsed: 7.71525
+“—————————————————————————————————————————————————“
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47123e+06, end = 6.47124e+06
+Element Distribution Time: 6.05444
+SmPV Time: 0.022287
+Total time elapsed: 7.74064
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47124e+06, end = 6.47125e+06
+Element Distribution Time: 6.05979
+SmPV Time: 0.022017
+Total time elapsed: 7.74563
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47125e+06, end = 6.47126e+06
+Element Distribution Time: 6.13571
+SmPV Time: 0.0218446
+Total time elapsed: 7.82225
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47126e+06, end = 6.47127e+06
+Element Distribution Time: 6.14989
+SmPV Time: 0.0220958
+Total time elapsed: 7.8361
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47127e+06, end = 6.47127e+06
+Element Distribution Time: 6.02163
+SmPV Time: 0.0220232
+Total time elapsed: 7.70705
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47127e+06, end = 6.47128e+06
+Element Distribution Time: 6.05027
+SmPV Time: 0.0219486
+Total time elapsed: 7.73788
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47128e+06, end = 6.47129e+06
+Element Distribution Time: 6.10839
+SmPV Time: 0.0222434
+Total time elapsed: 7.7949
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47129e+06, end = 6.4713e+06
+Element Distribution Time: 6.02154
+SmPV Time: 0.0221904
+Total time elapsed: 7.70771
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.4713e+06, end = 6.47131e+06
+Element Distribution Time: 6.08392
+SmPV Time: 0.0222928
+Total time elapsed: 7.77088
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47131e+06, end = 6.47132e+06
+Element Distribution Time: 6.07819
+SmPV Time: 0.0222631
+Total time elapsed: 7.76639
+“—————————————————————————————————————————————————“
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47132e+06, end = 6.47133e+06
+Element Distribution Time: 6.0766
+SmPV Time: 0.0181288
+Total time elapsed: 7.7605
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47133e+06, end = 6.47133e+06
+Element Distribution Time: 6.11667
+SmPV Time: 0.017926
+Total time elapsed: 7.79805
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47133e+06, end = 6.47134e+06
+Element Distribution Time: 6.06986
+SmPV Time: 0.0178514
+Total time elapsed: 7.75205
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47134e+06, end = 6.47135e+06
+Element Distribution Time: 6.08049
+SmPV Time: 0.0178551
+Total time elapsed: 7.76394
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47135e+06, end = 6.47136e+06
+Element Distribution Time: 6.07939
+SmPV Time: 0.0182126
+Total time elapsed: 7.76327
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47136e+06, end = 6.47137e+06
+Element Distribution Time: 6.07631
+SmPV Time: 0.0178489
+Total time elapsed: 7.75598
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47137e+06, end = 6.47138e+06
+Element Distribution Time: 6.05611
+SmPV Time: 0.017978
+Total time elapsed: 7.73483
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47138e+06, end = 6.47139e+06
+Element Distribution Time: 6.0222
+SmPV Time: 0.0180974
+Total time elapsed: 7.70217
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47139e+06, end = 6.47139e+06
+Element Distribution Time: 6.00989
+SmPV Time: 0.0178916
+Total time elapsed: 7.69192
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47139e+06, end = 6.4714e+06
+Element Distribution Time: 6.06132
+SmPV Time: 0.017999
+Total time elapsed: 7.74154
+“—————————————————————————————————————————————————“
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.4714e+06, end = 6.47141e+06
+Element Distribution Time: 6.08413
+SmPV Time: 0.0146994
+Total time elapsed: 7.76224
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47141e+06, end = 6.47142e+06
+Element Distribution Time: 6.18158
+SmPV Time: 0.0149816
+Total time elapsed: 7.85884
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47142e+06, end = 6.47143e+06
+Element Distribution Time: 6.00903
+SmPV Time: 0.0148144
+Total time elapsed: 7.68417
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47143e+06, end = 6.47144e+06
+Element Distribution Time: 6.03163
+SmPV Time: 0.0147881
+Total time elapsed: 7.70796
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47144e+06, end = 6.47145e+06
+Element Distribution Time: 6.10349
+SmPV Time: 0.0152587
+Total time elapsed: 7.78319
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47145e+06, end = 6.47145e+06
+Element Distribution Time: 6.13632
+SmPV Time: 0.0149042
+Total time elapsed: 7.81373
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47145e+06, end = 6.47146e+06
+Element Distribution Time: 6.06201
+SmPV Time: 0.0150122
+Total time elapsed: 7.74082
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47146e+06, end = 6.47147e+06
+Element Distribution Time: 6.06606
+SmPV Time: 0.0150165
+Total time elapsed: 7.7461
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47147e+06, end = 6.47148e+06
+Element Distribution Time: 6.07334
+SmPV Time: 0.0149845
+Total time elapsed: 7.75133
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47148e+06, end = 6.47149e+06
+Element Distribution Time: 6.06417
+SmPV Time: 0.0150045
+Total time elapsed: 7.74469
+“—————————————————————————————————————————————————“
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47149e+06, end = 6.4715e+06
+Element Distribution Time: 6.07455
+SmPV Time: 0.0132282
+Total time elapsed: 7.74908
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.4715e+06, end = 6.47151e+06
+Element Distribution Time: 6.14259
+SmPV Time: 0.0132208
+Total time elapsed: 7.81737
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47151e+06, end = 6.47151e+06
+Element Distribution Time: 6.07578
+SmPV Time: 0.013255
+Total time elapsed: 7.75313
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47151e+06, end = 6.47152e+06
+Element Distribution Time: 6.03306
+SmPV Time: 0.0132563
+Total time elapsed: 7.70866
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47152e+06, end = 6.47153e+06
+Element Distribution Time: 6.09524
+SmPV Time: 0.0132153
+Total time elapsed: 7.77126
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47153e+06, end = 6.47154e+06
+Element Distribution Time: 6.07538
+SmPV Time: 0.0135309
+Total time elapsed: 7.7524
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47154e+06, end = 6.47155e+06
+Element Distribution Time: 6.07273
+SmPV Time: 0.0132355
+Total time elapsed: 7.74903
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47155e+06, end = 6.47156e+06
+Element Distribution Time: 6.01602
+SmPV Time: 0.0132239
+Total time elapsed: 7.69203
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47156e+06, end = 6.47156e+06
+Element Distribution Time: 6.03292
+SmPV Time: 0.013249
+Total time elapsed: 7.71003
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47157e+06, end = 6.47157e+06
+Element Distribution Time: 6.01169
+SmPV Time: 0.0132493
+Total time elapsed: 7.69185
+“—————————————————————————————————————————————————“
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47157e+06, end = 6.47158e+06
+Element Distribution Time: 6.05137
+SmPV Time: 0.0118387
+Total time elapsed: 7.72684
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47158e+06, end = 6.47159e+06
+Element Distribution Time: 6.07807
+SmPV Time: 0.0118619
+Total time elapsed: 7.75398
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47159e+06, end = 6.4716e+06
+Element Distribution Time: 6.07213
+SmPV Time: 0.011867
+Total time elapsed: 7.74779
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.4716e+06, end = 6.47161e+06
+Element Distribution Time: 6.01121
+SmPV Time: 0.011938
+Total time elapsed: 7.68626
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47161e+06, end = 6.47162e+06
+Element Distribution Time: 6.04288
+SmPV Time: 0.0121218
+Total time elapsed: 7.72303
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47162e+06, end = 6.47162e+06
+Element Distribution Time: 6.08787
+SmPV Time: 0.0121147
+Total time elapsed: 7.76444
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47162e+06, end = 6.47163e+06
+Element Distribution Time: 6.05482
+SmPV Time: 0.0118598
+Total time elapsed: 7.72987
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47163e+06, end = 6.47164e+06
+Element Distribution Time: 6.02193
+SmPV Time: 0.0118547
+Total time elapsed: 7.69693
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47164e+06, end = 6.47165e+06
+Element Distribution Time: 6.11243
+SmPV Time: 0.0118465
+Total time elapsed: 7.78606
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47165e+06, end = 6.47166e+06
+Element Distribution Time: 6.14507
+SmPV Time: 0.0118445
+Total time elapsed: 7.81819
+“—————————————————————————————————————————————————“
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47166e+06, end = 6.47167e+06
+Element Distribution Time: 6.06966
+SmPV Time: 0.0107805
+Total time elapsed: 7.74456
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47167e+06, end = 6.47168e+06
+Element Distribution Time: 6.08289
+SmPV Time: 0.0107892
+Total time elapsed: 7.75615
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47168e+06, end = 6.47168e+06
+Element Distribution Time: 6.036
+SmPV Time: 0.0107722
+Total time elapsed: 7.70868
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47168e+06, end = 6.47169e+06
+Element Distribution Time: 6.00486
+SmPV Time: 0.0111509
+Total time elapsed: 7.67959
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47169e+06, end = 6.4717e+06
+Element Distribution Time: 6.00992
+SmPV Time: 0.0111117
+Total time elapsed: 7.68243
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.4717e+06, end = 6.47171e+06
+Element Distribution Time: 6.00893
+SmPV Time: 0.010802
+Total time elapsed: 7.682
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47171e+06, end = 6.47172e+06
+Element Distribution Time: 6.0907
+SmPV Time: 0.0107838
+Total time elapsed: 7.76448
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47172e+06, end = 6.47173e+06
+Element Distribution Time: 6.05508
+SmPV Time: 0.0111379
+Total time elapsed: 7.72958
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47173e+06, end = 6.47174e+06
+Element Distribution Time: 6.08886
+SmPV Time: 0.0111163
+Total time elapsed: 7.76323
+
+Distribution of NonZero Elements
+Column 0: 3033548
+	Row 0: 3033548
+	Row 1: 0
+	Row 2: 0
+	Row 3: 0
+Column 1: 3794270
+	Row 0: 1704674
+	Row 1: 2089596
+	Row 2: 0
+	Row 3: 0
+Column 2: 3433526
+	Row 0: 246866
+	Row 1: 1504545
+	Row 2: 1682115
+	Row 3: 0
+Column 3: 4132473
+	Row 0: 87075
+	Row 1: 567180
+	Row 2: 1919324
+	Row 3: 1558894
+
+Complete!
+precision = 1e-09
+start = 6.47174e+06, end = 6.47174e+06
+Element Distribution Time: 5.98563
+SmPV Time: 0.011089
+Total time elapsed: 7.65901

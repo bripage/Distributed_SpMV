@@ -12,7 +12,7 @@
 
 
 int main(int argc, char *argv[]) {
-    controlData control;
+	controlData control;
 
 	//Initialize the MPI environment
 	MPI_Init(&argc, &argv);
@@ -121,10 +121,10 @@ int main(int argc, char *argv[]) {
 
     std::vector<double> denseVector;
 
-    csrSpMV masterData;
-    if (!control.myId) {
-        masterData.masterOnlySpMV(control);
-    }
+    //csrSpMV masterData;
+    //if (!control.myId) {
+    //    masterData.masterOnlySpMV(control);
+    //}
 
 
     //***********************************************//
@@ -252,6 +252,9 @@ int main(int argc, char *argv[]) {
 	std::vector <double> result;
 	result.resize(control.rowsPerNode, 0.0);
 
+	MPI_Barrier(MPI_COMM_WORLD);
+	double spmvStartTime = MPI_Wtime();
+
 	if (nodeCSR->csrData.size() > 0) {
 		int ompThreadId, start, end, i, j, rowsPerThread;
 
@@ -290,6 +293,9 @@ int main(int argc, char *argv[]) {
 			}
 		}
 	}
+
+	MPI_Barrier(MPI_COMM_WORLD);
+	double spmvEndTime = MPI_Wtime();
 
 	if (control.myId == 0) {
 		//nodeCSR->denseVec.clear();
@@ -355,7 +361,12 @@ int main(int argc, char *argv[]) {
 
 	if (control.myId == 0){
 		std::cout << std::endl << "Complete!" << std::endl;
+		
+		double precision = MPI_Wtick();
+		std::cout << "precision = " << precision  << std::endl;
+		std::cout << "start = " << overallStartTime << ", end = " <<overallEndTime << std::endl;
 		std::cout << "Element Distribution Time: " << distributionEndTime - distributionStartTime << std::endl;
+		std::cout << "SmPV Time: " << spmvEndTime - spmvStartTime << std::endl;
 		std::cout << "Total time elapsed: " << overallEndTime - overallStartTime << std::endl;
 	}
 

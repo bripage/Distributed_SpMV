@@ -1,0 +1,194 @@
+#!/bin/tcsh
+#$ -M bpage1@nd.edu
+#$ -m abe
+#$ -cwd
+#$ -pe mpi-16 256
+##$ -q *@@cswarm
+#$ -q long
+#$ -o 16task_torso1_results.txt
+#$ -e errorurrmahgurd.err
+#$ -N torso1_16task_Tests
+
+module purge
+#module load gcc/6.2.0 
+#module load mpich/3.2-gcc-6.2.0
+#module load mpich/3.2-intel-15.0
+module load hpx/4.0.0
+
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+echo “—————————————————————————————————————————————————“
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+echo “—————————————————————————————————————————————————“
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+echo “—————————————————————————————————————————————————“
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+echo “—————————————————————————————————————————————————“
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+echo “—————————————————————————————————————————————————“
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+echo “—————————————————————————————————————————————————“
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+echo “—————————————————————————————————————————————————“
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 2 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
+echo “—————————————————————————————————————————————————“
+echo “—————————————————————————————————————————————————“
+echo “—————————————————————————————————————————————————“
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
+echo “—————————————————————————————————————————————————“
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
+echo “—————————————————————————————————————————————————“
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
+echo “—————————————————————————————————————————————————“
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
+echo “—————————————————————————————————————————————————“
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
+echo “—————————————————————————————————————————————————“
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
+echo “—————————————————————————————————————————————————“
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
+echo “—————————————————————————————————————————————————“
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
+mpirun -np 16 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
