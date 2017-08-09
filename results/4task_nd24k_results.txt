@@ -1,2417 +1,1669 @@
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.46968e+06, end = 6.46969e+06
-Element Distribution Time: 9.84923
-SmPV Time: 0.0890345
-Total time elapsed: 10.5276
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.46969e+06, end = 6.46969e+06
-Element Distribution Time: 6.02847
-SmPV Time: 0.0902105
-Total time elapsed: 6.70866
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.46969e+06, end = 6.4697e+06
-Element Distribution Time: 6.02223
-SmPV Time: 0.0903871
-Total time elapsed: 6.70264
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.4697e+06, end = 6.46971e+06
-Element Distribution Time: 6.0837
-SmPV Time: 0.0900925
-Total time elapsed: 6.76341
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.46971e+06, end = 6.46972e+06
-Element Distribution Time: 6.04342
-SmPV Time: 0.0901572
-Total time elapsed: 6.72409
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.46972e+06, end = 6.46972e+06
-Element Distribution Time: 6.13237
-SmPV Time: 0.0909971
-Total time elapsed: 6.81369
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.46972e+06, end = 6.46973e+06
-Element Distribution Time: 6.09669
-SmPV Time: 0.0906279
-Total time elapsed: 6.77752
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.46973e+06, end = 6.46974e+06
-Element Distribution Time: 6.01054
-SmPV Time: 0.0901892
-Total time elapsed: 6.68998
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.46974e+06, end = 6.46974e+06
-Element Distribution Time: 6.01491
-SmPV Time: 0.0904598
-Total time elapsed: 6.69516
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.46974e+06, end = 6.46975e+06
-Element Distribution Time: 6.03284
-SmPV Time: 0.0904146
-Total time elapsed: 6.7127
-“—————————————————————————————————————————————————“
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.46975e+06, end = 6.46976e+06
-Element Distribution Time: 6.02045
-SmPV Time: 0.0631038
-Total time elapsed: 6.67373
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.46976e+06, end = 6.46977e+06
-Element Distribution Time: 5.99933
-SmPV Time: 0.0643766
-Total time elapsed: 6.65304
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.46977e+06, end = 6.46977e+06
-Element Distribution Time: 6.0383
-SmPV Time: 0.0643479
-Total time elapsed: 6.69246
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.46977e+06, end = 6.46978e+06
-Element Distribution Time: 5.98706
-SmPV Time: 0.0641456
-Total time elapsed: 6.64133
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.46978e+06, end = 6.46979e+06
-Element Distribution Time: 6.12554
-SmPV Time: 0.0640605
-Total time elapsed: 6.77912
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.46979e+06, end = 6.46979e+06
-Element Distribution Time: 6.01513
-SmPV Time: 0.0630509
-Total time elapsed: 6.66847
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.4698e+06, end = 6.4698e+06
-Element Distribution Time: 6.0061
-SmPV Time: 0.0642156
-Total time elapsed: 6.65946
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.4698e+06, end = 6.46981e+06
-Element Distribution Time: 6.03103
-SmPV Time: 0.0632349
-Total time elapsed: 6.68349
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.46981e+06, end = 6.46982e+06
-Element Distribution Time: 6.00285
-SmPV Time: 0.0641479
-Total time elapsed: 6.6567
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.46982e+06, end = 6.46982e+06
-Element Distribution Time: 6.1721
-SmPV Time: 0.0646972
-Total time elapsed: 6.82597
-“—————————————————————————————————————————————————“
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.46982e+06, end = 6.46983e+06
-Element Distribution Time: 6.06143
-SmPV Time: 0.0471581
-Total time elapsed: 6.69801
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.46983e+06, end = 6.46984e+06
-Element Distribution Time: 6.37922
-SmPV Time: 0.0474902
-Total time elapsed: 7.01638
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.46984e+06, end = 6.46985e+06
-Element Distribution Time: 6.08195
-SmPV Time: 0.0472094
-Total time elapsed: 6.71848
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.46985e+06, end = 6.46985e+06
-Element Distribution Time: 6.03719
-SmPV Time: 0.0470362
-Total time elapsed: 6.67349
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.46985e+06, end = 6.46986e+06
-Element Distribution Time: 6.02949
-SmPV Time: 0.0465522
-Total time elapsed: 6.66617
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.46986e+06, end = 6.46987e+06
-Element Distribution Time: 6.04362
-SmPV Time: 0.0472752
-Total time elapsed: 6.6811
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.46987e+06, end = 6.46988e+06
-Element Distribution Time: 6.00993
-SmPV Time: 0.0471187
-Total time elapsed: 6.64646
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.46988e+06, end = 6.46988e+06
-Element Distribution Time: 5.99211
-SmPV Time: 0.0472758
-Total time elapsed: 6.629
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.46988e+06, end = 6.46989e+06
-Element Distribution Time: 6.01667
-SmPV Time: 0.0472483
-Total time elapsed: 6.65418
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.46989e+06, end = 6.4699e+06
-Element Distribution Time: 6.01849
-SmPV Time: 0.0472051
-Total time elapsed: 6.6552
-“—————————————————————————————————————————————————“
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.4699e+06, end = 6.4699e+06
-Element Distribution Time: 6.00192
-SmPV Time: 0.0377103
-Total time elapsed: 6.63072
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.4699e+06, end = 6.46991e+06
-Element Distribution Time: 5.98804
-SmPV Time: 0.0381886
-Total time elapsed: 6.61707
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.46991e+06, end = 6.46992e+06
-Element Distribution Time: 6.13039
-SmPV Time: 0.0378262
-Total time elapsed: 6.75889
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.46992e+06, end = 6.46993e+06
-Element Distribution Time: 6.00438
-SmPV Time: 0.0376968
-Total time elapsed: 6.63335
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.46993e+06, end = 6.46993e+06
-Element Distribution Time: 6.06254
-SmPV Time: 0.0377411
-Total time elapsed: 6.6917
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.46993e+06, end = 6.46994e+06
-Element Distribution Time: 6.09655
-SmPV Time: 0.0377105
-Total time elapsed: 6.72497
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.46994e+06, end = 6.46995e+06
-Element Distribution Time: 6.10477
-SmPV Time: 0.0377122
-Total time elapsed: 6.7331
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.46995e+06, end = 6.46995e+06
-Element Distribution Time: 5.99178
-SmPV Time: 0.0371339
-Total time elapsed: 6.62039
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.46996e+06, end = 6.46996e+06
-Element Distribution Time: 6.02393
-SmPV Time: 0.0374604
-Total time elapsed: 6.65234
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.46996e+06, end = 6.46997e+06
-Element Distribution Time: 6.02595
-SmPV Time: 0.0378148
-Total time elapsed: 6.6547
-“—————————————————————————————————————————————————“
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.46997e+06, end = 6.46998e+06
-Element Distribution Time: 6.03029
-SmPV Time: 0.0314053
-Total time elapsed: 6.65117
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.46998e+06, end = 6.46998e+06
-Element Distribution Time: 6.05977
-SmPV Time: 0.0311048
-Total time elapsed: 6.68046
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.46998e+06, end = 6.46999e+06
-Element Distribution Time: 6.04994
-SmPV Time: 0.0319204
-Total time elapsed: 6.67144
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.46999e+06, end = 6.47e+06
-Element Distribution Time: 6.01723
-SmPV Time: 0.0315031
-Total time elapsed: 6.63808
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47e+06, end = 6.47e+06
-Element Distribution Time: 6.01438
-SmPV Time: 0.0314943
-Total time elapsed: 6.63539
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47001e+06, end = 6.47001e+06
-Element Distribution Time: 6.01182
-SmPV Time: 0.0314359
-Total time elapsed: 6.63243
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47001e+06, end = 6.47002e+06
-Element Distribution Time: 6.03866
-SmPV Time: 0.0317002
-Total time elapsed: 6.66166
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47002e+06, end = 6.47003e+06
-Element Distribution Time: 6.06826
-SmPV Time: 0.0316979
-Total time elapsed: 6.68979
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47003e+06, end = 6.47003e+06
-Element Distribution Time: 6.01106
-SmPV Time: 0.031012
-Total time elapsed: 6.63162
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47003e+06, end = 6.47004e+06
-Element Distribution Time: 6.02489
-SmPV Time: 0.0317702
-Total time elapsed: 6.64628
-“—————————————————————————————————————————————————“
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47004e+06, end = 6.47005e+06
-Element Distribution Time: 6.42809
-SmPV Time: 0.0269606
-Total time elapsed: 7.04517
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47005e+06, end = 6.47006e+06
-Element Distribution Time: 6.00157
-SmPV Time: 0.0268118
-Total time elapsed: 6.61806
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47006e+06, end = 6.47006e+06
-Element Distribution Time: 6.04165
-SmPV Time: 0.0267508
-Total time elapsed: 6.65792
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47006e+06, end = 6.47007e+06
-Element Distribution Time: 6.05985
-SmPV Time: 0.0267562
-Total time elapsed: 6.6767
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47007e+06, end = 6.47008e+06
-Element Distribution Time: 6.06865
-SmPV Time: 0.0267502
-Total time elapsed: 6.68491
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47008e+06, end = 6.47008e+06
-Element Distribution Time: 5.98417
-SmPV Time: 0.0268136
-Total time elapsed: 6.60087
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47008e+06, end = 6.47009e+06
-Element Distribution Time: 6.01774
-SmPV Time: 0.0267648
-Total time elapsed: 6.63436
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47009e+06, end = 6.4701e+06
-Element Distribution Time: 5.98798
-SmPV Time: 0.026556
-Total time elapsed: 6.60406
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.4701e+06, end = 6.47011e+06
-Element Distribution Time: 6.00121
-SmPV Time: 0.0266985
-Total time elapsed: 6.61748
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47011e+06, end = 6.47011e+06
-Element Distribution Time: 6.00602
-SmPV Time: 0.0269698
-Total time elapsed: 6.62271
-“—————————————————————————————————————————————————“
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47011e+06, end = 6.47012e+06
-Element Distribution Time: 6.05615
-SmPV Time: 0.0234259
-Total time elapsed: 6.66964
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47012e+06, end = 6.47013e+06
-Element Distribution Time: 6.06164
-SmPV Time: 0.023748
-Total time elapsed: 6.67469
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47013e+06, end = 6.47013e+06
-Element Distribution Time: 6.1275
-SmPV Time: 0.02389
-Total time elapsed: 6.74124
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47014e+06, end = 6.47014e+06
-Element Distribution Time: 6.00461
-SmPV Time: 0.0236912
-Total time elapsed: 6.61747
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47014e+06, end = 6.47015e+06
-Element Distribution Time: 5.98829
-SmPV Time: 0.0236455
-Total time elapsed: 6.60214
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47015e+06, end = 6.47016e+06
-Element Distribution Time: 6.05489
-SmPV Time: 0.0238263
-Total time elapsed: 6.66861
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47016e+06, end = 6.47016e+06
-Element Distribution Time: 6.05981
-SmPV Time: 0.0236495
-Total time elapsed: 6.67301
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47016e+06, end = 6.47017e+06
-Element Distribution Time: 6.06615
-SmPV Time: 0.0238847
-Total time elapsed: 6.68061
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47017e+06, end = 6.47018e+06
-Element Distribution Time: 6.00616
-SmPV Time: 0.023476
-Total time elapsed: 6.61927
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47018e+06, end = 6.47019e+06
-Element Distribution Time: 6.11821
-SmPV Time: 0.0233698
-Total time elapsed: 6.73124
-“—————————————————————————————————————————————————“
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47019e+06, end = 6.47019e+06
-Element Distribution Time: 6.02014
-SmPV Time: 0.02096
-Total time elapsed: 6.63138
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47019e+06, end = 6.4702e+06
-Element Distribution Time: 6.09973
-SmPV Time: 0.0209204
-Total time elapsed: 6.71055
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.4702e+06, end = 6.47021e+06
-Element Distribution Time: 6.00992
-SmPV Time: 0.021178
-Total time elapsed: 6.62038
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47021e+06, end = 6.47021e+06
-Element Distribution Time: 6.00861
-SmPV Time: 0.021193
-Total time elapsed: 6.61896
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47021e+06, end = 6.47022e+06
-Element Distribution Time: 5.97053
-SmPV Time: 0.0209333
-Total time elapsed: 6.58113
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47022e+06, end = 6.47023e+06
-Element Distribution Time: 6.09956
-SmPV Time: 0.0209285
-Total time elapsed: 6.70987
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47023e+06, end = 6.47024e+06
-Element Distribution Time: 6.05815
-SmPV Time: 0.0213264
-Total time elapsed: 6.66904
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47024e+06, end = 6.47024e+06
-Element Distribution Time: 6.05039
-SmPV Time: 0.0209405
-Total time elapsed: 6.66111
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47024e+06, end = 6.47025e+06
-Element Distribution Time: 6.05006
-SmPV Time: 0.0209745
-Total time elapsed: 6.66141
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47025e+06, end = 6.47026e+06
-Element Distribution Time: 6.09128
-SmPV Time: 0.0211519
-Total time elapsed: 6.70321
-“—————————————————————————————————————————————————“
-“—————————————————————————————————————————————————“
-“—————————————————————————————————————————————————“
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47026e+06, end = 6.47027e+06
-Element Distribution Time: 6.13724
-SmPV Time: 0.0891454
-Total time elapsed: 7.58967
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47027e+06, end = 6.47027e+06
-Element Distribution Time: 5.98497
-SmPV Time: 0.089194
-Total time elapsed: 7.43751
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47027e+06, end = 6.47028e+06
-Element Distribution Time: 6.02135
-SmPV Time: 0.0892085
-Total time elapsed: 7.47426
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47028e+06, end = 6.47029e+06
-Element Distribution Time: 5.99965
-SmPV Time: 0.0896605
-Total time elapsed: 7.45175
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47029e+06, end = 6.4703e+06
-Element Distribution Time: 5.97056
-SmPV Time: 0.0894373
-Total time elapsed: 7.42303
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.4703e+06, end = 6.47031e+06
-Element Distribution Time: 6.04325
-SmPV Time: 0.0898672
-Total time elapsed: 7.49593
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47031e+06, end = 6.47031e+06
-Element Distribution Time: 6.01377
-SmPV Time: 0.0916501
-Total time elapsed: 7.4672
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47031e+06, end = 6.47032e+06
-Element Distribution Time: 5.98151
-SmPV Time: 0.0892357
-Total time elapsed: 7.4358
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47032e+06, end = 6.47033e+06
-Element Distribution Time: 6.01215
-SmPV Time: 0.0893131
-Total time elapsed: 7.46373
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47033e+06, end = 6.47034e+06
-Element Distribution Time: 6.00391
-SmPV Time: 0.0892435
-Total time elapsed: 7.45577
-“—————————————————————————————————————————————————“
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47034e+06, end = 6.47035e+06
-Element Distribution Time: 6.00325
-SmPV Time: 0.0629643
-Total time elapsed: 7.42912
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47035e+06, end = 6.47035e+06
-Element Distribution Time: 6.1192
-SmPV Time: 0.0631716
-Total time elapsed: 7.54614
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47035e+06, end = 6.47036e+06
-Element Distribution Time: 6.12511
-SmPV Time: 0.0628994
-Total time elapsed: 7.5514
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47036e+06, end = 6.47037e+06
-Element Distribution Time: 6.02052
-SmPV Time: 0.0631824
-Total time elapsed: 7.44715
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47037e+06, end = 6.47038e+06
-Element Distribution Time: 5.99422
-SmPV Time: 0.0634606
-Total time elapsed: 7.42121
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47038e+06, end = 6.47039e+06
-Element Distribution Time: 6.12241
-SmPV Time: 0.0631562
-Total time elapsed: 7.54865
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47039e+06, end = 6.47039e+06
-Element Distribution Time: 6.03812
-SmPV Time: 0.0630634
-Total time elapsed: 7.46529
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47039e+06, end = 6.4704e+06
-Element Distribution Time: 5.96121
-SmPV Time: 0.0629036
-Total time elapsed: 7.38576
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.4704e+06, end = 6.47041e+06
-Element Distribution Time: 5.97953
-SmPV Time: 0.0631673
-Total time elapsed: 7.4051
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47041e+06, end = 6.47042e+06
-Element Distribution Time: 6.03292
-SmPV Time: 0.0633173
-Total time elapsed: 7.45981
-“—————————————————————————————————————————————————“
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47042e+06, end = 6.47043e+06
-Element Distribution Time: 6.02988
-SmPV Time: 0.0463738
-Total time elapsed: 7.44023
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47043e+06, end = 6.47043e+06
-Element Distribution Time: 5.98657
-SmPV Time: 0.0462731
-Total time elapsed: 7.39678
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47043e+06, end = 6.47044e+06
-Element Distribution Time: 5.98707
-SmPV Time: 0.0462935
-Total time elapsed: 7.3992
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47044e+06, end = 6.47045e+06
-Element Distribution Time: 5.99665
-SmPV Time: 0.0466676
-Total time elapsed: 7.40947
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47045e+06, end = 6.47046e+06
-Element Distribution Time: 6.04511
-SmPV Time: 0.046391
-Total time elapsed: 7.45628
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47046e+06, end = 6.47047e+06
-Element Distribution Time: 6.05671
-SmPV Time: 0.046229
-Total time elapsed: 7.46746
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47047e+06, end = 6.47047e+06
-Element Distribution Time: 6.08941
-SmPV Time: 0.0462105
-Total time elapsed: 7.4975
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47047e+06, end = 6.47048e+06
-Element Distribution Time: 6.05288
-SmPV Time: 0.0461957
-Total time elapsed: 7.4643
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47048e+06, end = 6.47049e+06
-Element Distribution Time: 6.06838
-SmPV Time: 0.0468621
-Total time elapsed: 7.47918
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47049e+06, end = 6.4705e+06
-Element Distribution Time: 6.07266
-SmPV Time: 0.0464581
-Total time elapsed: 7.48308
-“—————————————————————————————————————————————————“
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.4705e+06, end = 6.47051e+06
-Element Distribution Time: 6.05536
-SmPV Time: 0.0372055
-Total time elapsed: 7.45679
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47051e+06, end = 6.47051e+06
-Element Distribution Time: 6.09148
-SmPV Time: 0.0380311
-Total time elapsed: 7.49435
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47051e+06, end = 6.47052e+06
-Element Distribution Time: 6.06596
-SmPV Time: 0.0373854
-Total time elapsed: 7.46789
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47052e+06, end = 6.47053e+06
-Element Distribution Time: 5.98691
-SmPV Time: 0.0369987
-Total time elapsed: 7.38917
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47053e+06, end = 6.47054e+06
-Element Distribution Time: 6.09437
-SmPV Time: 0.0369551
-Total time elapsed: 7.49669
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47054e+06, end = 6.47055e+06
-Element Distribution Time: 6.02722
-SmPV Time: 0.0373502
-Total time elapsed: 7.42939
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47055e+06, end = 6.47055e+06
-Element Distribution Time: 5.98116
-SmPV Time: 0.0369181
-Total time elapsed: 7.38336
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47055e+06, end = 6.47056e+06
-Element Distribution Time: 6.03463
-SmPV Time: 0.0373646
-Total time elapsed: 7.43571
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47056e+06, end = 6.47057e+06
-Element Distribution Time: 6.07295
-SmPV Time: 0.0372274
-Total time elapsed: 7.47477
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47057e+06, end = 6.47058e+06
-Element Distribution Time: 6.04757
-SmPV Time: 0.0369447
-Total time elapsed: 7.44917
-“—————————————————————————————————————————————————“
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47058e+06, end = 6.47059e+06
-Element Distribution Time: 6.11075
-SmPV Time: 0.0311803
-Total time elapsed: 7.50439
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47059e+06, end = 6.47059e+06
-Element Distribution Time: 5.96466
-SmPV Time: 0.0312962
-Total time elapsed: 7.35897
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47059e+06, end = 6.4706e+06
-Element Distribution Time: 6.07207
-SmPV Time: 0.0310476
-Total time elapsed: 7.46757
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.4706e+06, end = 6.47061e+06
-Element Distribution Time: 6.14174
-SmPV Time: 0.0310378
-Total time elapsed: 7.5366
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47061e+06, end = 6.47062e+06
-Element Distribution Time: 6.00291
-SmPV Time: 0.0311359
-Total time elapsed: 7.39736
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47062e+06, end = 6.47063e+06
-Element Distribution Time: 6.06528
-SmPV Time: 0.0312774
-Total time elapsed: 7.45914
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47063e+06, end = 6.47063e+06
-Element Distribution Time: 5.99621
-SmPV Time: 0.0312666
-Total time elapsed: 7.39093
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47063e+06, end = 6.47064e+06
-Element Distribution Time: 5.99575
-SmPV Time: 0.031057
-Total time elapsed: 7.39077
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47064e+06, end = 6.47065e+06
-Element Distribution Time: 6.0548
-SmPV Time: 0.0312975
-Total time elapsed: 7.45014
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47065e+06, end = 6.47066e+06
-Element Distribution Time: 5.98347
-SmPV Time: 0.0310053
-Total time elapsed: 7.3785
-“—————————————————————————————————————————————————“
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47066e+06, end = 6.47067e+06
-Element Distribution Time: 6.03249
-SmPV Time: 0.02687
-Total time elapsed: 7.42365
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47067e+06, end = 6.47067e+06
-Element Distribution Time: 6.09085
-SmPV Time: 0.0268093
-Total time elapsed: 7.48213
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47067e+06, end = 6.47068e+06
-Element Distribution Time: 5.98342
-SmPV Time: 0.0268498
-Total time elapsed: 7.37434
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47068e+06, end = 6.47069e+06
-Element Distribution Time: 6.02647
-SmPV Time: 0.0267114
-Total time elapsed: 7.41805
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47069e+06, end = 6.4707e+06
-Element Distribution Time: 5.99589
-SmPV Time: 0.0265523
-Total time elapsed: 7.3875
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.4707e+06, end = 6.4707e+06
-Element Distribution Time: 6.0122
-SmPV Time: 0.0266824
-Total time elapsed: 7.4029
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47071e+06, end = 6.47071e+06
-Element Distribution Time: 6.0341
-SmPV Time: 0.0268489
-Total time elapsed: 7.42374
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47071e+06, end = 6.47072e+06
-Element Distribution Time: 6.07372
-SmPV Time: 0.0265677
-Total time elapsed: 7.46407
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47072e+06, end = 6.47073e+06
-Element Distribution Time: 6.00551
-SmPV Time: 0.0268556
-Total time elapsed: 7.3958
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47073e+06, end = 6.47074e+06
-Element Distribution Time: 6.13404
-SmPV Time: 0.0265898
-Total time elapsed: 7.52417
-“—————————————————————————————————————————————————“
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47074e+06, end = 6.47074e+06
-Element Distribution Time: 6.08255
-SmPV Time: 0.0233815
-Total time elapsed: 7.46966
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47075e+06, end = 6.47075e+06
-Element Distribution Time: 5.96818
-SmPV Time: 0.0236133
-Total time elapsed: 7.35721
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47075e+06, end = 6.47076e+06
-Element Distribution Time: 6.05113
-SmPV Time: 0.023622
-Total time elapsed: 7.43935
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47076e+06, end = 6.47077e+06
-Element Distribution Time: 6.05586
-SmPV Time: 0.0234231
-Total time elapsed: 7.44342
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47077e+06, end = 6.47078e+06
-Element Distribution Time: 6.06723
-SmPV Time: 0.0236652
-Total time elapsed: 7.45609
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47078e+06, end = 6.47078e+06
-Element Distribution Time: 6.04728
-SmPV Time: 0.0233632
-Total time elapsed: 7.43476
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47079e+06, end = 6.47079e+06
-Element Distribution Time: 6.05483
-SmPV Time: 0.0233745
-Total time elapsed: 7.44236
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47079e+06, end = 6.4708e+06
-Element Distribution Time: 5.96239
-SmPV Time: 0.0234706
-Total time elapsed: 7.35063
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.4708e+06, end = 6.47081e+06
-Element Distribution Time: 6.10932
-SmPV Time: 0.0235948
-Total time elapsed: 7.49719
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47081e+06, end = 6.47082e+06
-Element Distribution Time: 6.0988
-SmPV Time: 0.0236095
-Total time elapsed: 7.48742
-“—————————————————————————————————————————————————“
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47082e+06, end = 6.47082e+06
-Element Distribution Time: 6.03019
-SmPV Time: 0.0213417
-Total time elapsed: 7.41498
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47083e+06, end = 6.47083e+06
-Element Distribution Time: 6.0186
-SmPV Time: 0.0213385
-Total time elapsed: 7.40616
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47083e+06, end = 6.47084e+06
-Element Distribution Time: 6.06725
-SmPV Time: 0.0208973
-Total time elapsed: 7.45194
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47084e+06, end = 6.47085e+06
-Element Distribution Time: 6.05098
-SmPV Time: 0.0211368
-Total time elapsed: 7.43696
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47085e+06, end = 6.47086e+06
-Element Distribution Time: 6.09492
-SmPV Time: 0.0209047
-Total time elapsed: 7.48056
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47086e+06, end = 6.47086e+06
-Element Distribution Time: 6.02188
-SmPV Time: 0.0213162
-Total time elapsed: 7.4096
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47086e+06, end = 6.47087e+06
-Element Distribution Time: 6.13524
-SmPV Time: 0.0208844
-Total time elapsed: 7.52157
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47087e+06, end = 6.47088e+06
-Element Distribution Time: 6.00656
-SmPV Time: 0.0211303
-Total time elapsed: 7.39221
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47088e+06, end = 6.47089e+06
-Element Distribution Time: 6.02671
-SmPV Time: 0.0213797
-Total time elapsed: 7.41227
-
-Distribution of NonZero Elements
-Column 0: 6827818
-	Row 0: 6827818
-	Row 1: 0
-Column 1: 7565999
-	Row 0: 2405666
-	Row 1: 5160333
-
-Complete!
-precision = 1e-09
-start = 6.47089e+06, end = 6.4709e+06
-Element Distribution Time: 6.02321
-SmPV Time: 0.0210615
-Total time elapsed: 7.40829
+Bash version 4.2.46(1)-release...
+1 tasks per node
+1 threads per task
+9.88119,0.0890028,11.3338
+6.21654,0.089579,7.66943
+6.32325,0.089202,7.77432
+6.12472,0.0893503,7.57628
+6.34297,0.0889919,7.79458
+6.2512,0.0895775,7.70304
+6.05052,0.0890825,7.50295
+6.04023,0.0893272,7.49249
+6.15021,0.089149,7.60211
+6.26498,0.0891403,7.71742
+6.14775,0.0896542,7.60161
+6.18532,0.0895843,7.63785
+6.13635,0.0894052,7.58733
+6.18694,0.089439,7.63906
+6.1422,0.0894955,7.59435
+6.21373,0.0896947,7.6661
+6.17367,0.0898371,7.62698
+6.18614,0.0891181,7.63858
+6.1426,0.0892637,7.59483
+6.03503,0.089202,7.48749
+6.17583,0.0891649,7.62781
+6.1753,0.0890728,7.62505
+6.16375,0.089143,7.61714
+6.14118,0.089361,7.594
+6.05898,0.0895266,7.50839
+6.09641,0.0894597,7.54848
+6.24304,0.0892791,7.69442
+6.06665,0.0891527,7.51909
+6.28809,0.0894661,7.74184
+6.05723,0.0894951,7.50922
+6.1608,0.0891783,7.61254
+6.14312,0.0893484,7.59658
+6.07164,0.0893408,7.5219
+6.17009,0.0893604,7.62297
+6.05869,0.0894169,7.51127
+6.21444,0.0894782,7.66781
+6.19932,0.0891011,7.6518
+6.07158,0.0893793,7.52343
+6.14083,0.0892234,7.59292
+6.11274,0.0892392,7.56623
+6.08801,0.0893783,7.53996
+6.25067,0.0893065,7.70283
+6.24254,0.0892574,7.69424
+6.20699,0.089227,7.65881
+6.10913,0.089341,7.56158
+6.21458,0.0891627,7.66457
+6.23818,0.0892236,7.68704
+6.03366,0.0892102,7.48264
+6.08188,0.0893018,7.53428
+6.24292,0.0894395,7.69633
+6.14116,0.0891194,7.59369
+2 threads per task
+6.04712,0.0628733,7.47067
+6.28526,0.0630173,7.71147
+6.06602,0.0629287,7.49088
+6.05684,0.0630031,7.48222
+6.14201,0.0629227,7.5676
+6.19091,0.0630499,7.61622
+6.09757,0.0632192,7.52422
+6.05718,0.0629771,7.4814
+6.03956,0.0629533,7.4648
+6.05233,0.063016,7.47771
+6.19526,0.0631548,7.6202
+6.20857,0.0633502,7.63467
+6.2359,0.0631043,7.65792
+6.48182,0.0631072,7.90409
+6.16755,0.0632133,7.59416
+6.06748,0.0629263,7.49402
+6.05433,0.0632035,7.4778
+6.06647,0.0630132,7.49217
+6.23655,0.0629772,7.66406
+6.15412,0.0631778,7.58187
+6.29735,0.0628996,7.72084
+6.01462,0.063007,7.43802
+6.08449,0.0630494,7.51098
+6.18833,0.0628934,7.61411
+6.23488,0.0630659,7.66134
+6.03317,0.0632593,7.45865
+6.04378,0.062935,7.46723
+6.12521,0.0628364,7.552
+6.04621,0.0628903,7.47162
+6.27932,0.0632063,7.70608
+6.07535,0.0628781,7.50187
+6.14544,0.0628672,7.57101
+6.19365,0.0628224,7.61931
+6.13455,0.0630291,7.55832
+6.05979,0.0632826,7.48217
+6.27455,0.0633155,7.70106
+6.04405,0.0629439,7.47073
+6.24467,0.0629628,7.67067
+6.14372,0.0631503,7.56754
+6.06426,0.0631434,7.4861
+6.06356,0.0633703,7.4908
+6.17664,0.0632081,7.60205
+6.24569,0.0634244,7.67153
+6.04907,0.0631473,7.47304
+6.11137,0.0628779,7.5362
+6.04728,0.063015,7.4733
+6.05002,0.0631531,7.47461
+6.14033,0.062933,7.56337
+6.25937,0.0632603,7.68549
+6.19034,0.0628798,7.61573
+6.13161,0.0629062,7.55747
+3 threads per task
+6.15586,0.046193,7.56723
+6.30519,0.0462979,7.71214
+6.18089,0.0465035,7.59177
+6.19522,0.0462804,7.6072
+6.16062,0.0464358,7.57285
+6.04753,0.0462818,7.45804
+6.1596,0.0463304,7.56711
+6.09043,0.0462037,7.50058
+6.16081,0.0461721,7.56952
+6.22845,0.0462782,7.63986
+6.28758,0.0463384,7.69775
+6.05825,0.0464084,7.46877
+6.08756,0.0461915,7.49848
+6.07037,0.0461912,7.47885
+6.05392,0.0461985,7.4627
+6.09223,0.0461288,7.50319
+6.16014,0.0470131,7.57215
+6.19221,0.0465294,7.60076
+6.35986,0.0466816,7.77165
+6.27436,0.0463311,7.68475
+6.0537,0.0461226,7.46474
+6.07302,0.0462223,7.48317
+6.21117,0.0464697,7.62115
+6.02943,0.0463432,7.44233
+6.06422,0.0464885,7.47615
+6.04087,0.0461995,7.45084
+6.08814,0.0464212,7.50133
+6.08875,0.0464513,7.50102
+6.30995,0.0463576,7.71925
+6.18545,0.0463032,7.59572
+6.18628,0.0466977,7.59658
+6.07103,0.0462514,7.48208
+6.08525,0.0461773,7.49462
+6.04647,0.0464382,7.45733
+6.27483,0.0464637,7.68611
+6.05738,0.0461341,7.46677
+6.24966,0.0464049,7.66123
+6.05543,0.0462385,7.46385
+6.46271,0.046186,7.87455
+6.17087,0.0465052,7.57969
+6.1909,0.0461807,7.59978
+6.1928,0.0462782,7.60325
+6.17558,0.0461782,7.58597
+6.17347,0.0464374,7.584
+6.2004,0.0464539,7.61025
+6.20059,0.0461611,7.61127
+6.20334,0.0462105,7.61441
+6.09052,0.0464748,7.50243
+6.06223,0.0465589,7.47296
+6.05787,0.0464532,7.46892
+6.04408,0.0464912,7.45597
+4 threads per task
+6.2356,0.0371593,7.63316
+6.27899,0.0372474,7.68162
+6.17195,0.0369472,7.57065
+6.1643,0.0371929,7.56452
+6.09617,0.0370427,7.49725
+6.03144,0.0371527,7.43007
+6.19872,0.0370964,7.60399
+6.20068,0.0370302,7.59894
+6.33678,0.0371814,7.73803
+6.5324,0.037184,7.932
+7.23593,0.0369231,8.63473
+6.0696,0.0369435,7.47362
+6.19393,0.037401,7.59192
+6.07548,0.0373064,7.47629
+6.26152,0.0373043,7.66375
+6.27019,0.0370712,7.67104
+6.15337,0.0372931,7.55276
+6.06309,0.0369507,7.46093
+6.09249,0.0369489,7.49269
+6.30888,0.0370101,7.70904
+6.25373,0.0371852,7.65639
+6.27502,0.0370556,7.67652
+6.19806,0.0372215,7.60161
+6.17418,0.0372244,7.57531
+6.14856,0.0370343,7.55048
+6.16345,0.0375473,7.56656
+6.07483,0.0370234,7.4742
+6.03113,0.0370725,7.43217
+6.20636,0.0371564,7.60839
+6.08764,0.0371783,7.48905
+6.14823,0.0369458,7.5498
+6.14015,0.0369631,7.53934
+6.29347,0.0369756,7.69478
+6.17512,0.0369907,7.57764
+6.03615,0.0371218,7.43764
+6.13235,0.0372209,7.53323
+6.22938,0.0373541,7.63199
+6.28084,0.0370884,7.68227
+6.03667,0.0372656,7.43966
+6.14042,0.0369672,7.54248
+6.17125,0.0369815,7.57039
+6.31657,0.0372286,7.71936
+6.23489,0.0371964,7.63624
+6.18385,0.0369482,7.58385
+6.17774,0.0369799,7.57949
+6.63926,0.0369956,8.04268
+6.07897,0.0369755,7.47844
+6.17714,0.0369565,7.57864
+6.17231,0.0369486,7.57251
+6.24549,0.036978,7.64691
+6.3033,0.0370883,7.70474
+5 threads per task
+6.35499,0.0310502,7.74919
+6.19348,0.0310662,7.58781
+6.17913,0.0313565,7.57459
+6.25397,0.0310352,7.6494
+6.06626,0.0310166,7.46071
+6.27428,0.0312417,7.66994
+6.19791,0.0310318,7.59342
+6.19025,0.0311062,7.58611
+6.20721,0.0310231,7.59943
+6.07153,0.0311696,7.46925
+6.06658,0.031044,7.46214
+6.13781,0.0312876,7.53407
+6.2001,0.0311376,7.59594
+6.10227,0.0312911,7.49539
+6.28212,0.0311078,7.67503
+6.27666,0.0310543,7.6725
+6.04527,0.031284,7.44111
+6.22746,0.0311732,7.6239
+6.16767,0.0310517,7.56267
+6.06525,0.0310466,7.46302
+6.18556,0.0310416,7.58154
+6.23391,0.0310879,7.62739
+6.22011,0.031036,7.61633
+6.13117,0.0310172,7.52659
+6.18886,0.0311589,7.58528
+6.16254,0.0311466,7.55513
+6.07602,0.0310266,7.46802
+6.07433,0.0313104,7.46799
+6.26047,0.0311301,7.65667
+6.28553,0.0313209,7.681
+6.1665,0.0310575,7.56084
+6.20379,0.031289,7.59765
+6.2526,0.031098,7.64853
+6.24108,0.0313056,7.63679
+6.16356,0.0312826,7.56004
+6.15773,0.0312038,7.55388
+6.23343,0.0313632,7.63023
+6.06167,0.0310897,7.45581
+6.25294,0.0314444,7.64991
+6.08111,0.0310903,7.47471
+6.06771,0.0311243,7.4641
+6.0674,0.0310537,7.46244
+6.17553,0.0310638,7.57076
+6.16139,0.0312986,7.5561
+6.07931,0.0312949,7.47541
+6.1761,0.0310639,7.57126
+6.17673,0.0313366,7.57263
+6.05687,0.0309977,7.45149
+6.18003,0.0310645,7.57462
+6.06775,0.0310444,7.46205
+6.08954,0.0310779,7.48509
+6 threads per task
+6.08975,0.0268242,7.4824
+6.10763,0.0267732,7.49703
+6.0925,0.0265926,7.48337
+6.04246,0.0266237,7.43238
+6.03946,0.0268305,7.4298
+6.04597,0.0265756,7.43781
+6.23963,0.0268209,7.6293
+6.18491,0.026586,7.57598
+6.16766,0.026597,7.55903
+6.0892,0.0268237,7.4795
+6.19298,0.026587,7.58157
+6.05043,0.0266292,7.44202
+6.04593,0.0265863,7.43753
+6.03586,0.026746,7.42685
+6.07361,0.0269807,7.46458
+6.29092,0.0265807,7.68113
+6.27997,0.0266353,7.67158
+6.20579,0.0265831,7.5976
+6.16928,0.0266277,7.56019
+6.15435,0.026816,7.54555
+7.83976,0.0268574,9.22894
+6.17093,0.0268306,7.56352
+6.27921,0.0265738,7.67019
+6.07391,0.0266879,7.4629
+6.28644,0.0267017,7.67663
+6.24353,0.0268162,7.63334
+6.16466,0.0265893,7.55558
+6.04722,0.0265834,7.43827
+6.15059,0.0269552,7.54034
+7.38072,0.0265582,8.76945
+6.06965,0.0268517,7.4593
+6.07744,0.0265749,7.46547
+6.15321,0.0265828,7.54228
+6.06024,0.0268116,7.44965
+6.1951,0.0268163,7.58614
+6.19577,0.026772,7.58729
+6.18609,0.0265947,7.57592
+6.20968,0.0265946,7.60092
+6.1627,0.0266819,7.5566
+6.05946,0.0265885,7.45043
+6.09296,0.0268191,7.48401
+6.18977,0.0265831,7.57967
+6.02583,0.0267134,7.41688
+6.17016,0.0265838,7.5613
+6.21594,0.0268264,7.60538
+6.23103,0.0266169,7.62201
+6.27391,0.0267206,7.66365
+6.07626,0.026799,7.46736
+6.0395,0.0265906,7.43022
+6.18693,0.0265885,7.57748
+6.06568,0.0270216,7.45658
+7 threads per task
+6.16285,0.0236203,7.54809
+6.29471,0.023382,7.68054
+6.05419,0.0236091,7.44254
+6.19714,0.0236254,7.58571
+6.29464,0.0236366,7.68159
+6.2534,0.0233731,7.64186
+6.25548,0.0236116,7.64053
+6.22779,0.0240678,7.61732
+6.25235,0.0233711,7.63997
+6.23755,0.0233744,7.62213
+6.10014,0.023427,7.48627
+6.14974,0.023381,7.53717
+6.05981,0.0233837,7.44748
+6.19422,0.0233833,7.58046
+6.21287,0.0234077,7.60094
+6.04772,0.0234145,7.43373
+6.05107,0.0233606,7.43841
+6.24785,0.023419,7.6368
+6.3705,0.0236229,7.75815
+6.27625,0.0233919,7.66395
+6.09074,0.0240936,7.4817
+6.20188,0.0236175,7.5901
+6.02872,0.0236343,7.41583
+6.14301,0.0233641,7.53045
+6.16452,0.0233623,7.55209
+6.03391,0.0237547,7.42211
+6.16852,0.0233742,7.55599
+6.44345,0.02337,7.83084
+6.05089,0.0234037,7.43828
+6.27949,0.0233713,7.66552
+6.17827,0.0233659,7.56544
+6.16257,0.023612,7.54843
+6.16809,0.0236142,7.55344
+6.04373,0.0236285,7.43209
+6.2103,0.0236189,7.59878
+6.32451,0.0233776,7.7125
+6.08586,0.0236053,7.47454
+6.08635,0.023619,7.47501
+6.15206,0.0233761,7.54027
+6.18591,0.0236078,7.57567
+6.29015,0.0236221,7.67855
+6.0469,0.0236133,7.43578
+6.24852,0.0236251,7.63645
+6.15934,0.0236109,7.54782
+6.06676,0.0233731,7.45357
+6.23667,0.023616,7.62583
+6.17708,0.023394,7.56371
+6.20448,0.0234878,7.59299
+6.16609,0.0236109,7.55573
+6.17492,0.0236121,7.56368
+6.07561,0.0237113,7.46303
+8 threads per task
+6.14901,0.0209012,7.53474
+6.28419,0.0209006,7.66977
+6.05906,0.0209614,7.4449
+6.04679,0.0209016,7.42973
+6.23614,0.0208988,7.62092
+6.16574,0.0208936,7.55044
+6.048,0.0209329,7.43336
+6.06594,0.020916,7.45125
+6.06507,0.0211259,7.45105
+6.03118,0.0211897,7.41595
+6.21531,0.0208995,7.60093
+6.17732,0.0209037,7.56208
+6.15196,0.0210193,7.53684
+6.16317,0.0211399,7.5484
+6.22162,0.0211289,7.60744
+6.08446,0.0211489,7.46999
+6.1764,0.0211522,7.56059
+6.10892,0.0211719,7.49436
+6.03689,0.0211088,7.42244
+6.18834,0.0208934,7.5718
+6.2182,0.0211338,7.60349
+6.22646,0.0208855,7.61119
+6.208,0.0211336,7.59358
+6.18579,0.0209263,7.57258
+6.47553,0.021147,7.86158
+6.28502,0.0209067,7.66987
+6.32777,0.0208876,7.71305
+6.05552,0.0209282,7.439
+6.16834,0.0209213,7.55565
+6.18384,0.0211339,7.56619
+6.19874,0.0208942,7.58299
+6.17966,0.0209731,7.56721
+6.13339,0.0211495,7.51884
+6.18061,0.0211796,7.56682
+6.21109,0.0212262,7.59749
+6.083,0.0209303,7.46813
+6.15144,0.0209248,7.53768
+6.25397,0.0211665,7.63926
+6.1304,0.0211415,7.51698
+6.17887,0.0211385,7.5627
+6.0211,0.021058,7.40636
+6.0737,0.0210452,7.46144
+6.15322,0.0211492,7.53857
+6.23598,0.0209062,7.62089
+6.16933,0.0211513,7.55589
+6.18789,0.0211843,7.57358
+6.19431,0.0208848,7.57918
+6.1707,0.0209148,7.55549
+6.11628,0.0211631,7.50133
+7.39725,0.0208672,8.78327
+6.16762,0.0211461,7.55202
+2 tasks per node
+1 threads per task
+6.06829,0.0894298,6.74811
+6.24161,0.0890589,6.92047
+6.04941,0.0905783,6.73067
+6.27068,0.090412,6.95124
+6.21386,0.0901699,6.89412
+6.24699,0.0896417,6.92643
+6.06091,0.0894345,6.74013
+6.15882,0.0902162,6.83864
+6.30296,0.090331,6.98248
+6.17021,0.0903913,6.85083
+6.18624,0.0901604,6.8657
+6.26606,0.0892487,6.94488
+6.18775,0.0904829,6.86886
+6.07081,0.0907727,6.75152
+6.25138,0.0900056,6.93084
+6.16703,0.0901413,6.84713
+6.24671,0.0893613,6.92563
+6.03904,0.0891565,6.71724
+6.3199,0.0894911,6.99894
+6.19114,0.090153,6.87037
+6.27531,0.0899089,6.95572
+6.06641,0.0900469,6.74588
+6.12525,0.0896156,6.80596
+6.2904,0.0889992,6.96893
+6.17359,0.0892951,6.85247
+6.19735,0.0909194,6.87801
+6.05767,0.090543,6.73865
+6.26332,0.0899159,6.94278
+6.22235,0.0891021,6.90072
+6.19595,0.0904064,6.87596
+6.19825,0.0903982,6.87862
+6.21667,0.0904425,6.89695
+6.12851,0.0895946,6.80747
+6.06591,0.0921914,6.74835
+6.08194,0.0893026,6.76043
+6.22142,0.0901946,6.90074
+6.15764,0.0904988,6.83727
+6.22584,0.0904983,6.90607
+6.29128,0.0902858,6.97124
+6.04913,0.0906579,6.72966
+6.03909,0.0902501,6.71955
+6.0645,0.0901688,6.74486
+6.24194,0.0898917,6.92207
+6.07255,0.0901489,6.75284
+6.24443,0.0889325,6.92517
+6.04728,0.0901199,6.7267
+6.03502,0.0902254,6.71683
+6.04672,0.0905071,6.72778
+6.24038,0.0901355,6.91996
+6.27708,0.0901238,6.95658
+6.33259,0.0890382,7.01097
+2 threads per task
+6.25992,0.064284,6.91361
+6.25852,0.0630923,6.91119
+6.28549,0.0640649,6.93929
+6.18571,0.0642686,6.83968
+6.08613,0.0638684,6.73952
+6.17948,0.0640312,6.8337
+6.23822,0.0631543,6.8909
+6.09985,0.0636969,6.75293
+6.21391,0.0643039,6.86769
+6.24571,0.0640943,6.89947
+6.07224,0.0633408,6.72514
+6.20939,0.0637465,6.86306
+6.10551,0.0632593,6.75863
+6.29185,0.0633826,6.94551
+6.20468,0.0642314,6.85905
+6.19765,0.0631436,6.84987
+6.11804,0.0640296,6.77169
+6.17401,0.0637508,6.82738
+6.09953,0.0638741,6.75348
+6.19493,0.0640192,6.84853
+6.10396,0.0640384,6.75882
+6.18771,0.0635888,6.84109
+6.0731,0.0642605,6.72717
+6.17838,0.0639642,6.83202
+6.28164,0.0629897,6.93558
+6.06476,0.064087,6.71787
+6.17347,0.0629046,6.82588
+6.15036,0.0639456,6.8034
+6.18139,0.064034,6.8351
+6.07344,0.0630148,6.72643
+6.18611,0.064087,6.83952
+6.0442,0.0629422,6.69661
+6.29382,0.0641292,6.94907
+6.0257,0.0640495,6.67934
+6.19789,0.064102,6.85173
+6.2117,0.0639725,6.86499
+6.03431,0.0636404,6.68758
+6.24001,0.0628907,6.89248
+6.26735,0.0640943,6.92548
+7.41194,0.0642666,8.06561
+6.05262,0.0642877,6.70726
+6.1499,0.0644508,6.80469
+6.301,0.0628174,6.95372
+6.19335,0.0645973,6.8474
+6.05012,0.0642619,6.70393
+6.04468,0.0640253,6.69808
+6.26057,0.0636899,6.91347
+6.28666,0.0630084,6.939
+6.0894,0.0628253,6.74191
+6.17962,0.0636134,6.83266
+6.26556,0.0639939,6.91875
+3 threads per task
+6.2674,0.0462729,6.90377
+6.08462,0.0465768,6.72028
+6.2928,0.0463682,6.92973
+6.31109,0.0471491,6.94785
+6.05895,0.0469169,6.69564
+6.05196,0.0466864,6.68848
+6.27898,0.0471843,6.91673
+6.2005,0.0464641,6.83646
+6.19624,0.0467308,6.83209
+6.09724,0.0471439,6.73411
+6.17865,0.0468396,6.81507
+6.08989,0.0472704,6.72669
+6.05235,0.0472593,6.68926
+6.1099,0.0461443,6.74514
+6.21098,0.0500057,6.85126
+6.20618,0.0472425,6.8446
+6.26004,0.0472312,6.89723
+6.11446,0.0471902,6.75198
+6.19981,0.0462139,6.83593
+6.225,0.0471383,6.86218
+6.07148,0.0473755,6.70873
+6.19861,0.0472754,6.83535
+6.05534,0.0472082,6.69175
+6.14871,0.0471386,6.78616
+6.24256,0.0461216,6.87777
+6.20388,0.0471324,6.8403
+6.05801,0.0471331,6.69457
+6.06505,0.0481701,6.70327
+6.24072,0.0471333,6.87806
+6.2817,0.0461396,6.91762
+6.18647,0.0472427,6.82328
+6.16765,0.0471412,6.80453
+6.04602,0.0472429,6.68287
+6.23864,0.0467795,6.8752
+6.25473,0.0475208,6.893
+6.03715,0.0464649,6.6731
+6.14159,0.0472063,6.77881
+6.18787,0.0469556,6.82484
+6.30295,0.0462742,6.93963
+6.0721,0.0473208,6.7088
+6.27583,0.0463884,6.91224
+7.40379,0.0463204,8.03963
+6.27492,0.0468037,6.91107
+6.30075,0.0466677,6.93719
+6.06369,0.046898,6.70037
+6.26178,0.0460927,6.89802
+6.29374,0.0471851,6.93179
+6.1764,0.0467007,6.81337
+6.06076,0.0471513,6.69729
+6.32423,0.0471969,6.96113
+6.15627,0.047416,6.79366
+4 threads per task
+6.27051,0.0377163,6.8989
+6.1113,0.0377969,6.74063
+6.24281,0.0374091,6.87155
+6.28064,0.037971,6.91055
+6.16632,0.0377353,6.79513
+6.08581,0.036908,6.71188
+6.27589,0.0375888,6.90293
+6.18268,0.0379763,6.81277
+6.0678,0.0377871,6.69696
+6.0541,0.0377071,6.68355
+6.10499,0.0377092,6.73352
+6.10807,0.0368904,6.73405
+6.03865,0.0378831,6.66767
+6.03677,0.0380077,6.6672
+6.24151,0.0379796,6.87133
+6.22309,0.0374581,6.85002
+6.08129,0.0368603,6.70863
+6.17737,0.0379602,6.8073
+6.07299,0.0373974,6.70174
+6.07945,0.0377284,6.7084
+6.14105,0.0377886,6.76941
+6.25563,0.0377357,6.88447
+6.3192,0.0371405,6.94844
+6.04255,0.0379439,6.67132
+6.06815,0.0379913,6.69724
+6.03876,0.0378439,6.66688
+6.20413,0.0376822,6.83251
+6.3185,0.037144,6.94643
+6.06273,0.0380945,6.69194
+6.26148,0.0378412,6.89122
+6.25724,0.0377377,6.88555
+6.14094,0.037747,6.77032
+6.28514,0.0371954,6.91307
+6.22166,0.0372913,6.85019
+6.19443,0.0376622,6.82284
+6.24403,0.0378655,6.87329
+6.20268,0.0377052,6.83102
+6.17086,0.0377395,6.79978
+6.05951,0.0373416,6.68748
+6.16017,0.0371745,6.78735
+6.14083,0.0378568,6.77127
+6.06737,0.037989,6.69597
+6.14495,0.0378162,6.77371
+6.13309,0.0377222,6.76142
+6.24398,0.0379707,6.87397
+6.1955,0.0378846,6.82791
+6.19818,0.037823,6.82703
+6.24072,0.037733,6.87007
+6.04752,0.0380904,6.67656
+6.19049,0.0369925,6.81673
+6.28007,0.0381088,6.90931
+5 threads per task
+6.24277,0.0315356,6.86447
+6.2495,0.0314318,6.87051
+6.27938,0.0314396,6.90203
+6.0968,0.0310819,6.71722
+6.06718,0.0314159,6.68871
+6.18962,0.0317024,6.81107
+6.24841,0.0314348,6.86939
+6.07081,0.0310935,6.69178
+6.07529,0.0314368,6.69619
+6.18448,0.0310365,6.80571
+6.07103,0.0311224,6.69215
+6.07489,0.0315705,6.69588
+6.2221,0.0314515,6.84359
+6.22319,0.0314824,6.84572
+6.0588,0.0313328,6.67944
+6.24076,0.0311052,6.86118
+6.07237,0.0314418,6.69324
+6.1438,0.0312417,6.76568
+6.24345,0.0312937,6.86464
+6.03167,0.0315175,6.65264
+7.38888,0.0314695,8.01069
+6.26881,0.0315389,6.89095
+6.12483,0.0311323,6.74672
+6.18547,0.0315822,6.80643
+6.16654,0.0314202,6.78764
+6.13789,0.0309813,6.75877
+6.18274,0.0314294,6.80399
+6.13486,0.0314217,6.75599
+6.17278,0.0310876,6.79284
+6.08146,0.0310449,6.70179
+6.03558,0.0315464,6.65663
+6.09071,0.0310141,6.71114
+6.04291,0.0316779,6.66437
+6.22216,0.0314008,6.84328
+6.21505,0.0314291,6.83549
+6.0711,0.0317068,6.69411
+6.1053,0.0311376,6.72614
+6.05862,0.0314251,6.67936
+6.04029,0.0311105,6.66142
+6.19839,0.0311122,6.81963
+6.16429,0.0311167,6.78486
+6.05224,0.0315823,6.67457
+6.03942,0.0317546,6.66137
+6.17639,0.0316815,6.79791
+6.22069,0.0314561,6.84132
+6.06774,0.0314696,6.68842
+6.24872,0.0314335,6.87004
+6.10757,0.0312562,6.72804
+6.22836,0.031082,6.84863
+6.21256,0.0316826,6.83403
+6.03514,0.0317649,6.65628
+6 threads per task
+6.0446,0.0268501,6.66121
+6.20272,0.02665,6.81843
+6.0399,0.0266757,6.65627
+6.13057,0.0268574,6.74751
+6.06995,0.0268292,6.68629
+6.27072,0.0267563,6.88758
+6.17746,0.026646,6.79388
+6.10255,0.0268109,6.71925
+6.18667,0.0269939,6.80391
+6.20192,0.0267055,6.81791
+6.20467,0.0265711,6.82158
+6.21652,0.0268371,6.83332
+6.21525,0.0265658,6.8325
+6.07043,0.0270122,6.68688
+6.07459,0.0267946,6.69142
+6.21453,0.0268264,6.83059
+6.11481,0.026811,6.73092
+6.36794,0.0270579,6.98449
+6.27874,0.0265552,6.8943
+6.20409,0.0267435,6.82056
+6.05996,0.026839,6.67614
+6.05435,0.0268155,6.67036
+6.04447,0.0268506,6.66129
+6.26373,0.02676,6.88006
+6.2767,0.0269737,6.89288
+7.40137,0.0270617,8.01807
+6.20052,0.0267394,6.81678
+6.2928,0.0273158,6.90994
+6.15193,0.0267394,6.76789
+6.1064,0.0267513,6.72261
+6.25025,0.0268024,6.86672
+6.05817,0.0270111,6.67515
+6.22081,0.0267501,6.83717
+6.06652,0.0267543,6.6825
+6.13354,0.0267695,6.74988
+6.07808,0.0270126,6.69459
+6.04806,0.0267201,6.66526
+6.04705,0.0267315,6.66352
+6.09587,0.0268811,6.713
+6.20974,0.0270128,6.8268
+6.21537,0.0268185,6.83253
+6.23582,0.0268085,6.85275
+6.17526,0.0267366,6.79125
+6.18368,0.0269244,6.80088
+6.25748,0.026798,6.87357
+6.18519,0.0267263,6.80176
+6.17802,0.0267512,6.79425
+6.23287,0.0267429,6.84879
+6.15012,0.0267187,6.76644
+6.06861,0.0268902,6.68437
+6.07699,0.0269763,6.69316
+7 threads per task
+6.23045,0.0235065,6.84387
+6.07138,0.0238129,6.68489
+6.21521,0.0234798,6.82812
+6.17941,0.0234002,6.79284
+6.20624,0.023392,6.82009
+6.0738,0.0233734,6.68684
+6.26289,0.0237471,6.87775
+6.24864,0.0238723,6.8625
+6.21859,0.0235881,6.83234
+6.17226,0.0234542,6.78623
+6.17102,0.0237237,6.78503
+6.23931,0.0236434,6.85286
+6.21334,0.0237162,6.8274
+6.17586,0.0237175,6.7902
+6.06781,0.0234617,6.68168
+6.04498,0.0234547,6.6601
+6.22292,0.0233937,6.83663
+6.24644,0.0234419,6.85968
+6.19638,0.0234661,6.8094
+6.22799,0.0234901,6.84135
+6.08581,0.0237528,6.69912
+6.1637,0.0233825,6.77656
+6.28255,0.0234762,6.89591
+6.19271,0.0234424,6.80591
+6.26038,0.0235227,6.8732
+6.04653,0.0234759,6.66002
+6.19767,0.0234818,6.81046
+6.24477,0.0233625,6.85817
+6.03865,0.0234503,6.65169
+6.28032,0.0234763,6.89333
+6.17736,0.0234811,6.79057
+6.07161,0.0237221,6.68544
+6.05296,0.0233725,6.66592
+6.21975,0.0236418,6.83369
+6.17495,0.0234721,6.78917
+6.16147,0.0233567,6.77517
+6.18703,0.0234383,6.80001
+6.07343,0.0235667,6.68661
+6.2906,0.0236465,6.90372
+6.24369,0.0234806,6.85724
+6.2191,0.0233994,6.83211
+6.17816,0.0233924,6.79101
+6.05459,0.0234597,6.66804
+6.09154,0.0234187,6.70498
+6.12708,0.0234007,6.74034
+6.27558,0.0234228,6.88922
+6.21929,0.0234941,6.83236
+6.03125,0.0237202,6.64535
+6.23938,0.0237159,6.85372
+6.21247,0.0234015,6.82558
+6.07057,0.0234646,6.6841
+8 threads per task
+6.29677,0.021198,6.90738
+6.17534,0.0209643,6.7859
+6.06519,0.0212239,6.67621
+6.15352,0.0209109,6.76392
+6.18798,0.0208897,6.79833
+6.17867,0.0210679,6.78955
+6.26296,0.0210804,6.87396
+6.22032,0.0212015,6.83106
+6.19872,0.0209491,6.80976
+6.23724,0.021185,6.84866
+6.21847,0.0209764,6.82919
+6.10237,0.0210904,6.71293
+6.21817,0.0212085,6.8292
+6.10542,0.0209346,6.71602
+6.20153,0.0209266,6.81241
+7.87632,0.021102,8.48729
+6.26577,0.0209502,6.87636
+6.16966,0.0209335,6.78162
+6.0639,0.0215448,6.67479
+6.31458,0.021098,6.92577
+6.25254,0.0211028,6.86353
+6.06232,0.0210062,6.67285
+6.03151,0.0209589,6.64188
+6.10964,0.021182,6.72089
+6.16533,0.021227,6.77666
+6.255,0.0215914,6.86686
+6.05567,0.0211949,6.66694
+6.05778,0.0211683,6.6688
+6.04344,0.0209469,6.65369
+6.04516,0.0209548,6.65575
+6.04703,0.0209154,6.65813
+6.26894,0.0210601,6.8801
+6.18305,0.0211878,6.79433
+6.34753,0.0212047,6.96013
+6.07562,0.0209785,6.68623
+6.13155,0.021007,6.74242
+6.15436,0.0209233,6.76513
+6.16881,0.0209456,6.77944
+6.15485,0.0209205,6.7662
+6.0268,0.0212882,6.63802
+6.13239,0.0210845,6.74287
+6.29834,0.0210828,6.90899
+6.16419,0.0209456,6.77511
+6.22972,0.021038,6.84046
+6.17817,0.0210191,6.78896
+6.04824,0.0209133,6.65905
+6.18977,0.0211959,6.80026
+6.08558,0.0210427,6.69687
+6.07466,0.0209611,6.68561
+6.09058,0.0213492,6.70168
+6.1439,0.0211505,6.75461
+3 tasks per node
+1 threads per task
+6.23908,0.0928813,6.92434
+6.38577,0.092707,7.07134
+6.44642,0.0917162,7.13069
+6.24836,0.0942578,6.93627
+6.37884,0.0932683,7.06494
+6.3848,0.093252,7.07178
+6.24519,0.0927139,6.93036
+6.28046,0.0918438,6.96455
+6.26972,0.0933055,6.95679
+6.35664,0.0921587,7.04083
+6.36845,0.0926173,7.05381
+6.24822,0.0928878,6.93358
+6.3932,0.0917334,7.07706
+6.36776,0.0935248,7.05346
+6.43783,0.092879,7.12305
+6.25909,0.0925502,6.94398
+6.25118,0.0935431,6.9399
+6.4795,0.0928939,7.16571
+6.38657,0.0929978,7.07221
+6.46344,0.0924837,7.14969
+6.43345,0.0924503,7.11785
+6.28416,0.0920235,6.96837
+6.30354,0.0928879,6.98945
+6.43872,0.0919452,7.12262
+6.24179,0.0935622,6.92599
+6.71584,0.0929266,7.40234
+6.51021,0.0922103,7.19507
+6.24468,0.093005,6.93057
+6.28501,0.0916398,6.96903
+6.6533,0.0923001,7.33781
+6.24331,0.0929635,6.93031
+6.28124,0.0931481,6.96709
+6.3991,0.0933034,7.08488
+6.44231,0.0939502,7.12905
+6.31983,0.0924843,7.00307
+6.44902,0.0927782,7.13514
+6.40547,0.09215,7.09003
+6.48117,0.0930455,7.1666
+6.37864,0.094458,7.06548
+6.37605,0.0928765,7.06175
+6.22996,0.0925595,6.91494
+6.24984,0.0928515,6.93562
+6.36994,0.0932936,7.05657
+6.39107,0.0941066,7.07788
+6.3853,0.091594,7.07046
+6.29157,0.0931444,6.97778
+6.33189,0.0920317,7.01646
+6.45465,0.0940325,7.1422
+6.2682,0.0929933,6.95455
+6.46409,0.091892,7.14931
+6.38817,0.0928765,7.07359
+2 threads per task
+6.38455,0.0647947,7.04303
+6.29566,0.0653443,6.95359
+6.26518,0.0660231,6.924
+6.39476,0.0650314,7.0536
+6.43561,0.0665515,7.09489
+6.45819,0.0659607,7.11627
+6.35948,0.0659772,7.01795
+6.27571,0.06601,6.93388
+6.41996,0.0648624,7.07764
+6.27529,0.0657071,6.93446
+6.51985,0.0660576,7.1777
+6.37575,0.0654603,7.03341
+6.46855,0.066291,7.12675
+6.3954,0.0662504,7.05388
+6.55039,0.0647103,7.20843
+6.49022,0.0656286,7.14818
+6.30219,0.065988,6.9602
+6.24271,0.0655307,6.90139
+6.26558,0.0655818,6.92427
+6.64814,0.0648521,7.30592
+6.32121,0.0658912,6.9794
+6.39931,0.0659934,7.05855
+6.36289,0.0655412,7.02164
+6.2694,0.0651649,6.92722
+6.23173,0.0666707,6.89149
+6.22363,0.0651044,6.88117
+6.76797,0.0662565,7.42744
+6.39408,0.066271,7.05283
+6.24279,0.0660857,6.90092
+6.36503,0.0659792,7.02324
+6.40774,0.0647282,7.06463
+6.4988,0.0659983,7.15738
+6.37805,0.0661778,7.0366
+6.23776,0.0653799,6.89509
+6.37883,0.0660577,7.03744
+6.51387,0.0646831,7.17154
+6.23734,0.0648166,6.89461
+6.39514,0.0653299,7.05299
+6.34282,0.0662815,7.00235
+6.25147,0.065534,6.91007
+6.40316,0.0649362,7.06165
+6.55876,0.0660913,7.21705
+6.45397,0.0662208,7.11247
+6.25709,0.0656381,6.91549
+6.37735,0.065933,7.03541
+6.33713,0.0668548,6.9969
+6.44563,0.0652027,7.10127
+6.38051,0.0660069,7.03961
+6.46752,0.0657709,7.12783
+6.25712,0.0654592,6.91326
+6.42494,0.0656063,7.08229
+3 threads per task
+6.50262,0.0477741,7.14366
+6.75075,0.0489351,7.39259
+6.4769,0.0483358,7.1179
+6.28923,0.0480397,6.93011
+6.4106,0.048643,7.04944
+6.27982,0.0482347,6.92058
+6.38334,0.0486917,7.02429
+7.44118,0.0485419,8.08325
+6.23656,0.0486914,6.87824
+6.36523,0.0478,7.00578
+6.45955,0.0475552,7.09962
+6.34931,0.0486911,6.99065
+6.24108,0.0486946,6.88371
+6.23519,0.0481245,6.87649
+6.37572,0.0486625,7.01561
+6.40222,0.0480671,7.04253
+6.54032,0.0474766,7.18096
+6.36607,0.0482702,7.00631
+6.33397,0.0486079,6.97534
+6.26543,0.0480868,6.906
+6.45529,0.048702,7.09658
+6.28936,0.0475453,6.92953
+6.51927,0.0481824,7.15966
+6.39525,0.0487581,7.03675
+6.32364,0.0477644,6.96441
+6.29547,0.0490548,6.93756
+6.40692,0.0475357,7.0465
+6.34546,0.048957,6.98666
+6.24358,0.0492408,6.88521
+6.36512,0.0488567,7.00724
+6.25101,0.0490167,6.89187
+6.24119,0.0479561,6.88174
+6.4717,0.0475208,7.1124
+6.33302,0.0486218,6.97434
+6.39899,0.0492195,7.04053
+6.23319,0.0487213,6.87521
+6.24933,0.0481209,6.89017
+6.28838,0.0480015,6.92871
+6.25225,0.0487833,6.8949
+6.2655,0.0480699,6.90686
+6.25861,0.048257,6.89971
+6.32296,0.0486788,6.96402
+6.38242,0.0490917,7.02452
+6.67377,0.0479639,7.31535
+6.34889,0.0490191,6.99079
+6.3772,0.0490312,7.01924
+6.36968,0.0490239,7.01197
+6.2451,0.0480406,6.88651
+6.48175,0.0488215,7.12317
+6.25114,0.04774,6.89123
+6.31995,0.0488467,6.96084
+4 threads per task
+6.47095,0.0385777,7.1013
+6.23666,0.0387214,6.8683
+6.44022,0.0380525,7.07183
+6.31591,0.0382341,6.94627
+6.38732,0.0384918,7.01851
+6.4604,0.0384956,7.09116
+6.25796,0.0384798,6.88798
+6.45478,0.0384634,7.08674
+6.29881,0.0385207,6.93093
+6.38115,0.0390298,7.01064
+6.36985,0.0387902,7.00122
+6.50725,0.0381477,7.13907
+6.41045,0.0385356,7.04202
+6.22537,0.0386398,6.85754
+6.31154,0.0385048,6.94133
+6.34712,0.038442,6.97625
+6.35939,0.0387436,6.99068
+6.45036,0.0386869,7.0802
+6.29316,0.0385188,6.92242
+6.40631,0.0387243,7.0359
+6.54016,0.0383047,7.17181
+6.45697,0.0384119,7.08789
+6.55502,0.0388059,7.18656
+6.43071,0.0380364,7.06161
+6.3736,0.037992,7.005
+6.25968,0.0384693,6.8901
+6.50181,0.0383718,7.13228
+6.46314,0.0384306,7.09411
+6.3975,0.0381321,7.03085
+6.26142,0.0385028,6.89272
+6.25346,0.038594,6.88431
+6.47918,0.0387345,7.11041
+6.38992,0.0381594,7.02039
+6.4878,0.0379893,7.11968
+6.45585,0.0380176,7.08601
+6.40129,0.0385221,7.03229
+6.36746,0.0385123,6.99895
+6.25567,0.0380756,6.88613
+6.46762,0.0381309,7.09666
+6.24391,0.0379935,6.87429
+6.25267,0.0383115,6.88384
+6.35369,0.0385207,6.98467
+6.25772,0.0384758,6.88908
+6.25818,0.0389155,6.88965
+6.39292,0.038706,7.02421
+6.26927,0.0385029,6.90044
+6.39393,0.0390372,7.0255
+6.44296,0.0385025,7.07484
+6.37122,0.0387944,7.00311
+6.22042,0.0385603,6.85181
+6.47142,0.037963,7.10227
+5 threads per task
+6.21134,0.0321131,6.83621
+6.3811,0.0319224,7.006
+6.38379,0.0318256,7.00868
+6.3918,0.0316337,7.01578
+6.39629,0.0316027,7.01989
+6.44906,0.0316251,7.07273
+6.42001,0.0320548,7.04531
+6.35591,0.0318146,6.98007
+6.24377,0.0318436,6.86807
+6.32413,0.031635,6.94883
+6.48124,0.0318651,7.10599
+6.31796,0.0318112,6.94244
+6.37809,0.031811,7.00235
+6.4258,0.0320788,7.05066
+6.25766,0.0319071,6.88232
+6.47215,0.0316084,7.09707
+6.27024,0.0316458,6.89547
+6.24114,0.0325654,6.86633
+6.23917,0.0318796,6.86421
+6.31061,0.0316835,6.93556
+6.2847,0.031646,6.90914
+6.47494,0.031737,7.09884
+6.39125,0.0316688,7.01582
+6.47185,0.0318633,7.09646
+6.35141,0.0318115,6.97651
+6.39554,0.0315642,7.02042
+6.47,0.0323483,7.09235
+6.36519,0.0318201,6.98947
+6.3415,0.0316149,6.96586
+6.5449,0.0321081,7.16907
+6.24344,0.0318638,6.86792
+6.39007,0.0320704,7.01501
+6.43503,0.0318218,7.05972
+6.48181,0.0316334,7.10712
+6.47305,0.0318148,7.09742
+6.38426,0.0318532,7.00846
+6.29729,0.0316325,6.9218
+6.35565,0.031765,6.98024
+6.539,0.0318198,7.16314
+6.45547,0.0320599,7.08017
+6.24063,0.0317432,6.86495
+6.36319,0.0316815,6.98723
+6.23952,0.0316193,6.86435
+6.22294,0.0318013,6.84718
+6.23565,0.031866,6.85999
+6.36693,0.0323178,6.99185
+6.43839,0.0325389,7.06328
+6.29551,0.0318191,6.92057
+6.25575,0.0316284,6.88054
+6.26654,0.0318185,6.89102
+6.24136,0.0318274,6.86618
+6 threads per task
+6.22804,0.0273087,6.84892
+6.52694,0.0269371,7.14625
+6.36066,0.0269812,6.9807
+6.4043,0.0269821,7.02453
+6.30941,0.0269303,6.92953
+6.31392,0.0269559,6.93357
+6.4377,0.0270105,7.05742
+6.46414,0.0271461,7.08349
+6.37397,0.0270089,6.99368
+6.38587,0.0274251,7.00644
+6.43762,0.0271493,7.05759
+6.28926,0.0272106,6.90896
+6.38241,0.0270623,6.99996
+6.44405,0.0270348,7.06421
+6.2698,0.0269882,6.88932
+6.26825,0.027026,6.88771
+6.49146,0.027106,7.10943
+6.36351,0.0269571,6.98277
+6.97515,0.0271041,7.59737
+6.40429,0.0274885,7.02398
+6.35005,0.0269375,6.97125
+6.37241,0.0269104,6.99169
+6.24638,0.0269775,6.86609
+6.40517,0.0271543,7.02495
+6.40516,0.0272087,7.02478
+6.36881,0.0269433,6.98891
+6.29496,0.0270042,6.91516
+6.44677,0.0270045,7.06714
+6.38809,0.0272135,7.00663
+6.24197,0.0270236,6.86233
+6.23162,0.0269913,6.85178
+6.26985,0.0272899,6.88995
+6.40366,0.0269017,7.02219
+6.34087,0.0269229,6.96021
+6.38303,0.0270912,7.00341
+6.24737,0.026962,6.86723
+6.46899,0.0269089,7.08874
+6.49588,0.0269501,7.11517
+6.61195,0.0269391,7.23165
+6.26771,0.0269888,6.88781
+6.5065,0.026999,7.12656
+6.25555,0.0275046,6.87648
+6.24478,0.0269619,6.8648
+6.40209,0.0274023,7.02237
+6.43716,0.0272543,7.05576
+6.26773,0.0274159,6.88789
+6.39315,0.027175,7.01388
+6.29292,0.027214,6.91278
+6.47692,0.0269632,7.09643
+6.2499,0.0272971,6.87006
+6.52717,0.0269791,7.14689
+7 threads per task
+6.42822,0.0236081,7.04495
+6.51035,0.0238806,7.12834
+6.34477,0.0235843,6.96134
+6.3162,0.0237295,6.93289
+6.36413,0.023735,6.98018
+6.43195,0.0235393,7.04801
+6.38856,0.0238158,7.00508
+6.25003,0.024001,6.8669
+6.49755,0.0238481,7.11463
+6.4656,0.0238014,7.08219
+6.49967,0.0235773,7.1165
+6.43678,0.0238252,7.05369
+6.39486,0.0236786,7.01129
+6.34957,0.0235505,6.96578
+6.4333,0.023707,7.04977
+7.6294,0.0240247,8.24597
+6.25129,0.0237611,6.86789
+6.35068,0.0235512,6.96687
+6.23729,0.02357,6.85358
+6.39074,0.0235628,7.0074
+6.24113,0.0236346,6.85827
+6.37528,0.0238669,6.99184
+6.29646,0.0235503,6.91226
+6.21306,0.0237527,6.8295
+6.38965,0.0236337,7.00559
+6.24418,0.0235566,6.86028
+6.37134,0.0236215,6.98826
+6.30804,0.0236696,6.92409
+6.24571,0.0235449,6.86217
+6.55897,0.0236154,7.17535
+6.22521,0.0238413,6.8418
+6.21666,0.023926,6.83305
+6.26088,0.0235788,6.87698
+6.47245,0.0240079,7.08949
+6.49166,0.0238332,7.10841
+6.45985,0.0238051,7.0763
+6.4166,0.0235713,7.03445
+6.3784,0.0237902,6.99512
+6.38072,0.0235451,6.99783
+6.35758,0.0235935,6.97377
+6.40721,0.0237258,7.0241
+6.42878,0.0237997,7.04523
+6.26404,0.0236672,6.88042
+6.30398,0.0237352,6.92008
+6.40782,0.0238886,7.02524
+6.25995,0.0238154,6.87685
+6.29631,0.0236424,6.91263
+6.38093,0.0235844,6.99719
+6.23459,0.0235449,6.85094
+6.5567,0.0235516,7.17324
+6.35319,0.0235559,6.96947
+8 threads per task
+6.34832,0.022719,6.96364
+6.38882,0.0238572,7.00489
+6.4476,0.0264733,7.0666
+6.4636,0.023858,7.08002
+6.43504,0.0225817,7.05015
+6.24506,0.0263955,6.86532
+7.68586,0.0239285,8.30443
+6.40877,0.0229025,7.02399
+6.50394,0.0238484,7.12012
+6.35896,0.0238569,6.9755
+6.38115,0.0264328,7.00004
+6.40365,0.0264041,7.02257
+6.25501,0.0238782,6.87133
+6.52015,0.022765,7.13606
+6.24092,0.0238996,6.85558
+6.36387,0.0238785,6.98014
+6.47952,0.0238572,7.09607
+6.37185,0.0238847,6.98897
+6.36118,0.0238322,6.97832
+6.42317,0.0238798,7.03972
+6.36776,0.0238518,6.98424
+6.43852,0.0264631,7.05749
+6.47289,0.0238877,7.08905
+6.5083,0.0264191,7.12755
+6.27967,0.0238546,6.89752
+6.45695,0.0264086,7.07608
+6.49416,0.026455,7.11298
+6.26072,0.0226295,6.87629
+6.31797,0.0228892,6.93396
+6.33275,0.0238502,6.94989
+6.47981,0.0229082,7.09582
+6.47587,0.0225507,7.09294
+6.26299,0.0228916,6.87841
+6.28419,0.0227231,6.89934
+6.31655,0.0238725,6.93415
+6.24361,0.0238553,6.86037
+6.35718,0.0238789,6.97348
+6.23994,0.0266244,6.86454
+6.2828,0.0264538,6.90211
+6.3008,0.0230046,6.91747
+6.35831,0.023796,6.97452
+6.23262,0.0229448,6.84847
+6.26764,0.0238754,6.8843
+6.48139,0.0238608,7.09833
+6.32067,0.0238818,6.93843
+6.38849,0.0238533,7.00521
+6.44628,0.026557,7.06579
+6.38667,0.0269592,7.00627
+6.37229,0.0238545,6.98893
+6.21804,0.0229738,6.83457
+6.27929,0.0238387,6.89578
+4 tasks per node
+1 threads per task
+6.40294,0.0918999,6.55872
+6.34861,0.0916484,6.50436
+6.22507,0.092031,6.38108
+6.44534,0.0916854,6.60108
+6.44258,0.0918287,6.59835
+6.2434,0.0919129,6.39919
+6.35524,0.0916373,6.5107
+6.21786,0.091684,6.37375
+6.41614,0.0918243,6.57184
+6.44524,0.0916328,6.60089
+6.34242,0.0919624,6.49821
+6.41022,0.0918505,6.56609
+6.37586,0.0917187,6.53164
+6.38649,0.091791,6.54202
+6.31249,0.091884,6.46799
+6.22917,0.0920325,6.38558
+6.23409,0.0918788,6.38986
+6.43624,0.0916318,6.59195
+6.39816,0.0919563,6.55395
+6.41416,0.0916496,6.56964
+6.42322,0.0919373,6.57911
+6.43725,0.0916453,6.59295
+6.3422,0.091733,6.49789
+6.31668,0.0916101,6.47222
+6.24782,0.091598,6.40333
+6.3379,0.0917179,6.49361
+6.33232,0.0918682,6.4881
+6.36319,0.091535,6.51855
+6.45325,0.0920047,6.60902
+6.39438,0.091635,6.54978
+6.2295,0.0915816,6.385
+6.28382,0.0915723,6.43916
+6.40248,0.0917226,6.55838
+6.33517,0.0923293,6.49128
+6.22319,0.0917626,6.37866
+6.30256,0.091871,6.45844
+6.36987,0.0918483,6.52555
+6.43643,0.091604,6.59179
+6.22537,0.0916477,6.38108
+6.37279,0.0918412,6.52828
+6.22434,0.091653,6.3797
+6.44469,0.091731,6.60017
+6.40379,0.0917483,6.55922
+6.35138,0.0944833,6.51003
+6.34652,0.0916333,6.502
+6.23528,0.091715,6.39129
+6.24056,0.0915661,6.39584
+6.39389,0.0917036,6.54938
+6.89046,0.0922338,7.04681
+6.21797,0.0918713,6.37383
+6.49635,0.0922542,6.65255
+2 threads per task
+6.2218,0.0651575,6.35094
+6.45795,0.0647191,6.58667
+6.2873,0.0648258,6.41631
+6.24358,0.0647887,6.37287
+6.3715,0.0649986,6.50058
+6.35901,0.0647677,6.48768
+6.36448,0.0647854,6.49309
+6.40762,0.0651229,6.53669
+6.38848,0.0646686,6.51702
+6.4582,0.0649379,6.58711
+6.2382,0.0650439,6.36742
+6.36182,0.0650355,6.49104
+6.35601,0.0648429,6.48461
+6.23931,0.0646748,6.3679
+6.60607,0.064693,6.73474
+6.21146,0.06468,6.33998
+6.44198,0.0647613,6.5705
+6.33972,0.0647422,6.46866
+6.22436,0.0647191,6.35292
+6.35422,0.0646362,6.48291
+6.42452,0.0648471,6.55338
+6.38683,0.0646342,6.51544
+6.24409,0.0646627,6.37296
+6.21891,0.0647468,6.34759
+6.32551,0.064742,6.45411
+6.39433,0.0646643,6.52292
+6.21944,0.0648308,6.34865
+6.3274,0.064977,6.45617
+6.34108,0.0649378,6.4702
+6.45327,0.0649282,6.58235
+6.35314,0.0647919,6.48213
+6.41836,0.0647016,6.54682
+6.22961,0.0650129,6.35853
+6.2384,0.0647737,6.36736
+6.34199,0.0647403,6.47145
+6.38888,0.0646546,6.5177
+6.50541,0.0646974,6.634
+6.36194,0.0649061,6.49074
+6.38171,0.0648091,6.5107
+6.34046,0.0647041,6.469
+6.22206,0.0649565,6.35075
+6.34131,0.0646687,6.47096
+6.20036,0.0646714,6.32901
+6.27385,0.0647823,6.40253
+6.20782,0.0646665,6.33642
+6.23925,0.0647284,6.36798
+6.79999,0.0650737,6.92967
+6.228,0.0648298,6.35662
+6.39791,0.064733,6.52692
+6.35009,0.064771,6.47871
+6.37545,0.0647435,6.50408
+3 threads per task
+6.43091,0.04781,6.54343
+6.42614,0.0476173,6.53742
+6.37677,0.0478181,6.48873
+6.24681,0.0479532,6.35866
+6.24739,0.0476948,6.35886
+6.33988,0.0478157,6.45174
+6.33047,0.0475574,6.44201
+6.39314,0.0475123,6.50436
+6.2781,0.0474881,6.38951
+6.24559,0.0474854,6.35698
+6.24695,0.0476163,6.35833
+6.34678,0.0477519,6.45866
+6.33736,0.0476094,6.44876
+6.22152,0.0476078,6.33302
+6.22565,0.0475262,6.33687
+6.37358,0.0474908,6.48584
+6.19955,0.0475249,6.31131
+6.23022,0.0478551,6.34185
+6.23021,0.0476631,6.34163
+6.35866,0.0474923,6.46984
+6.39866,0.0475509,6.51004
+6.22167,0.0478429,6.33323
+6.38971,0.0477812,6.50132
+6.52096,0.0477068,6.63258
+6.23978,0.0477579,6.35153
+6.24728,0.0475202,6.35867
+6.24635,0.047551,6.35769
+6.42737,0.0476491,6.53913
+6.24734,0.0475576,6.35875
+6.21423,0.0474902,6.32607
+6.40001,0.0475571,6.51134
+6.21736,0.048115,6.32927
+6.35621,0.0475887,6.46768
+6.28448,0.0479834,6.39635
+6.34136,0.0476009,6.45283
+6.34084,0.0474872,6.45228
+6.3436,0.0478317,6.45566
+6.26535,0.0476801,6.37676
+6.24668,0.0474604,6.35832
+6.42025,0.0475297,6.53183
+6.37418,0.0475346,6.48568
+6.3738,0.0479077,6.48558
+6.35308,0.0475511,6.46439
+6.43187,0.0476189,6.54343
+6.26612,0.0485157,6.3784
+6.45772,0.0476186,6.56939
+6.48212,0.0481029,6.59467
+6.32629,0.0477308,6.43768
+6.47985,0.0474805,6.59183
+6.35456,0.0477959,6.46653
+6.40393,0.0475644,6.51564
+4 threads per task
+6.44853,0.037995,6.55046
+6.21416,0.0379351,6.316
+6.33118,0.0380595,6.43318
+6.22237,0.0381041,6.32433
+6.25641,0.0380558,6.35867
+6.32241,0.0379698,6.42427
+6.21584,0.0380849,6.31787
+6.26765,0.0379787,6.36992
+6.24648,0.0379922,6.34851
+6.387,0.0379826,6.4888
+6.22676,0.0381135,6.32908
+6.37973,0.0380061,6.4815
+6.22528,0.0379929,6.32755
+6.36384,0.0382189,6.46609
+6.37511,0.0382237,6.47711
+6.31643,0.0379439,6.41842
+6.22426,0.0379661,6.32611
+6.36766,0.0380577,6.46972
+6.36785,0.0379747,6.46961
+6.36441,0.0379629,6.46611
+6.2093,0.0381584,6.31128
+6.22546,0.0381372,6.32757
+6.37146,0.0379824,6.47356
+6.23991,0.0379341,6.34167
+6.42561,0.0380573,6.52742
+6.36782,0.0379789,6.46963
+6.26071,0.0379437,6.36282
+6.41428,0.0379899,6.51602
+6.23844,0.0379365,6.34034
+6.27178,0.0382328,6.37406
+6.23513,0.0379703,6.3376
+6.2089,0.0379742,6.311
+6.19369,0.0380888,6.29561
+6.2414,0.0379904,6.34349
+6.33958,0.0379364,6.44139
+6.34284,0.0381981,6.44479
+6.42363,0.037967,6.52537
+6.46872,0.0382165,6.5709
+6.26443,0.0384637,6.3668
+6.56122,0.038034,6.66332
+6.3837,0.0379946,6.48567
+6.36109,0.0379992,6.46294
+6.194,0.0380883,6.29574
+6.36867,0.0379623,6.47026
+6.3565,0.0379985,6.45859
+6.49163,0.0382636,6.59386
+6.28668,0.0380638,6.3886
+6.34915,0.0381911,6.45125
+6.37274,0.0380817,6.47467
+6.3651,0.0381992,6.46728
+6.44323,0.0382198,6.54545
+5 threads per task
+6.33478,0.0318416,6.43064
+6.34076,0.0316077,6.43637
+6.3495,0.0316364,6.44485
+6.45009,0.0315731,6.54574
+6.38759,0.0315685,6.48339
+6.36137,0.0318848,6.45721
+6.37076,0.0315733,6.46609
+6.22342,0.0317247,6.31895
+6.3415,0.0315915,6.4368
+6.4339,0.031574,6.53211
+6.33105,0.0316284,6.42634
+6.35773,0.0315687,6.45343
+6.32698,0.032033,6.42261
+6.34912,0.0315977,6.44484
+6.4528,0.0316548,6.54829
+6.30603,0.0320172,6.40179
+6.37062,0.0315957,6.46611
+6.38424,0.0316091,6.48074
+6.23611,0.0338354,6.33379
+6.22555,0.0316356,6.32098
+6.24467,0.0316277,6.34007
+6.36478,0.0317278,6.46037
+6.44591,0.0318507,6.54156
+6.23733,0.0318484,6.33358
+6.34472,0.0316255,6.44017
+6.28894,0.0319363,6.38465
+6.2401,0.0315911,6.33553
+6.33698,0.0317284,6.43254
+6.38172,0.0318197,6.47761
+6.35585,0.0316137,6.45145
+6.66484,0.031808,6.76049
+6.38301,0.0315951,6.47891
+6.45207,0.0315835,6.54766
+6.2359,0.0316408,6.33159
+6.22653,0.0316086,6.32213
+6.33771,0.0315894,6.43315
+6.40059,0.0318563,6.49629
+6.22058,0.03163,6.31606
+6.37104,0.0316102,6.46662
+6.41156,0.0315714,6.50698
+6.43912,0.0315896,6.5345
+6.25371,0.0318383,6.34977
+6.34267,0.0318297,6.43862
+6.21769,0.0315766,6.31304
+6.45579,0.0315817,6.55105
+6.20178,0.0315798,6.29721
+6.35946,0.0317222,6.45479
+6.28236,0.0319662,6.37823
+6.397,0.0317718,6.49257
+6.49363,0.0315997,6.58916
+6.34342,0.0315757,6.43877
+6 threads per task
+6.47884,0.0269954,6.57094
+6.32156,0.0269979,6.41251
+6.40942,0.0271806,6.50054
+6.41748,0.0269707,6.50818
+6.35076,0.0272411,6.44302
+6.27833,0.0268941,6.36921
+6.51142,0.0269897,6.60336
+6.21709,0.0269839,6.30782
+6.44866,0.0273717,6.54004
+6.23527,0.0268948,6.32598
+6.21673,0.0289001,6.30954
+6.22718,0.0396448,6.33052
+6.33941,0.0271048,6.43026
+6.37047,0.0268606,6.46141
+6.34436,0.0269141,6.4355
+6.44343,0.0269077,6.53412
+6.19532,0.030982,6.29031
+6.35019,0.0270172,6.44107
+6.34876,0.0268577,6.4396
+6.3105,0.0270734,6.40135
+6.41956,0.0286479,6.51245
+6.43629,0.0300058,6.53065
+6.35569,0.0268744,6.44808
+6.35684,0.0268826,6.44808
+6.26742,0.0271743,6.35935
+6.40686,0.0275683,6.49914
+6.31929,0.0269116,6.41022
+6.3807,0.0269011,6.47179
+6.41021,0.0268856,6.50146
+6.5607,0.0270367,6.65163
+6.33643,0.0268697,6.42716
+6.22227,0.0295468,6.32248
+6.33562,0.0270085,6.42636
+6.22506,0.029202,6.31885
+6.33826,0.0268537,6.42888
+6.37603,0.027019,6.46674
+6.48912,0.0327134,6.58573
+6.47173,0.0270392,6.56276
+6.37158,0.0313347,6.46726
+6.26677,0.0336863,6.36424
+6.24274,0.0285227,6.33523
+6.36733,0.0268987,6.45813
+6.46697,0.0268859,6.5577
+6.25495,0.027004,6.34559
+6.37396,0.0276005,6.46565
+6.21395,0.0272088,6.30494
+6.50417,0.0295796,6.5976
+6.21967,0.0269196,6.31081
+6.3916,0.0269773,6.48236
+6.22846,0.0327337,6.3252
+6.25871,0.0288954,6.35135
+7 threads per task
+6.22672,0.0236266,6.31424
+6.25497,0.0261279,6.34458
+6.22357,0.0285756,6.31601
+6.23824,0.0263369,6.32895
+6.35848,0.0235739,6.44619
+6.46591,0.0278273,6.55755
+6.54616,0.0321732,6.64223
+6.34024,0.0261459,6.43053
+6.33312,0.0245924,6.42168
+6.34061,0.0236814,6.42812
+6.51468,0.0270972,6.60584
+6.2473,0.0236766,6.33463
+6.45449,0.0255188,6.54376
+6.43086,0.0236961,6.51868
+6.20845,0.0274802,6.29961
+6.36987,0.0269281,6.46081
+6.43568,0.0276484,6.52706
+6.33121,0.0423906,6.43739
+6.34761,0.0239923,6.43582
+6.3018,0.0255149,6.39234
+6.34226,0.0280688,6.43422
+6.35247,0.0235519,6.44005
+6.4257,0.0266701,6.51679
+6.41764,0.0237444,6.50554
+6.26791,0.0238699,6.35578
+6.35977,0.0235663,6.44711
+6.4506,0.0238239,6.53824
+6.21718,0.0300356,6.31096
+6.26809,0.0237952,6.35626
+6.24467,0.0270603,6.3355
+6.2698,0.0282039,6.36191
+6.40921,0.0238436,6.49682
+6.39104,0.0236232,6.47859
+6.43755,0.0238249,6.52526
+6.23491,0.0267304,6.32572
+6.23467,0.0236807,6.32255
+6.35366,0.0269475,6.44445
+6.34412,0.0239556,6.4319
+6.3311,0.0314704,6.42637
+6.39178,0.0256251,6.4813
+6.23196,0.0261642,6.32194
+6.492,0.0236039,6.57953
+6.43326,0.0235587,6.52115
+6.24187,0.0278829,6.33367
+6.23779,0.0282819,6.32989
+6.24127,0.0235489,6.32846
+6.25519,0.026188,6.34526
+6.39307,0.037282,6.49411
+6.34635,0.0238251,6.43411
+6.23983,0.0235564,6.32733
+6.4165,0.0278458,6.50816
+8 threads per task
+6.35714,0.0244525,6.44567
+6.35501,0.0250947,6.4438
+6.3863,0.025681,6.47609
+6.31256,0.0307322,6.40734
+6.39319,0.0226264,6.4797
+6.72142,0.0238211,6.80896
+6.33144,0.0248303,6.41988
+6.36933,0.0227335,6.45575
+6.46186,0.0244281,6.55003
+6.25131,0.022816,6.33774
+6.40399,0.025992,6.49363
+6.29891,0.0244838,6.38733
+6.51257,0.0319304,6.6091
+6.37594,0.0262472,6.46594
+6.24895,0.0257379,6.33859
+6.41883,0.0251599,6.50784
+6.21857,0.0263481,6.30869
+6.2236,0.0225973,6.31006
+6.28101,0.0242087,6.36886
+6.30101,0.0235633,6.38829
+6.20838,0.0291322,6.30106
+6.36535,0.0280562,6.45698
+6.35044,0.0225809,6.43686
+6.26814,0.0227033,6.35467
+6.30553,0.0249095,6.39409
+6.23413,0.0271888,6.32535
+6.33769,0.0292543,6.43064
+6.23307,0.0270171,6.32408
+6.32873,0.0238371,6.41667
+6.35235,0.0244683,6.44086
+6.37883,0.0225938,6.46549
+6.24679,0.0231436,6.3336
+6.22499,0.0232324,6.31186
+6.20898,0.0225663,6.29658
+6.33732,0.024186,6.4253
+6.38803,0.0320603,6.48419
+6.32374,0.0253065,6.41279
+6.36424,0.0238412,6.45175
+6.38305,0.0239712,6.47111
+6.24241,0.0226328,6.33034
+6.23433,0.0285107,6.32674
+6.52671,0.0244229,6.61498
+6.2943,0.0290232,6.38721
+6.46919,0.0225677,6.55649
+6.27973,0.0225908,6.36783
+6.35898,0.0290303,6.45248
+6.41103,0.0227282,6.49748
+6.24201,0.0296415,6.33566
+6.2485,0.0227138,6.33503
+6.36119,0.0259704,6.45112
+6.25924,0.0231925,6.34664
