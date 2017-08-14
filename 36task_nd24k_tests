@@ -1,4 +1,4 @@
-#!/bin/tcsh
+#!/bin/bash
 #$ -M bpage1@nd.edu
 #$ -m abe
 #$ -cwd
@@ -7,7 +7,7 @@
 #$ -q long
 #$ -o 36task_nd24k_results.txt
 #$ -e errorurrmahgurd.err
-#$ -N nd24k_36task_Tests
+#$ -N ND24K_36task_Tests
 
 module purge
 #module load gcc/6.2.0 
@@ -15,180 +15,18 @@ module purge
 #module load mpich/3.2-intel-15.0
 module load hpx/4.0.0
 
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
-echo “—————————————————————————————————————————————————“
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
-echo “—————————————————————————————————————————————————“
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
-echo “—————————————————————————————————————————————————“
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
-echo “—————————————————————————————————————————————————“
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
-echo “—————————————————————————————————————————————————“
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
-echo “—————————————————————————————————————————————————“
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
-echo “—————————————————————————————————————————————————“
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
-echo “—————————————————————————————————————————————————“
-echo “—————————————————————————————————————————————————“
-echo “—————————————————————————————————————————————————“
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 1 --major-order col --distribution-method splitmatrix
-echo “—————————————————————————————————————————————————“
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 2 --major-order col --distribution-method splitmatrix
-echo “—————————————————————————————————————————————————“
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 3 --major-order col --distribution-method splitmatrix
-echo “—————————————————————————————————————————————————“
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 4 --major-order col --distribution-method splitmatrix
-echo “—————————————————————————————————————————————————“
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 5 --major-order col --distribution-method splitmatrix
-echo “—————————————————————————————————————————————————“
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 6 --major-order col --distribution-method splitmatrix
-echo “—————————————————————————————————————————————————“
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 7 --major-order col --distribution-method splitmatrix
-echo “—————————————————————————————————————————————————“
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
-mpirun -np 36 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads 8 --major-order col --distribution-method splitmatrix
+echo "Bash version ${BASH_VERSION}..."
+for i in {1..36..1}
+  do 
+     echo "$i tasks per node"
+     
+     for j in {1..8..1}
+        do 
+            echo "$j threads per task"
+            
+            for k in {0..50..1}
+                do 
+                    mpirun -np 36 -npernode $i ./main -lm ../sample_matrices/nd24k.mtx --omp-threads $j --major-order col --distribution-method splitmatrix
+                done
+        done
+ done

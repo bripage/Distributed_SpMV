@@ -338,7 +338,7 @@ int main(int argc, char *argv[]) {
 	}
 
 	MPI_Comm_free(&control.col_comm);
-    MPI_Comm_free(&control.row_comm);
+    	MPI_Comm_free(&control.row_comm);
 	double overallEndTime = MPI_Wtime();
 	MPI_Finalize();
 
@@ -360,14 +360,15 @@ int main(int argc, char *argv[]) {
 	*/
 
 	if (control.myId == 0){
-		std::cout << std::endl << "Complete!" << std::endl;
+		//std::cout << std::endl << "Complete!" << std::endl;
 		
-		double precision = MPI_Wtick();
-		std::cout << "precision = " << precision  << std::endl;
-		std::cout << "start = " << overallStartTime << ", end = " <<overallEndTime << std::endl;
-		std::cout << "Element Distribution Time: " << distributionEndTime - distributionStartTime << std::endl;
-		std::cout << "SmPV Time: " << spmvEndTime - spmvStartTime << std::endl;
-		std::cout << "Total time elapsed: " << overallEndTime - overallStartTime << std::endl;
+		//double precision = MPI_Wtick();
+		//std::cout << "precision = " << precision  << std::endl;
+		//std::cout << "start = " << overallStartTime << ", end = " <<overallEndTime << std::endl;
+		//std::cout << "Element Distribution Time: " << distributionEndTime - distributionStartTime << std::endl;
+		//std::cout << "SmPV Time: " << spmvEndTime - spmvStartTime << std::endl;
+		//std::cout << "Total time elapsed: " << overallEndTime - overallStartTime << std::endl;
+		std::cout << distributionEndTime - distributionStartTime << "," << spmvEndTime - spmvStartTime << "," << overallEndTime - overallStartTime << std::endl;
 	}
 
 	return 0;

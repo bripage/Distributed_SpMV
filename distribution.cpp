@@ -132,11 +132,12 @@ void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clust
 
 	// Output the number of Non Zero elements that have been assigned to each cluster column, as well as each cluster
 	// node within that column. This will be used for memory transfer and performance evaluation calculations
-    std::cout << std::endl << "Distribution of NonZero Elements" << std::endl;
-    for (int i = 0; i < control.clusterCols; i++){
-        std::cout << "Column " << i << ": " << clusterColData[i]->csrData.size() << std::endl;
+    /*
+	std::cout << std::endl << "Distribution of NonZero Elements" << std::endl;
+    	for (int i = 0; i < control.clusterCols; i++){
+        	std::cout << "Column " << i << ": " << clusterColData[i]->csrData.size() << std::endl;
 
-	    for (int j = 0; j < control.clusterRows; j++) {
+	    	for (int j = 0; j < control.clusterRows; j++) {
 		    std::cout << "\tRow " << j << ": ";
 
 		    int start = clusterColData[i]->csrRows[j * control.rowsPerNode];
@@ -148,8 +149,8 @@ void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clust
 			    end = clusterColData[i]->csrRows[(j + 1) * control.rowsPerNode];
 		    }
 		    std::cout << end - start << std::endl;
-	    }
-    }
-
+	    	}
+    	}
+*/
 
  }
