@@ -16,6 +16,8 @@
 #include "mpi.h"
 #include "controlStruct.h"
 #include "csrSpMV.h"
+#include <ctime>
+#include <cstdlib>
 
 void distribution_SplitMatrix(controlData& controlData, std::vector<csrSpMV*>& clusterColData);
 

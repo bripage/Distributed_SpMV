@@ -1,0 +1,27 @@
+#!/bin/bash
+#$ -M bpage1@nd.edu
+#$ -m abe
+#$ -cwd
+#$ -pe mpi-16 16
+##$ -q *@@cswarm
+#$ -q long
+#$ -o 1task_parabolicfem_results.txt
+#$ -e errorurrmahgurd.err
+#$ -N ParabolicFem_1task_Tests
+
+module purge
+#module load gcc/6.2.0 
+#module load mpich/3.2-gcc-6.2.0
+#module load mpich/3.2-intel-15.0
+module load hpx/4.0.0
+
+for j in {1..32..1}
+  do
+	echo "$j threads per task"
+            
+        for k in {0..50..1}
+          do 
+        	mpirun -np 1 -npernode 1 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads $j --major-order col --distribution-method splitmatrix --master-only true
+          done
+  done
+
