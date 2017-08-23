@@ -5,7 +5,7 @@
 #$ -pe mpi-16 16
 ##$ -q *@@cswarm
 #$ -q long
-#$ -o 1task_parabolicfem_dataloadedonce_results.txt
+#$ -o 1task_parabolicfem_dataloadedeachtime_results.txt
 #$ -e errorurrmahgurd.err
 #$ -N ParabolicFem_1task_Tests
 
