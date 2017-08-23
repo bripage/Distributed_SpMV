@@ -12,6 +12,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c65b864-9431-4078-9657-58a0aa3c15cb" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/1task_parabolicfem_dataloadedonce_results.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/results/.~lock.ParabolicFem.xlsx#" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/results/1task_parabolicfem_results_dataloadedonce.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
     </list>
     <ignored path="Distrubuted_SpMV.iws" />
@@ -36,8 +40,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4427">
-              <caret line="374" column="98" lean-forward="true" selection-start-line="374" selection-start-column="98" selection-end-line="374" selection-end-column="98" />
+            <state relative-caret-position="180">
+              <caret line="264" column="31" lean-forward="true" selection-start-line="264" selection-start-column="31" selection-end-line="264" selection-end-column="31" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -457,12 +461,12 @@
       <workItem from="1498576171635" duration="31883000" />
       <workItem from="1499697998500" duration="12751000" />
       <workItem from="1500300749654" duration="15113000" />
-      <workItem from="1503427126903" duration="7633000" />
+      <workItem from="1503427126903" duration="8416000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="506555000" />
+    <option name="totallyTimeSpent" value="507338000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1922" height="1201" extended-state="6" />
@@ -773,8 +777,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4427">
-          <caret line="374" column="98" lean-forward="true" selection-start-line="374" selection-start-column="98" selection-end-line="374" selection-end-column="98" />
+        <state relative-caret-position="180">
+          <caret line="264" column="31" lean-forward="true" selection-start-line="264" selection-start-column="31" selection-end-line="264" selection-end-column="31" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
