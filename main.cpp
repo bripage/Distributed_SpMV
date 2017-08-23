@@ -12,46 +12,46 @@
 
 
 int main(int argc, char *argv[]) {
-	controlData control;
+    controlData control;
 
-	//Initialize the MPI environment
-	MPI_Init(&argc, &argv);
+    //Initialize the MPI environment
+    MPI_Init(&argc, &argv);
 
-	double overallStartTime = MPI_Wtime();
+    double overallStartTime = MPI_Wtime();
 
-	// Get the number of processes
-	MPI_Comm_size(MPI_COMM_WORLD, &control.processCount);
-	// Get the rank of the process
-	MPI_Comm_rank(MPI_COMM_WORLD, &control.myId);
+    // Get the number of processes
+    MPI_Comm_size(MPI_COMM_WORLD, &control.processCount);
+    // Get the rank of the process
+    MPI_Comm_rank(MPI_COMM_WORLD, &control.myId);
 
     std::string argTemp;
 
-    for (int i = 1; i < argc; i= i+2){
+    for (int i = 1; i < argc; i = i + 2) {
         argTemp = argv[i];
-        if (argTemp == "-lm"){
+        if (argTemp == "-lm") {
             // load matrix from file.
-            control.matrixFile = argv[i+1];
-        } else if (argTemp == "-lv"){
+            control.matrixFile = argv[i + 1];
+        } else if (argTemp == "-lv") {
             // load dense vector from file.
-            control.vectorFile = argv[i+1];
-        } else if (argTemp == "--master-only"){
+            control.vectorFile = argv[i + 1];
+        } else if (argTemp == "--master-only") {
             //run on MPI master only (no distribution, OpenMP as normal).
-            std::string temp = argv[i+1];
-            if (temp == "true"){
+            std::string temp = argv[i + 1];
+            if (temp == "true") {
                 control.masterOnly = true;
             }
-        } else if (argTemp == "--distribution-method"){
+        } else if (argTemp == "--distribution-method") {
             //set number of OpenMP threads per node
-            control.distributionMethod = argv[i+1];
+            control.distributionMethod = argv[i + 1];
         } else if (argTemp == "--major-order") {
             std::string temp = argv[i + 1];
             if (temp == "col") {
                 control.colMajor = true;
             }
-        } else if (argTemp == "--omp-threads"){
-                //set number of OpenMP threads per node
-            control.ompThreads = atoi(argv[i+1]);
-        } else if (argTemp == "--help"){
+        } else if (argTemp == "--omp-threads") {
+            //set number of OpenMP threads per node
+            control.ompThreads = atoi(argv[i + 1]);
+        } else if (argTemp == "--help") {
             std::cout << "Usage: distSpMV [OPTION] <argument> ..." << std::endl << std::endl;
             std::cout << "Options:" << std::endl;
             std::cout << " -lm <file>" << std::setw(15) << "" << R"(Load sparse matrix from <file>)" << std::endl;
@@ -130,22 +130,22 @@ int main(int argc, char *argv[]) {
     //     Select distribution method and actions    //
     //***********************************************//
     MPI_Barrier(MPI_COMM_WORLD);
-    std::vector<csrSpMV*> clusterColData;
+    std::vector<csrSpMV *> clusterColData;
     int colsPerColumn;
 
-	double distributionStartTime = MPI_Wtime();
+    double distributionStartTime = MPI_Wtime();
 
     if (!control.myId) {
         distribution_SplitMatrix(control, clusterColData);
     }
 
-	double distributionEndTime = MPI_Wtime();
+    double distributionEndTime = MPI_Wtime();
 
     // Create a pointer to the nodes csr object. Using pointers so that we do not have to copy any data on the
     // master node in order to assign it to this name
-    csrSpMV* nodeCSR;
+    csrSpMV *nodeCSR;
 
-    if (control.myId == 0){
+    if (control.myId == 0) {
         nodeCSR = clusterColData[0];
     } else {
         nodeCSR = new csrSpMV;
@@ -262,129 +262,141 @@ int main(int argc, char *argv[]) {
         MPI_Bcast(&nodeCSR->denseVec[0], control.rowsPerNode, MPI_DOUBLE, 0, control.col_comm);
     }
 
-    std::vector <double> result;
-	result.resize(control.rowsPerNode, 0.0);
+    std::vector<double> result;
 
-	MPI_Barrier(MPI_COMM_WORLD);
-	double spmvStartTime = MPI_Wtime();
+    for (int count = 0; count < 10; count++) {
+        result.resize(control.rowsPerNode, 0.0);
 
-	if (nodeCSR->csrData.size() > 0) {
-		int ompThreadId, start, end, i, j, rowsPerThread;
+        MPI_Barrier(MPI_COMM_WORLD);
+        double spmvStartTime = MPI_Wtime();
 
-		#pragma omp parallel num_threads(control.ompThreads) shared(nodeCSR, result) private(ompThreadId, start, end, i, j, rowsPerThread)
-		{
-			rowsPerThread = ceil(nodeCSR->csrRows.size() / control.ompThreads);
-			ompThreadId = omp_get_thread_num();
-			if (ompThreadId == control.ompThreads - 1){
-				for (i = ompThreadId * rowsPerThread; i < nodeCSR->csrRows.size(); i++) {
-					if (i == nodeCSR->csrRows.size() - 1) {
-						for (j = nodeCSR->csrRows[i]-nodeCSR->csrRows[0]; j < nodeCSR->csrData.size(); j++) {
-							#pragma omp atomic
-								result[i] += nodeCSR->csrData[j] * (double)nodeCSR->denseVec[i];
-						}
-					} else {
-						for (j = nodeCSR->csrRows[i]-nodeCSR->csrRows[0]; j < nodeCSR->csrRows[i + 1]-nodeCSR->csrRows[0]; j++) {
-							#pragma omp atomic
-								result[i] += nodeCSR->csrData[j] * (double)nodeCSR->denseVec[i];
-						}
-					}
-				}
-			} else {
-				for (i = ompThreadId * rowsPerThread; i < (ompThreadId+1)*rowsPerThread; i++) {
-					if (i == nodeCSR->csrRows.size() - 1) {
-						for (j = nodeCSR->csrRows[i]-nodeCSR->csrRows[0]; j < nodeCSR->csrData.size(); j++) {
-							#pragma omp atomic
-								result[i] += nodeCSR->csrData[j] * (double)nodeCSR->denseVec[i];
-						}
-					} else {
-						for (j = nodeCSR->csrRows[i]-nodeCSR->csrRows[0]; j < nodeCSR->csrRows[i + 1]-nodeCSR->csrRows[0]; j++) {
-							#pragma omp atomic
-								result[i] += nodeCSR->csrData[j] * (double)nodeCSR->denseVec[i];
-						}
-					}
-				}
-			}
-		}
-	}
+        if (nodeCSR->csrData.size() > 0) {
+            int ompThreadId, start, end, i, j, rowsPerThread;
 
-	MPI_Barrier(MPI_COMM_WORLD);
-	double spmvEndTime = MPI_Wtime();
+#pragma omp parallel num_threads(control.ompThreads) shared(nodeCSR, result) private(ompThreadId, start, end, i, j, rowsPerThread)
+            {
+                rowsPerThread = ceil(nodeCSR->csrRows.size() / control.ompThreads);
+                ompThreadId = omp_get_thread_num();
+                if (ompThreadId == control.ompThreads - 1) {
+                    for (i = ompThreadId * rowsPerThread; i < nodeCSR->csrRows.size(); i++) {
+                        if (i == nodeCSR->csrRows.size() - 1) {
+                            for (j = nodeCSR->csrRows[i] - nodeCSR->csrRows[0]; j < nodeCSR->csrData.size(); j++) {
+                                //#pragma omp atomic
+                                result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[i];
+                            }
+                        } else {
+                            for (j = nodeCSR->csrRows[i] - nodeCSR->csrRows[0];
+                                 j < nodeCSR->csrRows[i + 1] - nodeCSR->csrRows[0]; j++) {
+                                //#pragma omp atomic
+                                result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[i];
+                            }
+                        }
+                    }
+                } else {
+                    for (i = ompThreadId * rowsPerThread; i < (ompThreadId + 1) * rowsPerThread; i++) {
+                        if (i == nodeCSR->csrRows.size() - 1) {
+                            for (j = nodeCSR->csrRows[i] - nodeCSR->csrRows[0]; j < nodeCSR->csrData.size(); j++) {
+                                //#pragma omp atomic
+                                result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[i];
+                            }
+                        } else {
+                            for (j = nodeCSR->csrRows[i] - nodeCSR->csrRows[0];
+                                 j < nodeCSR->csrRows[i + 1] - nodeCSR->csrRows[0]; j++) {
+                                //#pragma omp atomic
+                                result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[i];
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
-    if(control.masterOnly != true) {
+        MPI_Barrier(MPI_COMM_WORLD);
+        double spmvEndTime = MPI_Wtime();
+
+        if (control.masterOnly != true) {
+            if (control.myId == 0) {
+                //nodeCSR->denseVec.clear();
+                result.resize(control.rowsPerNode * control.clusterRows, 0.0);
+            }
+
+            /*
+             *      MPI REDUCE w/ SUM FROM COLUMNS TO ROW MASTER(S)
+             */
+            if (control.myId < control.clusterCols) {
+                if (control.row_rank == 0) {
+                    MPI_Reduce(MPI_IN_PLACE, &result[0], control.rowsPerNode, MPI_DOUBLE, MPI_SUM, 0,
+                               control.row_comm);
+                } else {
+                    MPI_Reduce(&result[0], &result[0], control.rowsPerNode, MPI_DOUBLE, MPI_SUM, 0,
+                               control.row_comm);
+                }
+            } else {
+                if (control.row_rank == 0) {
+                    MPI_Reduce(MPI_IN_PLACE, &result[0], control.rowCount, MPI_DOUBLE, MPI_SUM, 0,
+                               control.row_comm);
+                } else {
+                    MPI_Reduce(&result[0], &result[0], control.rowCount, MPI_DOUBLE, MPI_SUM, 0,
+                               control.row_comm);
+                }
+            }
+
+            /*
+             *      MPI GATHER FROM ROW MASTERS TO GLOBAL MASTER
+             */
+            if (control.myId % control.clusterCols == 0) {
+                if (control.col_rank == 0) {
+                    MPI_Gather(MPI_IN_PLACE, control.rowsPerNode, MPI_DOUBLE, &result[0], control.rowsPerNode,
+                               MPI_DOUBLE, 0, control.col_comm);
+                } else {
+                    MPI_Gather(&result[0], control.rowsPerNode, MPI_DOUBLE, &result[0], control.rowsPerNode,
+                               MPI_DOUBLE, 0, control.col_comm);
+                }
+
+            }
+        }
+
+        //MPI_Comm_free(&control.col_comm);
+        //MPI_Comm_free(&control.row_comm);
+        double overallEndTime = MPI_Wtime();
+        //MPI_Finalize();
+
+        /*
+        //
+        //                                      -- Testing / Verifcation --
+        // This block is to be used in conjunction with single node, single thread/process SpMV and compares the results of
+        // the "master only" SpMV against those of the distributed version's results.
+        //
         if (control.myId == 0) {
-            //nodeCSR->denseVec.clear();
-            result.resize(control.rowsPerNode * control.clusterRows, 0.0);
-        }
-
-        /*
-         *      MPI REDUCE w/ SUM FROM COLUMNS TO ROW MASTER(S)
-         */
-        if (control.myId < control.clusterCols) {
-            if (control.row_rank == 0) {
-                MPI_Reduce(MPI_IN_PLACE, &result[0], control.rowsPerNode, MPI_DOUBLE, MPI_SUM, 0,
-                           control.row_comm);
-            } else {
-                MPI_Reduce(&result[0], &result[0], control.rowsPerNode, MPI_DOUBLE, MPI_SUM, 0,
-                           control.row_comm);
-            }
-        } else {
-            if (control.row_rank == 0) {
-                MPI_Reduce(MPI_IN_PLACE, &result[0], control.rowCount, MPI_DOUBLE, MPI_SUM, 0,
-                           control.row_comm);
-            } else {
-                MPI_Reduce(&result[0], &result[0], control.rowCount, MPI_DOUBLE, MPI_SUM, 0,
-                           control.row_comm);
+            std::cout << std::endl;
+            for (int i = 0; i < control.rowCount; i++) {
+                //std::cout << "i = " << i << std::endl;
+                if (std::abs(masterData.result[i] - result[i]) > 0.0001) {
+                    std::cout << "--- ERROR: result[" << i << "] DOES NOT MATCH ---" << std::endl;
+                }
             }
         }
+        */
 
-        /*
-         *      MPI GATHER FROM ROW MASTERS TO GLOBAL MASTER
-         */
-        if (control.myId % control.clusterCols == 0) {
-            if (control.col_rank == 0) {
-                MPI_Gather(MPI_IN_PLACE, control.rowsPerNode, MPI_DOUBLE, &result[0], control.rowsPerNode,
-                           MPI_DOUBLE, 0, control.col_comm);
-            } else {
-                MPI_Gather(&result[0], control.rowsPerNode, MPI_DOUBLE, &result[0], control.rowsPerNode,
-                           MPI_DOUBLE, 0, control.col_comm);
-            }
+        if (control.myId == 0) {
+            //std::cout << std::endl << "Complete!" << std::endl;
 
+            //double precision = MPI_Wtick();
+            //std::cout << "precision = " << precision  << std::endl;
+            //std::cout << "start = " << overallStartTime << ", end = " <<overallEndTime << std::endl;
+            //std::cout << "Element Distribution Time: " << distributionEndTime - distributionStartTime << std::endl;
+            //std::cout << "SmPV Time: " << spmvEndTime - spmvStartTime << std::endl;
+            //std::cout << "Total time elapsed: " << overallEndTime - overallStartTime << std::endl;
+            std::cout << distributionEndTime - distributionStartTime << "," << spmvEndTime - spmvStartTime << ","
+                      << overallEndTime - overallStartTime << std::endl;
         }
+
+        result.clear();
     }
-
-	MPI_Comm_free(&control.col_comm);
+    MPI_Comm_free(&control.col_comm);
     MPI_Comm_free(&control.row_comm);
-	double overallEndTime = MPI_Wtime();
-	MPI_Finalize();
-
-	/*
-	//
-	//                                      -- Testing / Verifcation --
-	// This block is to be used in conjunction with single node, single thread/process SpMV and compares the results of
-	// the "master only" SpMV against those of the distributed version's results.
-	//
-	if (control.myId == 0) {
-		std::cout << std::endl;
-		for (int i = 0; i < control.rowCount; i++) {
-			//std::cout << "i = " << i << std::endl;
-			if (std::abs(masterData.result[i] - result[i]) > 0.0001) {
-				std::cout << "--- ERROR: result[" << i << "] DOES NOT MATCH ---" << std::endl;
-			}
-		}
-	}
-	*/
-
-	if (control.myId == 0){
-		//std::cout << std::endl << "Complete!" << std::endl;
-		
-		//double precision = MPI_Wtick();
-		//std::cout << "precision = " << precision  << std::endl;
-		//std::cout << "start = " << overallStartTime << ", end = " <<overallEndTime << std::endl;
-		//std::cout << "Element Distribution Time: " << distributionEndTime - distributionStartTime << std::endl;
-		//std::cout << "SmPV Time: " << spmvEndTime - spmvStartTime << std::endl;
-		//std::cout << "Total time elapsed: " << overallEndTime - overallStartTime << std::endl;
-		std::cout << distributionEndTime - distributionStartTime << "," << spmvEndTime - spmvStartTime << "," << overallEndTime - overallStartTime << std::endl;
-	}
+    double overallEndTime = MPI_Wtime();
+    MPI_Finalize();
 
 	return 0;
 }
