@@ -166,8 +166,6 @@ int main(int argc, char *argv[]) {
                          control.row_comm);
                 MPI_Send(&(clusterColData[0]->denseVec[i * control.rowsPerNode]), control.rowsPerNode, MPI_DOUBLE, i, 0,
                          control.row_comm);
-                std::cout << "rowCount = " << control.rowCount << ", denseVec.size() = "
-                          << clusterColData[i]->denseVec.size() << std::endl;
             }
 
             // delete and free column data that the master has already sent to the column masters, as it no longer needs

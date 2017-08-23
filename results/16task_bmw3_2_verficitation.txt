@@ -1,0 +1,273 @@
+Bash version 4.2.46(1)-release...
+1 tasks per node
+1 threads per task
+3.97806,0.0249077,4.69321
+2 threads per task
+2.39384,0.0102411,3.07949
+3 threads per task
+2.45065,0.00764296,3.13383
+4 threads per task
+2.34186,0.00589221,3.02304
+5 threads per task
+2.36756,0.0047452,3.04672
+6 threads per task
+2.34079,0.00397913,3.02177
+7 threads per task
+2.36884,0.0035785,3.05056
+8 threads per task
+2.3384,0.00322055,3.01963
+2 tasks per node
+1 threads per task
+2.36691,0.0184896,3.05965
+2 threads per task
+2.37904,0.0110698,3.06643
+3 threads per task
+2.36162,0.00744345,3.0436
+4 threads per task
+2.30275,0.00617018,2.9811
+5 threads per task
+2.3558,0.00474856,3.03227
+6 threads per task
+2.38548,0.00397152,3.06398
+7 threads per task
+2.30281,0.00387702,2.98092
+8 threads per task
+2.37579,0.00324392,3.05222
+3 tasks per node
+1 threads per task
+2.44108,0.0197976,3.11284
+2 threads per task
+2.46637,0.0109499,3.12766
+3 threads per task
+2.45611,0.00765168,3.10275
+4 threads per task
+2.48613,0.00596584,3.14585
+5 threads per task
+2.44384,0.0112761,3.10564
+6 threads per task
+2.49955,0.010593,3.16243
+7 threads per task
+2.36993,0.0100001,3.01612
+8 threads per task
+2.4283,0.00916891,3.076
+4 tasks per node
+1 threads per task
+2.44827,0.0193132,2.97038
+2 threads per task
+2.57241,0.0105543,3.08784
+3 threads per task
+2.44014,0.00844178,2.9516
+4 threads per task
+2.36291,0.00765171,2.87141
+5 threads per task
+2.48664,0.011318,2.99952
+6 threads per task
+2.46534,0.00718979,2.97632
+7 threads per task
+2.40246,0.0111175,2.91857
+8 threads per task
+2.42872,0.00863764,2.94088
+5 tasks per node
+1 threads per task
+2.51997,0.0202805,3.04715
+2 threads per task
+2.52733,0.0114064,3.04615
+3 threads per task
+2.57161,0.00799714,3.08858
+4 threads per task
+2.52193,0.0139199,3.04515
+5 threads per task
+2.53125,0.0112532,3.05222
+6 threads per task
+2.51126,0.0098453,3.02928
+7 threads per task
+2.51579,0.0111615,3.03244
+8 threads per task
+2.54153,0.0118199,3.061
+6 tasks per node
+1 threads per task
+2.58793,0.0199879,2.97695
+2 threads per task
+2.56415,0.0114082,2.94462
+3 threads per task
+2.45146,0.00904534,2.8304
+4 threads per task
+2.4577,0.0175906,2.84662
+5 threads per task
+2.47267,0.0111762,2.85315
+6 threads per task
+2.52874,0.0101288,2.90944
+7 threads per task
+2.53165,0.0142539,2.91652
+8 threads per task
+2.5756,0.0141646,2.95992
+7 tasks per node
+1 threads per task
+2.53869,0.0208185,2.91703
+2 threads per task
+2.55095,0.0114323,2.91995
+3 threads per task
+2.57565,0.0154006,2.94817
+4 threads per task
+2.67664,0.0147919,3.04857
+5 threads per task
+2.60282,0.0100382,2.97085
+6 threads per task
+2.56665,0.0224827,2.94828
+7 threads per task
+2.55115,0.0145104,2.92346
+8 threads per task
+2.67541,0.0159031,3.04951
+8 tasks per node
+1 threads per task
+2.56999,0.0208109,2.93371
+2 threads per task
+2.53854,0.0165211,2.90149
+3 threads per task
+2.72308,0.0113409,3.07912
+4 threads per task
+2.58003,0.0144776,2.93971
+5 threads per task
+2.59474,0.0148773,2.95508
+6 threads per task
+2.60604,0.0156835,2.9671
+7 threads per task
+2.66047,0.0170961,3.02284
+8 threads per task
+2.64258,0.0193544,3.00626
+9 tasks per node
+1 threads per task
+2.66753,0.0209812,3.02796
+2 threads per task
+2.70426,0.011124,3.0564
+3 threads per task
+2.66902,0.0108463,3.01921
+4 threads per task
+2.66343,0.0113261,3.01537
+5 threads per task
+2.66696,0.0146012,3.02212
+6 threads per task
+2.5978,0.016744,2.95284
+7 threads per task
+2.64212,0.0216211,3.00356
+8 threads per task
+2.66981,0.0191918,3.02749
+10 tasks per node
+1 threads per task
+2.59847,0.0209777,2.95713
+2 threads per task
+2.73302,0.0111509,3.08043
+3 threads per task
+2.65648,0.00972411,3.0018
+4 threads per task
+2.71537,0.0133016,3.06573
+5 threads per task
+2.59477,0.013572,2.9434
+6 threads per task
+2.59179,0.0198101,2.9466
+7 threads per task
+2.68218,0.0207934,3.0407
+8 threads per task
+2.62031,0.0215896,2.98209
+11 tasks per node
+1 threads per task
+2.69605,0.0208393,2.91539
+2 threads per task
+2.67111,0.0123533,2.88059
+3 threads per task
+2.65945,0.0172873,2.8738
+4 threads per task
+2.69202,0.0281439,2.91818
+5 threads per task
+2.59912,0.0240383,2.82049
+6 threads per task
+2.58768,0.0231337,2.80749
+7 threads per task
+2.67978,0.024727,2.90349
+8 threads per task
+2.60327,0.0320766,2.83464
+12 tasks per node
+1 threads per task
+2.67626,0.0211161,2.86562
+2 threads per task
+2.5969,0.0144427,2.78312
+3 threads per task
+2.74873,0.0184805,2.93571
+4 threads per task
+2.68016,0.0183118,2.86969
+5 threads per task
+2.62708,0.0232378,2.82108
+6 threads per task
+2.67411,0.0262503,2.86917
+7 threads per task
+2.67639,0.0288586,2.87587
+8 threads per task
+2.74163,0.0297973,2.94191
+13 tasks per node
+1 threads per task
+2.60495,0.0209333,2.78995
+2 threads per task
+2.65702,0.0247874,2.84626
+3 threads per task
+2.73296,0.0266168,2.92763
+4 threads per task
+2.72949,0.0266569,2.91966
+5 threads per task
+2.67669,0.0267654,2.86721
+6 threads per task
+2.66884,0.0271517,2.86126
+7 threads per task
+2.6641,0.0322125,2.86874
+8 threads per task
+2.66121,0.033615,2.85894
+14 tasks per node
+1 threads per task
+2.68739,0.0208,2.87172
+2 threads per task
+2.67714,0.024547,2.86513
+3 threads per task
+2.66274,0.0201642,2.84596
+4 threads per task
+2.59519,0.0288253,2.79225
+5 threads per task
+2.60514,0.0289778,2.79769
+6 threads per task
+2.64817,0.0306352,2.84161
+7 threads per task
+2.65808,0.0345862,2.85899
+8 threads per task
+2.7158,0.0332581,2.92249
+15 tasks per node
+1 threads per task
+2.66092,0.0208599,2.84581
+2 threads per task
+2.6755,0.025155,2.87133
+3 threads per task
+2.73846,0.029418,2.93084
+4 threads per task
+2.66376,0.0338044,2.85934
+5 threads per task
+2.72917,0.0412007,2.93216
+6 threads per task
+2.66385,0.0346649,2.86299
+7 threads per task
+2.62209,0.0312041,2.816
+8 threads per task
+2.7374,0.0426291,2.94031
+16 tasks per node
+1 threads per task
+2.59003,0.0208376,2.6489
+2 threads per task
+2.59363,0.0257907,2.65858
+3 threads per task
+2.62228,0.0405627,2.70211
+4 threads per task
+2.73251,0.0336653,2.80709
+5 threads per task
+2.72111,0.0455787,2.80659
+6 threads per task
+2.60179,0.0396118,2.68495
+7 threads per task
+2.58681,0.0547724,2.68095
+8 threads per task
+2.60325,0.0426631,2.68696

@@ -5,9 +5,9 @@
 #$ -pe mpi-16 16
 ##$ -q *@@cswarm
 #$ -q long
-#$ -o 1task_parabolicfem_results.txt
+#$ -o 1task_nd24k_results.txt
 #$ -e errorurrmahgurd.err
-#$ -N ParabolicFem_1task_Tests
+#$ -N ND24k_1task_Tests
 
 module purge
 #module load gcc/6.2.0 
@@ -21,7 +21,7 @@ for j in {1..32..1}
             
         for k in {0..50..1}
           do 
-        	mpirun -np 1 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads $j --major-order col --distribution-method splitmatrix
+        	mpirun -np 1 -npernode 1 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads $j --major-order col --distribution-method splitmatrix --master-only true
           done
   done
 

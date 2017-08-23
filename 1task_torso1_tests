@@ -5,9 +5,9 @@
 #$ -pe mpi-16 16
 ##$ -q *@@cswarm
 #$ -q long
-#$ -o 1task_parabolicfem_results.txt
+#$ -o 1task_torso1_results.txt
 #$ -e errorurrmahgurd.err
-#$ -N ParabolicFem_1task_Tests
+#$ -N Torso1_1task_Tests
 
 module purge
 #module load gcc/6.2.0 
