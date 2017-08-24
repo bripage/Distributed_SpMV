@@ -21,7 +21,7 @@ for j in {1..32..1}
             
         for k in {0..50..1}
           do 
-        	mpirun -np 1 -npernode 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads $j --major-order col --distribution-method splitmatrix --master-only true
+        	mpirun -np 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads $j --major-order col --distribution-method splitmatrix --master-only true
           done
   done
 

@@ -16,7 +16,7 @@ module purge
 module load hpx/4.0.0
 
 echo "Bash version ${BASH_VERSION}..."
-for i in {1..49..1}
+for i in {1..16..1}
   do 
      echo "$i tasks per node"
      
