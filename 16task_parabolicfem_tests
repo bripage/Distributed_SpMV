@@ -22,11 +22,8 @@ for i in {1..16..1}
 
 	for j in {1..8..1}
 	  do       
-            echo "$j threads per task"
-            
-            for k in {0..50..1}
-                do 
-                    mpirun -np 16 -npernode $i ./main -lm ../sample_matrices/parabolic_fem.mtx --omp-threads $j --major-order col --distribution-method splitmatrix
-                done
+            echo "$j threads per task"            
+            mpirun -np 16 -npernode $i ./main -lm ../sample_matrices/parabolic_fem.mtx --omp-threads $j --major-order col --distribution-method splitmatrix
       	  done
  done
+echo "task end"
