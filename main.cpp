@@ -145,250 +145,270 @@ int main(int argc, char *argv[]) {
     // master node in order to assign it to this name
     csrSpMV *nodeCSR;
 
-    if (control.myId == 0) {
-        nodeCSR = clusterColData[0];
-    } else {
-        nodeCSR = new csrSpMV;
-    }
+	for (int count = 0; count < 50; count++) {
+		if (control.myId == 0) {
+			nodeCSR = clusterColData[0];
+		} else {
+			nodeCSR = new csrSpMV;
+		}
 
-    if (control.masterOnly != true) {
-        // master to send data to cluster column masters
-        if (control.myId == 0) {
-            for (int i = 1; i < control.clusterCols; i++) {  // start at 1 since Master is the row master
-                control.elementCount = clusterColData[i]->csrData.size();
+		if (control.masterOnly != true) {
+			// master to send data to cluster column masters
+			if (control.myId == 0) {
+				for (int i = 1; i < control.clusterCols; i++) {  // start at 1 since Master is the row master
+					control.elementCount = clusterColData[i]->csrData.size();
 
-                MPI_Send(&control.elementCount, 1, MPI_INT, i, 0, control.row_comm);
-                MPI_Send(&control.rowCount, 1, MPI_INT, i, 0, control.row_comm);
-                MPI_Send(&(clusterColData[i]->csrRows[0]), control.rowCount, MPI_INT, i, 0, control.row_comm);
-                MPI_Send(&(clusterColData[i]->csrCols[0]), clusterColData[i]->csrCols.size(), MPI_INT, i, 0,
-                         control.row_comm);
-                MPI_Send(&(clusterColData[i]->csrData[0]), clusterColData[i]->csrData.size(), MPI_DOUBLE, i, 0,
-                         control.row_comm);
-                MPI_Send(&(clusterColData[0]->denseVec[i * control.rowsPerNode]), control.rowsPerNode, MPI_DOUBLE, i, 0,
-                         control.row_comm);
-            }
+					MPI_Send(&control.elementCount, 1, MPI_INT, i, 0, control.row_comm);
+					MPI_Send(&control.rowCount, 1, MPI_INT, i, 0, control.row_comm);
+					MPI_Send(&(clusterColData[i]->csrRows[0]), control.rowCount, MPI_INT, i, 0, control.row_comm);
+					MPI_Send(&(clusterColData[i]->csrCols[0]), clusterColData[i]->csrCols.size(), MPI_INT, i, 0,
+					         control.row_comm);
+					MPI_Send(&(clusterColData[i]->csrData[0]), clusterColData[i]->csrData.size(), MPI_DOUBLE, i, 0,
+					         control.row_comm);
+					MPI_Send(&(clusterColData[0]->denseVec[i * control.rowsPerNode]), control.rowsPerNode, MPI_DOUBLE,
+					         i, 0,
+					         control.row_comm);
+				}
 
-            // delete and free column data that the master has already sent to the column masters, as it no longer needs
-            // to be kept on the master
-            for (int i = 1; i < clusterColData.size(); i++) {
-                delete (clusterColData[i]);
-            }
-            clusterColData.erase(clusterColData.begin() + 1,
-                                 clusterColData.end()); // remove pointers from clusterColData
-        } else if (control.myId < control.clusterCols && control.myId != 0) {
-            MPI_Recv(&control.elementCount, 1, MPI_INT, 0, 0, control.row_comm,
-                     MPI_STATUS_IGNORE);  // get number of elements
-            MPI_Recv(&control.rowCount, 1, MPI_INT, 0, 0, control.row_comm,
-                     MPI_STATUS_IGNORE); // get number of rows (should be all)
+				// delete and free column data that the master has already sent to the column masters, as it no longer needs
+				// to be kept on the master
+				for (int i = 1; i < clusterColData.size(); i++) {
+					delete (clusterColData[i]);
+				}
+				clusterColData.erase(clusterColData.begin() + 1,
+				                     clusterColData.end()); // remove pointers from clusterColData
+			} else if (control.myId < control.clusterCols && control.myId != 0) {
+				MPI_Recv(&control.elementCount, 1, MPI_INT, 0, 0, control.row_comm,
+				         MPI_STATUS_IGNORE);  // get number of elements
+				MPI_Recv(&control.rowCount, 1, MPI_INT, 0, 0, control.row_comm,
+				         MPI_STATUS_IGNORE); // get number of rows (should be all)
 
-            control.rowsPerNode = ceil(control.rowCount / (float) control.clusterRows);
+				control.rowsPerNode = ceil(control.rowCount / (float) control.clusterRows);
 
-            nodeCSR->csrRows.resize(control.rowCount);
-            nodeCSR->csrCols.resize(control.elementCount);
-            nodeCSR->csrData.resize(control.elementCount);
-            nodeCSR->denseVec.resize(control.rowsPerNode);
+				nodeCSR->csrRows.resize(control.rowCount);
+				nodeCSR->csrCols.resize(control.elementCount);
+				nodeCSR->csrData.resize(control.elementCount);
+				nodeCSR->denseVec.resize(control.rowsPerNode);
 
-            MPI_Recv(&nodeCSR->csrRows[0], control.rowCount, MPI_INT, 0, 0, control.row_comm, MPI_STATUS_IGNORE);
-            MPI_Recv(&nodeCSR->csrCols[0], control.elementCount, MPI_INT, 0, 0, control.row_comm, MPI_STATUS_IGNORE);
-            MPI_Recv(&nodeCSR->csrData[0], control.elementCount, MPI_DOUBLE, 0, 0, control.row_comm, MPI_STATUS_IGNORE);
-            MPI_Recv(&nodeCSR->denseVec[0], control.rowsPerNode, MPI_DOUBLE, 0, 0, control.row_comm, MPI_STATUS_IGNORE);
-        }
+				MPI_Recv(&nodeCSR->csrRows[0], control.rowCount, MPI_INT, 0, 0, control.row_comm, MPI_STATUS_IGNORE);
+				MPI_Recv(&nodeCSR->csrCols[0], control.elementCount, MPI_INT, 0, 0, control.row_comm,
+				         MPI_STATUS_IGNORE);
+				MPI_Recv(&nodeCSR->csrData[0], control.elementCount, MPI_DOUBLE, 0, 0, control.row_comm,
+				         MPI_STATUS_IGNORE);
+				MPI_Recv(&nodeCSR->denseVec[0], control.rowsPerNode, MPI_DOUBLE, 0, 0, control.row_comm,
+				         MPI_STATUS_IGNORE);
+			}
 
-        if (control.myId == 0) {
-            nodeCSR->denseVec.erase(nodeCSR->denseVec.begin() + control.rowsPerNode, nodeCSR->denseVec.end());
-        }
+			if (control.myId == 0) {
+				nodeCSR->denseVec.erase(nodeCSR->denseVec.begin() + control.rowsPerNode, nodeCSR->denseVec.end());
+			}
 
-        // column masters send data to row nodes
-        if (control.myId < control.clusterCols) {
-            for (int i = 1;
-                 i < control.clusterRows; i++) {  // start at 1 since column master is the 0th node in the column
-                int localRowCount;
-                int firstElement = nodeCSR->csrRows[i * control.rowsPerNode];
-                int lastElement;
+			// column masters send data to row nodes
+			if (control.myId < control.clusterCols) {
+				for (int i = 1;
+				     i < control.clusterRows; i++) {  // start at 1 since column master is the 0th node in the column
+					int localRowCount;
+					int firstElement = nodeCSR->csrRows[i * control.rowsPerNode];
+					int lastElement;
 
-                if (i == control.clusterRows - 1) {
-                    lastElement = nodeCSR->csrData.size();
-                    localRowCount = control.rowCount - (i * control.rowsPerNode);
-                } else {
-                    lastElement = nodeCSR->csrRows[(i + 1) * control.rowsPerNode];
-                    localRowCount = control.rowsPerNode;
-                }
-                control.elementCount = (lastElement -
-                                        firstElement); // how many elements the ith clusterCol has been assigned
+					if (i == control.clusterRows - 1) {
+						lastElement = nodeCSR->csrData.size();
+						localRowCount = control.rowCount - (i * control.rowsPerNode);
+					} else {
+						lastElement = nodeCSR->csrRows[(i + 1) * control.rowsPerNode];
+						localRowCount = control.rowsPerNode;
+					}
+					control.elementCount = (lastElement -
+					                        firstElement); // how many elements the ith clusterCol has been assigned
 
-                MPI_Send(&control.elementCount, 1, MPI_INT, i, 0, control.col_comm);
-                MPI_Send(&localRowCount, 1, MPI_INT, i, 0, control.col_comm);
-                MPI_Send(&control.rowsPerNode, 1, MPI_INT, i, 0, control.col_comm);
+					MPI_Send(&control.elementCount, 1, MPI_INT, i, 0, control.col_comm);
+					MPI_Send(&localRowCount, 1, MPI_INT, i, 0, control.col_comm);
+					MPI_Send(&control.rowsPerNode, 1, MPI_INT, i, 0, control.col_comm);
 
-                MPI_Send(&(nodeCSR->csrRows[control.rowsPerNode * i]), localRowCount, MPI_INT, i, 0, control.col_comm);
-                MPI_Send(&(nodeCSR->csrCols[firstElement]), control.elementCount, MPI_INT, i, 0, control.col_comm);
-                MPI_Send(&(nodeCSR->csrData[firstElement]), control.elementCount, MPI_DOUBLE, i, 0, control.col_comm);
-                //MPI_Send(&(nodeCSR->denseVec[control.rowsPerNode * i]), localRowCount, MPI_DOUBLE, i, 0, control.col_comm);
-            }
+					MPI_Send(&(nodeCSR->csrRows[control.rowsPerNode * i]), localRowCount, MPI_INT, i, 0,
+					         control.col_comm);
+					MPI_Send(&(nodeCSR->csrCols[firstElement]), control.elementCount, MPI_INT, i, 0, control.col_comm);
+					MPI_Send(&(nodeCSR->csrData[firstElement]), control.elementCount, MPI_DOUBLE, i, 0,
+					         control.col_comm);
+					//MPI_Send(&(nodeCSR->denseVec[control.rowsPerNode * i]), localRowCount, MPI_DOUBLE, i, 0, control.col_comm);
+				}
 
-            // Erase the excess data on the column master that has already been distributed to its row nodes
-            if (nodeCSR->csrRows.empty() || nodeCSR->csrCols.empty() || nodeCSR->csrData.empty()) {
-                // empty, nothing to erase safely
-            } else {
-                int myLastData = nodeCSR->csrRows[control.rowsPerNode] - 1;
-                nodeCSR->csrRows.erase(nodeCSR->csrRows.begin() + control.rowsPerNode, nodeCSR->csrRows.end());
-                nodeCSR->csrCols.erase(nodeCSR->csrCols.begin() + myLastData, nodeCSR->csrCols.end());
-                nodeCSR->csrData.erase(nodeCSR->csrData.begin() + myLastData, nodeCSR->csrData.end());
-            }
-        }
+				// Erase the excess data on the column master that has already been distributed to its row nodes
+				if (nodeCSR->csrRows.empty() || nodeCSR->csrCols.empty() || nodeCSR->csrData.empty()) {
+					// empty, nothing to erase safely
+				} else {
+					int myLastData = nodeCSR->csrRows[control.rowsPerNode] - 1;
+					nodeCSR->csrRows.erase(nodeCSR->csrRows.begin() + control.rowsPerNode, nodeCSR->csrRows.end());
+					nodeCSR->csrCols.erase(nodeCSR->csrCols.begin() + myLastData, nodeCSR->csrCols.end());
+					nodeCSR->csrData.erase(nodeCSR->csrData.begin() + myLastData, nodeCSR->csrData.end());
+				}
+			}
 
-        if (control.myId < control.clusterCols) {
-            nodeCSR->denseVec.erase(nodeCSR->denseVec.begin() + control.rowsPerNode, nodeCSR->denseVec.end());
-        }
+			if (control.myId < control.clusterCols) {
+				nodeCSR->denseVec.erase(nodeCSR->denseVec.begin() + control.rowsPerNode, nodeCSR->denseVec.end());
+			}
 
-        if (control.myId >= control.clusterCols) {
-            MPI_Recv(&control.elementCount, 1, MPI_INT, 0, 0, control.col_comm,
-                     MPI_STATUS_IGNORE);  // get number of elements
-            MPI_Recv(&control.rowCount, 1, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE); // get number of rows
-            MPI_Recv(&control.rowsPerNode, 1, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
+			if (control.myId >= control.clusterCols) {
+				MPI_Recv(&control.elementCount, 1, MPI_INT, 0, 0, control.col_comm,
+				         MPI_STATUS_IGNORE);  // get number of elements
+				MPI_Recv(&control.rowCount, 1, MPI_INT, 0, 0, control.col_comm,
+				         MPI_STATUS_IGNORE); // get number of rows
+				MPI_Recv(&control.rowsPerNode, 1, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
 
-            nodeCSR->csrRows.resize(control.rowCount);
-            nodeCSR->csrCols.resize(control.elementCount);
-            nodeCSR->csrData.resize(control.elementCount);
-            nodeCSR->denseVec.resize(control.rowsPerNode);
+				nodeCSR->csrRows.resize(control.rowCount);
+				nodeCSR->csrCols.resize(control.elementCount);
+				nodeCSR->csrData.resize(control.elementCount);
+				nodeCSR->denseVec.resize(control.rowsPerNode);
 
-            MPI_Recv(&nodeCSR->csrRows[0], control.rowCount, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
-            MPI_Recv(&nodeCSR->csrCols[0], control.elementCount, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
-            MPI_Recv(&nodeCSR->csrData[0], control.elementCount, MPI_DOUBLE, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
-            //MPI_Recv(&nodeCSR->denseVec[0], control.rowCount, MPI_DOUBLE, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
-        }
+				MPI_Recv(&nodeCSR->csrRows[0], control.rowCount, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
+				MPI_Recv(&nodeCSR->csrCols[0], control.elementCount, MPI_INT, 0, 0, control.col_comm,
+				         MPI_STATUS_IGNORE);
+				MPI_Recv(&nodeCSR->csrData[0], control.elementCount, MPI_DOUBLE, 0, 0, control.col_comm,
+				         MPI_STATUS_IGNORE);
+				//MPI_Recv(&nodeCSR->denseVec[0], control.rowCount, MPI_DOUBLE, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
+			}
 
-        // broadcast dense vector to column nodes
-        MPI_Bcast(&nodeCSR->denseVec[0], control.rowsPerNode, MPI_DOUBLE, 0, control.col_comm);
-    }
+			// broadcast dense vector to column nodes
+			MPI_Bcast(&nodeCSR->denseVec[0], control.rowsPerNode, MPI_DOUBLE, 0, control.col_comm);
+		}
 
-    std::vector<double> result;
-    result.resize(control.rowsPerNode, 0.0);
+		std::vector<double> result;
+		result.resize(control.rowsPerNode, 0.0);
 
-    MPI_Barrier(MPI_COMM_WORLD);
-    double spmvStartTime = MPI_Wtime();
+		MPI_Barrier(MPI_COMM_WORLD);
+		double spmvStartTime = MPI_Wtime();
 
-    if (nodeCSR->csrData.size() > 0) {
-        int ompThreadId, start, end, i, j, rowsPerThread;
+		if (nodeCSR->csrData.size() > 0) {
+			int ompThreadId, start, end, i, j, rowsPerThread;
 
-        #pragma omp parallel num_threads(control.ompThreads) shared(nodeCSR, result) private(ompThreadId, start, end, i, j, rowsPerThread)
-        {
-            rowsPerThread = ceil(nodeCSR->csrRows.size() / control.ompThreads);
-            ompThreadId = omp_get_thread_num();
-            if (ompThreadId == control.ompThreads - 1) {
-                for (i = ompThreadId * rowsPerThread; i < nodeCSR->csrRows.size(); i++) {
-                    if (i == nodeCSR->csrRows.size() - 1) {
-                        for (j = nodeCSR->csrRows[i] - nodeCSR->csrRows[0]; j < nodeCSR->csrData.size(); j++) {
-                            //#pragma omp atomic
-                            result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[i];
-                        }
-                    } else {
-                        for (j = nodeCSR->csrRows[i] - nodeCSR->csrRows[0];
-                             j < nodeCSR->csrRows[i + 1] - nodeCSR->csrRows[0]; j++) {
-                            //#pragma omp atomic
-                            result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[i];
-                        }
-                    }
-                }
-            } else {
-                for (i = ompThreadId * rowsPerThread; i < (ompThreadId + 1) * rowsPerThread; i++) {
-                    if (i == nodeCSR->csrRows.size() - 1) {
-                        for (j = nodeCSR->csrRows[i] - nodeCSR->csrRows[0]; j < nodeCSR->csrData.size(); j++) {
-                            //#pragma omp atomic
-                            result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[i];
-                        }
-                    } else {
-                        for (j = nodeCSR->csrRows[i] - nodeCSR->csrRows[0];
-                             j < nodeCSR->csrRows[i + 1] - nodeCSR->csrRows[0]; j++) {
-                            //#pragma omp atomic
-                            result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[i];
-                        }
-                    }
-                }
-            }
-        }
-    }
+			#pragma omp parallel num_threads(control.ompThreads) shared(nodeCSR, result) private(ompThreadId, start, end, i, j, rowsPerThread)
+			{
+				rowsPerThread = ceil(nodeCSR->csrRows.size() / control.ompThreads);
+				ompThreadId = omp_get_thread_num();
+				if (ompThreadId == control.ompThreads - 1) {
+					for (i = ompThreadId * rowsPerThread; i < nodeCSR->csrRows.size(); i++) {
+						if (i == nodeCSR->csrRows.size() - 1) {
+							for (j = nodeCSR->csrRows[i] - nodeCSR->csrRows[0]; j < nodeCSR->csrData.size(); j++) {
+								//#pragma omp atomic
+								result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[i];
+							}
+						} else {
+							for (j = nodeCSR->csrRows[i] - nodeCSR->csrRows[0];
+							     j < nodeCSR->csrRows[i + 1] - nodeCSR->csrRows[0]; j++) {
+								//#pragma omp atomic
+								result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[i];
+							}
+						}
+					}
+				} else {
+					for (i = ompThreadId * rowsPerThread; i < (ompThreadId + 1) * rowsPerThread; i++) {
+						if (i == nodeCSR->csrRows.size() - 1) {
+							for (j = nodeCSR->csrRows[i] - nodeCSR->csrRows[0]; j < nodeCSR->csrData.size(); j++) {
+								//#pragma omp atomic
+								result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[i];
+							}
+						} else {
+							for (j = nodeCSR->csrRows[i] - nodeCSR->csrRows[0];
+							     j < nodeCSR->csrRows[i + 1] - nodeCSR->csrRows[0]; j++) {
+								//#pragma omp atomic
+								result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[i];
+							}
+						}
+					}
+				}
+			}
+		}
 
-    MPI_Barrier(MPI_COMM_WORLD);
-    double spmvEndTime = MPI_Wtime();
+		MPI_Barrier(MPI_COMM_WORLD);
+		double spmvEndTime = MPI_Wtime();
 
-    if (control.masterOnly != true) {
-        if (control.myId == 0) {
-            //nodeCSR->denseVec.clear();
-            result.resize(control.rowsPerNode * control.clusterRows, 0.0);
-        }
+		if (control.masterOnly != true) {
+			if (control.myId == 0) {
+				//nodeCSR->denseVec.clear();
+				result.resize(control.rowsPerNode * control.clusterRows, 0.0);
+			}
 
-        /*
-         *      MPI REDUCE w/ SUM FROM COLUMNS TO ROW MASTER(S)
-         */
-        if (control.myId < control.clusterCols) {
-            if (control.row_rank == 0) {
-                MPI_Reduce(MPI_IN_PLACE, &result[0], control.rowsPerNode, MPI_DOUBLE, MPI_SUM, 0,
-                           control.row_comm);
-            } else {
-                MPI_Reduce(&result[0], &result[0], control.rowsPerNode, MPI_DOUBLE, MPI_SUM, 0,
-                           control.row_comm);
-            }
-        } else {
-            if (control.row_rank == 0) {
-                MPI_Reduce(MPI_IN_PLACE, &result[0], control.rowCount, MPI_DOUBLE, MPI_SUM, 0,
-                           control.row_comm);
-            } else {
-                MPI_Reduce(&result[0], &result[0], control.rowCount, MPI_DOUBLE, MPI_SUM, 0,
-                           control.row_comm);
-            }
-        }
+			/*
+			 *      MPI REDUCE w/ SUM FROM COLUMNS TO ROW MASTER(S)
+			 */
+			if (control.myId < control.clusterCols) {
+				if (control.row_rank == 0) {
+					MPI_Reduce(MPI_IN_PLACE, &result[0], control.rowsPerNode, MPI_DOUBLE, MPI_SUM, 0,
+					           control.row_comm);
+				} else {
+					MPI_Reduce(&result[0], &result[0], control.rowsPerNode, MPI_DOUBLE, MPI_SUM, 0,
+					           control.row_comm);
+				}
+			} else {
+				if (control.row_rank == 0) {
+					MPI_Reduce(MPI_IN_PLACE, &result[0], control.rowCount, MPI_DOUBLE, MPI_SUM, 0,
+					           control.row_comm);
+				} else {
+					MPI_Reduce(&result[0], &result[0], control.rowCount, MPI_DOUBLE, MPI_SUM, 0,
+					           control.row_comm);
+				}
+			}
 
-        /*
-         *      MPI GATHER FROM ROW MASTERS TO GLOBAL MASTER
-         */
-        if (control.myId % control.clusterCols == 0) {
-            if (control.col_rank == 0) {
-                MPI_Gather(MPI_IN_PLACE, control.rowsPerNode, MPI_DOUBLE, &result[0], control.rowsPerNode,
-                           MPI_DOUBLE, 0, control.col_comm);
-            } else {
-                MPI_Gather(&result[0], control.rowsPerNode, MPI_DOUBLE, &result[0], control.rowsPerNode,
-                           MPI_DOUBLE, 0, control.col_comm);
-            }
+			/*
+			 *      MPI GATHER FROM ROW MASTERS TO GLOBAL MASTER
+			 */
+			if (control.myId % control.clusterCols == 0) {
+				if (control.col_rank == 0) {
+					MPI_Gather(MPI_IN_PLACE, control.rowsPerNode, MPI_DOUBLE, &result[0], control.rowsPerNode,
+					           MPI_DOUBLE, 0, control.col_comm);
+				} else {
+					MPI_Gather(&result[0], control.rowsPerNode, MPI_DOUBLE, &result[0], control.rowsPerNode,
+					           MPI_DOUBLE, 0, control.col_comm);
+				}
 
-        }
-    }
+			}
+		}
 
-    MPI_Comm_free(&control.col_comm);
-    MPI_Comm_free(&control.row_comm);
-    double overallEndTime = MPI_Wtime();
-    MPI_Finalize();
+		//MPI_Comm_free(&control.col_comm);
+		//MPI_Comm_free(&control.row_comm);
+		double overallEndTime = MPI_Wtime();
+		//MPI_Finalize();
 
-    /*
-    //
-    //                                      -- Testing / Verifcation --
-    // This block is to be used in conjunction with single node, single thread/process SpMV and compares the results of
-    // the "master only" SpMV against those of the distributed version's results.
-    //
-    if (control.myId == 0) {
-        std::cout << std::endl;
-        for (int i = 0; i < control.rowCount; i++) {
-            //std::cout << "i = " << i << std::endl;
-            if (std::abs(masterData.result[i] - result[i]) > 0.0001) {
-                std::cout << "--- ERROR: result[" << i << "] DOES NOT MATCH ---" << std::endl;
-            }
-        }
-    }
-    */
+		/*
+		//
+		//                                      -- Testing / Verifcation --
+		// This block is to be used in conjunction with single node, single thread/process SpMV and compares the results of
+		// the "master only" SpMV against those of the distributed version's results.
+		//
+		if (control.myId == 0) {
+			std::cout << std::endl;
+			for (int i = 0; i < control.rowCount; i++) {
+				//std::cout << "i = " << i << std::endl;
+				if (std::abs(masterData.result[i] - result[i]) > 0.0001) {
+					std::cout << "--- ERROR: result[" << i << "] DOES NOT MATCH ---" << std::endl;
+				}
+			}
+		}
+		*/
 
-    if (control.myId == 0) {
-        //std::cout << std::endl << "Complete!" << std::endl;
+		if (control.myId == 0) {
+			//std::cout << std::endl << "Complete!" << std::endl;
 
-        //double precision = MPI_Wtick();
-        //std::cout << "precision = " << precision  << std::endl;
-        //std::cout << "start = " << overallStartTime << ", end = " <<overallEndTime << std::endl;
-        //std::cout << "Element Distribution Time: " << distributionEndTime - distributionStartTime << std::endl;
-        //std::cout << "SmPV Time: " << spmvEndTime - spmvStartTime << std::endl;
-        //std::cout << "Total time elapsed: " << overallEndTime - overallStartTime << std::endl;
-        std::cout << distributionEndTime - distributionStartTime << "," << spmvEndTime - spmvStartTime << ","
-                  << overallEndTime - overallStartTime << std::endl;
-    }
+			//double precision = MPI_Wtick();
+			//std::cout << "precision = " << precision  << std::endl;
+			//std::cout << "start = " << overallStartTime << ", end = " <<overallEndTime << std::endl;
+			//std::cout << "Element Distribution Time: " << distributionEndTime - distributionStartTime << std::endl;
+			//std::cout << "SmPV Time: " << spmvEndTime - spmvStartTime << std::endl;
+			//std::cout << "Total time elapsed: " << overallEndTime - overallStartTime << std::endl;
+			std::cout << distributionEndTime - distributionStartTime << "," << spmvEndTime - spmvStartTime << ","
+			          << overallEndTime - overallStartTime << std::endl;
+		}
 
+		if (control.myId == 0) {
+			nodeCSR = NULL;
+		} else {
+			delete(nodeCSR);
+		}
+	}
+
+	MPI_Comm_free(&control.col_comm);
+	MPI_Comm_free(&control.row_comm);
+	MPI_Finalize();
 
 	return 0;
 }
