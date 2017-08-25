@@ -132,27 +132,28 @@ int main(int argc, char *argv[]) {
     MPI_Barrier(MPI_COMM_WORLD);
     std::vector<csrSpMV *> clusterColData;
     int colsPerColumn;
-
-    double distributionStartTime = MPI_Wtime();
-
-    if (!control.myId) {
-        distribution_SplitMatrix(control, clusterColData);
-    }
-
-    double distributionEndTime = MPI_Wtime();
-
-    // Create a pointer to the nodes csr object. Using pointers so that we do not have to copy any data on the
-    // master node in order to assign it to this name
-    csrSpMV *nodeCSR;
-
-
-	if (control.myId == 0) {
-		nodeCSR = clusterColData[0];
-	} else {
-		nodeCSR = new csrSpMV;
-	}
+	csrSpMV *nodeCSR;
 
 	for (int count = 0; count < 50; count++) {
+		double distributionStartTime = MPI_Wtime();
+
+		if (!control.myId) {
+			distribution_SplitMatrix(control, clusterColData);
+		}
+
+		double distributionEndTime = MPI_Wtime();
+
+		// Create a pointer to the nodes csr object. Using pointers so that we do not have to copy any data on the
+		// master node in order to assign it to this name
+		//csrSpMV *nodeCSR;
+
+
+		if (control.myId == 0) {
+			nodeCSR = clusterColData[0];
+		} else {
+			nodeCSR = new csrSpMV;
+		}
+
 		if (control.masterOnly != true) {
 			// master to send data to cluster column masters
 			if (control.myId == 0) {
@@ -401,12 +402,9 @@ int main(int argc, char *argv[]) {
 		}
 
 		if (control.myId == 0) {
-			//
+			nodeCSR = NULL;
 		} else {
-			nodeCSR->csrRows.clear();
-			nodeCSR->csrCols.clear();
-			nodeCSR->csrData.clear();
-			nodeCSR->denseVec.clear();
+			delete(nodeCSR);
 		}
 	}
 
