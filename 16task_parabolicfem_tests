@@ -5,9 +5,9 @@
 #$ -pe mpi-16 256
 ##$ -q *@@cswarm
 #$ -q long
-#$ -o 16task_bmw3_2_verficitation.txt
+#$ -o 16task_parabolicfem_results.txt
 #$ -e errorurrmahgurd.err
-#$ -N BMW3_2__16task_Verification_Tests
+#$ -N ParabolicFem_16task_Tests
 
 module purge
 #module load gcc/6.2.0 
@@ -26,7 +26,7 @@ for i in {1..16..1}
             
             for k in {0..50..1}
                 do 
-                    mpirun -np 16 -npernode $i ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads $j --major-order col --distribution-method splitmatrix
+                    mpirun -np 16 -npernode $i ./main -lm ../sample_matrices/parabolic_fem.mtx --omp-threads $j --major-order col --distribution-method splitmatrix
                 done
       	  done
  done
