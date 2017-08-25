@@ -145,13 +145,14 @@ int main(int argc, char *argv[]) {
     // master node in order to assign it to this name
     csrSpMV *nodeCSR;
 
-	for (int count = 0; count < 50; count++) {
-		if (control.myId == 0) {
-			nodeCSR = clusterColData[0];
-		} else {
-			nodeCSR = new csrSpMV;
-		}
 
+	if (control.myId == 0) {
+		nodeCSR = clusterColData[0];
+	} else {
+		nodeCSR = new csrSpMV;
+	}
+
+	for (int count = 0; count < 50; count++) {
 		if (control.masterOnly != true) {
 			// master to send data to cluster column masters
 			if (control.myId == 0) {
@@ -281,7 +282,7 @@ int main(int argc, char *argv[]) {
 		if (nodeCSR->csrData.size() > 0) {
 			int ompThreadId, start, end, i, j, rowsPerThread;
 
-			#pragma omp parallel num_threads(control.ompThreads) shared(nodeCSR, result) private(ompThreadId, start, end, i, j, rowsPerThread)
+#pragma omp parallel num_threads(control.ompThreads) shared(nodeCSR, result) private(ompThreadId, start, end, i, j, rowsPerThread)
 			{
 				rowsPerThread = ceil(nodeCSR->csrRows.size() / control.ompThreads);
 				ompThreadId = omp_get_thread_num();
@@ -400,9 +401,12 @@ int main(int argc, char *argv[]) {
 		}
 
 		if (control.myId == 0) {
-			nodeCSR = NULL;
+			//
 		} else {
-			delete(nodeCSR);
+			nodeCSR->csrRows.clear();
+			nodeCSR->csrCols.clear();
+			nodeCSR->csrData.clear();
+			nodeCSR->denseVec.clear();
 		}
 	}
 
