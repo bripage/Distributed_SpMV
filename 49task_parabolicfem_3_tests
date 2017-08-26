@@ -1,0 +1,28 @@
+#!/bin/bash
+#$ -M bpage1@nd.edu
+#$ -m abe
+#$ -cwd
+#$ -pe mpi-16 272
+##$ -q *@@cswarm
+#$ -q long
+#$ -o 49task_parabolicfem_3_results.txt
+#$ -e errorurrmahgurd.err
+#$ -N ParabolicFem_49task_3_Tests
+
+module purge
+#module load gcc/6.2.0 
+#module load mpich/3.2-gcc-6.2.0
+#module load mpich/3.2-intel-15.0
+#module load hpx/4.0.0
+module load ompi/2.0.1-gcc-6.2.0
+
+echo "Bash version ${BASH_VERSION}..."
+echo "3 tasks per node"
+for i in {1..8..1}
+  do 
+	echo "$i threads per task"
+        for j in {0..50..1}
+          do 
+        	mpirun -np 49 -npernode 3 ./main -lm ../sample_matrices/parabolic_fem.mtx --omp-threads $i --major-order col --distribution-method splitmatrix
+          done
+  done
