@@ -1,4 +1,4 @@
-3 tasks per node
+1 tasks per node
 1 threads per task
 mpirun: Error: unknown option "-lm"
 Type 'mpirun --help' for usage.
