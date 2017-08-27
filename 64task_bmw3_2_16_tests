@@ -1,0 +1,26 @@
+#!/bin/bash
+#$ -M bpage1@nd.edu
+#$ -m abe
+#$ -cwd
+#$ -pe mpi-16 64
+##$ -q *@@cswarm
+#$ -q long
+#$ -o 64task_bmw3_2_16_results.txt
+#$ -e errorurrmahgurd.err
+#$ -N BMW3_2_64task_16_Tests
+
+module purge
+#module load gcc/6.2.0 
+#module load mpich/3.2-gcc-6.2.0
+#module load mpich/3.2-intel-15.0
+module load hpx/4.0.0
+
+echo "16 tasks per node"
+for i in {1..8..1}
+  do 
+	echo "$i threads per task"    
+        for k in {0..50..1}
+          do 
+        	mpirun -np 64 -npernode 16 ./main -lm ../sample_matrices/bmw3_2.mtx --omp-threads $i --major-order col --distribution-method splitmatrix
+          done
+ done
