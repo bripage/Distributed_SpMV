@@ -1,0 +1,3 @@
+Bash version 4.2.46(1)-release...
+/opt/sge/crc/spool/d8civy120/job_scripts/201417: line 23: unexpected EOF while looking for matching `"'
+/opt/sge/crc/spool/d8civy120/job_scripts/201417: line 29: syntax error: unexpected end of file
