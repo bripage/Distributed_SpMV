@@ -1,0 +1,15 @@
+\begin{thebibliography}{1}
+
+\bibitem{techbib:hpcg-snl-dongarra}
+J.~Dongarra and M.~Heroux.
+\newblock Toward a new metric for ranking high performance computing systems.
+\newblock Sandia Report SAND2013 4744, Sandia National Labs, June 2013.
+
+\bibitem{techbib:marjanovic2014performance}
+V.~Marjanovi{\'c}, J.~Gracia, and C.~W. Glass.
+\newblock Performance modeling of the hpcg benchmark.
+\newblock In {\em High Performance Computing Systems. Performance Modeling,
+  Benchmarking, and Simulation}, pages 172--192. Springer International
+  Publishing, 2014.
+
+\end{thebibliography}
