@@ -17,7 +17,7 @@ module purge
 module load ompi/2.0.1-gcc-6.2.0
 
 echo "Bash version ${BASH_VERSION}..."
-echo “4 tasks per node"
+echo "4 tasks per node"
 for i in {1..8..1}
   do 
 	echo "$i threads per task"
