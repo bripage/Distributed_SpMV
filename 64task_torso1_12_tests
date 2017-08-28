@@ -16,7 +16,7 @@ module purge
 module load hpx/4.0.0
 
 
-echo “12 tasks per node"
+echo "12 tasks per node"
 for i in {1..8..1}
   do 
 	echo "$j threads per task"
