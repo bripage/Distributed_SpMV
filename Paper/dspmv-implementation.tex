@@ -1,1 +1,25 @@
 \section{Implementation}\label{sec:dspmv-implementation}
+
+- unlike Bylina et al's multinoda algorithm, which used BLACS to perform the data distribution amongst the cluster, as MKL to perfrom the multithreaded SpMV on each cluster node, a hybrid distrbuted SpMV was designed as a single stand alone entity. 
+	- control over all MPI and OpenMP operations, including thread and process affinity, resource overscheduling, etc.
+	- does not require software licensing
+	- can be tailored to cluster size and node hoardware architecture
+	
+- the application was written in c++, compiled with openmpi with passthrough to the g++ compiler
+	- compiled with openmp 
+	- optimization level 3
+	
+- Careful attention was paid to the MPI communication structure such that it would emulate the behavior produced by the BLACS routines used by Bylina et al for work distribution amongst cluster nodes. 
+	- this is not optimized, however does allow for greater control in evaluating potential scalability bottlenecks stemming from communication overhead
+	
+- Briefly discuss program flow/operation
+	- similar to Bylinia et al the cluster is split into a grid consisting of $n$ x $n$ nodes in thereby requiring $n^2$ number of nodes in the cluster to function properly.
+	- distribution determined on master, then sent to cluster column masters, and finally column masters send to remaining column members. 
+	- once data has been recieved by invididual nodes, they perform a multithreaded SpMV algorithm which utilizes OpenMP for parallelization
+		- each thread works on a block of rows from the submatrix portion assigned to the MPI process
+		- all threads have same number of rows in their blocks, though not necessarily the same number of non-zeros to work on due to matrix distrubtion
+	- vectors provide potential increase in locality of reference due to being allcated contiguous portions of memory \TODO{you will likely need to cite this}
+	- once all nodes in a cluster row have completed computation of their assigned work, an MPI\_Reduce is called and performs a summation with the results being saved into a vector at the cluster row master for each cluster row. 
+	- the 0th column of cluster nodes contains all cluster row masters including the Global Master. It is on this cluster column that MPI\_Gather is called in order to collect the distributed results back at the global master process. 
+
+	

@@ -1,2 +1,9 @@
 \section{Related Work}\label{sec:dspmv-relatedwork}
 
+Due to the computation impact that SpMV operations have on a many scientific applications there has been an effort to analyze its performance and scalablity characteristics. Bylina, Bylina, Stpiczunski, and Szalkowski \cite{bylina_bylina_stpiczyński_szałkowski_2014} introduced and evaluated the performance of both multicore and multinodal implementations of SpMV on various chip architectures. A modified version of the SpMV algorithm found in the SPARSKIT Fortran library \cite{saad1990sparskit} for the multicore implementation. Using matrices from the University of Florida Sparse Matrix Collection (UFSMC), they found that for their multicore algoritm, similar performance was experienced accross all matrices tested when the number of threads remained low. Alternatively as architectures allow for increased thread count, higher performance can be obtained, and it was noted that the use of OpenMP allowed for performance comperable to that of the optimized Intel MKL version of SpMV \TODO{cite Intel MKL ?}.
+
+Bylina et al's multinodal implementation distributed equal sized sub matrices of a given benchmark matrix to each MPI process, where in each process would then work on the non-zeros contained within that submatrix via a multithreaded version of Intel's MKL SpMV routines. For the distribution method chosen the density in addition to distribution of non-zeros within the matrix had the greatest impact on the scalability of their multinodal algorithm.
+
+
+\TODO{-discuss memory bandwidth as it impacts SpMV}
+
