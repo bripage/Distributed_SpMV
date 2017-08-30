@@ -1,0 +1,1125 @@
+Bash version 4.2.46(1)-release...
+13 tasks per node
+1 threads per task
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+2 threads per task
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+3 threads per task
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main
+Node: d8civy141
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+13 total processes failed to start
