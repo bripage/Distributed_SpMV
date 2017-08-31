@@ -1,25 +1,49 @@
 \section{Implementation}\label{sec:dspmv-implementation}
 
-- unlike Bylina et al's multinoda algorithm, which used BLACS to perform the data distribution amongst the cluster, as MKL to perfrom the multithreaded SpMV on each cluster node, a hybrid distrbuted SpMV was designed as a single stand alone entity. 
-	- control over all MPI and OpenMP operations, including thread and process affinity, resource overscheduling, etc.
-	- does not require software licensing
-	- can be tailored to cluster size and node hoardware architecture
-	
-- the application was written in c++, compiled with openmpi with passthrough to the g++ compiler
-	- compiled with openmp 
-	- optimization level 3
-	
-- Careful attention was paid to the MPI communication structure such that it would emulate the behavior produced by the BLACS routines used by Bylina et al for work distribution amongst cluster nodes. 
-	- this is not optimized, however does allow for greater control in evaluating potential scalability bottlenecks stemming from communication overhead
-	
-- Briefly discuss program flow/operation
-	- similar to Bylinia et al the cluster is split into a grid consisting of $n$ x $n$ nodes in thereby requiring $n^2$ number of nodes in the cluster to function properly.
-	- distribution determined on master, then sent to cluster column masters, and finally column masters send to remaining column members. 
-	- once data has been recieved by invididual nodes, they perform a multithreaded SpMV algorithm which utilizes OpenMP for parallelization
-		- each thread works on a block of rows from the submatrix portion assigned to the MPI process
-		- all threads have same number of rows in their blocks, though not necessarily the same number of non-zeros to work on due to matrix distrubtion
-	- vectors provide potential increase in locality of reference due to being allcated contiguous portions of memory \TODO{you will likely need to cite this}
-	- once all nodes in a cluster row have completed computation of their assigned work, an MPI\_Reduce is called and performs a summation with the results being saved into a vector at the cluster row master for each cluster row. 
-	- the 0th column of cluster nodes contains all cluster row masters including the Global Master. It is on this cluster column that MPI\_Gather is called in order to collect the distributed results back at the global master process. 
+%- unlike Bylina et al's multinodal algorithm, which used BLACS to perform the data distribution amongst the cluster, as MKL to perfrom the multithreaded SpMV on each cluster node, a hybrid distrbuted SpMV was designed as a %single stand alone entity. 
+%	- control over all MPI and OpenMP operations, including thread and process affinity, resource over scheduling, etc.
+%	- does not require software licensing
+%	- can be tailored to cluster size and node hardware architecture
+%	
+%- the application was written in c++, compiled with openmpi with passthrough to the g++ compiler
+%	- compiled with openmp 
+%	- optimization level 3
+%	
+%- Careful attention was paid to the MPI communication structure such that it would emulate the behavior produced by the BLACS routines used by Bylina et al for work distribution amongst cluster nodes. 
+%	- this is not optimized, however does allow for greater control in evaluating potential scalability bottlenecks stemming from communication overhead
+%	
+%- Briefly discuss program flow/operation
+%	- similar to Bylinia et al the cluster is split into a grid consisting of $n$ x $n$ nodes in thereby requiring $n^2$ number of nodes in the cluster to function properly.
+%	- distribution determined on master, then sent to cluster column masters, and finally column masters send to remaining column members. 
+%	- once data has been recieved by individual nodes, they perform a multi-threaded SpMV algorithm which utilizes OpenMP for parallelization
+%		- each thread works on a block of rows from the submatrix portion assigned to the MPI process
+%		- all threads have same number of rows in their blocks, though not necessarily the same number of non-zeros to work on due to matrix distrubtion
+%	- vectors provide potential increase in locality of reference due to being allcated contiguous portions of memory \TODO{you will likely need to cite this}
+%	- once all nodes in a cluster row have completed computation of their assigned work, an MPI\_Reduce is called and performs a summation with the results being saved into a vector at the cluster row master for each %cluster row. 
+%	- the 0th column of cluster nodes contains all cluster row masters including the Global Master. It is on this cluster column that MPI\_Gather is called in order to collect the distributed results back at the global %master process. 
+%
 
-	
+The application that was written to emulate the behavior of that used in the study performed by Bylina et al was written using the C++ programming language.
+We chose to forgo the use of proprietary libraries such as BLACS and MKL deciding instead to write explicit MPI and OpenMP directives to control distributed and shared memory behavior across the cluster environment. 
+Special care was paid to insure that the communication pattern matched that of the 2d cluster methods in the BLACS library which were used in the prior work.
+It was felt that by not including these packages greater control over communication and memory access parameters could be achieved, even though the result may not be as highly optimized for particular applications, architectures, or compilers. 
+
+
+Benchmark matrices in the Matrix Market Format were chosen from the University of Florida Sparse Matrix Collection. The characteristics of the matrices chosen is discussed in greater detail in section 4a "Benchmarks". 
+Matrices are read from file by the master MPI process and converted to Compressed Sparse Row (CSR) or Compressed Sparse Column (CSC) format, depending on the individual matrix being input.
+Both CSR and CSC formats provide a reduction on memory requirements thereby increasing performance while reducing data transfer in multinode environments since only data about non-zero elements in the input matrix are kept \TODO{this needs a cite}. 
+While the matrix is being read in, the distribution of work amongst the MPI processes is being determined. 
+The distribution pattern used by Bylina et al and which we have emulated, we call the $sub matrix method$, splits the input matrix $A$ into $p^2$ sub matrices in which each piece has nearly identical dimensions based on the number of processes $p$ and the row or column count of $A$.
+Therein the size of each sub matrix from $A_p$ will be $A_{rows}/p$  x $A_{cols}/p$.
+
+
+Each MPI process will receive its assigned sub matrix in CSR/CSC format, which is stored as three vectors belonging to a csrSpMV class object, for storing row column and data values for each non-zero. 
+On the master process a two dimensional vector of csrSpMV objects, the dimensions of which equate to the total number of MPI processes being used. 
+For our purposes we chose to require that the number of MPI processes be a positive square value. 
+This insures that the number of logical rows in the cluster environment is equivalent to the number of logical columns. 
+It is important for this distribution method that this be the case, as MPI communication takes advantage of column masters and row masters for data distribution in addition to reduction and gather efficiencies. 
+
+
+As each new non-zero is read the sub matrix it is to be assigned to is easily determined based off its row and column, with the 
+
+
