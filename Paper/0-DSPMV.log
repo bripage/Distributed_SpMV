@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  29 AUG 2017 11:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  31 AUG 2017 14:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -322,11 +322,13 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14> not available
 
 (./dspmv-abstract.tex) (./dspmv-body.tex (./dspmv-intro.tex)
 (./dspmv-relatedwork.tex) (./dspmv-implementation.tex)
-(./dspmv-workdistribution.tex) (./dspmv-evaluation.tex) (./dspmv-benchmarks.tex
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+(./dspmv-workdistribution.tex) (./dspmv-evaluation.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
-])
+]) (./dspmv-benchmarks.tex)
 (./dspmv-processscaling.tex) (./dspmv-threadscaling.tex)
 (./dspmv-sparsityimpact.tex) (./dspmv-futurework.tex) (./dspmv-conclusion.tex))
 (./0-DSPMV.bbl
@@ -353,22 +355,23 @@ Before submitting the final camera ready copy, remember to:
 Here is how much of TeX's memory you used:
  3980 strings out of 493029
  57554 string characters out of 6136234
- 131460 words of memory out of 5000000
+ 132460 words of memory out of 5000000
  7430 multiletter control sequences out of 15000+600000
  35145 words of font info for 66 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  38i,9n,35p,1130b,305s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc
 }</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr
-i8a.pfb>
-Output written on 0-DSPMV.pdf (2 pages, 71210 bytes).
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/font
+s/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ti
+mes/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb
+>
+Output written on 0-DSPMV.pdf (2 pages, 83122 bytes).
 PDF statistics:
- 36 PDF objects out of 1000 (max. 8388607)
- 25 compressed objects within 1 object stream
+ 40 PDF objects out of 1000 (max. 8388607)
+ 28 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
