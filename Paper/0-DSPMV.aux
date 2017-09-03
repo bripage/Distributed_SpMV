@@ -1,33 +1,52 @@
 \relax 
-\citation{bylina_bylina_stpiczyński_szałkowski_2014}
+\citation{techbib:hpcg-snl-dongarra}
+\citation{techbib:marjanovic2014performance}
+\citation{techbib:marjanovic2014performance}
+\citation{techbib:marjanovic2014performance}
+\citation{techbib:6933066}
 \citation{saad1990sparskit}
 \@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}}
 \newlabel{sec:dspmv-intro}{{I}{1}}
-\@writefile{toc}{\contentsline {section}{\numberline {II}Related Work}{1}}
+\@writefile{toc}{\contentsline {section}{\numberline {II}Prior Work and Analytic Models}{1}}
 \newlabel{sec:dspmv-relatedwork}{{II}{1}}
-\@writefile{toc}{\contentsline {section}{\numberline {III}Implementation}{1}}
-\newlabel{sec:dspmv-implementation}{{III}{1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-A}}Work Distribution and MPI}{1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}OpenMP SpMV}{2}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Hybrid SpMV}}{2}}
-\newlabel{spmv}{{1}{2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-C}}Reduction and Validation}{2}}
-\@writefile{toc}{\contentsline {section}{\numberline {IV}Evaluation}{2}}
-\newlabel{sec:dspmv-evaluation}{{IV}{2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Benchmarks}{2}}
-\newlabel{sec:dspmv-benchmarks}{{\unhbox \voidb@x \hbox {IV-A}}{2}}
+\newlabel{eqtn:BytesPerRow}{{1}{1}}
+\newlabel{eqtn:BytesPerFlop}{{2}{1}}
+\citation{azad2016exploiting}
+\citation{techbib:6933066}
+\citation{azd2016exploiting}
+\citation{Bulu2008OnTR}
+\citation{Bulu2008OnTR}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces HPCG Flops per Byte of Memory Bandwidth vs. Peak flops.}}{2}}
+\newlabel{fig:spmv-historical-hpcg-bw}{{1}{2}}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces SpMV Projection Based on System Parameters.}}{2}}
+\newlabel{tab:analytic}{{I}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {III}Implementation}{3}}
+\newlabel{sec:dspmv-implementation}{{III}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-A}}Work Distribution and MPI}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}OpenMP SpMV}{3}}
 \bibstyle{IEEEtran}
 \bibdata{dspmv-refs}
-\bibcite{bylina_bylina_stpiczyński_szałkowski_2014}{1}
-\bibcite{saad1990sparskit}{2}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Impact: Process Count}{3}}
-\newlabel{sec:dspmv-process}{{\unhbox \voidb@x \hbox {IV-B}}{3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}}Impact: Thread Count}{3}}
-\newlabel{sec:dspmv-threadscaling}{{\unhbox \voidb@x \hbox {IV-C}}{3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-D}}Impact: Sparsity}{3}}
-\newlabel{sec:dspmv-sparsityimpact}{{\unhbox \voidb@x \hbox {IV-D}}{3}}
-\@writefile{toc}{\contentsline {section}{\numberline {V}Future Work}{3}}
-\newlabel{sec:dspmv-futurework}{{V}{3}}
-\@writefile{toc}{\contentsline {section}{\numberline {VI}Conclusions}{3}}
-\newlabel{sec:sga-conclusion}{{VI}{3}}
-\@writefile{toc}{\contentsline {section}{References}{3}}
+\bibcite{techbib:hpcg-snl-dongarra}{1}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Hybrid SpMV}}{4}}
+\newlabel{spmv}{{1}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-C}}Reduction and Validation}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Evaluation}{4}}
+\newlabel{sec:dspmv-evaluation}{{IV}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Benchmarks}{4}}
+\newlabel{sec:dspmv-benchmarks}{{\unhbox \voidb@x \hbox {IV-A}}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Impact: Process Count}{4}}
+\newlabel{sec:dspmv-process}{{\unhbox \voidb@x \hbox {IV-B}}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}}Impact: Thread Count}{4}}
+\newlabel{sec:dspmv-threadscaling}{{\unhbox \voidb@x \hbox {IV-C}}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-D}}Impact: Sparsity}{4}}
+\newlabel{sec:dspmv-sparsityimpact}{{\unhbox \voidb@x \hbox {IV-D}}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Future Work}{4}}
+\newlabel{sec:dspmv-futurework}{{V}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Conclusions}{4}}
+\newlabel{sec:sga-conclusion}{{VI}{4}}
+\bibcite{techbib:marjanovic2014performance}{2}
+\bibcite{techbib:6933066}{3}
+\bibcite{saad1990sparskit}{4}
+\bibcite{azad2016exploiting}{5}
+\bibcite{Bulu2008OnTR}{6}
+\@writefile{toc}{\contentsline {section}{References}{5}}

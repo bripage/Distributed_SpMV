@@ -1,4 +1,5 @@
 \section{Evaluation}\label{sec:dspmv-evaluation}
+-our program behaves the "same" as the Bylina et al paper. 
 
 - cluster architecture, network connectivity, number of nodes (max used), etc.
 - how timings where taken and GFlops calculated based on these time measurements. 
@@ -7,3 +8,19 @@
 	- best, worst, and averages were taken for all times recorded and GFlops calculated
 	
 - then tables and pretty graphs to talk about 
+
+
+- As we add threads, we are adding memory access (bandwidth) due to the usage or more cores on a chip
+
+- as we increase MPI processes we increase the number of processors, and threfore the potential for more threads.
+
+-performance as a function of the number of non-zeros per row. What I mean by this is that as you increase the number of processes, you split up rows into smaller sections, thereby decreasing the of non-zero elements in a given row for each submatrix. 
+	\-eventually there will be so few non-zeros that you will have nothing to do and only overhead to keep you busy (performance will drop).
+	
+Trade off space:
+	- \# of processes
+	- threads per process
+	- \# of processes per socket
+	- \# of nodes utilized
+	- matrix size
+	- \# of non-zeros

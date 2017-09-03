@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  3 SEP 2017 14:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  3 SEP 2017 17:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -323,25 +323,58 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 417.
 
 (./dspmv-abstract.tex) (./dspmv-body.tex (./dspmv-intro.tex)
-(./dspmv-relatedwork.tex) (./dspmv-implementation.tex [1{/usr/local/texlive/201
-5/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+(./dspmv-relatedwork.tex
+Package epstopdf Info: Source file: <figures/spmv-historical-hpcg-bw.eps>
+(epstopdf)                    date: 2017-08-28 15:50:11
+(epstopdf)                    size: 505927 bytes
+(epstopdf)             Output file: <figures/spmv-historical-hpcg-bw-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2017-09-03 17:47:33
+(epstopdf)                    size: 43658 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/spmv-historical-hp
+cg-bw-eps-converted-to.pdf figures/spmv-historical-hpcg-bw.eps>
+(epstopdf)             \includegraphics on input line 4.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/spmv-historical-hpcg-bw-eps-converted-to.pdf, id=1, 429.605pt x 282.05
+376pt>
+File: figures/spmv-historical-hpcg-bw-eps-converted-to.pdf Graphic file (type p
+df)
+ <use figures/spmv-historical-hpcg-bw-eps-converted-to.pdf>
+Package pdftex.def Info: figures/spmv-historical-hpcg-bw-eps-converted-to.pdf u
+sed on input line 4.
+(pdftex.def)             Requested size: 365.16597pt x 239.74681pt.
+ [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
+Underfull \vbox (badness 4013) has occurred while \output is active []
+
+
+
+LaTeX Warning: Citation `azd2016exploiting' on page 2 undefined on input line 7
+1.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2 <./figures/spmv-historical-hpcg-bw-eps-converted-to.pdf>]) (./dspmv-impleme
+ntation.tex
 Overfull \hbox (40.7667pt too wide) in paragraph at lines 82--83
 [] $[]$ 
  []
 
-) (./dspmv-evaluation.tex) (./dspmv-benchmarks.tex) (./dspmv-processscaling.tex
-) (./dspmv-threadscaling.tex) (./dspmv-sparsityimpact.tex [2])
-(./dspmv-futurework.tex) (./dspmv-conclusion.tex)) (./0-DSPMV.bbl
-Missing character: There is no Å in font ptmr7t!
-Missing character: There is no „ in font ptmr7t!
-Missing character: There is no Å in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no “ in font ptmr7t!
+[3]) (./dspmv-evaluation.tex) (./dspmv-benchmarks.tex)
+(./dspmv-processscaling.tex) (./dspmv-threadscaling.tex)
+(./dspmv-sparsityimpact.tex) (./dspmv-futurework.tex) (./dspmv-conclusion.tex))
+(./0-DSPMV.bbl
+
+Package balance Warning: You have called \balance in second column
+(balance)                Columns might not be balanced.
+
+[4]
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
 )
 
 ** Conference Paper **
@@ -354,33 +387,36 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
+[5] (./0-DSPMV.aux)
 
-Overfull \vbox (1.47395pt too high) has occurred while \output is active []
+LaTeX Warning: There were undefined references.
 
-
-[3] (./0-DSPMV.aux) ) 
+ ) 
 Here is how much of TeX's memory you used:
- 4003 strings out of 493089
- 58274 string characters out of 6134842
- 135035 words of memory out of 5000000
- 7404 multiletter control sequences out of 15000+600000
- 36252 words of font info for 67 fonts, out of 8000000 for 9000
+ 4053 strings out of 493089
+ 59030 string characters out of 6134842
+ 140079 words of memory out of 5000000
+ 7437 multiletter control sequences out of 15000+600000
+ 44049 words of font info for 84 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 38i,9n,35p,1130b,305s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8
-r.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10
-.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.p
-fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
-></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
-sr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/t
-exlive/2015/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/20
-15/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-d
-ist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on 0-DSPMV.pdf (3 pages, 112723 bytes).
+ 38i,10n,35p,1075b,324s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
+xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texliv
+e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/
+2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/20
+15/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2015/tex
+mf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fo
+nts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1
+/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times
+/utmri8a.pfb>
+Output written on 0-DSPMV.pdf (5 pages, 184778 bytes).
 PDF statistics:
- 51 PDF objects out of 1000 (max. 8388607)
- 36 compressed objects within 1 object stream
+ 99 PDF objects out of 1000 (max. 8388607)
+ 67 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
