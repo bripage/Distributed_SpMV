@@ -22,6 +22,7 @@
 %	- once all nodes in a cluster row have completed computation of their assigned work, an MPI\_Reduce is called and performs a summation with the results being saved into a vector at the cluster row master for each %cluster row. 
 %	- the 0th column of cluster nodes contains all cluster row masters including the Global Master. It is on this cluster column that MPI\_Gather is called in order to collect the distributed results back at the global %master process. 
 %
+\subsection{Work Distribution and MPI}
 
 The application that was written to emulate the behavior of that used in the study performed by Bylina et al was written using the C++ programming language.
 We chose to forgo the use of proprietary libraries such as BLACS and MKL deciding instead to write explicit MPI and OpenMP directives to control distributed and shared memory behavior across the cluster environment. 
@@ -33,17 +34,35 @@ Benchmark matrices in the Matrix Market Format were chosen from the University o
 Matrices are read from file by the master MPI process and converted to Compressed Sparse Row (CSR) or Compressed Sparse Column (CSC) format, depending on the individual matrix being input.
 Both CSR and CSC formats provide a reduction on memory requirements thereby increasing performance while reducing data transfer in multinode environments since only data about non-zero elements in the input matrix are kept \TODO{this needs a cite}. 
 While the matrix is being read in, the distribution of work amongst the MPI processes is being determined. 
-The distribution pattern used by Bylina et al and which we have emulated, we call the $sub matrix method$, splits the input matrix $A$ into $p^2$ sub matrices in which each piece has nearly identical dimensions based on the number of processes $p$ and the row or column count of $A$.
-Therein the size of each sub matrix from $A_p$ will be $A_{rows}/p$  x $A_{cols}/p$.
+The distribution pattern used by Bylina et al and which we have emulated, we call the \emph{sub matrix method}, splits the input matrix $A$ into $p^2$ sub matrices in which each piece has nearly identical dimensions based on the number of processes $p$ and the row or column count of $A$.
+Therein the size of each sub matrix from $A_p$ will be $A_{rows}/\sqrt{p}$  x $A_{cols}/\sqrt{p}$. 
+We chose to require that $p$ be a non-negative square value.
+
+The csrSpMV class was created to contain submatrix information in CSR/CSC format so that work allocation accross MPI processes could be performed prior to MPI communication amongst those processes taking place, and stores information about each non-zero in three vectors. 
+As each new non-zero is read the sub matrix it is to be assigned to is easily determined from its row and column, and is subsequently added to the csrSpMV object representing that submtrix. 
 
 
-Each MPI process will receive its assigned sub matrix in CSR/CSC format, which is stored as three vectors belonging to a csrSpMV class object, for storing row column and data values for each non-zero. 
-On the master process a two dimensional vector of csrSpMV objects, the dimensions of which equate to the total number of MPI processes being used. 
-For our purposes we chose to require that the number of MPI processes be a positive square value. 
-This insures that the number of logical rows in the cluster environment is equivalent to the number of logical columns. 
-It is important for this distribution method that this be the case, as MPI communication takes advantage of column masters and row masters for data distribution in addition to reduction and gather efficiencies. 
+Given that there are the same number of processes as submatrices, $p$, we can view the processes as being laid out in a matrix $P$ in which process $P_{ij}$ will receive data corresponding to submatrix $A_{ij}$.
+The first row of the process matrix containing processes with global MPI ranks $0$ to $p-1$ are termed \emph{column masters}, while the first column of processes with global ranks such that $rank \% \sqrt{p} $ are \emph{row masters}.
+The MPI master process sends every column master the data contained within the csrSpMV object containg all data to be destributed amongts its column.
+Column masters will then send information about non-zeros to each process in its column.
+Each process receives its work allotment, if any, and proceeds to computation.
+
+It is important to note that given the \emph{sub matrix} distribution method considerable work imbalances including process with no work can occur between processes. As discussed in Bylina et al such imbalances can lead to entire computing nodes sitting idle as they have no data to process, thereby potentially decreasing overall performance. 
+
+\subsection{OpenMP SpMV}
 
 
-As each new non-zero is read the sub matrix it is to be assigned to is easily determined based off its row and column, with the 
+\subsection{Reduction and Validation}
 
+Upon completion of computation all nodes within a row perform an MPI recution where each processes results are summed and stored within the row master's \emph{result} vector.
+This is possible as each processes within the same row of the process matrix are working on the same rows from $A$, but only on those non-zero elements contained within their assigned submatrix from $A$. 
+After having performed the reduction a gather is performed on the process column contaning the global master process (also a row master), and all other row masters.
+At this point the global master process now has all results and can proceed with secondary computation if necessary. 
+
+During development it was necessary to insure that the hybrid portion of the program was computing the correct SpMV result for a given matrix $A$ and a dense vector.
+In order to verify accuracy of the hybrid version, a sequential version of the SpMV algorithm was performed on the master process only, prior to the hybrid portion of the program being performed.
+The results from each method were then compared and any differences indicated an error in computation.
+This was performed with a series of matrices, increasing in size, until no descrepencies were found amongst the test matrices. 
+With the validity of the hybrid algorithms communication and computation tested and verified, the sequential master only computation was removed so that benchmarking tests could be performed. 
 
