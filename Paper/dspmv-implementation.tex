@@ -51,8 +51,9 @@ Each process receives its work allotment, if any, and proceeds to computation.
 It is important to note that given the \emph{sub matrix} distribution method considerable work imbalances including process with no work can occur between processes. As discussed in Bylina et al such imbalances can lead to entire computing nodes sitting idle as they have no data to process, thereby potentially decreasing overall performance. 
 
 \subsection{OpenMP SpMV}
+
 \begin{algorithm}
-\caption{Hybrid SpMV}\label{euclid}
+\caption{Hybrid SpMV}\label{spmv}
 \begin{algorithmic}[1]
 	\Procedure{OpenMP SpMV}{}
 	\State \textbf{Input}: csrSpMV $\textit{nodeCSR}$, int $\textit{rowsPerThread}$
@@ -85,6 +86,20 @@ It is important to note that given the \emph{sub matrix} distribution method con
 	\EndProcedure
 \end{algorithmic}
 \end{algorithm}
+
+Algorithm \ref{spmv} shows the procedure used to perform the multithreaded SpMV computation within the OpenMP pragma section of the program. Each process performs this algorithim using the number of OpenMP threads set by the administrator at runtime via command line parameters. 
+The OpenMP pragma establishes several shared and private variables that can be accessed by an individual thread. 
+
+\bigskip
+\#pragma omp parallel num\_threads(control.ompThreads) shared(nodeCSR, result) private(ompThreadId, start, end, i, j, rowsPerThread)
+\bigskip
+
+As seen in the pragma above, the number of threads created is a value set at runtime and stored in the ompThreads variable with the control structure which contains other paramaters needed for distribution and control of the application.
+The csrSpMV object containing that particular node's data, called $nodeCSR$, is shared amongst all threads as is the $result$ vector.
+We can share these items since the data contained with $nodeCSR$ will only read from, and each individual thread will only acess the elements of $result$ corresponding to the rows which it has been assigned to work on.
+All other variables explicitly listed as private are necessary to insure each thread has a copy within its memory space without the possibility of being overwritten.
+Each process carries out the SpMV procedure once it is acquired all data from its column master and is ready to proceed with computation. 
+
 
 \subsection{Reduction and Validation}
 

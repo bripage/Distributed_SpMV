@@ -17,8 +17,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Paper/0-DSPMV.aux" afterPath="$PROJECT_DIR$/Paper/0-DSPMV.aux" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Paper/0-DSPMV.log" afterPath="$PROJECT_DIR$/Paper/0-DSPMV.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Paper/dspmv-Implementation.log" afterPath="$PROJECT_DIR$/Paper/dspmv-Implementation.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Paper/dspmv-body.tex" afterPath="$PROJECT_DIR$/Paper/dspmv-body.tex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Paper/dspmv-implementation.tex" afterPath="$PROJECT_DIR$/Paper/dspmv-implementation.tex" />
     </list>
     <ignored path="Distrubuted_SpMV.iws" />
@@ -43,8 +41,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="294" column="99" lean-forward="true" selection-start-line="294" selection-start-column="99" selection-end-line="294" selection-end-column="99" />
+            <state relative-caret-position="206">
+              <caret line="274" column="31" lean-forward="true" selection-start-line="274" selection-start-column="8" selection-end-line="274" selection-end-column="138" />
               <folding />
             </state>
           </provider>
@@ -496,12 +494,12 @@
       <workItem from="1503427126903" duration="8416000" />
       <workItem from="1503662242693" duration="4649000" />
       <workItem from="1504457489632" duration="1020000" />
-      <workItem from="1504459854351" duration="903000" />
+      <workItem from="1504459854351" duration="1109000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="513910000" />
+    <option name="totallyTimeSpent" value="514116000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1004" extended-state="6" />
@@ -799,8 +797,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="294" column="99" lean-forward="true" selection-start-line="294" selection-start-column="99" selection-end-line="294" selection-end-column="99" />
+        <state relative-caret-position="206">
+          <caret line="274" column="31" lean-forward="true" selection-start-line="274" selection-start-column="8" selection-end-line="274" selection-end-column="138" />
           <folding />
         </state>
       </provider>
