@@ -51,7 +51,40 @@ Each process receives its work allotment, if any, and proceeds to computation.
 It is important to note that given the \emph{sub matrix} distribution method considerable work imbalances including process with no work can occur between processes. As discussed in Bylina et al such imbalances can lead to entire computing nodes sitting idle as they have no data to process, thereby potentially decreasing overall performance. 
 
 \subsection{OpenMP SpMV}
-
+\begin{algorithm}
+\caption{Hybrid SpMV}\label{euclid}
+\begin{algorithmic}[1]
+	\Procedure{OpenMP SpMV}{}
+	\State \textbf{Input}: csrSpMV $\textit{nodeCSR}$, int $\textit{rowsPerThread}$
+	\medskip
+	\State $threadId \gets omp\_get\_thread\_num()$
+	\State $rStart \gets threadId*rowsPerThread$
+	\medskip
+	
+	\If {$threadId$ $==$ $threadCount-1$}
+		\State $rEnd \gets nodeCSR.Rows.size()$
+	\Else 
+		\State $rEnd \gets (threadId+1) * rowsPerThread$
+	\EndIf
+	\medskip
+	
+	\For{$i \gets rStart - rEnd$}
+		\State $dStart \gets nodeCSR.Rows[i]$
+		
+		\If {$i$ $==$ $rEnd-1$}
+			\State $dEnd \gets nodeCSR.Data.size()$
+		\Else 
+			\State $dEnd \gets nodeCSR.Rows[i+1]$
+		\EndIf
+			
+		\For{$j \gets dStart - dEnd$}
+			\State $\textit{result[i] += nodeCSR.Data[j] * nodeCSR.denseVec[i]}$
+		\EndFor
+	\EndFor
+	
+	\EndProcedure
+\end{algorithmic}
+\end{algorithm}
 
 \subsection{Reduction and Validation}
 

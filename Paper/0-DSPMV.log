@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  3 SEP 2017 13:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  3 SEP 2017 14:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -327,9 +327,13 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14> not available
 5/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
-]) (./dspmv-workdistribution.tex) (./dspmv-evaluation.tex) (./dspmv-benchmarks.
-tex) (./dspmv-processscaling.tex) (./dspmv-threadscaling.tex) (./dspmv-sparsity
-impact.tex)
+]
+Overfull \hbox (40.7667pt too wide) in paragraph at lines 81--82
+[] $[]$ 
+ []
+
+) (./dspmv-evaluation.tex) (./dspmv-benchmarks.tex) (./dspmv-processscaling.tex
+) (./dspmv-threadscaling.tex) (./dspmv-sparsityimpact.tex)
 (./dspmv-futurework.tex) (./dspmv-conclusion.tex)) (./0-DSPMV.bbl
 Missing character: There is no Å in font ptmr7t!
 Missing character: There is no „ in font ptmr7t!
@@ -356,11 +360,11 @@ Package balance Warning: You have called \balance in second column
 
 [2] (./0-DSPMV.aux) ) 
 Here is how much of TeX's memory you used:
- 3973 strings out of 493089
- 57880 string characters out of 6134842
- 132044 words of memory out of 5000000
- 7372 multiletter control sequences out of 15000+600000
- 35145 words of font info for 66 fonts, out of 8000000 for 9000
+ 4003 strings out of 493089
+ 58276 string characters out of 6134842
+ 136035 words of memory out of 5000000
+ 7404 multiletter control sequences out of 15000+600000
+ 36252 words of font info for 67 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  38i,9n,35p,1130b,305s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8
@@ -373,7 +377,7 @@ sr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/t
 exlive/2015/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/20
 15/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-d
 ist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on 0-DSPMV.pdf (2 pages, 102316 bytes).
+Output written on 0-DSPMV.pdf (2 pages, 111013 bytes).
 PDF statistics:
  48 PDF objects out of 1000 (max. 8388607)
  34 compressed objects within 1 object stream
