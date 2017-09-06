@@ -1,26 +1,57 @@
 \section{Evaluation}\label{sec:dspmv-evaluation}
--our program behaves the "same" as the Bylina et al paper. 
-
-- cluster architecture, network connectivity, number of nodes (max used), etc.
-- how timings where taken and GFlops calculated based on these time measurements. 
-	- note clock precision (nanoseconds)
-- number of tests run per test permuation
-	- best, worst, and averages were taken for all times recorded and GFlops calculated
-	
-- then tables and pretty graphs to talk about 
+%-our program behaves the "same" as the Bylina et al paper. 
 
 
-- As we add threads, we are adding memory access (bandwidth) due to the usage or more cores on a chip
+\subsection{Cluster Environment and Methodology}
+%- cluster architecture, network connectivity, number of nodes (max used), etc.
 
-- as we increase MPI processes we increase the number of processors, and threfore the potential for more threads.
+For our tests we utilized a 64 node computing cluster utilizing IBM NeXtScale nx360 M4 servers each with dual 8-core Intel(R) Xeon(R) CPU E5-2650 v2 at 2.60GHz. 
+The hardware specifications for each server provided two sockets and 16cores per node, for a total of 1024 cores available within the cluster. 
+Finally, cluster nodes where connected via Mellanox FDR non-blocking Infiniband.
 
--performance as a function of the number of non-zeros per row. What I mean by this is that as you increase the number of processes, you split up rows into smaller sections, thereby decreasing the of non-zero elements in a given row for each submatrix. 
-	\-eventually there will be so few non-zeros that you will have nothing to do and only overhead to keep you busy (performance will drop).
-	
-Trade off space:
-	- \# of processes
-	- threads per process
-	- \# of processes per socket
-	- \# of nodes utilized
-	- matrix size
-	- \# of non-zeros
+Our version of the sub matrix method was compiled on the test environment using the mpic++ compiler for OpenMPI 2.0.1, with pass through to gcc/g++ 6.2.0 and OpenMP version 4.5. 
+When compiling, the optimization level 3 flag to allow gcc to utilize all default optimization schemes for that optimization level. 
+
+Time measurements taken during tests where performed using the MPI\_Wtime() method, with nanosecond clock precision, in all MPI process and OpenMP thread count per process variations examined examined. 
+Three distinct time measurements were taken for each test run: distribution determination, SpMV computation, and total elapsed time. 
+While the distribution determination timings will provide valuable insight in our future works, we will focus on the those timings recorded for the computation of SpMV across all MPI processes.
+SpMV computation times where taken after each process had received its work allotment, and again after all nodes had completed their computation. 
+This was done to insure that time measurements incorporate differences in runtime between processes created by the potential for workload imbalances inherent to the sub matrix distribution method.
+
+\begin{table}[]
+	\centering
+	\caption{Properties of Benchmark Matrices}
+	\label{matrix-properties}
+	\begin{tabular}{lrrl}
+		\hline
+		\multicolumn{1}{|c|}{\textbf{Name}} & \multicolumn{1}{c|}{\textbf{Rows/Cols}} & \multicolumn{1}{c|}{\textbf{Non-Zeros}} & \multicolumn{1}{l|}{\textbf{Density}} \\ \hline
+		parabolic\_fem                      & 525825                             & 3674625                                 & 6.98                                   \\
+		bmw3\_2                             & 227632                             & 5757996                                 & 49.59                                  \\
+		torso1                              & 1116158                            & 8516500                                 & 73.32                                  \\
+		nd24k                               & 72000                              & 28715634                                & 398.83                            
+	\end{tabular}
+\end{table}
+
+During our tests, we used the same matrices as analyzed in \cite{techbib:6933066}. Table \ref{matrix-properties} lists the properties of each matrix including the number of rows/cols, total number of non-zeros, as well as the matrix's density. Density for this purpose is calculated as $rows / non-zeros$. Additionally all matrices being evaluated are square $n$x$n$ symmetric matrices. 
+
+
+%- number of tests run per test permuation
+%	- best, worst, and averages were taken for all times recorded and GFlops calculated
+%	
+%- then tables and pretty graphs to talk about 
+%
+%
+%- As we add threads, we are adding memory access (bandwidth) due to the usage or more cores on a chip
+%
+%- as we increase MPI processes we increase the number of processors, and threfore the potential for more threads.
+%
+%-performance as a function of the number of non-zeros per row. What I mean by this is that as you increase the number of processes, you split up rows into smaller sections, thereby decreasing the of non-zero elements in a %given row for each submatrix. 
+%	\-eventually there will be so few non-zeros that you will have nothing to do and only overhead to keep you busy (performance will drop).
+%	
+%Trade off space:
+%	- \# of processes
+%	- threads per process
+%	- \# of processes per socket
+%	- \# of nodes utilized
+%	- matrix size
+%	- \# of non-zeros
