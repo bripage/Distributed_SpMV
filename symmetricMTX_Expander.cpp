@@ -101,9 +101,9 @@ int main(int argc, char *argv[]) {
                     line.erase(0, pos + 1);
 
                     if (i == 0) {
-                        tempCol = ::atoi(token.c_str()) - 1;
+                        tempCol = ::atoi(token.c_str());
                     } else {
-                        tempRow = ::atoi(token.c_str()) - 1;
+                        tempRow = ::atoi(token.c_str());
                     }
 
                     i++;
