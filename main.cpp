@@ -151,7 +151,7 @@ int main(int argc, char *argv[]) {
         nodeCSR = new csrSpMV;
     }
 
-    std::cout << "MADE IT!" << std::endl
+    std::cout << "MADE IT!" << std::endl;
 
     if (control.masterOnly != true) {
         // master to send data to cluster column masters
