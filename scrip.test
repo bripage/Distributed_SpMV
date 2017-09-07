@@ -1,0 +1,9 @@
+#!/bin/bash
+for i in {1..16}
+do
+	qsub 49task_parabolic_fem_${i}_tests
+	qsub 49task_bmw3_2_${1}_tests
+	qsub 49task_torso1_${i}_tests
+	qsub 49task_nd24k_${i}_tests
+done
+exit 0

@@ -1,0 +1,173 @@
+9 tasks per node
+1 threads per task
+terminate called after throwing an instance of 'std::length_error'
+  what():  vector::_M_fill_insert
+[d8civy136:26724] *** Process received signal ***
+[d8civy136:26724] Signal: Aborted (6)
+[d8civy136:26724] Signal code:  (-6)
+[d8civy136:26724] [ 0] /lib64/libpthread.so.0(+0xf370)[0x2b53f6d95370]
+[d8civy136:26724] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2b53f6fd71d7]
+[d8civy136:26724] [ 2] /lib64/libc.so.6(abort+0x148)[0x2b53f6fd88c8]
+[d8civy136:26724] [ 3] /opt/crc/g/gcc/6.2.0/lib64/libstdc++.so.6(_ZN9__gnu_cxx27__verbose_terminate_handlerEv+0x15d)[0x2b53f634f6cd]
+[d8civy136:26724] [ 4] /opt/crc/g/gcc/6.2.0/lib64/libstdc++.so.6(+0x8e696)[0x2b53f634d696]
+[d8civy136:26724] [ 5] /opt/crc/g/gcc/6.2.0/lib64/libstdc++.so.6(+0x8e6e1)[0x2b53f634d6e1]
+[d8civy136:26724] [ 6] /opt/crc/g/gcc/6.2.0/lib64/libstdc++.so.6(+0x8e8f9)[0x2b53f634d8f9]
+[d8civy136:26724] [ 7] /opt/crc/g/gcc/6.2.0/lib64/libstdc++.so.6(_ZSt20__throw_length_errorPKc+0x3f)[0x2b53f6375cbf]
+[d8civy136:26724] [ 8] ./main[0x407a7f]
+[d8civy136:26724] [ 9] ./main[0x4065e9]
+[d8civy136:26724] [10] ./main[0x403249]
+[d8civy136:26724] [11] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2b53f6fc3b35]
+[d8civy136:26724] [12] ./main[0x403a9f]
+[d8civy136:26724] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 0 on node d8civy136 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------
+terminate called after throwing an instance of 'std::bad_alloc'
+  what():  std::bad_alloc
+[d8civy136:26756] *** Process received signal ***
+[d8civy136:26756] Signal: Aborted (6)
+[d8civy136:26756] Signal code:  (-6)
+[d8civy136:26756] [ 0] /lib64/libpthread.so.0(+0xf370)[0x2b2d59355370]
+[d8civy136:26756] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2b2d595971d7]
+[d8civy136:26756] [ 2] /lib64/libc.so.6(abort+0x148)[0x2b2d595988c8]
+[d8civy136:26756] [ 3] /opt/crc/g/gcc/6.2.0/lib64/libstdc++.so.6(_ZN9__gnu_cxx27__verbose_terminate_handlerEv+0x15d)[0x2b2d5890f6cd]
+[d8civy136:26756] [ 4] /opt/crc/g/gcc/6.2.0/lib64/libstdc++.so.6(+0x8e696)[0x2b2d5890d696]
+[d8civy136:26756] [ 5] /opt/crc/g/gcc/6.2.0/lib64/libstdc++.so.6(+0x8e6e1)[0x2b2d5890d6e1]
+[d8civy136:26756] [ 6] /opt/crc/g/gcc/6.2.0/lib64/libstdc++.so.6(+0x8e8f9)[0x2b2d5890d8f9]
+[d8civy136:26756] [ 7] /opt/crc/g/gcc/6.2.0/lib64/libstdc++.so.6(+0x8ee1c)[0x2b2d5890de1c]
+[d8civy136:26756] [ 8] ./main[0x406256]
+[d8civy136:26756] [ 9] ./main[0x406669]
+[d8civy136:26756] [10] ./main[0x403249]
+[d8civy136:26756] [11] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2b2d59583b35]
+[d8civy136:26756] [12] ./main[0x403a9f]
+[d8civy136:26756] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 0 on node d8civy136 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------
+terminate called after throwing an instance of 'std::length_error'
+  what():  vector::_M_fill_insert
+[d8civy136:27325] *** Process received signal ***
+[d8civy136:27325] Signal: Aborted (6)
+[d8civy136:27325] Signal code:  (-6)
+[d8civy136:27325] [ 0] /lib64/libpthread.so.0(+0xf370)[0x2b4ab5b5f370]
+[d8civy136:27325] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2b4ab5da11d7]
+[d8civy136:27325] [ 2] /lib64/libc.so.6(abort+0x148)[0x2b4ab5da28c8]
+[d8civy136:27325] [ 3] /opt/crc/g/gcc/6.2.0/lib64/libstdc++.so.6(_ZN9__gnu_cxx27__verbose_terminate_handlerEv+0x15d)[0x2b4ab51196cd]
+[d8civy136:27325] [ 4] /opt/crc/g/gcc/6.2.0/lib64/libstdc++.so.6(+0x8e696)[0x2b4ab5117696]
+[d8civy136:27325] [ 5] /opt/crc/g/gcc/6.2.0/lib64/libstdc++.so.6(+0x8e6e1)[0x2b4ab51176e1]
+[d8civy136:27325] [ 6] /opt/crc/g/gcc/6.2.0/lib64/libstdc++.so.6(+0x8e8f9)[0x2b4ab51178f9]
+[d8civy136:27325] [ 7] /opt/crc/g/gcc/6.2.0/lib64/libstdc++.so.6(_ZSt20__throw_length_errorPKc+0x3f)[0x2b4ab513fcbf]
+[d8civy136:27325] [ 8] ./main[0x407a7f]
+[d8civy136:27325] [ 9] ./main[0x4065e9]
+[d8civy136:27325] [10] ./main[0x403249]
+[d8civy136:27325] [11] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2b4ab5d8db35]
+[d8civy136:27325] [12] ./main[0x403a9f]
+[d8civy136:27325] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 0 on node d8civy136 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------
+[d8civy136:27357] *** Process received signal ***
+[d8civy136:27357] Signal: Segmentation fault (11)
+[d8civy136:27357] Signal code: Address not mapped (1)
+[d8civy136:27357] Failing at address: 0x2b20de36f000
+[d8civy136:27357] [ 0] /lib64/libpthread.so.0(+0xf370)[0x2b1f0fe00370]
+[d8civy136:27357] [ 1] /lib64/libc.so.6(+0x14abd4)[0x2b1f10157bd4]
+[d8civy136:27357] [ 2] /opt/crc/o/openmpi/2.0.1/gcc/6.2.0/eth/lib/libopen-pal.so.20(+0x713fb)[0x2b1f107403fb]
+[d8civy136:27357] [ 3] /opt/crc/o/openmpi/2.0.1/gcc/6.2.0/eth/lib/libmpi.so.20(mca_pml_ob1_send_request_schedule_once+0x1aa)[0x2b1f0f0a0bda]
+[d8civy136:27357] [ 4] /opt/crc/o/openmpi/2.0.1/gcc/6.2.0/eth/lib/libmpi.so.20(+0x1780e0)[0x2b1f0f0a30e0]
+[d8civy136:27357] [ 5] /opt/crc/o/openmpi/2.0.1/gcc/6.2.0/eth/lib/libopen-pal.so.20(mca_btl_vader_poll_handle_frag+0x226)[0x2b1f10741656]
+[d8civy136:27357] [ 6] /opt/crc/o/openmpi/2.0.1/gcc/6.2.0/eth/lib/libopen-pal.so.20(+0x726ce)[0x2b1f107416ce]
+[d8civy136:27357] [ 7] /opt/crc/o/openmpi/2.0.1/gcc/6.2.0/eth/lib/libopen-pal.so.20(opal_progress+0x3c)[0x2b1f10704fdc]
+[d8civy136:27357] [ 8] /opt/crc/o/openmpi/2.0.1/gcc/6.2.0/eth/lib/libmpi.so.20(mca_pml_ob1_send+0x2bd)[0x2b1f0f09737d]
+[d8civy136:27357] [ 9] /opt/crc/o/openmpi/2.0.1/gcc/6.2.0/eth/lib/libmpi.so.20(MPI_Send+0xdb)[0x2b1f0efb948b]
+[d8civy136:27357] [10] ./main[0x402bdf]
+[d8civy136:27357] [11] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2b1f1002eb35]
+[d8civy136:27357] [12] ./main[0x403a9f]
+[d8civy136:27357] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 0 on node d8civy136 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+terminate called after throwing an instance of 'std::length_error'
+  what():  vector::_M_fill_insert
+[d8civy136:27496] *** Process received signal ***
+[d8civy136:27496] Signal: Aborted (6)
+[d8civy136:27496] Signal code:  (-6)
+[d8civy136:27496] [ 0] /lib64/libpthread.so.0(+0xf370)[0x2b5bca706370]
+[d8civy136:27496] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2b5bca9481d7]
+[d8civy136:27496] [ 2] /lib64/libc.so.6(abort+0x148)[0x2b5bca9498c8]
+[d8civy136:27496] [ 3] /opt/crc/g/gcc/6.2.0/lib64/libstdc++.so.6(_ZN9__gnu_cxx27__verbose_terminate_handlerEv+0x15d)[0x2b5bc9cc06cd]
+[d8civy136:27496] [ 4] /opt/crc/g/gcc/6.2.0/lib64/libstdc++.so.6(+0x8e696)[0x2b5bc9cbe696]
+[d8civy136:27496] [ 5] /opt/crc/g/gcc/6.2.0/lib64/libstdc++.so.6(+0x8e6e1)[0x2b5bc9cbe6e1]
+[d8civy136:27496] [ 6] /opt/crc/g/gcc/6.2.0/lib64/libstdc++.so.6(+0x8e8f9)[0x2b5bc9cbe8f9]
+[d8civy136:27496] [ 7] /opt/crc/g/gcc/6.2.0/lib64/libstdc++.so.6(_ZSt20__throw_length_errorPKc+0x3f)[0x2b5bc9ce6cbf]
+[d8civy136:27496] [ 8] ./main[0x407a7f]
+[d8civy136:27496] [ 9] ./main[0x4065e9]
+[d8civy136:27496] [10] ./main[0x403249]
+[d8civy136:27496] [11] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2b5bca934b35]
+[d8civy136:27496] [12] ./main[0x403a9f]
+[d8civy136:27496] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 0 on node d8civy136 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------
+[d8civy136:27529] *** Process received signal ***
+[d8civy136:27529] Signal: Segmentation fault (11)
+[d8civy136:27529] Signal code: Address not mapped (1)
+[d8civy136:27529] Failing at address: 0x2af0c246d000
+[d8civy136:27529] [ 0] /lib64/libpthread.so.0(+0xf370)[0x2aeb216ff370]
+[d8civy136:27529] [ 1] /lib64/libc.so.6(+0x14abcb)[0x2aeb21a56bcb]
+[d8civy136:27529] [ 2] /opt/crc/o/openmpi/2.0.1/gcc/6.2.0/eth/lib/libopen-pal.so.20(+0x713fb)[0x2aeb2203f3fb]
+[d8civy136:27529] [ 3] /opt/crc/o/openmpi/2.0.1/gcc/6.2.0/eth/lib/libmpi.so.20(mca_pml_ob1_send_request_schedule_once+0x1aa)[0x2aeb2099fbda]
+[d8civy136:27529] [ 4] /opt/crc/o/openmpi/2.0.1/gcc/6.2.0/eth/lib/libmpi.so.20(+0x1780e0)[0x2aeb209a20e0]
+[d8civy136:27529] [ 5] /opt/crc/o/openmpi/2.0.1/gcc/6.2.0/eth/lib/libopen-pal.so.20(mca_btl_vader_poll_handle_frag+0x226)[0x2aeb22040656]
+[d8civy136:27529] [ 6] /opt/crc/o/openmpi/2.0.1/gcc/6.2.0/eth/lib/libopen-pal.so.20(+0x726ce)[0x2aeb220406ce]
+[d8civy136:27529] [ 7] /opt/crc/o/openmpi/2.0.1/gcc/6.2.0/eth/lib/libopen-pal.so.20(opal_progress+0x3c)[0x2aeb22003fdc]
+[d8civy136:27529] [ 8] /opt/crc/o/openmpi/2.0.1/gcc/6.2.0/eth/lib/libmpi.so.20(mca_pml_ob1_send+0x2bd)[0x2aeb2099637d]
+[d8civy136:27529] [ 9] /opt/crc/o/openmpi/2.0.1/gcc/6.2.0/eth/lib/libmpi.so.20(MPI_Send+0xdb)[0x2aeb208b848b]
+[d8civy136:27529] [10] ./main[0x402bdf]
+[d8civy136:27529] [11] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2aeb2192db35]
+[d8civy136:27529] [12] ./main[0x403a9f]
+[d8civy136:27529] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 0 on node d8civy136 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+terminate called after throwing an instance of 'std::bad_alloc'
+  what():  std::bad_alloc
+[d8civy136:27779] *** Process received signal ***
+[d8civy136:27779] Signal: Aborted (6)
+[d8civy136:27779] Signal code:  (-6)
+[d8civy136:27779] [ 0] /lib64/libpthread.so.0(+0xf370)[0x2b0758e06370]
+[d8civy136:27779] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2b07590481d7]
+[d8civy136:27779] [ 2] /lib64/libc.so.6(abort+0x148)[0x2b07590498c8]
+[d8civy136:27779] [ 3] /opt/crc/g/gcc/6.2.0/lib64/libstdc++.so.6(_ZN9__gnu_cxx27__verbose_terminate_handlerEv+0x15d)[0x2b07583c06cd]
+[d8civy136:27779] [ 4] /opt/crc/g/gcc/6.2.0/lib64/libstdc++.so.6(+0x8e696)[0x2b07583be696]
+[d8civy136:27779] [ 5] /opt/crc/g/gcc/6.2.0/lib64/libstdc++.so.6(+0x8e6e1)[0x2b07583be6e1]
+[d8civy136:27779] [ 6] /opt/crc/g/gcc/6.2.0/lib64/libstdc++.so.6(+0x8e8f9)[0x2b07583be8f9]
+[d8civy136:27779] [ 7] /opt/crc/g/gcc/6.2.0/lib64/libstdc++.so.6(+0x8ee1c)[0x2b07583bee1c]
+[d8civy136:27779] [ 8] ./main[0x406256]
+[d8civy136:27779] [ 9] ./main[0x406669]
+[d8civy136:27779] [10] ./main[0x403249]
+[d8civy136:27779] [11] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2b0759034b35]
+[d8civy136:27779] [12] ./main[0x403a9f]
+[d8civy136:27779] *** End of error message ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 0 on node d8civy136 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------
+terminate called after throwing an instance of 'std::bad_alloc'
+  what():  std::bad_alloc
+[d8civy136:28247] *** Process received signal ***
+[d8civy136:28247] Signal: Aborted (6)
+[d8civy136:28247] Signal code:  (-6)
+[d8civy136:28247] [ 0] /lib64/libpthread.so.0(+0xf370)[0x2ba47ce90370]
+[d8civy136:28247] [ 1] /lib64/libc.so.6(gsignal+0x37)[0x2ba47d0d21d7]
+[d8civy136:28247] [ 2] /lib64/libc.so.6(abort+0x148)[0x2ba47d0d38c8]
+[d8civy136:28247] [ 3] /opt/crc/g/gcc/6.2.0/lib64/libstdc++.so.6(_ZN9__gnu_cxx27__verbose_terminate_handlerEv+0x15d)[0x2ba47c44a6cd]
+[d8civy136:28247] [ 4] /opt/crc/g/gcc/6.2.0/lib64/libstdc++.so.6(+0x8e696)[0x2ba47c448696]
+[d8civy136:28247] [ 5] /opt/crc/g/gcc/6.2.0/lib64/libstdc++.so.6(+0x8e6e1)[0x2ba47c4486e1]
+[d8civy136:28247] [ 6] /opt/crc/g/gcc/6.2.0/lib64/libstdc++.so.6(+0x8e8f9)[0x2ba47c4488f9]
+[d8civy136:28247] [ 7] /opt/crc/g/gcc/6.2.0/lib64/libstdc++.so.6(+0x8ee1c)[0x2ba47c448e1c]
+[d8civy136:28247] [ 8] ./main[0x406256]
+[d8civy136:28247] [ 9] ./main[0x406669]
+[d8civy136:28247] [10] ./main[0x403249]
+[d8civy136:28247] [11] /lib64/libc.so.6(__libc_start_main+0xf5)[0x2ba47d0beb35]
+[d8civy136:28247] [12] ./main[0x403a9f]
+[d8civy136:28247] *** End of error message ***
