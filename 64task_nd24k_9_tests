@@ -5,7 +5,7 @@
 #$ -pe mpi-16 128
 ##$ -q *@@cswarm
 #$ -q long
-#$ -o 64task_nd24k_9_results.txt
+#$ -o 64task_nd24k_9_expanded_results.txt
 #$ -e errorurrmahgurd.err
 #$ -N ND24K_64task_9_Tests
 
@@ -20,9 +20,9 @@ echo "9 tasks per node"
 for i in {1..8..1}
   do 
 	echo "$i threads per task"
-        for k in {0..50..1}
+        for k in {0..20..1}
           do 
-        	mpirun -np 64 -npernode 9 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads $i --major-order col --distribution-method splitmatrix
+        	mpirun -np 64 -npernode 9 ./main -lm ../sample_matrices/nd24k_expanded.mtx --omp-threads $i --major-order col --distribution-method splitmatrix
           done
   done
 

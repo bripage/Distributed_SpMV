@@ -280,13 +280,11 @@ int main(int argc, char *argv[]) {
                 for (i = ompThreadId * rowsPerThread; i < nodeCSR->csrRows.size(); i++) {
                     if (i == nodeCSR->csrRows.size() - 1) {
                         for (j = nodeCSR->csrRows[i] - nodeCSR->csrRows[0]; j < nodeCSR->csrData.size(); j++) {
-                            //#pragma omp atomic
                             result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[i];
                         }
                     } else {
                         for (j = nodeCSR->csrRows[i] - nodeCSR->csrRows[0];
                              j < nodeCSR->csrRows[i + 1] - nodeCSR->csrRows[0]; j++) {
-                            //#pragma omp atomic
                             result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[i];
                         }
                     }
@@ -295,13 +293,11 @@ int main(int argc, char *argv[]) {
                 for (i = ompThreadId * rowsPerThread; i < (ompThreadId + 1) * rowsPerThread; i++) {
                     if (i == nodeCSR->csrRows.size() - 1) {
                         for (j = nodeCSR->csrRows[i] - nodeCSR->csrRows[0]; j < nodeCSR->csrData.size(); j++) {
-                            //#pragma omp atomic
                             result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[i];
                         }
                     } else {
                         for (j = nodeCSR->csrRows[i] - nodeCSR->csrRows[0];
                              j < nodeCSR->csrRows[i + 1] - nodeCSR->csrRows[0]; j++) {
-                            //#pragma omp atomic
                             result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[i];
                         }
                     }
@@ -310,15 +306,16 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    MPI_Barrier(MPI_COMM_WORLD);
+    //MPI_Barrier(MPI_COMM_WORLD);
     double spmvEndTime = MPI_Wtime();
+    double reductionStartTime, reductionEndTime;
 
     if (control.masterOnly != true) {
         if (control.myId == 0) {
             //nodeCSR->denseVec.clear();
             result.resize(control.rowsPerNode * control.clusterRows, 0.0);
         }
-
+        double reductionStartTime = MPI_Wtime();
         /*
          *      MPI REDUCE w/ SUM FROM COLUMNS TO ROW MASTER(S)
          */
@@ -339,6 +336,7 @@ int main(int argc, char *argv[]) {
                            control.row_comm);
             }
         }
+        reductionEndTime = MPI_Wtime();
 
         /*
          *      MPI GATHER FROM ROW MASTERS TO GLOBAL MASTER
@@ -386,7 +384,7 @@ int main(int argc, char *argv[]) {
         //std::cout << "Element Distribution Time: " << distributionEndTime - distributionStartTime << std::endl;
         //std::cout << "SmPV Time: " << spmvEndTime - spmvStartTime << std::endl;
         //std::cout << "Total time elapsed: " << overallEndTime - overallStartTime << std::endl;
-        std::cout << distributionEndTime - distributionStartTime << "," << spmvEndTime - spmvStartTime << ","
+        std::cout << distributionEndTime - distributionStartTime << "," << reductionEndTime - spmvStartTime << ","
                   << overallEndTime - overallStartTime << std::endl;
     }
 

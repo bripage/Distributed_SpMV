@@ -5,7 +5,7 @@
 #$ -pe mpi-16 80
 ##$ -q *@@cswarm
 #$ -q long
-#$ -o 64task_torso1_15_results.txt
+#$ -o 64task_torso1_15_expanded_results.txt
 #$ -e errorurrmahgurd.err
 #$ -N Torso1_64task_15_Tests
 
@@ -20,8 +20,8 @@ echo "15 tasks per node"
 for i in {1..8..1}
   do 
 	echo "$j threads per task"
-        for k in {0..50..1}
+        for k in {0..20..1}
           do 
-		mpirun -np 64 -npernode 15 ./main -lm ../sample_matrices/torso1.mtx --omp-threads $i --major-order col --distribution-method splitmatrix
+		mpirun -np 64 -npernode 15 ./main -lm ../sample_matrices/torso1_expanded.mtx --omp-threads $i --major-order col --distribution-method splitmatrix
           done
  done
