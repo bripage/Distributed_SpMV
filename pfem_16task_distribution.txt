@@ -1,0 +1,21 @@
+-Distribution of NonZero Elements
+-Column 0: 131457
+-	Row 0: 131457
+-	Row 1: 0
+-	Row 2: 0
+-	Row 3: 0
+-Column 1: 524676
+-	Row 0: 262146
+-	Row 1: 262530
+-	Row 2: 0
+-	Row 3: 0
+-Column 2: 624694
+-	Row 0: 261884
+-	Row 1: 121557
+-	Row 2: 241253
+-	Row 3: 0
+-Column 3: 819398
+-	Row 0: 262146
+-	Row 1: 142381
+-	Row 2: 185692
+-	Row 3: 229179

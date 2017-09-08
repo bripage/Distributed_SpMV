@@ -134,13 +134,9 @@ int main(int argc, char *argv[]) {
 
     double distributionStartTime = MPI_Wtime();
 
-    if (control.myId == 0) std::cout << "MADE IT!" << std::endl;
-
     if (!control.myId) {
         distribution_SplitMatrix(control, clusterColData);
     }
-    if (control.myId == 0) std::cout << "MADE IT Passed distribution" << std::endl;
-
 
     double distributionEndTime = MPI_Wtime();
 
