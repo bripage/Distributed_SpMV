@@ -1,4 +1,21 @@
 #!/bin/bash
+qsub 1task_parabolic_fem_tests
+qsub 1task_bmw3_2_tests
+qsub 1task_torso1_tests
+qsub 1task_nd24k_tests
+qsub 4task_parabolic_fem_tests
+qsub 4task_bmw3_2_tests
+qsub 4task_torso1_tests
+qsub 4task_nd24k_tests
+
+for i in {1..16}
+do
+  	qsub 9task_parabolic_fem_${i}_tests
+        qsub 9task_bmw3_2_${1}_tests
+        qsub 9task_torso1_${i}_tests
+        qsub 9task_nd24k_${i}_tests
+done
+
 for i in {1..16}
 do
 	qsub 49task_parabolic_fem_${i}_tests
@@ -6,4 +23,12 @@ do
 	qsub 49task_torso1_${i}_tests
 	qsub 49task_nd24k_${i}_tests
 done
+
+for i in {1..16}
+do
+        qsub 64task_bmw3_2_${1}_tests
+        qsub 64task_torso1_${i}_tests
+        qsub 64task_nd24k_${i}_tests
+done
+
 exit 0
