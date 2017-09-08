@@ -294,3 +294,8 @@ connection to the node, or possibly an internal failure of
 the daemon itself. We cannot recover from this failure, and
 therefore will terminate the job.
 --------------------------------------------------------------------------
+2 tasks per node
+1 threads per task
+3.96189,0.000693044,0.0155771,4.41864
+1.7087,0.000893584,0.0153147,2.16733
+1.77528,0.00106475,0.0163281,2.23215

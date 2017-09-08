@@ -1,0 +1,3 @@
+2 tasks per node
+1 threads per task
+9.72181,0.00429185,0.00629415,10.8799
