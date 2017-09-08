@@ -144,7 +144,9 @@ void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clust
         if (clusterColData[i]->csrRows.size() != control.rowCount){
             clusterColData[i]->csrRows.resize(control.rowCount, (clusterColData[i]->csrData.size()-1));
         }
+        std::cout << "clusterColData[i]->csrRows.size() = " << clusterColData[i]->csrRows.size() << std::endl;
     }
+
     std::cout << "out of resizing csrRows" << std::endl;
 
     for (int i = 0; i < control.rowCount; i++){
