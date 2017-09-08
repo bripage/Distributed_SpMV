@@ -33,7 +33,9 @@ void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clust
     int i = 0, j = 0, previousRow = -1;
     bool previousLineCommented = false;
     while (std::getline(infile, line)) {
+        //std::cout << control.rowCount << "," << control.colCount << "," << control.nonZeros << std::endl;
         if (line[0] != '%') {
+            //std::cout << line << std::endl;
             if (previousLineCommented == true) {
                 //some stuff to get row,col and size data, etc.
                 previousLineCommented = false;
@@ -45,6 +47,8 @@ void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clust
                     token = line.substr(0, pos);
                     line.erase(0, pos + 1);
 
+                    //std::cout << "token = " << token << std::endl;
+
                     if (i == 0) {
                         control.rowCount = std::stoi(token);
                     } else {
@@ -53,11 +57,15 @@ void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clust
 
                     i++;
                 }
-
+                //std::cout << "token = " << line << std::endl;
                 control.nonZeros = std::stoi(line);
 
                 control.rowsPerNode = ceil(control.rowCount / (float)control.clusterRows);
                 control.colsPerNode = ceil(control.colCount / (float)control.clusterCols);
+
+                std::cout << "rowsPerNode = " << control.rowsPerNode << "colsPerNode = " << control.colsPerNode << std::endl;
+
+                std::cout << control.rowCount << "," << control.colCount << "," << control.nonZeros << std::endl;
 
                 // determine where to test overflow for extra rows that must be added to the last cluster row's work
                 if (control.rowCount % control.clusterCols != 0) {
@@ -74,6 +82,9 @@ void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clust
                     colsLastColumn = control.colCount / control.clusterCols;
                 }
                 control.lastClusterColColStart = control.colCount - colsLastColumn;
+
+                std::cout << "lastClusterColColStart = " << control.lastClusterColColStart << std::endl;
+
             } else {
                 size_t pos = 0;
                 std::string token;
@@ -95,12 +106,13 @@ void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clust
                 // if the number of columns does not evenly divide amongst the number of cluster columns, the final
                 // cluster column is given the excess whereas all other columns receive the same amount of columns to
                 // work over.
-                if (tempCol > control.lastClusterColColStart) {
+                if (tempRow > control.lastClusterColColStart) {
                     assignedCol = control.clusterCols - 1;
                 } else {
-                    assignedCol = tempCol / control.colsPerNode;
+                    assignedCol = tempRow / control.colsPerNode;
                 }
 
+                //std::cout << "assignedCol = " << assignedCol << std::endl;
                 // if the row is
                 //
                 if (tempRow == previousRow) {
@@ -119,44 +131,50 @@ void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clust
 
                 previousRow = tempRow;
 
+                //std::cout << tempRow << "," << tempCol << "," << tempData << std::endl;
             }
         } else {
             previousLineCommented = true;
         }
     }
 
+    std::cout << "out of pushing onto distribtuon" << std::endl;
+
     for (int i = 0; i < control.clusterCols; i ++){
         if (clusterColData[i]->csrRows.size() != control.rowCount){
             clusterColData[i]->csrRows.resize(control.rowCount, (clusterColData[i]->csrData.size()-1));
         }
     }
+    std::cout << "out of resizing csrRows" << std::endl;
 
     for (int i = 0; i < control.rowCount; i++){
         clusterColData[0]->denseVec.push_back((double) (rand()) / (double) (RAND_MAX));
     }
 
-	// Output the number of Non Zero elements that have been assigned to each cluster column, as well as each cluster
+    std::cout << "out of pushing onto denseVec" << std::endl;
+
+    // Output the number of Non Zero elements that have been assigned to each cluster column, as well as each cluster
 	// node within that column. This will be used for memory transfer and performance evaluation calculations
-    /*
+
 	std::cout << std::endl << "Distribution of NonZero Elements" << std::endl;
     	for (int i = 0; i < control.clusterCols; i++){
         	std::cout << "Column " << i << ": " << clusterColData[i]->csrData.size() << std::endl;
 
 	    	for (int j = 0; j < control.clusterRows; j++) {
-		    std::cout << "\tRow " << j << ": ";
+                std::cout << "\tRow " << j << ": ";
 
-		    int start = clusterColData[i]->csrRows[j * control.rowsPerNode];
-		    int end;
+                int start = clusterColData[i]->csrRows[j * control.rowsPerNode];
+                int end;
 
-		    if (j == control.clusterRows - 1) {
-			    end = clusterColData[i]->csrData.size();
-		    } else {
-			    end = clusterColData[i]->csrRows[(j + 1) * control.rowsPerNode];
-		    }
-		    std::cout << end - start << std::endl;
+                if (j == control.clusterRows - 1) {
+                    end = clusterColData[i]->csrData.size();
+                } else {
+                    end = clusterColData[i]->csrRows[(j + 1) * control.rowsPerNode];
+                }
+                std::cout << end - start << std::endl;
 	    	}
     	}
-*/
+
     /*
 	std::cout << std::endl << "Distribution of NonZero Elements" << std::endl;
     	for (int i = 0; i < control.clusterCols; i++){

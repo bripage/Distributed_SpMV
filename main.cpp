@@ -25,7 +25,6 @@ int main(int argc, char *argv[]) {
     MPI_Comm_rank(MPI_COMM_WORLD, &control.myId);
 
     std::string argTemp;
-
     for (int i = 1; i < argc; i = i + 2) {
         argTemp = argv[i];
         if (argTemp == "-lm") {
@@ -135,9 +134,13 @@ int main(int argc, char *argv[]) {
 
     double distributionStartTime = MPI_Wtime();
 
+    if (control.myId == 0) std::cout << "MADE IT!" << std::endl;
+
     if (!control.myId) {
         distribution_SplitMatrix(control, clusterColData);
     }
+    if (control.myId == 0) std::cout << "MADE IT Passed distribution" << std::endl;
+
 
     double distributionEndTime = MPI_Wtime();
 
@@ -150,8 +153,6 @@ int main(int argc, char *argv[]) {
     } else {
         nodeCSR = new csrSpMV;
     }
-
-    std::cout << "MADE IT!" << std::endl;
 
     if (control.masterOnly != true) {
         // master to send data to cluster column masters
@@ -316,7 +317,7 @@ int main(int argc, char *argv[]) {
             //nodeCSR->denseVec.clear();
             result.resize(control.rowsPerNode * control.clusterRows, 0.0);
         }
-        double reductionStartTime = MPI_Wtime();
+        reductionStartTime = MPI_Wtime();
         /*
          *      MPI REDUCE w/ SUM FROM COLUMNS TO ROW MASTER(S)
          */
@@ -385,8 +386,8 @@ int main(int argc, char *argv[]) {
         //std::cout << "Element Distribution Time: " << distributionEndTime - distributionStartTime << std::endl;
         //std::cout << "SmPV Time: " << spmvEndTime - spmvStartTime << std::endl;
         //std::cout << "Total time elapsed: " << overallEndTime - overallStartTime << std::endl;
-        std::cout << distributionEndTime - distributionStartTime << "," << reductionEndTime - spmvStartTime << ","
-                  << overallEndTime - overallStartTime << std::endl;
+        std::cout << distributionEndTime - distributionStartTime << "," << spmvEndTime - spmvStartTime << ","
+                  << reductionEndTime - reductionStartTime << "," << overallEndTime - overallStartTime << std::endl;
     }
 
 
