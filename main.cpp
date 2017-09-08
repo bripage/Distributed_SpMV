@@ -334,6 +334,7 @@ int main(int argc, char *argv[]) {
                            control.row_comm);
             }
         }
+        MPI_Barrier(MPI_COMM_WORLD);
         reductionEndTime = MPI_Wtime();
 
         /*
@@ -347,9 +348,9 @@ int main(int argc, char *argv[]) {
                 MPI_Gather(&result[0], control.rowsPerNode, MPI_DOUBLE, &result[0], control.rowsPerNode,
                            MPI_DOUBLE, 0, control.col_comm);
             }
-
         }
     }
+
 
     MPI_Comm_free(&control.col_comm);
     MPI_Comm_free(&control.row_comm);
