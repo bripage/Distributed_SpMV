@@ -24,21 +24,21 @@
 #        qsub 16task_nd24k_"$i"_tests
 #done
 
-for i in {1..16}
-do
-  	qsub 25task_parabolicfem_"$i"_tests
-        qsub 25task_bmw3_2_"$i"_tests
-        qsub 25task_torso1_"$i"_tests
-        qsub 25task_nd24k_"$i"_tests
-done
-
 #for i in {1..16}
 #do
-#  	qsub 36task_parabolicfem_"$i"_tests
-#        qsub 36task_bmw3_2_"$i"_tests
-#        qsub 36task_torso1_"$i"_tests
-#        qsub 36task_nd24k_"$i"_tests
+#  	qsub 25task_parabolicfem_"$i"_tests
+#        qsub 25task_bmw3_2_"$i"_tests
+#        qsub 25task_torso1_"$i"_tests
+#        qsub 25task_nd24k_"$i"_tests
 #done
+
+for i in {1..16}
+do
+  	qsub 36task_parabolicfem_"$i"_tests
+        qsub 36task_bmw3_2_"$i"_tests
+        qsub 36task_torso1_"$i"_tests
+        qsub 36task_nd24k_"$i"_tests
+done
 
 #for i in {1..16}
 #do
