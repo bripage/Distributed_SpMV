@@ -5,7 +5,7 @@
 #$ -pe mpi-16 80
 ##$ -q *@@cswarm
 #$ -q long
-#$ -o 49task_torso1_11_results.txt
+#$ -o 49task_torso1_11_expanded_results.txt
 #$ -e errorurrmahgurd.err
 #$ -N Torso1_49task_11_Tests
 
@@ -21,8 +21,8 @@ echo "11 tasks per node"
 for i in {1..8..1}
   do 
 	echo "$i threads per task"
-        for j in {0..50..1}
+        for j in {0..20..1}
           do 
-        	mpirun -np 49 -npernode 11 ./main -lm ../sample_matrices/torso1.mtx --omp-threads $i --major-order col --distribution-method splitmatrix
+        	mpirun -np 49 -npernode 11 ./main -lm ../sample_matrices/torso1_expanded.mtx --omp-threads $i --major-order col --distribution-method splitmatrix
           done
   done
