@@ -1,14 +1,14 @@
 #!/bin/bash
-qsub 1task_parabolic_fem_tests
+qsub 1task_parabolicfem_tests
 qsub 1task_bmw3_2_tests
 qsub 1task_torso1_tests
 qsub 1task_nd24k_tests
-qsub 4task_parabolic_fem_tests
+qsub 4task_parabolicfem_tests
 qsub 4task_bmw3_2_tests
 qsub 4task_torso1_tests
 qsub 4task_nd24k_tests
 
-for i in {1..16}
+for i in {1..9}
 do
   	qsub 9task_parabolicfem_"$i"_tests
         qsub 9task_bmw3_2_"$i"_tests

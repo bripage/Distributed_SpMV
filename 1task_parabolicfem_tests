@@ -5,7 +5,7 @@
 #$ -pe mpi-16 16
 ##$ -q *@@cswarm
 #$ -q long
-#$ -o ../1task_parabolicfem_expanded_results.txt
+#$ -o 1task_parabolicfem_expanded_results.txt
 #$ -e errorurrmahgurd.err
 #$ -N ParabolicFem_1task_Tests
 
@@ -21,7 +21,7 @@ for j in {1..32..1}
 	echo "$j threads per task"
 	for k in {1..20..1}
 	  do 
-      		mpirun -np 1 ../main -lm ../../sample_matrices/parabolic_fem_expanded.mtx --omp-threads $j --major-order col --distribution-method splitmatrix --master-only true
+      		mpirun -np 1 ./main -lm ../sample_matrices/parabolic_fem_expanded.mtx --omp-threads $j --major-order col --distribution-method splitmatrix --master-only true
 	  done 
   done
 echo "task end"
