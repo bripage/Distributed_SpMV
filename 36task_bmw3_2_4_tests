@@ -5,9 +5,9 @@
 #$ -pe mpi-16 144
 ##$ -q *@@cswarm
 #$ -q long
-#$ -o 36task_torso1_4_expanded_results.txt
+#$ -o 36task_bmw3_2_4_expanded_results.txt
 #$ -e errorurrmahgurd.err
-#$ -N Torso1_36task_1_Tests
+#$ -N BMW3_2_36task_Tests
 
 module purge
 #module load gcc/6.2.0 
@@ -19,9 +19,9 @@ module load ompi/2.0.1-gcc-6.2.0
 echo "4 tasks per node"
 for j in {1..8..1}
   do
-    echo "$j threads per task"
-    for k in {0..20..1}
-      do
-                    mpirun -np 36 -npernode 4 ./main -lm ../sample_matrices/torso1_expanded.mtx --omp-threads $j --major-order col --distribution-method splitmatrix
-      done
+    	echo "$j threads per task"
+    	for k in {0..20..1}
+      	  do
+		mpirun -np 36 -npernode 4 ./main -lm ../sample_matrices/bmw3_2_expanded.mtx --omp-threads $j --major-order col --distribution-method splitmatrix
+      	  done
   done

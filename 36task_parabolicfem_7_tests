@@ -5,9 +5,9 @@
 #$ -pe mpi-16 96
 ##$ -q *@@cswarm
 #$ -q long
-#$ -o 36task_torso1_7_expanded_results.txt
+#$ -o 36task_parabolic_fem_7_expanded_results.txt
 #$ -e errorurrmahgurd.err
-#$ -N Torso1_36task_1_Tests
+#$ -N ParabolicFem_36task_Tests
 
 module purge
 #module load gcc/6.2.0 
@@ -22,6 +22,6 @@ for j in {1..8..1}
     echo "$j threads per task"
     for k in {0..20..1}
       do
-                    mpirun -np 36 -npernode 7 ./main -lm ../sample_matrices/torso1_expanded.mtx --omp-threads $j --major-order col --distribution-method splitmatrix
+                    mpirun -np 36 -npernode 7 ./main -lm ../sample_matrices/parabolic_fem_expanded.mtx --omp-threads $j --major-order col --distribution-method splitmatrix
       done
   done
