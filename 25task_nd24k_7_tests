@@ -5,7 +5,7 @@
 #$ -pe mpi-16 64
 ##$ -q *@@cswarm
 #$ -q long
-#$ -o 25task_nd24k_7_results.txt
+#$ -o 25task_nd24k_7_expanded_results.txt
 #$ -e errorurrmahgurd.err
 #$ -N ND24K_25task_7_Tests
 
@@ -16,17 +16,15 @@ module purge
 #module load hpx/4.0.0
 module load ompi/2.0.1-gcc-6.2.0
 
-echo "Bash version ${BASH_VERSION}..."
      echo "7 tasks per node"
      
      for j in {1..8..1}
         do 
             echo "$j threads per task"
             
-            for k in {0..50..1}
+            for k in {0..20..1}
                 do 
-                    mpirun -np 25 -npernode 7 ./main -lm ../sample_matrices/nd24k.mtx --omp-threads $j --major-order col --distribution-method splitmatrix
+                    mpirun -np 25 -npernode 7 ./main -lm ../sample_matrices/nd24k_expanded.mtx --omp-threads $j --major-order col --distribution-method splitmatrix
                 done
         done
- done
-echo "task end"
+
