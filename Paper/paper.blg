@@ -1,6 +1,6 @@
-This is BibTeX, Version 0.99d (TeX Live 2015)
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: 0-DSPMV.aux
+The top-level auxiliary file: paper.aux
 The style file: IEEEtran.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -20,22 +20,22 @@ Repeated entry---line 226 of file dspmv-refs.bib
  : @incollection{techbib:marjanovic2014performance
  :                                                ,
 I'm skipping whatever remains of this entry
--- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
+-- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
 You've used 10 entries,
-            4039 wiz_defined-function locations,
-            882 strings with 9938 characters,
-and the built_in function-call counts, 6924 in all, are:
+            4087 wiz_defined-function locations,
+            892 strings with 9999 characters,
+and the built_in function-call counts, 6955 in all, are:
 = -- 524
 > -- 177
 < -- 47
 + -- 94
 - -- 32
 * -- 343
-:= -- 1055
+:= -- 1056
 add.period$ -- 21
 call.type$ -- 10
 change.case$ -- 9
@@ -44,7 +44,7 @@ cite$ -- 10
 duplicate$ -- 488
 empty$ -- 592
 format.name$ -- 41
-if$ -- 1567
+if$ -- 1597
 int.to.chr$ -- 0
 int.to.str$ -- 10
 missing$ -- 93

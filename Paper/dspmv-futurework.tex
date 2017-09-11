@@ -1,6 +1,3 @@
 \section{Future Work}\label{sec:dspmv-futurework}
-- run computation on larger number of nodes/cores
-- wider range of sparsitys and non-zero distribution within matrices
-- explore performance impact of different distribution/decomposition methods
-- possible explore the impact of different storage formats within the different distribution methods
-- gpus/knights landing
+
+In the future this study will benefit from analysis at greater scale, with a wider range of matrix sparsity and $nnz$ distribution. Alternatively the impact of various decomposition methods beyond \emph{submatrix}, including balancing and work stealing methods, will be explored. While new distribution methods are being used new matrix storage formats can be introduced in an effort to find optimal pairing amongst the two design decisions. Clearly, alternative ways for performing reductions is essential. Lastly this study was undertaken with the ultimate goal of evaluating these design techniques upon new architectures in use as well as entering the pipeline, such as GPUs and the Intel Phi (Knights Landing).

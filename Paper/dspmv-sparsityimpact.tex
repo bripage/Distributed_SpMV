@@ -1,1 +1,9 @@
 \subsection{Impact: Sparsity}\label{sec:dspmv-sparsityimpact}
+
+The extent to which multi-core, mutli-node, or hybrid strategies are capable of producing increased performance is widely dependent on quantity and distribution of $nnz$ within a matrix. In the single process single node case, Fig. \ref{fig:spmv-page-singlenode}, only one the sub-matrix is created where $A_{ij} = A$. Given that the Algorithm \ref{alg:spmv} requires entire rows within a sub-matrix assigned to a process to be operated on by a single OpenMP thread, there is no decline in the $nnz$ per row. 
+
+In contrast as the number of MPI processes is increased, $nnz$ per row within a sub-matrix $A_{ij}$ decreases proportionally to $p$. For example Parabolic\_Fem's initial $nnz$ per row of $~7$ when process count increases from 1 to 4, doubling the number of cols in the process matrix, and reduces $nnz$ per row  via $density_{A_{ij}}/p$. As can be seen in Fig. \ref{fig:spmv-matrix-surfaces} matrices with fewer $nnz$ per row, exhibit decline in multi-nodal performance more rapidly than those with greater initial starting $nnz$ pder row. In the case of Parabolic\_Fem, once $p > 6$ $nnz$ per row is less than 1, leading to work imbalances across processes and lost performance as a result. 
+
+Subsequently while the average $nnz$ per row decreases quickly, overhead associated with reduction accross the larger process count in addition to the \emph{MPI\_Barrier} halting overall progress, begins to outpaced computation speedup seen from acquiring additional processes or nodes. Figure \ref{fig:spmv-comp-and-reduction} outlines that while computational time for SpMV may decrease, reduction and barrier weigh down overall run-times The gradual decrease in overhead seen is a symptom of decreased message size between each process and its $row master$, however a process with nothing to do will continue to have more overhead than productive computation. 
+
+

@@ -1,3 +1,3 @@
-\section{Conclusions}\label{sec:sga-conclusion}
+\section{Conclusions}\label{sec:dspmv-conclusion}
 
-- careful hybrid coding can give you better performance than MPI or OpenMP alone.
+In this study, a analytical model for approximating hybrid SpMV performance and speedup was created and examined via the reproduction of a prior multi-core/multi-nodel implementation \cite{techbib:6933066}. From the analysis performed, SpMV computations are predominantly bound by the memory characteristics of the architecture being utilized, with overall scalability affected strongly be sparsity and the resulting mal-distribution of work among processes, and by the costs of combining final sums via reductions. The \emph{submatrix} distribution method while inherently simplistic to program, is inherently prone to imbalance, thereby leading to differences in performance on a per matrix basis. However, as mentioned, this requires additional study.

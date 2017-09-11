@@ -22,6 +22,10 @@
 	year={2017},
 }
 
+@misc{graphblas,
+	url={http://graphblas.org/index.php?title=Graph_BLAS_Forum}
+}
+
 @INPROCEEDINGS{techbib:6933066,
 	author={B. Bylina and J. Bylina and P. Stpiczynski and D. Szalkowski},
 	booktitle={Computer Science and Information Systems (FedCSIS), 2014 Federated Conference on},
@@ -76,17 +80,6 @@
 	address = {Piscataway, NJ, USA},
 }
 
-@article{bylina_bylina_stpiczyński_szałkowski_2014, 
-	title={Performance Analysis of Multicore and Multinodal Implementation of SpMV Operation}, 
-	volume={2},
-	doi={10.15439/2014f313},
-	journal={Proceedings of the 2014 Federated Conference on Computer Science and Information Systems},
-	author={Bylina, Beata and Bylina, Jarosław and Stpiczyński, Przemysław and Szałkowski, Dominik},
-	year={2014},
-	month={Oct},
-	pages={{569-}–{576}}
-} 
-
 @article{saad1990sparskit,
 	title={SPARSKIT: A basic tool kit for sparse matrix computations}, 
 	volume={2},
@@ -114,4 +107,170 @@
 	journal={2008 IEEE International Symposium on Parallel and Distributed Processing},
 	year={2008},
 	pages={1-11}
+}
+% This file was created with JabRef 2.8.1.
+% Encoding: Cp1252
+
+@STRING{isscc = {Int. Solid State Circuits Conf.}}
+
+@STRING{tbd = {To Be Assigned}}
+
+@Inbook{techbib:Doerfler2006,
+	author="Doerfler, Douglas
+	and Brightwell, Ron",
+	editor="Mohr, Bernd
+	and Tr{\"a}ff, Jesper Larsson
+	and Worringen, Joachim
+	and Dongarra, Jack",
+	title="Measuring MPI Send and Receive Overhead and Application Availability in High Performance Network Interfaces",
+	bookTitle="Recent Advances in Parallel Virtual Machine and Message Passing Interface: 13th European PVM/MPI User's Group Meeting Bonn, Germany, September 17-20, 2006 Proceedings",
+	year="2006",
+	publisher="Springer Berlin Heidelberg",
+	address="Berlin, Heidelberg",
+	pages="331--338",
+	abstract="In evaluating new high-speed network interfaces, the usual metrics of latency and bandwidth are commonly measured and reported. There are numerous other message passing characteristics that can have a dramatic effect on application performance that should be analyzed when evaluating a new interconnect. One such metric is overhead, which dictates the networks ability to allow the application to perform non-message passing work while a transfer is taking place. A method for measuring overhead, and hence calculating application availability, is presented. Results for several next-generation network interfaces are also presented.",
+	isbn="978-3-540-39112-8",
+	doi="10.1007/11846802_46",
+	url="https://doi.org/10.1007/11846802_46"
+}
+
+@BOOK{bigdata:doi:10.1137/1.9780898719918,
+	title = {Graph Algorithms in the Language of Linear Algebra},
+	publisher = {Society for Industrial and Applied Mathematics},
+	year = {2011},
+	editor = {Jeremy Kepner and John Gilbert},
+	author = {Kepner, J. and Gilbert, J.},
+	doi = {10.1137/1.9780898719918},
+	eprint = {http://epubs.siam.org/doi/pdf/10.1137/1.9780898719918},
+	url = {http://epubs.siam.org/doi/abs/10.1137/1.9780898719918}
+}
+
+@ARTICLE{techbib:song-hpec,
+	author = {William S. Song and Vitaliy Gleyzer and Alexei Lomakin and Jeremy Kepner},
+	title = {Novel Graph Processor Architecture, Prototype Systems and Results},
+	journal = {HPEC COnference},
+	year = {2016},
+}
+
+@misc{techbib:mvapich2,
+	author = {Dhabaleswar Panda},
+	title ={The MVAPICH2 Project: Pushing the Frontier of InfiniBand and RDMA Networking Technologies},
+	year = {2015},
+	url = {http://hibd.cse.ohio-state.edu/static/media/talks/slide/osc\_theatre\_talk\_mv2.pdf},
+}
+
+@article{techbib:DBLP:journals/corr/HunoldC17,
+	author    = {Sascha Hunold and
+	Alexandra Carpen{-}Amarie},
+	title     = {Tuning {MPI} Collectives by Verifying Performance Guidelines},
+	journal   = {CoRR},
+	volume    = {abs/1707.09965},
+	year      = {2017},
+	url       = {http://arxiv.org/abs/1707.09965},
+	timestamp = {Sat, 05 Aug 2017 14:55:58 +0200},
+	biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/HunoldC17},
+	bibsource = {dblp computer science bibliography, http://dblp.org},
+}
+
+@article{techbib:Pjesivac-Grbovic:2007:PAM:1265235.1265248,
+	author = {Pje\v{s}ivac-Grbovi\'{c}, Jelena and Angskun, Thara and Bosilca, George and Fagg, Graham E. and Gabriel, Edgar and Dongarra, Jack J.},
+	title = {Performance Analysis of MPI Collective Operations},
+	journal = {Cluster Computing},
+	issue_date = {June      2007},
+	volume = {10},
+	number = {2},
+	month = jun,
+	year = {2007},
+	issn = {1386-7857},
+	pages = {127--143},
+	numpages = {17},
+	url = {http://dx.doi.org/10.1007/s10586-007-0012-0},
+	doi = {10.1007/s10586-007-0012-0},
+	acmid = {1265248},
+	publisher = {Kluwer Academic Publishers},
+	address = {Hingham, MA, USA},
+	keywords = {Hockney, LogGP, LogP, MPI collective communication, PLogP, Parallel communication models, Performance modeling},
+}
+
+@TECHREPORT{techbib:hpcg-snl-dongarra,
+	author = {Jack Dongarra and Michael Heroux},
+	title = {Toward a New Metric for Ranking High Performance Computing Systems},
+	institution = {Sandia National Labs},
+	year = {2013},
+	type = {Sandia Report},
+	number = {SAND2013 4744},
+	month = {June},
+	owner = {kogge},
+	timestamp = {2014.09.06},
+	url = {http://www.sandia.gov/~maherou/docs/HPCG-Benchmark.pdf},
+}
+
+@misc{techbib:stream,
+	author={John D. McCalpin},
+	title={{STREAM}: Sustainable Memory Bandwidth in High Performance Computers},
+	url={https://www.cs.virginia.edu/stream/},
+	year={2017},
+}
+
+@INPROCEEDINGS{techbib:6933066,
+	author={B. Bylina and J. Bylina and P. Stpiczynski and D. Szalkowski},
+	booktitle={Computer Science and Information Systems (FedCSIS), 2014 Federated Conference on},
+	title={Performance analysis of multicore and multinodal implementation of SpMV operation},
+	year={2014},
+	pages={569-576},
+	keywords={mathematics computing;matrix multiplication;multiprocessing systems;vectors;Intel math kernel library;SpMV operation;high performance clusters;multicore implementation;multinodal implementation;sparse matrix-dense vector multiplication;Algorithm design and analysis;Arrays;Clustering algorithms;Libraries;Multicore processing;Sparse matrices;Vectors;SpMV operation;computer cluster;multicore platforms;parallel matrix-vector multiplication;sparse matrix-dense vector multiplication},
+	doi={10.15439/2014F313},
+	month={Sept},
+}
+
+@INCOLLECTION{techbib:marjanovic2014performance,
+	author = {Marjanovi{\'c}, Vladimir and Gracia, Jos{\'e} and Glass, Colin W},
+	title = {Performance modeling of the HPCG benchmark},
+	booktitle = {High Performance Computing Systems. Performance Modeling, Benchmarking, and Simulation},
+	publisher = {Springer International Publishing},
+	year = {2014},
+	pages = {172--192},
+}
+
+@INPROCEEDINGS{techbib:7967092,
+	author={A. Azad and M. Jacquelin and A. Buluç and E. G. Ng},
+	booktitle={2017 IEEE International Parallel and Distributed Processing Symposium (IPDPS)},
+	title={The Reverse Cuthill-McKee Algorithm in Distributed-Memory},
+	year={2017},
+	pages={22-31},
+	keywords={Cray computers;distributed memory systems;matrix decomposition;parallel algorithms;sparse matrices;Cray XC30 supercomputer;RCM algorithm;distributed-memory architectures;reverse Cuthill-McKee algorithm;two-dimensional sparse matrix decomposition;Algorithm design and analysis;Bandwidth;Heuristic algorithms;Matrices;Sparse matrices;Supercomputers;Symmetric matrices;Matrix ordering;RCM;the reverse Cuthill-McKee algorithm},
+	doi={10.1109/IPDPS.2017.85},
+	month={May},
+}
+
+@MISC{techbib:Geus99towardsa,
+	author = {Roman Geus and Stefan Röllin},
+	title = {Towards a Fast Parallel Sparse Matrix-Vector Multiplication},
+	year = {1999},
+}
+
+@inproceedings{techbib:Marjanovic:2016:HBP:3019057.3019058,
+	author = {Marjanovic, Vladimir and Gracia, Jos{\'e} and Glass, Colin W.},
+	title = {HPC Benchmarking: Problem Size Matters},
+	booktitle = {Proceedings of the 7th International Workshop on Performance Modeling, Benchmarking and Simulation of High Performance Computing Systems},
+	series = {PMBS '16},
+	year = {2016},
+	isbn = {978-1-5090-5218-9},
+	location = {Salt Lake City, Utah},
+	pages = {1--10},
+	numpages = {10},
+	url = {https://doi.org/10.1109/PMBS.2016.6},
+	doi = {10.1109/PMBS.2016.6},
+	acmid = {3019058},
+	publisher = {IEEE Press},
+	address = {Piscataway, NJ, USA},
+}
+
+@inproceedings{blelloch2008provably,
+	author ={Blelloch, Guy E and Chowdhury, Rezaul A and Gibbons, Phillip B and Ramachandran, Vijaya and Chen, Shimin and Kozuch, Michael},
+	title = {Provably good multicore cache performance for divide-and-conquer algorithms},
+	booktitle = {Proceedings of the nineteenth annual ACM-SIAM symposium on Discrete algorithms},
+	pages = {501--510},
+	year = {2008},
+	organization = {Society for Industrial and Applied Mathematics}
 }

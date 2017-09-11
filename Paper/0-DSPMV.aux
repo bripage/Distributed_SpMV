@@ -1,54 +1,91 @@
 \relax 
 \citation{techbib:hpcg-snl-dongarra}
-\citation{techbib:marjanovic2014performance}
-\citation{techbib:marjanovic2014performance}
-\citation{techbib:marjanovic2014performance}
+\citation{bigdata:doi:10.1137/1.9780898719918}
+\citation{graphblas}
+\citation{techbib:song-hpec}
 \citation{techbib:6933066}
-\citation{saad1990sparskit}
+\citation{techbib:6933066}
+\citation{techbib:6933066}
+\citation{techbib:6933066}
+\citation{techbib:hpcg-snl-dongarra}
+\citation{techbib:marjanovic2014performance}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Speedup from \cite  {techbib:6933066} for 4 Sparse Martices.}}{1}}
+\newlabel{fig:spmv-bylina-speedup}{{1}{1}}
 \@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}}
 \newlabel{sec:dspmv-intro}{{I}{1}}
-\@writefile{toc}{\contentsline {section}{\numberline {II}Prior Work and Analytic Models}{1}}
-\newlabel{sec:dspmv-relatedwork}{{II}{1}}
-\newlabel{eqtn:BytesPerRow}{{1}{1}}
-\newlabel{eqtn:BytesPerFlop}{{2}{1}}
-\citation{azad2016exploiting}
+\@writefile{toc}{\contentsline {section}{\numberline {II}An Analytic Model}{1}}
+\newlabel{sec:dspmv-analytic}{{II}{1}}
+\citation{techbib:marjanovic2014performance}
+\citation{techbib:marjanovic2014performance}
+\citation{techbib:marjanovic2014performance}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces HPCG Flops per Byte of Memory Bandwidth vs. Peak flops.}}{2}}
+\newlabel{fig:spmv-historical-hpcg-bw}{{2}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-A}}Algorithm Overview}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-B}}Single Process}{2}}
+\newlabel{sec:spmv-analytic:single}{{\unhbox \voidb@x \hbox {II-B}}{2}}
+\citation{techbib:marjanovic2014performance}
+\citation{techbib:Pjesivac-Grbovic:2007:PAM:1265235.1265248}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Scaling in Flops per byte of BW.}}{3}}
+\newlabel{fig:spmv-flop-per-byte-vs-P}{{3}{3}}
+\newlabel{eq:1process}{{1}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Single Process Speedup.}}{3}}
+\newlabel{fig:spmv-partial-speedup}{{4}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-C}}Inter-process Effects}{3}}
+\citation{techbib:mvapich2}
+\citation{techbib:Doerfler2006}
+\citation{techbib:Pjesivac-Grbovic:2007:PAM:1265235.1265248}
 \citation{techbib:6933066}
-\citation{azd2016exploiting}
-\citation{Bulu2008OnTR}
-\citation{Bulu2008OnTR}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces HPCG Flops per Byte of Memory Bandwidth vs. Peak flops.}}{2}}
-\newlabel{fig:spmv-historical-hpcg-bw}{{1}{2}}
-\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces SpMV Projection Based on System Parameters.}}{2}}
-\newlabel{tab:analytic}{{I}{2}}
-\@writefile{toc}{\contentsline {section}{\numberline {III}Implementation}{3}}
-\newlabel{sec:dspmv-implementation}{{III}{3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-A}}Work Distribution and MPI}{3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}OpenMP SpMV}{3}}
+\newlabel{eq:plogp}{{3}{4}}
+\newlabel{eq:plogp2}{{5}{4}}
+\newlabel{eq:plogp3}{{6}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-D}}A Common Model}{4}}
 \citation{techbib:6933066}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Hybrid SpMV}}{4}}
-\newlabel{spmv}{{1}{4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-C}}Reduction and Validation}{4}}
-\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Properties of Benchmark Matrices}}{4}}
-\newlabel{matrix-properties}{{II}{4}}
-\@writefile{toc}{\contentsline {section}{\numberline {IV}Evaluation}{4}}
-\newlabel{sec:dspmv-evaluation}{{IV}{4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Cluster Environment and Methodology}{4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Impact: Process Count}{4}}
-\newlabel{sec:dspmv-process}{{\unhbox \voidb@x \hbox {IV-B}}{4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}}Impact: Thread Count}{4}}
-\newlabel{sec:dspmv-threadscaling}{{\unhbox \voidb@x \hbox {IV-C}}{4}}
+\citation{techbib:6933066}
+\citation{techbib:6933066}
+\citation{techbib:6933066}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces The Three Models.}}{5}}
+\newlabel{fig:spmv-analytic-model}{{5}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {III}Experimental Implementation}{5}}
+\newlabel{sec:dspmv-implementation}{{III}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-A}}Work Distribution and MPI}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}OpenMP SpMV}{5}}
+\citation{techbib:6933066}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Hybrid SpMV}}{6}}
+\newlabel{alg:spmv}{{1}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-C}}Reduction and Validation}{6}}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Properties of Benchmark Matrices}}{6}}
+\newlabel{matrix-properties}{{I}{6}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Evaluation}{6}}
+\newlabel{sec:dspmv-evaluation}{{IV}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Cluster Environment and Methodology}{6}}
+\citation{blelloch2008provably}
+\citation{techbib:6933066}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Impact: Thread Count}{7}}
+\newlabel{sec:dspmv-threadscaling}{{\unhbox \voidb@x \hbox {IV-B}}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Single Node Speedup}}{7}}
+\newlabel{fig:spmv-page-singlenode}{{6}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}}Impact: Process Count}{7}}
+\newlabel{sec:dspmv-process}{{\unhbox \voidb@x \hbox {IV-C}}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-D}}Impact: Sparsity}{7}}
+\newlabel{sec:dspmv-sparsityimpact}{{\unhbox \voidb@x \hbox {IV-D}}{7}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Future Work}{7}}
+\newlabel{sec:dspmv-futurework}{{V}{7}}
 \bibstyle{IEEEtran}
 \bibdata{dspmv-refs}
 \bibcite{techbib:hpcg-snl-dongarra}{1}
-\bibcite{techbib:marjanovic2014performance}{2}
-\bibcite{techbib:6933066}{3}
-\bibcite{saad1990sparskit}{4}
-\bibcite{azad2016exploiting}{5}
-\bibcite{Bulu2008OnTR}{6}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-D}}Impact: Sparsity}{5}}
-\newlabel{sec:dspmv-sparsityimpact}{{\unhbox \voidb@x \hbox {IV-D}}{5}}
-\@writefile{toc}{\contentsline {section}{\numberline {V}Future Work}{5}}
-\newlabel{sec:dspmv-futurework}{{V}{5}}
-\@writefile{toc}{\contentsline {section}{\numberline {VI}Conclusions}{5}}
-\newlabel{sec:sga-conclusion}{{VI}{5}}
-\@writefile{toc}{\contentsline {section}{References}{5}}
+\bibcite{bigdata:doi:10.1137/1.9780898719918}{2}
+\bibcite{graphblas}{3}
+\bibcite{techbib:song-hpec}{4}
+\bibcite{techbib:6933066}{5}
+\bibcite{techbib:marjanovic2014performance}{6}
+\bibcite{techbib:Pjesivac-Grbovic:2007:PAM:1265235.1265248}{7}
+\bibcite{techbib:mvapich2}{8}
+\bibcite{techbib:Doerfler2006}{9}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Hybrid SpMV Performance for Matrices with varying Sparsity}}{8}}
+\newlabel{fig:spmv-matrix-surfaces}{{7}{8}}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Conclusions}{8}}
+\newlabel{sec:dspmv-conclusion}{{VI}{8}}
+\@writefile{toc}{\contentsline {section}{References}{8}}
+\bibcite{blelloch2008provably}{10}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Computational Time and Reduce + Barrier Overhead}}{9}}
+\newlabel{fig:spmv-comp-and-reduction}{{8}{9}}

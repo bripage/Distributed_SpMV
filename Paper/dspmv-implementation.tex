@@ -1,4 +1,4 @@
-\section{Implementation}\label{sec:dspmv-implementation}
+\section{Experimental Implementation}\label{sec:dspmv-implementation}
 
 %- unlike Bylina et al's multinodal algorithm, which used BLACS to perform the data distribution amongst the cluster, as MKL to perfrom the multithreaded SpMV on each cluster node, a hybrid distrbuted SpMV was designed as a %single stand alone entity. 
 %	- control over all MPI and OpenMP operations, including thread and process affinity, resource over scheduling, etc.
@@ -24,36 +24,33 @@
 %
 \subsection{Work Distribution and MPI}
 
-The application that was written to emulate the behavior of that used in the study performed by Bylina et al was written using the C++ programming language.
-We chose to forgo the use of proprietary libraries such as BLACS and MKL deciding instead to write explicit MPI and OpenMP directives to control distributed and shared memory behavior across the cluster environment. 
-Special care was paid to insure that the communication pattern matched that of the 2d cluster methods in the BLACS library which were used in the prior work.
-It was felt that by not including these packages greater control over communication and memory access parameters could be achieved, even though the result may not be as highly optimized for particular applications, architectures, or compilers. 
+Communication and computational behavior of a multi-nodal solver developed for a previous study \cite{techbib:6933066} was used as the basis for our implementation
+Unlike \cite{techbib:6933066}, we chose to forgo the use of proprietary libraries such as BLACS and MKL deciding instead to write explicit MPI and OpenMP directives to control distributed and shared memory behavior across the cluster environment. 
+It was felt that exclusion of these libraries provided, greater control over program operation throughout our evaluation.
+Special care was paid to insure that the communication pattern matched that of the 2D cluster methods in the BLACS library which were used in the prior work.
+ 
+
+Matrices, stored in Matrix Market Format (*.mtx), are read from file by the master MPI process and converted to Compressed Sparse Row (CSR) or Compressed Sparse Column (CSC) format, depending on the input matrix.
+CSR and CSC formats provide a reduced memory requirements, thereby increasing performance while reducing data transfer in multi-node environments since only data about non-zero elements in the input matrix are kept. 
+While the matrix is being read in, the distribution of work amongst the process matrix is being determined. 
+The \emph{sub matrix method} used in \cite{techbib:6933066} breaks the input matrix $A$ into $p^2$ sub matrices with nearly identical dimensions based on the number of rows/cols in teh process matrix and the row/col count of $A$.
+We chose to require that $p$ be a non-negative square value, therein the size of each sub-matrix from $A_p$ will be $A_{rows}/p$  x $A_{cols}/p$. 
 
 
-Benchmark matrices in the Matrix Market Format were chosen from the University of Florida Sparse Matrix Collection. The characteristics of the matrices chosen is discussed in greater detail in section 4a "Benchmarks". 
-Matrices are read from file by the master MPI process and converted to Compressed Sparse Row (CSR) or Compressed Sparse Column (CSC) format, depending on the individual matrix being input.
-Both CSR and CSC formats provide a reduction on memory requirements thereby increasing performance while reducing data transfer in multinode environments since only data about non-zero elements in the input matrix are kept \TODO{this needs a cite}. 
-While the matrix is being read in, the distribution of work amongst the MPI processes is being determined. 
-The distribution pattern used by Bylina et al and which we have emulated, we call the \emph{sub matrix method}, splits the input matrix $A$ into $p^2$ sub matrices in which each piece has nearly identical dimensions based on the number of processes $p$ and the row or column count of $A$.
-Therein the size of each sub matrix from $A_p$ will be $A_{rows}/\sqrt{p}$  x $A_{cols}/\sqrt{p}$. 
-We chose to require that $p$ be a non-negative square value.
-
-The csrSpMV class was created to contain submatrix information in CSR/CSC format so that work allocation accross MPI processes could be performed prior to MPI communication amongst those processes taking place, and stores information about each non-zero in three vectors. 
-As each new non-zero is read the sub matrix it is to be assigned to is easily determined from its row and column, and is subsequently added to the csrSpMV object representing that submtrix. 
+The csrSpMV class was created to contain sub-matrix information in CSR/CSC format so that work allocation across MPI processes could be performed prior to MPI communication amongst the process matrix taking place. 
+As each non-zero is read, its row and column are used to determine which $A_p$ it will be assigned to, and is subsequently added to the csrSpMV object representing that sub-matrix 
 
 
-Given that there are the same number of processes as submatrices, $p$, we can view the processes as being laid out in a matrix $P$ in which process $P_{ij}$ will receive data corresponding to submatrix $A_{ij}$.
-The first row of the process matrix containing processes with global MPI ranks $0$ to $p-1$ are termed \emph{column masters}, while the first column of processes with global ranks such that $rank \% \sqrt{p} $ are \emph{row masters}.
-The MPI master process sends every column master the data contained within the csrSpMV object containg all data to be destributed amongts its column.
-Column masters will then send information about non-zeros to each process in its column.
-Each process receives its work allotment, if any, and proceeds to computation.
+The first row of the process matrix containing processes with global MPI ranks $0$ to $(p-1)$ are termed \emph{column masters}, while the first column of processes with global rank such that $rank$ \% $\sqrt{p}$ are \emph{row masters}.
+The MPI master process sends every column master all data to be distributed amongst its column.
+Column masters will then transmit each process in its column their individual work allotment, wherein after receipt each process proceeds to computation.
 
-It is important to note that given the \emph{sub matrix} distribution method considerable work imbalances including process with no work can occur between processes. As discussed in Bylina et al such imbalances can lead to entire computing nodes sitting idle as they have no data to process, thereby potentially decreasing overall performance. 
+It is important point out considerable work imbalances including process with no work can occur between processes in the \emph{sub matrix} distribution method. As discussed in \cite{techbib:6933066} such imbalances can lead to entire computing nodes sitting idle as they have no data to process, thereby potentially decreasing overall performance. 
 
 \subsection{OpenMP SpMV}
 
 \begin{algorithm}
-\caption{Hybrid SpMV}\label{spmv}
+\caption{Hybrid SpMV}\label{alg:spmv}
 \begin{algorithmic}[1]
 	\Procedure{OpenMP SpMV}{}
 	\State \textbf{Input}: csrSpMV $\textit{nodeCSR}$, int $\textit{rowsPerThread}$
@@ -79,7 +76,8 @@ It is important to note that given the \emph{sub matrix} distribution method con
 		\EndIf
 			
 		\For{$j \gets dStart - dEnd$}
-			\State $\textit{result[i] += nodeCSR.Data[j] * nodeCSR.denseVec[i]}$
+			\State $\textit{result[i] += nodeCSR.Data[j]$\
+				$* nodeCSR.denseVec[i]}$
 		\EndFor
 	\EndFor
 	
@@ -87,30 +85,27 @@ It is important to note that given the \emph{sub matrix} distribution method con
 \end{algorithmic}
 \end{algorithm}
 
-Algorithm \ref{spmv} shows the procedure used to perform the multithreaded SpMV computation within the OpenMP pragma section of the program. Each process performs this algorithim using the number of OpenMP threads set by the administrator at runtime via command line parameters. 
-The OpenMP pragma establishes several shared and private variables that can be accessed by an individual thread. 
+Algorithm \ref{alg:spmv} shows the procedure used to perform the multi-threaded SpMV computation within the OpenMP pragma. Each process performs this algorithm with the number of OpenMP threads established at runtime via command line parameters, along with several shared and private variables that can be accessed by an individual thread. 
 
-\bigskip
-\#pragma omp parallel num\_threads(control.ompThreads) shared(nodeCSR, result) private(ompThreadId, start, end, i, j, rowsPerThread)
-\bigskip
+%\bigskip
+%\#pragma omp parallel num\_threads(control.ompThreads) shared(nodeCSR, result) private(ompThreadId, start, end, i, j, rowsPerThread)
+%\bigskip
 
-As seen in the pragma above, the number of threads created is a value set at runtime and stored in the ompThreads variable with the control structure which contains other paramaters needed for distribution and control of the application.
-The csrSpMV object containing that particular node's data, called $nodeCSR$, is shared amongst all threads as is the $result$ vector.
-We can share these items since the data contained with $nodeCSR$ will only read from, and each individual thread will only acess the elements of $result$ corresponding to the rows which it has been assigned to work on.
-All other variables explicitly listed as private are necessary to insure each thread has a copy within its memory space without the possibility of being overwritten.
-Each process carries out the SpMV procedure once it is acquired all data from its column master and is ready to proceed with computation. 
-
+%As seen in the pragma above, the number of threads created is a value set at runtime and stored in the ompThreads variable with the control structure which contains other paramaters needed for distribution and control of the application.
+The csrSpMV object containing that particular processes data, called $nodeCSR$, is shared amongst all threads as is the $result$ vector.
+It is appropriate to share data in such a manner since data contained within $nodeCSR$ is only read from, while individual threads access only those elements of $result$ corresponding to the rows to which they have been assigned.
+All other variables explicitly listed as private are necessary to ensure each thread has a copy within its memory space without the possibility of being overwritten.
+Each process carries out the SpMV procedure once it has acquired all data from its column master and is ready to proceed with computation. 
 
 \subsection{Reduction and Validation}
 
-Upon completion of computation all nodes within a row perform an MPI recution where each processes results are summed and stored within the row master's \emph{result} vector.
-This is possible as each processes within the same row of the process matrix are working on the same rows from $A$, but only on those non-zero elements contained within their assigned submatrix from $A$. 
-After having performed the reduction a gather is performed on the process column contaning the global master process (also a row master), and all other row masters.
-At this point the global master process now has all results and can proceed with secondary computation if necessary. 
+Upon completion of computation all processes within a row perform an MPI reduction in which results are summed and stored within the row master's \emph{result} vector.
+After having performed the reduction a gather is performed on the process column containing the global master process (a row master), as well as all other row masters.
+Finally the global master process has all results and can proceed with secondary computation if necessary. 
 
-During development it was necessary to insure that the hybrid portion of the program was computing the correct SpMV result for a given matrix $A$ and a dense vector.
+During development it was necessary to ensure that the hybrid portion of the program was computing the correct SpMV result for a given matrix $A$ and a dense vector.
 In order to verify accuracy of the hybrid version, a sequential version of the SpMV algorithm was performed on the master process only, prior to the hybrid portion of the program being performed.
 The results from each method were then compared and any differences indicated an error in computation.
-This was performed with a series of matrices, increasing in size, until no descrepencies were found amongst the test matrices. 
-With the validity of the hybrid algorithms communication and computation tested and verified, the sequential master only computation was removed so that benchmarking tests could be performed. 
+This was performed with a series of matrices, increasing in size, until no discrepancies were found amongst the test matrices. 
+With the validity of the hybrid algorithm's communication and computation tested/verified, the sequential computation was removed so that evaluation could be proceed. 
 

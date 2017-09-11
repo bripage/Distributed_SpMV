@@ -1,0 +1,118 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{techbib:hpcg-snl-dongarra}
+\citation{bigdata:doi:10.1137/1.9780898719918}
+\citation{graphblas}
+\citation{techbib:song-hpec}
+\citation{techbib:6933066}
+\citation{techbib:6933066}
+\citation{techbib:6933066}
+\citation{techbib:6933066}
+\citation{techbib:6933066}
+\@writefile{toc}{\contentsline {section}{Abstract}{1}{section*.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}}
+\newlabel{sec:dspmv-intro}{{1}{1}{Introduction}{section.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Speedup from \citep  {techbib:6933066} for 4 Sparse Matrices\relax }}{1}{figure.caption.5}}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:spmv-bylina-speedup}{{1}{1}{Speedup from \cite {techbib:6933066} for 4 Sparse Matrices\relax }{figure.caption.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}An Analytic Model}{1}{section.2}}
+\newlabel{sec:dspmv-analytic}{{2}{1}{An Analytic Model}{section.2}{}}
+\citation{techbib:hpcg-snl-dongarra}
+\citation{techbib:marjanovic2014performance}
+\citation{techbib:marjanovic2014performance}
+\citation{techbib:marjanovic2014performance}
+\citation{techbib:marjanovic2014performance}
+\citation{techbib:marjanovic2014performance}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Algorithm Overview}{2}{subsection.2.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Single Process}{2}{subsection.2.2}}
+\newlabel{sec:spmv-analytic:single}{{2.2}{2}{Single Process}{subsection.2.2}{}}
+\newlabel{eq:1process}{{1}{2}{Single Process}{equation.2.1}{}}
+\citation{techbib:Pjesivac-Grbovic:2007:PAM:1265235.1265248}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces HPCG Flops per Byte of Memory Bandwidth vs. Peak flops.\relax }}{3}{figure.caption.6}}
+\newlabel{fig:spmv-historical-hpcg-bw}{{2}{3}{HPCG Flops per Byte of Memory Bandwidth vs. Peak flops.\relax }{figure.caption.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Scaling in Flops per byte of BW.\relax }}{3}{figure.caption.7}}
+\newlabel{fig:spmv-flop-per-byte-vs-P}{{3}{3}{Scaling in Flops per byte of BW.\relax }{figure.caption.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Inter-process Effects}{3}{subsection.2.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Single Process Speedup.\relax }}{3}{figure.caption.8}}
+\newlabel{fig:spmv-partial-speedup}{{4}{3}{Single Process Speedup.\relax }{figure.caption.8}{}}
+\newlabel{eq:plogp}{{3}{3}{Inter-process Effects}{equation.2.3}{}}
+\citation{techbib:mvapich2}
+\citation{techbib:Doerfler2006}
+\citation{techbib:Pjesivac-Grbovic:2007:PAM:1265235.1265248}
+\citation{techbib:6933066}
+\citation{techbib:6933066}
+\citation{techbib:6933066}
+\citation{techbib:6933066}
+\newlabel{eq:plogp2}{{5}{4}{Inter-process Effects}{equation.2.5}{}}
+\newlabel{eq:plogp3}{{6}{4}{Inter-process Effects}{equation.2.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}A Common Model}{4}{subsection.2.4}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Experimental Implementation}{4}{section.3}}
+\newlabel{sec:dspmv-implementation}{{3}{4}{Experimental Implementation}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Work Distribution and MPI}{4}{subsection.3.1}}
+\citation{techbib:6933066}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces The Three Models.\relax }}{5}{figure.caption.9}}
+\newlabel{fig:spmv-analytic-model}{{5}{5}{The Three Models.\relax }{figure.caption.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}OpenMP SpMV}{5}{subsection.3.2}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Hybrid SpMV\relax }}{5}{algorithm.1}}
+\newlabel{alg:spmv}{{1}{5}{Hybrid SpMV\relax }{algorithm.1}{}}
+\citation{techbib:6933066}
+\citation{blelloch2008provably}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Properties of Benchmark Matrices\relax }}{6}{table.caption.10}}
+\newlabel{matrix-properties}{{1}{6}{Properties of Benchmark Matrices\relax }{table.caption.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Reduction and Validation}{6}{subsection.3.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Evaluation}{6}{section.4}}
+\newlabel{sec:dspmv-evaluation}{{4}{6}{Evaluation}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Cluster Environment and Methodology}{6}{subsection.4.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Impact: Thread Count}{6}{subsection.4.2}}
+\newlabel{sec:dspmv-threadscaling}{{4.2}{6}{Impact: Thread Count}{subsection.4.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Single Node Speedup\relax }}{6}{figure.caption.11}}
+\newlabel{fig:spmv-page-singlenode}{{6}{6}{Single Node Speedup\relax }{figure.caption.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Impact: Process Count}{6}{subsection.4.3}}
+\newlabel{sec:dspmv-process}{{4.3}{6}{Impact: Process Count}{subsection.4.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Hybrid SpMV Performance for Matrices with varying Sparsity\relax }}{7}{figure.caption.12}}
+\newlabel{fig:spmv-matrix-surfaces}{{7}{7}{Hybrid SpMV Performance for Matrices with varying Sparsity\relax }{figure.caption.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Computational Time and Reduce + Barrier Overhead\relax }}{7}{figure.caption.13}}
+\newlabel{fig:spmv-comp-and-reduction}{{8}{7}{Computational Time and Reduce + Barrier Overhead\relax }{figure.caption.13}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Impact: Sparsity}{7}{subsection.4.4}}
+\newlabel{sec:dspmv-sparsityimpact}{{4.4}{7}{Impact: Sparsity}{subsection.4.4}{}}
+\citation{techbib:6933066}
+\bibstyle{IEEEtran}
+\bibdata{dspmv-refs}
+\bibcite{techbib:hpcg-snl-dongarra}{{1}{}{{}}{{}}}
+\bibcite{bigdata:doi:10.1137/1.9780898719918}{{2}{}{{}}{{}}}
+\bibcite{graphblas}{{3}{}{{}}{{}}}
+\bibcite{techbib:song-hpec}{{4}{}{{}}{{}}}
+\bibcite{techbib:6933066}{{5}{}{{}}{{}}}
+\bibcite{techbib:marjanovic2014performance}{{6}{}{{}}{{}}}
+\bibcite{techbib:Pjesivac-Grbovic:2007:PAM:1265235.1265248}{{7}{}{{}}{{}}}
+\bibcite{techbib:mvapich2}{{8}{}{{}}{{}}}
+\bibcite{techbib:Doerfler2006}{{9}{}{{}}{{}}}
+\bibcite{blelloch2008provably}{{10}{}{{}}{{}}}
+\newlabel{tocindent-1}{0pt}
+\newlabel{tocindent0}{0pt}
+\newlabel{tocindent1}{4.185pt}
+\newlabel{tocindent2}{10.34999pt}
+\newlabel{tocindent3}{0pt}
+\providecommand\NAT@force@numbers{}\NAT@force@numbers
+\@writefile{toc}{\contentsline {section}{\numberline {5}Future Work}{8}{section.5}}
+\newlabel{sec:dspmv-futurework}{{5}{8}{Future Work}{section.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusions}{8}{section.6}}
+\newlabel{sec:dspmv-conclusion}{{6}{8}{Conclusions}{section.6}{}}
+\@writefile{toc}{\contentsline {section}{References}{8}{section*.15}}
+\newlabel{TotPages}{{8}{8}{}{page.8}{}}

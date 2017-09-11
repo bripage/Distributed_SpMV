@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  6 SEP 2017 13:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  11 SEP 2017 07:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -244,18 +244,18 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 ) (./0-DSPMV.aux)
 \openout1 = `0-DSPMV.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 367.
-LaTeX Font Info:    ... okay on input line 367.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 367.
-LaTeX Font Info:    ... okay on input line 367.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 367.
-LaTeX Font Info:    ... okay on input line 367.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 367.
-LaTeX Font Info:    ... okay on input line 367.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 367.
-LaTeX Font Info:    ... okay on input line 367.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 367.
-LaTeX Font Info:    ... okay on input line 367.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 369.
+LaTeX Font Info:    ... okay on input line 369.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 369.
+LaTeX Font Info:    ... okay on input line 369.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 369.
+LaTeX Font Info:    ... okay on input line 369.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 369.
+LaTeX Font Info:    ... okay on input line 369.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 369.
+LaTeX Font Info:    ... okay on input line 369.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 369.
+LaTeX Font Info:    ... okay on input line 369.
  (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count113
@@ -318,61 +318,206 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 417.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 419.
 
-(./dspmv-abstract.tex) (./dspmv-body.tex (./dspmv-intro.tex)
-(./dspmv-relatedwork.tex
+(./dspmv-abstract.tex) (./dspmv-body.tex (./dspmv-intro.tex
+Package epstopdf Info: Source file: <figures/spmv-bylina-speedup.eps>
+(epstopdf)                    date: 2017-09-10 20:04:06
+(epstopdf)                    size: 475048 bytes
+(epstopdf)             Output file: <figures/spmv-bylina-speedup-eps-converted-
+to.pdf>
+(epstopdf)                    date: 2017-09-10 20:07:10
+(epstopdf)                    size: 40401 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/spmv-bylina-speedu
+p-eps-converted-to.pdf figures/spmv-bylina-speedup.eps>
+(epstopdf)             \includegraphics on input line 6.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/spmv-bylina-speedup-eps-converted-to.pdf, id=1, 208.78pt x 182.6825pt>
+File: figures/spmv-bylina-speedup-eps-converted-to.pdf Graphic file (type pdf)
+<use figures/spmv-bylina-speedup-eps-converted-to.pdf>
+Package pdftex.def Info: figures/spmv-bylina-speedup-eps-converted-to.pdf used 
+on input line 6.
+(pdftex.def)             Requested size: 146.14497pt x 127.87686pt.
+) (./dspmv-analytic.tex
 Package epstopdf Info: Source file: <figures/spmv-historical-hpcg-bw.eps>
-(epstopdf)                    date: 2017-09-05 11:31:38
+(epstopdf)                    date: 2017-09-10 17:02:48
 (epstopdf)                    size: 505927 bytes
 (epstopdf)             Output file: <figures/spmv-historical-hpcg-bw-eps-conver
 ted-to.pdf>
-(epstopdf)                    date: 2017-09-05 11:31:38
+(epstopdf)                    date: 2017-09-10 17:19:46
 (epstopdf)                    size: 43658 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/spmv-historical-hp
 cg-bw-eps-converted-to.pdf figures/spmv-historical-hpcg-bw.eps>
-(epstopdf)             \includegraphics on input line 4.
+(epstopdf)             \includegraphics on input line 6.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/spmv-historical-hpcg-bw-eps-converted-to.pdf, id=1, 429.605pt x 282.05
+<figures/spmv-historical-hpcg-bw-eps-converted-to.pdf, id=2, 429.605pt x 282.05
 376pt>
 File: figures/spmv-historical-hpcg-bw-eps-converted-to.pdf Graphic file (type p
 df)
  <use figures/spmv-historical-hpcg-bw-eps-converted-to.pdf>
 Package pdftex.def Info: figures/spmv-historical-hpcg-bw-eps-converted-to.pdf u
-sed on input line 4.
-(pdftex.def)             Requested size: 365.16597pt x 239.74681pt.
+sed on input line 6.
+(pdftex.def)             Requested size: 343.68446pt x 225.6433pt.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
-]
-Underfull \vbox (badness 4013) has occurred while \output is active []
+ <./figures/spmv-bylina-speedup-eps-converted-to.pdf>] [2 <./figures/spmv-histo
+rical-hpcg-bw-eps-converted-to.pdf>]
+Overfull \hbox (8.8155pt too wide) in alignment at lines 32--35
+ [][][] []
+ []
 
+Package epstopdf Info: Source file: <figures/spmv-flop-per-byte-vs-P.eps>
+(epstopdf)                    date: 2017-09-10 17:02:48
+(epstopdf)                    size: 616270 bytes
+(epstopdf)             Output file: <figures/spmv-flop-per-byte-vs-P-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2017-09-10 17:19:47
+(epstopdf)                    size: 48805 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/spmv-flop-per-byte
+-vs-P-eps-converted-to.pdf figures/spmv-flop-per-byte-vs-P.eps>
+(epstopdf)             \includegraphics on input line 38.
+Package epstopdf Info: Output file is already uptodate.
 
+<figures/spmv-flop-per-byte-vs-P-eps-converted-to.pdf, id=73, 210.7875pt x 211.
+79124pt>
+File: figures/spmv-flop-per-byte-vs-P-eps-converted-to.pdf Graphic file (type p
+df)
+ <use figures/spmv-flop-per-byte-vs-P-eps-converted-to.pdf>
+Package pdftex.def Info: figures/spmv-flop-per-byte-vs-P-eps-converted-to.pdf u
+sed on input line 38.
+(pdftex.def)             Requested size: 158.09024pt x 158.84303pt.
+Package epstopdf Info: Source file: <figures/spmv-partial-speedup.eps>
+(epstopdf)                    date: 2017-09-10 17:02:48
+(epstopdf)                    size: 628154 bytes
+(epstopdf)             Output file: <figures/spmv-partial-speedup-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2017-09-10 17:19:57
+(epstopdf)                    size: 44831 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/spmv-partial-speed
+up-eps-converted-to.pdf figures/spmv-partial-speedup.eps>
+(epstopdf)             \includegraphics on input line 50.
+Package epstopdf Info: Output file is already uptodate.
 
-LaTeX Warning: Citation `azd2016exploiting' on page 2 undefined on input line 7
-1.
+<figures/spmv-partial-speedup-eps-converted-to.pdf, id=74, 209.78375pt x 213.79
+875pt>
+File: figures/spmv-partial-speedup-eps-converted-to.pdf Graphic file (type pdf)
 
+ <use figures/spmv-partial-speedup-eps-converted-to.pdf>
+Package pdftex.def Info: figures/spmv-partial-speedup-eps-converted-to.pdf used
+ on input line 50.
+(pdftex.def)             Requested size: 157.3374pt x 160.34866pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \hbox (14.88727pt too wide) in alignment at lines 63--66
+ [][][] []
+ []
 
- [2 <./figures/spmv-historical-hpcg-bw-eps-converted-to.pdf>]) (./dspmv-impleme
-ntation.tex
-Overfull \hbox (40.7667pt too wide) in paragraph at lines 82--83
+[3 <./figures/spmv-flop-per-byte-vs-P-eps-converted-to.pdf> <./figures/spmv-par
+tial-speedup-eps-converted-to.pdf>]
+Overfull \hbox (15.65497pt too wide) in alignment at lines 86--89
+ [][][] []
+ []
+
+Package epstopdf Info: Source file: <figures/spmv-analytic-model.eps>
+(epstopdf)                    date: 2017-09-10 17:00:58
+(epstopdf)                    size: 662863 bytes
+(epstopdf)             Output file: <figures/spmv-analytic-model-eps-converted-
+to.pdf>
+(epstopdf)                    date: 2017-09-10 17:19:57
+(epstopdf)                    size: 99038 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/spmv-analytic-mode
+l-eps-converted-to.pdf figures/spmv-analytic-model.eps>
+(epstopdf)             \includegraphics on input line 108.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/spmv-analytic-model-eps-converted-to.pdf, id=116, 506.89375pt x 194.72
+75pt>
+File: figures/spmv-analytic-model-eps-converted-to.pdf Graphic file (type pdf)
+ <use figures/spmv-analytic-model-eps-converted-to.pdf>
+Package pdftex.def Info: figures/spmv-analytic-model-eps-converted-to.pdf used 
+on input line 108.
+(pdftex.def)             Requested size: 430.86172pt x 165.51913pt.
+
+Underfull \hbox (badness 1694) in paragraph at lines 115--116
+[]\OT1/ptm/m/n/10 For the Non-Overlapped and Over-lapped cases, the
+ []
+
+[4]) (./dspmv-implementation.tex
+Overfull \hbox (40.7667pt too wide) in paragraph at lines 79--81
 [] $[]$ 
  []
 
-[3]) (./dspmv-evaluation.tex
+[5 <./figures/spmv-analytic-model-eps-converted-to.pdf>])
+(./dspmv-evaluation.tex
+Underfull \vbox (badness 1831) has occurred while \output is active []
+
+
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 21.
+               Default added (so using `tbp') on input line 16.
 
-) (./dspmv-processscaling.tex) (./dspmv-threadscaling.tex)
-(./dspmv-sparsityimpact.tex) (./dspmv-futurework.tex) [4]
-(./dspmv-conclusion.tex)) (./0-DSPMV.bbl
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no § in font ptmr7t!
-)
+) (./dspmv-threadscaling.tex
+<figures/single_node_speedup.jpg, id=153, 723.70375pt x 574.145pt>
+File: figures/single_node_speedup.jpg Graphic file (type jpg)
+
+<use figures/single_node_speedup.jpg>
+Package pdftex.def Info: figures/single_node_speedup.jpg used on input line 5.
+(pdftex.def)             Requested size: 180.92549pt x 143.53589pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6])
+(./dspmv-processscaling.tex
+<figures/parabolicFem_surface.jpg, id=157, 679.53876pt x 599.23875pt>
+File: figures/parabolicFem_surface.jpg Graphic file (type jpg)
+
+<use figures/parabolicFem_surface.jpg>
+Package pdftex.def Info: figures/parabolicFem_surface.jpg used on input line 4.
+
+(pdftex.def)             Requested size: 169.88428pt x 149.80931pt.
+
+<figures/bmw3_2_surface.jpg, id=158, 679.53876pt x 599.23875pt>
+File: figures/bmw3_2_surface.jpg Graphic file (type jpg)
+
+<use figures/bmw3_2_surface.jpg>
+Package pdftex.def Info: figures/bmw3_2_surface.jpg used on input line 5.
+(pdftex.def)             Requested size: 169.88428pt x 149.80931pt.
+
+<figures/torso1_surface.jpg, id=159, 679.53876pt x 599.23875pt>
+File: figures/torso1_surface.jpg Graphic file (type jpg)
+
+<use figures/torso1_surface.jpg>
+Package pdftex.def Info: figures/torso1_surface.jpg used on input line 6.
+(pdftex.def)             Requested size: 169.88428pt x 149.80931pt.
+
+<figures/nd24k_surface.jpg, id=160, 679.53876pt x 599.23875pt>
+File: figures/nd24k_surface.jpg Graphic file (type jpg)
+
+<use figures/nd24k_surface.jpg>
+Package pdftex.def Info: figures/nd24k_surface.jpg used on input line 7.
+(pdftex.def)             Requested size: 169.88428pt x 149.80931pt.
+
+<figures/stackedbar_overhead.png, id=161, 1117.2942pt x 479.8728pt>
+File: figures/stackedbar_overhead.png Graphic file (type png)
+
+<use figures/stackedbar_overhead.png>
+Package pdftex.def Info: figures/stackedbar_overhead.png used on input line 13.
+
+(pdftex.def)             Requested size: 391.05882pt x 167.958pt.
+
+
+LaTeX Warning: Reference `sec:spmv-analytic' on page 7 undefined on input line 
+21.
+
+) (./dspmv-sparsityimpact.tex) (./dspmv-futurework.tex) (./dspmv-conclusion.tex
+)) [7 <./figures/single_node_speedup.jpg>] (./0-DSPMV.bbl
+Overfull \vbox (7.37625pt too high) has occurred while \output is active []
+
+
+[8 <./figures/parabolicFem_surface.jpg> <./figures/bmw3_2_surface.jpg> <./figur
+es/torso1_surface.jpg> <./figures/nd24k_surface.jpg>])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -384,35 +529,38 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[5] (./0-DSPMV.aux)
+[9 <./figures/stackedbar_overhead.png>] (./0-DSPMV.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4058 strings out of 493029
- 58649 string characters out of 6136234
- 140488 words of memory out of 5000000
- 7495 multiletter control sequences out of 15000+600000
+ 4124 strings out of 493029
+ 60877 string characters out of 6136234
+ 139580 words of memory out of 5000000
+ 7549 multiletter control sequences out of 15000+600000
  45156 words of font info for 85 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 38i,10n,35p,1075b,324s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,9n,35p,1513b,324s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/
+f-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-6.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/urw/times/utmri8a.pfb>
-Output written on 0-DSPMV.pdf (5 pages, 186554 bytes).
+m/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
+w/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a
+.pfb>
+Output written on 0-DSPMV.pdf (9 pages, 1295785 bytes).
 PDF statistics:
- 99 PDF objects out of 1000 (max. 8388607)
- 67 compressed objects within 1 object stream
+ 227 PDF objects out of 1000 (max. 8388607)
+ 141 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
