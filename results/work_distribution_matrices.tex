@@ -1,0 +1,102 @@
+\documentclass{article}
+\usepackage[a4paper]{geometry}
+\usepackage{tabularx}
+
+
+\begin{document}
+
+For $M = rowCount = N$ 
+	
+\[
+	\mathbf{A} = \left[
+	\begin{array}{ccc}
+		A_{00} & \cdots & A_{0N}\\
+		\vdots & \ddots & \vdots\\
+		A_{M0} & \cdots & A_{MN} 
+	\end{array} 
+	\right]
+\]
+
+
+
+
+For $m = \lceil rowCount/p \rceil = n$ 
+
+
+\[
+	\mathbf{A} = \left[
+	\begin{array}{ccc}
+
+	\left[
+	\begin{array}{ccc}
+	A_{0,0} & \cdots & A_{0,n-1}\\
+	\vdots & \ddots & \vdots\\
+	A_{m-1,0} & \cdots & A_{m-1,n-1} 
+	\end{array} 
+	\right]
+	 & \cdots & 
+	 \left[
+	 \begin{array}{ccc}
+	 A_{0,n(p-1)} & \cdots & A_{0,np-1}\\
+	 \vdots & \ddots & \vdots\\
+	 A_{m-1,n(p-1)} & \cdots & A_{m-1,np-1} 
+	 \end{array} 
+	 \right]
+	 \\
+	\vdots & \ddots & \vdots\\
+		 \left[
+	\begin{array}{ccc}
+	A_{m(p-1),0} & \cdots & A_{m(p-1),n-1}\\
+	\vdots & \ddots & \vdots\\
+	A_{mp-1,0} & \cdots & A_{mp-1,n-1} 
+	\end{array} 
+	\right] & \cdots & 	 \left[
+	\begin{array}{ccc}
+	A_{m(p-1),n(p-1)} & \cdots & A_{m(p-1),np-1}\\
+	\vdots & \ddots & \vdots\\
+	A_{mp-1,n(p-1)} & \cdots & A_{mp-1,np-1} 
+	\end{array} 
+	\right] 
+	\end{array} 
+	\right]
+\]
+
+
+\[
+\mathbf{P} = \left[
+\begin{array}{ccc}
+P_{0,0} & \cdots & P_{0,p-1}\\
+\vdots & \ddots & \vdots\\
+P_{p-1,0} & \cdots & P_{p-1,p-1} 
+\end{array} 
+\right]
+\]
+
+
+
+
+\begin{table}[]
+	\centering
+	\label{my-label}
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		& & & \\[1pt]
+		\multicolumn{1}{|c|}{\ $P_{00}$\ \  } & \multicolumn{1}{c|}{\ $P_{01}$\ \ } & \multicolumn{1}{c|}{\ $P_{20}$\ \ } & \multicolumn{1}{c|}{\ $P_{30}$\ \ }\\[2pt]
+		& & & \\[0pt] \hline
+		& & & \\[1pt]
+		\ $P_{10}$\ \                        & \ $P_{11}$\ \                       & \ $P_{12}$\ \                       & \ $P_{13}$\ \                       \\[3ex] 
+		& & & \\[0pt] \hline
+		& & & \\[1pt
+		\ $P_{20}$\ \                        & \ $P_{21}$\ \                       & \ $P_{22}$\ \                       & \ $P_{23}$\ \                       \\[3ex]
+		& & & \\[0pt] \hline
+		& & & \\[1pt
+		\ $P_{30}$\ \                        & \ $P_{31}$\ \                       & \ $P_{32}$\ \                       & \ $P_{33}$\ \                       \\[3ex] 
+		& & & \\[0pt] \hline
+	\end{tabular}
+\end{table}
+
+
+
+
+\end{document}
+
