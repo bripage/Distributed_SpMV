@@ -119,10 +119,10 @@ int main(int argc, char *argv[]) {
 
     //std::vector<double> denseVector;
 
-    //csrSpMV masterData;
-    //if (!control.myId) {
-    //    masterData.masterOnlySpMV(control);
-    //}
+    csrSpMV masterData;
+    if (!control.myId) {
+        masterData.masterOnlySpMV(control);
+    }
 
 
     //***********************************************//
@@ -357,7 +357,7 @@ int main(int argc, char *argv[]) {
     double overallEndTime = MPI_Wtime();
     MPI_Finalize();
 
-    /*
+
     //
     //                                      -- Testing / Verifcation --
     // This block is to be used in conjunction with single node, single thread/process SpMV and compares the results of
@@ -372,7 +372,7 @@ int main(int argc, char *argv[]) {
             }
         }
     }
-    */
+
 
     if (control.myId == 0) {
         //std::cout << std::endl << "Complete!" << std::endl;
