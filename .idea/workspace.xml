@@ -11,404 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c65b864-9431-4078-9657-58a0aa3c15cb" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_bmw3_2_10_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_bmw3_2_10_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_bmw3_2_11_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_bmw3_2_11_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_bmw3_2_12_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_bmw3_2_12_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_bmw3_2_13_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_bmw3_2_13_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_bmw3_2_14_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_bmw3_2_14_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_bmw3_2_15_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_bmw3_2_15_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_bmw3_2_16_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_bmw3_2_16_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_bmw3_2_1_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_bmw3_2_1_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_bmw3_2_2_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_bmw3_2_2_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_bmw3_2_3_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_bmw3_2_3_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_bmw3_2_4_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_bmw3_2_4_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_bmw3_2_5_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_bmw3_2_5_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_bmw3_2_6_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_bmw3_2_6_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_bmw3_2_7_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_bmw3_2_7_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_bmw3_2_8_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_bmw3_2_8_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_bmw3_2_9_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_bmw3_2_9_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_nd24k_10_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_nd24k_10_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_nd24k_11_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_nd24k_11_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_nd24k_12_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_nd24k_12_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_nd24k_13_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_nd24k_13_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_nd24k_14_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_nd24k_14_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_nd24k_15_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_nd24k_15_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_nd24k_16_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_nd24k_16_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_nd24k_1_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_nd24k_1_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_nd24k_2_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_nd24k_2_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_nd24k_3_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_nd24k_3_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_nd24k_4_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_nd24k_4_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_nd24k_5_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_nd24k_5_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_nd24k_6_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_nd24k_6_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_nd24k_7_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_nd24k_7_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_nd24k_8_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_nd24k_8_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_nd24k_9_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_nd24k_9_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_parabolicfem_10_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_parabolicfem_10_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_parabolicfem_11_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_parabolicfem_11_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_parabolicfem_12_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_parabolicfem_12_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_parabolicfem_13_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_parabolicfem_13_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_parabolicfem_14_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_parabolicfem_14_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_parabolicfem_15_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_parabolicfem_15_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_parabolicfem_16_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_parabolicfem_16_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_parabolicfem_1_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_parabolicfem_1_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_parabolicfem_2_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_parabolicfem_2_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_parabolicfem_3_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_parabolicfem_3_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_parabolicfem_4_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_parabolicfem_4_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_parabolicfem_5_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_parabolicfem_5_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_parabolicfem_6_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_parabolicfem_6_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_parabolicfem_7_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_parabolicfem_7_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_parabolicfem_8_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_parabolicfem_8_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_parabolicfem_9_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_parabolicfem_9_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_torso1_10_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_torso1_10_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_torso1_11_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_torso1_11_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_torso1_12_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_torso1_12_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_torso1_13_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_torso1_13_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_torso1_14_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_torso1_14_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_torso1_15_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_torso1_15_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_torso1_16_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_torso1_16_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_torso1_1_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_torso1_1_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_torso1_2_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_torso1_2_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_torso1_3_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_torso1_3_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_torso1_4_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_torso1_4_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_torso1_5_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_torso1_5_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_torso1_6_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_torso1_6_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_torso1_7_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_torso1_7_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_torso1_8_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_torso1_8_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_torso1_9_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/16task_torso1_9_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_bmw3_2_10_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_bmw3_2_10_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_bmw3_2_11_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_bmw3_2_11_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_bmw3_2_12_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_bmw3_2_12_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_bmw3_2_13_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_bmw3_2_13_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_bmw3_2_14_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_bmw3_2_14_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_bmw3_2_15_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_bmw3_2_15_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_bmw3_2_16_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_bmw3_2_16_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_bmw3_2_1_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_bmw3_2_1_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_bmw3_2_2_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_bmw3_2_2_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_bmw3_2_3_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_bmw3_2_3_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_bmw3_2_4_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_bmw3_2_4_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_bmw3_2_5_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_bmw3_2_5_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_bmw3_2_6_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_bmw3_2_6_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_bmw3_2_7_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_bmw3_2_7_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_bmw3_2_8_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_bmw3_2_8_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_bmw3_2_9_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_bmw3_2_9_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_nd24k_10_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_nd24k_10_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_nd24k_11_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_nd24k_11_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_nd24k_12_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_nd24k_12_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_nd24k_13_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_nd24k_13_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_nd24k_14_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_nd24k_14_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_nd24k_15_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_nd24k_15_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_nd24k_16_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_nd24k_16_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_nd24k_1_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_nd24k_1_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_nd24k_2_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_nd24k_2_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_nd24k_3_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_nd24k_3_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_nd24k_4_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_nd24k_4_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_nd24k_5_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_nd24k_5_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_nd24k_6_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_nd24k_6_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_nd24k_7_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_nd24k_7_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_nd24k_8_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_nd24k_8_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_nd24k_9_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_nd24k_9_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_parabolicfem_10_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_parabolicfem_10_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_parabolicfem_11_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_parabolicfem_11_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_parabolicfem_12_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_parabolicfem_12_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_parabolicfem_13_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_parabolicfem_13_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_parabolicfem_14_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_parabolicfem_14_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_parabolicfem_15_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_parabolicfem_15_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_parabolicfem_16_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_parabolicfem_16_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_parabolicfem_1_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_parabolicfem_1_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_parabolicfem_2_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_parabolicfem_2_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_parabolicfem_3_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_parabolicfem_3_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_parabolicfem_4_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_parabolicfem_4_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_parabolicfem_5_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_parabolicfem_5_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_parabolicfem_6_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_parabolicfem_6_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_parabolicfem_7_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_parabolicfem_7_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_parabolicfem_8_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_parabolicfem_8_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_parabolicfem_9_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_parabolicfem_9_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_torso1_10_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_torso1_10_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_torso1_11_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_torso1_11_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_torso1_12_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_torso1_12_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_torso1_13_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_torso1_13_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_torso1_14_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_torso1_14_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_torso1_15_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_torso1_15_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_torso1_16_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_torso1_16_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_torso1_1_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_torso1_1_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_torso1_2_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_torso1_2_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_torso1_3_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_torso1_3_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_torso1_4_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_torso1_4_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_torso1_5_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_torso1_5_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_torso1_6_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_torso1_6_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_torso1_7_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_torso1_7_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_torso1_8_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_torso1_8_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_torso1_9_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/25task_torso1_9_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_bmw3_2_10_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_bmw3_2_10_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_bmw3_2_11_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_bmw3_2_11_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_bmw3_2_12_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_bmw3_2_12_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_bmw3_2_13_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_bmw3_2_13_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_bmw3_2_14_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_bmw3_2_14_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_bmw3_2_15_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_bmw3_2_15_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_bmw3_2_16_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_bmw3_2_16_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_bmw3_2_1_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_bmw3_2_1_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_bmw3_2_2_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_bmw3_2_2_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_bmw3_2_3_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_bmw3_2_3_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_bmw3_2_4_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_bmw3_2_4_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_bmw3_2_5_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_bmw3_2_5_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_bmw3_2_6_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_bmw3_2_6_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_bmw3_2_7_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_bmw3_2_7_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_bmw3_2_8_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_bmw3_2_8_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_bmw3_2_9_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_bmw3_2_9_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_nd24k_10_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_nd24k_10_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_nd24k_11_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_nd24k_11_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_nd24k_12_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_nd24k_12_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_nd24k_13_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_nd24k_13_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_nd24k_14_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_nd24k_14_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_nd24k_15_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_nd24k_15_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_nd24k_16_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_nd24k_16_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_nd24k_1_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_nd24k_1_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_nd24k_2_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_nd24k_2_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_nd24k_3_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_nd24k_3_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_nd24k_4_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_nd24k_4_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_nd24k_5_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_nd24k_5_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_nd24k_6_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_nd24k_6_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_nd24k_7_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_nd24k_7_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_nd24k_8_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_nd24k_8_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_nd24k_9_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_nd24k_9_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_parabolic_fem_10_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_parabolic_fem_11_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_parabolic_fem_12_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_parabolic_fem_13_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_parabolic_fem_14_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_parabolic_fem_15_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_parabolic_fem_16_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_parabolic_fem_1_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_parabolic_fem_2_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_parabolic_fem_3_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_parabolic_fem_4_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_parabolic_fem_5_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_parabolic_fem_6_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_parabolic_fem_7_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_parabolic_fem_8_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_parabolic_fem_9_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_parabolicfem_10_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_parabolicfem_11_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_parabolicfem_12_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_parabolicfem_13_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_parabolicfem_14_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_parabolicfem_15_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_parabolicfem_16_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_parabolicfem_1_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_parabolicfem_2_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_parabolicfem_3_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_parabolicfem_4_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_parabolicfem_5_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_parabolicfem_6_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_parabolicfem_7_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_parabolicfem_8_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_parabolicfem_9_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_torso1_10_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_torso1_10_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_torso1_11_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_torso1_11_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_torso1_12_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_torso1_12_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_torso1_13_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_torso1_13_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_torso1_14_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_torso1_14_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_torso1_15_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_torso1_15_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_torso1_16_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_torso1_16_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_torso1_1_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_torso1_1_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_torso1_2_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_torso1_2_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_torso1_3_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_torso1_3_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_torso1_4_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_torso1_4_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_torso1_5_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_torso1_5_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_torso1_6_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_torso1_6_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_torso1_7_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_torso1_7_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_torso1_8_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_torso1_8_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_torso1_9_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/36task_torso1_9_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/4task_bmw3_2_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/4task_bmw3_2_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/4task_nd24k_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/4task_nd24k_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/4task_parabolicfem_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/4task_parabolicfem_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/4task_torso1_expanded_results.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/4task_torso1_tests" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/64task_parabolicfem_1_expanded_results.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/Summary.xlsx" afterPath="$PROJECT_DIR$/results/Summary.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/stackedBarChart.xlsx" afterPath="$PROJECT_DIR$/results/stackedBarChart.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="0c65b864-9431-4078-9657-58a0aa3c15cb" name="Default" comment="" />
     <ignored path="Distrubuted_SpMV.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -431,8 +34,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="732">
-              <caret line="310" column="37" lean-forward="false" selection-start-line="310" selection-start-column="37" selection-end-line="310" selection-end-column="37" />
+            <state relative-caret-position="282">
+              <caret line="280" column="59" lean-forward="false" selection-start-line="269" selection-start-column="0" selection-end-line="304" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -553,6 +156,7 @@
   </component>
   <component name="OCFindUsagesOptions" text="false" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
+    <option name="x" value="-1900" />
     <option name="y" value="23" />
     <option name="width" value="1920" />
     <option name="height" value="1004" />
@@ -882,15 +486,15 @@
       <workItem from="1504899976112" duration="1557000" />
       <workItem from="1505952964661" duration="1061000" />
       <workItem from="1513907527094" duration="66000" />
-      <workItem from="1514457228555" duration="11000" />
+      <workItem from="1514457228555" duration="1322000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="535491000" />
+    <option name="totallyTimeSpent" value="536802000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="1004" extended-state="0" />
+    <frame x="-1900" y="23" width="1920" height="1004" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24010417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1184,8 +788,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="732">
-          <caret line="310" column="37" lean-forward="false" selection-start-line="310" selection-start-column="37" selection-end-line="310" selection-end-column="37" />
+        <state relative-caret-position="282">
+          <caret line="280" column="59" lean-forward="false" selection-start-line="269" selection-start-column="0" selection-end-line="304" selection-end-column="5" />
           <folding />
         </state>
       </provider>
