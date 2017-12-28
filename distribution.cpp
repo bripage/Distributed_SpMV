@@ -150,7 +150,8 @@ void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clust
     //std::cout << "out of resizing csrRows" << std::endl;
 
     for (int i = 0; i < control.rowCount; i++){
-        clusterColData[0]->denseVec.push_back((double) (rand()) / (double) (RAND_MAX));
+        //clusterColData[0]->denseVec.push_back((double) (rand()) / (double) (RAND_MAX));
+	    clusterColData[0]->denseVec.push_back(1.0);
     }
 
     //std::cout << "out of pushing onto denseVec" << std::endl;
