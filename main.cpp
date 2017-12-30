@@ -9,6 +9,7 @@
 #include "csrSpMV.h"
 #include "distribution.h"
 #include "clusterSpMV.h"
+#include <unistd.h>
 
 
 int main(int argc, char *argv[]) {
@@ -263,6 +264,31 @@ int main(int argc, char *argv[]) {
 
     std::vector<double> result;
     result.resize(control.rowsPerNode, 0.0);
+
+	usleep(100000*control.myId);
+	std::cout << std::endl;
+	std::cout << std::endl;
+	std::cout << "process " << myMPIRank << " rows: " << std::endl;
+	for (int j = 0; j < nodeCSR->csrRows.size(); j++) {
+		std::cout << nodeCSR->csrRows[j] << " ";
+	}
+	std::cout << std::endl;
+	std::cout << "process " << myMPIRank << " cols: " << std::endl;
+	for (int j = 0; j < nodeCSR->csrCols.size(); j++) {
+		std::cout << nodeCSR->csrCols[j] << " ";
+	}
+	std::cout << std::endl;
+	std::cout << "process " << myMPIRank << " data: " << std::endl;
+	for (int j = 0; j < nodeCSR->csrData.size(); j++) {
+		std::cout << nodeCSR->csrData[j] << " ";
+	}
+	std::cout << std::endl;
+	std::cout << "process " << myMPIRank << " denseVec: " << std::endl;
+	for (int j = 0; j < nodeCSR->denseVec.size(); j++) {
+		std::cout << nodeCSR->denseVec[j] << " ";
+	}
+	std::cout << std::endl;
+	std::cout << std::endl;
 
     MPI_Barrier(MPI_COMM_WORLD);
     double spmvStartTime = MPI_Wtime();
