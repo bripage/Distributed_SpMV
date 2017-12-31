@@ -12,8 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c65b864-9431-4078-9657-58a0aa3c15cb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/csrSpMV.cpp" afterPath="$PROJECT_DIR$/csrSpMV.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/distribution.cpp" afterPath="$PROJECT_DIR$/distribution.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
     </list>
     <ignored path="Distrubuted_SpMV.iws" />
@@ -38,8 +36,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1142">
-              <caret line="327" column="3" lean-forward="false" selection-start-line="327" selection-start-column="3" selection-end-line="327" selection-end-column="3" />
+            <state relative-caret-position="418">
+              <caret line="431" column="52" lean-forward="true" selection-start-line="431" selection-start-column="52" selection-end-line="431" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -487,12 +485,12 @@
       <workItem from="1505952964661" duration="1061000" />
       <workItem from="1513907527094" duration="66000" />
       <workItem from="1514457228555" duration="1322000" />
-      <workItem from="1514490113935" duration="23030000" />
+      <workItem from="1514490113935" duration="26072000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="559832000" />
+    <option name="totallyTimeSpent" value="562874000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1921" y="23" width="1920" height="1004" extended-state="0" />
@@ -783,8 +781,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1142">
-          <caret line="327" column="3" lean-forward="false" selection-start-line="327" selection-start-column="3" selection-end-line="327" selection-end-column="3" />
+        <state relative-caret-position="418">
+          <caret line="431" column="52" lean-forward="true" selection-start-line="431" selection-start-column="52" selection-end-line="431" selection-end-column="52" />
           <folding />
         </state>
       </provider>
