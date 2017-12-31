@@ -74,14 +74,14 @@ int main(int argc, char *argv[]) {
             exit(0);
         }
     }
-
+/*
     // Verify MPI initialised properly
     if (control.processCount == 1 && control.masterOnly == false) {
         printf("MPI Initialization failed -- KILLING!");
         MPI_Finalize();
         exit(0);
     }
-
+*/
     //****************************************************//
     //  Create comm for each column/row of compute nodes  //
     //****************************************************//
