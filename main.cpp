@@ -266,7 +266,7 @@ int main(int argc, char *argv[]) {
             if (nodeCSR->csrRows.empty() || nodeCSR->csrCols.empty() || nodeCSR->csrData.empty()) {
                 // empty, nothing to erase safely
             } else {
-                int myLastData = nodeCSR->csrRows[control.rowsPerNode] - 1;
+                int myLastData = nodeCSR->csrRows[control.rowsPerNode];
                 nodeCSR->csrRows.erase(nodeCSR->csrRows.begin() + control.rowsPerNode, nodeCSR->csrRows.end());
                 nodeCSR->csrCols.erase(nodeCSR->csrCols.begin() + myLastData, nodeCSR->csrCols.end());
                 nodeCSR->csrData.erase(nodeCSR->csrData.begin() + myLastData, nodeCSR->csrData.end());
