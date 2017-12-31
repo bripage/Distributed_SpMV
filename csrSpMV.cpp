@@ -116,9 +116,9 @@ void csrSpMV::masterOnlySpMV(controlData control) {
                 }
                 tempElement.data = ::atof(line.c_str());
 
-                if (!(tempElement.row == 0 && tempCol == 0 && tempData == 0.0)) {
+                if (!(tempElement.row == 0 && tempElement.col == 0 && tempElement.data == 0.0)) {
                     elements.push_back(tempElement);
-	                std::cout << "tempdata = " << tempData << std::endl;
+	                std::cout << "tempdata = " << tempElement.data << std::endl;
                 }
             }
         } else {
