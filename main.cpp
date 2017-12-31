@@ -166,7 +166,7 @@ int main(int argc, char *argv[]) {
                 MPI_Send(&(clusterColData[i]->csrRows[0]), control.rowCount, MPI_INT, i, 0, control.row_comm);
 	            //std::cout << "5 data size = " << clusterColData[0]->csrData.size() << std::endl;
                 //MPI_Send(&(clusterColData[i]->csrCols[0]), clusterColData[i]->csrCols.size(), MPI_INT, i, 0,
-                         control.row_comm);
+                //         control.row_comm);
 	            //std::cout << "6 data size = " << clusterColData[0]->csrData.size() << std::endl;
                 MPI_Send(&(clusterColData[i]->csrData[0]), clusterColData[i]->csrData.size(), MPI_DOUBLE, i, 0,
                          control.row_comm);
