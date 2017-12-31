@@ -151,9 +151,9 @@ void csrSpMV::masterOnlySpMV(controlData control) {
 
 	std::cout << std::endl << "Distribution of NonZero Elements" << std::endl;
 	for (int i = 0; i < control.clusterCols; i++){
-		std::cout << "Column " << i << ": " << clusterColData[i]->csrData.size() << std::endl;
-		for (int j = 0; j < clusterColData[i]->csrData.size(); j++){
-			std::cout << clusterColData[i]->csrData[j] << ",";
+		std::cout << "Column " << i << ": " << csrData.size() << std::endl;
+		for (int j = 0; j < csrData.size(); j++){
+			std::cout << csrData[j] << ",";
 		}
 		std::cout << std::endl;
 	}
