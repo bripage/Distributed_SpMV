@@ -118,6 +118,7 @@ void csrSpMV::masterOnlySpMV(controlData control) {
 
                 if (!(tempElement.row == 0 && tempCol == 0 && tempData == 0.0)) {
                     elements.push_back(tempElement);
+	                std::cout << "tempdata = " << tempData << std::endl;
                 }
             }
         } else {
@@ -143,6 +144,7 @@ void csrSpMV::masterOnlySpMV(controlData control) {
         }
         csrCols[k] = elements[k].row;
         csrData[k] = elements[k].data;
+	    std::cout << "csrData[" << k << "] = " << csrData[k] << std::endl;
     }
 
     if (control.rowCount != csrRows.size()){
