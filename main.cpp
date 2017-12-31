@@ -165,8 +165,8 @@ int main(int argc, char *argv[]) {
 	            //std::cout << "4 data size = " << clusterColData[0]->csrData.size() << std::endl;
                 MPI_Send(&(clusterColData[i]->csrRows[0]), control.rowCount, MPI_INT, i, 0, control.row_comm);
 	            //std::cout << "5 data size = " << clusterColData[0]->csrData.size() << std::endl;
-                MPI_Send(&(clusterColData[i]->csrCols[0]), clusterColData[i]->csrCols.size(), MPI_INT, i, 0,
-                         control.row_comm);
+                //MPI_Send(&(clusterColData[i]->csrCols[0]), clusterColData[i]->csrCols.size(), MPI_INT, i, 0,
+                //         control.row_comm);
 	            //std::cout << "6 data size = " << clusterColData[0]->csrData.size() << std::endl;
                 MPI_Send(&(clusterColData[i]->csrData[0]), clusterColData[i]->csrData.size(), MPI_DOUBLE, i, 0,
                          control.row_comm);
@@ -199,7 +199,7 @@ int main(int argc, char *argv[]) {
             nodeCSR->denseVec.resize(control.rowsPerNode);
 
             MPI_Recv(&nodeCSR->csrRows[0], control.rowCount, MPI_INT, 0, 0, control.row_comm, MPI_STATUS_IGNORE);
-            MPI_Recv(&nodeCSR->csrCols[0], control.elementCount, MPI_INT, 0, 0, control.row_comm, MPI_STATUS_IGNORE);
+            //MPI_Recv(&nodeCSR->csrCols[0], control.elementCount, MPI_INT, 0, 0, control.row_comm, MPI_STATUS_IGNORE);
             MPI_Recv(&nodeCSR->csrData[0], control.elementCount, MPI_DOUBLE, 0, 0, control.row_comm, MPI_STATUS_IGNORE);
             MPI_Recv(&nodeCSR->denseVec[0], control.rowsPerNode, MPI_DOUBLE, 0, 0, control.row_comm, MPI_STATUS_IGNORE);
         }
