@@ -118,7 +118,7 @@ void csrSpMV::masterOnlySpMV(controlData control) {
 
                 if (!(tempElement.row == 0 && tempElement.col == 0 && tempElement.data == 0.0)) {
                     elements.push_back(tempElement);
-	                std::cout << "tempdata = " << tempElement.data << std::endl;
+	                //std::cout << "tempdata = " << tempElement.data << std::endl;
                 }
             }
         } else {
@@ -144,19 +144,20 @@ void csrSpMV::masterOnlySpMV(controlData control) {
         }
         csrCols[k] = elements[k].row;
         csrData[k] = elements[k].data;
-	    std::cout << "csrData[" << k << "] = " << csrData[k] << std::endl;
+	    //std::cout << "csrData[" << k << "] = " << csrData[k] << std::endl;
     }
 
     if (control.rowCount != csrRows.size()){
         std::cout << "Actual row count does NOT match reported rowCount" << std::endl;
     }
 
+	/*
 	std::cout << std::endl << "Master Only Distribution of NonZero Elements" << std::endl;
 	for (int j = 0; j < csrData.size(); j++) {
 		std::cout << csrData[j] << ",";
 	}
 	std::cout << std::endl;
-
+	*/
 
 
     // Fill the dense vector with preliminary data for use in the Master Only SpMV calculation
