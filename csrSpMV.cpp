@@ -149,6 +149,15 @@ void csrSpMV::masterOnlySpMV(controlData control) {
         std::cout << "Actual row count does NOT match reported rowCount" << std::endl;
     }
 
+	std::cout << std::endl << "Distribution of NonZero Elements" << std::endl;
+	for (int i = 0; i < control.clusterCols; i++){
+		std::cout << "Column " << i << ": " << clusterColData[i]->csrData.size() << std::endl;
+		for (int j = 0; j < clusterColData[i]->csrData.size(); j++){
+			std::cout << clusterColData[i]->csrData[j] << ",";
+		}
+		std::cout << std::endl;
+	}
+
 
     // Fill the dense vector with preliminary data for use in the Master Only SpMV calculation
     if (!control.myId) {
@@ -161,6 +170,7 @@ void csrSpMV::masterOnlySpMV(controlData control) {
     result.resize(control.rowCount);
 
     std::cout << "rowcount = " << control.rowCount << ", csrRows.size() = " << csrRows.size() << std::endl;
+	/*
     for (int i = 0; i < control.rowCount; i++) {
         double temp = 0.0;
         if (i != control.rowCount - 1) {
@@ -188,5 +198,24 @@ void csrSpMV::masterOnlySpMV(controlData control) {
         }
         result[i] = temp;
     }
+    */
+	for (int i = 0; i < control.rowCount; i++) {
+		double temp = 0.0;
+		if (i != control.rowCount - 1) {
+			for (int j = csrRows[i]; j < csrRows[i + 1]; j++) {   // go to end of current row
+				// entire row is multiplied by a single dense vector element
+				temp += csrData[j] * (double) denseVec[i];
+			}
+		} else {
+			for (int j = csrRows[i]; j < csrData.size(); j++) {  // go to end of data vector
+				// entire row is multiplied by a single dense vector element
+				temp += csrData[j] * (double) denseVec[i];
+			}
+		}
+		result[i] = temp;
+	}
+
+
+
 }
 
