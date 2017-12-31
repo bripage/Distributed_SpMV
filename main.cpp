@@ -207,7 +207,7 @@ int main(int argc, char *argv[]) {
         if (control.myId == 0) {
             nodeCSR->denseVec.erase(nodeCSR->denseVec.begin() + control.rowsPerNode, nodeCSR->denseVec.end());
         }
-	    std::cout << "12 data size = " << clusterColData[0]->csrData.size() << std::endl;
+	    std::cout << "12 data size = " << nodeCSR->csrData.size() << std::endl;
 
 	    usleep(100000*control.myId);
 	    std::cout << std::endl;
