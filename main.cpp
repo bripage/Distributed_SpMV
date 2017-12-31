@@ -194,7 +194,7 @@ int main(int argc, char *argv[]) {
             control.rowsPerNode = ceil(control.rowCount / (float) control.clusterRows);
 
             nodeCSR->csrRows.resize(control.rowCount);
-            nodeCSR->csrCols.resize(control.elementCount);
+            //nodeCSR->csrCols.resize(control.elementCount);
             nodeCSR->csrData.resize(control.elementCount);
             nodeCSR->denseVec.resize(control.rowsPerNode);
 
