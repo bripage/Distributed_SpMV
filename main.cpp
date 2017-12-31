@@ -263,13 +263,15 @@ int main(int argc, char *argv[]) {
             }
 
             // Erase the excess data on the column master that has already been distributed to its row nodes
-            if (nodeCSR->csrRows.empty() || nodeCSR->csrCols.empty() || nodeCSR->csrData.empty()) {
-                // empty, nothing to erase safely
-            } else {
-                int myLastData = nodeCSR->csrRows[control.rowsPerNode];
-                nodeCSR->csrRows.erase(nodeCSR->csrRows.begin() + control.rowsPerNode, nodeCSR->csrRows.end());
-                nodeCSR->csrCols.erase(nodeCSR->csrCols.begin() + myLastData, nodeCSR->csrCols.end());
-                nodeCSR->csrData.erase(nodeCSR->csrData.begin() + myLastData, nodeCSR->csrData.end());
+	        int myLastData = nodeCSR->csrRows[control.rowsPerNode];
+            if (!(nodeCSR->csrRows.empty())){
+	            nodeCSR->csrRows.erase(nodeCSR->csrRows.begin() + control.rowsPerNode, nodeCSR->csrRows.end());
+            }
+	        if(!(nodeCSR->csrCols.empty())){
+		        //nodeCSR->csrCols.erase(nodeCSR->csrCols.begin() + myLastData, nodeCSR->csrCols.end());
+	        }
+	        if (!(nodeCSR->csrData.empty())) {
+		        nodeCSR->csrData.erase(nodeCSR->csrData.begin() + myLastData, nodeCSR->csrData.end());
             }
         }
 
@@ -284,7 +286,7 @@ int main(int argc, char *argv[]) {
             MPI_Recv(&control.rowsPerNode, 1, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
 
             nodeCSR->csrRows.resize(control.rowCount);
-            nodeCSR->csrCols.resize(control.elementCount);
+            //nodeCSR->csrCols.resize(control.elementCount);
             nodeCSR->csrData.resize(control.elementCount);
             nodeCSR->denseVec.resize(control.rowsPerNode);
 
