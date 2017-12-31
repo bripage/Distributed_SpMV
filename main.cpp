@@ -155,26 +155,36 @@ int main(int argc, char *argv[]) {
         // master to send data to cluster column masters
         if (control.myId == 0) {
             for (int i = 1; i < control.clusterCols; i++) {  // start at 1 since Master is the row master
-                control.elementCount = clusterColData[i]->csrData.size();
 
+	            std::cout << "1 data size = " << clusterColData[0].csrData.size() << std::endl;
+                control.elementCount = clusterColData[i]->csrData.size();
+	            std::cout << "2 data size = " << clusterColData[0].csrData.size() << std::endl;
                 MPI_Send(&control.elementCount, 1, MPI_INT, i, 0, control.row_comm);
+	            std::cout << "3 data size = " << clusterColData[0].csrData.size() << std::endl;
                 MPI_Send(&control.rowCount, 1, MPI_INT, i, 0, control.row_comm);
+	            std::cout << "4 data size = " << clusterColData[0].csrData.size() << std::endl;
                 MPI_Send(&(clusterColData[i]->csrRows[0]), control.rowCount, MPI_INT, i, 0, control.row_comm);
+	            std::cout << "5 data size = " << clusterColData[0].csrData.size() << std::endl;
                 MPI_Send(&(clusterColData[i]->csrCols[0]), clusterColData[i]->csrCols.size(), MPI_INT, i, 0,
                          control.row_comm);
+	            std::cout << "6 data size = " << clusterColData[0].csrData.size() << std::endl;
                 MPI_Send(&(clusterColData[i]->csrData[0]), clusterColData[i]->csrData.size(), MPI_DOUBLE, i, 0,
                          control.row_comm);
+	            std::cout << "7 data size = " << clusterColData[0].csrData.size() << std::endl;
                 MPI_Send(&(clusterColData[0]->denseVec[i * control.rowsPerNode]), control.rowsPerNode, MPI_DOUBLE, i, 0,
                          control.row_comm);
+	            std::cout << "8 data size = " << clusterColData[0].csrData.size() << std::endl;
             }
-
+	        std::cout << "9 data size = " << clusterColData[0].csrData.size() << std::endl;
             // delete and free column data that the master has already sent to the column masters, as it no longer needs
             // to be kept on the master
             for (int i = 1; i < clusterColData.size(); i++) {
                 delete (clusterColData[i]);
             }
+	        std::cout << "10 data size = " << clusterColData[0].csrData.size() << std::endl;
             clusterColData.erase(clusterColData.begin() + 1,
                                  clusterColData.end()); // remove pointers from clusterColData
+	        std::cout << "11 data size = " << clusterColData[0].csrData.size() << std::endl;
         } else if (control.myId < control.clusterCols && control.myId != 0) {
             MPI_Recv(&control.elementCount, 1, MPI_INT, 0, 0, control.row_comm,
                      MPI_STATUS_IGNORE);  // get number of elements
@@ -197,6 +207,8 @@ int main(int argc, char *argv[]) {
         if (control.myId == 0) {
             nodeCSR->denseVec.erase(nodeCSR->denseVec.begin() + control.rowsPerNode, nodeCSR->denseVec.end());
         }
+	    std::cout << "12 data size = " << clusterColData[0].csrData.size() << std::endl;
+
 	    usleep(100000*control.myId);
 	    std::cout << std::endl;
 	    std::cout << std::endl;
@@ -221,7 +233,7 @@ int main(int argc, char *argv[]) {
 	    }
 	    std::cout << std::endl;
 	    std::cout << std::endl;
-	    
+
         // column masters send data to row nodes
         if (control.myId < control.clusterCols) {
             for (int i = 1;
