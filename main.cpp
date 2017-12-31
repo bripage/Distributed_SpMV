@@ -51,6 +51,12 @@ int main(int argc, char *argv[]) {
         } else if (argTemp == "--omp-threads") {
             //set number of OpenMP threads per node
             control.ompThreads = atoi(argv[i + 1]);
+        } else if (argTemp == "--use-barriers") {
+	        //set number of OpenMP threads per node
+	        std::string temp = argv[i + 1];
+	        if (temp == "true") {
+		        control.barrier = true;
+	        }
         } else if (argTemp == "--help") {
             std::cout << "Usage: distSpMV [OPTION] <argument> ..." << std::endl << std::endl;
             std::cout << "Options:" << std::endl;
@@ -329,7 +335,7 @@ int main(int argc, char *argv[]) {
 	std::cout << std::endl;
  */
 
-    MPI_Barrier(MPI_COMM_WORLD);
+    if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
     double spmvStartTime = MPI_Wtime();
 
     if (nodeCSR->csrData.size() > 0) {
@@ -399,7 +405,7 @@ int main(int argc, char *argv[]) {
                            control.row_comm);
             }
         }
-        MPI_Barrier(MPI_COMM_WORLD);
+	    if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
         reductionEndTime = MPI_Wtime();
 
         /*
