@@ -152,13 +152,14 @@ void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clust
 		}
 	}
 
+	//
+	//  Sort the elements by row and then by column
+	//
 	std::stable_sort(elements.begin(), elements.end(), sortRowThenCol);
 
-
 	for (int i = 0; i < elements.size(); i++){
-
 		//make sure all columns have a row pointer for the current elements row. If not create it!
-		if (tempRow == previousRow) {
+		if (elements[i].row == previousRow) {
 			// Do nothing, row is already present in list
 		} else {
 			// Add new row to cluster Column, as it has not been seen previously
@@ -180,46 +181,8 @@ void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clust
 		clusterColData[assignedCol]->csrCols.push_back(elements[i].col);
 		clusterColData[assignedCol]->csrData.push_back(elements[i].data);
 
-		previousRow = tempRow;
+		previousRow = elements[i].row;
 	}
-
-
-	/*
-	for (int i = 0; i < control.clusterCols; i++) {
-		std::stable_sort(elements[i].begin(), elements[i].end(), sortByCol);
-
-		if (tempRow == previousRow) {
-			// Do nothing, row is already present in list
-		} else {
-			// Add new row to cluster Column, as it has not been seen previously
-			for (int k = 0; k < clusterColData.size(); k++) {
-				clusterColData[k]->csrRows.push_back(clusterColData[k]->csrData.size());
-			}
-		}
-
-		// if the number of columns does not evenly divide amongst the number of cluster columns, the final
-		// cluster column is given the excess whereas all other columns receive the same amount of columns to
-		// work over.
-		if (tempCol > control.lastClusterColColStart) {
-			assignedCol = control.clusterCols - 1;
-		} else {
-			assignedCol = tempCol / control.colsPerNode;
-		}
-
-		// If we have read a valid element data create an element object for it
-		if (!(tempRrow < 0 || tempCol < 0 || tempData == 0.0)) {
-			elements[assignedCol].emplace_back(tempRow, tempCol, tempData);
-		}
-
-		// assign the column and data to the correct csrSpMV object for the cluster column it belongs to
-		clusterColData[i]->csrCols.push_back(tempCol);
-		clusterColData[i]->csrData.push_back(tempData);
-		previousRow = tempRow;
-	}
-	*/
-
-
-
 
 
     //std::cout << "out of pushing onto distribtuon" << std::endl;
