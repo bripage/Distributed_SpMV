@@ -162,14 +162,6 @@ void csrSpMV::masterOnlySpMV(controlData control) {
 	    //std::cout << "csrData[" << k << "] = " << csrData[k] << std::endl;
     }
 
-	//make sure all columns have a row pointer for the current elements row. If not create it!
-	if (elements[k].row == previousRow) {
-		// Do nothing, row is already present in list
-	} else {
-		// Add new row to cluster Column, as it has not been seen previously
-		csrRows.push_back(csrData.size());
-	}
-
 
     if (control.rowCount != csrRows.size()){
         std::cout << "Actual row count does NOT match reported rowCount" << std::endl;
