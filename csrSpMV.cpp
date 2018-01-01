@@ -30,6 +30,20 @@ csrSpMV::~csrSpMV() {
     result.clear();
 }
 
+bool sortByCol(const Element& lhs, const Element& rhs) {
+	if (lhs.row == rhs.row) {
+		if (lhs.col > rhs.col) {
+			return false;
+		} else {
+			return true;
+		}
+	} else if ( lhs.row > rhs.row){
+		return false;
+	} else {
+		return true;
+	}
+}
+
 void csrSpMV::nodeSpMV(controlData control, std::vector <double>& result) {
 
     //std::this_thread::sleep_for(std::chrono::milliseconds(control.myId * 2000));
@@ -126,6 +140,9 @@ void csrSpMV::masterOnlySpMV(controlData control) {
         }
     }
     printf("%d rows, %d cols, and %d non-zeros\n", control.rowCount, control.colCount, control.nonZeros);
+
+	// sort the vector of elements by row, and then each row, based on column
+	std::stable_sort(elements.begin(), elements.end(), sortByCol);
 
     // add to csr vectors for use as CSR Format
     csrCols.resize(control.nonZeros);
