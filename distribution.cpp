@@ -88,7 +88,7 @@ void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clust
 				//std::cout << "lastClusterColColStart = " << control.lastClusterColColStart << std::endl;
 
 			} else {
-				Element tempElement(0, 0, 0.0);
+				//Element tempElement(0, 0, 0.0);
 				size_t pos = 0;
 				std::string token;
 				i = 0;
@@ -97,7 +97,7 @@ void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clust
 					line.erase(0, pos + 1);
 
 					if (i == 0) {
-						elements.row = ::atoi(token.c_str()) - 1;
+						tempRow = ::atoi(token.c_str()) - 1;
 					} else {
 						tempCol = ::atoi(token.c_str()) - 1;
 					}
@@ -107,7 +107,10 @@ void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clust
 				tempData = ::atof(line.c_str());
 
 
-
+				// If we have read a valid element data create an element object for it
+				if (!(tempRrow < 0 || tempCol < 0 || tempData == 0.0)) {
+					elements.emplace_back(tempRow, tempCol, tempData);
+				}
 
 				//std::cout << "assignedCol = " << assignedCol << std::endl;
 				// if the row is
@@ -155,19 +158,19 @@ void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clust
 		// if the number of columns does not evenly divide amongst the number of cluster columns, the final
 		// cluster column is given the excess whereas all other columns receive the same amount of columns to
 		// work over.
-		if (elements.col > control.lastClusterColColStart) {
+		if (elements[i].col > control.lastClusterColColStart) {
 			assignedCol = control.clusterCols - 1;
 		} else {
-			assignedCol = elements. / control.colsPerNode;
+			assignedCol = elements[i].col / control.colsPerNode;
 		}
 
 		// assign the element to the correct process matrix column it belongs to
-		clusterColData[assignedCol]->csrCols.push_back(elements.col);
-		clusterColData[assignedCol]->csrData.push_back(elements.data);
+		clusterColData[assignedCol]->csrCols.push_back(elements[i].col);
+		clusterColData[assignedCol]->csrData.push_back(elements[i].data);
 
 		previousRow = tempRow;
 	}
-	
+
 
 	/*
 	for (int i = 0; i < control.clusterCols; i++) {
