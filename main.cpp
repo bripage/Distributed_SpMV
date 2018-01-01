@@ -333,7 +333,7 @@ int main(int argc, char *argv[]) {
 	}
 	std::cout << std::endl;
 	std::cout << std::endl;
- 
+
 
     if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
     double spmvStartTime = MPI_Wtime();

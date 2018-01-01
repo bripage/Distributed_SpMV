@@ -169,6 +169,11 @@ void csrSpMV::masterOnlySpMV(controlData control) {
     }
 
 
+	std::cout << "Rows: " << std::endl;
+	for (int i = 0; i < control.rowCount; i++) {
+		std::cout << csrRows[i] << ",";
+	}
+	std::cout << std::endl;
 	std::cout << std::endl << "Master Only Distribution of NonZero Elements" << std::endl;
 	for (int j = 0; j < csrData.size(); j++) {
 		std::cout << csrData[j] << ",";
@@ -217,6 +222,7 @@ void csrSpMV::masterOnlySpMV(controlData control) {
         result[i] = temp;
     }
     */
+
 	for (int i = 0; i < control.rowCount; i++) {
 		double temp = 0.0;
 		if (i != control.rowCount - 1) {
