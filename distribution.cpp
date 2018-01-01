@@ -8,6 +8,7 @@
 //  Distribute sparse matrix amongst cluster nodes via SPLIT MATRIX Distribution
 //
 void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clusterColData) {
+
     srand (static_cast <unsigned> (time(0)));
     int rowsLastRow, rowsPerRow, colsLastColumn, colsPerColumn;
 
@@ -15,7 +16,7 @@ void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clust
     for (int i = 0; i < control.clusterCols; i++) {
         clusterColData[i] = new csrSpMV;
     }
-
+/*
     //
     // Read MMF file and insert elements into clusterColData as needed
     //
@@ -180,7 +181,98 @@ void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clust
     	}
 */
 
-	    std::cout << std::endl << "Distribution of NonZero Elements" << std::endl;
+
+	std::vector <Element> elements; //holds each matrix element as read from the Matrix Martket format file
+	int tempRow, tempCol;
+	double tempData;
+
+	// Read in sparse matrix saved in Matrix Market Format
+	std::ifstream infile(filename);
+	if (!infile){
+		std::cout << "FAILED TO OPEN FILE!" << std::endl;
+		exit(1);
+	}
+	std::string line;
+
+	int i = 0, j = 0;
+	bool previousLineCommented = false;
+	while (std::getline(infile, line)) {
+		if (line[0] != '%') {
+			if (previousLineCommented == true) {
+				//some stuff to get row,col and size data, etc.
+				previousLineCommented = false;
+
+				size_t pos = 0;
+				std::string token;
+				i = 0;
+				while ((pos = line.find(' ')) != std::string::npos) {
+					token = line.substr(0, pos);
+					line.erase(0, pos + 1);
+
+					if (i == 0) {
+						rowCount = std::stoi(token);
+					} else {
+						colCount = std::stoi(token);
+					}
+
+					i++;
+				}
+
+				nonZeros = std::stoi(line);
+			} else {
+				Element tempElement(0, 0, 0.0);
+				size_t pos = 0;
+				std::string token;
+				i = 0;
+				while ((pos = line.find(' ')) != std::string::npos) {
+					token = line.substr(0, pos);
+					line.erase(0, pos + 1);
+
+					if (i == 0) {
+						tempElement.row = ::atoi(token.c_str()) - 1;
+					} else {
+						tempElement.col = ::atoi(token.c_str()) - 1;
+					}
+
+					i++;
+				}
+				tempElement.data = ::atof(line.c_str());
+
+				if (!(tempElement.row == 0 && tempCol == 0 && tempData == 0.0)) {
+					elements.push_back(tempElement);
+				}
+			}
+		} else {
+			previousLineCommented = true;
+		}
+	}
+	printf("%d rows, %d cols, and %d non-zeros\n", rowCount, colCount, nonZeros);
+
+	// sort the vector of elements by row, and then each row, based on column
+	std::stable_sort(elements.begin(), elements.end(), sortByCol);
+
+	// add to csr vectors for use as CSR Format
+	int previousRow = -1;
+	for (i = 0; i < nonZeros; i++) {
+		csr_data.push_back(elements[i].data);
+		csr_col.push_back(elements[i].col);
+
+		if (previousRow == -1) {
+			csr_row.push_back(elements[i].row);
+		} else {
+			if (previousRow == elements[i].row) {
+
+			} else {
+				csr_row.push_back(i);
+			}
+		}
+
+		previousRow = elements[i].row;
+	}
+
+
+
+	std::cout << std::endl << "Distribution of NonZero Elements" << std::endl;
     	for (int i = 0; i < control.clusterCols; i++){
         	std::cout << "Column " << i << ": " << clusterColData[i]->csrData.size() << std::endl;
             for (int j = 0; j < clusterColData[i]->csrData.size(); j++){

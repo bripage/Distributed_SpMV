@@ -174,7 +174,7 @@ void csrSpMV::masterOnlySpMV(controlData control) {
 		std::cout << csrData[j] << ",";
 	}
 	std::cout << std::endl;
-	
+
 
 
     // Fill the dense vector with preliminary data for use in the Master Only SpMV calculation
