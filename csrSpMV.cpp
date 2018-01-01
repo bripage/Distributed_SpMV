@@ -141,8 +141,20 @@ void csrSpMV::masterOnlySpMV(controlData control) {
     }
     printf("%d rows, %d cols, and %d non-zeros\n", control.rowCount, control.colCount, control.nonZeros);
 
+	std::cout << "Rows before sorting: " << std::endl;
+	for (int i = 0; i < elements.size(); i++) {
+		std::cout << elements[i].row << ",";
+	}
+	std::cout << std::endl;
+
 	// sort the vector of elements by row, and then each row, based on column
 	std::stable_sort(elements.begin(), elements.end(), sortByCol);
+
+	std::cout << "Rows after sorting: " << std::endl;
+	for (int i = 0; i < elements.size(); i++) {
+		std::cout << elements[i].row << ",";
+	}
+	std::cout << std::endl;
 
     // add to csr vectors for use as CSR Format
 	int previousRow = -1;
@@ -151,7 +163,7 @@ void csrSpMV::masterOnlySpMV(controlData control) {
 	    if (elements[k].row == previousRow) {
 		    // Do nothing, row is already present in list
 	    } else {
-		    // Add new row to cluster Column, as it has not been seen previously
+		    // Add new row pointer, as it has not been seen previously
 		    csrRows.push_back(csrData.size());
 	    }
         csrCols.push_back(elements[k].row);
