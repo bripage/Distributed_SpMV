@@ -19,6 +19,14 @@
 #include <ctime>
 #include <cstdlib>
 
+struct Element {
+	int row;
+	int col;
+	double data;
+
+	Element(int r, int c, double d) : row(r), col(c), data(d) {}
+};
+
 void distribution_SplitMatrix(controlData& controlData, std::vector<csrSpMV*>& clusterColData);
 
 #endif //DISTRUBUTION_H
