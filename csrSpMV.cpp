@@ -145,9 +145,6 @@ void csrSpMV::masterOnlySpMV(controlData control) {
 	std::stable_sort(elements.begin(), elements.end(), sortByCol);
 
     // add to csr vectors for use as CSR Format
-    csrCols.resize(control.nonZeros);
-    csrData.resize(control.nonZeros);
-
 	int previousRow = -1;
     for (int k = 0; k < elements.size(); k++) {
 	    //make sure all columns have a row pointer for the current elements row. If not create it!
@@ -157,8 +154,8 @@ void csrSpMV::masterOnlySpMV(controlData control) {
 		    // Add new row to cluster Column, as it has not been seen previously
 		    csrRows.push_back(csrData.size());
 	    }
-        csrCols[k] = elements[k].row;
-        csrData[k] = elements[k].data;
+        csrCols.push_back(elements[k].row);
+        csrData.push_back(elements[k].data);
 	    //std::cout << "csrData[" << k << "] = " << csrData[k] << std::endl;
     }
 
