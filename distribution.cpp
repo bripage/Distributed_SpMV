@@ -3,7 +3,7 @@
 //
 #include "distribution.h"
 
-bool sortByCol(const Element& lhs, const Element& rhs) {
+bool sortRowThenCol(const Element& lhs, const Element& rhs) {
 	if (lhs.row == rhs.row) {
 		if (lhs.col > rhs.col) {
 			return false;
@@ -152,7 +152,7 @@ void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clust
 		}
 	}
 
-	std::stable_sort(elements.begin(), elements.end(), sortByCol);
+	std::stable_sort(elements.begin(), elements.end(), sortRowThenCol);
 
 
 	for (int i = 0; i < elements.size(); i++){
