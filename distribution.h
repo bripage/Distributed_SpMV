@@ -26,7 +26,7 @@ struct Element {
 
 	Element(int r, int c, double d) : row(r), col(c), data(d) {}
 };
-
+/*
 bool sortByCol(const Element& lhs, const Element& rhs) {
 	if (lhs.row == rhs.row) {
 		if (lhs.col > rhs.col) {
@@ -40,7 +40,7 @@ bool sortByCol(const Element& lhs, const Element& rhs) {
 		return true;
 	}
 }
-
+*/
 void distribution_SplitMatrix(controlData& controlData, std::vector<csrSpMV*>& clusterColData);
 
 #endif //DISTRUBUTION_H
