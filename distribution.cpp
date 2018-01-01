@@ -94,9 +94,9 @@ void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clust
                     line.erase(0, pos + 1);
 
                     if (i == 0) {
-                        tempCol = ::atoi(token.c_str()) - 1;
-                    } else {
                         tempRow = ::atoi(token.c_str()) - 1;
+                    } else {
+                        tempCol = ::atoi(token.c_str()) - 1;
                     }
 
                     i++;
@@ -179,7 +179,7 @@ void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clust
 	    	}
     	}
 */
-/*
+
 	    std::cout << std::endl << "Distribution of NonZero Elements" << std::endl;
     	for (int i = 0; i < control.clusterCols; i++){
         	std::cout << "Column " << i << ": " << clusterColData[i]->csrData.size() << std::endl;
@@ -188,5 +188,5 @@ void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clust
             }
             std::cout << std::endl;
     	}
-*/
+
  }

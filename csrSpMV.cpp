@@ -205,18 +205,15 @@ void csrSpMV::masterOnlySpMV(controlData control) {
 		if (i != control.rowCount - 1) {
 			for (int j = csrRows[i]; j < csrRows[i + 1]; j++) {   // go to end of current row
 				// entire row is multiplied by a single dense vector element
-				temp += csrData[j] * (double) denseVec[i];
+				temp += csrData[j] * (double) denseVec[j];
 			}
 		} else {
 			for (int j = csrRows[i]; j < csrData.size(); j++) {  // go to end of data vector
 				// entire row is multiplied by a single dense vector element
-				temp += csrData[j] * (double) denseVec[i];
+				temp += csrData[j] * (double) denseVec[j];
 			}
 		}
 		result[i] = temp;
 	}
-
-
-
 }
 
