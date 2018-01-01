@@ -169,6 +169,8 @@ void csrSpMV::masterOnlySpMV(controlData control) {
         csrCols.push_back(elements[k].col);
         csrData.push_back(elements[k].data);
 	    //std::cout << "csrData[" << k << "] = " << csrData[k] << std::endl;
+
+	    previousRow = elements[k].row;
     }
 
 
