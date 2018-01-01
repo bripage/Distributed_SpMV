@@ -148,21 +148,28 @@ void csrSpMV::masterOnlySpMV(controlData control) {
     csrCols.resize(control.nonZeros);
     csrData.resize(control.nonZeros);
 
-    int rowsAdded = -1;
+	int previousRow = -1;
     for (int k = 0; k < elements.size(); k++) {
-        if (k == 0){
-            csrRows.push_back(k);
-            rowsAdded++;
-        } else {
-            if (elements[k].col != elements[k-1].col){
-                csrRows.push_back(k);
-                rowsAdded++;
-            }
-        }
+	    //make sure all columns have a row pointer for the current elements row. If not create it!
+	    if (elements[k].row == previousRow) {
+		    // Do nothing, row is already present in list
+	    } else {
+		    // Add new row to cluster Column, as it has not been seen previously
+		    csrRows.push_back(csrData.size());
+	    }
         csrCols[k] = elements[k].row;
         csrData[k] = elements[k].data;
 	    //std::cout << "csrData[" << k << "] = " << csrData[k] << std::endl;
     }
+
+	//make sure all columns have a row pointer for the current elements row. If not create it!
+	if (elements[k].row == previousRow) {
+		// Do nothing, row is already present in list
+	} else {
+		// Add new row to cluster Column, as it has not been seen previously
+		csrRows.push_back(csrData.size());
+	}
+
 
     if (control.rowCount != csrRows.size()){
         std::cout << "Actual row count does NOT match reported rowCount" << std::endl;
