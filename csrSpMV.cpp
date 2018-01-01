@@ -44,6 +44,14 @@ bool sortByCol(const Element& lhs, const Element& rhs) {
 	}
 }
 
+int zeroOutRowPtrs(int rowId){
+	return rowId - csrRows[0];
+}
+
+void rebaseRowPtrs(){
+	std::transform(csrRows.begin(), csrRows.end(), csrRows.begin(), zeroOutRowPtrs);
+}
+
 void csrSpMV::nodeSpMV(controlData control, std::vector <double>& result) {
 
     //std::this_thread::sleep_for(std::chrono::milliseconds(control.myId * 2000));
