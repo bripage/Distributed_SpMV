@@ -3,7 +3,19 @@
 //
 #include "distribution.h"
 
-
+bool sortByCol(const Element& lhs, const Element& rhs) {
+	if (lhs.row == rhs.row) {
+		if (lhs.col > rhs.col) {
+			return false;
+		} else {
+			return true;
+		}
+	} else if ( lhs.row > rhs.row){
+		return false;
+	} else {
+		return true;
+	}
+}
 //
 //  Distribute sparse matrix amongst cluster nodes via SPLIT MATRIX Distribution
 //
