@@ -172,7 +172,7 @@ int main(int argc, char *argv[]) {
                 MPI_Send(&(clusterColData[i]->csrRows[0]), control.rowCount, MPI_INT, i, 0, control.row_comm);
 	            //std::cout << "5 data size = " << clusterColData[0]->csrData.size() << std::endl;
                 MPI_Send(&(clusterColData[i]->csrCols[0]), clusterColData[i]->csrCols.size(), MPI_INT, i, 0,
-                //         control.row_comm);
+                         control.row_comm);
 	            //std::cout << "6 data size = " << clusterColData[0]->csrData.size() << std::endl;
                 MPI_Send(&(clusterColData[i]->csrData[0]), clusterColData[i]->csrData.size(), MPI_DOUBLE, i, 0,
                          control.row_comm);
@@ -455,7 +455,7 @@ int main(int argc, char *argv[]) {
         //std::cout << "Element Distribution Time: " << distributionEndTime - distributionStartTime << std::endl;
         //std::cout << "SmPV Time: " << spmvEndTime - spmvStartTime << std::endl;
         //std::cout << "Total time elapsed: " << overallEndTime - overallStartTime << std::endl;
-	    std::cout << distributionEndTime - distributionStartTime
+	    //std::cout << distributionEndTime - distributionStartTime
 
 	    if (control.barrier) {
 		    std::cout << distributionEndTime - distributionStartTime << "," << spmvEndTime - spmvStartTime << ","
