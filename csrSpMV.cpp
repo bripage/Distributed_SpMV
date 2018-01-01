@@ -168,13 +168,13 @@ void csrSpMV::masterOnlySpMV(controlData control) {
         std::cout << "Actual row count does NOT match reported rowCount" << std::endl;
     }
 
-	/*
+
 	std::cout << std::endl << "Master Only Distribution of NonZero Elements" << std::endl;
 	for (int j = 0; j < csrData.size(); j++) {
 		std::cout << csrData[j] << ",";
 	}
 	std::cout << std::endl;
-	*/
+	
 
 
     // Fill the dense vector with preliminary data for use in the Master Only SpMV calculation
