@@ -238,14 +238,14 @@ void csrSpMV::masterOnlySpMV(controlData control) {
 		if (i != control.rowCount - 1) {
 			for (int j = csrRows[i]; j < csrRows[i + 1]; j++) {   // go to end of current row
 				// entire row is multiplied by a single dense vector element
-				std::cout << i << "," << j << " - " << csrData[j] << " * " << denseVec[j] << std::endl;
-				temp += csrData[j] * (double) denseVec[j];
+				std::cout << i << "," << j << " - " << csrData[j] << " * " << denseVec[csrCols[j]] << std::endl;
+				temp += csrData[j] * (double) denseVec[csrCols[j]];
 			}
 		} else {
 			for (int j = csrRows[i]; j < csrData.size(); j++) {  // go to end of data vector
 				// entire row is multiplied by a single dense vector element
-				std::cout << i << "," << j << " - " << csrData[j] << " * " << denseVec[j] << std::endl;
-				temp += csrData[j] * (double) denseVec[j];
+				std::cout << i << "," << j << " - " << csrData[j] << " * " << denseVec[csrCols[j]] << std::endl;
+				temp += csrData[j] * (double) denseVec[csrCols[j]];
 			}
 		}
 		result[i] = temp;

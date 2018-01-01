@@ -56,8 +56,8 @@
       <file leaf-file-name="csrSpMV.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/csrSpMV.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="26" lean-forward="false" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+            <state relative-caret-position="510">
+              <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -86,8 +86,8 @@
       <file leaf-file-name="csrSpMV.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/csrSpMV.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="730">
-              <caret line="246" column="103" lean-forward="false" selection-start-line="246" selection-start-column="103" selection-end-line="246" selection-end-column="103" />
+            <state relative-caret-position="493">
+              <caret line="234" column="0" lean-forward="true" selection-start-line="234" selection-start-column="0" selection-end-line="234" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -111,6 +111,7 @@
       <find>cout</find>
       <find>vec</find>
       <find>sort</find>
+      <find>denseVec</find>
     </findStrings>
     <replaceStrings>
       <replace>control</replace>
@@ -485,12 +486,12 @@
       <workItem from="1505952964661" duration="1061000" />
       <workItem from="1513907527094" duration="66000" />
       <workItem from="1514457228555" duration="1322000" />
-      <workItem from="1514490113935" duration="42051000" />
+      <workItem from="1514490113935" duration="42186000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="578853000" />
+    <option name="totallyTimeSpent" value="578988000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1921" y="23" width="1920" height="1004" extended-state="0" />
@@ -773,16 +774,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/csrSpMV.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="26" lean-forward="false" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+        <state relative-caret-position="510">
+          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/csrSpMV.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="730">
-          <caret line="246" column="103" lean-forward="false" selection-start-line="246" selection-start-column="103" selection-end-line="246" selection-end-column="103" />
+        <state relative-caret-position="493">
+          <caret line="234" column="0" lean-forward="true" selection-start-line="234" selection-start-column="0" selection-end-line="234" selection-end-column="0" />
           <folding />
         </state>
       </provider>
