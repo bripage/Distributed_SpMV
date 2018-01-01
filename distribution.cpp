@@ -9,135 +9,203 @@
 //
 void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clusterColData) {
 
-    srand (static_cast <unsigned> (time(0)));
-    int rowsLastRow, rowsPerRow, colsLastColumn, colsPerColumn;
+	srand(static_cast <unsigned> (time(0)));
+	int rowsLastRow, rowsPerRow, colsLastColumn, colsPerColumn;
 
-    clusterColData.resize(control.clusterCols);
-    for (int i = 0; i < control.clusterCols; i++) {
-        clusterColData[i] = new csrSpMV;
-    }
-/*
-    //
-    // Read MMF file and insert elements into clusterColData as needed
-    //
-    int tempRow, tempCol, assignedCol = 0;
-    double tempData;
+	//
+	// Read MMF file and insert elements into clusterColData as needed
+	//
+	clusterColData.resize(control.clusterCols);
+	std::vector <Element> elements; //holds each matrix element as read from the Matrix Market format file
+	for (int i = 0; i < control.clusterCols; i++) {
+		clusterColData[i] = new csrSpMV;
+	}
 
-    // Read in sparse matrix saved in Matrix Market Format
-    std::ifstream infile(control.matrixFile);
-    if (!infile) {
-        std::cout << "FAILED TO OPEN FILE!" << std::endl;
-        exit(1);
-    }
-    std::string line;
+	int tempRow, tempCol, assignedCol = 0;
+	double tempData;
 
-    int i = 0, j = 0, previousRow = -1;
-    bool previousLineCommented = false;
-    while (std::getline(infile, line)) {
-        //std::cout << control.rowCount << "," << control.colCount << "," << control.nonZeros << std::endl;
-        if (line[0] != '%') {
-            //std::cout << line << std::endl;
-            if (previousLineCommented == true) {
-                //some stuff to get row,col and size data, etc.
-                previousLineCommented = false;
+	// Read in sparse matrix saved in Matrix Market Format
+	std::ifstream infile(control.matrixFile);
+	if (!infile) {
+		std::cout << "FAILED TO OPEN FILE!" << std::endl;
+		exit(1);
+	}
+	std::string line;
 
-                size_t pos = 0;
-                std::string token;
-                i = 0;
-                while ((pos = line.find(' ')) != std::string::npos) {
-                    token = line.substr(0, pos);
-                    line.erase(0, pos + 1);
+	int i = 0, j = 0, previousRow = -1;
+	bool previousLineCommented = false;
+	while (std::getline(infile, line)) {
+		//std::cout << control.rowCount << "," << control.colCount << "," << control.nonZeros << std::endl;
+		if (line[0] != '%') {
+			//std::cout << line << std::endl;
+			if (previousLineCommented == true) {
+				//some stuff to get row,col and size data, etc.
+				previousLineCommented = false;
 
-                    //std::cout << "token = " << token << std::endl;
+				size_t pos = 0;
+				std::string token;
+				i = 0;
+				while ((pos = line.find(' ')) != std::string::npos) {
+					token = line.substr(0, pos);
+					line.erase(0, pos + 1);
 
-                    if (i == 0) {
-                        control.rowCount = std::stoi(token);
-                    } else {
-                        control.colCount = std::stoi(token);
-                    }
+					//std::cout << "token = " << token << std::endl;
 
-                    i++;
-                }
-                //std::cout << "token = " << line << std::endl;
-                control.nonZeros = std::stoi(line);
+					if (i == 0) {
+						control.rowCount = std::stoi(token);
+					} else {
+						control.colCount = std::stoi(token);
+					}
 
-                control.rowsPerNode = ceil(control.rowCount / (float)control.clusterRows);
-                control.colsPerNode = ceil(control.colCount / (float)control.clusterCols);
+					i++;
+				}
+				//std::cout << "token = " << line << std::endl;
+				control.nonZeros = std::stoi(line);
 
-                //std::cout << "rowsPerNode = " << control.rowsPerNode << "colsPerNode = " << control.colsPerNode << std::endl;
+				control.rowsPerNode = ceil(control.rowCount / (float) control.clusterRows);
+				control.colsPerNode = ceil(control.colCount / (float) control.clusterCols);
 
-                //std::cout << control.rowCount << "," << control.colCount << "," << control.nonZeros << std::endl;
+				//std::cout << "rowsPerNode = " << control.rowsPerNode << "colsPerNode = " << control.colsPerNode << std::endl;
 
-                // determine where to test overflow for extra rows that must be added to the last cluster row's work
-                if (control.rowCount % control.clusterCols != 0) {
-                    rowsLastRow = control.rowsPerNode + (control.rowCount % control.clusterRows);
-                } else {
-                    rowsLastRow = control.rowCount / control.clusterCols;
-                }
-                control.lastClusterRowRowStart = control.colCount - rowsLastRow;
-                // determine where to test overflow for extra columns that must be added to the last cluster column's
-                // work
-                if (control.colCount % control.clusterCols != 0) {
-                    colsLastColumn = control.colsPerNode + (control.colCount % control.clusterCols);
-                } else {
-                    colsLastColumn = control.colCount / control.clusterCols;
-                }
-                control.lastClusterColColStart = control.colCount - colsLastColumn;
+				//std::cout << control.rowCount << "," << control.colCount << "," << control.nonZeros << std::endl;
 
-                //std::cout << "lastClusterColColStart = " << control.lastClusterColColStart << std::endl;
+				// determine where to test overflow for extra rows that must be added to the last cluster row's work
+				if (control.rowCount % control.clusterCols != 0) {
+					rowsLastRow = control.rowsPerNode + (control.rowCount % control.clusterRows);
+				} else {
+					rowsLastRow = control.rowCount / control.clusterCols;
+				}
+				control.lastClusterRowRowStart = control.colCount - rowsLastRow;
+				// determine where to test overflow for extra columns that must be added to the last cluster column's
+				// work
+				if (control.colCount % control.clusterCols != 0) {
+					colsLastColumn = control.colsPerNode + (control.colCount % control.clusterCols);
+				} else {
+					colsLastColumn = control.colCount / control.clusterCols;
+				}
+				control.lastClusterColColStart = control.colCount - colsLastColumn;
 
-            } else {
-                size_t pos = 0;
-                std::string token;
-                i = 0;
-                while ((pos = line.find(' ')) != std::string::npos) {
-                    token = line.substr(0, pos);
-                    line.erase(0, pos + 1);
+				//std::cout << "lastClusterColColStart = " << control.lastClusterColColStart << std::endl;
 
-                    if (i == 0) {
-                        tempRow = ::atoi(token.c_str()) - 1;
-                    } else {
-                        tempCol = ::atoi(token.c_str()) - 1;
-                    }
+			} else {
+				Element tempElement(0, 0, 0.0);
+				size_t pos = 0;
+				std::string token;
+				i = 0;
+				while ((pos = line.find(' ')) != std::string::npos) {
+					token = line.substr(0, pos);
+					line.erase(0, pos + 1);
 
-                    i++;
-                }
-                tempData = ::atof(line.c_str());
+					if (i == 0) {
+						elements.row = ::atoi(token.c_str()) - 1;
+					} else {
+						tempCol = ::atoi(token.c_str()) - 1;
+					}
 
-                // if the number of columns does not evenly divide amongst the number of cluster columns, the final
-                // cluster column is given the excess whereas all other columns receive the same amount of columns to
-                // work over.
-                if (tempCol > control.lastClusterColColStart) {
-                    assignedCol = control.clusterCols - 1;
-                } else {
-                    assignedCol = tempCol / control.colsPerNode;
-                }
-
-                //std::cout << "assignedCol = " << assignedCol << std::endl;
-                // if the row is
-                //
-                if (tempRow == previousRow) {
-                    // Do nothing, row is already present in list
-                } else {
-                    // Add new row to cluster Column, as it has not been seen previously
-                    for (int k = 0; k < clusterColData.size(); k++) {
-                        clusterColData[k]->csrRows.push_back(clusterColData[k]->csrData.size());
-                    }
-                }
+					i++;
+				}
+				tempData = ::atof(line.c_str());
 
 
-                // assign the column and data to the correct csrSpMV object for the cluster column it belongs to
-                clusterColData[assignedCol]->csrCols.push_back(tempCol);
-                clusterColData[assignedCol]->csrData.push_back(tempData);
 
-                previousRow = tempRow;
 
-                //std::cout << tempRow << "," << tempCol << "," << tempData << std::endl;
-            }
-        } else {
-            previousLineCommented = true;
-        }
-    }
+				//std::cout << "assignedCol = " << assignedCol << std::endl;
+				// if the row is
+				//
+				/*
+				if (tempRow == previousRow) {
+					// Do nothing, row is already present in list
+				} else {
+					// Add new row to cluster Column, as it has not been seen previously
+					for (int k = 0; k < clusterColData.size(); k++) {
+						clusterColData[k]->csrRows.push_back(clusterColData[k]->csrData.size());
+					}
+				}
+
+
+				// assign the column and data to the correct csrSpMV object for the cluster column it belongs to
+				clusterColData[assignedCol]->csrCols.push_back(tempCol);
+				clusterColData[assignedCol]->csrData.push_back(tempData);
+
+				previousRow = tempRow;
+
+				//std::cout << tempRow << "," << tempCol << "," << tempData << std::endl;
+				*/
+			}
+		} else {
+			previousLineCommented = true;
+		}
+	}
+
+	std::stable_sort(elements.begin(), elements.end(), sortByCol);
+
+
+	for (int i = 0; i < elements.size(); i++){
+
+		//make sure all columns have a row pointer for the current elements row. If not create it!
+		if (tempRow == previousRow) {
+			// Do nothing, row is already present in list
+		} else {
+			// Add new row to cluster Column, as it has not been seen previously
+			for (int k = 0; k < clusterColData.size(); k++) {
+				clusterColData[k]->csrRows.push_back(clusterColData[k]->csrData.size());
+			}
+		}
+
+		// if the number of columns does not evenly divide amongst the number of cluster columns, the final
+		// cluster column is given the excess whereas all other columns receive the same amount of columns to
+		// work over.
+		if (elements.col > control.lastClusterColColStart) {
+			assignedCol = control.clusterCols - 1;
+		} else {
+			assignedCol = elements. / control.colsPerNode;
+		}
+
+		// assign the element to the correct process matrix column it belongs to
+		clusterColData[assignedCol]->csrCols.push_back(elements.col);
+		clusterColData[assignedCol]->csrData.push_back(elements.data);
+
+		previousRow = tempRow;
+	}
+	
+
+	/*
+	for (int i = 0; i < control.clusterCols; i++) {
+		std::stable_sort(elements[i].begin(), elements[i].end(), sortByCol);
+
+		if (tempRow == previousRow) {
+			// Do nothing, row is already present in list
+		} else {
+			// Add new row to cluster Column, as it has not been seen previously
+			for (int k = 0; k < clusterColData.size(); k++) {
+				clusterColData[k]->csrRows.push_back(clusterColData[k]->csrData.size());
+			}
+		}
+
+		// if the number of columns does not evenly divide amongst the number of cluster columns, the final
+		// cluster column is given the excess whereas all other columns receive the same amount of columns to
+		// work over.
+		if (tempCol > control.lastClusterColColStart) {
+			assignedCol = control.clusterCols - 1;
+		} else {
+			assignedCol = tempCol / control.colsPerNode;
+		}
+
+		// If we have read a valid element data create an element object for it
+		if (!(tempRrow < 0 || tempCol < 0 || tempData == 0.0)) {
+			elements[assignedCol].emplace_back(tempRow, tempCol, tempData);
+		}
+
+		// assign the column and data to the correct csrSpMV object for the cluster column it belongs to
+		clusterColData[i]->csrCols.push_back(tempCol);
+		clusterColData[i]->csrData.push_back(tempData);
+		previousRow = tempRow;
+	}
+	*/
+
+
+
+
 
     //std::cout << "out of pushing onto distribtuon" << std::endl;
 
@@ -180,96 +248,6 @@ void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clust
 	    	}
     	}
 */
-
-
-	std::vector <Element> elements; //holds each matrix element as read from the Matrix Martket format file
-	int tempRow, tempCol;
-	double tempData;
-
-	// Read in sparse matrix saved in Matrix Market Format
-	std::ifstream infile(filename);
-	if (!infile){
-		std::cout << "FAILED TO OPEN FILE!" << std::endl;
-		exit(1);
-	}
-	std::string line;
-
-	int i = 0, j = 0;
-	bool previousLineCommented = false;
-	while (std::getline(infile, line)) {
-		if (line[0] != '%') {
-			if (previousLineCommented == true) {
-				//some stuff to get row,col and size data, etc.
-				previousLineCommented = false;
-
-				size_t pos = 0;
-				std::string token;
-				i = 0;
-				while ((pos = line.find(' ')) != std::string::npos) {
-					token = line.substr(0, pos);
-					line.erase(0, pos + 1);
-
-					if (i == 0) {
-						rowCount = std::stoi(token);
-					} else {
-						colCount = std::stoi(token);
-					}
-
-					i++;
-				}
-
-				nonZeros = std::stoi(line);
-			} else {
-				Element tempElement(0, 0, 0.0);
-				size_t pos = 0;
-				std::string token;
-				i = 0;
-				while ((pos = line.find(' ')) != std::string::npos) {
-					token = line.substr(0, pos);
-					line.erase(0, pos + 1);
-
-					if (i == 0) {
-						tempElement.row = ::atoi(token.c_str()) - 1;
-					} else {
-						tempElement.col = ::atoi(token.c_str()) - 1;
-					}
-
-					i++;
-				}
-				tempElement.data = ::atof(line.c_str());
-
-				if (!(tempElement.row == 0 && tempCol == 0 && tempData == 0.0)) {
-					elements.push_back(tempElement);
-				}
-			}
-		} else {
-			previousLineCommented = true;
-		}
-	}
-	printf("%d rows, %d cols, and %d non-zeros\n", rowCount, colCount, nonZeros);
-
-	// sort the vector of elements by row, and then each row, based on column
-	std::stable_sort(elements.begin(), elements.end(), sortByCol);
-
-	// add to csr vectors for use as CSR Format
-	int previousRow = -1;
-	for (i = 0; i < nonZeros; i++) {
-		csr_data.push_back(elements[i].data);
-		csr_col.push_back(elements[i].col);
-
-		if (previousRow == -1) {
-			csr_row.push_back(elements[i].row);
-		} else {
-			if (previousRow == elements[i].row) {
-
-			} else {
-				csr_row.push_back(i);
-			}
-		}
-
-		previousRow = elements[i].row;
-	}
-
 
 
 	std::cout << std::endl << "Distribution of NonZero Elements" << std::endl;
