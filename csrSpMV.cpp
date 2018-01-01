@@ -203,35 +203,7 @@ void csrSpMV::masterOnlySpMV(controlData control) {
     result.resize(control.rowCount);
 
     std::cout << "rowcount = " << control.rowCount << ", csrRows.size() = " << csrRows.size() << std::endl;
-	/*
-    for (int i = 0; i < control.rowCount; i++) {
-        double temp = 0.0;
-        if (i != control.rowCount - 1) {
-            if (control.colMajor) { //col major order selected
-                for (int j = csrRows[i]; j < csrRows[i + 1]; j++) {   // go to end of current row
-                    // entire row is multiplied by a single dense vector element
-                    temp += csrData[j] * (double)denseVec[i];
-                }
-            } else {    // row major order selected
-                for (int j = csrRows[i]; j < csrRows[i + 1]; j++) {   // go to end of current row
-                    temp += csrData[j] * (double)denseVec[csrCols[j]];
-                }
-            }
-        } else {
-            if (control.colMajor) { //col major order selected
-                for (int j = csrRows[i]; j < csrData.size(); j++) {  // go to end of data vector
-                    // entire row is multiplied by a single dense vector element
-                    temp += csrData[j] * (double)denseVec[i];
-                }
-            } else {    // row major order selected
-                for (int j = csrRows[i]; j < csrData.size(); j++) {  // go to end of data vector
-                    temp += csrData[j] * (double)denseVec[csrCols[j]];
-                }
-            }
-        }
-        result[i] = temp;
-    }
-    */
+
 
 	for (int i = 0; i < control.rowCount; i++) {
 		double temp = 0.0;
