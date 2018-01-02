@@ -124,13 +124,13 @@ void csrSpMV::masterOnlySpMV(controlData control) {
                         control.rowCount = std::stoi(token);
 	                    result.resize(control.rowCount, 0.0);
                     } else {
-                        //control.colCount = std::stoi(token);
+                        control.colCount = std::stoi(token);
                     }
 
                     i++;
                 }
 
-                //control.nonZeros = std::stoi(line);
+                control.nonZeros = std::stoi(line);
             } else {
                 //Element tempElement(0, 0, 0.0);
                 size_t pos = 0;
