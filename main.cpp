@@ -370,12 +370,11 @@ int main(int argc, char *argv[]) {
 	        if (ompThreadId == control.ompThreads - 1) {
 		        for (i = ompThreadId * rowsPerThread; i < nodeCSR->csrRows.size(); i++) {
 			        if (i == nodeCSR->csrRows.size() - 1) {
-				        for (j = nodeCSR->csrRows[i] - nodeCSR->csrRows[0]; j < nodeCSR->csrData.size(); j++) {
+				        for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrData.size(); j++) {
 					        nodeCSR->result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[nodeCSR->csrCols[j]];
 				        }
 			        } else {
-				        for (j = nodeCSR->csrRows[i] - nodeCSR->csrRows[0];
-				             j < nodeCSR->csrRows[i + 1] - nodeCSR->csrRows[0]; j++) {
+				        for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrRows[i + 1]; j++) {
 					        nodeCSR->result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[nodeCSR->csrCols[j]];
 				        }
 			        }
@@ -383,12 +382,11 @@ int main(int argc, char *argv[]) {
 	        } else {
 		        for (i = ompThreadId * rowsPerThread; i < rowEnd; i++) {
 			        if (i == nodeCSR->csrRows.size() - 1) {
-				        for (j = nodeCSR->csrRows[i] - nodeCSR->csrRows[0]; j < nodeCSR->csrData.size(); j++) {
+				        for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrData.size(); j++) {
 					        nodeCSR->result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[nodeCSR->csrCols[j]];
 				        }
 			        } else {
-				        for (j = nodeCSR->csrRows[i] - nodeCSR->csrRows[0];
-				             j < nodeCSR->csrRows[i + 1] - nodeCSR->csrRows[0]; j++) {
+				        for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrRows[i + 1]]; j++) {
 					        nodeCSR->result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[nodeCSR->csrCols[j]];
 				        }
 			        }
