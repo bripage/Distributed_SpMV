@@ -95,7 +95,7 @@ int main(int argc, char *argv[]) {
     control.clusterRows = sqrt(control.processCount);
     control.clusterCols = control.clusterRows; // works because cluster is expected to be square
     control.myCol = control.myId % control.clusterRows;
-	std::cout << "myId = " << control.myId << ", myCol = " << control.myCol << std::endl;
+	//std::cout << "myId = " << control.myId << ", myCol = " << control.myCol << std::endl;
 
     // Create a duplicate of MPI_COMM_WORLD that can be used to split
     MPI_Comm dupCommWorldCol;
@@ -215,7 +215,7 @@ int main(int argc, char *argv[]) {
             nodeCSR->denseVec.erase(nodeCSR->denseVec.begin() + control.rowsPerNode, nodeCSR->denseVec.end());
         }
 	    //std::cout << "12 data size = " << nodeCSR->csrData.size() << std::endl;
-
+/*
 	    usleep(100000*control.myId);
 	    std::cout << std::endl;
 	    std::cout << std::endl;
@@ -240,6 +240,7 @@ int main(int argc, char *argv[]) {
 	    }
 	    std::cout << std::endl;
 	    std::cout << std::endl;
+*/
 
         // column masters send data to row nodes
         if (control.myId < control.clusterCols) {
@@ -304,7 +305,7 @@ int main(int argc, char *argv[]) {
 
 	        control.colsPerNode = control.rowCount;
 
-	        std::cout << "nodeCSR->rebase(" << control.myCol << " * " << control.colsPerNode << ")" << std::endl;
+	        //std::cout << "nodeCSR->rebase(" << control.myCol << " * " << control.colsPerNode << ")" << std::endl;
 	        nodeCSR->rebase(control.myCol * control.colsPerNode);
         }
 
@@ -314,7 +315,7 @@ int main(int argc, char *argv[]) {
 
     std::vector<double> result;
     result.resize(control.rowsPerNode, 0.0);
-
+/*
 	usleep(100000*control.myId);
 	std::cout << std::endl;
 	std::cout << std::endl;
@@ -339,7 +340,7 @@ int main(int argc, char *argv[]) {
 	}
 	std::cout << std::endl;
 	std::cout << std::endl;
-
+*/
 
     if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
     double spmvStartTime = MPI_Wtime();

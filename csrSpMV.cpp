@@ -51,7 +51,7 @@ void csrSpMV::rebase(int colAdjustment){
 	}
 
 	for (int i = 0; i < csrCols.size(); i++){
-		std::cout << "csrCols[" << i << "] = " << csrCols[i] << " - " << colAdjustment << std::endl;
+		//std::cout << "csrCols[" << i << "] = " << csrCols[i] << " - " << colAdjustment << std::endl;
 		csrCols[i] -= colAdjustment;
 	}
 }
@@ -152,22 +152,22 @@ void csrSpMV::masterOnlySpMV(controlData control) {
         }
     }
     printf("%d rows, %d cols, and %d non-zeros\n", control.rowCount, control.colCount, control.nonZeros);
-
+/*
 	std::cout << "Rows before sorting: " << std::endl;
 	for (int i = 0; i < elements.size(); i++) {
 		std::cout << elements[i].row << ",";
 	}
 	std::cout << std::endl;
-
+*/
 	// sort the vector of elements by row, and then each row, based on column
 	std::stable_sort(elements.begin(), elements.end(), sortByCol);
-
+/*
 	std::cout << "Rows after sorting: " << std::endl;
 	for (int i = 0; i < elements.size(); i++) {
 		std::cout << elements[i].row << ",";
 	}
 	std::cout << std::endl;
-
+*/
     // add to csr vectors for use as CSR Format
 	int previousRow = -1;
     for (int k = 0; k < elements.size(); k++) {
@@ -190,7 +190,7 @@ void csrSpMV::masterOnlySpMV(controlData control) {
         std::cout << "Actual row count does NOT match reported rowCount" << std::endl;
     }
 
-
+/*
 	std::cout << "Rows: " << std::endl;
 	for (int i = 0; i < control.rowCount; i++) {
 		std::cout << csrRows[i] << ",";
@@ -201,7 +201,7 @@ void csrSpMV::masterOnlySpMV(controlData control) {
 		std::cout << csrData[j] << ",";
 	}
 	std::cout << std::endl;
-
+*/
 
 
     // Fill the dense vector with preliminary data for use in the Master Only SpMV calculation
