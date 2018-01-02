@@ -237,5 +237,5 @@ void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clust
             std::cout << std::endl;
    	}
 */
-	
+
  }

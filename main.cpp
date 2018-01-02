@@ -346,12 +346,21 @@ int main(int argc, char *argv[]) {
     double spmvStartTime = MPI_Wtime();
 
     if (nodeCSR->csrData.size() > 0) {
-        int ompThreadId, start, end, i, j, rowsPerThread;
+        int ompThreadId, start, end, i, j, rowsPerThread, rowEnd;
 
         #pragma omp parallel num_threads(control.ompThreads) shared(nodeCSR, result) private(ompThreadId, start, end, i, j, rowsPerThread)
         {
-            rowsPerThread = ceil(nodeCSR->csrRows.size() / control.ompThreads);
-            ompThreadId = omp_get_thread_num();
+            //rowsPerThread = ceil(nodeCSR->csrRows.size() / control.ompThreads);
+            //ompThreadId = omp_get_thread_num();
+
+	        rowsPerThread = nodeCSR->rows.size() / control.ompThreads;
+	        ompThreadId = omp_get_thread_num();
+	        if (ompThreadId = control.ompThreads - 1){
+		        rowEnd = nodeCSR->rows.size() - 1;
+	        } else {
+		        rowEnd = (ompThreadId + 1) * rowsPerThread;
+	        }
+
             if (ompThreadId == control.ompThreads - 1) {
                 for (i = ompThreadId * rowsPerThread; i < nodeCSR->csrRows.size(); i++) {
                     if (i == nodeCSR->csrRows.size() - 1) {
