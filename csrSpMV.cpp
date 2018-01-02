@@ -89,6 +89,13 @@ void csrSpMV::masterOnlySpMV(controlData control) {
     int tempRow, tempCol;
     double tempData;
 
+	// Fill the dense vector with preliminary data for use in the Master Only SpMV calculation
+	if (!control.myId) {
+		for (int i = 0; i < control.rowCount; i++) {
+			denseVec.push_back(1.0);
+		}
+	}
+
     // Read in sparse matrix saved in Matrix Market Format
     std::ifstream infile(control.matrixFile);
     if (!infile){
@@ -114,17 +121,18 @@ void csrSpMV::masterOnlySpMV(controlData control) {
                     line.erase(0, pos + 1);
 
                     if (i == 0) {
-                        control.rowCount = std::stoi(token);
+                        //control.rowCount = std::stoi(token);
+	                    result.resize(control.rowCount, 0.0);
                     } else {
-                        control.colCount = std::stoi(token);
+                        //control.colCount = std::stoi(token);
                     }
 
                     i++;
                 }
 
-                control.nonZeros = std::stoi(line);
+                //control.nonZeros = std::stoi(line);
             } else {
-                Element tempElement(0, 0, 0.0);
+                //Element tempElement(0, 0, 0.0);
                 size_t pos = 0;
                 std::string token;
                 i = 0;
@@ -133,18 +141,22 @@ void csrSpMV::masterOnlySpMV(controlData control) {
                     line.erase(0, pos + 1);
 
                     if (i == 0) {
-                        tempElement.row = ::atoi(token.c_str()) - 1;
+                        //tempElement.row = ::atoi(token.c_str()) - 1;
+	                    tempRow = ::atoi(token.c_str()) - 1;
                     } else {
-                        tempElement.col = ::atoi(token.c_str()) - 1;
+                        //tempElement.col = ::atoi(token.c_str()) - 1;
+	                    tempCol = ::atoi(token.c_str()) - 1;
                     }
 
                     i++;
                 }
-                tempElement.data = ::atof(line.c_str());
+                //tempElement.data = ::atof(line.c_str());
+	            tempData = ::atof(line.c_str());
 
                 if (!(tempElement.row == 0 && tempElement.col == 0 && tempElement.data == 0.0)) {
-                    elements.push_back(tempElement);
+                    //elements.push_back(tempElement);
 	                //std::cout << "tempdata = " << tempElement.data << std::endl;
+	                result[tempRow] += tempData * denseVec[tempCol];
                 }
             }
         } else {
@@ -160,7 +172,7 @@ void csrSpMV::masterOnlySpMV(controlData control) {
 	std::cout << std::endl;
 */
 	// sort the vector of elements by row, and then each row, based on column
-	std::stable_sort(elements.begin(), elements.end(), sortByCol);
+	//std::stable_sort(elements.begin(), elements.end(), sortByCol);
 /*
 	std::cout << "Rows after sorting: " << std::endl;
 	for (int i = 0; i < elements.size(); i++) {
@@ -168,6 +180,7 @@ void csrSpMV::masterOnlySpMV(controlData control) {
 	}
 	std::cout << std::endl;
 */
+	/*
     // add to csr vectors for use as CSR Format
 	int previousRow = -1;
     for (int k = 0; k < elements.size(); k++) {
@@ -202,15 +215,7 @@ void csrSpMV::masterOnlySpMV(controlData control) {
 	}
 	std::cout << std::endl;
 */
-
-
-    // Fill the dense vector with preliminary data for use in the Master Only SpMV calculation
-    if (!control.myId) {
-        for (int i = 0; i < control.rowCount; i++) {
-            denseVec.push_back(1.0);
-        }
-    }
-
+/*
     std::cout << "Performing Master Only SpMV" << std::endl;
     result.resize(control.rowCount);
 
@@ -234,5 +239,6 @@ void csrSpMV::masterOnlySpMV(controlData control) {
 		}
 		result[i] = temp;
 	}
+ */
 }
 
