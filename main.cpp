@@ -353,10 +353,10 @@ int main(int argc, char *argv[]) {
             //rowsPerThread = ceil(nodeCSR->csrRows.size() / control.ompThreads);
             //ompThreadId = omp_get_thread_num();
 
-	        rowsPerThread = nodeCSR->rows.size() / control.ompThreads;
+	        rowsPerThread = nodeCSR->csrRows.size() / control.ompThreads;
 	        ompThreadId = omp_get_thread_num();
 	        if (ompThreadId = control.ompThreads - 1){
-		        rowEnd = nodeCSR->rows.size() - 1;
+		        rowEnd = nodeCSR->csrRows.size() - 1;
 	        } else {
 		        rowEnd = (ompThreadId + 1) * rowsPerThread;
 	        }
