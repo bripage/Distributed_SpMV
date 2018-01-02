@@ -46,7 +46,7 @@ bool sortByCol(const Element& lhs, const Element& rhs) {
 
 void csrSpMV::rebaseRowPtrs(){
 	int firstRowPtr = csrRows[0];
-	for (int i = 1; i < csrRows.size(); i++){
+	for (int i = 0; i < csrRows.size(); i++){
 		csrRows[i] -= firstRowPtr;
 	}
 }
