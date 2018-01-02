@@ -363,7 +363,7 @@ int main(int argc, char *argv[]) {
             //ompThreadId = omp_get_thread_num();
 
 	        rowsPerThread = nodeCSR->csrRows.size() / control.ompThreads;
-	        std::cout << "rowsPerThread = " << rowsPerThread << std::endl;
+	        //std::cout << "rowsPerThread = " << rowsPerThread << std::endl;
 	        ompThreadId = omp_get_thread_num();
 	        if (ompThreadId == control.ompThreads - 1){
 		        rowEnd = nodeCSR->csrRows.size() - 1;
@@ -389,7 +389,7 @@ int main(int argc, char *argv[]) {
 		        }
 	        } else {
 		        for (i = ompThreadId * rowsPerThread; i < rowEnd; i++) {
-			        if (control.myId == 0) std::cout << "ompThreadId =  " << ompThreadId << ", " << i << std::endl;
+			        //if (control.myId == 0) std::cout << "ompThreadId =  " << ompThreadId << ", " << i << std::endl;
 			        if (i == nodeCSR->csrRows.size() - 1) {
 				        for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrData.size(); j++) {
 					        //if (control.myId == 0) std::cout << i << ", " << j << ", " << nodeCSR->csrCols[j] << std::endl;
