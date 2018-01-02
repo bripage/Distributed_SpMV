@@ -377,7 +377,7 @@ int main(int argc, char *argv[]) {
 			        if (i == nodeCSR->csrRows.size() - 1) {
 				        for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrData.size(); j++) {
 					        std::cout << i << ", " << j << ", " << nodeCSR->csrCols[j] << std::endl;
-					        //nodeCSR->result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[nodeCSR->csrCols[j]];
+					        nodeCSR->result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[nodeCSR->csrCols[j]];
 				        }
 			        } else {
 				        for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrRows[i + 1]; j++) {
@@ -392,12 +392,12 @@ int main(int argc, char *argv[]) {
 			        if (i == nodeCSR->csrRows.size() - 1) {
 				        for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrData.size(); j++) {
 					        std::cout << i << ", " << j << ", " << nodeCSR->csrCols[j] << std::endl;
-					        //nodeCSR->result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[nodeCSR->csrCols[j]];
+					        nodeCSR->result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[nodeCSR->csrCols[j]];
 				        }
 			        } else {
 				        for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrRows[i + 1]; j++) {
 					        std::cout << i << ", " << j << ", " << nodeCSR->csrCols[j] << std::endl;
-					        //nodeCSR->result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[nodeCSR->csrCols[j]];
+					        nodeCSR->result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[nodeCSR->csrCols[j]];
 				        }
 			        }
 		        }
