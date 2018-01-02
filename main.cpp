@@ -302,6 +302,9 @@ int main(int argc, char *argv[]) {
             MPI_Recv(&nodeCSR->csrData[0], control.elementCount, MPI_DOUBLE, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
             //MPI_Recv(&nodeCSR->denseVec[0], control.rowCount, MPI_DOUBLE, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
 
+	        control.rowsPerNode = ceil(control.rowCount / (float) control.clusterRows);
+	        control.colsPerNode = ceil(control.colCount / (float) control.clusterCols);
+
 	        std::cout << "nodeCSR->rebase(" << control.myCol << " * " << control.colsPerNode << ")" << std::endl;
 	        nodeCSR->rebase(control.myCol * control.colsPerNode);
         }
