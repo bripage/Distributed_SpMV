@@ -50,7 +50,7 @@ void csrSpMV::rebase(controlData control){
 		csrRows[i] -= firstRowPtr;
 	}
 
-	int minColId = control.mId % control.clusterCols;
+	int minColId = control.myId % control.clusterCols;
 	for (int i = 0; i < csrCols.size(); i++){
 		csrCols[i] -= minColId;
 	}
