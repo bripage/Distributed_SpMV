@@ -301,8 +301,8 @@ int main(int argc, char *argv[]) {
             MPI_Recv(&nodeCSR->csrCols[0], control.elementCount, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
             MPI_Recv(&nodeCSR->csrData[0], control.elementCount, MPI_DOUBLE, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
             //MPI_Recv(&nodeCSR->denseVec[0], control.rowCount, MPI_DOUBLE, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
-	        
-	        control.colsPerNode = control.rowCount
+
+	        control.colsPerNode = control.rowCount;
 
 	        std::cout << "nodeCSR->rebase(" << control.myCol << " * " << control.colsPerNode << ")" << std::endl;
 	        nodeCSR->rebase(control.myCol * control.colsPerNode);
