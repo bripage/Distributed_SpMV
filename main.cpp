@@ -385,6 +385,7 @@ int main(int argc, char *argv[]) {
                 }
             } else {
                 for (i = ompThreadId * rowsPerThread; i < rowEnd; i++) {
+	                std::cout << "ompThreadId = " << ompThreadId << std::endl;
 	                for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrRows[i + 1]; j++) {
 		                std::cout << "ompThreadId = " << ompThreadId << ", result[" << i << "] = " << result[i] << " + (" << nodeCSR->csrData[j] << " * " << nodeCSR->denseVec[nodeCSR->csrCols[j]] << ")" << std::endl;
 		                result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[nodeCSR->csrCols[j]];
