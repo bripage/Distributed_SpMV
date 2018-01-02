@@ -301,7 +301,7 @@ int main(int argc, char *argv[]) {
             MPI_Recv(&nodeCSR->csrData[0], control.elementCount, MPI_DOUBLE, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
             //MPI_Recv(&nodeCSR->denseVec[0], control.rowCount, MPI_DOUBLE, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
 
-	        nodeCSR->rebaseRowPtrs();
+	        nodeCSR->rebase(control);
         }
 
         // broadcast dense vector to column nodes
@@ -351,12 +351,12 @@ int main(int argc, char *argv[]) {
                 for (i = ompThreadId * rowsPerThread; i < nodeCSR->csrRows.size(); i++) {
                     if (i == nodeCSR->csrRows.size() - 1) {
                         for (j = nodeCSR->csrRows[i] - nodeCSR->csrRows[0]; j < nodeCSR->csrData.size(); j++) {
-                            result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[j];
+                            result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[nodeCSR->csrCols[j]];
                         }
                     } else {
                         for (j = nodeCSR->csrRows[i] - nodeCSR->csrRows[0];
                              j < nodeCSR->csrRows[i + 1] - nodeCSR->csrRows[0]; j++) {
-                            result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[j];
+                            result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[nodeCSR->csrCols[j]];
                         }
                     }
                 }
@@ -364,12 +364,12 @@ int main(int argc, char *argv[]) {
                 for (i = ompThreadId * rowsPerThread; i < (ompThreadId + 1) * rowsPerThread; i++) {
                     if (i == nodeCSR->csrRows.size() - 1) {
                         for (j = nodeCSR->csrRows[i] - nodeCSR->csrRows[0]; j < nodeCSR->csrData.size(); j++) {
-                            result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[j];
+                            result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[nodeCSR->csrCols[j]];
                         }
                     } else {
                         for (j = nodeCSR->csrRows[i] - nodeCSR->csrRows[0];
                              j < nodeCSR->csrRows[i + 1] - nodeCSR->csrRows[0]; j++) {
-                            result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[j];
+                            result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[nodeCSR->csrCols[j]];
                         }
                     }
                 }

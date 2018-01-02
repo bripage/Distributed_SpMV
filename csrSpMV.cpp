@@ -44,10 +44,15 @@ bool sortByCol(const Element& lhs, const Element& rhs) {
 	}
 }
 
-void csrSpMV::rebaseRowPtrs(){
+void csrSpMV::rebase(controlData control){
 	int firstRowPtr = csrRows[0];
 	for (int i = 0; i < csrRows.size(); i++){
 		csrRows[i] -= firstRowPtr;
+	}
+
+	int minColId = control.mId % control.clusterCols;
+	for (int i = 0; i < csrCols.size(); i++){
+		csrCols[i] -= minColId;
 	}
 }
 

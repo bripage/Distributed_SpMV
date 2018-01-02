@@ -29,7 +29,7 @@ class csrSpMV {
 		csrSpMV();                          // generic constructor
 		csrSpMV(const csrSpMV& objToCopy);  //copy constructor
         ~csrSpMV();                         // destructor
-		void rebaseRowPtrs();
+		void rebase(controlData control);
 };
 
 #endif //DISTRUBUTED_SPMV_CSRSPMV_H
