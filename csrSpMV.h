@@ -30,6 +30,7 @@ class csrSpMV {
 		csrSpMV(const csrSpMV& objToCopy);  //copy constructor
         ~csrSpMV();                         // destructor
 		void rebaseRowPtrs();
+		int zeroOutRowPtrs(int rowId);
 };
 
 #endif //DISTRUBUTED_SPMV_CSRSPMV_H

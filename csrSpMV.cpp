@@ -44,11 +44,11 @@ bool sortByCol(const Element& lhs, const Element& rhs) {
 	}
 }
 
-int zeroOutRowPtrs(int rowId){
+int csrSpMV::zeroOutRowPtrs(int rowId){
 	return rowId - csrRows[0];
 }
 
-void rebaseRowPtrs(){
+void csrSpMV::rebaseRowPtrs(){
 	std::transform(csrRows.begin(), csrRows.end(), csrRows.begin(), zeroOutRowPtrs);
 }
 
