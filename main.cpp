@@ -362,7 +362,7 @@ int main(int argc, char *argv[]) {
 	        rowsPerThread = nodeCSR->csrRows.size() / control.ompThreads;
 	        std::cout << "rowsPerThread = " << rowsPerThread << std::endl;
 	        ompThreadId = omp_get_thread_num();
-	        if (ompThreadId = control.ompThreads - 1){
+	        if (ompThreadId == control.ompThreads - 1){
 		        rowEnd = nodeCSR->csrRows.size();
 	        } else {
 		        rowEnd = (ompThreadId + 1) * rowsPerThread;
