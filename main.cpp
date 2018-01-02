@@ -357,7 +357,7 @@ int main(int argc, char *argv[]) {
     if (nodeCSR->csrData.size() > 0) {
         int ompThreadId, start, end, i, j, rowsPerThread, rowEnd;
 
-        #pragma omp parallel num_threads(control.ompThreads) shared(nodeCSR, result) private(ompThreadId, start, end, i, j, rowsPerThread)
+        #pragma omp parallel num_threads(control.ompThreads) shared(nodeCSR, result) private(ompThreadId, start, end, i, j, rowsPerThread, rowEnd)
         {
             //rowsPerThread = ceil(nodeCSR->csrRows.size() / control.ompThreads);
             //ompThreadId = omp_get_thread_num();
