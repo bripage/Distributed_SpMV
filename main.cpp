@@ -359,10 +359,10 @@ int main(int argc, char *argv[]) {
 
         #pragma omp parallel num_threads(control.ompThreads) shared(nodeCSR, result) private(ompThreadId, start, end, i, j, rowsPerThread, rowEnd)
         {
-            //rowsPerThread = ceil(nodeCSR->csrRows.size() / control.ompThreads);
+            rowsPerThread = ceil(nodeCSR->csrRows.size() / control.ompThreads);
             //ompThreadId = omp_get_thread_num();
 
-	        rowsPerThread = nodeCSR->csrRows.size() / control.ompThreads;
+	        //rowsPerThread = nodeCSR->csrRows.size() / control.ompThreads;
 	        //std::cout << "rowsPerThread = " << rowsPerThread << std::endl;
 	        ompThreadId = omp_get_thread_num();
 	        if (ompThreadId == control.ompThreads - 1){
