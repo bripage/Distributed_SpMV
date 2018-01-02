@@ -348,7 +348,10 @@ int main(int argc, char *argv[]) {
 
 
     if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
-    double spmvStartTime = MPI_Wtime();
+	usleep(100000*control.myId);
+	
+	double spmvStartTime = MPI_Wtime();
+
 
     if (nodeCSR->csrData.size() > 0) {
         int ompThreadId, start, end, i, j, rowsPerThread, rowEnd;
