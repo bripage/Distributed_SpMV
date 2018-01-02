@@ -363,7 +363,7 @@ int main(int argc, char *argv[]) {
 	        }
 
             if (ompThreadId == control.ompThreads - 1) {
-                for (i = ompThreadId * rowsPerThread; i < nodeCSR->csrRows.size(); i++) {
+                for (i = ompThreadId * rowsPerThread; i < rowEnd; i++) {
                     if (i == nodeCSR->csrRows.size() - 1) {
                         for (j = nodeCSR->csrRows[i] - nodeCSR->csrRows[0]; j < nodeCSR->csrData.size(); j++) {
                             result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[nodeCSR->csrCols[j]];
