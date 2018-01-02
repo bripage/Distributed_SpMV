@@ -380,7 +380,7 @@ int main(int argc, char *argv[]) {
 				        }
 			        } else {
 				        for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrRows[i + 1]; j++) {
-					        std::cout << i << ", " << j << ", " << nodeCSR->csrCols[j] << ", " << nodeCSR->csrData[j] * (double) nodeCSR->denseVec[nodeCSR->csrCols[j] << std::endl;
+					        std::cout << i << ", " << j << ", " << nodeCSR->csrCols[j] << ", " << nodeCSR->csrData[j] * nodeCSR->denseVec[nodeCSR->csrCols[j]] << std::endl;
 					        nodeCSR->result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[nodeCSR->csrCols[j]];
 				        }
 			        }
