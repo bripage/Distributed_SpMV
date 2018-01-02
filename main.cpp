@@ -95,6 +95,7 @@ int main(int argc, char *argv[]) {
     control.clusterRows = sqrt(control.processCount);
     control.clusterCols = control.clusterRows; // works because cluster is expected to be square
     control.myCol = control.myId % control.clusterRows;
+	std::cout << "myCol = " << control.myCol << std::endl;
 
     // Create a duplicate of MPI_COMM_WORLD that can be used to split
     MPI_Comm dupCommWorldCol;
