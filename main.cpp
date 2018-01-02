@@ -381,7 +381,7 @@ int main(int argc, char *argv[]) {
 			        }
 		        }
 	        } else {
-		        for (i = ompThreadId * rowsPerThread; i < (ompThreadId + 1) * rowsPerThread; i++) {
+		        for (i = ompThreadId * rowsPerThread; i < rowEnd; i++) {
 			        if (i == nodeCSR->csrRows.size() - 1) {
 				        for (j = nodeCSR->csrRows[i] - nodeCSR->csrRows[0]; j < nodeCSR->csrData.size(); j++) {
 					        nodeCSR->result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[nodeCSR->csrCols[j]];
