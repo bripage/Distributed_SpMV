@@ -121,7 +121,7 @@ void csrSpMV::masterOnlySpMV(controlData control) {
                     line.erase(0, pos + 1);
 
                     if (i == 0) {
-                        //control.rowCount = std::stoi(token);
+                        control.rowCount = std::stoi(token);
 	                    result.resize(control.rowCount, 0.0);
                     } else {
                         //control.colCount = std::stoi(token);
