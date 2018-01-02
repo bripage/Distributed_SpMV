@@ -369,7 +369,7 @@ int main(int argc, char *argv[]) {
                             result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[nodeCSR->csrCols[j]];
                         }
                     } else {
-                        for (j = nodeCSR->csrRows[i] - nodeCSR->csrRows[0];
+                        for (j = nodeCSR->csrRows[i];
                              j < nodeCSR->csrRows[i + 1]; j++) {
                             result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[nodeCSR->csrCols[j]];
                         }
@@ -377,7 +377,7 @@ int main(int argc, char *argv[]) {
                 }
             } else {
                 for (i = ompThreadId * rowsPerThread; i < rowEnd; i++) {
-	                for (j = nodeCSR->csrRows[i] - nodeCSR->csrRows[0]; j < nodeCSR->csrRows[i + 1]; j++) {
+	                for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrRows[i + 1]; j++) {
 	                    result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[nodeCSR->csrCols[j]];
                     }
                 }
