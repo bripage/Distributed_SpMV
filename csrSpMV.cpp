@@ -89,12 +89,14 @@ void csrSpMV::masterOnlySpMV(controlData control) {
     int tempRow, tempCol;
     double tempData;
 
+	/*
 	// Fill the dense vector with preliminary data for use in the Master Only SpMV calculation
 	if (!control.myId) {
 		for (int i = 0; i < control.rowCount; i++) {
 			denseVec.push_back(1.0);
 		}
 	}
+	*/
 
     // Read in sparse matrix saved in Matrix Market Format
     std::ifstream infile(control.matrixFile);
@@ -123,6 +125,7 @@ void csrSpMV::masterOnlySpMV(controlData control) {
                     if (i == 0) {
                         control.rowCount = std::stoi(token);
 	                    result.resize(control.rowCount, 0.0);
+	                    denseVec.resize(control.rowCount, 1.0);
                     } else {
                         control.colCount = std::stoi(token);
                     }
