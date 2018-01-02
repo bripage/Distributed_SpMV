@@ -306,12 +306,13 @@ int main(int argc, char *argv[]) {
 	        control.colsPerNode = control.rowCount;
 
 	        //std::cout << "nodeCSR->rebase(" << control.myCol << " * " << control.colsPerNode << ")" << std::endl;
-	        nodeCSR->rebase(control.myCol * control.colsPerNode);
+	        //nodeCSR->rebase(control.myCol * control.colsPerNode);
         }
 
         // broadcast dense vector to column nodes
         MPI_Bcast(&nodeCSR->denseVec[0], control.rowsPerNode, MPI_DOUBLE, 0, control.col_comm);
     }
+	nodeCSR->rebase(control.myCol * control.colsPerNode);
 
     std::vector<double> result;
     result.resize(control.rowsPerNode, 0.0);
