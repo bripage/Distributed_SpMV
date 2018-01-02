@@ -199,6 +199,7 @@ int main(int argc, char *argv[]) {
                      MPI_STATUS_IGNORE); // get number of rows (should be all)
 
             control.rowsPerNode = ceil(control.rowCount / (float) control.clusterRows);
+	        control.colsPerNode = control.rowsPerNode;
 
             nodeCSR->csrRows.resize(control.rowCount);
             nodeCSR->csrCols.resize(control.elementCount);
