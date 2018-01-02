@@ -319,7 +319,8 @@ int main(int argc, char *argv[]) {
 
 
     std::vector<double> result;
-    result.resize(control.rowsPerNode, 0.0);
+	result.resize(control.rowsPerNode, 0.0);
+    nodeCSR->result.resize(control.rowsPerNode, 0.0);
 
 	usleep(100000*control.myId);
 	std::cout << std::endl;
