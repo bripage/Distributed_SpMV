@@ -349,7 +349,7 @@ int main(int argc, char *argv[]) {
 
     if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
 	usleep(100000*control.myId);
-	
+
 	double spmvStartTime = MPI_Wtime();
 
 
@@ -364,7 +364,7 @@ int main(int argc, char *argv[]) {
 	        rowsPerThread = nodeCSR->csrRows.size() / control.ompThreads;
 	        std::cout << "rowsPerThread = " << rowsPerThread << std::endl;
 	        ompThreadId = omp_get_thread_num();
-	        if (ompThreadId = control.ompThreads - 1){
+	        if (ompThreadId == control.ompThreads - 1){
 		        rowEnd = nodeCSR->csrRows.size() - 1;
 	        } else {
 		        rowEnd = (ompThreadId + 1) * rowsPerThread;
