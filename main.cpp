@@ -321,7 +321,7 @@ int main(int argc, char *argv[]) {
     std::vector<double> result;
 	result.resize(control.rowsPerNode, 0.0);
 
-
+/*
 	usleep(100000*control.myId);
 	std::cout << std::endl;
 	std::cout << std::endl;
@@ -346,7 +346,7 @@ int main(int argc, char *argv[]) {
 	}
 	std::cout << std::endl;
 	std::cout << std::endl;
-
+*/
 
     if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
 	usleep(100000*control.myId);
@@ -392,7 +392,7 @@ int main(int argc, char *argv[]) {
 	        } else {
 		        for (i = ompThreadId * rowsPerThread; i < rowEnd; i++) {
 			        for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrRows[i + 1]; j++) {
-				        if (control.myId == 1) std::cout << ompThreadId << ", " <<i << ", " << j << ", " << nodeCSR->csrCols[j] << std::endl;
+				        //if (control.myId == 1) std::cout << ompThreadId << ", " <<i << ", " << j << ", " << nodeCSR->csrCols[j] << std::endl;
 				        result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[nodeCSR->csrCols[j]];
 			        }
 			     }
