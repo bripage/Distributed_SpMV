@@ -90,11 +90,13 @@ int main(int argc, char *argv[]) {
     }
 */
 	// Get the name of the processor
+	/*
 	usleep(100000*control.myId);
 	char processor_name[MPI_MAX_PROCESSOR_NAME];
 	int name_len;
 	MPI_Get_processor_name(processor_name, &name_len);
 	std::cout << "Process " << control.myId << "is on process" << processor_name << std::endl;
+	*/
 
     //****************************************************//
     //  Create comm for each column/row of compute nodes  //
@@ -357,15 +359,13 @@ int main(int argc, char *argv[]) {
 */
 
     if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
-	usleep(100000*control.myId);
-
 	double spmvStartTime = MPI_Wtime();
 
 
     if (nodeCSR->csrData.size() > 0) {
-        int ompThreadId, procId, start, end, i, j, rowsPerThread, rowEnd;
+        int ompThreadId, start, end, i, j, rowsPerThread, rowEnd;
 
-        #pragma omp parallel num_threads(control.ompThreads) shared(nodeCSR, result) private(ompThreadId, procId, start, end, i, j, rowsPerThread, rowEnd)
+        #pragma omp parallel num_threads(control.ompThreads) shared(nodeCSR, result) private(ompThreadId, start, end, i, j, rowsPerThread, rowEnd)
         {
             //owsPerThread = ceil(nodeCSR->csrRows.size() / control.ompThreads);
             //ompThreadId = omp_get_thread_num();
@@ -374,9 +374,9 @@ int main(int argc, char *argv[]) {
 	        //std::cout << "rowsPerThread = " << rowsPerThread << std::endl;
 	        ompThreadId = omp_get_thread_num();
 
-	        procId = sched_getcpu();
-	        usleep(100000*control.myId+10000*ompThreadId);
-	        std::cout << control.myId << "-" << ompThreadId << " cpu " << procId << std::endl;
+	        //procId = sched_getcpu();
+	        //usleep(100000*control.myId+10000*ompThreadId);
+	        //std::cout << control.myId << "-" << ompThreadId << " cpu " << procId << std::endl;
 
 	        if (ompThreadId == control.ompThreads - 1){
 		        rowEnd = nodeCSR->csrRows.size();
@@ -474,13 +474,16 @@ int main(int argc, char *argv[]) {
     //
     if (control.myId == 0) {
         std::cout << std::endl;
+	    int incorrectRowCount = 0;
         for (int i = 0; i < control.rowCount; i++) {
             //std::cout << "i = " << i << std::endl;
             if (std::abs(masterData.result[i] - result[i]) > 0.1) {
                 //std::cout << "--- ERROR: result[" << i << "] DOES NOT MATCH ---" << std::endl;
-	            std::cout << "row " << i << ": " << masterData.result[i] << " != " << result[i] << std::endl;
+	            //std::cout << "row " << i << ": " << masterData.result[i] << " != " << result[i] << std::endl;
+	            incorrectRowCount++;
             }
         }
+	    std::cout << "Incorecct Rows: " << incorrectRowCount << std::endl;
     }
 
 
