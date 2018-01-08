@@ -362,9 +362,9 @@ int main(int argc, char *argv[]) {
 
 
     if (nodeCSR->csrData.size() > 0) {
-        int ompThreadId, start, end, i, j, rowsPerThread, rowEnd;
+        int ompThreadId, procId, start, end, i, j, rowsPerThread, rowEnd;
 
-        #pragma omp parallel num_threads(control.ompThreads) shared(nodeCSR, result) private(ompThreadId, start, end, i, j, rowsPerThread, rowEnd)
+        #pragma omp parallel num_threads(control.ompThreads) shared(nodeCSR, result) private(ompThreadId, procId, start, end, i, j, rowsPerThread, rowEnd)
         {
             //owsPerThread = ceil(nodeCSR->csrRows.size() / control.ompThreads);
             //ompThreadId = omp_get_thread_num();
@@ -372,6 +372,10 @@ int main(int argc, char *argv[]) {
 	        rowsPerThread = nodeCSR->csrRows.size() / control.ompThreads;
 	        //std::cout << "rowsPerThread = " << rowsPerThread << std::endl;
 	        ompThreadId = omp_get_thread_num();
+
+	        procId = sched_getcpu();
+	        std::cout << control.myId << "-" << ompThreadId << " cpu " << procId << std::endl;
+
 	        if (ompThreadId == control.ompThreads - 1){
 		        rowEnd = nodeCSR->csrRows.size();
 	        } else {
