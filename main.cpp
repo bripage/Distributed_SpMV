@@ -10,6 +10,7 @@
 #include "distribution.h"
 #include "clusterSpMV.h"
 #include <unistd.h>
+#include <sched.h>
 
 
 int main(int argc, char *argv[]) {
