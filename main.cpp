@@ -293,7 +293,7 @@ int main(int argc, char *argv[]) {
 		        nodeCSR->csrData.erase(nodeCSR->csrData.begin() + myLastData, nodeCSR->csrData.end());
             }
 	        nodeCSR->rebase(control.myCol * control.colsPerNode);
-	        std::cout << control.myCol << " rebased" << std::endl;
+	        //std::cout << control.myCol << " rebased" << std::endl;
         }
 
         if (control.myId < control.clusterCols) {
@@ -320,7 +320,7 @@ int main(int argc, char *argv[]) {
 
 
 	        nodeCSR->rebase(control.myCol * control.colsPerNode);
-            std::cout << control.myCol << " rebased" << std::endl;
+            //std::cout << control.myCol << " rebased" << std::endl;
         }
 
         // broadcast dense vector to column nodes
