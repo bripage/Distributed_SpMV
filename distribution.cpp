@@ -120,7 +120,7 @@ void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clust
 
 
 				// If we have read a valid element data create an element object for it
-				if (!(tempData == 0.0 || tempData = 0)) {
+				if (!(tempData == 0.0 || tempData == 0)) {
 					elements.emplace_back(tempRow, tempCol, tempData);
 				}
 

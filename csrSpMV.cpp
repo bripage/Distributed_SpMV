@@ -156,7 +156,7 @@ void csrSpMV::masterOnlySpMV(controlData control) {
                 //tempElement.data = ::atof(line.c_str());
 	            tempData = ::atof(line.c_str());
 
-	            if (!(tempData == 0.0 || tempData = 0)) {
+	            if (!(tempData == 0.0 || tempData == 0)) {
                     //elements.push_back(tempElement);
 	                //std::cout << "tempdata = " << tempElement.data << std::endl;
 	                result[tempRow] += tempData * denseVec[tempCol];

@@ -64,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="csrSpMV.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="csrSpMV.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/csrSpMV.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="723">
-              <caret line="158" column="37" lean-forward="true" selection-start-line="158" selection-start-column="37" selection-end-line="158" selection-end-column="53" />
+              <caret line="158" column="52" lean-forward="false" selection-start-line="158" selection-start-column="52" selection-end-line="158" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -84,11 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="distribution.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="distribution.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/distribution.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1435">
-              <caret line="193" column="112" lean-forward="true" selection-start-line="193" selection-start-column="112" selection-end-line="193" selection-end-column="112" />
+            <state relative-caret-position="370">
+              <caret line="122" column="52" lean-forward="false" selection-start-line="122" selection-start-column="52" selection-end-line="122" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -145,8 +145,8 @@
         <option value="$PROJECT_DIR$/distribution.h" />
         <option value="$PROJECT_DIR$/csrSpMV.h" />
         <option value="$PROJECT_DIR$/main.cpp" />
-        <option value="$PROJECT_DIR$/csrSpMV.cpp" />
         <option value="$PROJECT_DIR$/distribution.cpp" />
+        <option value="$PROJECT_DIR$/csrSpMV.cpp" />
       </list>
     </option>
   </component>
@@ -490,12 +490,12 @@
       <workItem from="1513907527094" duration="66000" />
       <workItem from="1514457228555" duration="1322000" />
       <workItem from="1514490113935" duration="64697000" />
-      <workItem from="1515063990828" duration="19875000" />
+      <workItem from="1515063990828" duration="20001000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="621374000" />
+    <option name="totallyTimeSpent" value="621500000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1921" y="23" width="1920" height="1003" extended-state="6" />
@@ -776,18 +776,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/csrSpMV.cpp">
+    <entry file="file://$PROJECT_DIR$/distribution.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="723">
-          <caret line="158" column="37" lean-forward="true" selection-start-line="158" selection-start-column="37" selection-end-line="158" selection-end-column="53" />
+        <state relative-caret-position="370">
+          <caret line="122" column="52" lean-forward="false" selection-start-line="122" selection-start-column="52" selection-end-line="122" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/distribution.cpp">
+    <entry file="file://$PROJECT_DIR$/csrSpMV.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1435">
-          <caret line="193" column="112" lean-forward="true" selection-start-line="193" selection-start-column="112" selection-end-line="193" selection-end-column="112" />
+        <state relative-caret-position="723">
+          <caret line="158" column="52" lean-forward="false" selection-start-line="158" selection-start-column="52" selection-end-line="158" selection-end-column="52" />
           <folding />
         </state>
       </provider>
