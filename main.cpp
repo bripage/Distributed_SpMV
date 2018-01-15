@@ -391,14 +391,18 @@ int main(int argc, char *argv[]) {
 				        for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrData.size(); j++) {
 					        //if (control.myId == 1) std::cout << ompThreadId << ", " << i << ", " << j << ", " << nodeCSR->csrCols[j] << std::endl;
 					        //if (control.myId == 0)std::cout << nodeCSR->csrCols[j] << ", " << nodeCSR->csrData[j] << " * " << nodeCSR->denseVec[nodeCSR->csrCols[j]] << std::endl;
-					        result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[nodeCSR->csrCols[j]];
+					        if  (j > 0 || j < nodeCSR->csrData.size()) {
+						        result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[nodeCSR->csrCols[j]];
+					        }
 				        }
 			        } else {
 				        for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrRows[i + 1]; j++) {
 					        //if (control.myId == 0) std::cout << i << ", " << j << ", " << nodeCSR->csrCols[j] << ", " << nodeCSR->csrData[j] << " * " << nodeCSR->denseVec[nodeCSR->csrCols[j]] << std::endl;
 					        //if (control.myId == 1) std::cout << ompThreadId << ", " << i << ", " << j << ", " << nodeCSR->csrCols[j] << std::endl;
 					        //if (control.myId == 0) std::cout << nodeCSR->csrCols[j] << ", " << nodeCSR->csrData[j] << " * " << nodeCSR->denseVec[nodeCSR->csrCols[j]] << std::endl;
-					        result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[nodeCSR->csrCols[j]];
+					        if  (j > 0 || j < nodeCSR->csrData.size()) {
+					            result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[nodeCSR->csrCols[j]];
+				            }
 				        }
 			        }
 		        }
@@ -406,9 +410,11 @@ int main(int argc, char *argv[]) {
 		        for (i = ompThreadId * rowsPerThread; i < rowEnd; i++) {
 			        for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrRows[i + 1]; j++) {
 				        //if (control.myId == 1) std::cout << ompThreadId << ", " <<i << ", " << j << ", " << nodeCSR->csrCols[j] << std::endl;
-				        result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[nodeCSR->csrCols[j]];
+				        if  (j > 0 || j < nodeCSR->csrData.size()) {
+					        result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[nodeCSR->csrCols[j]];
+				        }
 			        }
-			     }
+		        }
 	        }
         }
     }
