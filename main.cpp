@@ -530,7 +530,7 @@ int main(int argc, char *argv[]) {
     // This block is to be used in conjunction with single node, single thread/process SpMV and compares the results of
     // the "master only" SpMV against those of the distributed version's results.
     //
-	/*
+
     if (control.myId == 0) {
         std::cout << std::endl;
 	    int incorrectRowCount = 0;
@@ -546,7 +546,7 @@ int main(int argc, char *argv[]) {
         }
 	    std::cout << "Incorecct Rows: " << incorrectRowCount << std::endl;
     }
-	*/
+	
 
     if (control.myId == 0) {
         //std::cout << std::endl << "Complete!" << std::endl;
