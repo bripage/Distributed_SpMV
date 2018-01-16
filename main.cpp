@@ -171,13 +171,15 @@ int main(int argc, char *argv[]) {
             std::vector<int> seqDist(control.rowCount, 0); // sequential distribution
             std::vector<int> distDist(control.rowCount, 0); //distributed distribution
 
+            masterData.masterOnlySpMV(control, seqDist);
+
             // Sequential
-            for (int i = 0; i < masterData.csrRows.size(); i++){
-                if(i == control.rowCount-1){
-                    seqDist[i] = masterData.csrData.size() - masterData.csrRows[i];
-                }
-                seqDist[i] = masterData.csrRows[i+1] - masterData.csrRows[i];
-            }
+            //for (int i = 0; i < masterData.csrRows.size(); i++){
+            //    if(i == control.rowCount-1){
+            //        seqDist[i] = masterData.csrData.size() - masterData.csrRows[i];
+            //    }
+            //    seqDist[i] = masterData.csrRows[i+1] - masterData.csrRows[i];
+            //}
 
             // Distributed
             for (int i = 0; i < control.clusterCols; i++){

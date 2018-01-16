@@ -25,7 +25,7 @@ class csrSpMV {
         std::vector <double> result;
 
         void nodeSpMV(controlData control, std::vector <double>& result);
-        void masterOnlySpMV(controlData control);
+        void masterOnlySpMV(controlData control, std::vector<int> seqDist);
 		csrSpMV();                          // generic constructor
 		csrSpMV(const csrSpMV& objToCopy);  //copy constructor
         ~csrSpMV();                         // destructor
