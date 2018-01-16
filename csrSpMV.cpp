@@ -166,7 +166,7 @@ void csrSpMV::masterOnlySpMV(controlData control) {
             previousLineCommented = true;
         }
     }
-    printf("%d rows, %d cols, and %d non-zeros\n", control.rowCount, control.colCount, control.nonZeros);
+    //printf("%d rows, %d cols, and %d non-zeros\n", control.rowCount, control.colCount, control.nonZeros);
 /*
 	std::cout << "Rows before sorting: " << std::endl;
 	for (int i = 0; i < elements.size(); i++) {
