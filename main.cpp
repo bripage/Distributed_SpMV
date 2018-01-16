@@ -195,7 +195,7 @@ int main(int argc, char *argv[]) {
             int totalInvalidRows = 0;
             for (int i = 0; i < control.rowCount; i++){
                 if (seqDist[i] != distDist[i]){
-                    std::cout << "Row " << i << ": Invalid Distribution" << std::endl;
+                    std::cout << "Row " << i << ": " << seqDist[i] << " != " << distDist[i] << std::endl;
                     totalInvalidRows++;
                 }
             }
