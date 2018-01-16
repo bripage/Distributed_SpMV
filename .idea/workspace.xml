@@ -12,8 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c65b864-9431-4078-9657-58a0aa3c15cb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/csrSpMV.cpp" afterPath="$PROJECT_DIR$/csrSpMV.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/csrSpMV.h" afterPath="$PROJECT_DIR$/csrSpMV.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
     </list>
     <ignored path="Distrubuted_SpMV.iws" />
@@ -38,8 +36,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="181" column="14" lean-forward="false" selection-start-line="181" selection-start-column="14" selection-end-line="181" selection-end-column="14" />
+            <state relative-caret-position="162">
+              <caret line="147" column="10" lean-forward="false" selection-start-line="147" selection-start-column="10" selection-end-line="147" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -499,12 +497,12 @@
       <workItem from="1514457228555" duration="1322000" />
       <workItem from="1514490113935" duration="64697000" />
       <workItem from="1515063990828" duration="30098000" />
-      <workItem from="1516128843040" duration="4595000" />
+      <workItem from="1516128843040" duration="4684000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="636192000" />
+    <option name="totallyTimeSpent" value="636281000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="323" width="1368" height="743" extended-state="6" />
@@ -789,8 +787,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="181" column="14" lean-forward="false" selection-start-line="181" selection-start-column="14" selection-end-line="181" selection-end-column="14" />
+        <state relative-caret-position="162">
+          <caret line="147" column="10" lean-forward="false" selection-start-line="147" selection-start-column="10" selection-end-line="147" selection-end-column="10" />
           <folding />
         </state>
       </provider>

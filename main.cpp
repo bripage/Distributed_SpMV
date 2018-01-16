@@ -145,7 +145,7 @@ int main(int argc, char *argv[]) {
 
     csrSpMV masterData;
     if (!control.myId) {
-        masterData.masterOnlySpMV(control);
+        //masterData.masterOnlySpMV(control);
     }
 
 
