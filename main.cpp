@@ -184,7 +184,7 @@ int main(int argc, char *argv[]) {
             // Distributed
             for (int i = 0; i < control.clusterCols; i++){
                 for (int j = 0; j < control.rowCount; j++){
-                    if(i == control.rowCount-1) {
+                    if(j == control.rowCount-1) {
                         distDist[j] += clusterColData[i]->csrData.size() - clusterColData[i]->csrRows[j];
                         std::cout << "data.size() = " << clusterColData[i]->csrData.size() << " - " << clusterColData[i]->csrRows[j] << " = " << clusterColData[i]->csrData.size() - clusterColData[i]->csrRows[j] << std::endl;
                     } else {
