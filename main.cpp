@@ -186,6 +186,7 @@ int main(int argc, char *argv[]) {
                 for (int j = 0; j < control.rowCount; j++){
                     if(i == control.rowCount-1) {
                         distDist[j] += clusterColData[i]->csrData.size() - clusterColData[i]->csrRows[j];
+                        std::cout << "data.size() = " << clusterColData[i]->csrData.size() << " - " << clusterColData[i]->csrRows[j] << " = " << clusterColData[i]->csrData.size() - clusterColData[i]->csrRows[j] << std::endl;
                     } else {
                         distDist[j] += clusterColData[i]->csrRows[j+1] - clusterColData[i]->csrRows[j];
                     }
@@ -546,7 +547,7 @@ int main(int argc, char *argv[]) {
         }
 	    std::cout << "Incorecct Rows: " << incorrectRowCount << std::endl;
     }
-	
+
 
     if (control.myId == 0) {
         //std::cout << std::endl << "Complete!" << std::endl;
