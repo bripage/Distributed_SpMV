@@ -422,7 +422,7 @@ int main(int argc, char *argv[]) {
             //owsPerThread = ceil(nodeCSR->csrRows.size() / control.ompThreads);
             //ompThreadId = omp_get_thread_num();
 
-	        rowsPerThread = nodeCSR->csrRows.size() / control.ompThreads;
+	        rowsPerThread = ceil(nodeCSR->csrRows.size() / (double)control.ompThreads);
 	        //std::cout << "rowsPerThread = " << rowsPerThread << std::endl;
 	        ompThreadId = omp_get_thread_num();
 
