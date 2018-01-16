@@ -58,6 +58,12 @@ int main(int argc, char *argv[]) {
 	        if (temp == "true") {
 		        control.barrier = true;
 	        }
+	    } else if (argTemp == "--matrix-statistics") {
+            //set number of OpenMP threads per node
+            std::string temp = argv[i + 1];
+            if (temp == "true") {
+                control.matStats = true;
+            }
         } else if (argTemp == "--help") {
             std::cout << "Usage: distSpMV [OPTION] <argument> ..." << std::endl << std::endl;
             std::cout << "Options:" << std::endl;
@@ -137,10 +143,10 @@ int main(int argc, char *argv[]) {
 
     //std::vector<double> denseVector;
 
-    //csrSpMV masterData;
-    //if (!control.myId) {
-    //    masterData.masterOnlySpMV(control);
-    //}
+    csrSpMV masterData;
+    if (!control.myId) {
+        masterData.masterOnlySpMV(control);
+    }
 
 
     //***********************************************//
@@ -155,6 +161,50 @@ int main(int argc, char *argv[]) {
     if (!control.myId) {
         distribution_SplitMatrix(control, clusterColData);
     }
+
+
+    //
+    // Find Distribution of Non-Zeros on both sequential and distributed distributions
+    //
+    if (control.matStats) {
+        if (!control.myId) {
+            std::vector<int> seqDist(control.rowCount, 0); // sequential distribution
+            std::vector<int> distDist(control.rowCount, 0); //distributed distribution
+
+            // Sequential
+            for (int i = 0; i < masterData.csrRows.size(); i++){
+                if(i == control.rowCount-1){
+                    seqDist[i] = masterData.csrData.size() - masterData.csrRows[i];
+                }
+                seqDist[i] = masterData.csrRows[i+1] - masterData.csrRows[i];
+            }
+
+            // Distributed
+            for (int i = 0; i < control.clusterCols; i++){
+                for (int j = 0; j < control.rowCount; j++){
+                    if(i == control.rowCount-1) {
+                        distDist[j] += clusterColData[i]->csrData.size() - clusterColData[i]->csrRows[j];
+                    } else {
+                        distDist[j] += clusterColData[i]->csrRows[j+1] - clusterColData[i]->csrRows[j];
+                    }
+                }
+            }
+
+            int totalInvalidRows = 0;
+            for (int i = 0; i < control.rowCount; i++){
+                if (seqDist[i] != distDist[i]){
+                    std::cout << "Row " << i << ": Invalid Distribution" << std::endl;
+                    totalInvalidRows++;
+                }
+            }
+            if (totalInvalidRows != 0){
+                std::cout << "Total Incorrectly Distributed Rows = " << totalInvalidRows << std::endl;
+            }
+        }
+    }
+    //
+    // End distribution calculation
+    //
 
     double distributionEndTime = MPI_Wtime();
 
