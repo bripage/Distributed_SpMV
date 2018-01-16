@@ -83,7 +83,7 @@ void csrSpMV::nodeSpMV(controlData control, std::vector <double>& result) {
 	}
 }
 
-void csrSpMV::masterOnlySpMV(controlData control, std::vector<int> seqDist) {
+void csrSpMV::masterOnlySpMV(controlData control, std::vector<int>& seqDist) {
     //convert sparse matrix from Matrix Market to Compressed Sparse Row format
     std::vector <Element> elements; //holds each matrix element as read from the Matrix Market format file
     int tempRow, tempCol;
