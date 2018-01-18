@@ -427,9 +427,9 @@ int main(int argc, char *argv[]) {
 	        //std::cout << "rowsPerThread = " << rowsPerThread << std::endl;
 	        ompThreadId = omp_get_thread_num();
 
-	        //procId = sched_getcpu();
+	        procId = sched_getcpu();
 	        usleep(100000*control.myId+10000*ompThreadId);
-	        //std::cout << control.myId << "-" << ompThreadId << " cpu " << procId << std::endl;
+	        std::cout << control.myId << "-" << ompThreadId << " cpu " << procId << std::endl;
 
 	        if (ompThreadId == control.ompThreads - 1){
 		        rowEnd = nodeCSR->csrRows.size();
