@@ -58,11 +58,11 @@ int main(int argc, char *argv[]) {
 	        if (temp == "true") {
 		        control.barrier = true;
 	        }
-	    } else if (argTemp == "--matrix-statistics") {
+	    } else if (argTemp == "-verify") {
             //set number of OpenMP threads per node
             std::string temp = argv[i + 1];
             if (temp == "true") {
-                control.matStats = true;
+                control.verify = true;
             }
         } else if (argTemp == "--help") {
             std::cout << "Usage: distSpMV [OPTION] <argument> ..." << std::endl << std::endl;
@@ -166,7 +166,7 @@ int main(int argc, char *argv[]) {
     //
     // Find Distribution of Non-Zeros on both sequential and distributed distributions
     //
-    if (control.matStats) {
+    if (control.verify) {
         if (!control.myId) {
             std::vector<int> seqDist(control.rowCount, 0); // sequential distribution
             std::vector<int> distDist(control.rowCount, 0); //distributed distribution
@@ -196,7 +196,7 @@ int main(int argc, char *argv[]) {
             int totalInvalidRows = 0;
             for (int i = 0; i < control.rowCount; i++){
                 if (seqDist[i] != distDist[i]){
-                    std::cout << "Row " << i << ": " << seqDist[i] << " != " << distDist[i] << std::endl;
+                    //std::cout << "Row " << i << ": " << seqDist[i] << " != " << distDist[i] << std::endl;
                     totalInvalidRows++;
                 }
             }
@@ -540,20 +540,22 @@ int main(int argc, char *argv[]) {
     // the "master only" SpMV against those of the distributed version's results.
     //
 
-    if (control.myId == 0) {
-        std::cout << std::endl;
-	    int incorrectRowCount = 0;
-        for (int i = 0; i < control.rowCount; i++) {
-            //std::cout << "i = " << i << std::endl;
-            if (std::abs(masterData.result[i] - result[i]) > 0.1) {
-                //std::cout << "--- ERROR: result[" << i << "] DOES NOT MATCH ---" << std::endl;
-	            if (incorrectRowCount < 50) {
-		            std::cout << "row " << i << ": " << masterData.result[i] << " != " << result[i] << std::endl;
-	            }
-	            incorrectRowCount++;
+    if (control.verify) {
+        if (control.myId == 0) {
+            std::cout << std::endl;
+            int incorrectRowCount = 0;
+            for (int i = 0; i < control.rowCount; i++) {
+                //std::cout << "i = " << i << std::endl;
+                if (std::abs(masterData.result[i] - result[i]) > 0.1) {
+                    //std::cout << "--- ERROR: result[" << i << "] DOES NOT MATCH ---" << std::endl;
+                    if (incorrectRowCount < 50) {
+                        std::cout << "row " << i << ": " << masterData.result[i] << " != " << result[i] << std::endl;
+                    }
+                    incorrectRowCount++;
+                }
             }
+            std::cout << "Incorecct Rows: " << incorrectRowCount << std::endl;
         }
-	    std::cout << "Incorecct Rows: " << incorrectRowCount << std::endl;
     }
 
 
