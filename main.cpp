@@ -428,7 +428,7 @@ int main(int argc, char *argv[]) {
 	        ompThreadId = omp_get_thread_num();
 
 	        //procId = sched_getcpu();
-	        //usleep(100000*control.myId+10000*ompThreadId);
+	        usleep(100000*control.myId+10000*ompThreadId);
 	        //std::cout << control.myId << "-" << ompThreadId << " cpu " << procId << std::endl;
 
 	        if (ompThreadId == control.ompThreads - 1){
@@ -446,7 +446,10 @@ int main(int argc, char *argv[]) {
 					        //if (control.myId == 0)std::cout << nodeCSR->csrCols[j] << ", " << nodeCSR->csrData[j] << " * " << nodeCSR->denseVec[nodeCSR->csrCols[j]] << std::endl;
 					        //if  (j >= 0 && j < nodeCSR->csrData.size()) {
 						        result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[nodeCSR->csrCols[j]];
-					        //}
+					            if (control.myRow == control.clusterRows-1){
+                                    std::cout << "result[" << i << "] += " << nodeCSR->csrData[j] << " * " << nodeCSR->denseVec[nodeCSR->csrCols[j]] << std::endl;
+                                }
+                            //}
 				        }
 			        } else {
 				        for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrRows[i + 1]; j++) {
