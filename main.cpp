@@ -439,7 +439,7 @@ int main(int argc, char *argv[]) {
             std::cout << control.myId << "-" << ompThreadId << ": " << ompThreadId*rowsPerThread << "-" << rowEnd << std::endl;
 
 	        if (ompThreadId == control.ompThreads - 1) {
-		        for (i = 0; i < nodeCSR->csrRows.size(); i++) {
+		        for (i = ompThreadId*rowsPerThread; i < nodeCSR->csrRows.size(); i++) {
 			        //std::cout << "myId = " << control.myId << ",ompThreadId =  " << ompThreadId << ", " << i << std::endl;
 			        if (i == nodeCSR->csrRows.size() - 1) {
 				        for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrData.size(); j++) {
