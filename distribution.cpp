@@ -77,9 +77,9 @@ void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clust
 				control.rowsPerNode = ceil(control.rowCount / (float) control.clusterRows);
 				control.colsPerNode = ceil(control.colCount / (float) control.clusterCols);
 
-				//std::cout << "rowsPerNode = " << control.rowsPerNode << " colsPerNode = " << control.colsPerNode << std::endl;
+				std::cout << "rowsPerNode = " << control.rowsPerNode << " colsPerNode = " << control.colsPerNode << std::endl;
 
-				//std::cout << control.rowCount << "," << control.colCount << "," << control.nonZeros << std::endl;
+				std::cout << control.rowCount << "," << control.colCount << "," << control.nonZeros << std::endl;
 
 				// determine where to test overflow for extra rows that must be added to the last cluster row's work
 				if (control.rowCount % control.clusterCols != 0) {
