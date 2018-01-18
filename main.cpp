@@ -369,7 +369,7 @@ int main(int argc, char *argv[]) {
             MPI_Recv(&nodeCSR->csrData[0], control.elementCount, MPI_DOUBLE, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
             //MPI_Recv(&nodeCSR->denseVec[0], control.rowCount, MPI_DOUBLE, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
 
-	        control.colsPerNode = control.rowCount;
+	        control.colsPerNode = control.rowsPerNode;
 
 
 	        nodeCSR->rebase(control.myCol * control.colsPerNode);
