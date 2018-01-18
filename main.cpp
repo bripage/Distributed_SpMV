@@ -424,7 +424,7 @@ int main(int argc, char *argv[]) {
             //ompThreadId = omp_get_thread_num();
 
 	        rowsPerThread = ceil(nodeCSR->csrRows.size() / (double)control.ompThreads);
-	        std::cout << "rowsPerThread = " << rowsPerThread << std::endl;
+	        //std::cout << "rowsPerThread = " << rowsPerThread << std::endl;
 	        ompThreadId = omp_get_thread_num();
 
 	        //procId = sched_getcpu();
@@ -436,7 +436,7 @@ int main(int argc, char *argv[]) {
 		        rowEnd = (ompThreadId + 1) * rowsPerThread;
 	        }
 
-            std::cout << control.myId << "-" << ompThreadId << ": " << ompThreadId*rowsPerThread << "-" << rowEnd << std::endl;
+            //std::cout << control.myId << "-" << ompThreadId << ": " << ompThreadId*rowsPerThread << "-" << rowEnd << std::endl;
 
 	        if (ompThreadId == control.ompThreads - 1) {
 		        for (i = ompThreadId*rowsPerThread; i < nodeCSR->csrRows.size(); i++) {
@@ -451,7 +451,7 @@ int main(int argc, char *argv[]) {
                                 //    std::cout << "result[" << i << "] += " << nodeCSR->csrData[j] << " * vec element " << nodeCSR->csrCols[j] << std::endl;
                                 //}
                             //}
-                            if (control.myId == 0) std::cout << ompThreadId << ", " <<i << ", " << j << ", " << nodeCSR->csrCols[j] << std::endl;
+                            //if (control.myId == 0) std::cout << ompThreadId << ", " <<i << ", " << j << ", " << nodeCSR->csrCols[j] << std::endl;
 
                         }
 			        } else {
@@ -462,7 +462,7 @@ int main(int argc, char *argv[]) {
                             //if  (j >= 0 && j < nodeCSR->csrData.size()) {
 					            result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[nodeCSR->csrCols[j]];
 				            //}
-                            if (control.myId == 0) std::cout << ompThreadId << ", " <<i << ", " << j << ", " << nodeCSR->csrCols[j] << std::endl;
+                            //if (control.myId == 0) std::cout << ompThreadId << ", " <<i << ", " << j << ", " << nodeCSR->csrCols[j] << std::endl;
 
                         }
 			        }
@@ -470,7 +470,7 @@ int main(int argc, char *argv[]) {
 	        } else {
 		        for (k = ompThreadId * rowsPerThread; k < rowEnd; k++) {
 			        for (j = nodeCSR->csrRows[k]; j < nodeCSR->csrRows[k + 1]; j++) {
-				        if (control.myId == 0) std::cout << ompThreadId << ", " <<k << ", " << j << ", " << nodeCSR->csrCols[j] << std::endl;
+				        //if (control.myId == 0) std::cout << ompThreadId << ", " <<k << ", " << j << ", " << nodeCSR->csrCols[j] << std::endl;
 				        //if  (j > 0 && j < nodeCSR->csrData.size()) {
 					        result[k] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[nodeCSR->csrCols[j]];
 				        //}
