@@ -384,7 +384,7 @@ int main(int argc, char *argv[]) {
     std::vector<double> result;
 	result.resize(control.rowsPerNode, 0.0);
 
-
+/*
 	usleep(100000*control.myId);
 	std::cout << std::endl;
 	std::cout << std::endl;
@@ -409,7 +409,7 @@ int main(int argc, char *argv[]) {
 	}
 	std::cout << std::endl;
 	std::cout << std::endl;
-
+*/
 
     if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
 	double spmvStartTime = MPI_Wtime();
@@ -446,9 +446,9 @@ int main(int argc, char *argv[]) {
 					        //if (control.myId == 0)std::cout << nodeCSR->csrCols[j] << ", " << nodeCSR->csrData[j] << " * " << nodeCSR->denseVec[nodeCSR->csrCols[j]] << std::endl;
 					        //if  (j >= 0 && j < nodeCSR->csrData.size()) {
 						        result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[nodeCSR->csrCols[j]];
-					            if (control.myRow == control.clusterRows-1){
-                                    std::cout << "result[" << i << "] += " << nodeCSR->csrData[j] << " * vec element " << nodeCSR->csrCols[j] << std::endl;
-                                }
+					            //if (control.myRow == control.clusterRows-1){
+                                //    std::cout << "result[" << i << "] += " << nodeCSR->csrData[j] << " * vec element " << nodeCSR->csrCols[j] << std::endl;
+                                //}
                             //}
 				        }
 			        } else {
