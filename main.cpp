@@ -443,7 +443,7 @@ int main(int argc, char *argv[]) {
 			        if (i == rowEnd - 1) {
 				        for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrData.size(); j++) {
 					        if (control.myId == 1) std::cout << ompThreadId << ", " << i << ", " << j << ", " << nodeCSR->csrCols[j] << std::endl;
-					        /if (control.myId == 0)std::cout << nodeCSR->csrCols[j] << ", " << nodeCSR->csrData[j] << " * " << nodeCSR->denseVec[nodeCSR->csrCols[j]] << std::endl;
+					        if (control.myId == 0)std::cout << nodeCSR->csrCols[j] << ", " << nodeCSR->csrData[j] << " * " << nodeCSR->denseVec[nodeCSR->csrCols[j]] << std::endl;
 					        if  (j > 0 && j < nodeCSR->csrData.size()) {
 						        result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[nodeCSR->csrCols[j]];
 					        }
