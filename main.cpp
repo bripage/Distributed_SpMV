@@ -466,7 +466,7 @@ int main(int argc, char *argv[]) {
 	        } else {
 		        for (k = ompThreadId * rowsPerThread; k < rowEnd; k++) {
 			        for (j = nodeCSR->csrRows[k]; j < nodeCSR->csrRows[k + 1]; j++) {
-				        //if (control.myId == 1) std::cout << ompThreadId << ", " <<i << ", " << j << ", " << nodeCSR->csrCols[j] << std::endl;
+				        if (control.myId == 0) std::cout << ompThreadId << ", " <<i << ", " << j << ", " << nodeCSR->csrCols[j] << std::endl;
 				        //if  (j > 0 && j < nodeCSR->csrData.size()) {
 					        result[k] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[nodeCSR->csrCols[j]];
 				        //}
