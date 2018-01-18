@@ -451,7 +451,9 @@ int main(int argc, char *argv[]) {
                                 //    std::cout << "result[" << i << "] += " << nodeCSR->csrData[j] << " * vec element " << nodeCSR->csrCols[j] << std::endl;
                                 //}
                             //}
-				        }
+                            if (control.myId == 0) std::cout << ompThreadId << ", " <<i << ", " << j << ", " << nodeCSR->csrCols[j] << std::endl;
+
+                        }
 			        } else {
 				        for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrRows[i + 1]; j++) {
 					        //if (control.myId == 0) std::cout << i << ", " << j << ", " << nodeCSR->csrCols[j] << ", " << nodeCSR->csrData[j] << " * " << nodeCSR->denseVec[nodeCSR->csrCols[j]] << std::endl;
@@ -460,7 +462,9 @@ int main(int argc, char *argv[]) {
                             //if  (j >= 0 && j < nodeCSR->csrData.size()) {
 					            result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[nodeCSR->csrCols[j]];
 				            //}
-				        }
+                            if (control.myId == 0) std::cout << ompThreadId << ", " <<i << ", " << j << ", " << nodeCSR->csrCols[j] << std::endl;
+
+                        }
 			        }
 		        }
 	        } else {
