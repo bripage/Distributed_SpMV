@@ -466,9 +466,9 @@ int main(int argc, char *argv[]) {
 		        for (i = ompThreadId * rowsPerThread; i < rowEnd; i++) {
 			        for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrRows[i + 1]; j++) {
 				        //if (control.myId == 1) std::cout << ompThreadId << ", " <<i << ", " << j << ", " << nodeCSR->csrCols[j] << std::endl;
-				        if  (j > 0 && j < nodeCSR->csrData.size()) {
+				        //if  (j > 0 && j < nodeCSR->csrData.size()) {
 					        result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[nodeCSR->csrCols[j]];
-				        }
+				        //}
 			        }
 		        }
 	        }
