@@ -424,18 +424,19 @@ int main(int argc, char *argv[]) {
             //ompThreadId = omp_get_thread_num();
 
 	        rowsPerThread = ceil(nodeCSR->csrRows.size() / (double)control.ompThreads);
-	        //std::cout << "rowsPerThread = " << rowsPerThread << std::endl;
+	        std::cout << "rowsPerThread = " << rowsPerThread << std::endl;
 	        ompThreadId = omp_get_thread_num();
 
 	        //procId = sched_getcpu();
 	        usleep(100000*control.myId+10000*ompThreadId);
-	        std::cout << control.myId << "-" << ompThreadId << std::endl;
 
 	        if (ompThreadId == control.ompThreads - 1){
 		        rowEnd = nodeCSR->csrRows.size();
 	        } else {
 		        rowEnd = (ompThreadId + 1) * rowsPerThread;
 	        }
+
+            std::cout << control.myId << "-" << ompThreadId << ": " << ompThreadId*rowsPerThread << "-" << rowEnd << std::endl;
 
 	        if (ompThreadId == control.ompThreads - 1) {
 		        for (i = 0; i < nodeCSR->csrRows.size(); i++) {
