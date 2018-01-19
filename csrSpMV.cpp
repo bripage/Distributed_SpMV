@@ -52,8 +52,8 @@ void csrSpMV::rebase(int colAdjustment){
 
 	for (int i = 0; i < csrCols.size(); i++){
 		//std::cout << "csrCols[" << i << "] = " << csrCols[i] << " - " << colAdjustment << std::endl;
+		if (csrCols[i] - colAdjustment < 0) std::cout << "csrCols[" << i << "] = " << csrCols[i] << " - " << colAdjustment << std::endl;
 		csrCols[i] = csrCols[i] - colAdjustment;
-		if (csrCols[i] < 0) std::cout << "csrCols[" << i << "] = " << csrCols[i] << " - " << colAdjustment << std::endl;
 	}
 }
 
