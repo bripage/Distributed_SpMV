@@ -463,7 +463,7 @@ int main(int argc, char *argv[]) {
 					            result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[nodeCSR->csrCols[j]];
 				            //}
 					        if (nodeCSR->csrCols[j] > nodeCSR->denseVec.size()){
-						        std::cout << ompThreadId << " col num out of bounds" << std::endl;
+						        std::cout << ompThreadId << " col num out of bounds" << nodeCSR->denseVec.size() << ", " << nodeCSR->csrCols[j] << std::endl;
 					        }
                             //if (control.myId == 0) std::cout << ompThreadId << ", " <<i << ", " << j << ", " << nodeCSR->csrCols[j] << std::endl;
 
