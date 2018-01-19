@@ -13,6 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0c65b864-9431-4078-9657-58a0aa3c15cb" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/distribution.cpp" afterPath="$PROJECT_DIR$/distribution.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
     </list>
     <ignored path="Distrubuted_SpMV.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,11 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="374" column="44" lean-forward="true" selection-start-line="374" selection-start-column="44" selection-end-line="374" selection-end-column="63" />
+            <state relative-caret-position="1454">
+              <caret line="466" column="30" lean-forward="false" selection-start-line="466" selection-start-column="30" selection-end-line="466" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -85,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="distribution.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="distribution.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/distribution.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="92" column="70" lean-forward="false" selection-start-line="92" selection-start-column="70" selection-end-line="92" selection-end-column="70" />
+            <state relative-caret-position="108">
+              <caret line="79" column="18" lean-forward="false" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -145,9 +146,9 @@
         <option value="$PROJECT_DIR$/distribution.h" />
         <option value="$PROJECT_DIR$/csrSpMV.h" />
         <option value="$PROJECT_DIR$/controlStruct.h" />
-        <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/csrSpMV.cpp" />
         <option value="$PROJECT_DIR$/distribution.cpp" />
+        <option value="$PROJECT_DIR$/main.cpp" />
       </list>
     </option>
   </component>
@@ -486,7 +487,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="654810000" />
+    <option name="totallyTimeSpent" value="655171000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1904" y="23" width="1853" height="1003" extended-state="0" />
@@ -767,14 +768,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="374" column="44" lean-forward="true" selection-start-line="374" selection-start-column="44" selection-end-line="374" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/csrSpMV.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="677">
@@ -785,8 +778,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/distribution.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="92" column="70" lean-forward="false" selection-start-line="92" selection-start-column="70" selection-end-line="92" selection-end-column="70" />
+        <state relative-caret-position="108">
+          <caret line="79" column="18" lean-forward="false" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1454">
+          <caret line="466" column="30" lean-forward="false" selection-start-line="466" selection-start-column="30" selection-end-line="466" selection-end-column="30" />
           <folding />
         </state>
       </provider>

@@ -384,32 +384,32 @@ int main(int argc, char *argv[]) {
     std::vector<double> result;
 	result.resize(control.rowsPerNode, 0.0);
 
-
+	/*
 	usleep(100000*control.myId);
 	std::cout << std::endl;
 	std::cout << std::endl;
-//	std::cout << "process " << control.myId << " rows: " << std::endl;
-//	for (int j = 0; j < nodeCSR->csrRows.size(); j++) {
-//		std::cout << nodeCSR->csrRows[j] << " ";
-//	}
-//	std::cout << std::endl;
+	std::cout << "process " << control.myId << " rows: " << std::endl;
+	for (int j = 0; j < nodeCSR->csrRows.size(); j++) {
+		std::cout << nodeCSR->csrRows[j] << " ";
+	}
+	std::cout << std::endl;
 	std::cout << "process " << control.myId << " cols: " << std::endl;
 	for (int j = 0; j < nodeCSR->csrCols.size(); j++) {
 		 if (nodeCSR->csrCols[j] < 0) std::cout << nodeCSR->csrCols[j] << " ";
 	}
-//	std::cout << std::endl;
-//	std::cout << "process " << control.myId << " data: " << std::endl;
-//	for (int j = 0; j < nodeCSR->csrData.size(); j++) {
-//		std::cout << nodeCSR->csrData[j] << " ";
-//	}
-//	std::cout << std::endl;
-//	std::cout << "process " << control.myId << " denseVec: " << std::endl;
-//	for (int j = 0; j < nodeCSR->denseVec.size(); j++) {
-//		std::cout << nodeCSR->denseVec[j] << " ";
-//	}
+	std::cout << std::endl;
+	std::cout << "process " << control.myId << " data: " << std::endl;
+	for (int j = 0; j < nodeCSR->csrData.size(); j++) {
+		std::cout << nodeCSR->csrData[j] << " ";
+	}
+	std::cout << std::endl;
+	std::cout << "process " << control.myId << " denseVec: " << std::endl;
+	for (int j = 0; j < nodeCSR->denseVec.size(); j++) {
+		std::cout << nodeCSR->denseVec[j] << " ";
+	}
 	std::cout << std::endl;
 	std::cout << std::endl;
-
+	*/
 
     if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
 	double spmvStartTime = MPI_Wtime();
@@ -462,9 +462,9 @@ int main(int argc, char *argv[]) {
                             //if  (j >= 0 && j < nodeCSR->csrData.size()) {
 					            result[i] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[nodeCSR->csrCols[j]];
 				            //}
-					        if (nodeCSR->csrCols[j] > nodeCSR->denseVec.size()){
-						        std::cout << ompThreadId << " col num out of bounds" << nodeCSR->denseVec.size() << ", " << nodeCSR->csrCols[j] << std::endl;
-					        }
+					       // if (nodeCSR->csrCols[j] > nodeCSR->denseVec.size()){
+						        //std::cout << ompThreadId << " col num out of bounds" << nodeCSR->denseVec.size() << ", " << nodeCSR->csrCols[j] << std::endl;
+					        //}
                             //if (control.myId == 0) std::cout << ompThreadId << ", " <<i << ", " << j << ", " << nodeCSR->csrCols[j] << std::endl;
 
                         }
