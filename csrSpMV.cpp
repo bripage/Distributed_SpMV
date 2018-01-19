@@ -52,7 +52,7 @@ void csrSpMV::rebase(int colAdjustment){
 
 	for (int i = 0; i < csrCols.size(); i++){
 		//std::cout << "csrCols[" << i << "] = " << csrCols[i] << " - " << colAdjustment << std::endl;
-		if (csrCols[i] - colAdjustment < 0) std::cout << "csrCols[" << i << "] = " << csrCols[i] << " - " << colAdjustment << std::endl;
+		//if (csrCols[i] - colAdjustment < 0) std::cout << "csrCols[" << i << "] = " << csrCols[i] << " - " << colAdjustment << std::endl;
 		csrCols[i] = csrCols[i] - colAdjustment;
 	}
 }
@@ -126,7 +126,7 @@ void csrSpMV::masterOnlySpMV(controlData control, std::vector<int>& seqDist) {
                     if (i == 0) {
                         control.rowCount = std::stoi(token);
 	                    result.resize(control.rowCount, 0.0);
-	                    denseVec.resize(control.rowCount, 1.0);
+	                    denseVec.resize(control.rowCount, 0.1234567);
                     } else {
                         control.colCount = std::stoi(token);
                     }
