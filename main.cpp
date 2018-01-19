@@ -7,6 +7,7 @@
 #include <string>
 #include "controlStruct.h"
 #include "csrSpMV.h"
+#include "distribution.h"
 #include <unistd.h>
 #include <sched.h>
 
