@@ -411,7 +411,7 @@ int main(int argc, char *argv[]) {
     }
 
     if (control.myId == 0) {
-	    if (control.barrier) {
+	    if (control.barrier == true) {
 		    std::cout << distributionEndTime - distributionStartTime << "," << overallEndTime - overallStartTime << std::endl;
 	    } else {
 		    std::cout << distributionEndTime - distributionStartTime << ","
