@@ -388,25 +388,25 @@ int main(int argc, char *argv[]) {
 	usleep(100000*control.myId);
 	std::cout << std::endl;
 	std::cout << std::endl;
-	std::cout << "process " << control.myId << " rows: " << std::endl;
-	for (int j = 0; j < nodeCSR->csrRows.size(); j++) {
-		std::cout << nodeCSR->csrRows[j] << " ";
-	}
-	std::cout << std::endl;
+//	std::cout << "process " << control.myId << " rows: " << std::endl;
+//	for (int j = 0; j < nodeCSR->csrRows.size(); j++) {
+//		std::cout << nodeCSR->csrRows[j] << " ";
+//	}
+//	std::cout << std::endl;
 	std::cout << "process " << control.myId << " cols: " << std::endl;
 	for (int j = 0; j < nodeCSR->csrCols.size(); j++) {
-		std::cout << nodeCSR->csrCols[j] << " ";
+		 if (nodeCSR->csrCols[j] < 0) std::cout << nodeCSR->csrCols[j] << " ";
 	}
-	std::cout << std::endl;
-	std::cout << "process " << control.myId << " data: " << std::endl;
-	for (int j = 0; j < nodeCSR->csrData.size(); j++) {
-		std::cout << nodeCSR->csrData[j] << " ";
-	}
-	std::cout << std::endl;
-	std::cout << "process " << control.myId << " denseVec: " << std::endl;
-	for (int j = 0; j < nodeCSR->denseVec.size(); j++) {
-		std::cout << nodeCSR->denseVec[j] << " ";
-	}
+//	std::cout << std::endl;
+//	std::cout << "process " << control.myId << " data: " << std::endl;
+//	for (int j = 0; j < nodeCSR->csrData.size(); j++) {
+//		std::cout << nodeCSR->csrData[j] << " ";
+//	}
+//	std::cout << std::endl;
+//	std::cout << "process " << control.myId << " denseVec: " << std::endl;
+//	for (int j = 0; j < nodeCSR->denseVec.size(); j++) {
+//		std::cout << nodeCSR->denseVec[j] << " ";
+//	}
 	std::cout << std::endl;
 	std::cout << std::endl;
 
