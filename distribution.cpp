@@ -90,12 +90,7 @@ void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clust
 				control.lastClusterRowRowStart = control.colCount - rowsLastRow;
 				// determine where to test overflow for extra columns that must be added to the last cluster column's
 				// work
-				if (control.colCount % control.clusterCols != 0) {
-					colsLastColumn = control.colsPerNode + (control.colCount % control.clusterCols);
-				} else {
-					colsLastColumn = control.colCount / control.clusterCols;
-				}
-				control.lastClusterColColStart = control.colCount - colsLastColumn;
+				control.lastClusterColColStart = control.colsPerNode*(control.clusterCols-1);
 
 				//std::cout << "lastClusterColColStart = " << control.lastClusterColColStart << std::endl;
 
