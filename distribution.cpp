@@ -157,6 +157,7 @@ void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clust
 	//
 	std::stable_sort(elements.begin(), elements.end(), sortRowThenCol);
 
+	std::cout << "lastClusterColStart = " << control.lastClusterColColStart << std::endl;
 	for (int i = 0; i < elements.size(); i++){
 		//make sure all columns have a row pointer for the current elements row. If not create it!
 		if (elements[i].row == previousRow) {
@@ -168,8 +169,8 @@ void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clust
 			}
 		}
 
-		// if the number of columns does not evenly divide amongst the number of cluster columns, the final
-		// cluster column is given the excess whereas all other columns receive the same amount of columns to
+		// if the number of columns does not evenly divide amongst the number of process columns, the final
+		// process column is given the excess whereas all other columns receive the same amount of columns to
 		// work over.
 		if (elements[i].col > control.lastClusterColColStart) {
 			assignedCol = control.clusterCols - 1;
