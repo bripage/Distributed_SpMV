@@ -384,7 +384,7 @@ int main(int argc, char *argv[]) {
     std::vector<double> result;
 	result.resize(control.rowsPerNode, 0.0);
 
-/*
+
 	usleep(100000*control.myId);
 	std::cout << std::endl;
 	std::cout << std::endl;
@@ -409,7 +409,7 @@ int main(int argc, char *argv[]) {
 	}
 	std::cout << std::endl;
 	std::cout << std::endl;
-*/
+
 
     if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
 	double spmvStartTime = MPI_Wtime();
