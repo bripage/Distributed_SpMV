@@ -125,7 +125,6 @@ int main(int argc, char *argv[]) {
     //***********************************************//
     //     Select distribution method and actions    //
     //***********************************************//
-    MPI_Barrier(MPI_COMM_WORLD);
     std::vector<csrSpMV *> clusterColData;
     int colsPerColumn;
 
@@ -182,6 +181,9 @@ int main(int argc, char *argv[]) {
         nodeCSR = new csrSpMV;
     }
 
+	if (control.barrier && control.myRow == 0) MPI_Barrier(control.row_comm);
+	double dataTransmissionStart = MPI_Wtime();
+
     if (control.masterOnly != true) {
         // master to send data to cluster column masters
         if (control.myId == 0) {
@@ -203,6 +205,7 @@ int main(int argc, char *argv[]) {
                 delete (clusterColData[i]);
             }
             clusterColData.erase(clusterColData.begin() + 1, clusterColData.end()); //remove transmitted data
+	        nodeCSR->denseVec.erase(nodeCSR->denseVec.begin() + control.rowsPerNode, nodeCSR->denseVec.end());
         } else if (control.myId < control.clusterCols && control.myId != 0) {
             MPI_Recv(&control.elementCount, 1, MPI_INT, 0, 0, control.row_comm,
                      MPI_STATUS_IGNORE);  // get number of elements
@@ -223,12 +226,9 @@ int main(int argc, char *argv[]) {
             MPI_Recv(&nodeCSR->denseVec[0], control.rowsPerNode, MPI_DOUBLE, 0, 0, control.row_comm, MPI_STATUS_IGNORE);
         }
 
-        if (control.myId == 0) {
-            nodeCSR->denseVec.erase(nodeCSR->denseVec.begin() + control.rowsPerNode, nodeCSR->denseVec.end());
-        }
-
         // column masters send data to row nodes
-        if (control.myId < control.clusterCols) {
+	    if (control.barrier) MPI_Barrier(control.col_comm);
+	    if (control.myId < control.clusterCols) {
             for (int i = 1;
                  i < control.clusterRows; i++) {  // start at 1 since column master is the 0th node in the column
                 int localRowCount;
@@ -267,13 +267,9 @@ int main(int argc, char *argv[]) {
 		        nodeCSR->csrData.erase(nodeCSR->csrData.begin() + myLastData, nodeCSR->csrData.end());
             }
 	        nodeCSR->rebase(control.myCol * control.colsPerNode);
-        }
 
-        if (control.myId < control.clusterCols) {
-            nodeCSR->denseVec.erase(nodeCSR->denseVec.begin() + control.rowsPerNode, nodeCSR->denseVec.end());
-        }
-
-        if (control.myId >= control.clusterCols) {
+		    nodeCSR->denseVec.erase(nodeCSR->denseVec.begin() + control.rowsPerNode, nodeCSR->denseVec.end());
+        } else  if (control.myId >= control.clusterCols) {
             MPI_Recv(&control.elementCount, 1, MPI_INT, 0, 0, control.col_comm,
                      MPI_STATUS_IGNORE);  // get number of elements
             MPI_Recv(&control.rowCount, 1, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE); // get number of rows
@@ -296,6 +292,7 @@ int main(int argc, char *argv[]) {
         // broadcast dense vector to column nodes
         MPI_Bcast(&nodeCSR->denseVec[0], control.rowsPerNode, MPI_DOUBLE, 0, control.col_comm);
     }
+	double dataTransmissionEnd = MPI_Wtime();
 
 
     std::vector<double> result;
@@ -339,10 +336,9 @@ int main(int argc, char *argv[]) {
 	        }
         }
     }
-
-    //MPI_Barrier(MPI_COMM_WORLD);
+	if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
     double spmvEndTime = MPI_Wtime();
-    double reductionStartTime, reductionEndTime;
+    double reductionStartTime, reductionEndTime, masterGatherStart, masterGatherEnd;
 
     if (control.masterOnly != true) {
         if (control.myId == 0) {
@@ -371,6 +367,8 @@ int main(int argc, char *argv[]) {
         /*
          *      MPI GATHER FROM ROW MASTERS TO GLOBAL MASTER
          */
+	    if (control.barrier) MPI_Barrier(control.col_comm);
+	    masterGatherStart = MPI_Wtime();
         if (control.myId % control.clusterCols == 0) {
             if (control.col_rank == 0) {
                 MPI_Gather(MPI_IN_PLACE, control.rowsPerNode, MPI_DOUBLE, &result[0], control.rowsPerNode,
@@ -380,6 +378,7 @@ int main(int argc, char *argv[]) {
                            MPI_DOUBLE, 0, control.col_comm);
             }
         }
+	    masterGatherEnd = MPI_Wtime();
     }
 
     MPI_Comm_free(&control.col_comm);
@@ -412,11 +411,12 @@ int main(int argc, char *argv[]) {
 
     if (control.myId == 0) {
 	    if (control.barrier) {
-		    std::cout << distributionEndTime - distributionStartTime << "," << spmvEndTime - spmvStartTime << ","
-		              << reductionEndTime - reductionStartTime << "," << overallEndTime - overallStartTime << std::endl;
+		    std::cout << distributionEndTime - distributionStartTime << "," << overallEndTime - overallStartTime << std::endl;
 	    } else {
-		    std::cout << distributionEndTime - distributionStartTime << "," << spmvEndTime - spmvStartTime << ","
-		              << reductionEndTime - reductionStartTime << "," << overallEndTime - overallStartTime << std::endl;
+		    std::cout << distributionEndTime - distributionStartTime << ","
+		              << dataTransmissionEnd - dataTransmissionStart << "," << spmvEndTime - spmvStartTime << ","
+		              << reductionEndTime - reductionStartTime << "," << masterGatherEnd - masterGatherStart << ","
+		              << overallEndTime - overallStartTime << std::endl;
 	    }
     }
 
