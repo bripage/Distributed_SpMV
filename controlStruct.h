@@ -18,6 +18,7 @@ struct controlData {
     bool colMajor = false;  // column or row major order?
 	bool barrier = false;
     bool verify = false;
+	bool debug = false;
     int ompThreads = 1; // number of OpenMP threads to run on each MPI process (cluster node)
     std::string distributionMethod; // colBalanced, splitMatrix, overflow
     int rowsPerNode;

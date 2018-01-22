@@ -28,6 +28,11 @@ void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clust
 	//
 	clusterColData.resize(control.clusterCols);
 	std::vector <Element> elements; //holds each matrix element as read from the Matrix Market format file
+	std::vector <int> rowNNZs, colNNZs; // holds the number of NNZ per row for statistic calculation if enabled
+	if (control.matrixStats){
+
+	}
+
 	for (int i = 0; i < control.clusterCols; i++) {
 		clusterColData[i] = new csrSpMV;
 	}
