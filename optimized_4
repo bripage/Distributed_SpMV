@@ -26,4 +26,4 @@ set matrix = "atmosmodd parabolic_fem_expanded rajat30 CurlCurl_3_expanded offsh
 
 #mpirun -np 4 -ppn 2 -env MV2_CPU_BINDING_LEVEL=socket -env MV2_CPU_BINDING_POLICY=scatter -env MV2_ENABLE_AFFINITY=0 -env OMP_NUM_THREADS=8 -env MV2_SHOW_CPU_BINDING=1 ./main -lm ../sample_matrices/parabolic_fem_expanded.mtx --omp-threads 8 --use-barriers true
 
-mpirun -np 4 -env MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket -env MV2_SHOW_CPU_BINDING=1 ./main -lm ../sample_matrices/parabolic_fem_expanded.mtx --omp-threads 8 --use-barriers true
+mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/parabolic_fem_expanded.mtx --omp-threads 8 --use-barriers true
