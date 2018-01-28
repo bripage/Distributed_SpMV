@@ -1,0 +1,26 @@
+#!/bin/bash
+#$ -M bpage1@nd.edu
+#$ -m abe
+#$ -cwd
+#$ -pe mpi-16 64
+##$ -q *@@cswarm
+#$ -q long
+#$ -o 4proc_parabolicfem_expanded_results.txt
+#$ -e errorurrmahgurd.err
+#$ -N ParabolicFem_4proc_tests
+
+module purge
+#module load gcc/6.2.0 
+#module load mpich/3.2-gcc-6.2.0
+#module load mpich/3.2-intel-15.0
+#module load hpx/4.0.0
+#module load ompi/2.0.1-gcc-6.2.0
+#module load mpich/3.2-gcc-7.1.0
+module load mvapich2/2.2-intel-17.1-mlx
+#module ompi/3.0.0-intel-18.0
+
+#mpirun -n 64 -ppn 1 ./main -lm ../sample_matrices/torso1.mtx --omp-threads 16 --use-barriers true
+#mpirun -n 64 -ppn 1 ./main -lm ../sample_matrices/torso1_expanded.mtx --omp-threads 16 --use-barriers true
+#mpirun -np 9 -ppn 2 I_MPI_FABRICS shm:dapl OMP_NUM_THREADS=8 KMP_AFFINITY=warnings,compact MV2_CPU_BINDING_LEVEL=socket MV2_CPU_BINDING_POLICY=scatter MV2_SHOW_CPU_BINDING=1 MP_COLLECTIVE_OFFLOAD=all ./main -lm ../sample_matrices/parabolic_fem.mtx --omp-threads 8
+mpiexec.hydra -np 4 -ppn 2 -genv I_MPI_FABRICS shm:dapl -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -genv KMP_AFFINITY=warnings,compact -genv MV2_CPU_BINDING_LEVEL=socket -genv MV2_CPU_BINDING_POLICY=bunch -genv MP_COLLECTIVE_OFFLOAD=all -env MV2_USE_LAZY_MEM_UNREGISTER=0  ./main -lm ../sample_matrices/Flan_1565.mtx --omp-threads 8
+#mpiexec -np 9 -npernode 2 --map-by socket --report-bindings ./main -lm ../sample_matrices/parabolic_fem.mtx --omp-threads 8

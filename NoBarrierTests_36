@@ -1,0 +1,32 @@
+#!/bin/tcsh
+#$ -M bpage1@nd.edu
+#$ -m abe
+#$ -cwd
+#$ -pe mpi-16 288
+##$ -q *@@cswarm
+#$ -q long
+#$ -o 36proc_no_barriers.csv
+#$ -e errorurrmahgurd.err
+#$ -N NoBarrierTests_36
+
+module purge
+#module load mvapich2/2.2-intel-17.1-mlx
+module load ompi/2.1.1-gcc-7.1.0
+#fsync -d 10 $SGE_STDOUT_PATH &
+
+set matrix = "atmosmodd parabolic_fem_expanded rajat30 CurlCurl_3_expanded offshore_expanded FEM_3D_thermal2 nlpkkt80_expanded CO_expanded gsm_106857_expanded msdoor_expanded bmw3_2_expanded BenElechi1_expanded t3dh_expanded F2_expanded consph_expanded SiO2_expanded torso1_expanded dielFilterV3real RM07R m_t1_expanded crankseg_2_expanded nd24k_expanded TSOPF_RS_b2383 mouse_gene_expanded human_gene1_expanded"
+
+foreach m ($matrix)
+  mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/$m.mtx --omp-threads 8
+  mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/$m.mtx --omp-threads 8
+  mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/$m.mtx --omp-threads 8
+  mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/$m.mtx --omp-threads 8
+  mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/$m.mtx --omp-threads 8
+  mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/$m.mtx --omp-threads 8
+  mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/$m.mtx --omp-threads 8
+  mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/$m.mtx --omp-threads 8
+  mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/$m.mtx --omp-threads 8
+  mpirun -np 36 -npernode 2 ./main -lm ../sample_matrices/$m.mtx --omp-threads 8
+  echo "\n\n"
+end
+

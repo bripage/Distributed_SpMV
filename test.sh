@@ -1,6 +1,6 @@
 #!/bin/bash
-echo "Bash version ${BASH_VERSION}..."
-for i in {0..10..2}
-  do 
-     echo "Welcome $i times"
- done
+
+for j in {1..8}
+ do i=$(( $j * $j ))
+   echo $i
+done

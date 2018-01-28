@@ -1,0 +1,21 @@
+#!/bin/tcsh
+#$ -M bpage1@nd.edu
+#$ -m abe
+#$ -cwd
+#$ -pe mpi-16 512
+##$ -q *@@cswarm
+#$ -q long
+#$ -o 64procTests.txt
+#$ -e errorurrmahgurd.err
+#$ -N Correctness_Tests
+
+module purge
+module load mvapich2/2.2-intel-17.1-mlx
+#fsync -d 10 $SGE_STDOUT_PATH &
+
+set matrix = "atmosmodd parabolic_fem rajat30 CurlCurl_3 offshore FEM_3D_thermal2 nlpkkt80 CO gsm_106857 msdoor bmw3_2 BenElechi1 t3dh F2 consph SiO2 torso1 dielFilterV3real RM07R m_t1 crankseg_2 nd24k TSOPF_RS_b2383 mouse_gene human_gene1" 
+
+foreach m ($matrix)
+  echo "Starting Tests on $m"
+    mpirun -np 64 -ppn 2 ./main -lm ../sample_matrices/$m.mtx --omp-threads 1 -verify true
+end
