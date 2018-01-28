@@ -320,7 +320,10 @@ int main(int argc, char *argv[]) {
         MPI_Bcast(&nodeCSR->denseVec[0], control.rowsPerNode, MPI_DOUBLE, 0, control.col_comm);
     }
 	double dataTransmissionEnd = MPI_Wtime();
-	if (control.debug && control.myId == 0) std::cout << "Col master sending to col members complete" << std::endl;
+	if (control.debug && control.myId == 0) {
+		std::cout << "Col master sending to col members complete" << std::endl;
+		usleep(10000000 * control.myId);
+	}
 
     std::vector<double> result;
 	result.resize(control.rowsPerNode, 0.0);
@@ -330,12 +333,19 @@ int main(int argc, char *argv[]) {
 
 	if (control.debug && control.myId == 0) std::cout << "Starting SpMV computation" << std::endl;
     if (nodeCSR->csrData.size() > 0) {
-        int ompThreadId, start, end, i, j, k, rowsPerThread, rowEnd;
+        int ompThreadId, ompCPUId, start, end, i, j, k, rowsPerThread, rowEnd;
 
-        #pragma omp parallel num_threads(control.ompThreads) shared(nodeCSR, result) private(ompThreadId, start, end, i, j, k, rowsPerThread, rowEnd)
+        #pragma omp parallel num_threads(control.ompThreads) shared(nodeCSR, result) private(ompThreadId, ompCPUId, start, end, i, j, k, rowsPerThread, rowEnd)
         {
 	        rowsPerThread = ceil(nodeCSR->csrRows.size() / (double)control.ompThreads);
 	        ompThreadId = omp_get_thread_num();
+	        ompCPUId = sched_getcpu();
+
+	        if (control.debug){
+		        usleep(100000 * ompThreadId);
+		        std::cout << "Rank " << control.myId << ", Thread " << ompThreadId << " on core " << ompCPUId << std::endl;
+	        }
+
 
 	        if (ompThreadId == control.ompThreads - 1){
 		        rowEnd = nodeCSR->csrRows.size();
