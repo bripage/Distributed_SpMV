@@ -95,7 +95,7 @@ int main(int argc, char *argv[]) {
     }
 
 	// Get the name of the processor
-	if (contro.debug) {
+	if (control.debug) {
 		usleep(100000 * control.myId);
 		char processor_name[MPI_MAX_PROCESSOR_NAME];
 		int name_len;
