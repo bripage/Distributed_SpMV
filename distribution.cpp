@@ -218,8 +218,9 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 				if (control.debug && control.myId == 0) std::cout << "RowsPerProcess = " << control.rowsPerNode
 				                                                  << ", ColsPerProcess = " << control.colsPerNode
 				                                                  << std::endl;
+				distributionRows.resize(control.rowCount);
 				for (int i = 0; i < control.rowCount; i++){
-					distributionRows[i] = new std::vector<elements>;
+					distributionRows[i] = new std::vector <Element>;
 				}
 			} else {
 				size_t pos = 0;
