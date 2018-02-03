@@ -210,7 +210,7 @@ int main(int argc, char *argv[]) {
     // Create a pointer to the nodes csr object. Using pointers so that we do not have to copy any data on the
     // master node in order to assign it to this name
     csrSpMV *nodeCSR;
-	std::vector <double>* result;
+	std::vector <double> result;
 
     if (control.myId == 0) {
         nodeCSR = clusterColData[0];
@@ -347,8 +347,7 @@ int main(int argc, char *argv[]) {
 			std::cout << "Col master sending to col members complete" << std::endl;
 			usleep(10000000 * control.myId);
 		}
-
-		result = new std::vector<double>;
+		
 		result.resize(control.rowsPerNode, 0.0);
 
 		if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
