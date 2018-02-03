@@ -159,3 +159,139 @@ void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clust
     }
 
  }
+
+//
+//  Distribute sparse matrix amongst cluster nodes via Balanced NNZ per process Distribution
+//
+void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterColData) {
+	//
+	// Read MMF file and insert elements into clusterColData as needed
+	//
+	clusterColData.resize(control.clusterCols);
+	for (int i = 0; i < control.clusterCols; i++) {
+		clusterColData[i] = new csrSpMV;
+		clusterColData[i]->processRowCounts.resize(control.clusterRows, 0);
+	}
+
+
+	std::vector <std::vector <Element> > distributionRows; //holds each matrix element as read from the Matrix Market format file
+	std::vector <int> rowNNZs, colNNZs; // holds the number of NNZ per row for statistic calculation if enabled
+
+	int tempRow, tempCol, assignedCol = 0;
+	double tempData;
+
+	// Read in sparse matrix saved in Matrix Market Format
+	std::ifstream infile(control.matrixFile);
+	if (!infile) {
+		std::cout << "FAILED TO OPEN FILE!" << std::endl;
+		exit(1);
+	}
+	std::string line;
+
+	int i = 0, j = 0, previousRow = -1;
+	bool previousLineCommented = false;
+	while (std::getline(infile, line)) {
+		if (line[0] != '%') {
+			if (previousLineCommented == true) {
+				//some stuff to get row,col and size data, etc.
+				previousLineCommented = false;
+
+				size_t pos = 0;
+				std::string token;
+				i = 0;
+				while ((pos = line.find(' ')) != std::string::npos) {
+					token = line.substr(0, pos);
+					line.erase(0, pos + 1);
+
+					if (i == 0) {
+						control.rowCount = std::stoi(token);
+					} else {
+						control.colCount = std::stoi(token);
+					}
+					i++;
+				}
+
+				control.nonZeros = std::stoi(line);
+				if (control.debug && control.myId == 0) std::cout << "RowCount = " << control.rowCount
+				                                                  << ", ColCount = " << control.colCount
+				                                                  << ", NNZ Count = " << control.nonZeros << std::endl;
+				if (control.debug && control.myId == 0) std::cout << "RowsPerProcess = " << control.rowsPerNode
+				                                                  << ", ColsPerProcess = " << control.colsPerNode
+				                                                  << std::endl;
+				for (int i = 0; i < control.rowCount; i++){
+					distributionRows[i] = new std::vector<elements>;
+				}
+			} else {
+				size_t pos = 0;
+				std::string token;
+				i = 0;
+				while ((pos = line.find(' ')) != std::string::npos) {
+					token = line.substr(0, pos);
+					line.erase(0, pos + 1);
+
+					if (i == 0) {
+						tempRow = ::atoi(token.c_str()) - 1;
+					} else {
+						tempCol = ::atoi(token.c_str()) - 1;
+					}
+
+					i++;
+				}
+				tempData = ::atof(line.c_str());
+
+				// If we have read a valid element data create an element object for it
+				if (!(tempData == 0.0 || tempData == 0)) {
+					distributionRows[tempCol].emplace_back(tempRow, tempCol, tempData);
+				}
+			}
+		} else {
+			previousLineCommented = true;
+		}
+	}
+
+	//
+	// Greedy packing method to determine "balanced" NNZ distribution
+	//
+	int avgNNZperProcess = control.nonZeros / control.processCount;
+	int maxRowSize = 0; // this will determine how much any single row can throw off the dirstributions balance
+	for (int i = 0; i < control.rowCount; i++){
+		if (maxRowSize < distributionRows[i].size()){
+			maxRowSize = distributionRows[i].size();
+		}
+	}
+
+	std::vector <std::vector <int>> procRowAssignment;
+	for (int i = 0; i < control.processCount; i++){
+		std::vector<int> temp;
+		procRowAssignment.push_back(temp);
+	}
+
+	for (int i = 0; i < control.clusterCols; i++){
+		for (int j = 0; j < control.clusterRows; j++) {
+			std::vector<int> temp;
+
+			bool filled = false;
+			do {
+				for (int k = 0; j < distributionRows.size(); k++) {
+					if (distributionRows[k][0] != -1) {
+						if (clusterColData[i]->processRowCounts[j] < avgNNZperProcess) {
+							if ((avgNNZperProcess - clusterColData[i]->processRowCounts[j]) > ((clusterColData[i]->processRowCounts[j] + distributionRows[k].size())-avgNNZperProcess)) {
+								procRowAssignment[(j * control.clusterCols) + i].push_back(k);
+								clusterColData[i]->processRowCounts[j] += distributionRows[i].size();
+							}
+						} else {
+							filled = true;
+							break;
+						}
+					}
+				}
+			} while (!filled);
+
+		}
+	}
+
+
+	for (int i = 0; i < control.processCount; i++){
+		std::cout << clusterColData[i%control.clusterCols]->processRowCounts[i/control.clusterRows] << std::endl;
+	}
+}

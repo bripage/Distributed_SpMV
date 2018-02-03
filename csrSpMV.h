@@ -18,6 +18,7 @@
 
 class csrSpMV {
     public:
+		std::vector <int> processRowCounts;
 		std::vector <int> csrRows;
 		std::vector <int> csrCols;
 		std::vector <double> csrData;

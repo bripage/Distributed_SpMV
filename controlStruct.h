@@ -20,7 +20,7 @@ struct controlData {
     bool verify = false;
 	bool debug = false;
     int ompThreads = 1; // number of OpenMP threads to run on each MPI process (cluster node)
-    std::string distributionMethod; // colBalanced, splitMatrix, overflow
+    int distributionMethod; // colBalanced, splitMatrix, overflow
     int rowsPerNode;
     int colsPerNode;
     int clusterRows;

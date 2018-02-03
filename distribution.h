@@ -28,5 +28,6 @@ struct Element {
 };
 
 void distribution_SplitMatrix(controlData& controlData, std::vector<csrSpMV*>& clusterColData);
+void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterColData);
 
 #endif //DISTRUBUTION_H

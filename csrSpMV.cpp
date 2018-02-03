@@ -16,12 +16,14 @@ csrSpMV::csrSpMV(){
 }
 
 csrSpMV::csrSpMV(const csrSpMV& objToCopy){
+	processRowCounts = objToCopy.processRowCounts;
 	csrRows = objToCopy.csrRows;
 	csrCols = objToCopy.csrCols;
 	csrData = objToCopy.csrData;
 }
 
 csrSpMV::~csrSpMV() {
+	processRowCounts.clear();
     csrRows.clear();
     csrCols.clear();
     csrData.clear();
