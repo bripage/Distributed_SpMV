@@ -225,7 +225,7 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 				                                                  << std::endl;
 				distributionRows.resize(control.rowCount);
 				for (int i = 0; i < control.rowCount; i++){
-					distributionRows[i].length = 0;
+					distributionRows[i].rowLength = 0;
 					distributionRows[i].processAssignment = -1;
 					distributionRows[i].rowId = i;
 				}
@@ -251,7 +251,7 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 				if (!(tempData == 0.0 || tempData == 0)) {
 					distributionRows[tempCol].rowIds.push_back(tempRow);
 					distributionRows[tempCol].data.push_back(tempData);
-					distributionRows[tempCol].length++;
+					distributionRows[tempCol].rowLength++;
 				}
 			}
 		} else {
@@ -268,7 +268,7 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 			//create and fill new row from large row split
 			splitRow.rowId = distributionRows[i].rowId;
 			for (int j = avgNNZperProcess; j < distributionRows[i].data.size(); j++){
-				splitRow.rowIds.push_back(distributionRows.rowIds[j]);
+				splitRow.rowIds.push_back(distributionRows[i].rowIds[j]);
 				splitRow.data.push_back(distributionRows[i].data[j]);
 			}
 			splitRow.rowLength = splitRow.data.size();
@@ -289,7 +289,7 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 	for (int i = 0; i < control.processCount; i++){
 		bool filled = false;
 		do {
-			for (int j = 0; j < distributionRows.size(); k++) {
+			for (int j = 0; j < distributionRows.size(); j++) {
 				if (distributionRows[j].processAssignment == -1) {
 					if (clusterColData[i%control.clusterCols]->processRowCounts[i/control.clusterRows] < avgNNZperProcess) {
 						if ((avgNNZperProcess - clusterColData[i%control.clusterCols]->processRowCounts[i/control.clusterRows])
