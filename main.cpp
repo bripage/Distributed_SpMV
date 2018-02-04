@@ -492,7 +492,7 @@ int main(int argc, char *argv[]) {
 				std::cout << "processData.size() = " << nodeCSR->processData.size() << std::endl;
 
 				for (int i = 0; i < nodeCSR->processData.size(); i++){
-					std::cout << nodeCSR->processDatap[i] << ". " << std::endl;
+					std::cout << nodeCSR->processData[i] << ". " << std::endl;
 				}
 
 				control.elementCount = 0;
