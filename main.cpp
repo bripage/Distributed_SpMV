@@ -451,6 +451,130 @@ int main(int argc, char *argv[]) {
 			if (control.debug && control.myId == 0) std::cout << "MPI Gather complete" << std::endl;
 			masterGatherEnd = MPI_Wtime();
 		}
+	} else if (control.distributionMethod == 2){
+		if (control.masterOnly != true) {
+			if (control.debug && control.myId == 0) std::cout << "Sending data to column masters" << std::endl;
+			// master to send data to cluster column masters
+			if (control.myId == 0) {
+				for (int i = 1; i < control.clusterCols; i++) {  // start at 1 since Master is the row master
+					control.elementCount = clusterColData[i]->csrData.size();
+					MPI_Send(&control.elementCount, 1, MPI_INT, i, 0, control.row_comm);
+					MPI_Send(&control.rowCount, 1, MPI_INT, i, 0, control.row_comm);
+					MPI_Send(&(clusterColData[i]->csrRows[0]), control.rowCount, MPI_INT, i, 0, control.row_comm);
+					MPI_Send(&(clusterColData[i]->csrCols[0]), clusterColData[i]->csrCols.size(), MPI_INT, i, 0,
+					         control.row_comm);
+					MPI_Send(&(clusterColData[i]->csrData[0]), clusterColData[i]->csrData.size(), MPI_DOUBLE, i, 0,
+					         control.row_comm);
+					MPI_Send(&(clusterColData[0]->denseVec[i * control.rowsPerNode]), control.rowsPerNode, MPI_DOUBLE,
+					         i, 0,
+					         control.row_comm);
+				}
+				// delete and free column data that the master has already sent to the column masters, as it no longer needs
+				// to be kept on the master
+				for (int i = 1; i < clusterColData.size(); i++) {
+					delete (clusterColData[i]);
+				}
+				clusterColData.erase(clusterColData.begin() + 1, clusterColData.end()); //remove transmitted data
+				nodeCSR->denseVec.erase(nodeCSR->denseVec.begin() + control.rowsPerNode, nodeCSR->denseVec.end());
+			} else if (control.myId < control.clusterCols && control.myId != 0) {
+				MPI_Recv(&control.elementCount, 1, MPI_INT, 0, 0, control.row_comm,
+				         MPI_STATUS_IGNORE);  // get number of elements
+				MPI_Recv(&control.rowCount, 1, MPI_INT, 0, 0, control.row_comm,
+				         MPI_STATUS_IGNORE); // get number of rows (should be all)
+
+				control.rowsPerNode = ceil(control.rowCount / (float) control.clusterRows);
+				control.colsPerNode = control.rowsPerNode;
+
+				nodeCSR->csrRows.resize(control.rowCount);
+				nodeCSR->csrCols.resize(control.elementCount);
+				nodeCSR->csrData.resize(control.elementCount);
+				nodeCSR->denseVec.resize(control.rowsPerNode);
+
+				MPI_Recv(&nodeCSR->csrRows[0], control.rowCount, MPI_INT, 0, 0, control.row_comm, MPI_STATUS_IGNORE);
+				MPI_Recv(&nodeCSR->csrCols[0], control.elementCount, MPI_INT, 0, 0, control.row_comm,
+				         MPI_STATUS_IGNORE);
+				MPI_Recv(&nodeCSR->csrData[0], control.elementCount, MPI_DOUBLE, 0, 0, control.row_comm,
+				         MPI_STATUS_IGNORE);
+				MPI_Recv(&nodeCSR->denseVec[0], control.rowsPerNode, MPI_DOUBLE, 0, 0, control.row_comm,
+				         MPI_STATUS_IGNORE);
+			}
+			if (control.debug && control.myId == 0) std::cout << "Sending to column masters complete" << std::endl;
+
+			// column masters send data to row nodes
+			if (control.barrier) MPI_Barrier(control.col_comm);
+			if (control.myId < control.clusterCols) {
+				if (control.debug && control.myId == 0)
+					std::cout << "Column Masters Sending Data to col members" << std::endl;
+				for (int i = 1;
+				     i < control.clusterRows; i++) {  // start at 1 since column master is the 0th node in the column
+					int localRowCount;
+					int firstElement = nodeCSR->csrRows[i * control.rowsPerNode];
+					int lastElement;
+
+					if (i == control.clusterRows - 1) {
+						lastElement = nodeCSR->csrData.size();
+						localRowCount = control.rowCount - (i * control.rowsPerNode);
+					} else {
+						lastElement = nodeCSR->csrRows[(i + 1) * control.rowsPerNode];
+						localRowCount = control.rowsPerNode;
+					}
+					control.elementCount = (lastElement -
+					                        firstElement); // how many elements the ith clusterCol has been assigned
+
+					MPI_Send(&control.elementCount, 1, MPI_INT, i, 0, control.col_comm);
+					MPI_Send(&localRowCount, 1, MPI_INT, i, 0, control.col_comm);
+					MPI_Send(&control.rowsPerNode, 1, MPI_INT, i, 0, control.col_comm);
+
+					MPI_Send(&(nodeCSR->csrRows[control.rowsPerNode * i]), localRowCount, MPI_INT, i, 0,
+					         control.col_comm);
+					MPI_Send(&(nodeCSR->csrCols[firstElement]), control.elementCount, MPI_INT, i, 0, control.col_comm);
+					MPI_Send(&(nodeCSR->csrData[firstElement]), control.elementCount, MPI_DOUBLE, i, 0,
+					         control.col_comm);
+					//MPI_Send(&(nodeCSR->denseVec[control.rowsPerNode * i]), localRowCount, MPI_DOUBLE, i, 0, control.col_comm);
+				}
+
+				// Erase the excess data on the column master that has already been distributed to its row nodes
+				int myLastData = nodeCSR->csrRows[control.rowsPerNode];
+				if (!(nodeCSR->csrRows.empty())) {
+					nodeCSR->csrRows.erase(nodeCSR->csrRows.begin() + control.rowsPerNode, nodeCSR->csrRows.end());
+				}
+				if (!(nodeCSR->csrCols.empty())) {
+					nodeCSR->csrCols.erase(nodeCSR->csrCols.begin() + myLastData, nodeCSR->csrCols.end());
+				}
+				if (!(nodeCSR->csrData.empty())) {
+					nodeCSR->csrData.erase(nodeCSR->csrData.begin() + myLastData, nodeCSR->csrData.end());
+				}
+				nodeCSR->rebase(control.myCol * control.colsPerNode);
+
+				nodeCSR->denseVec.erase(nodeCSR->denseVec.begin() + control.rowsPerNode, nodeCSR->denseVec.end());
+			} else if (control.myId >= control.clusterCols) {
+				MPI_Recv(&control.elementCount, 1, MPI_INT, 0, 0, control.col_comm,
+				         MPI_STATUS_IGNORE);  // get number of elements
+				MPI_Recv(&control.rowCount, 1, MPI_INT, 0, 0, control.col_comm,
+				         MPI_STATUS_IGNORE); // get number of rows
+				MPI_Recv(&control.rowsPerNode, 1, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
+
+				nodeCSR->csrRows.resize(control.rowCount);
+				nodeCSR->csrCols.resize(control.elementCount);
+				nodeCSR->csrData.resize(control.elementCount);
+				nodeCSR->denseVec.resize(control.rowsPerNode);
+
+				MPI_Recv(&nodeCSR->csrRows[0], control.rowCount, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
+				MPI_Recv(&nodeCSR->csrCols[0], control.elementCount, MPI_INT, 0, 0, control.col_comm,
+				         MPI_STATUS_IGNORE);
+				MPI_Recv(&nodeCSR->csrData[0], control.elementCount, MPI_DOUBLE, 0, 0, control.col_comm,
+				         MPI_STATUS_IGNORE);
+				//MPI_Recv(&nodeCSR->denseVec[0], control.rowCount, MPI_DOUBLE, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
+
+				control.colsPerNode = control.rowsPerNode;
+				nodeCSR->rebase(control.myCol * control.colsPerNode);
+			}
+
+			// broadcast dense vector to column nodes
+			MPI_Bcast(&nodeCSR->denseVec[0], control.rowsPerNode, MPI_DOUBLE, 0, control.col_comm);
+		}
+
+
 	}
 
 	if (control.debug && control.myId == 0) std::cout << "Starting Finalization" << std::endl;
