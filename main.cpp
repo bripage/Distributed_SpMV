@@ -578,8 +578,8 @@ int main(int argc, char *argv[]) {
 				//nodeCSR->rebase(control.myCol * control.colsPerNode);
 			} else if (control.myId >= control.clusterCols) {
 				nodeCSR->processData.resize(3);
-				MPI_Recv(&nodeCSR->processData[0], 1, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
 				MPI_Recv(&control.rowCount, 1, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
+				MPI_Recv(&nodeCSR->processData[0], 1, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
 
 				nodeCSR->csrRows.resize(nodeCSR->processData[1]);
 				nodeCSR->csrCols.resize(nodeCSR->processData[0]);
@@ -594,9 +594,8 @@ int main(int argc, char *argv[]) {
 				         MPI_STATUS_IGNORE);
 				MPI_Recv(&nodeCSR->denseVec[0], nodeCSR->processData[2], MPI_DOUBLE, 0, 0, control.col_comm,
 				         MPI_STATUS_IGNORE);
-
-				std::cout << "Rows recieved: " << nodeCSR->csrRows.size() << ", NNZs received: " << nodeCSR->csrData.size() << ", denseVec received: " << nodeCSR->denseVec.size() << std::endl;
 			}
+			std::cout << "Rows recieved: " << nodeCSR->csrRows.size() << ", NNZs received: " << nodeCSR->csrData.size() << ", denseVec received: " << nodeCSR->denseVec.size() << std::endl;
 		}
 	}
 
