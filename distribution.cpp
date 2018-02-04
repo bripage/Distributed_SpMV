@@ -326,7 +326,7 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 	for (int i = 0; i < control.processCount; i++){
 		for (int j = 0; j < distributionRows.size(); j++){
 			if (distributionRows[i].processAssignment == i){
-				clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*3)+1]++;
+				clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*3)+1]+=1;
 				clusterColData[i%control.clusterCols]->csrRows.push_back(clusterColData[i%control.clusterCols]->csrData.size());
 				for (int k = 0; k < distributionRows[j].data.size(); k++) {
 					clusterColData[i % control.clusterCols]->csrCols.push_back(distributionRows[j].rowIds[k]);
@@ -335,7 +335,7 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 				clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*3)] += distributionRows[j].rowLength;
 				//clusterColData[i%control.clusterCols]->denseVec.push_back(denseVec[j]);
 				clusterColData[i%control.clusterCols]->denseVec.push_back(0.1234567);
-				clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*3)+2]++;
+				clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*3)+2]+=1;
 			}
 		}
 	}

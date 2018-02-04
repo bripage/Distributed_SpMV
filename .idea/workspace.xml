@@ -12,6 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c65b864-9431-4078-9657-58a0aa3c15cb" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/distribution.cpp" afterPath="$PROJECT_DIR$/distribution.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
     </list>
     <ignored path="Distrubuted_SpMV.iws" />
@@ -36,8 +37,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="639">
-              <caret line="487" column="67" lean-forward="false" selection-start-line="487" selection-start-column="67" selection-end-line="487" selection-end-column="67" />
+            <state relative-caret-position="243">
+              <caret line="494" column="79" lean-forward="false" selection-start-line="494" selection-start-column="79" selection-end-line="494" selection-end-column="79" />
               <folding />
             </state>
           </provider>
@@ -86,8 +87,8 @@
       <file leaf-file-name="distribution.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/distribution.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1116">
-              <caret line="314" column="17" lean-forward="true" selection-start-line="314" selection-start-column="17" selection-end-line="314" selection-end-column="17" />
+            <state relative-caret-position="722">
+              <caret line="337" column="100" lean-forward="false" selection-start-line="337" selection-start-column="100" selection-end-line="337" selection-end-column="100" />
               <folding />
             </state>
           </provider>
@@ -493,12 +494,12 @@
       <workItem from="1515063990828" duration="30098000" />
       <workItem from="1516128843040" duration="20538000" />
       <workItem from="1516864420805" duration="2462000" />
-      <workItem from="1517102033123" duration="38438000" />
+      <workItem from="1517102033123" duration="38733000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="715427000" />
+    <option name="totallyTimeSpent" value="715722000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="23" width="1853" height="1008" extended-state="0" />
@@ -775,16 +776,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/distribution.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1116">
-          <caret line="314" column="17" lean-forward="true" selection-start-line="314" selection-start-column="17" selection-end-line="314" selection-end-column="17" />
+        <state relative-caret-position="722">
+          <caret line="337" column="100" lean-forward="false" selection-start-line="337" selection-start-column="100" selection-end-line="337" selection-end-column="100" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="639">
-          <caret line="487" column="67" lean-forward="false" selection-start-line="487" selection-start-column="67" selection-end-line="487" selection-end-column="67" />
+        <state relative-caret-position="243">
+          <caret line="494" column="79" lean-forward="false" selection-start-line="494" selection-start-column="79" selection-end-line="494" selection-end-column="79" />
           <folding />
         </state>
       </provider>
