@@ -534,6 +534,12 @@ int main(int argc, char *argv[]) {
 				std::cout << "Rows recieved: " << nodeCSR->csrRows.size() << ", NNZs received: "
 				          << nodeCSR->csrData.size() << ", denseVec received: " << nodeCSR->denseVec.size()
 				          << std::endl;
+				
+				std::cout << "myId: " << control.myId << " - ";
+				for (int i = 0; i < nodeCSR->processData.size(); i++){
+					std::cout << nodeCSR->processData[i] << ", ";
+				}
+				std::cout << std::endl;
 			}
 
 			// column masters send data to row nodes
