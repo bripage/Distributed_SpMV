@@ -299,8 +299,8 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 		while (!filled) {
 			for (int j = 0; j < distributionRows.size(); j++) {
 				if (distributionRows[j].processAssignment == -1) {
-					std::cout << "nnzAssignedPerProc[" << i << "] = " << nnzAssignedPerProc[i] << std::endl;
 					if (nnzAssignedPerProc[i] < avgNNZperProcess) {
+						std::cout << "i = " << i << ", j = " << j << ", nnzAssignedPerProc[" << i << "] = " << nnzAssignedPerProc[i] << std::endl;
 						if ((avgNNZperProcess - nnzAssignedPerProc[i]) > ((nnzAssignedPerProc[i] + distributionRows[j].rowLength) - avgNNZperProcess)) {
 							distributionRows[j].processAssignment = i;
 							nnzAssignedPerProc[i] += distributionRows[j].rowLength;
