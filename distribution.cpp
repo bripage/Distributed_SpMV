@@ -326,6 +326,7 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 	for (int i = 0; i < control.processCount; i++){
 		for (int j = 0; j < distributionRows.size(); j++){
 			if (distributionRows[i].processAssignment == i){
+				std::cout << " istributionRows[" << i << "].processAssignment = " << distributionRows[i].processAssignment << std::endl;
 				clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*3)+1]+=1;
 				std::cout << "clusterColData[" << i%control.clusterCols << "]->processData["
 				          << ((i/control.clusterRows)*3)+1 << "] = "
