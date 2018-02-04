@@ -478,7 +478,7 @@ int main(int argc, char *argv[]) {
 				for (int i = 1; i < clusterColData.size(); i++) {
 					delete (clusterColData[i]);
 				}
-				clusterColData.erase(clusterColData.begin() + 1, clusterColData.end()); //remove transmitted data
+				//clusterColData.erase(clusterColData.begin() + 1, clusterColData.end()); //remove transmitted data
 				//nodeCSR->denseVec.erase(nodeCSR->denseVec.begin() + control.rowsPerNode, nodeCSR->denseVec.end());
 			} else if (control.myId < control.clusterCols && control.myId != 0) {
 				// total number of rows in matrix not process or column
@@ -574,16 +574,16 @@ int main(int argc, char *argv[]) {
 				// Erase the excess data on the column master that has already been distributed to its row nodes
 				int myLastData = nodeCSR->csrRows[control.rowsPerNode];
 				if (!(nodeCSR->csrRows.empty())) {
-					nodeCSR->csrRows.erase(nodeCSR->csrRows.begin() + nodeCSR->processData[1], nodeCSR->csrRows.end());
+					//nodeCSR->csrRows.erase(nodeCSR->csrRows.begin() + nodeCSR->processData[1], nodeCSR->csrRows.end());
 				}
 				if (!(nodeCSR->csrCols.empty())) {
-					nodeCSR->csrCols.erase(nodeCSR->csrCols.begin() + nodeCSR->processData[0], nodeCSR->csrCols.end());
+					//nodeCSR->csrCols.erase(nodeCSR->csrCols.begin() + nodeCSR->processData[0], nodeCSR->csrCols.end());
 				}
 				if (!(nodeCSR->csrData.empty())) {
-					nodeCSR->csrData.erase(nodeCSR->csrData.begin() + nodeCSR->processData[0], nodeCSR->csrData.end());
+					//nodeCSR->csrData.erase(nodeCSR->csrData.begin() + nodeCSR->processData[0], nodeCSR->csrData.end());
 				}
 				if (!(nodeCSR->denseVec.empty())) {
-					nodeCSR->denseVec.erase(nodeCSR->denseVec.begin() + nodeCSR->processData[3], nodeCSR->denseVec.end());
+					//nodeCSR->denseVec.erase(nodeCSR->denseVec.begin() + nodeCSR->processData[3], nodeCSR->denseVec.end());
 				}
 				//nodeCSR->rebase(control.myCol * control.colsPerNode);
 			} else if (control.myId >= control.clusterCols) {
