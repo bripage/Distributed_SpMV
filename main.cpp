@@ -479,22 +479,27 @@ int main(int argc, char *argv[]) {
 			} else if (control.myId < control.clusterCols && control.myId != 0) {
 				// total number of rows in matrix not process or column
 				MPI_Recv(&control.rowCount, 1, MPI_INT, 0, 0, control.row_comm, MPI_STATUS_IGNORE);
+				std::cout << "rowCount = " << control.rowCount << std::endl;
 				// Get rows and nnz per proc data
 				MPI_Recv(&nodeCSR->processData[0], control.clusterRows*3, MPI_INT, 0, 0, control.row_comm,
 				         MPI_STATUS_IGNORE);
+				std::cout << "processData.size() = " << nodeCSR->processData.size() << std::endl;
 
 				control.elementCount = 0;
 				for (int i = 0; i < control.clusterRows*3; i = i+3){
 					control.elementCount += nodeCSR->processData[i];
 				}
+				std::cout << "elementCount = " << control.elementCount << std::endl;
 				int assignedRowCount = 0;
 				for (int i = 1; i < control.clusterRows*3; i = i+3){
 					assignedRowCount += nodeCSR->processData[i];
 				}
+				std::cout << "assignedRowCount = " << assignedRowCount << std::endl;
 				int assignedDenseVecCount = 0;
 				for (int i = 2; i < control.clusterRows*3; i = i+3){
 					assignedDenseVecCount += nodeCSR->processData[i];
 				}
+				std::cout << "assignedDenseVecCount = " << assignedDenseVecCount << std::endl;
 
 				nodeCSR->csrRows.resize(assignedRowCount);
 				nodeCSR->csrCols.resize(control.elementCount);
