@@ -525,12 +525,16 @@ int main(int argc, char *argv[]) {
 				         MPI_STATUS_IGNORE);
 				MPI_Recv(&nodeCSR->denseVec[0], assignedDenseVecCount, MPI_DOUBLE, 0, 0, control.row_comm,
 				         MPI_STATUS_IGNORE);
-				std::cout << "Rows recieved: " << nodeCSR->csrRows.size() << ", NNZs received: " << nodeCSR->csrData.size() << ", denseVec received: " << nodeCSR->denseVec.size() << std::endl;
+				//std::cout << "Rows recieved: " << nodeCSR->csrRows.size() << ", NNZs received: " << nodeCSR->csrData.size() << ", denseVec received: " << nodeCSR->denseVec.size() << std::endl;
 			}
 			if (control.debug && control.myId == 0) std::cout << "Sending to column masters complete" << std::endl;
 
 			usleep(10000000 * control.myId);
-			//std::cout << "Rows recieved: " << nodeCSR->csrRows.size() << ", NNZs received: " << nodeCSR->csrData.size() << ", denseVec received: " << nodeCSR->denseVec.size() << std::endl;
+			if (control.myId % control.clusterCols == 0){
+				std::cout << "Rows recieved: " << nodeCSR->csrRows.size() << ", NNZs received: "
+				          << nodeCSR->csrData.size() << ", denseVec received: " << nodeCSR->denseVec.size()
+				          << std::endl;
+			}
 /*
 			// column masters send data to row nodes
 			if (control.barrier) MPI_Barrier(control.col_comm);
