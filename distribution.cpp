@@ -310,6 +310,9 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 						break;
 					}
 				}
+				if (j == distributionRows.size() - 1){
+					filled = true;
+				}
 			}
 		}
 	}
