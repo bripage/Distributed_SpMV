@@ -485,6 +485,7 @@ int main(int argc, char *argv[]) {
 				MPI_Recv(&control.rowCount, 1, MPI_INT, 0, 0, control.row_comm, MPI_STATUS_IGNORE);
 				std::cout << "rowCount = " << control.rowCount << std::endl;
 				// Get rows and nnz per proc data
+				nodeCSR->processData.resize(control.clusterRows*3);
 				std::cout << "receiving " << control.clusterRows*3 << " processData elements" << std::endl;
 				MPI_Recv(&nodeCSR->processData[0], control.clusterRows*3, MPI_INT, 0, 0, control.row_comm,
 				         MPI_STATUS_IGNORE);
