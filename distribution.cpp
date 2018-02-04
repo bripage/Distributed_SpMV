@@ -261,7 +261,7 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 
 	std::cout << "Splitting rows of excess length" << std::endl;
 	// split rows that are longer the avgNNZperProcess
-	int avgNNZperProcess = control.nonZeros / control.processCount;
+	int avgNNZperProcess = ceil((double)control.nonZeros / (double)control.processCount);
 	for (int i = 0; i < distributionRows.size(); i++){
 		if (distributionRows[i].rowLength > avgNNZperProcess){
 			row splitRow;
@@ -292,6 +292,7 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 	//
 	// Greedy packing method to determine "balanced" NNZ distribution
 	//
+	std::vector <int> nnzAssignedPerProc(control.processCount, 0);
 	for (int i = 0; i < control.processCount; i++){
 		std::cout << "i = " << i << std::endl;
 		bool filled = false;
@@ -299,11 +300,10 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 			for (int j = 0; j < distributionRows.size(); j++) {
 				if (distributionRows[j].processAssignment == -1) {
 					std::cout << "clusterColData[" << i%control.clusterCols << "]->processRowCounts[" << i/control.clusterRows << "] = " << clusterColData[i%control.clusterCols]->processRowCounts[i/control.clusterRows] << std::endl;
-					if (clusterColData[i%control.clusterCols]->processRowCounts[i/control.clusterRows] < avgNNZperProcess) {
-						if ((avgNNZperProcess - clusterColData[i%control.clusterCols]->processRowCounts[i/control.clusterRows])
-						    > ((clusterColData[i%control.clusterCols]->processRowCounts[i/control.clusterRows] + distributionRows[j].rowLength) - avgNNZperProcess)) {
+					if (nnzAssignedPerProc[i] < avgNNZperProcess) {
+						if ((avgNNZperProcess - nnzAssignedPerProc[i]) > ((nnzAssignedPerProc[i] + distributionRows[j].rowLength) - avgNNZperProcess)) {
 							distributionRows[j].processAssignment = i;
-							clusterColData[i%control.clusterCols]->processRowCounts[i/control.clusterRows] += distributionRows[j].rowLength;
+							nnzAssignedPerProc[i] += distributionRows[j].rowLength;
 						}
 					} else {
 						filled = true;
@@ -316,6 +316,6 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 	std::cout << "Done assigning rows" << std::endl;
 
 	for (int i = 0; i < control.processCount; i++){
-		std::cout << clusterColData[i%control.clusterCols]->processRowCounts[i/control.clusterRows] << std::endl;
+		std::cout << nnzAssignedPerProc[i] << std::endl;
 	}
 }
