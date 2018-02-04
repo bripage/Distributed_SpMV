@@ -169,37 +169,42 @@ int main(int argc, char *argv[]) {
 
     //
     // Find Distribution of Non-Zeros on both sequential and distributed distributions
-    //
+	// This checks to make sure that all nnz have been assigned and that none are forgotten or used twice
+	//
 	if (control.debug && control.myId == 0) std::cout << "Starting verification" << std::endl;
 	csrSpMV masterData;
 	if (control.verify) {
         if (!control.myId) {
-            std::vector<int> seqDist(control.rowCount, 0); // sequential distribution
-            std::vector<int> distDist(control.rowCount, 0); //distributed distribution
+	        if (control.distributionMethod == 1) {
+		        std::vector<int> seqDist(control.rowCount, 0); // sequential distribution
+		        std::vector<int> distDist(control.rowCount, 0); //distributed distribution
 
-            masterData.masterOnlySpMV(control, seqDist); // perform sequential SpMV on master process only
-	        if (control.debug && control.myId == 0) std::cout << "Sequential SpMV complete" << std::endl;
+		        masterData.masterOnlySpMV(control, seqDist); // perform sequential SpMV on master process only
+		        if (control.debug && control.myId == 0) std::cout << "Sequential SpMV complete" << std::endl;
 
-            // Get Distributed Row NNZ Count
-            for (int i = 0; i < control.clusterCols; i++){
-                for (int j = 0; j < control.rowCount; j++){
-                    if(j == control.rowCount-1) {
-                        distDist[j] += clusterColData[i]->csrData.size() - clusterColData[i]->csrRows[j];
-                    } else {
-                        distDist[j] += clusterColData[i]->csrRows[j+1] - clusterColData[i]->csrRows[j];
-                    }
-                }
-            }
+		        // Get Distributed Row NNZ Count
+		        for (int i = 0; i < control.clusterCols; i++) {
+			        for (int j = 0; j < control.rowCount; j++) {
+				        if (j == control.rowCount - 1) {
+					        distDist[j] += clusterColData[i]->csrData.size() - clusterColData[i]->csrRows[j];
+				        } else {
+					        distDist[j] += clusterColData[i]->csrRows[j + 1] - clusterColData[i]->csrRows[j];
+				        }
+			        }
+		        }
 
-            int totalInvalidRows = 0;
-            for (int i = 0; i < control.rowCount; i++){
-                if (seqDist[i] != distDist[i]){
-                    totalInvalidRows++;
-                }
-            }
-            if (totalInvalidRows != 0){
-                std::cout << "Total Incorrectly Distributed Rows = " << totalInvalidRows << std::endl;
-            }
+		        int totalInvalidRows = 0;
+		        for (int i = 0; i < control.rowCount; i++) {
+			        if (seqDist[i] != distDist[i]) {
+				        totalInvalidRows++;
+			        }
+		        }
+		        if (totalInvalidRows != 0) {
+			        std::cout << "Total Incorrectly Distributed Rows = " << totalInvalidRows << std::endl;
+		        }
+	        } else {
+		        // verification for balance distribution
+	        }
         }
     }
 	//
