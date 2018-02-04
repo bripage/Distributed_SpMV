@@ -303,7 +303,7 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 						//std::cout << "i = " << i << ", j = " << j << ", nnzAssignedPerProc[" << i << "] = " << nnzAssignedPerProc[i] << ", avgNNZperProcess = " << avgNNZperProcess << std::endl;
 						if ((nnzAssignedPerProc[i] + distributionRows[j].rowLength) < avgNNZperProcess) {
 							distributionRows[j].processAssignment = i;
-							std::cout << distributionRows[j].processAssignment << ",";
+							//std::cout << distributionRows[j].processAssignment << ",";
 							nnzAssignedPerProc[i] += distributionRows[j].rowLength;
 						}
 					} else {
@@ -328,12 +328,12 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 	for (int i = 0; i < control.processCount; i++){
 		for (int j = 0; j < distributionRows.size(); j++){
 			if (distributionRows[i].processAssignment == i){
-				//std::cout << " distributionRows[" << i << "].processAssignment = " << distributionRows[i].processAssignment << std::endl;
+				std::cout << " distributionRows[" << i << "].processAssignment = " << distributionRows[i].processAssignment << std::endl;
 				clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*3)+1]+=1;
-				//std::cout << "clusterColData[" << i%control.clusterCols << "]->processData["
-				//          << ((i/control.clusterRows)*3)+1 << "] = "
-				//          << clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*3)+1]
-				//          << std::endl;
+				std::cout << "clusterColData[" << i%control.clusterCols << "]->processData["
+				          << ((i/control.clusterRows)*3)+1 << "] = "
+				          << clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*3)+1]
+				          << std::endl;
 				clusterColData[i%control.clusterCols]->csrRows.push_back(clusterColData[i%control.clusterCols]->csrData.size());
 				for (int k = 0; k < distributionRows[j].data.size(); k++) {
 					clusterColData[i % control.clusterCols]->csrCols.push_back(distributionRows[j].rowIds[k]);
