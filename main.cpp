@@ -584,6 +584,12 @@ int main(int argc, char *argv[]) {
 				MPI_Recv(&control.rowCount, 1, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
 				MPI_Recv(&nodeCSR->processData[0], 3, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
 
+				std::cout << "myId: " << control.myId << " - ";
+				for (int i = 0; i < nodeCSR->processData.size(); i++){
+					std::cout << nodeCSR->processData[i] << ", ";
+				}
+				std::cout << std::endl;
+
 				nodeCSR->csrRows.resize(nodeCSR->processData[1]);
 				nodeCSR->csrCols.resize(nodeCSR->processData[0]);
 				nodeCSR->csrData.resize(nodeCSR->processData[0]);
