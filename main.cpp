@@ -458,14 +458,18 @@ int main(int argc, char *argv[]) {
 			if (control.myId == 0) {
 				for (int i = 1; i < control.clusterCols; i++) {  // start at 1 since Master is the row master
 					MPI_Send(&control.rowCount, 1, MPI_INT, i, 0, control.row_comm);
+					std::cout << "sending processData to " << i << std::endl;
 					MPI_Send(&(clusterColData[i]->processData[0]), control.clusterRows*3, MPI_INT, i, 0, control.row_comm);
-
+					std::cout << "sending csrRows to " << i << std::endl;
 					MPI_Send(&(clusterColData[i]->csrRows[0]), clusterColData[i]->csrRows.size(), MPI_INT, i, 0,
 					         control.row_comm);
+					std::cout << "sending csrCols to " << i << std::endl;
 					MPI_Send(&(clusterColData[i]->csrCols[0]), clusterColData[i]->csrCols.size(), MPI_INT, i, 0,
 					         control.row_comm);
+					std::cout << "sending csrData to " << i << std::endl;
 					MPI_Send(&(clusterColData[i]->csrData[0]), clusterColData[i]->csrData.size(), MPI_DOUBLE, i, 0,
 					         control.row_comm);
+					std::cout << "sending denseVec to " << i << std::endl;
 					MPI_Send(&(clusterColData[0]->denseVec[0]), clusterColData[i]->denseVec.size(), MPI_DOUBLE,
 					         i, 0, control.row_comm);
 				}
