@@ -492,8 +492,9 @@ int main(int argc, char *argv[]) {
 				std::cout << "processData.size() = " << nodeCSR->processData.size() << std::endl;
 
 				for (int i = 0; i < nodeCSR->processData.size(); i++){
-					std::cout << nodeCSR->processData[i] << ". " << std::endl;
+					std::cout << nodeCSR->processData[i] << ", ";
 				}
+				std::cout << std::endl;
 
 				control.elementCount = 0;
 				for (int i = 0; i < control.clusterRows*3; i = i+3){
