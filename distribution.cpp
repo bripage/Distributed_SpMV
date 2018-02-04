@@ -305,9 +305,6 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 						if ((nnzAssignedPerProc[i] + distributionRows[j].rowLength) < avgNNZperProcess) {
 							distributionRows[j].processAssignment = i;
 							nnzAssignedPerProc[i] += distributionRows[j].rowLength;
-						} else if ((avgNNZperProcess - nnzAssignedPerProc[i]) > ((nnzAssignedPerProc[i] + distributionRows[j].rowLength) - avgNNZperProcess)){
-							distributionRows[j].processAssignment = i;
-							nnzAssignedPerProc[i] += distributionRows[j].rowLength;
 						}
 					} else {
 						filled = true;
