@@ -516,7 +516,7 @@ int main(int argc, char *argv[]) {
 				nodeCSR->csrCols.resize(control.elementCount);
 				nodeCSR->csrData.resize(control.elementCount);
 				nodeCSR->denseVec.resize(assignedDenseVecCount);
-				std::cout << "Rows recieved: " << nodeCSR->csrRows.size() << ", NNZs received: " << nodeCSR->csrData.size() << ", denseVec received: " << nodeCSR->denseVec.size() << std::endl;
+				//std::cout << "Rows recieved: " << nodeCSR->csrRows.size() << ", NNZs received: " << nodeCSR->csrData.size() << ", denseVec received: " << nodeCSR->denseVec.size() << std::endl;
 
 				MPI_Recv(&nodeCSR->csrRows[0], assignedRowCount, MPI_INT, 0, 0, control.row_comm, MPI_STATUS_IGNORE);
 				MPI_Recv(&nodeCSR->csrCols[0], control.elementCount, MPI_INT, 0, 0, control.row_comm,
@@ -530,7 +530,7 @@ int main(int argc, char *argv[]) {
 			if (control.debug && control.myId == 0) std::cout << "Sending to column masters complete" << std::endl;
 
 			usleep(10000000 * control.myId);
-			std::cout << "Rows recieved: " << nodeCSR->csrRows.size() << ", NNZs received: " << nodeCSR->csrData.size() << ", denseVec received: " << nodeCSR->denseVec.size() << std::endl;
+			//std::cout << "Rows recieved: " << nodeCSR->csrRows.size() << ", NNZs received: " << nodeCSR->csrData.size() << ", denseVec received: " << nodeCSR->denseVec.size() << std::endl;
 /*
 			// column masters send data to row nodes
 			if (control.barrier) MPI_Barrier(control.col_comm);
