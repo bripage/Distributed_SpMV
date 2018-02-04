@@ -579,7 +579,7 @@ int main(int argc, char *argv[]) {
 			} else if (control.myId >= control.clusterCols) {
 				nodeCSR->processData.resize(3);
 				MPI_Recv(&control.rowCount, 1, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
-				MPI_Recv(&nodeCSR->processData[0], 1, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
+				MPI_Recv(&nodeCSR->processData[0], 3, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
 
 				nodeCSR->csrRows.resize(nodeCSR->processData[1]);
 				nodeCSR->csrCols.resize(nodeCSR->processData[0]);
