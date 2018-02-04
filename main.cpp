@@ -559,6 +559,9 @@ int main(int argc, char *argv[]) {
 					std::cout << "sending denseVec to " << i << std::endl;
 					MPI_Send(&(nodeCSR->denseVec[rowsSent]), nodeCSR->processData[(i*3)+2], MPI_DOUBLE,
 					         i, 0, control.row_comm);
+
+					rowsSent += nodeCSR->processData[(i*3)+1];
+					nnzSent += nodeCSR->processData[(i*3)];
 				}
 
 				// Erase the excess data on the column master that has already been distributed to its row nodes
