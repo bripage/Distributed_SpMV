@@ -308,7 +308,7 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 						} else {
 							int overage = (nnzAssignedPerProc[i] + distributionRows[j].rowLength) - avgNNZperProcess;
 							int currentShortage = avgNNZperProcess - nnzAssignedPerProc[i];
-							if (overage >= 0 && currentShortage <= overage){
+							if (overage >= 0 && currentShortage <= ceil(control.nonZeros/(double) control.rowCount)){
 								distributionRows[j].processAssignment = i;
 								//std::cout << distributionRows[j].processAssignment << ",";
 								nnzAssignedPerProc[i] += distributionRows[j].rowLength;
