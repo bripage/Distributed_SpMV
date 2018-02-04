@@ -259,6 +259,7 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 		}
 	}
 
+	std::cout << "Splitting rows of excess length" << std::endl;
 	// split rows that are longer the avgNNZperProcess
 	int avgNNZperProcess = control.nonZeros / control.processCount;
 	for (int i = 0; i < distributionRows.size(); i++){
@@ -280,15 +281,21 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 			distributionRows[i].rowLength = distributionRows[i].data.size();
 		}
 	}
+	std::cout << "Done spliting rows" << std::endl;
+
+	std::cout << "Sorting Rows" << std::endl;
 	//sort rows based on row length
 	std::sort(distributionRows.begin(), distributionRows.end(), sortByLength);
+	std::cout << "Done sorting rows" << std::endl;
 
+	std::cout << "Assigning rows to processes" << std::endl;
 	//
 	// Greedy packing method to determine "balanced" NNZ distribution
 	//
 	for (int i = 0; i < control.processCount; i++){
+		std::cout << "i = " << i << std::endl;
 		bool filled = false;
-		do {
+		while (!filled) {
 			for (int j = 0; j < distributionRows.size(); j++) {
 				if (distributionRows[j].processAssignment == -1) {
 					if (clusterColData[i%control.clusterCols]->processRowCounts[i/control.clusterRows] < avgNNZperProcess) {
@@ -303,9 +310,9 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 					}
 				}
 			}
-		} while (!filled);
+		}
 	}
-
+	std::cout << "Done assigning rows" << std::endl;
 
 	for (int i = 0; i < control.processCount; i++){
 		std::cout << clusterColData[i%control.clusterCols]->processRowCounts[i/control.clusterRows] << std::endl;
