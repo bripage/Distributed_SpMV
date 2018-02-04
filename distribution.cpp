@@ -301,10 +301,16 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 				if (distributionRows[j].processAssignment == -1) {
 					if (nnzAssignedPerProc[i] < avgNNZperProcess) {
 						//std::cout << "i = " << i << ", j = " << j << ", nnzAssignedPerProc[" << i << "] = " << nnzAssignedPerProc[i] << ", avgNNZperProcess = " << avgNNZperProcess << std::endl;
-						if ((nnzAssignedPerProc[i] + distributionRows[j].rowLength) < avgNNZperProcess) {
-							distributionRows[j].processAssignment = i;
-							//std::cout << distributionRows[j].processAssignment << ",";
-							nnzAssignedPerProc[i] += distributionRows[j].rowLength;
+						int overage = (nnzAssignedPerProc[i] + distributionRows[j].rowLength) - avgNNZperProcess;
+						if (overage < 0){
+							// adding this row wont make it go over the threshold
+
+						} else {
+							if ((nnzAssignedPerProc[i] + distributionRows[j].rowLength) <= avgNNZperProcess) {
+								distributionRows[j].processAssignment = i;
+								//std::cout << distributionRows[j].processAssignment << ",";
+								nnzAssignedPerProc[i] += distributionRows[j].rowLength;
+							}
 						}
 					} else {
 						filled = true;
