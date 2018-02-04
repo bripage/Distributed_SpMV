@@ -347,7 +347,7 @@ int main(int argc, char *argv[]) {
 			std::cout << "Col master sending to col members complete" << std::endl;
 			usleep(10000000 * control.myId);
 		}
-		
+
 		result.resize(control.rowsPerNode, 0.0);
 
 		if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);

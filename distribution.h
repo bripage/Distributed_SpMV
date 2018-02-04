@@ -27,6 +27,13 @@ struct Element {
 	Element(int r, int c, double d) : row(r), col(c), data(d) {}
 };
 
+struct row {
+	int rowLength, rowId, processAssignment;
+	std::vector <int> rowIds;
+	std::vector <int> colIds;
+	std::vector <double> data;
+};
+
 void distribution_SplitMatrix(controlData& controlData, std::vector<csrSpMV*>& clusterColData);
 void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterColData);
 

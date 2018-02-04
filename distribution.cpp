@@ -16,6 +16,11 @@ bool sortRowThenCol(const Element& lhs, const Element& rhs) {
 		return true;
 	}
 }
+
+bool sortByLength(const row &a, const row &b){
+	return a.rowLength < b.rowLength;
+}
+
 //
 //  Distribute sparse matrix amongst cluster nodes via SPLIT MATRIX Distribution
 //
@@ -174,7 +179,7 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 	}
 
 
-	std::vector <std::vector <Element> > distributionRows; //holds each matrix element as read from the Matrix Market format file
+	std::vector <row> distributionRows; //holds each matrix element as read from the Matrix Market format file
 	std::vector <int> rowNNZs, colNNZs; // holds the number of NNZ per row for statistic calculation if enabled
 
 	int tempRow, tempCol, assignedCol = 0;
@@ -220,7 +225,9 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 				                                                  << std::endl;
 				distributionRows.resize(control.rowCount);
 				for (int i = 0; i < control.rowCount; i++){
-					distributionRows[i] = new std::vector <Element>;
+					distributionRows[i].length = 0;
+					distributionRows[i].processAssignment = -1;
+					distributionRows[i].rowId = i;
 				}
 			} else {
 				size_t pos = 0;
@@ -242,7 +249,9 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 
 				// If we have read a valid element data create an element object for it
 				if (!(tempData == 0.0 || tempData == 0)) {
-					distributionRows[tempCol].emplace_back(tempRow, tempCol, tempData);
+					distributionRows[tempCol].rowIds.push_back(tempRow);
+					distributionRows[tempCol].data.push_back(tempData);
+					distributionRows[tempCol].length++;
 				}
 			}
 		} else {
@@ -250,45 +259,51 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 		}
 	}
 
+	// split rows that are longer the avgNNZperProcess
+	int avgNNZperProcess = control.nonZeros / control.processCount;
+	for (int i = 0; i < distributionRows.size(); i++){
+		if (distributionRows[i].rowLength > avgNNZperProcess){
+			row splitRow;
+
+			//create and fill new row from large row split
+			splitRow.rowId = distributionRows[i].rowId;
+			for (int j = avgNNZperProcess; j < distributionRows[i].data.size(); j++){
+				splitRow.rowIds.push_back(distributionRows.rowIds[j]);
+				splitRow.data.push_back(distributionRows[i].data[j]);
+			}
+			splitRow.rowLength = splitRow.data.size();
+			splitRow.processAssignment = -1;
+
+			//remove copied elements from original row that was split by this process
+			distributionRows[i].rowIds.erase(distributionRows[i].rowIds.begin() + avgNNZperProcess, distributionRows[i].rowIds.end());
+			distributionRows[i].data.erase(distributionRows[i].data.begin() + avgNNZperProcess, distributionRows[i].data.end());
+			distributionRows[i].rowLength = distributionRows[i].data.size();
+		}
+	}
+	//sort rows based on row length
+	std::sort(distributionRows.begin(), distributionRows.end(), sortByLength);
+
 	//
 	// Greedy packing method to determine "balanced" NNZ distribution
 	//
-	int avgNNZperProcess = control.nonZeros / control.processCount;
-	int maxRowSize = 0; // this will determine how much any single row can throw off the dirstributions balance
-	for (int i = 0; i < control.rowCount; i++){
-		if (maxRowSize < distributionRows[i].size()){
-			maxRowSize = distributionRows[i].size();
-		}
-	}
-
-	std::vector <std::vector <int>> procRowAssignment;
 	for (int i = 0; i < control.processCount; i++){
-		std::vector<int> temp;
-		procRowAssignment.push_back(temp);
-	}
-
-	for (int i = 0; i < control.clusterCols; i++){
-		for (int j = 0; j < control.clusterRows; j++) {
-			std::vector<int> temp;
-
-			bool filled = false;
-			do {
-				for (int k = 0; j < distributionRows.size(); k++) {
-					if (distributionRows[k][0] != -1) {
-						if (clusterColData[i]->processRowCounts[j] < avgNNZperProcess) {
-							if ((avgNNZperProcess - clusterColData[i]->processRowCounts[j]) > ((clusterColData[i]->processRowCounts[j] + distributionRows[k].size())-avgNNZperProcess)) {
-								procRowAssignment[(j * control.clusterCols) + i].push_back(k);
-								clusterColData[i]->processRowCounts[j] += distributionRows[i].size();
-							}
-						} else {
-							filled = true;
-							break;
+		bool filled = false;
+		do {
+			for (int j = 0; j < distributionRows.size(); k++) {
+				if (distributionRows[j].processAssignment == -1) {
+					if (clusterColData[i%control.clusterCols]->processRowCounts[i/control.clusterRows] < avgNNZperProcess) {
+						if ((avgNNZperProcess - clusterColData[i%control.clusterCols]->processRowCounts[i/control.clusterRows])
+						    > ((clusterColData[i%control.clusterCols]->processRowCounts[i/control.clusterRows] + distributionRows[j].rowLength) - avgNNZperProcess)) {
+							distributionRows[j].processAssignment = i;
+							clusterColData[i%control.clusterCols]->processRowCounts[i/control.clusterRows] += distributionRows[j].rowLength;
 						}
+					} else {
+						filled = true;
+						break;
 					}
 				}
-			} while (!filled);
-
-		}
+			}
+		} while (!filled);
 	}
 
 
