@@ -544,21 +544,21 @@ int main(int argc, char *argv[]) {
 				int rowsSent = 0, nnzSent = 0;
 				for (int i = 1;
 				     i < control.clusterRows; i++) {  // start at 1 since column master is the 0th node in the column
-					MPI_Send(&control.rowCount, 1, MPI_INT, i, 0, control.row_comm);
+					MPI_Send(&control.rowCount, 1, MPI_INT, i, 0, control.col_comm);
 					std::cout << "sending " << nodeCSR->processData.size() << " processData elements to " << i << std::endl;
-					MPI_Send(&(nodeCSR->processData[nodeCSR->processData[i*3]]), 3, MPI_INT, i, 0, control.row_comm);
+					MPI_Send(&(nodeCSR->processData[nodeCSR->processData[i*3]]), 3, MPI_INT, i, 0, control.col_comm);
 					std::cout << "sending csrRows to " << i << std::endl;
 					MPI_Send(&(nodeCSR->csrRows[rowsSent]), nodeCSR->processData[(i*3)+1], MPI_INT, i, 0,
-					         control.row_comm);
+					         control.col_comm);
 					std::cout << "sending csrCols to " << i << std::endl;
 					MPI_Send(&(nodeCSR->csrCols[nnzSent]), nodeCSR->processData[(i*3)], MPI_INT, i, 0,
-					         control.row_comm);
+					         control.col_comm);
 					std::cout << "sending csrData to " << i << std::endl;
 					MPI_Send(&(nodeCSR->csrData[nnzSent]), nodeCSR->processData[(i*3)], MPI_DOUBLE, i, 0,
-					         control.row_comm);
+					         control.col_comm);
 					std::cout << "sending denseVec to " << i << std::endl;
 					MPI_Send(&(nodeCSR->denseVec[rowsSent]), nodeCSR->processData[(i*3)+2], MPI_DOUBLE,
-					         i, 0, control.row_comm);
+					         i, 0, control.col_comm);
 
 					rowsSent += nodeCSR->processData[(i*3)+1];
 					nnzSent += nodeCSR->processData[(i*3)];
