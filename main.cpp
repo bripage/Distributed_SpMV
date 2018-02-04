@@ -534,7 +534,7 @@ int main(int argc, char *argv[]) {
 				std::cout << "Rows recieved: " << nodeCSR->csrRows.size() << ", NNZs received: "
 				          << nodeCSR->csrData.size() << ", denseVec received: " << nodeCSR->denseVec.size()
 				          << std::endl;
-				
+
 				std::cout << "myId: " << control.myId << " - ";
 				for (int i = 0; i < nodeCSR->processData.size(); i++){
 					std::cout << nodeCSR->processData[i] << ", ";
@@ -553,6 +553,7 @@ int main(int argc, char *argv[]) {
 					MPI_Send(&control.rowCount, 1, MPI_INT, i, 0, control.col_comm);
 					std::cout << "sending " << nodeCSR->processData.size() << " processData elements to " << i << std::endl;
 					MPI_Send(&(nodeCSR->processData[nodeCSR->processData[i*3]]), 3, MPI_INT, i, 0, control.col_comm);
+					std::cout <<  "sent " << nodeCSR->processData[i*3] << ", " << nodeCSR->processData[(i*3)+1] << ", " << nodeCSR->processData[(i*3)+2] << std::endl;
 					std::cout << "sending csrRows to " << i << std::endl;
 					MPI_Send(&(nodeCSR->csrRows[rowsSent]), nodeCSR->processData[(i*3)+1], MPI_INT, i, 0,
 					         control.col_comm);
