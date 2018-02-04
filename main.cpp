@@ -530,7 +530,7 @@ int main(int argc, char *argv[]) {
 			if (control.debug && control.myId == 0) std::cout << "Sending to column masters complete" << std::endl;
 
 			usleep(10000000 * control.myId);
-			if (control.myId % control.clusterCols == 0){
+			if (control.myId / control.clusterCols == 0){
 				std::cout << "Rows recieved: " << nodeCSR->csrRows.size() << ", NNZs received: "
 				          << nodeCSR->csrData.size() << ", denseVec received: " << nodeCSR->denseVec.size()
 				          << std::endl;
