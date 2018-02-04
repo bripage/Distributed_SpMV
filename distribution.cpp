@@ -175,8 +175,7 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 	clusterColData.resize(control.clusterCols);
 	for (int i = 0; i < control.clusterCols; i++) {
 		clusterColData[i] = new csrSpMV;
-		clusterColData[i]->processNNZCounts.resize(control.clusterRows, 0);
-		clusterColData[i]->processRowCounts.resize(control.clusterRows, 0);
+		clusterColData[i]->processData.resize(control.clusterRows*3, 0);
 	}
 
 
@@ -327,15 +326,16 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 	for (int i = 0; i < control.processCount; i++){
 		for (int j = 0; j < distributionRows.size(); j++){
 			if (distributionRows[i].processAssignment == i){
-				clusterColData[i%control.clusterCols]->processRowCounts[i/control.clusterRows]++;
+				clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*3)+1]++;
 				clusterColData[i%control.clusterCols]->csrRows.push_back(clusterColData[i%control.clusterCols]->csrData.size());
 				for (int k = 0; k < distributionRows[j].data.size(); k++) {
 					clusterColData[i % control.clusterCols]->csrCols.push_back(distributionRows[j].rowIds[k]);
 					clusterColData[i % control.clusterCols]->csrData.push_back(distributionRows[j].data[k]);
 				}
-				clusterColData[i%control.clusterCols]->processNNZCounts[i/control.clusterRows] += distributionRows[j].rowLength;
+				clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*3)] += distributionRows[j].rowLength;
 				//clusterColData[i%control.clusterCols]->denseVec.push_back(denseVec[j]);
 				clusterColData[i%control.clusterCols]->denseVec.push_back(0.1234567);
+				clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*3)+2]++;
 			}
 		}
 	}
