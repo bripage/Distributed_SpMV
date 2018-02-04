@@ -18,8 +18,8 @@
 
 class csrSpMV {
     public:
-		std::vector <int> processNNZCounts;
-		std::vector <int> processRowCounts;
+
+		std::vector <int> processData; // 0 is nnz per row, 1 is # of rows for given process, 2 is densevec length
 		std::vector <int> csrRows;
 		std::vector <int> csrCols;
 		std::vector <double> csrData;
