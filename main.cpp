@@ -677,8 +677,8 @@ int main(int argc, char *argv[]) {
 						for (i = ompThreadId * rowsPerThread; i < nodeCSR->csrRows.size(); i++) {
 							if (i == nodeCSR->csrRows.size() - 1) {
 								for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrData.size(); j++) {
-									//std::cout << "result[" << nodeCSR->csrCols[j] << "] += " << nodeCSR->csrData[j]
-									//          << " * " << nodeCSR->denseVec[i] << std::endl;
+									std::cout << "result[" << nodeCSR->csrCols[j] << "] += " << nodeCSR->csrData[j]
+									          << " * " << nodeCSR->denseVec[i] << std::endl;
 									result[nodeCSR->csrCols[j]] += nodeCSR->csrData[j] * nodeCSR->denseVec[i];
 								}
 							} else {
@@ -694,7 +694,7 @@ int main(int argc, char *argv[]) {
 							for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrRows[i + 1]; j++) {
 								//std::cout << "result[" << nodeCSR->csrCols[j] << "] += " << nodeCSR->csrData[j]
 								//          << " * " << nodeCSR->denseVec[i] << std::endl;
-								result[nodeCSR->csrCols[j]] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[i];
+								result[nodeCSR->csrCols[j]] += nodeCSR->csrData[j] * nodeCSR->denseVec[i];
 							}
 						}
 					}
