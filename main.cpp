@@ -630,7 +630,7 @@ int main(int argc, char *argv[]) {
 		}
 		std::cout << std::endl;
 
-
+/*
 			std::cout << "Process " << control.myId << std::endl;
 			std::cout << "Rows: ";
 			for (int j = 0; j < nodeCSR->csrRows.size(); j++){
@@ -649,7 +649,7 @@ int main(int argc, char *argv[]) {
 				std::cout << nodeCSR->csrData[j] << ",";
 			}
 			std::cout << std::endl << std::endl;
-
+*/
 
 		// must be total number of rows since we want each process to take part in a collective reduction
 		result.resize(control.rowCount, 0.0);
@@ -736,7 +736,7 @@ int main(int argc, char *argv[]) {
 
 		if (control.myId == 0) {
 			for (int i = 0; i < control.rowCount; i++){
-				std::cout << "result[" << i << "] = " << result[i] << std::endl;
+				//std::cout << "result[" << i << "] = " << result[i] << std::endl;
 			}
 		}
 		if (control.myId == 0) {
@@ -750,7 +750,7 @@ int main(int argc, char *argv[]) {
 
 		if (control.myId == 0) {
 			for (int i = 0; i < control.rowCount; i++){
-				std::cout << "result[" << i << "] = " << result[i] << std::endl;
+				//std::cout << "result[" << i << "] = " << result[i] << std::endl;
 			}
 		}
 	}
@@ -775,7 +775,7 @@ int main(int argc, char *argv[]) {
             int incorrectRowCount = 0;
             for (int i = 0; i < control.rowCount; i++) {
                 //std::cout << "i = " << i << std::endl;
-	            std::cout << masterData.result[i] << " = " << result[i] << std::endl;
+	            //std::cout << masterData.result[i] << " = " << result[i] << std::endl;
                 if (std::abs(masterData.result[i] - result[i]) > 0.1) {
                     //std::cout << "--- ERROR: result[" << i << "] DOES NOT MATCH ---" << std::endl;
                     if (incorrectRowCount < 50) {
