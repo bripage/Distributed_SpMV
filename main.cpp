@@ -645,7 +645,7 @@ int main(int argc, char *argv[]) {
 			for (int i = 0; i < nodeCSR->csrCols.size(); i++){
 				if (nodeCSR->csrCols[i] > control.rowCount){
 					//std::cout << "ERROR: INVALID DATA" << std::endl;
-					rowErrorCount++;
+					colErrorCount++;
 				}
 			}
 			if (rowErrorCount) std::cout << rowErrorCount << " row errors" << std::endl;
