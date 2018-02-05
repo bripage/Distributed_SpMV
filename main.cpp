@@ -773,7 +773,7 @@ int main(int argc, char *argv[]) {
             for (int i = 0; i < control.rowCount; i++) {
                 //std::cout << "i = " << i << std::endl;
 	            //std::cout << masterData.result[i] << " = " << result[i] << std::endl;
-                if (std::abs(masterData.result[i] - result[i]) > 0.1) {
+                if (std::abs(masterData.result[i] - result[i]) > 0.001) {
                     //std::cout << "--- ERROR: result[" << i << "] DOES NOT MATCH ---" << std::endl;
                     if (incorrectRowCount < 50) {
                         std::cout << "row " << i << ": " << masterData.result[i] << " != " << result[i] << std::endl;
@@ -792,10 +792,16 @@ int main(int argc, char *argv[]) {
 	    if (control.barrier == false) {
 		    std::cout << distributionEndTime - distributionStartTime << "," << overallEndTime - overallStartTime << std::endl;
 	    } else {
-		    std::cout << distributionEndTime - distributionStartTime << ","
-		              << dataTransmissionEnd - dataTransmissionStart << "," << spmvEndTime - spmvStartTime << ","
-		              << reductionEndTime - reductionStartTime << "," << masterGatherEnd - masterGatherStart << ","
-		              << overallEndTime - overallStartTime << std::endl;
+		    if (control.distributionMethod == 1) {
+			    std::cout << distributionEndTime - distributionStartTime << ","
+			              << dataTransmissionEnd - dataTransmissionStart << "," << spmvEndTime - spmvStartTime << ","
+			              << reductionEndTime - reductionStartTime << "," << masterGatherEnd - masterGatherStart << ","
+			              << overallEndTime - overallStartTime << std::endl;
+		    } else if (control.distributionMethod == 2){
+			    std::cout << distributionEndTime - distributionStartTime << ","
+			              << dataTransmissionEnd - dataTransmissionStart << "," << spmvEndTime - spmvStartTime << ","
+			              << reductionEndTime - reductionStartTime << "," << overallEndTime - overallStartTime << std::endl;
+		    }
 	    }
 
     }
