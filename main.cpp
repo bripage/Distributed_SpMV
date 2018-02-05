@@ -694,7 +694,7 @@ int main(int argc, char *argv[]) {
     // This block is to be used in conjunction with single node, single thread/process SpMV and compares the results of
     // the "master only" SpMV against those of the distributed version's results.
     //
-	/*
+
 	if (control.debug && control.myId == 0) std::cout << "Starting Verification" << std::endl;
 	if (control.verify) {
         if (control.myId == 0) {
@@ -714,7 +714,7 @@ int main(int argc, char *argv[]) {
         }
     }
 	if (control.debug && control.myId == 0) std::cout << "Verification complete" << std::endl;
-	*/
+	
 
 	if (control.debug && control.myId == 0) std::cout << "Starting Output" << std::endl;
     if (control.myId == 0) {
