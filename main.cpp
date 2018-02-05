@@ -556,7 +556,7 @@ int main(int argc, char *argv[]) {
 				     i < control.clusterRows; i++) {  // start at 1 since column master is the 0th node in the column
 					MPI_Send(&control.rowCount, 1, MPI_INT, i, 0, control.col_comm);
 					std::cout << "sending " << nodeCSR->processData.size() << " processData elements to " << i << std::endl;
-					MPI_Send(&(nodeCSR->processData[i*3]), 3, MPI_INT, i, 0, control.col_comm);
+					MPI_Send(&(nodeCSR->processData[0]), control.clusterCols*3, MPI_INT, i, 0, control.col_comm);
 					std::cout <<  "sent " << nodeCSR->processData[i*3] << ", " << nodeCSR->processData[(i*3)+1] << ", " << nodeCSR->processData[(i*3)+2] << std::endl;
 					std::cout << "sending csrRows to " << i << std::endl;
 					MPI_Send(&(nodeCSR->csrRows[rowsSent]), nodeCSR->processData[(i*3)+1], MPI_INT, i, 0,
@@ -593,7 +593,7 @@ int main(int argc, char *argv[]) {
 			} else if (control.myId >= control.clusterCols) {
 				nodeCSR->processData.resize(3,0);
 				MPI_Recv(&control.rowCount, 1, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
-				MPI_Recv(&(nodeCSR->processData[0]), 3, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
+				MPI_Recv(&(nodeCSR->processData[0]), control.clusterCols*3, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
 /*
 				usleep(10000000 * control.myId);
 				std::cout << "myId: " << control.myId << " - ";
@@ -602,19 +602,25 @@ int main(int argc, char *argv[]) {
 				}
 				std::cout << std::endl;
 */
-				nodeCSR->csrRows.resize(nodeCSR->processData[1]);
-				nodeCSR->csrCols.resize(nodeCSR->processData[0]);
-				nodeCSR->csrData.resize(nodeCSR->processData[0]);
-				nodeCSR->denseVec.resize(nodeCSR->processData[2]);
+				nodeCSR->csrRows.resize(nodeCSR->processData[((control.myId/control.clusterCols)*3)+1]);
+				nodeCSR->csrCols.resize(nodeCSR->processData[((control.myId/control.clusterCols)*3)]);
+				nodeCSR->csrData.resize(nodeCSR->processData[((control.myId/control.clusterCols)*3)]);
+				nodeCSR->denseVec.resize(nodeCSR->processData[((control.myId/control.clusterCols)*3)+2]);
 
-				MPI_Recv(&nodeCSR->csrRows[0], nodeCSR->processData[1], MPI_INT, 0, 0, control.col_comm,
+				MPI_Recv(&nodeCSR->csrRows[0], nodeCSR->processData[((control.myId/control.clusterCols)*3)+1], MPI_INT, 0, 0, control.col_comm,
 				         MPI_STATUS_IGNORE);
-				MPI_Recv(&nodeCSR->csrCols[0], nodeCSR->processData[0], MPI_INT, 0, 0, control.col_comm,
+				MPI_Recv(&nodeCSR->csrCols[0], nodeCSR->processData[((control.myId/control.clusterCols)*3)], MPI_INT, 0, 0, control.col_comm,
 				         MPI_STATUS_IGNORE);
-				MPI_Recv(&nodeCSR->csrData[0], nodeCSR->processData[0], MPI_DOUBLE, 0, 0, control.col_comm,
+				MPI_Recv(&nodeCSR->csrData[0], nodeCSR->processData[((control.myId/control.clusterCols)*3)], MPI_DOUBLE, 0, 0, control.col_comm,
 				         MPI_STATUS_IGNORE);
-				MPI_Recv(&nodeCSR->denseVec[0], nodeCSR->processData[2], MPI_DOUBLE, 0, 0, control.col_comm,
+				MPI_Recv(&nodeCSR->denseVec[0], nodeCSR->processData[((control.myId/control.clusterCols)*3)+2], MPI_DOUBLE, 0, 0, control.col_comm,
 				         MPI_STATUS_IGNORE);
+
+				int assignedNNZCount = 0;
+				for (int i = 0; i < (control.myId/control.clusterRows)*3; i = i+3){
+					assignedNNZCount += nodeCSR->processData[i];
+				}
+				nodeCSR->rebase(assignedNNZCount);
 			}
 			std::cout << "Rows recieved: " << nodeCSR->csrRows.size() << ", NNZs received: " << nodeCSR->csrData.size() << ", denseVec received: " << nodeCSR->denseVec.size() << std::endl;
 		}
@@ -638,7 +644,7 @@ int main(int argc, char *argv[]) {
 			int rowErrorCount = 0, colErrorCount = 0;
 			for (int i = 0; i < nodeCSR->csrRows.size(); i++){
 				if (nodeCSR->csrRows[i] > nodeCSR->csrCols.size()){
-					std::cout << nodeCSR->csrRows[i] << std::endl;
+					//std::cout << nodeCSR->csrRows[i] << std::endl;
 					rowErrorCount++;
 				}
 			}
