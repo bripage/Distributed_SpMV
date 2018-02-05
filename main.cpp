@@ -602,10 +602,10 @@ int main(int argc, char *argv[]) {
 				}
 				std::cout << std::endl;
 */
-				nodeCSR->csrRows.resize(nodeCSR->processData[((control.myId/control.clusterCols)*3)+1]);
-				nodeCSR->csrCols.resize(nodeCSR->processData[((control.myId/control.clusterCols)*3)]);
-				nodeCSR->csrData.resize(nodeCSR->processData[((control.myId/control.clusterCols)*3)]);
-				nodeCSR->denseVec.resize(nodeCSR->processData[((control.myId/control.clusterCols)*3)+2]);
+				nodeCSR->csrRows.resize(nodeCSR->processData[1]);
+				nodeCSR->csrCols.resize(nodeCSR->processData[0]);
+				nodeCSR->csrData.resize(nodeCSR->processData[0]);
+				nodeCSR->denseVec.resize(nodeCSR->processData[2]);
 
 				MPI_Recv(&nodeCSR->csrRows[0], nodeCSR->processData[1], MPI_INT, 0, 0, control.col_comm,
 				         MPI_STATUS_IGNORE);
