@@ -711,6 +711,12 @@ int main(int argc, char *argv[]) {
 		 */
 		if (control.debug && control.myId == 0) std::cout << "Starting MPI Reduction" << std::endl;
 		reductionStartTime = MPI_Wtime();
+
+		if (control.myId == 0) {
+			for (int i = 0; i < control.rowCount; i++){
+				std::cout << "result[" << i << "] = " << result[i] << std::endl;
+			}
+		}
 		if (control.myId == 0) {
 			MPI_Reduce(MPI_IN_PLACE, &result[0], control.rowCount, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
 		} else {
@@ -720,6 +726,11 @@ int main(int argc, char *argv[]) {
 		if (control.debug && control.myId == 0) std::cout << "MPI Reduction complete" << std::endl;
 		reductionEndTime = MPI_Wtime();
 
+		if (control.myId == 0) {
+			for (int i = 0; i < control.rowCount; i++){
+				std::cout << "result[" << i << "] = " << result[i] << std::endl;
+			}
+		}
 	}
 
 	if (control.debug && control.myId == 0) std::cout << "Starting Finalization" << std::endl;
