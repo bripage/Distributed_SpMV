@@ -657,8 +657,8 @@ int main(int argc, char *argv[]) {
 						}
 					}
 				} else {
-					for (k = ompThreadId * rowsPerThread; k < rowEnd; k++) {
-						for (j = nodeCSR->csrRows[k]; j < nodeCSR->csrRows[k + 1]; j++) {
+					for (i = ompThreadId * rowsPerThread; i < rowEnd; i++) {
+						for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrRows[i + 1]; j++) {
 							result[nodeCSR->csrCols[j]] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[i];
 						}
 					}
