@@ -684,8 +684,7 @@ int main(int argc, char *argv[]) {
 							} else {
 								for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrRows[i + 1]; j++) {
 									//std::cout << "result[" << nodeCSR->csrCols[j] << "] += " << nodeCSR->csrData[j]
-									//          << " * "
-									          << nodeCSR->denseVec[i] << std::endl;
+									//          << " * " << nodeCSR->denseVec[i] << std::endl;
 									result[nodeCSR->csrCols[j]] += nodeCSR->csrData[j] * nodeCSR->denseVec[i];
 								}
 							}
