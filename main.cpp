@@ -545,7 +545,7 @@ int main(int argc, char *argv[]) {
 				std::cout << std::endl;
 			}
 */
-			
+
 			// column masters send data to row nodes
 			if (control.barrier) MPI_Barrier(control.col_comm);
 			if (control.myId < control.clusterCols) {
@@ -653,14 +653,14 @@ int main(int argc, char *argv[]) {
 							}
 						} else {
 							for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrRows[i + 1]; j++) {
-								result[nodeCSR->csrCols[j]] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[i];
+								//result[nodeCSR->csrCols[j]] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[i];
 							}
 						}
 					}
 				} else {
 					for (i = ompThreadId * rowsPerThread; i < rowEnd; i++) {
 						for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrRows[i + 1]; j++) {
-							result[nodeCSR->csrCols[j]] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[i];
+							//result[nodeCSR->csrCols[j]] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[i];
 						}
 					}
 				}
@@ -683,6 +683,7 @@ int main(int argc, char *argv[]) {
 		if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
 		if (control.debug && control.myId == 0) std::cout << "MPI Reduction complete" << std::endl;
 		reductionEndTime = MPI_Wtime();
+
 	}
 
 	if (control.debug && control.myId == 0) std::cout << "Starting Finalization" << std::endl;
