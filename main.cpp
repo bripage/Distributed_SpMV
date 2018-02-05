@@ -634,6 +634,13 @@ int main(int argc, char *argv[]) {
 		if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
 		spmvStartTime = MPI_Wtime();
 		if (nodeCSR->csrData.size() > 0) {
+
+			for (int i = 0; i < control.rowCount; i++){
+				if (nodeCSR->csrRows[i] > control.rowCount){
+					std::cout << "ERROR: INVALID DATA" << std::endl;
+				}
+			}
+
 			int ompThreadId, ompCPUId, start, end, i, j, k, rowsPerThread, rowEnd;
 
 #pragma omp parallel num_threads(control.ompThreads) shared(nodeCSR, result) private(ompThreadId, ompCPUId, start, end, i, j, k, rowsPerThread, rowEnd)
