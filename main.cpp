@@ -591,7 +591,7 @@ int main(int argc, char *argv[]) {
 				}
 				//nodeCSR->rebase(control.myCol * control.colsPerNode);
 			} else if (control.myId >= control.clusterCols) {
-				nodeCSR->processData.resize(control.clusterRows*3,0);
+				nodeCSR->processData.resize(3,0);
 				MPI_Recv(&control.rowCount, 1, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
 				MPI_Recv(&(nodeCSR->processData[0]), 3, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
 /*
@@ -635,11 +635,14 @@ int main(int argc, char *argv[]) {
 		spmvStartTime = MPI_Wtime();
 		if (nodeCSR->csrData.size() > 0) {
 
+			int errorCount = 0;
 			for (int i = 0; i < control.rowCount; i++){
 				if (nodeCSR->csrRows[i] > control.rowCount){
-					std::cout << "ERROR: INVALID DATA" << std::endl;
+					//std::cout << "ERROR: INVALID DATA" << std::endl;
+					errorCount++;
 				}
 			}
+			if (errorCount) std::cout << errorCount << " errors" << std::endl;
 
 			int ompThreadId, ompCPUId, start, end, i, j, k, rowsPerThread, rowEnd;
 
