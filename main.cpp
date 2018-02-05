@@ -171,7 +171,6 @@ int main(int argc, char *argv[]) {
     // Find Distribution of Non-Zeros on both sequential and distributed distributions
 	// This checks to make sure that all nnz have been assigned and that none are forgotten or used twice
 	//
-	std::cout << control.myId << std::endl;
 	if (control.debug && control.myId == 0) std::cout << "Starting verification" << std::endl;
 	csrSpMV masterData;
 	if (control.verify) {

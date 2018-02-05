@@ -329,7 +329,7 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 	if (control.debug) std::cout << "Done assigning rows" << std::endl;
 
 	for (int i = 0; i < control.processCount; i++){
-		std::cout << nnzAssignedPerProc[i] << std::endl;
+		//std::cout << nnzAssignedPerProc[i] << std::endl;
 	}
 
 	if (control.debug) std::cout << "Populating clusterColData" << std::endl;
