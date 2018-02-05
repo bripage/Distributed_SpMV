@@ -556,7 +556,7 @@ int main(int argc, char *argv[]) {
 				     i < control.clusterRows; i++) {  // start at 1 since column master is the 0th node in the column
 					MPI_Send(&control.rowCount, 1, MPI_INT, i, 0, control.col_comm);
 					std::cout << "sending " << nodeCSR->processData.size() << " processData elements to " << i << std::endl;
-					MPI_Send(&(nodeCSR->processData[0]), control.clusterCols*3, MPI_INT, i, 0, control.col_comm);
+					MPI_Send(&(nodeCSR->processData[(i*3)]), 3, MPI_INT, i, 0, control.col_comm);
 					std::cout <<  "sent " << nodeCSR->processData[i*3] << ", " << nodeCSR->processData[(i*3)+1] << ", " << nodeCSR->processData[(i*3)+2] << std::endl;
 					std::cout << "sending csrRows to " << i << std::endl;
 					MPI_Send(&(nodeCSR->csrRows[rowsSent]), nodeCSR->processData[(i*3)+1], MPI_INT, i, 0,
