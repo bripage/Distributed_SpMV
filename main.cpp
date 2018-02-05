@@ -554,6 +554,9 @@ int main(int argc, char *argv[]) {
 				int rowsSent = 0, nnzSent = 0;
 				for (int i = 1;
 				     i < control.clusterRows; i++) {  // start at 1 since column master is the 0th node in the column
+					rowsSent += nodeCSR->processData[((i-1)*3)+1];
+					nnzSent += nodeCSR->processData[((i-1)*3)];
+
 					MPI_Send(&control.rowCount, 1, MPI_INT, i, 0, control.col_comm);
 					std::cout << "sending " << nodeCSR->processData.size() << " processData elements to " << i << std::endl;
 					MPI_Send(&(nodeCSR->processData[(i*3)]), 3, MPI_INT, i, 0, control.col_comm);
@@ -571,8 +574,6 @@ int main(int argc, char *argv[]) {
 					MPI_Send(&(nodeCSR->denseVec[rowsSent]), nodeCSR->processData[(i*3)+2], MPI_DOUBLE,
 					         i, 0, control.col_comm);
 
-					rowsSent += nodeCSR->processData[(i*3)+1];
-					nnzSent += nodeCSR->processData[(i*3)];
 				}
 
 				// Erase the excess data on the column master that has already been distributed to its row nodes
