@@ -654,7 +654,7 @@ int main(int argc, char *argv[]) {
 			if (colErrorCount) std::cout << colErrorCount << " col errors" << std::endl;
 
 			int ompThreadId, ompCPUId, start, end, i, j, k, rowsPerThread, rowEnd;
-			if (control.myId == 9) {
+			//if (control.myId == 9) {
 #pragma omp parallel num_threads(control.ompThreads) shared(nodeCSR, result) private(ompThreadId, ompCPUId, start, end, i, j, k, rowsPerThread, rowEnd)
 				{
 					ompThreadId = omp_get_thread_num();
@@ -677,14 +677,14 @@ int main(int argc, char *argv[]) {
 						for (i = ompThreadId * rowsPerThread; i < nodeCSR->csrRows.size(); i++) {
 							if (i == nodeCSR->csrRows.size() - 1) {
 								for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrData.size(); j++) {
-									std::cout << "result[" << nodeCSR->csrCols[j] << "] += " << nodeCSR->csrData[j]
-									          << " * " << nodeCSR->denseVec[i] << std::endl;
+									//std::cout << "result[" << nodeCSR->csrCols[j] << "] += " << nodeCSR->csrData[j]
+									//          << " * " << nodeCSR->denseVec[i] << std::endl;
 									result[nodeCSR->csrCols[j]] += nodeCSR->csrData[j] * nodeCSR->denseVec[i];
 								}
 							} else {
 								for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrRows[i + 1]; j++) {
-									std::cout << "result[" << nodeCSR->csrCols[j] << "] += " << nodeCSR->csrData[j]
-									          << " * "
+									//std::cout << "result[" << nodeCSR->csrCols[j] << "] += " << nodeCSR->csrData[j]
+									//          << " * "
 									          << nodeCSR->denseVec[i] << std::endl;
 									result[nodeCSR->csrCols[j]] += nodeCSR->csrData[j] * nodeCSR->denseVec[i];
 								}
@@ -693,15 +693,15 @@ int main(int argc, char *argv[]) {
 					} else {
 						for (i = ompThreadId * rowsPerThread; i < rowEnd; i++) {
 							for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrRows[i + 1]; j++) {
-								std::cout << "result[" << nodeCSR->csrCols[j] << "] += " << nodeCSR->csrData[j]
-								          << " * " << nodeCSR->denseVec[i] << std::endl;
+								//std::cout << "result[" << nodeCSR->csrCols[j] << "] += " << nodeCSR->csrData[j]
+								//          << " * " << nodeCSR->denseVec[i] << std::endl;
 								result[nodeCSR->csrCols[j]] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[i];
 							}
 						}
 					}
 
 				}
-			}
+			//}
 		}
 		if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
 		spmvEndTime = MPI_Wtime();
