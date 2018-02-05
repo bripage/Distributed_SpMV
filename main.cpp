@@ -613,6 +613,59 @@ int main(int argc, char *argv[]) {
 			}
 			std::cout << "Rows recieved: " << nodeCSR->csrRows.size() << ", NNZs received: " << nodeCSR->csrData.size() << ", denseVec received: " << nodeCSR->denseVec.size() << std::endl;
 		}
+
+		// must be total number of rows since we want each process to take part in a collective reduction
+		result.resize(control.rowCount, 0.0);
+
+		if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
+		spmvStartTime = MPI_Wtime();
+
+		if (control.debug && control.myId == 0) std::cout << "Starting SpMV computation" << std::endl;
+		if (nodeCSR->csrData.size() > 0) {
+			int ompThreadId, ompCPUId, start, end, i, j, k, rowsPerThread, rowEnd;
+
+#pragma omp parallel num_threads(control.ompThreads) shared(nodeCSR, result) private(ompThreadId, ompCPUId, start, end, i, j, k, rowsPerThread, rowEnd)
+			{
+				ompThreadId = omp_get_thread_num();
+				if (control.debug) {
+					ompCPUId = sched_getcpu();
+					usleep(100000 * ompThreadId);
+					std::cout << "Rank " << control.myId << ", Thread " << ompThreadId << " on core " << ompCPUId
+					          << std::endl;
+				}
+
+				rowsPerThread = ceil(nodeCSR->csrRows.size() / (double) control.ompThreads);
+				if (ompThreadId == control.ompThreads - 1) {
+					rowEnd = nodeCSR->csrRows.size();
+				} else {
+					rowEnd = (ompThreadId + 1) * rowsPerThread;
+				}
+
+				if (ompThreadId == control.ompThreads - 1) {
+					for (i = ompThreadId * rowsPerThread; i < nodeCSR->csrRows.size(); i++) {
+						if (i == nodeCSR->csrRows.size() - 1) {
+							for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrData.size(); j++) {
+								result[nodeCSR->csrCols[j]] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[i];
+							}
+						} else {
+							for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrRows[i + 1]; j++) {
+								result[nodeCSR->csrCols[j]] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[i];
+							}
+						}
+					}
+				} else {
+					for (k = ompThreadId * rowsPerThread; k < rowEnd; k++) {
+						for (j = nodeCSR->csrRows[k]; j < nodeCSR->csrRows[k + 1]; j++) {
+							result[nodeCSR->csrCols[j]] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[i];
+						}
+					}
+				}
+			}
+		}
+		if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
+		if (control.debug && control.myId == 0) std::cout << "SpMV computation complete" << std::endl;
+		double spmvEndTime = MPI_Wtime();
+
 	}
 
 	if (control.debug && control.myId == 0) std::cout << "Starting Finalization" << std::endl;
