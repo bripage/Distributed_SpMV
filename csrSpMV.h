@@ -32,6 +32,7 @@ class csrSpMV {
 		csrSpMV(const csrSpMV& objToCopy);  //copy constructor
         ~csrSpMV();                         // destructor
 		void rebase(int colAdjustment);
+		void rebase_balanced();
 };
 
 #endif //DISTRUBUTED_SPMV_CSRSPMV_H
