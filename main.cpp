@@ -654,7 +654,7 @@ int main(int argc, char *argv[]) {
 							}
 						} else {
 							for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrRows[i + 1]; j++) {
-								//result[nodeCSR->csrCols[j]] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[i];
+								result[nodeCSR->csrCols[j]] += nodeCSR->csrData[j] * nodeCSR->denseVec[i];
 							}
 						}
 					}
