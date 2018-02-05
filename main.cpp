@@ -622,12 +622,33 @@ int main(int argc, char *argv[]) {
 		}
 		dataTransmissionEnd = MPI_Wtime();
 
-		usleep(100000 * control.myId);
+		usleep(1000000 * control.myId);
 		std::cout << "myId: " << control.myId << " - ";
 		for (int i = 0; i < nodeCSR->processData.size(); i++){
 			std::cout << nodeCSR->processData[i] << ", ";
 		}
 		std::cout << std::endl;
+
+
+			std::cout << "Process " << control.myId << std::endl;
+			std::cout << "Rows: ";
+			for (int j = 0; j < nodeCSR->csrRows.size(); j++){
+				std::cout << nodeCSR->csrRows[j] << ",";
+			}
+			std::cout << std::endl << std::endl;
+
+			std::cout << "Cols ";
+			for (int j = 0; j < nodeCSR->csrCols.size(); j++){
+				std::cout << nodeCSR->csrCols[j] << ",";
+			}
+			std::cout << std::endl << std::endl;
+
+			std::cout << "Datas: ";
+			for (int j = 0; j < nodeCSR->csrData.size(); j++){
+				std::cout << nodeCSR->csrData[j] << ",";
+			}
+			std::cout << std::endl << std::endl;
+
 
 		// must be total number of rows since we want each process to take part in a collective reduction
 		result.resize(control.rowCount, 0.0);

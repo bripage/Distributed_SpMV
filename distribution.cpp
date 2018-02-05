@@ -378,6 +378,5 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 			std::cout << clusterColData[i]->csrData[j] << ",";
 		}
 		std::cout << std::endl << std::endl;
-
 	}
 }
