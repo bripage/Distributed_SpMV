@@ -664,7 +664,21 @@ int main(int argc, char *argv[]) {
 		}
 		if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
 		if (control.debug && control.myId == 0) std::cout << "SpMV computation complete" << std::endl;
-		double spmvEndTime = MPI_Wtime();
+		spmvEndTime = MPI_Wtime();
+
+		reductionStartTime = MPI_Wtime();
+		/*
+		 *      MPI REDUCE w/ SUM FROM COLUMNS TO ROW MASTER(S)
+		 */
+		if (control.debug && control.myId == 0) std::cout << "Starting MPI Reduction" << std::endl;
+		if (control.myId == 0) {
+			MPI_Reduce(MPI_IN_PLACE, &result[0], control.rowCount, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
+		} else {
+			MPI_Reduce(&result[0], &result[0], control.rowCount, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
+		}
+		if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
+		if (control.debug && control.myId == 0) std::cout << "MPI Reduction complete" << std::endl;
+		reductionEndTime = MPI_Wtime();
 
 	}
 
