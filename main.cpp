@@ -638,7 +638,7 @@ int main(int argc, char *argv[]) {
 			int rowErrorCount = 0, colErrorCount = 0;
 			for (int i = 0; i < nodeCSR->csrRows.size(); i++){
 				if (nodeCSR->csrRows[i] > nodeCSR->csrCols.size()){
-					//std::cout << "ERROR: INVALID DATA" << std::endl;
+					std::cout << nodeCSR->csrRows[i] << std::endl;
 					rowErrorCount++;
 				}
 			}
