@@ -777,7 +777,7 @@ int main(int argc, char *argv[]) {
                 if (std::abs(masterData.result[i] - result[i]) > 0.1) {
                     //std::cout << "--- ERROR: result[" << i << "] DOES NOT MATCH ---" << std::endl;
                     if (incorrectRowCount < 50) {
-                        std::cout << "row " << i << ": " << masterData.result[i] << " != " << result[i] << std::endl;
+                        //std::cout << "row " << i << ": " << masterData.result[i] << " != " << result[i] << std::endl;
                     }
                     incorrectRowCount++;
                 }
