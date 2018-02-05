@@ -358,4 +358,26 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 		}
 	}
 	if (control.debug) std::cout << "Done populating clusterColData" << std::endl;
+
+	for (int i = 0; i < clusterColData.size(); i++){
+		std::cout << "COLUMN " << i << std::endl;
+		std::cout << "Rows: ";
+		for (int j = 0; j < clusterColData[i]->csrRows.size(); j++){
+			std::cout << clusterColData[i]->csrRows[j] << ",";
+		}
+		std::cout << std::endl << std::endl;
+
+		std::cout << "Cols ";
+		for (int j = 0; j < clusterColData[i]->csrCols.size(); j++){
+			std::cout << clusterColData[i]->csrCols[j] << ",";
+		}
+		std::cout << std::endl << std::endl;
+
+		std::cout << "Datas: ";
+		for (int j = 0; j < clusterColData[i]->csrData.size(); j++){
+			std::cout << clusterColData[i]->csrData[j] << ",";
+		}
+		std::cout << std::endl << std::endl;
+
+	}
 }
