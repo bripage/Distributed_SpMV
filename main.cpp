@@ -693,13 +693,12 @@ int main(int argc, char *argv[]) {
 						rowEnd = (ompThreadId + 1) * rowsPerThread;
 					}
 
-
 					if (ompThreadId == control.ompThreads - 1) {
 						for (i = ompThreadId * rowsPerThread; i < nodeCSR->csrRows.size(); i++) {
 							if (i == nodeCSR->csrRows.size() - 1) {
 								for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrData.size(); j++) {
-									std::cout << "result[" << nodeCSR->csrCols[j] << "] += " << nodeCSR->csrData[j]
-									          << " * " << nodeCSR->denseVec[i] << std::endl;
+									//std::cout << "result[" << nodeCSR->csrCols[j] << "] += " << nodeCSR->csrData[j]
+									//          << " * " << nodeCSR->denseVec[i] << std::endl;
 									result[nodeCSR->csrCols[j]] += nodeCSR->csrData[j] * nodeCSR->denseVec[i];
 								}
 							} else {
