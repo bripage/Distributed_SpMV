@@ -676,6 +676,7 @@ int main(int argc, char *argv[]) {
 						rowEnd = (ompThreadId + 1) * rowsPerThread;
 					}
 
+					/*
 					if (ompThreadId == control.ompThreads - 1) {
 						for (i = ompThreadId * rowsPerThread; i < nodeCSR->csrRows.size(); i++) {
 							if (i == nodeCSR->csrRows.size() - 1) {
@@ -701,6 +702,7 @@ int main(int argc, char *argv[]) {
 							}
 						}
 					}
+					*/
 				}
 			}
 		}
