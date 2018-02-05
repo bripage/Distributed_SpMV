@@ -343,7 +343,10 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 				//          << clusterColData[i%control.clusterCols]->csrData.size() << ")" << std::endl;
 				clusterColData[i%control.clusterCols]->csrRows.push_back(clusterColData[i%control.clusterCols]->csrData.size());
 				for (int k = 0; k < distributionRows[j].data.size(); k++) {
-					std::cout << "clusterColData[" << i % control.clusterCols << "]->csrCols.push_back(" << distributionRows[j].rowIds[k] << ")" << std::endl;
+					if (distributionRows[j].rowIds[k] >= control.rowCount) {
+						std::cout << "clusterColData[" << i % control.clusterCols << "]->csrCols.push_back("
+						          << distributionRows[j].rowIds[k] << ")" << std::endl;
+					}
 					clusterColData[i % control.clusterCols]->csrCols.push_back(distributionRows[j].rowIds[k]);
 					clusterColData[i % control.clusterCols]->csrData.push_back(distributionRows[j].data[k]);
 				}
