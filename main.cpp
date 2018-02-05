@@ -578,16 +578,16 @@ int main(int argc, char *argv[]) {
 				// Erase the excess data on the column master that has already been distributed to its row nodes
 				int myLastData = nodeCSR->csrRows[control.rowsPerNode];
 				if (!(nodeCSR->csrRows.empty())) {
-					//nodeCSR->csrRows.erase(nodeCSR->csrRows.begin() + nodeCSR->processData[1], nodeCSR->csrRows.end());
+					nodeCSR->csrRows.erase(nodeCSR->csrRows.begin() + nodeCSR->processData[1], nodeCSR->csrRows.end());
 				}
 				if (!(nodeCSR->csrCols.empty())) {
-					//nodeCSR->csrCols.erase(nodeCSR->csrCols.begin() + nodeCSR->processData[0], nodeCSR->csrCols.end());
+					nodeCSR->csrCols.erase(nodeCSR->csrCols.begin() + nodeCSR->processData[0], nodeCSR->csrCols.end());
 				}
 				if (!(nodeCSR->csrData.empty())) {
-					//nodeCSR->csrData.erase(nodeCSR->csrData.begin() + nodeCSR->processData[0], nodeCSR->csrData.end());
+					nodeCSR->csrData.erase(nodeCSR->csrData.begin() + nodeCSR->processData[0], nodeCSR->csrData.end());
 				}
 				if (!(nodeCSR->denseVec.empty())) {
-					//nodeCSR->denseVec.erase(nodeCSR->denseVec.begin() + nodeCSR->processData[3], nodeCSR->denseVec.end());
+					nodeCSR->denseVec.erase(nodeCSR->denseVec.begin() + nodeCSR->processData[3], nodeCSR->denseVec.end());
 				}
 				//nodeCSR->rebase(control.myCol * control.colsPerNode);
 			} else if (control.myId >= control.clusterCols) {
@@ -595,6 +595,7 @@ int main(int argc, char *argv[]) {
 				MPI_Recv(&control.rowCount, 1, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
 				MPI_Recv(&(nodeCSR->processData[0]), 3, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
 /*
+				usleep(10000000 * control.myId);
 				std::cout << "myId: " << control.myId << " - ";
 				for (int i = 0; i < nodeCSR->processData.size(); i++){
 					std::cout << nodeCSR->processData[i] << ", ";
@@ -618,6 +619,13 @@ int main(int argc, char *argv[]) {
 			std::cout << "Rows recieved: " << nodeCSR->csrRows.size() << ", NNZs received: " << nodeCSR->csrData.size() << ", denseVec received: " << nodeCSR->denseVec.size() << std::endl;
 		}
 		dataTransmissionEnd = MPI_Wtime();
+
+		usleep(10000000 * control.myId);
+		std::cout << "myId: " << control.myId << " - ";
+		for (int i = 0; i < nodeCSR->processData.size(); i++){
+			std::cout << nodeCSR->processData[i] << ", ";
+		}
+		std::cout << std::endl;
 
 		// must be total number of rows since we want each process to take part in a collective reduction
 		result.resize(control.rowCount, 0.0);
@@ -654,7 +662,7 @@ int main(int argc, char *argv[]) {
 							}
 						} else {
 							for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrRows[i + 1]; j++) {
-								std::cout << "result[" << nodeCSR->csrCols[j] << "] += " << nodeCSR->csrData[j] << " * " << nodeCSR->denseVec[i] << std::endl;
+								//std::cout << "result[" << nodeCSR->csrCols[j] << "] += " << nodeCSR->csrData[j] << " * " << nodeCSR->denseVec[i] << std::endl;
 								result[nodeCSR->csrCols[j]] += nodeCSR->csrData[j] * nodeCSR->denseVec[i];
 							}
 						}
@@ -662,7 +670,7 @@ int main(int argc, char *argv[]) {
 				} else {
 					for (i = ompThreadId * rowsPerThread; i < rowEnd; i++) {
 						for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrRows[i + 1]; j++) {
-							//result[nodeCSR->csrCols[j]] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[i];
+							result[nodeCSR->csrCols[j]] += nodeCSR->csrData[j] * (double) nodeCSR->denseVec[i];
 						}
 					}
 				}
