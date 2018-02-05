@@ -658,7 +658,7 @@ int main(int argc, char *argv[]) {
 			if (colErrorCount) std::cout << colErrorCount << " col errors" << std::endl;
 
 			int ompThreadId, ompCPUId, start, end, i, j, k, rowsPerThread, rowEnd;
-			if (control.myId == 0) {
+			if (control.myId == 9) {
 #pragma omp parallel num_threads(control.ompThreads) shared(nodeCSR, result) private(ompThreadId, ompCPUId, start, end, i, j, k, rowsPerThread, rowEnd)
 				{
 					ompThreadId = omp_get_thread_num();
