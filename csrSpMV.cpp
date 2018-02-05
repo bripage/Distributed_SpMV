@@ -56,6 +56,13 @@ void csrSpMV::rebase(int colAdjustment){
 	}
 }
 
+void csrSpMV::rebase_balanced(){
+	int firstRowPtr = csrRows[0];
+	for (int i = 0; i < csrRows.size(); i++){
+		csrRows[i] -= firstRowPtr;
+	}
+}
+
 void csrSpMV::nodeSpMV(controlData control, std::vector <double>& result) {
     if (csrData.size() > 0) {
 		int ompThreadId, start, end, i, j;

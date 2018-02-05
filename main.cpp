@@ -591,9 +591,9 @@ int main(int argc, char *argv[]) {
 				}
 				//nodeCSR->rebase(control.myCol * control.colsPerNode);
 			} else if (control.myId >= control.clusterCols) {
-				nodeCSR->processData.resize(control.clusterRows*3,0);
+				nodeCSR->processData.resize(3,0);
 				MPI_Recv(&control.rowCount, 1, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
-				MPI_Recv(&(nodeCSR->processData[0]), control.clusterCols*3, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
+				MPI_Recv(&(nodeCSR->processData[0]), 3, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
 /*
 				usleep(10000000 * control.myId);
 				std::cout << "myId: " << control.myId << " - ";
@@ -607,20 +607,16 @@ int main(int argc, char *argv[]) {
 				nodeCSR->csrData.resize(nodeCSR->processData[((control.myId/control.clusterCols)*3)]);
 				nodeCSR->denseVec.resize(nodeCSR->processData[((control.myId/control.clusterCols)*3)+2]);
 
-				MPI_Recv(&nodeCSR->csrRows[0], nodeCSR->processData[((control.myId/control.clusterCols)*3)+1], MPI_INT, 0, 0, control.col_comm,
+				MPI_Recv(&nodeCSR->csrRows[0], nodeCSR->processData[1], MPI_INT, 0, 0, control.col_comm,
 				         MPI_STATUS_IGNORE);
-				MPI_Recv(&nodeCSR->csrCols[0], nodeCSR->processData[((control.myId/control.clusterCols)*3)], MPI_INT, 0, 0, control.col_comm,
+				MPI_Recv(&nodeCSR->csrCols[0], nodeCSR->processData[0], MPI_INT, 0, 0, control.col_comm,
 				         MPI_STATUS_IGNORE);
-				MPI_Recv(&nodeCSR->csrData[0], nodeCSR->processData[((control.myId/control.clusterCols)*3)], MPI_DOUBLE, 0, 0, control.col_comm,
+				MPI_Recv(&nodeCSR->csrData[0], nodeCSR->processData[0], MPI_DOUBLE, 0, 0, control.col_comm,
 				         MPI_STATUS_IGNORE);
-				MPI_Recv(&nodeCSR->denseVec[0], nodeCSR->processData[((control.myId/control.clusterCols)*3)+2], MPI_DOUBLE, 0, 0, control.col_comm,
+				MPI_Recv(&nodeCSR->denseVec[0], nodeCSR->processData[2], MPI_DOUBLE, 0, 0, control.col_comm,
 				         MPI_STATUS_IGNORE);
 
-				int assignedNNZCount = 0;
-				for (int i = 0; i < (control.myId/control.clusterRows)*3; i = i+3){
-					assignedNNZCount += nodeCSR->processData[i];
-				}
-				nodeCSR->rebase(assignedNNZCount);
+				nodeCSR->rebase_balanced();
 			}
 			std::cout << "Rows recieved: " << nodeCSR->csrRows.size() << ", NNZs received: " << nodeCSR->csrData.size() << ", denseVec received: " << nodeCSR->denseVec.size() << std::endl;
 		}
