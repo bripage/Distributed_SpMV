@@ -11,7 +11,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c65b864-9431-4078-9657-58a0aa3c15cb" name="Default" comment="" />
+    <list default="true" id="0c65b864-9431-4078-9657-58a0aa3c15cb" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
+    </list>
     <ignored path="Distrubuted_SpMV.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -34,8 +36,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="913">
-              <caret line="658" column="12" lean-forward="true" selection-start-line="658" selection-start-column="12" selection-end-line="658" selection-end-column="12" />
+            <state relative-caret-position="808">
+              <caret line="651" column="67" lean-forward="false" selection-start-line="651" selection-start-column="67" selection-end-line="651" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -84,7 +86,7 @@
       <file leaf-file-name="distribution.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/distribution.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="499">
+            <state relative-caret-position="257">
               <caret line="322" column="34" lean-forward="true" selection-start-line="322" selection-start-column="34" selection-end-line="322" selection-end-column="34" />
               <folding />
             </state>
@@ -112,9 +114,9 @@
       <find>denseVec</find>
       <find>sleep</find>
       <find>\d+ \d+ [0]</find>
-      <find>processRowCounts</find>
       <find>master</find>
       <find>masterData</find>
+      <find>processRowCounts</find>
     </findStrings>
     <replaceStrings>
       <replace>control</replace>
@@ -493,12 +495,12 @@
       <workItem from="1515063990828" duration="30098000" />
       <workItem from="1516128843040" duration="20538000" />
       <workItem from="1516864420805" duration="2462000" />
-      <workItem from="1517102033123" duration="58225000" />
+      <workItem from="1517102033123" duration="58717000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="735214000" />
+    <option name="totallyTimeSpent" value="735706000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="23" width="1853" height="1008" extended-state="0" />
@@ -765,14 +767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/distribution.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="322" column="34" lean-forward="true" selection-start-line="322" selection-start-column="34" selection-end-line="322" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controlStruct.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -781,10 +775,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/distribution.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="322" column="34" lean-forward="true" selection-start-line="322" selection-start-column="34" selection-end-line="322" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="913">
-          <caret line="658" column="12" lean-forward="true" selection-start-line="658" selection-start-column="12" selection-end-line="658" selection-end-column="12" />
+        <state relative-caret-position="808">
+          <caret line="651" column="67" lean-forward="false" selection-start-line="651" selection-start-column="67" selection-end-line="651" selection-end-column="67" />
           <folding />
         </state>
       </provider>

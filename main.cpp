@@ -620,7 +620,7 @@ int main(int argc, char *argv[]) {
 		}
 		dataTransmissionEnd = MPI_Wtime();
 
-		usleep(10000000 * control.myId);
+		usleep(100000 * control.myId);
 		std::cout << "myId: " << control.myId << " - ";
 		for (int i = 0; i < nodeCSR->processData.size(); i++){
 			std::cout << nodeCSR->processData[i] << ", ";
@@ -635,14 +635,21 @@ int main(int argc, char *argv[]) {
 		spmvStartTime = MPI_Wtime();
 		if (nodeCSR->csrData.size() > 0) {
 
-			int errorCount = 0;
-			for (int i = 0; i < control.rowCount; i++){
-				if (nodeCSR->csrRows[i] > control.rowCount){
+			int rowErrorCount = 0, colErrorCount = 0;
+			for (int i = 0; i < nodeCSR->csrRows.size(); i++){
+				if (nodeCSR->csrRows[i] > nodeCSR->csrCols.size()){
 					//std::cout << "ERROR: INVALID DATA" << std::endl;
-					errorCount++;
+					rowErrorCount++;
 				}
 			}
-			if (errorCount) std::cout << errorCount << " errors" << std::endl;
+			for (int i = 0; i < nodeCSR->csrCols.size(); i++){
+				if (nodeCSR->csrCols[i] > control.rowCount){
+					//std::cout << "ERROR: INVALID DATA" << std::endl;
+					rowErrorCount++;
+				}
+			}
+			if (rowErrorCount) std::cout << rowErrorCount << " row errors" << std::endl;
+			if (colErrorCount) std::cout << colErrorCount << " col errors" << std::endl;
 
 			int ompThreadId, ompCPUId, start, end, i, j, k, rowsPerThread, rowEnd;
 
