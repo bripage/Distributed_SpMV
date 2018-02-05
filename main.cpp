@@ -616,14 +616,14 @@ int main(int argc, char *argv[]) {
 			}
 			std::cout << "Rows recieved: " << nodeCSR->csrRows.size() << ", NNZs received: " << nodeCSR->csrData.size() << ", denseVec received: " << nodeCSR->denseVec.size() << std::endl;
 		}
+		dataTransmissionEnd = MPI_Wtime();
 
 		// must be total number of rows since we want each process to take part in a collective reduction
 		result.resize(control.rowCount, 0.0);
 
+		if (control.debug && control.myId == 0) std::cout << "Starting SpMV computation" << std::endl;
 		if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
 		spmvStartTime = MPI_Wtime();
-
-		if (control.debug && control.myId == 0) std::cout << "Starting SpMV computation" << std::endl;
 		if (nodeCSR->csrData.size() > 0) {
 			int ompThreadId, ompCPUId, start, end, i, j, k, rowsPerThread, rowEnd;
 
@@ -666,14 +666,14 @@ int main(int argc, char *argv[]) {
 			}
 		}
 		if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
-		if (control.debug && control.myId == 0) std::cout << "SpMV computation complete" << std::endl;
 		spmvEndTime = MPI_Wtime();
+		if (control.debug && control.myId == 0) std::cout << "SpMV computation complete" << std::endl;
 
-		reductionStartTime = MPI_Wtime();
 		/*
-		 *      MPI REDUCE w/ SUM FROM COLUMNS TO ROW MASTER(S)
+		 *      MPI REDUCE FROM ALL TO MASTER
 		 */
 		if (control.debug && control.myId == 0) std::cout << "Starting MPI Reduction" << std::endl;
+		reductionStartTime = MPI_Wtime();
 		if (control.myId == 0) {
 			MPI_Reduce(MPI_IN_PLACE, &result[0], control.rowCount, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
 		} else {
@@ -682,7 +682,6 @@ int main(int argc, char *argv[]) {
 		if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
 		if (control.debug && control.myId == 0) std::cout << "MPI Reduction complete" << std::endl;
 		reductionEndTime = MPI_Wtime();
-
 	}
 
 	if (control.debug && control.myId == 0) std::cout << "Starting Finalization" << std::endl;
