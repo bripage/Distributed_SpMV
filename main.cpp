@@ -205,6 +205,9 @@ int main(int argc, char *argv[]) {
 		        }
 	        } else {
 		        // verification for balance distribution
+		        masterData.masterOnlySpMV(control, seqDist); // perform sequential SpMV on master process only
+		        std::vector<int> seqDist(control.rowCount, 0); // sequential distribution
+		        std::vector<int> distDist(control.rowCount, 0); //distributed distribution
 	        }
         }
     }
@@ -714,7 +717,7 @@ int main(int argc, char *argv[]) {
         }
     }
 	if (control.debug && control.myId == 0) std::cout << "Verification complete" << std::endl;
-	
+
 
 	if (control.debug && control.myId == 0) std::cout << "Starting Output" << std::endl;
     if (control.myId == 0) {
