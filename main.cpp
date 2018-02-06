@@ -10,7 +10,7 @@
 #include "distribution.h"
 #include <unistd.h>
 #include <sched.h>
-#include <numeric>
+
 
 int main(int argc, char *argv[]) {
     controlData control;
