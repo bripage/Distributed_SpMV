@@ -114,9 +114,7 @@ int main(int argc, char *argv[]) {
     //****************************************************//
     //  Create comm for each column/row of compute nodes  //
     //****************************************************//
-	if (control.debug && control.myId == 0){
-		std::cout << "Starting MPI Initialization" << std::endl;
-	}
+	if (control.debug && control.myId == 0) std::cout << "Starting MPI Initialization" << std::endl;
 	// get the number of MPI processes for work split and distribution
     control.clusterRows = sqrt(control.processCount);
     control.clusterCols = control.clusterRows; // works because cluster is expected to be square
@@ -149,9 +147,7 @@ int main(int argc, char *argv[]) {
     MPI_Comm_size(control.row_comm, &control.row_size);
     //
     // End MPI initialization
-	if (control.debug && control.myId == 0) {
-		std::cout << "MPI Initialization complete" << std::endl;
-	}
+	if (control.debug && control.myId == 0) std::cout << "MPI Initialization complete" << std::endl;
 
     //***********************************************//
     //     Select distribution method and actions    //
@@ -159,9 +155,7 @@ int main(int argc, char *argv[]) {
     std::vector<csrSpMV *> clusterColData;
     int colsPerColumn;
 
-	if (control.debug && control.myId == 0) {
-		std::cout << "starting multinode distribution" << std::endl;
-	}
+	if (control.debug && control.myId == 0) std::cout << "starting multinode distribution" << std::endl;
     distributionStartTime = MPI_Wtime();
     if (!control.myId) {
 	    if (control.distributionMethod == 1) {
@@ -171,17 +165,13 @@ int main(int argc, char *argv[]) {
 	    }
     }
 	distributionEndTime = MPI_Wtime();
-	if (control.debug && control.myId == 0) {
-		std::cout << "Multinode distribution complete" << std::endl;
-	}
+	if (control.debug && control.myId == 0) std::cout << "Multinode distribution complete" << std::endl;
 
     //
     // Find Distribution of Non-Zeros on both sequential and distributed distributions
 	// This checks to make sure that all nnz have been assigned and that none are forgotten or used twice
 	//
-	if (control.debug && control.myId == 0) {
-		std::cout << "Starting verification" << std::endl;
-	}
+	if (control.debug && control.myId == 0) std::cout << "Starting verification" << std::endl;
 	csrSpMV masterData;
 	if (control.verify) {
         if (!control.myId) {
@@ -190,9 +180,7 @@ int main(int argc, char *argv[]) {
 		        std::vector<int> distDist(control.rowCount, 0); //distributed distribution
 
 		        masterData.masterOnlySpMV(control, seqDist); // perform sequential SpMV on master process only
-		        if (control.debug && control.myId == 0) {
-			        std::cout << "Sequential SpMV complete" << std::endl;
-		        }
+		        if (control.debug && control.myId == 0) std::cout << "Sequential SpMV complete" << std::endl;
 
 		        // Get Distributed Row NNZ Count
 		        for (int i = 0; i < control.clusterCols; i++) {
@@ -224,9 +212,7 @@ int main(int argc, char *argv[]) {
     }
 	//
     // End distribution calculation
-	if (control.debug && control.myId == 0) {
-		std::cout << "Verification complete" << std::endl;
-	}
+	if (control.debug && control.myId == 0) std::cout << "Verification complete" << std::endl;
 
 
     // Create a pointer to the nodes csr object. Using pointers so that we do not have to copy any data on the
@@ -244,9 +230,7 @@ int main(int argc, char *argv[]) {
 	dataTransmissionStart = MPI_Wtime();
 	if (control.distributionMethod == 1) {
 		if (control.masterOnly != true) {
-			if (control.debug && control.myId == 0) {
-				std::cout << "Sending data to column masters" << std::endl;
-			}
+			if (control.debug && control.myId == 0) std::cout << "Sending data to column masters" << std::endl;
 			// master to send data to cluster column masters
 			if (control.myId == 0) {
 				for (int i = 1; i < control.clusterCols; i++) {  // start at 1 since Master is the row master
@@ -291,16 +275,13 @@ int main(int argc, char *argv[]) {
 				MPI_Recv(&nodeCSR->denseVec[0], control.rowsPerNode, MPI_DOUBLE, 0, 0, control.row_comm,
 				         MPI_STATUS_IGNORE);
 			}
-			if (control.debug && control.myId == 0) {
-				std::cout << "Sending to column masters complete" << std::endl;
-			}
+			if (control.debug && control.myId == 0) std::cout << "Sending to column masters complete" << std::endl;
 
 			// column masters send data to row nodes
 			if (control.barrier) MPI_Barrier(control.col_comm);
 			if (control.myId < control.clusterCols) {
-				if (control.debug && control.myId == 0) {
+				if (control.debug && control.myId == 0)
 					std::cout << "Column Masters Sending Data to col members" << std::endl;
-				}
 				for (int i = 1;
 				     i < control.clusterRows; i++) {  // start at 1 since column master is the 0th node in the column
 					int localRowCount;
@@ -380,9 +361,7 @@ int main(int argc, char *argv[]) {
 		if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
 		spmvStartTime = MPI_Wtime();
 
-		if (control.debug && control.myId == 0) {
-			std::cout << "Starting SpMV computation" << std::endl;
-		}
+		if (control.debug && control.myId == 0) std::cout << "Starting SpMV computation" << std::endl;
 		if (nodeCSR->csrData.size() > 0) {
 			int ompThreadId, ompCPUId, start, end, i, j, k, rowsPerThread, rowEnd;
 
@@ -427,9 +406,7 @@ int main(int argc, char *argv[]) {
 			}
 		}
 		if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
-		if (control.debug && control.myId == 0) {
-			std::cout << "SpMV computation complete" << std::endl;
-		}
+		if (control.debug && control.myId == 0) std::cout << "SpMV computation complete" << std::endl;
 		double spmvEndTime = MPI_Wtime();
 
 		if (control.masterOnly != true) {
@@ -440,9 +417,7 @@ int main(int argc, char *argv[]) {
 			/*
 			 *      MPI REDUCE w/ SUM FROM COLUMNS TO ROW MASTER(S)
 			 */
-			if (control.debug && control.myId == 0) {
-				std::cout << "Starting MPI Reduction" << std::endl;
-			}
+			if (control.debug && control.myId == 0) std::cout << "Starting MPI Reduction" << std::endl;
 			if (control.myId < control.clusterCols) {
 				if (control.row_rank == 0) {
 					MPI_Reduce(MPI_IN_PLACE, &result[0], control.rowsPerNode, MPI_DOUBLE, MPI_SUM, 0, control.row_comm);
@@ -457,9 +432,7 @@ int main(int argc, char *argv[]) {
 				}
 			}
 			if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
-			if (control.debug && control.myId == 0) {
-				std::cout << "MPI Reduction complete" << std::endl;
-			}
+			if (control.debug && control.myId == 0) std::cout << "MPI Reduction complete" << std::endl;
 			reductionEndTime = MPI_Wtime();
 
 			/*
@@ -467,10 +440,7 @@ int main(int argc, char *argv[]) {
 			 */
 			if (control.barrier) MPI_Barrier(control.col_comm);
 			masterGatherStart = MPI_Wtime();
-			if (control.debug && control.myId == 0) {
-				std::cout << "Starting MPI Gather" << std::endl;
-			}
-
+			if (control.debug && control.myId == 0) std::cout << "Starting MPI Gather" << std::endl;
 			if (control.myId % control.clusterCols == 0) {
 				if (control.col_rank == 0) {
 					MPI_Gather(MPI_IN_PLACE, control.rowsPerNode, MPI_DOUBLE, &result[0], control.rowsPerNode,
@@ -480,16 +450,12 @@ int main(int argc, char *argv[]) {
 					           MPI_DOUBLE, 0, control.col_comm);
 				}
 			}
-			if (control.debug && control.myId == 0) {
-				std::cout << "MPI Gather complete" << std::endl;
-			}
+			if (control.debug && control.myId == 0) std::cout << "MPI Gather complete" << std::endl;
 			masterGatherEnd = MPI_Wtime();
 		}
 	} else if (control.distributionMethod == 2){    // balanced distribution
 		if (control.masterOnly != true) {
-			if (control.debug && control.myId == 0) {
-				std::cout << "Sending data to column masters" << std::endl;
-			}
+			if (control.debug && control.myId == 0) std::cout << "Sending data to column masters" << std::endl;
 			// master to send data to cluster column masters
 			if (control.myId == 0) {
 				for (int i = 1; i < control.clusterCols; i++) {  // start at 1 since Master is the row master
@@ -563,9 +529,7 @@ int main(int argc, char *argv[]) {
 				         MPI_STATUS_IGNORE);
 				//std::cout << "Rows recieved: " << nodeCSR->csrRows.size() << ", NNZs received: " << nodeCSR->csrData.size() << ", denseVec received: " << nodeCSR->denseVec.size() << std::endl;
 			}
-			if (control.debug && control.myId == 0) {
-				std::cout << "Sending to column masters complete" << std::endl;
-			}
+			if (control.debug && control.myId == 0) std::cout << "Sending to column masters complete" << std::endl;
 /*
 			usleep(10000000 * control.myId);
 			if (control.myId / control.clusterCols == 0){
@@ -584,9 +548,7 @@ int main(int argc, char *argv[]) {
 			// column masters send data to row nodes
 			if (control.barrier) MPI_Barrier(control.col_comm);
 			if (control.myId < control.clusterCols) {
-				if (control.debug && control.myId == 0)	{
-					std::cout << "Column Masters Sending Data to col members" << std::endl;
-				}
+				if (control.debug && control.myId == 0)	std::cout << "Column Masters Sending Data to col members" << std::endl;
 				int rowsSent = 0, nnzSent = 0;
 				for (int i = 1;
 				     i < control.clusterRows; i++) {  // start at 1 since column master is the 0th node in the column
@@ -690,9 +652,7 @@ int main(int argc, char *argv[]) {
 		// must be total number of rows since we want each process to take part in a collective reduction
 		result.resize(control.rowCount, 0.0);
 
-		if (control.debug && control.myId == 0) {
-			std::cout << "Starting SpMV computation" << std::endl;
-		}
+		if (control.debug && control.myId == 0) std::cout << "Starting SpMV computation" << std::endl;
 		if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
 		spmvStartTime = MPI_Wtime();
 		if (nodeCSR->csrData.size() > 0) {
@@ -763,16 +723,12 @@ int main(int argc, char *argv[]) {
 		}
 		if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
 		spmvEndTime = MPI_Wtime();
-		if (control.debug && control.myId == 0) {
-			std::cout << "SpMV computation complete" << std::endl;
-		}
+		if (control.debug && control.myId == 0) std::cout << "SpMV computation complete" << std::endl;
 
 		/*
 		 *      MPI REDUCE FROM ALL TO MASTER
 		 */
-		if (control.debug && control.myId == 0){
-			std::cout << "Starting MPI Reduction" << std::endl;
-		}
+		if (control.debug && control.myId == 0) std::cout << "Starting MPI Reduction" << std::endl;
 		reductionStartTime = MPI_Wtime();
 
 		if (control.myId == 0) {
@@ -786,9 +742,7 @@ int main(int argc, char *argv[]) {
 			MPI_Reduce(&result[0], &result[0], control.rowCount, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
 		}
 		if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
-		if (control.debug && control.myId == 0){
-			std::cout << "MPI Reduction complete" << std::endl;
-		}
+		if (control.debug && control.myId == 0) std::cout << "MPI Reduction complete" << std::endl;
 		reductionEndTime = MPI_Wtime();
 
 		if (control.myId == 0) {
@@ -798,16 +752,12 @@ int main(int argc, char *argv[]) {
 		}
 	}
 
-	if (control.debug && control.myId == 0) {
-		std::cout << "Starting Finalization" << std::endl;
-	}
+	if (control.debug && control.myId == 0) std::cout << "Starting Finalization" << std::endl;
     MPI_Comm_free(&control.col_comm);
     MPI_Comm_free(&control.row_comm);
     overallEndTime = MPI_Wtime();
     MPI_Finalize();
-	if (control.debug && control.myId == 0) {
-		std::cout << "Finalization complete" << std::endl;
-	}
+	if (control.debug && control.myId == 0) std::cout << "Finalization complete" << std::endl;
 
     //
     //                                      -- Testing / Verifcation --
@@ -815,9 +765,7 @@ int main(int argc, char *argv[]) {
     // the "master only" SpMV against those of the distributed version's results.
     //
 
-	if (control.debug && control.myId == 0) {
-		std::cout << "Starting Verification" << std::endl;
-	}
+	if (control.debug && control.myId == 0) std::cout << "Starting Verification" << std::endl;
 	if (control.verify) {
         if (control.myId == 0) {
             std::cout << std::endl;
@@ -836,14 +784,10 @@ int main(int argc, char *argv[]) {
             std::cout << "Incorecct Rows: " << incorrectRowCount << std::endl;
         }
     }
-	if (control.debug && control.myId == 0) {
-		std::cout << "Verification complete" << std::endl;
-	}
+	if (control.debug && control.myId == 0) std::cout << "Verification complete" << std::endl;
 
 
-	if (control.debug && control.myId == 0) {
-		std::cout << "Starting Output" << std::endl;
-	}
+	if (control.debug && control.myId == 0) std::cout << "Starting Output" << std::endl;
     if (control.myId == 0) {
 	    if (control.barrier == false) {
 		    std::cout << distributionEndTime - distributionStartTime << "," << overallEndTime - overallStartTime << std::endl;
@@ -861,9 +805,7 @@ int main(int argc, char *argv[]) {
 	    }
 
     }
-	if (control.debug && control.myId == 0) {
-		std::cout << "Output complete" << std::endl;
-	}
+	if (control.debug && control.myId == 0) std::cout << "Output complete" << std::endl;
 
 
 	return 0;

@@ -282,9 +282,9 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 	}
 	if (control.debug) std::cout << "Done spliting rows" << std::endl;
 
-	if (control.debug) std::cout << "Sorting Rows" << std::endl;
 	//sort rows based on row length
-	if (control.debug) std::sort(distributionRows.begin(), distributionRows.end(), sortByLength);
+	if (control.debug) std::cout << "Sorting Rows" << std::endl;
+	std::sort(distributionRows.begin(), distributionRows.end(), sortByLength);
 	if (control.debug) std::cout << "Done sorting rows" << std::endl;
 
 	if (control.debug) std::cout << "Assigning rows to processes" << std::endl;
