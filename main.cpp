@@ -220,16 +220,27 @@ int main(int argc, char *argv[]) {
     // End distribution calculation
 	if (control.debug && control.myId == 0) std::cout << "Verification complete" << std::endl;
 
-	//get distribution process averages
-	int distProcAvg = 0;
-	std::vector<int> distDist(control.processCount, 0); //distributed distribution
-	for (int i = 0; i < control.clusterCols; i++){
-		for (int j = 0; j < control.clusterRows; j++){
-			distDist[i]
-			distProcAvg +=
-		}
-	}
-
+    if (control.matrixInfo) {
+        //get distribution process averages
+        if (control.debug && control.myId == 0)
+            std::cout << "Starting Determining NNZ Per Process Standard Deviation" << std::endl;
+        int distProcSum = 0;
+        double distProcAvg, distProcAvgDiff = 0.0, distStandardDeviation;
+        std::vector<int> distDist(control.processCount, 0); //distributed distribution
+        for (int i = 0; i < control.clusterCols; i++) {
+            for (int j = 0; j < control.clusterRows; j++) {
+                distDist[(i * control.clusterCols) + j] = clusterColData[i]->processData[j * 3];
+                distProcSum += distDist[i];
+            }
+        }
+        distProcAvg = distProcSum / (double) control.processCount;
+        for (int i = 0; i < control.processCount; i++) {
+            distProcAvgDiff += (distDist[i] - distProcAvg) * (distDist[i] - distProcAvg);
+        }
+        distStandardDeviation = sqrt((1 / control.processCount) * distProcAvgDiff);
+        if (control.debug && control.myId == 0)
+            std::cout << "Done Determining NNZ Per Process Standard Deviation" << std::endl;
+    }
 
     // Create a pointer to the nodes csr object. Using pointers so that we do not have to copy any data on the
     // master node in order to assign it to this name
