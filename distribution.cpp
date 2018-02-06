@@ -217,12 +217,11 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 				}
 
 				control.nonZeros = std::stoi(line);
-				if (control.debug && control.myId == 0) std::cout << "RowCount = " << control.rowCount
-				                                                  << ", ColCount = " << control.colCount
-				                                                  << ", NNZ Count = " << control.nonZeros << std::endl;
-				if (control.debug && control.myId == 0) std::cout << "RowsPerProcess = " << control.rowsPerNode
-				                                                  << ", ColsPerProcess = " << control.colsPerNode
-				                                                  << std::endl;
+				if (control.debug && control.myId == 0) {
+					std::cout << "RowCount = " << control.rowCount << ", ColCount = " << control.colCount
+					          << ", NNZ Count = " << control.nonZeros << std::endl;
+				}
+
 				distributionRows.resize(control.rowCount);
 				for (int i = 0; i < control.rowCount; i++){
 					distributionRows[i].rowLength = 0;
@@ -352,7 +351,7 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 				}
 				clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*3)] += distributionRows[j].rowLength;
 				//clusterColData[i%control.clusterCols]->denseVec.push_back(denseVec[j]);
-				clusterColData[i%control.clusterCols]->denseVec.push_back(1.0);
+				clusterColData[i%control.clusterCols]->denseVec.push_back(0.1234567);
 				clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*3)+2]+=1;
 			}
 		}
