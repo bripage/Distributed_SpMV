@@ -220,7 +220,7 @@ int main(int argc, char *argv[]) {
     // End distribution calculation
 	if (control.debug && control.myId == 0) std::cout << "Verification complete" << std::endl;
 
-    if (control.matrixInfo) {
+    if (control.matrixInfo && control.myId == 0) {
         //get distribution process averages
         if (control.debug && control.myId == 0)
             std::cout << "Starting Determining NNZ Per Process Standard Deviation" << std::endl;
