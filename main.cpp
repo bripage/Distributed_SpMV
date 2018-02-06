@@ -239,7 +239,7 @@ int main(int argc, char *argv[]) {
         for (int i = 0; i < control.processCount; i++) {
             distProcAvgDiff += (distDist[i] - distProcAvg) * (distDist[i] - distProcAvg);
         }
-        distStandardDeviation = sqrt((1 / control.processCount) * distProcAvgDiff);
+        distStandardDeviation = sqrt((1.0 / control.processCount) * distProcAvgDiff);
         std::cout << "NNZ Per Process Standard Deviation = " << distStandardDeviation << std::endl;
 
         if (control.debug && control.myId == 0)
