@@ -10,7 +10,7 @@
 #include "distribution.h"
 #include <unistd.h>
 #include <sched.h>
-
+#include <numeric>
 
 int main(int argc, char *argv[]) {
     controlData control;
@@ -78,7 +78,13 @@ int main(int argc, char *argv[]) {
 		        control.debug = true;
 		        control.verify = true;
 	        }
-        } else if (argTemp == "--help") {
+        } else if (argTemp == "--show-matrix-info-") {
+		        //set number of OpenMP threads per node
+		        std::string temp = argv[i + 1];
+		        if (temp == "true") {
+			        control.matrixInfo = true;
+		        }
+	    } else if (argTemp == "--help") {
             std::cout << "Usage: distSpMV [OPTION] <argument> ..." << std::endl << std::endl;
             std::cout << "Options:" << std::endl;
             std::cout << " -lm <file>" << std::setw(15) << "" << R"(Load sparse matrix from <file>)" << std::endl;
@@ -101,6 +107,7 @@ int main(int argc, char *argv[]) {
             exit(0);
         }
     }
+    if (control.processCount == 1 && control.masterOnly == false) control.masterOnly = true; //you meant to put true ;)
 
 	// Get the name of the processor
 	if (control.debug) {
@@ -205,7 +212,6 @@ int main(int argc, char *argv[]) {
 	        } else {
 		        // verification for balance distribution
 		        std::vector<int> seqDist(control.rowCount, 0); // sequential distribution
-		        std::vector<int> distDist(control.rowCount, 0); //distributed distribution
 		        masterData.masterOnlySpMV(control, seqDist); // perform sequential SpMV on master process only
 	        }
         }
@@ -213,6 +219,16 @@ int main(int argc, char *argv[]) {
 	//
     // End distribution calculation
 	if (control.debug && control.myId == 0) std::cout << "Verification complete" << std::endl;
+
+	//get distribution process averages
+	int distProcAvg = 0;
+	std::vector<int> distDist(control.processCount, 0); //distributed distribution
+	for (int i = 0; i < control.clusterCols; i++){
+		for (int j = 0; j < control.clusterRows; j++){
+			distDist[i]
+			distProcAvg +=
+		}
+	}
 
 
     // Create a pointer to the nodes csr object. Using pointers so that we do not have to copy any data on the
@@ -725,25 +741,22 @@ int main(int argc, char *argv[]) {
 		spmvEndTime = MPI_Wtime();
 		if (control.debug && control.myId == 0) std::cout << "SpMV computation complete" << std::endl;
 
-		/*
-		 *      MPI REDUCE FROM ALL TO MASTER
-		 */
-		if (control.debug && control.myId == 0) std::cout << "Starting MPI Reduction" << std::endl;
-		reductionStartTime = MPI_Wtime();
+		if (control.masterOnly != true) {
+			/*
+			 *      MPI REDUCE FROM ALL TO MASTER
+			 */
+			if (control.debug && control.myId == 0) std::cout << "Starting MPI Reduction" << std::endl;
+			reductionStartTime = MPI_Wtime();
 
-		if (control.myId == 0) {
-			for (int i = 0; i < control.rowCount; i++){
-				//std::cout << "result[" << i << "] = " << result[i] << std::endl;
+			if (control.myId == 0) {
+				MPI_Reduce(MPI_IN_PLACE, &result[0], control.rowCount, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
+			} else {
+				MPI_Reduce(&result[0], &result[0], control.rowCount, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
 			}
+			if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
+			if (control.debug && control.myId == 0) std::cout << "MPI Reduction complete" << std::endl;
+			reductionEndTime = MPI_Wtime();
 		}
-		if (control.myId == 0) {
-			MPI_Reduce(MPI_IN_PLACE, &result[0], control.rowCount, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
-		} else {
-			MPI_Reduce(&result[0], &result[0], control.rowCount, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
-		}
-		if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
-		if (control.debug && control.myId == 0) std::cout << "MPI Reduction complete" << std::endl;
-		reductionEndTime = MPI_Wtime();
 
 		if (control.myId == 0) {
 			for (int i = 0; i < control.rowCount; i++){

@@ -19,6 +19,7 @@ struct controlData {
 	bool barrier = false;
     bool verify = false;
 	bool debug = false;
+	bool matrixInfo = false;
     int ompThreads = 1; // number of OpenMP threads to run on each MPI process (cluster node)
     int distributionMethod; // colBalanced, splitMatrix, overflow
     int rowsPerNode;
