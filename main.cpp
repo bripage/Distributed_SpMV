@@ -230,6 +230,8 @@ int main(int argc, char *argv[]) {
         std::vector<int> distDist(control.processCount, 0); //distributed distribution
 
         for (int i = 0; i < control.processCount; i++) {
+            std::cout << "distDist[" << i << "] = clusterColData[" << i%control.clusterCols << "]->processData[" << (i/control.clusterRows)*3 << "]" << std::endl;
+            std::cout << clusterColData[i%control.clusterCols]->processData[(i/control.clusterRows)*3] << std::endl;
             distDist[i] = clusterColData[i%control.clusterCols]->processData[(i/control.clusterRows)*3];
             distProcSum += distDist[i];
         }
@@ -239,7 +241,7 @@ int main(int argc, char *argv[]) {
         }
         distStandardDeviation = sqrt((1 / control.processCount) * distProcAvgDiff);
         std::cout << "NNZ Per Process Standard Deviation = " << distStandardDeviation << std::endl;
-        
+
         if (control.debug && control.myId == 0)
             std::cout << "Done Determining NNZ Per Process Standard Deviation" << std::endl;
     }
