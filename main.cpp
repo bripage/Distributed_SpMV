@@ -78,7 +78,7 @@ int main(int argc, char *argv[]) {
 		        control.debug = true;
 		        control.verify = true;
 	        }
-        } else if (argTemp == "--show-matrix-info-") {
+        } else if (argTemp == "--show-matrix-info") {
 		        //set number of OpenMP threads per node
 		        std::string temp = argv[i + 1];
 		        if (temp == "true") {
