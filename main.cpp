@@ -224,20 +224,22 @@ int main(int argc, char *argv[]) {
         //get distribution process averages
         if (control.debug && control.myId == 0)
             std::cout << "Starting Determining NNZ Per Process Standard Deviation" << std::endl;
+
         int distProcSum = 0;
         double distProcAvg, distProcAvgDiff = 0.0, distStandardDeviation;
         std::vector<int> distDist(control.processCount, 0); //distributed distribution
-        for (int i = 0; i < control.clusterCols; i++) {
-            for (int j = 0; j < control.clusterRows; j++) {
-                distDist[(i * control.clusterCols) + j] = clusterColData[i]->processData[j * 3];
-                distProcSum += distDist[i];
-            }
+
+        for (int i = 0; i < control.processCount; i++) {
+            distDist[i] = clusterColData[i%control.clusterCols]->processData[(i/control.clusterRows)*3];
+            distProcSum += distDist[i];
         }
         distProcAvg = distProcSum / (double) control.processCount;
         for (int i = 0; i < control.processCount; i++) {
             distProcAvgDiff += (distDist[i] - distProcAvg) * (distDist[i] - distProcAvg);
         }
         distStandardDeviation = sqrt((1 / control.processCount) * distProcAvgDiff);
+        std::cout << "NNZ Per Process Standard Deviation = " << distStandardDeviation << std::endl;
+        
         if (control.debug && control.myId == 0)
             std::cout << "Done Determining NNZ Per Process Standard Deviation" << std::endl;
     }
