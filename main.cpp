@@ -104,7 +104,7 @@ int main(int argc, char *argv[]) {
 
 	// Get the name of the processor
 	if (control.debug) {
-		usleep(100000 * control.myId);
+		//usleep(100000 * control.myId);
 		char processor_name[MPI_MAX_PROCESSOR_NAME];
 		int name_len;
 		MPI_Get_processor_name(processor_name, &name_len);
@@ -353,7 +353,7 @@ int main(int argc, char *argv[]) {
 		dataTransmissionEnd = MPI_Wtime();
 		if (control.debug && control.myId == 0) {
 			std::cout << "Col master sending to col members complete" << std::endl;
-			usleep(10000000 * control.myId);
+			//usleep(10000000 * control.myId);
 		}
 
 		result.resize(control.rowsPerNode, 0.0);
@@ -372,7 +372,7 @@ int main(int argc, char *argv[]) {
 				ompCPUId = sched_getcpu();
 
 				if (control.debug) {
-					usleep(100000 * ompThreadId);
+					//usleep(100000 * ompThreadId);
 					std::cout << "Rank " << control.myId << ", Thread " << ompThreadId << " on core " << ompCPUId
 					          << std::endl;
 				}
@@ -680,7 +680,7 @@ int main(int argc, char *argv[]) {
 					ompThreadId = omp_get_thread_num();
 					if (control.debug) {
 						ompCPUId = sched_getcpu();
-						usleep(100000 * ompThreadId);
+						//usleep(100000 * ompThreadId);
 						std::cout << "Rank " << control.myId << ", Thread " << ompThreadId << " on core " << ompCPUId
 						          << std::endl;
 					}
