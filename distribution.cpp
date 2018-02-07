@@ -444,16 +444,6 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 				                                                  << ", ColsPerProcess = " << control.colsPerNode
 				                                                  << std::endl;
 
-				// determine where to test overflow for extra rows that must be added to the last cluster row's work
-				if (control.rowCount % control.clusterCols != 0) {
-					rowsLastRow = control.rowsPerNode + (control.rowCount % control.clusterRows);
-				} else {
-					rowsLastRow = control.rowCount / control.clusterCols;
-				}
-				control.lastClusterRowRowStart = control.colCount - rowsLastRow;
-				// determine where to test overflow for extra columns that must be added to the last cluster column's
-				// work
-				control.lastClusterColColStart = control.colsPerNode*(control.clusterCols-1);
 			} else {
 				size_t pos = 0;
 				std::string token;
@@ -502,18 +492,18 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 	int avgNNZperProcess = ceil((double)control.nonZeros / (double)control.processCount);
 	previousRow = -1;
 	for (int i = 0; i < elements.size(); i++){
-		if (elements[i].row == previousRow && count+1 <= avgNNZperProcess){
+		if (elements[i].row == previousRow && distributionRows[distributionRows.size()-1].rowLength+1 <= avgNNZperProcess){
 			// add element to current row
 			distributionRows[distributionRows.size()-1].rowLength++;
 			distributionRows[distributionRows.size()-1].col.push_back(elements[i].col);
 			distributionRows[distributionRows.size()-1].data.push_back(elements[i].data);
-		} else if (elements[i].row == previousRow && count+1 > avgNNZperProcess){
+		} else if (elements[i].row == previousRow && distributionRows[distributionRows.size()-1].rowLengt+1 > avgNNZperProcess){
 			// create new row by splitting the current row
 			row temp;
 			temp.processAssignment = -1;
 			temp.rowId = elements[i].row;
 			temp.rowLength = 1;
-			temp.cols.push_back(elements[i].col);
+			temp.cols.push_back(elements[i].cols);
 			temp.data.push_back(elements[i].data);
 			distributionRows.push_back(row);
 		} else if (elements[i].row != previousRow){
@@ -522,7 +512,7 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 			temp.processAssignment = -1;
 			temp.rowId = elements[i].row;
 			temp.rowLength = 1;
-			temp.cols.push_back(elements[i].col);
+			temp.cols.push_back(elements[i].cols);
 			temp.data.push_back(elements[i].data);
 			distributionRows.push_back(row);
 			previousRow = elements[i].row;

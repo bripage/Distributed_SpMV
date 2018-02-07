@@ -736,7 +736,6 @@ int main(int argc, char *argv[]) {
 			int ompThreadId, ompCPUId, start, end, i, j, k, rowsPerThread, rowEnd;
 #pragma omp parallel num_threads(control.ompThreads) shared(nodeCSR, result) private(ompThreadId, ompCPUId, start, end, i, j, k, rowsPerThread, rowEnd)
 				{
-					threadResult.resize(control.rowCount, 0.0);
 					ompThreadId = omp_get_thread_num();
 					if (control.debug) {
 						ompCPUId = sched_getcpu();
