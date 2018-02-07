@@ -505,7 +505,7 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 			temp.rowLength = 1;
 			temp.cols.push_back(elements[i].col);
 			temp.data.push_back(elements[i].data);
-			distributionRows.push_back(row);
+			distributionRows.push_back(temp);
 		} else if (elements[i].row != previousRow){
 			// element belongs to a new row, therefore begin inserting into new row
 			row temp;
@@ -514,7 +514,7 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 			temp.rowLength = 1;
 			temp.cols.push_back(elements[i].col);
 			temp.data.push_back(elements[i].data);
-			distributionRows.push_back(row);
+			distributionRows.push_back(temp);
 			previousRow = elements[i].row;
 		}
 	}
