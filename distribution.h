@@ -29,8 +29,8 @@ struct Element {
 
 struct row {
 	int rowLength, rowId, processAssignment;
-	std::vector <int> rowIds;
-	std::vector <int> colIds;
+	std::vector <int> rows;
+	std::vector <int> cols;
 	std::vector <double> data;
 };
 
