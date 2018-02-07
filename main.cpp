@@ -709,9 +709,10 @@ int main(int argc, char *argv[]) {
 			if (rowErrorCount) std::cout << rowErrorCount << " row errors" << std::endl;
 			if (colErrorCount) std::cout << colErrorCount << " col errors" << std::endl;
 */
+
 			int ompThreadId, ompCPUId, start, end, i, j, k, rowsPerThread, rowEnd;
-			//if (control.myId == 9) {
-#pragma omp parallel num_threads(control.ompThreads) shared(nodeCSR, result) private(ompThreadId, ompCPUId, start, end, i, j, k, rowsPerThread, rowEnd)
+			std::vector <double> threadResult(control.rowCount, 0.0);
+#pragma omp parallel num_threads(control.ompThreads) shared(nodeCSR, result) private(ompThreadId, ompCPUId, start, end, i, j, k, rowsPerThread, rowEnd, threadResult)
 				{
 					ompThreadId = omp_get_thread_num();
 					if (control.debug) {
@@ -732,33 +733,32 @@ int main(int argc, char *argv[]) {
 						for (i = ompThreadId * rowsPerThread; i < nodeCSR->csrRows.size(); i++) {
 							if (i == nodeCSR->csrRows.size() - 1) {
 								for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrData.size(); j++) {
-									//std::cout << "result[" << nodeCSR->csrCols[j] << "] += " << nodeCSR->csrData[j]
-									//          << " * " << nodeCSR->denseVec[i] << std::endl;
-									#pragma omp atomic
-                                                                            result[nodeCSR->csrCols[j]] += nodeCSR->csrData[j] * nodeCSR->denseVec[i];
+									threadResult[nodeCSR->csrCols[j]] += nodeCSR->csrData[j] * nodeCSR->denseVec[i];
 								}
 							} else {
 								for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrRows[i + 1]; j++) {
-									//std::cout << "result[" << nodeCSR->csrCols[j] << "] += " << nodeCSR->csrData[j]
-									//          << " * " << nodeCSR->denseVec[i] << std::endl;
-									#pragma omp atomic
-                                                                            result[nodeCSR->csrCols[j]] += nodeCSR->csrData[j] * nodeCSR->denseVec[i];
+									threadResult[nodeCSR->csrCols[j]] += nodeCSR->csrData[j] * nodeCSR->denseVec[i];
 								}
 							}
 						}
 					} else {
 						for (i = ompThreadId * rowsPerThread; i < rowEnd; i++) {
 							for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrRows[i + 1]; j++) {
-								//std::cout << "result[" << nodeCSR->csrCols[j] << "] += " << nodeCSR->csrData[j]
-								//          << " * " << nodeCSR->denseVec[i] << std::endl;
-								#pragma omp atomic
-                                                                    result[nodeCSR->csrCols[j]] += nodeCSR->csrData[j] * nodeCSR->denseVec[i];
+								threadResult[nodeCSR->csrCols[j]] += nodeCSR->csrData[j] * nodeCSR->denseVec[i];
 							}
 						}
 					}
 
+					#pragma omp critical
+					{
+						for (i = 0; i < control.rowCount; i++){
+							result[i] += threadResult[i];
+						}
+					};
+
+
 				}
-			//}
+
 		}
 		
 if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
