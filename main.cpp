@@ -781,19 +781,20 @@ int main(int argc, char *argv[]) {
 						}
 					}
 
-					#pragma omp critical
-					{
+					//#pragma omp critical
+					//{
+					usleep(10 * ompThreadId);
 						for (i = 0; i < control.rowCount; i++){
 							result[i] += threadResult[i];
 						}
-					};
+					//};
 
 
 				}
 
 		}
 		
-if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
+		if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
 		spmvEndTime = MPI_Wtime();
 		if (control.debug && control.myId == 0) std::cout << "SpMV computation complete" << std::endl;
 
