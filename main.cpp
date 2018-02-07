@@ -236,7 +236,7 @@ int main(int argc, char *argv[]) {
 			    int firstElement = clusterColData[i%control.clusterCols]->csrRows[(i/control.clusterRows) * control.rowsPerNode];
 			    int lastElement, nnzCount;
 
-			    if (i == control.clusterRows - 1) {
+			    if (i/control.clusterRows == control.clusterRows - 1) {
 				    lastElement = clusterColData[i%control.clusterCols]->csrData.size();
 			    } else {
 				    lastElement = clusterColData[i%control.clusterCols]->csrRows[((i/control.clusterRows) + 1) * control.rowsPerNode];
@@ -474,7 +474,7 @@ int main(int argc, char *argv[]) {
 		}
 		if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
 		if (control.debug && control.myId == 0) std::cout << "SpMV computation complete" << std::endl;
-		double spmvEndTime = MPI_Wtime();
+		spmvEndTime = MPI_Wtime();
 
 		if (control.masterOnly != true) {
 			if (control.myId == 0) {
