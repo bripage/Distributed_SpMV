@@ -351,7 +351,7 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 				}
 				clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*3)] += distributionRows[j].rowLength;
 				//clusterColData[i%control.clusterCols]->denseVec.push_back(denseVec[j]);
-				clusterColData[i%control.clusterCols]->denseVec.push_back(0.1234567);
+				clusterColData[i%control.clusterCols]->denseVec.push_back(1.0);
 				clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*3)+2]+=1;
 			}
 		}
