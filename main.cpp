@@ -227,28 +227,59 @@ int main(int argc, char *argv[]) {
 	if (control.debug && control.myId == 0) std::cout << "Verification complete" << std::endl;
 
     if (control.matrixInfo && control.myId == 0) {
-        //get distribution process averages
-        if (control.debug && control.myId == 0)
-            std::cout << "Starting Determining NNZ Per Process Standard Deviation" << std::endl;
+	    if (control.distributionMethod == 1) {
+		    int seqProcSum = 0;
+		    double seqProcAvg, seqProcAvgDiff = 0.0, seqStandardDeviation;
+		    std::vector<int> seqDist(control.rowCount, 0); // sequential distribution
 
-        int distProcSum = 0;
-        double distProcAvg, distProcAvgDiff = 0.0, distStandardDeviation;
-        std::vector<int> distDist(control.processCount, 0); //distributed distribution
+		    for (int i = 0; i < control.processCount; i++) {
+			    int firstElement = clusterColData[i%control.clusterCols]->csrRows[(i/control.clusterRows) * control.rowsPerNode];
+			    int lastElement, nnzCount;
 
-        for (int i = 0; i < control.processCount; i++) {
-            distDist[i] = clusterColData[i%control.clusterCols]->processData[(i/control.clusterRows)*3];
-            distProcSum += distDist[i];
-	        std::cout << "Process " << i << ": " << distDist[i] << std::endl;
-        }
-        distProcAvg = distProcSum / (double) control.processCount;
-        for (int i = 0; i < control.processCount; i++) {
-            distProcAvgDiff += (distDist[i] - distProcAvg) * (distDist[i] - distProcAvg);
-        }
-        distStandardDeviation = sqrt((1.0 / control.processCount) * distProcAvgDiff);
-        std::cout << "NNZ Per Process Standard Deviation = " << distStandardDeviation << std::endl;
+			    if (i == control.clusterRows - 1) {
+				    lastElement = clusterColData[i%control.clusterCols]->csrData.size();
+			    } else {
+				    lastElement = clusterColData[i%control.clusterCols]->csrRows[((i/control.clusterRows) + 1) * control.rowsPerNode];
+			    }
+			    nnzCount = (lastElement - firstElement);
+			    seqDist[i] = nnzCount;
+			    seqProcSum += nnzCount;
+			    std::cout << "Process " << i << ": " << seqDist[i] << std::endl;
+		    }
 
-        if (control.debug && control.myId == 0)
-            std::cout << "Done Determining NNZ Per Process Standard Deviation" << std::endl;
+		    seqProcAvg = seqProcSum / (double) control.processCount;
+		    for (int i = 0; i < control.processCount; i++) {
+			    seqProcAvgDiff += (seqDist[i] - seqProcAvg) * (seqDist[i] - seqProcAvg);
+		    }
+		    seqStandardDeviation = sqrt((1.0 / control.processCount) * seqProcAvgDiff);
+		    std::cout << "NNZ Per Process Standard Deviation = " << seqStandardDeviation << std::endl;
+
+		    if (control.debug && control.myId == 0)
+			    std::cout << "Done Determining NNZ Per Process Standard Deviation" << std::endl;
+	    } else if (control.distributionMethod == 2) {
+		    //get distribution process averages
+		    if (control.debug && control.myId == 0)
+			    std::cout << "Starting Determining NNZ Per Process Standard Deviation" << std::endl;
+
+		    int distProcSum = 0;
+		    double distProcAvg, distProcAvgDiff = 0.0, distStandardDeviation;
+		    std::vector<int> distDist(control.processCount, 0); //distributed distribution
+
+		    for (int i = 0; i < control.processCount; i++) {
+			    distDist[i] = clusterColData[i % control.clusterCols]->processData[(i / control.clusterRows) * 3];
+			    distProcSum += distDist[i];
+			    std::cout << "Process " << i << ": " << distDist[i] << std::endl;
+		    }
+		    distProcAvg = distProcSum / (double) control.processCount;
+		    for (int i = 0; i < control.processCount; i++) {
+			    distProcAvgDiff += (distDist[i] - distProcAvg) * (distDist[i] - distProcAvg);
+		    }
+		    distStandardDeviation = sqrt((1.0 / control.processCount) * distProcAvgDiff);
+		    std::cout << "NNZ Per Process Standard Deviation = " << distStandardDeviation << std::endl;
+
+		    if (control.debug && control.myId == 0)
+			    std::cout << "Done Determining NNZ Per Process Standard Deviation" << std::endl;
+	    }
     }
 
     // Create a pointer to the nodes csr object. Using pointers so that we do not have to copy any data on the
