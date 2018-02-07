@@ -711,9 +711,10 @@ int main(int argc, char *argv[]) {
 */
 
 			int ompThreadId, ompCPUId, start, end, i, j, k, rowsPerThread, rowEnd;
-			std::vector <double> threadResult(control.rowCount, 0.0);
+			std::vector <double> threadResult;
 #pragma omp parallel num_threads(control.ompThreads) shared(nodeCSR, result) private(ompThreadId, ompCPUId, start, end, i, j, k, rowsPerThread, rowEnd, threadResult)
 				{
+					threadResult.resize(control.rowCount, 0.0);
 					ompThreadId = omp_get_thread_num();
 					if (control.debug) {
 						ompCPUId = sched_getcpu();
