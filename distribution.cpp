@@ -495,15 +495,15 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 		if (elements[i].row == previousRow && distributionRows[distributionRows.size()-1].rowLength+1 <= avgNNZperProcess){
 			// add element to current row
 			distributionRows[distributionRows.size()-1].rowLength++;
-			distributionRows[distributionRows.size()-1].col.push_back(elements[i].col);
+			distributionRows[distributionRows.size()-1].cols.push_back(elements[i].col);
 			distributionRows[distributionRows.size()-1].data.push_back(elements[i].data);
-		} else if (elements[i].row == previousRow && distributionRows[distributionRows.size()-1].rowLengt+1 > avgNNZperProcess){
+		} else if (elements[i].row == previousRow && distributionRows[distributionRows.size()-1].rowLength+1 > avgNNZperProcess){
 			// create new row by splitting the current row
 			row temp;
 			temp.processAssignment = -1;
 			temp.rowId = elements[i].row;
 			temp.rowLength = 1;
-			temp.cols.push_back(elements[i].cols);
+			temp.cols.push_back(elements[i].col);
 			temp.data.push_back(elements[i].data);
 			distributionRows.push_back(row);
 		} else if (elements[i].row != previousRow){
@@ -512,7 +512,7 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 			temp.processAssignment = -1;
 			temp.rowId = elements[i].row;
 			temp.rowLength = 1;
-			temp.cols.push_back(elements[i].cols);
+			temp.cols.push_back(elements[i].col);
 			temp.data.push_back(elements[i].data);
 			distributionRows.push_back(row);
 			previousRow = elements[i].row;

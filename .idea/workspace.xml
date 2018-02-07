@@ -13,7 +13,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0c65b864-9431-4078-9657-58a0aa3c15cb" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/distribution.cpp" afterPath="$PROJECT_DIR$/distribution.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
     </list>
     <ignored path="Distrubuted_SpMV.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -74,21 +73,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="distribution.h" pinned="false" current-in-tab="true">
+      <file leaf-file-name="distribution.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/distribution.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="26" lean-forward="false" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+            <state relative-caret-position="300">
+              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="distribution.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="distribution.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/distribution.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1361">
-              <caret line="399" column="20" lean-forward="false" selection-start-line="399" selection-start-column="17" selection-end-line="399" selection-end-column="20" />
+            <state relative-caret-position="274">
+              <caret line="508" column="51" lean-forward="true" selection-start-line="508" selection-start-column="51" selection-end-line="508" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -506,7 +505,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="776943000" />
+    <option name="totallyTimeSpent" value="777001000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="23" width="1853" height="1008" extended-state="0" />
@@ -799,18 +798,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/distribution.cpp">
+    <entry file="file://$PROJECT_DIR$/distribution.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1361">
-          <caret line="399" column="20" lean-forward="false" selection-start-line="399" selection-start-column="17" selection-end-line="399" selection-end-column="20" />
+        <state relative-caret-position="300">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/distribution.h">
+    <entry file="file://$PROJECT_DIR$/distribution.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="26" lean-forward="false" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+        <state relative-caret-position="274">
+          <caret line="508" column="51" lean-forward="true" selection-start-line="508" selection-start-column="51" selection-end-line="508" selection-end-column="51" />
           <folding />
         </state>
       </provider>
