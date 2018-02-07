@@ -79,11 +79,17 @@ int main(int argc, char *argv[]) {
 		        control.verify = true;
 	        }
         } else if (argTemp == "--show-matrix-info") {
-		        //set number of OpenMP threads per node
-		        std::string temp = argv[i + 1];
-		        if (temp == "true") {
-			        control.matrixInfo = true;
-		        }
+	        //set number of OpenMP threads per node
+	        std::string temp = argv[i + 1];
+	        if (temp == "true") {
+		        control.matrixInfo = true;
+	        }
+        }else if (argTemp == "--show-distribution") {
+		    //set number of OpenMP threads per node
+		    std::string temp = argv[i + 1];
+		    if (temp == "true") {
+		        control.distributionInfo = true;
+		    }
 	    } else if (argTemp == "--help") {
             std::cout << "Usage: distSpMV [OPTION] <argument> ..." << std::endl << std::endl;
             std::cout << "Options:" << std::endl;
@@ -232,6 +238,7 @@ int main(int argc, char *argv[]) {
         for (int i = 0; i < control.processCount; i++) {
             distDist[i] = clusterColData[i%control.clusterCols]->processData[(i/control.clusterRows)*3];
             distProcSum += distDist[i];
+	        std::cout << "Process " << i << ": " << distDist[i] << std::endl;
         }
         distProcAvg = distProcSum / (double) control.processCount;
         for (int i = 0; i < control.processCount; i++) {
