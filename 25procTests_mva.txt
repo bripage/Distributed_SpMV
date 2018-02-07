@@ -1,0 +1,2 @@
+/opt/sge/crc/spool/d8civy097/job_scripts/578495: line 1: unexpected EOF while looking for matching `''
+/opt/sge/crc/spool/d8civy097/job_scripts/578495: line 22: syntax error: unexpected end of file

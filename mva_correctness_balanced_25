@@ -17,5 +17,5 @@ set matrix = "atmosmodd parabolic_fem_expanded rajat30 CurlCurl_3_expanded offsh
 
 foreach m ($matrix)
   echo "Starting Tests on $m"
-  mpirun -np 25 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method balanced -verify true
+  mpirun -np 25 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method balanced -verify true --show-matrix-info true
 end

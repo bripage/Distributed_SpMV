@@ -117,7 +117,7 @@ void csrSpMV::masterOnlySpMV(controlData control, std::vector<int>& seqDist) {
                     if (i == 0) {
                         control.rowCount = std::stoi(token);
 	                    result.resize(control.rowCount, 0.0);
-	                    denseVec.resize(control.rowCount, 0.1);
+	                    denseVec.resize(control.rowCount, 0.1234567);
                     } else {
                         control.colCount = std::stoi(token);
                     }

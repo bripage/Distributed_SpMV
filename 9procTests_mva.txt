@@ -1,0 +1,214 @@
+Starting Tests on atmosmodd
+NNZ Per Process Standard Deviation = 6.87094
+
+Incorecct Rows: 0
+5.1992,0.0666637,0.00142479,0.0199296,8.42602
+Starting Tests on parabolic_fem_expanded
+NNZ Per Process Standard Deviation = 10.9138
+
+Incorecct Rows: 0
+2.34069,0.0342059,0.000793219,0.00886488,3.85985
+Starting Tests on rajat30
+NNZ Per Process Standard Deviation = 96355.7
+[d8civy126.crc.nd.edu:mpi_rank_8][error_sighandler] Caught error: Segmentation fault (signal 11)
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 25062 RUNNING AT d8civy126.crc.nd.edu
+=   EXIT CODE: 11
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+[proxy:0:0@d8civy106.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:0@d8civy106.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:0@d8civy106.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:2@d8civy132.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:2@d8civy132.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:2@d8civy132.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:1@d8civy134.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:1@d8civy134.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:1@d8civy134.crc.nd.edu] main (pm/pmiserv/pmip.c:206): [proxy:0:3@d8civy122.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:3@d8civy122.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:3@d8civy122.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[mpiexec@d8civy106.crc.nd.edu] HYDT_bscu_wait_for_completion (tools/bootstrap/utils/bscu_wait.c:76): one of the processes terminated badly; aborting
+[mpiexec@d8civy106.crc.nd.edu] HYDT_bsci_wait_for_completion (tools/bootstrap/src/bsci_wait.c:23): launcher returned error waiting for completion
+[mpiexec@d8civy106.crc.nd.edu] HYD_pmci_wait_for_completion (pm/pmiserv/pmiserv_pmci.c:218): launcher returned error waiting for completion
+[mpiexec@d8civy106.crc.nd.edu] main (ui/mpich/mpiexec.c:344): process manager error waiting for completion
+Starting Tests on CurlCurl_3_expanded
+NNZ Per Process Standard Deviation = 14.9749
+
+Incorecct Rows: 0
+8.21015,0.0964103,0.00269127,0.0186017,13.2664
+Starting Tests on offshore_expanded
+NNZ Per Process Standard Deviation = 20.6852
+
+Incorecct Rows: 0
+2.58259,0.0348458,0.00149727,0.00538802,4.20816
+Starting Tests on FEM_3D_thermal2
+NNZ Per Process Standard Deviation = 41.3038
+
+Incorecct Rows: 0
+1.9737,0.0293119,0.000808477,0.00351954,3.42391
+Starting Tests on nlpkkt80_expanded
+NNZ Per Process Standard Deviation = 160963
+
+Incorecct Rows: 0
+9.66094,0.177322,0.00495553,0.0194123,16.4514
+Starting Tests on CO_expanded
+NNZ Per Process Standard Deviation = 66.437
+
+Incorecct Rows: 0
+3.76507,0.0556879,0.00253463,0.00548577,6.64646
+Starting Tests on gsm_106857_expanded
+NNZ Per Process Standard Deviation = 35.3829
+
+Incorecct Rows: 0
+11.5562,0.123066,0.00512362,0.0106921,20.6602
+Starting Tests on msdoor_expanded
+NNZ Per Process Standard Deviation = 94.1914
+
+Incorecct Rows: 0
+9.45206,0.125608,0.00416875,0.00722075,16.9365
+Starting Tests on bmw3_2_expanded
+NNZ Per Process Standard Deviation = 83.2557
+
+Incorecct Rows: 0
+5.75944,0.0691762,0.0025537,0.00494671,9.94378
+Starting Tests on BenElechi1_expanded
+NNZ Per Process Standard Deviation = 50.53
+
+Incorecct Rows: 0
+6.41356,0.0837395,0.00223947,0.0054369,11.6593
+Starting Tests on t3dh_expanded
+NNZ Per Process Standard Deviation = 45.3107
+
+Incorecct Rows: 0
+2.31831,0.0285809,0.00183344,0.0023942,4.11225
+Starting Tests on F2_expanded
+NNZ Per Process Standard Deviation = 88.3358
+
+Incorecct Rows: 0
+2.90155,0.0336471,0.00276732,0.00223994,4.96033
+Starting Tests on consph_expanded
+NNZ Per Process Standard Deviation = 53.0962
+
+Incorecct Rows: 0
+3.05331,0.0379283,0.00273395,0.00239921,5.36631
+Starting Tests on SiO2_expanded
+NNZ Per Process Standard Deviation = 1262.58
+
+row 94931: -0.254712 != -0.622143
+row 98458: -0.226421 != 2.12514
+row 101551: -0.168835 != -0.536265
+row 101624: -0.200936 != 2.15062
+row 101679: -0.123836 != -0.491267
+row 101680: -0.163704 != 2.18785
+row 101681: -0.227541 != -12.2749
+row 101682: -0.318681 != 2.03288
+row 101683: -0.519124 != -0.886555
+row 101754: -0.237762 != 2.11379
+row 101811: -0.227541 != -0.594972
+row 105138: -0.244193 != 2.10736
+row 108269: -0.256458 != -0.623889
+Incorecct Rows: 13
+5.63836,0.0647469,0.00811934,0.00364637,10.2306
+Starting Tests on torso1_expanded
+NNZ Per Process Standard Deviation = 749.505
+
+row 4030: -58.9041 != -58.7301
+row 4031: -59.4266 != -59.2511
+row 4032: -60.0615 != -59.884
+row 4033: -60.7972 != -60.6175
+row 4034: -61.5676 != -61.3857
+row 4035: -62.3235 != -62.1393
+row 4036: -63.0303 != -62.844
+row 4037: -63.6659 != -63.4777
+row 4038: -64.2172 != -64.0273
+row 4039: -64.6781 != -64.4869
+row 4040: -65.0471 != -64.8547
+row 4041: -65.3254 != -65.1322
+row 4042: -65.5158 != -65.3221
+row 4043: -65.6221 != -65.428
+row 4044: -65.6479 != -65.4537
+row 4045: -65.5968 != -65.4028
+row 4046: -65.4721 != -65.2784
+row 4047: -65.2767 != -65.0835
+row 4048: -65.0136 != -64.8212
+row 4049: -64.6858 != -64.4944
+row 4050: -64.2967 != -64.1064
+row 4051: -63.8502 != -63.6612
+row 4052: -63.3511 != -63.1635
+row 4053: -62.805 != -62.619
+row 4054: -62.2189 != -62.0346
+row 4055: -61.6006 != -61.4181
+row 4056: -60.9594 != -60.7787
+row 4057: -60.3051 != -60.1263
+row 4058: -59.6485 != -59.4717
+row 4059: -59.0009 != -58.8259
+row 4060: -58.3735 != -58.2003
+row 4061: -57.7772 != -57.6058
+row 4062: -57.2223 != -57.0525
+row 4063: -56.7178 != -56.5494
+row 4064: -56.271 != -56.104
+row 4065: -55.8877 != -55.7218
+row 4066: -55.5713 != -55.4063
+row 4067: -55.3231 != -55.1588
+row 4068: -55.142 != -54.9781
+row 4069: -55.0247 != -54.8612
+row 4070: -54.9659 != -54.8026
+row 4071: -54.9586 != -54.7952
+row 4072: -54.994 != -54.8305
+row 4073: -55.0624 != -54.8987
+row 4074: -55.1534 != -54.9893
+row 4075: -55.2561 != -55.0917
+row 4076: -55.3599 != -55.1951
+row 4077: -55.4545 != -55.2895
+row 4078: -55.5309 != -55.3655
+row 4079: -55.5811 != -55.4156
+Incorecct Rows: 3174
+8.45238,0.0960541,0.0139012,0.00309396,14.8904
+Starting Tests on dielFilterV3real
+NNZ Per Process Standard Deviation = 87.9888
+
+row 16480: 0.319847 != -0.548889
+row 16515: 0.936048 != 1.12885
+row 16723: 1.03805 != 1.18508
+Incorecct Rows: 3
+26.2842,0.254736,0.0112164,0.0197315,45.8584
+Starting Tests on RM07R
+NNZ Per Process Standard Deviation = 204.264
+
+Incorecct Rows: 0
+19.8155,0.501865,0.0285041,0.00717187,35.4347
+Starting Tests on m_t1_expanded
+NNZ Per Process Standard Deviation = 197.484
+
+Incorecct Rows: 0
+4.72477,0.0808542,0.00315142,0.00267863,8.46773
+Starting Tests on crankseg_2_expanded
+NNZ Per Process Standard Deviation = 262.924
+
+Incorecct Rows: 0
+7.39472,0.140696,0.00322247,0.0021956,12.8586
+Starting Tests on nd24k_expanded
+NNZ Per Process Standard Deviation = 532.801
+
+Incorecct Rows: 0
+15.0285,0.283366,0.0068047,0.00232744,26.3967
+Starting Tests on TSOPF_RS_b2383
+NNZ Per Process Standard Deviation = 6161.71
+
+row 4816: 0.19506 != 0.0602927
+row 4817: 0.213449 != 0.0833878
+Incorecct Rows: 2
+8.78464,0.115719,0.0139935,0.00174403,15.909
+Starting Tests on mouse_gene_expanded
+NNZ Per Process Standard Deviation = 1497.09
+
+Incorecct Rows: 0
+13.7591,0.255883,0.0297902,0.00189471,24.9769
+Starting Tests on human_gene1_expanded
+NNZ Per Process Standard Deviation = 3062.68
+
+Incorecct Rows: 0
+11.5255,0.192664,0.0166857,0.00153184,21.2704

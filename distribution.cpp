@@ -160,7 +160,7 @@ void distribution_SplitMatrix(controlData& control, std::vector<csrSpMV*>& clust
 
     for (int i = 0; i < control.rowCount; i++){
         //clusterColData[0]->denseVec.push_back((double) (rand()) / (double) (RAND_MAX));
-	    clusterColData[0]->denseVec.push_back(0.1234567);
+	    clusterColData[0]->denseVec.push_back(0.1);
     }
 
  }
@@ -351,7 +351,7 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 				}
 				clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*3)] += distributionRows[j].rowLength;
 				//clusterColData[i%control.clusterCols]->denseVec.push_back(denseVec[j]);
-				clusterColData[i%control.clusterCols]->denseVec.push_back(0.1);
+				clusterColData[i%control.clusterCols]->denseVec.push_back(0.1234567);
 				clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*3)+2]+=1;
 			}
 		}
