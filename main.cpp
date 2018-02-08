@@ -553,6 +553,7 @@ int main(int argc, char *argv[]) {
 			} else if (control.myId < control.clusterCols && control.myId != 0) {
 				// total number of rows in matrix not process or column
 				MPI_Recv(&control.rowCount, 1, MPI_INT, 0, 0, control.row_comm, MPI_STATUS_IGNORE);
+				usleep(100000 * control.myId);
 				std::cout << "rowCount = " << control.rowCount << std::endl;
 				// Get rows and nnz per proc data
 				nodeCSR->processData.resize(control.clusterRows*2);
