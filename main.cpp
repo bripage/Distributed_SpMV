@@ -818,7 +818,7 @@ int main(int argc, char *argv[]) {
 
 			if(control.myId == 0) {
 				for (int i = 0; i < gatheredResult.size(); i++) {
-					//result[clusterColData[i%control.clusterCols]->assignedRowIds[(j/control.clusterRows)+j]] += gatheredResult[(i*control.maxRowsAssigned)+j];
+					std::cout << clusterColData[i%control.clusterCols]->assignedRowIds[((i/control.clusterRows)*control.maxRowsAssigned)+(i%control.maxRowsAssigned)] << ", " << gatheredResult[i] << std::endl;
 					result[clusterColData[i%control.clusterCols]->assignedRowIds[((i/control.clusterRows)*control.maxRowsAssigned)+(i%control.maxRowsAssigned)]] += gatheredResult[i];
 				}
 			}
