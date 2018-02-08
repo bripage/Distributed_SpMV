@@ -822,16 +822,18 @@ int main(int argc, char *argv[]) {
 				std::cout << "gatheredResult.size() = " << gatheredResult.size() << std::endl;
 				std::cout << "clusterColData.size() = " << clusterColData.size() << std::endl;
 				std::cout << "result.size() = " << result.size() << std::endl;
-				
+
 				for (int i = 1; i < control.processCount; i++){
 					col = i%control.clusterCols;
 					row = i/control.clusterRows;
 
-					for (int j = 0; j < control.maxRowsAssigned; j++){
-						assignedRowElement = (row*control.maxRowsAssigned) + j;
+					for (int j = 0; j < control.maxRowsAssigned; j++) {
+						assignedRowElement = (row * control.maxRowsAssigned) + j;
 						matrixRow = clusterColData[col]->assignedRowIds[assignedRowElement];
-
-						//std::cout << col << ", " << row << ", " << assignedRowElement << ", " << matrixRow << ", " << gatheredResult[(i*control.maxRowsAssigned) + j] << std::endl;
+						if (matrixRow < 0 || matrixRow > control.rowCount) {
+							std::cout << col << ", " << row << ", " << assignedRowElement << ", " << matrixRow << ", "
+							          << gatheredResult[(i * control.maxRowsAssigned) + j] << std::endl;
+						}
 					}
 				}
 
