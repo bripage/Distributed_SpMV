@@ -535,6 +535,7 @@ int main(int argc, char *argv[]) {
 					std::cout << std::endl;
 					std::cout  << "sending processData to " << i << std::endl;
 					MPI_Send(&(clusterColData[i]->processData[0]), control.clusterRows*2, MPI_INT, i, 0, control.row_comm);
+					MPI_Send(&(clusterColData[i]->assignedRowIds[0]), clusterColData[i]->csrRows.size(), MPI_INT, i, 0, control.row_comm);
 					std::cout << "sending csrRows to " << i << std::endl;
 					MPI_Send(&(clusterColData[i]->csrRows[0]), clusterColData[i]->csrRows.size(), MPI_INT, i, 0,
 					         control.row_comm);
@@ -580,12 +581,14 @@ int main(int argc, char *argv[]) {
 				}
 				std::cout << "assignedRowCount = " << assignedRowCount << std::endl;
 
+				nodeCSR->assignedRowIds.resize(assignedRowCount);
 				nodeCSR->csrRows.resize(assignedRowCount);
 				nodeCSR->csrCols.resize(control.elementCount);
 				nodeCSR->csrData.resize(control.elementCount);
 				nodeCSR->denseVec.resize(control.rowCount);
 				std::cout << "Rows recieved: " << nodeCSR->csrRows.size() << ", NNZs received: " << nodeCSR->csrData.size() << std::endl;
 
+				MPI_Recv(&nodeCSR->assignedRowIds[0], assignedRowCount, MPI_INT, 0, 0, control.row_comm, MPI_STATUS_IGNORE);
 				MPI_Recv(&nodeCSR->csrRows[0], assignedRowCount, MPI_INT, 0, 0, control.row_comm, MPI_STATUS_IGNORE);
 				MPI_Recv(&nodeCSR->csrCols[0], control.elementCount, MPI_INT, 0, 0, control.row_comm,
 				         MPI_STATUS_IGNORE);
@@ -622,7 +625,7 @@ int main(int argc, char *argv[]) {
 					MPI_Send(&control.rowCount, 1, MPI_INT, i, 0, control.col_comm);
 					std::cout << "sending " << nodeCSR->processData.size() << " processData elements to " << i << std::endl;
 					MPI_Send(&(nodeCSR->processData[(i*2)]), 2, MPI_INT, i, 0, control.col_comm);
-					std::cout <<  "sent " << nodeCSR->processData[i*2] << ", " << nodeCSR->processData[(i*2)+1] << ", " << nodeCSR->processData[(i*3)+2] << std::endl;
+					std::cout <<  "sent " << nodeCSR->processData[i*2] << ", " << nodeCSR->processData[(i*2)+1] << std::endl;
 
 					MPI_Send(&(nodeCSR->assignedRowIds[rowsSent]), nodeCSR->assignedRowIds[(i*2)+1], MPI_INT, i, 0,
 					         control.col_comm);
@@ -664,6 +667,7 @@ int main(int argc, char *argv[]) {
 				}
 				std::cout << std::endl;
 
+				nodeCSR->assignedRowIds.resize(nodeCSR->processData[1]);
 				nodeCSR->csrRows.resize(nodeCSR->processData[1]);
 				nodeCSR->csrCols.resize(nodeCSR->processData[0]);
 				nodeCSR->csrData.resize(nodeCSR->processData[0]);
