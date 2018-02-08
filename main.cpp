@@ -1186,6 +1186,10 @@ int main(int argc, char *argv[]) {
 		    } else if (control.distributionMethod == 2){
 			    std::cout << distributionEndTime - distributionStartTime << ","
 			              << dataTransmissionEnd - dataTransmissionStart << "," << spmvEndTime - spmvStartTime << ","
+			              << masterGatherEnd - masterGatherStart << "," << overallEndTime - overallStartTime << std::endl;
+		    } else if (control.distributionMethod == 3){
+			    std::cout << distributionEndTime - distributionStartTime << ","
+			              << dataTransmissionEnd - dataTransmissionStart << "," << spmvEndTime - spmvStartTime << ","
 			              << reductionEndTime - reductionStartTime << "," << overallEndTime - overallStartTime << std::endl;
 		    }
 	    }
