@@ -36,8 +36,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
-              <caret line="621" column="66" lean-forward="true" selection-start-line="621" selection-start-column="66" selection-end-line="621" selection-end-column="66" />
+            <state relative-caret-position="-3596">
+              <caret line="255" column="0" lean-forward="true" selection-start-line="255" selection-start-column="0" selection-end-line="255" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -86,8 +86,8 @@
       <file leaf-file-name="distribution.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/distribution.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2046">
-              <caret line="564" column="13" lean-forward="true" selection-start-line="564" selection-start-column="13" selection-end-line="564" selection-end-column="13" />
+            <state relative-caret-position="-337">
+              <caret line="449" column="22" lean-forward="true" selection-start-line="449" selection-start-column="22" selection-end-line="449" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -120,8 +120,8 @@
       <find>usleep</find>
       <find>processRowCounts</find>
       <find>verify</find>
-      <find>debug</find>
       <find>sent</find>
+      <find>debug</find>
     </findStrings>
     <replaceStrings>
       <replace>control</replace>
@@ -506,7 +506,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="783634000" />
+    <option name="totallyTimeSpent" value="784181000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="23" width="1853" height="1008" extended-state="0" />
@@ -801,16 +801,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/distribution.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2046">
-          <caret line="564" column="13" lean-forward="true" selection-start-line="564" selection-start-column="13" selection-end-line="564" selection-end-column="13" />
+        <state relative-caret-position="-337">
+          <caret line="449" column="22" lean-forward="true" selection-start-line="449" selection-start-column="22" selection-end-line="449" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="621" column="66" lean-forward="true" selection-start-line="621" selection-start-column="66" selection-end-line="621" selection-end-column="66" />
+        <state relative-caret-position="-3596">
+          <caret line="255" column="0" lean-forward="true" selection-start-line="255" selection-start-column="0" selection-end-line="255" selection-end-column="0" />
           <folding />
         </state>
       </provider>

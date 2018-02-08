@@ -266,7 +266,7 @@ int main(int argc, char *argv[]) {
 		    std::vector<int> distDist(control.processCount, 0); //distributed distribution
 
 		    for (int i = 0; i < control.processCount; i++) {
-			    distDist[i] = clusterColData[i % control.clusterCols]->processData[(i / control.clusterRows) * 3];
+			    distDist[i] = clusterColData[i % control.clusterCols]->processData[(i / control.clusterRows) * 2];
 			    distProcSum += distDist[i];
 			    std::cout << "Process " << i << ": " << distDist[i] << std::endl;
 		    }
