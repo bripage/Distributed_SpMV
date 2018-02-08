@@ -816,11 +816,20 @@ int main(int argc, char *argv[]) {
 			}
 			if (control.debug && control.myId == 0) std::cout << "MPI Gather complete" << std::endl;
 
+			int col, row, matrixRow, assignedRowElement;
 			if(control.myId == 0) {
-				for (int i = control.maxRowsAssigned; i < gatheredResult.size(); i++) {
-					std::cout << clusterColData[i%control.clusterCols]->assignedRowIds[((i%control.clusterRows)*control.maxRowsAssigned)+(i%control.maxRowsAssigned)] << ", " << gatheredResult[i] << std::endl;
-					result[clusterColData[i%control.clusterCols]->assignedRowIds[((i/control.clusterRows)*control.maxRowsAssigned)+(i%control.maxRowsAssigned)]] += gatheredResult[i];
+				for (int i = 1; i < control.processCount; i++){
+					col = i%control.clusterCols;
+					row = i/control.clusterRows;
+
+					for (int j = 0; j < control.maxRowsAssigned; j++){
+						assignedRowElement = (row*control.maxRowsAssigned) + j;
+						matrixRow = clusterColData[col]->assignedRowIds[assignedRowElement];
+
+						std::cout << col << ", " << row << ", " << assignedRowElement << ", " << matrixRow << ", " << gatheredResult[(i*control.maxRowsAssigned) + j] << std::endl;
+					}
 				}
+
 			}
 		}
 
