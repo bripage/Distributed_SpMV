@@ -532,10 +532,10 @@ int main(int argc, char *argv[]) {
 					std::cout << "sending csrRows to " << i << std::endl;
 					MPI_Send(&(clusterColData[i]->csrRows[0]), clusterColData[i]->csrRows.size(), MPI_INT, i, 0,
 					         control.row_comm);
-					std::cout << "sending csrCols to " << i << std::endl;
+					std::cout << "sending " << clusterColData[i]->csrCols.size() << " csrCols to " << i << std::endl;
 					MPI_Send(&(clusterColData[i]->csrCols[0]), clusterColData[i]->csrCols.size(), MPI_INT, i, 0,
 					         control.row_comm);
-					std::cout << "sending csrData to " << i << std::endl;
+					std::cout << "sending " << clusterColData[i]->csrData.size() << " csrData to " << i << std::endl;
 					MPI_Send(&(clusterColData[i]->csrData[0]), clusterColData[i]->csrData.size(), MPI_DOUBLE, i, 0,
 					         control.row_comm);
 				}
