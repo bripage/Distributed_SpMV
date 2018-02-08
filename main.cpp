@@ -817,7 +817,7 @@ int main(int argc, char *argv[]) {
 			if (control.debug && control.myId == 0) std::cout << "MPI Gather complete" << std::endl;
 
 			if(control.myId == 0) {
-				for (int i = 0; i < gatheredResult.size(); i++) {
+				for (int i = control.maxRowsAssigned; i < gatheredResult.size(); i++) {
 					std::cout << clusterColData[i%control.clusterCols]->assignedRowIds[((i%control.clusterRows)*control.maxRowsAssigned)+(i%control.maxRowsAssigned)] << ", " << gatheredResult[i] << std::endl;
 					result[clusterColData[i%control.clusterCols]->assignedRowIds[((i/control.clusterRows)*control.maxRowsAssigned)+(i%control.maxRowsAssigned)]] += gatheredResult[i];
 				}
