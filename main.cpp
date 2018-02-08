@@ -820,9 +820,9 @@ int main(int argc, char *argv[]) {
 
 			int col, row, matrixRow, assignedRowElement;
 			if(control.myId == 0) {
-				std::cout << "gatheredResult.size() = " << gatheredResult.size() << std::endl;
-				std::cout << "clusterColData.size() = " << clusterColData.size() << std::endl;
-				std::cout << "result.size() = " << result.size() << std::endl;
+				//std::cout << "gatheredResult.size() = " << gatheredResult.size() << std::endl;
+				//std::cout << "clusterColData.size() = " << clusterColData.size() << std::endl;
+				//std::cout << "result.size() = " << result.size() << std::endl;
 
 				for (int i = 1; i < control.processCount; i++){
 					col = i%control.clusterCols;
@@ -832,10 +832,10 @@ int main(int argc, char *argv[]) {
 						assignedRowElement = (row * control.maxRowsAssigned) + j;
 						matrixRow = clusterColData[col]->assignedRowIds[assignedRowElement];
 						if (matrixRow < 0 || matrixRow > control.rowCount) {
-							std::cout << col << ", " << row << ", " << assignedRowElement << ", " << matrixRow << ", "
-							          << gatheredResult[(i * control.maxRowsAssigned) + j] << std::endl;
+							//std::cout << col << ", " << row << ", " << assignedRowElement << ", " << matrixRow << ", "
+							//          << gatheredResult[(i * control.maxRowsAssigned) + j] << std::endl;
 						}
-						std::cout << "result[" <<matrixRow << "] += " << gatheredResult[(i * control.maxRowsAssigned) + j] << std::endl;
+						//std::cout << "result[" <<matrixRow << "] += " << gatheredResult[(i * control.maxRowsAssigned) + j] << std::endl;
 						result[matrixRow] += gatheredResult[(i * control.maxRowsAssigned) + j];
 					}
 				}
