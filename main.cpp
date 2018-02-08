@@ -807,14 +807,12 @@ int main(int argc, char *argv[]) {
 			}
 
 			if (control.debug && control.myId == 0) std::cout << "Starting MPI Gather" << std::endl;
-			if (control.myId % control.clusterCols == 0) {
-				if (control.myId == 0) {
-					MPI_Gather(MPI_IN_PLACE, control.maxRowsAssigned, MPI_DOUBLE, &gatheredResult[0], control.maxRowsAssigned,
+			if (control.myId == 0) {
+				MPI_Gather(MPI_IN_PLACE, control.maxRowsAssigned, MPI_DOUBLE, &gatheredResult[0], control.maxRowsAssigned,
 					           MPI_DOUBLE, 0, MPI_COMM_WORLD);
-				} else {
-					MPI_Gather(&result[0], control.maxRowsAssigned, MPI_DOUBLE, &result[0], control.maxRowsAssigned,
-					           MPI_DOUBLE, 0, MPI_COMM_WORLD);
-				}
+			} else {
+				MPI_Gather(&result[0], control.maxRowsAssigned, MPI_DOUBLE, &gatheredResult[0], control.maxRowsAssigned,
+				           MPI_DOUBLE, 0, MPI_COMM_WORLD);
 			}
 			if (control.debug && control.myId == 0) std::cout << "MPI Gather complete" << std::endl;
 
