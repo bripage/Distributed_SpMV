@@ -621,8 +621,8 @@ int main(int argc, char *argv[]) {
 
 					MPI_Send(&control.rowCount, 1, MPI_INT, i, 0, control.col_comm);
 					std::cout << "sending " << nodeCSR->processData.size() << " processData elements to " << i << std::endl;
-					MPI_Send(&(nodeCSR->processData[(i*3)]), 3, MPI_INT, i, 0, control.col_comm);
-					std::cout <<  "sent " << nodeCSR->processData[i*3] << ", " << nodeCSR->processData[(i*2)+1] << ", " << nodeCSR->processData[(i*3)+2] << std::endl;
+					MPI_Send(&(nodeCSR->processData[(i*2)]), 2, MPI_INT, i, 0, control.col_comm);
+					std::cout <<  "sent " << nodeCSR->processData[i*2] << ", " << nodeCSR->processData[(i*2)+1] << ", " << nodeCSR->processData[(i*3)+2] << std::endl;
 
 					MPI_Send(&(nodeCSR->assignedRowIds[rowsSent]), nodeCSR->assignedRowIds[(i*2)+1], MPI_INT, i, 0,
 					         control.col_comm);
