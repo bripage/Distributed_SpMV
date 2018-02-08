@@ -806,6 +806,7 @@ int main(int argc, char *argv[]) {
 				gatheredResult.resize(control.maxRowsAssigned, 0.0);
 			}
 
+			masterGatherStart =MPI_Wtime();
 			if (control.debug && control.myId == 0) std::cout << "Starting MPI Gather" << std::endl;
 			if (control.myId == 0) {
 				MPI_Gather(MPI_IN_PLACE, control.maxRowsAssigned, MPI_DOUBLE, &gatheredResult[0], control.maxRowsAssigned,
@@ -838,8 +839,8 @@ int main(int argc, char *argv[]) {
 						result[matrixRow] += gatheredResult[(i * control.maxRowsAssigned) + j];
 					}
 				}
-
 			}
+			masterGatherEnd = MPI_Wtime();
 		}
 
 		if (control.myId == 0) {
