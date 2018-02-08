@@ -520,7 +520,7 @@ int main(int argc, char *argv[]) {
 			if (control.debug && control.myId == 0) std::cout << "MPI Gather complete" << std::endl;
 			masterGatherEnd = MPI_Wtime();
 		}
-	} else if (control.distributionMethod == 2){    // balanced distribution
+	} else if (control.distributionMethod == 3){    // balanced distribution
 		if (control.masterOnly != true) {
 			if (control.debug && control.myId == 0) std::cout << "Sending data to column masters" << std::endl;
 			// master to send data to cluster column masters
@@ -848,7 +848,7 @@ int main(int argc, char *argv[]) {
 				//std::cout << "result[" << i << "] = " << result[i] << std::endl;
 			}
 		}
-	} else if (control.distributionMethod == 3){    // balanced distribution
+	} else if (control.distributionMethod == 2){    // balanced distribution
 		if (control.masterOnly != true) {
 			if (control.debug && control.myId == 0) std::cout << "Sending data to column masters" << std::endl;
 			// master to send data to cluster column masters
