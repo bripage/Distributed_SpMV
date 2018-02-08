@@ -816,6 +816,10 @@ int main(int argc, char *argv[]) {
 			}
 			if (control.debug && control.myId == 0) std::cout << "MPI Gather complete" << std::endl;
 
+
+			std::cout << "gatheredResult.size() = " << gatheredResult.size() << std::endl;
+			std::cout << "clusterColData.size() = " << clusterColData.size() << std::endl;
+
 			int col, row, matrixRow, assignedRowElement;
 			if(control.myId == 0) {
 				for (int i = 1; i < control.processCount; i++){
