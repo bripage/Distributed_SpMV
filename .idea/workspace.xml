@@ -12,9 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c65b864-9431-4078-9657-58a0aa3c15cb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controlStruct.h" afterPath="$PROJECT_DIR$/controlStruct.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/distribution.cpp" afterPath="$PROJECT_DIR$/distribution.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
     </list>
     <ignored path="Distrubuted_SpMV.iws" />
@@ -39,8 +36,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="658">
-              <caret line="813" column="123" lean-forward="false" selection-start-line="813" selection-start-column="123" selection-end-line="813" selection-end-column="123" />
+            <state relative-caret-position="793">
+              <caret line="822" column="84" lean-forward="false" selection-start-line="822" selection-start-column="84" selection-end-line="822" selection-end-column="84" />
               <folding />
             </state>
           </provider>
@@ -123,8 +120,8 @@
       <find>usleep</find>
       <find>processRowCounts</find>
       <find>verify</find>
-      <find>debug</find>
       <find>sent</find>
+      <find>debug</find>
     </findStrings>
     <replaceStrings>
       <replace>control</replace>
@@ -509,7 +506,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="788211000" />
+    <option name="totallyTimeSpent" value="788831000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="23" width="1853" height="1008" extended-state="0" />
@@ -770,14 +767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/distribution.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="601">
-          <caret line="594" column="27" lean-forward="false" selection-start-line="594" selection-start-column="27" selection-end-line="594" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/distribution.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -810,10 +799,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/distribution.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="601">
+          <caret line="594" column="27" lean-forward="false" selection-start-line="594" selection-start-column="27" selection-end-line="594" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="658">
-          <caret line="813" column="123" lean-forward="false" selection-start-line="813" selection-start-column="123" selection-end-line="813" selection-end-column="123" />
+        <state relative-caret-position="793">
+          <caret line="822" column="84" lean-forward="false" selection-start-line="822" selection-start-column="84" selection-end-line="822" selection-end-column="84" />
           <folding />
         </state>
       </provider>

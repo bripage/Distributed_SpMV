@@ -820,7 +820,7 @@ int main(int argc, char *argv[]) {
 			if(control.myId == 0) {
 				for (int i = 0; i < control.processCount; i++) {
 					for (int j = 0; j < control.maxRowsAssigned; j++) {
-						result[clusterColData[i%control.clusterCols]->assignedRows[(j/control.clusterRows)+j]] += gatheredResult[(i*control.maxRowsAssigned)+j];
+						result[clusterColData[i%control.clusterCols]->assignedRowIds[(j/control.clusterRows)+j]] += gatheredResult[(i*control.maxRowsAssigned)+j];
 					}
 				}
 			}
