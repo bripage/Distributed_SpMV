@@ -656,14 +656,14 @@ int main(int argc, char *argv[]) {
 				nodeCSR->processData.resize(2,0);
 				MPI_Recv(&control.rowCount, 1, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
 				MPI_Recv(&(nodeCSR->processData[0]), 2, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
-/*
+
 				usleep(10000000 * control.myId);
 				std::cout << "myId: " << control.myId << " - ";
 				for (int i = 0; i < nodeCSR->processData.size(); i++){
 					std::cout << nodeCSR->processData[i] << ", ";
 				}
 				std::cout << std::endl;
-*/
+
 				nodeCSR->csrRows.resize(nodeCSR->processData[1]);
 				nodeCSR->csrCols.resize(nodeCSR->processData[0]);
 				nodeCSR->csrData.resize(nodeCSR->processData[0]);
