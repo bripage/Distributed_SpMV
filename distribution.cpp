@@ -575,7 +575,7 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 		//std::cout << i << " % " << control.clusterCols << " = " << i%control.clusterCols << std::endl;
 		for (int j = 0; j < distributionRows.size(); j++){
 			if (distributionRows[j].processAssignment == i){
-				clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*3)+1]+=1; // increment assigned row count
+				clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*2)+1]+=1; // increment assigned row count
 				clusterColData[i%control.clusterCols]->assignedRowIds.push_back(distributionRows[j].rowId); // add rowId to assignedRowIds vector
 				clusterColData[i%control.clusterCols]->csrRows.push_back(clusterColData[i%control.clusterCols]->csrData.size()); // create new row pointer
 
@@ -585,7 +585,7 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 					clusterColData[i % control.clusterCols]->csrData.push_back(distributionRows[j].data[k]);
 				}
 
-				clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*3)] += distributionRows[j].rowLength; // add newly assigned nnz's to the total nnz assignmenet for the clustColData object
+				clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*2)] += distributionRows[j].rowLength; // add newly assigned nnz's to the total nnz assignmenet for the clustColData object
 			}
 		}
 	}
