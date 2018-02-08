@@ -527,12 +527,13 @@ int main(int argc, char *argv[]) {
 			if (control.myId == 0) {
 				for (int i = 1; i < control.clusterCols; i++) {  // start at 1 since Master is the row master
 					MPI_Send(&control.rowCount, 1, MPI_INT, i, 0, control.row_comm);
-					std::cout << "sending " << clusterColData[i]->processData.size() << " processData elements to " << i << ": ";
+					std::cout << "preparing to send " << clusterColData[i]->processData.size() << " processData elements to " << i << ": ";
 					for (int i = 0; i < clusterColData[i]->processData.size(); i++){
-						std::cout << "for  = " << i << ": " << std::endl;
-						std::cout << clusterColData[i]->processData[i] << ", ";
+						std::cout << "for  = " << i << ": ";
+						std::cout << clusterColData[i]->processData[i] << std::endl;
 					}
 					std::cout << std::endl;
+					std::cout  << "sending processData to " << i << std::endl;
 					MPI_Send(&(clusterColData[i]->processData[0]), control.clusterRows*2, MPI_INT, i, 0, control.row_comm);
 					std::cout << "sending csrRows to " << i << std::endl;
 					MPI_Send(&(clusterColData[i]->csrRows[0]), clusterColData[i]->csrRows.size(), MPI_INT, i, 0,
