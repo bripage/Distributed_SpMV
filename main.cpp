@@ -632,13 +632,13 @@ int main(int argc, char *argv[]) {
 
 					MPI_Send(&(nodeCSR->assignedRowIds[rowsSent]), nodeCSR->processData[(i*2)+1], MPI_INT, i, 0,
 					         control.col_comm);
-					//std::cout << "sending csrRows to " << i << std::endl;
+					std::cout << "sending csrRows to " << i << std::endl;
 					MPI_Send(&(nodeCSR->csrRows[rowsSent]), nodeCSR->processData[(i*2)+1], MPI_INT, i, 0,
 					         control.col_comm);
-					//std::cout << "sending csrCols to " << i << std::endl;
+					std::cout << "sending csrCols to " << i << std::endl;
 					MPI_Send(&(nodeCSR->csrCols[nnzSent]), nodeCSR->processData[(i*2)], MPI_INT, i, 0,
 					         control.col_comm);
-					//std::cout << "sending csrData to " << i << std::endl;
+					std::cout << "sending csrData to " << i << std::endl;
 					MPI_Send(&(nodeCSR->csrData[nnzSent]), nodeCSR->processData[(i*2)], MPI_DOUBLE, i, 0,
 					         control.col_comm);
 				}
@@ -664,12 +664,12 @@ int main(int argc, char *argv[]) {
 				MPI_Recv(&control.maxRowsAssigned, 1, MPI_INT, 0, 0, control.row_comm, MPI_STATUS_IGNORE);
 				MPI_Recv(&(nodeCSR->processData[0]), 2, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
 
-				//usleep(10000000 * control.myId);
-				//std::cout << "myId: " << control.myId << " - ";
-				//for (int i = 0; i < nodeCSR->processData.size(); i++){
-				//	std::cout << nodeCSR->processData[i] << ", ";
-				//}
-				//std::cout << std::endl;
+				usleep(10000000 * control.myId);
+				std::cout << "myId: " << control.myId << " - ";
+				for (int i = 0; i < nodeCSR->processData.size(); i++){
+					std::cout << nodeCSR->processData[i] << ", ";
+				}
+				std::cout << std::endl;
 
 				nodeCSR->assignedRowIds.resize(nodeCSR->processData[1]);
 				nodeCSR->csrRows.resize(nodeCSR->processData[1]);
@@ -677,12 +677,16 @@ int main(int argc, char *argv[]) {
 				nodeCSR->csrData.resize(nodeCSR->processData[0]);
 				nodeCSR->denseVec.resize(control.rowCount);
 
+				std::cout << "receiving assigned row ids" << std::endl;
 				MPI_Recv(&nodeCSR->assignedRowIds[0], nodeCSR->processData[1], MPI_INT, 0, 0, control.col_comm,
 				         MPI_STATUS_IGNORE);
+				std::cout << "receiving csrRows" << std::endl;
 				MPI_Recv(&nodeCSR->csrRows[0], nodeCSR->processData[1], MPI_INT, 0, 0, control.col_comm,
 				         MPI_STATUS_IGNORE);
+				std::cout << "receiving csrCols" << std::endl;
 				MPI_Recv(&nodeCSR->csrCols[0], nodeCSR->processData[0], MPI_INT, 0, 0, control.col_comm,
 				         MPI_STATUS_IGNORE);
+				std::cout << "receiving csrData" << std::endl;
 				MPI_Recv(&nodeCSR->csrData[0], nodeCSR->processData[0], MPI_DOUBLE, 0, 0, control.col_comm,
 				         MPI_STATUS_IGNORE);
 				nodeCSR->rebase_balanced();
