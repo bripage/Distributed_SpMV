@@ -616,19 +616,19 @@ int main(int argc, char *argv[]) {
 					nnzSent += nodeCSR->processData[((i-1)*2)];
 
 					MPI_Send(&control.rowCount, 1, MPI_INT, i, 0, control.col_comm);
-					//std::cout << "sending " << nodeCSR->processData.size() << " processData elements to " << i << std::endl;
+					std::cout << "sending " << nodeCSR->processData.size() << " processData elements to " << i << std::endl;
 					MPI_Send(&(nodeCSR->processData[(i*3)]), 3, MPI_INT, i, 0, control.col_comm);
-					//std::cout <<  "sent " << nodeCSR->processData[i*3] << ", " << nodeCSR->processData[(i*3)+1] << ", " << nodeCSR->processData[(i*3)+2] << std::endl;
+					std::cout <<  "sent " << nodeCSR->processData[i*3] << ", " << nodeCSR->processData[(i*2)+1] << ", " << nodeCSR->processData[(i*3)+2] << std::endl;
 
 					MPI_Send(&(nodeCSR->assignedRowIds[rowsSent]), nodeCSR->assignedRowIds[(i*2)+1], MPI_INT, i, 0,
 					         control.col_comm);
-					//std::cout << "sending csrRows to " << i << std::endl;
+					std::cout << "sending csrRows to " << i << std::endl;
 					MPI_Send(&(nodeCSR->csrRows[rowsSent]), nodeCSR->processData[(i*2)+1], MPI_INT, i, 0,
 					         control.col_comm);
-					//std::cout << "sending csrCols to " << i << std::endl;
+					std::cout << "sending csrCols to " << i << std::endl;
 					MPI_Send(&(nodeCSR->csrCols[nnzSent]), nodeCSR->processData[(i*2)], MPI_INT, i, 0,
 					         control.col_comm);
-					//std::cout << "sending csrData to " << i << std::endl;
+					std::cout << "sending csrData to " << i << std::endl;
 					MPI_Send(&(nodeCSR->csrData[nnzSent]), nodeCSR->processData[(i*2)], MPI_DOUBLE, i, 0,
 					         control.col_comm);
 				}
@@ -675,7 +675,8 @@ int main(int argc, char *argv[]) {
 				         MPI_STATUS_IGNORE);
 				nodeCSR->rebase_balanced();
 			}
-			//std::cout << "Rows recieved: " << nodeCSR->csrRows.size() << ", NNZs received: " << nodeCSR->csrData.size() << ", denseVec received: " << nodeCSR->denseVec.size() << std::endl;
+			std::cout << "Rows recieved: " << nodeCSR->csrRows.size() << ", NNZs received: " << nodeCSR->csrData.size() << ", denseVec received: " << nodeCSR->denseVec.size() << std::endl;
+			if (control.myId == 0) nodeCSR->denseVec.resize(control.rowCount, 1.0);
 			MPI_Bcast(&nodeCSR->denseVec[0], control.rowCount, MPI_DOUBLE, 0, MPI_COMM_WORLD);
 		}
 		dataTransmissionEnd = MPI_Wtime();
