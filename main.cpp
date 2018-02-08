@@ -550,7 +550,7 @@ int main(int argc, char *argv[]) {
 				// delete and free column data that the master has already sent to the column masters, as it no longer needs
 				// to be kept on the master
 				for (int i = 1; i < clusterColData.size(); i++) {
-					delete (clusterColData[i]);
+					//delete (clusterColData[i]);
 				}
 				//clusterColData.erase(clusterColData.begin() + 1, clusterColData.end()); //remove transmitted data
 				//nodeCSR->denseVec.erase(nodeCSR->denseVec.begin() + control.rowsPerNode, nodeCSR->denseVec.end());
