@@ -30,6 +30,7 @@ struct controlData {
     int lastClusterRowRowStart; // can be calculated locally
     int lastClusterColColStart; // can be calculated locally
     int elementCount;
+	int maxRowsAssigned;
 
     //MPI Stuff
     int processCount;
