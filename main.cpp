@@ -529,6 +529,7 @@ int main(int argc, char *argv[]) {
 					MPI_Send(&control.rowCount, 1, MPI_INT, i, 0, control.row_comm);
 					std::cout << "sending " << clusterColData[i]->processData.size() << " processData elements to " << i << ": ";
 					for (int i = 0; i < clusterColData[i]->processData.size(); i++){
+						std::cout << "for  = " << i << ": " << std::endl;
 						std::cout << clusterColData[i]->processData[i] << ", ";
 					}
 					std::cout << std::endl;
