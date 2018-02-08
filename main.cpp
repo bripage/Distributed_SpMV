@@ -528,9 +528,9 @@ int main(int argc, char *argv[]) {
 				for (int i = 1; i < control.clusterCols; i++) {  // start at 1 since Master is the row master
 					MPI_Send(&control.rowCount, 1, MPI_INT, i, 0, control.row_comm);
 					std::cout << "preparing to send " << clusterColData[i]->processData.size() << " processData elements to " << i << ": ";
-					for (int i = 0; i < clusterColData[i]->processData.size(); i++){
-						std::cout << "for  = " << i << ": ";
-						std::cout << clusterColData[i]->processData[i] << std::endl;
+					for (int j = 0; j < clusterColData[i]->processData.size(); j++){
+						std::cout << "for  = " << j << ": ";
+						std::cout << clusterColData[i]->processData[j] << std::endl;
 					}
 					std::cout << std::endl;
 					std::cout  << "sending processData to " << i << std::endl;
