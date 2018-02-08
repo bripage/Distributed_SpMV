@@ -625,8 +625,9 @@ int main(int argc, char *argv[]) {
 					nnzSent += nodeCSR->processData[((i-1)*2)];
 
 					MPI_Send(&control.rowCount, 1, MPI_INT, i, 0, control.col_comm);
+					std::cout << "sending maxRowsAssigned = " << control.maxRowsAssigned << " to " << i << std::endl;
 					MPI_Send(&control.maxRowsAssigned, 1, MPI_INT, i, 0, control.row_comm);
-					//std::cout << "sending " << nodeCSR->processData.size() << " processData elements to " << i << std::endl;
+					std::cout <<  "sending processdaata:  " << nodeCSR->processData[i*2] << ", " << nodeCSR->processData[(i*2)+1] << std::endl;
 					MPI_Send(&(nodeCSR->processData[(i*2)]), 2, MPI_INT, i, 0, control.col_comm);
 					std::cout <<  "sent " << nodeCSR->processData[i*2] << ", " << nodeCSR->processData[(i*2)+1] << std::endl;
 					std::cout << "sending assigned Row Ids to " << i << std::endl;
