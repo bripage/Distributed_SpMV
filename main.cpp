@@ -812,7 +812,7 @@ int main(int argc, char *argv[]) {
 					MPI_Gather(MPI_IN_PLACE, control.maxRowsAssigned, MPI_DOUBLE, &gatheredResult[0], control.maxRowsAssigned,
 					           MPI_DOUBLE, 0, MPI_COMM_WORLD);
 				} else {
-					MPI_Gather(&result[0], control.maxRowsAssigned, MPI_DOUBLE, &gatheredResult[0], control.maxRowsAssigned,
+					MPI_Gather(&result[0], control.maxRowsAssigned, MPI_DOUBLE, &result[0], control.maxRowsAssigned,
 					           MPI_DOUBLE, 0, MPI_COMM_WORLD);
 				}
 			}

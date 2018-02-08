@@ -36,8 +36,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="885">
-              <caret line="630" column="97" lean-forward="true" selection-start-line="630" selection-start-column="97" selection-end-line="630" selection-end-column="97" />
+            <state relative-caret-position="301">
+              <caret line="807" column="0" lean-forward="true" selection-start-line="807" selection-start-column="0" selection-end-line="807" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -506,7 +506,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="791038000" />
+    <option name="totallyTimeSpent" value="791460000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="31" width="1853" height="1008" extended-state="0" />
@@ -809,8 +809,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="630" column="97" lean-forward="true" selection-start-line="630" selection-start-column="97" selection-end-line="630" selection-end-column="97" />
+        <state relative-caret-position="301">
+          <caret line="807" column="0" lean-forward="true" selection-start-line="807" selection-start-column="0" selection-end-line="807" selection-end-column="0" />
           <folding />
         </state>
       </provider>
