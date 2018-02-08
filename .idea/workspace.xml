@@ -36,8 +36,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="629" column="57" lean-forward="false" selection-start-line="629" selection-start-column="57" selection-end-line="629" selection-end-column="57" />
+            <state relative-caret-position="885">
+              <caret line="630" column="97" lean-forward="true" selection-start-line="630" selection-start-column="97" selection-end-line="630" selection-end-column="97" />
               <folding />
             </state>
           </provider>
@@ -166,7 +166,7 @@
   <component name="OCFindUsagesOptions" text="false" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
     <option name="x" value="-1920" />
-    <option name="y" value="23" />
+    <option name="y" value="31" />
     <option name="width" value="1853" />
     <option name="height" value="1008" />
   </component>
@@ -506,10 +506,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="790810000" />
+    <option name="totallyTimeSpent" value="791038000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1920" y="23" width="1853" height="1008" extended-state="0" />
+    <frame x="-1920" y="31" width="1853" height="1008" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1748516" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -809,8 +809,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="629" column="57" lean-forward="false" selection-start-line="629" selection-start-column="57" selection-end-line="629" selection-end-column="57" />
+        <state relative-caret-position="885">
+          <caret line="630" column="97" lean-forward="true" selection-start-line="630" selection-start-column="97" selection-end-line="630" selection-end-column="97" />
           <folding />
         </state>
       </provider>
