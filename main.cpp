@@ -527,20 +527,17 @@ int main(int argc, char *argv[]) {
 			if (control.myId == 0) {
 				for (int i = 1; i < control.clusterCols; i++) {  // start at 1 since Master is the row master
 					MPI_Send(&control.rowCount, 1, MPI_INT, i, 0, control.row_comm);
-					//std::cout << "sending " << clusterColData[i]->processData.size() << " processData elements to " << i << std::endl;
+					std::cout << "sending " << clusterColData[i]->processData.size() << " processData elements to " << i << std::endl;
 					MPI_Send(&(clusterColData[i]->processData[0]), control.clusterRows*2, MPI_INT, i, 0, control.row_comm);
-					//std::cout << "sending csrRows to " << i << std::endl;
+					std::cout << "sending csrRows to " << i << std::endl;
 					MPI_Send(&(clusterColData[i]->csrRows[0]), clusterColData[i]->csrRows.size(), MPI_INT, i, 0,
 					         control.row_comm);
-					//std::cout << "sending csrCols to " << i << std::endl;
+					std::cout << "sending csrCols to " << i << std::endl;
 					MPI_Send(&(clusterColData[i]->csrCols[0]), clusterColData[i]->csrCols.size(), MPI_INT, i, 0,
 					         control.row_comm);
-					//std::cout << "sending csrData to " << i << std::endl;
+					std::cout << "sending csrData to " << i << std::endl;
 					MPI_Send(&(clusterColData[i]->csrData[0]), clusterColData[i]->csrData.size(), MPI_DOUBLE, i, 0,
 					         control.row_comm);
-					//std::cout << "sending denseVec to " << i << std::endl;
-					MPI_Send(&(clusterColData[0]->denseVec[0]), clusterColData[i]->denseVec.size(), MPI_DOUBLE,
-					         i, 0, control.row_comm);
 				}
 				// delete and free column data that the master has already sent to the column masters, as it no longer needs
 				// to be kept on the master
@@ -552,35 +549,35 @@ int main(int argc, char *argv[]) {
 			} else if (control.myId < control.clusterCols && control.myId != 0) {
 				// total number of rows in matrix not process or column
 				MPI_Recv(&control.rowCount, 1, MPI_INT, 0, 0, control.row_comm, MPI_STATUS_IGNORE);
-				//std::cout << "rowCount = " << control.rowCount << std::endl;
+				std::cout << "rowCount = " << control.rowCount << std::endl;
 				// Get rows and nnz per proc data
 				nodeCSR->processData.resize(control.clusterRows*2);
 				//std::cout << "receiving " << control.clusterRows*3 << " processData elements" << std::endl;
 				MPI_Recv(&nodeCSR->processData[0], control.clusterRows*2, MPI_INT, 0, 0, control.row_comm,
 				         MPI_STATUS_IGNORE);
-				//std::cout << "processData.size() = " << nodeCSR->processData.size() << std::endl;
+				std::cout << "processData.size() = " << nodeCSR->processData.size() << std::endl;
 
-				//for (int i = 0; i < nodeCSR->processData.size(); i++){
-				//	std::cout << nodeCSR->processData[i] << ", ";
-				//}
-				//std::cout << std::endl;
+				for (int i = 0; i < nodeCSR->processData.size(); i++){
+					std::cout << nodeCSR->processData[i] << ", ";
+				}
+				std::cout << std::endl;
 
 				control.elementCount = 0;
 				for (int i = 0; i < control.clusterRows*2; i = i+2){
 					control.elementCount += nodeCSR->processData[i];
 				}
-				//std::cout << "elementCount = " << control.elementCount << std::endl;
+				std::cout << "elementCount = " << control.elementCount << std::endl;
 				int assignedRowCount = 0;
 				for (int i = 1; i < control.clusterRows*2; i = i+2){
 					assignedRowCount += nodeCSR->processData[i];
 				}
-				//std::cout << "assignedRowCount = " << assignedRowCount << std::endl;
+				std::cout << "assignedRowCount = " << assignedRowCount << std::endl;
 
 				nodeCSR->csrRows.resize(assignedRowCount);
 				nodeCSR->csrCols.resize(control.elementCount);
 				nodeCSR->csrData.resize(control.elementCount);
 				nodeCSR->denseVec.resize(control.rowCount);
-				//std::cout << "Rows recieved: " << nodeCSR->csrRows.size() << ", NNZs received: " << nodeCSR->csrData.size() << ", denseVec received: " << nodeCSR->denseVec.size() << std::endl;
+				std::cout << "Rows recieved: " << nodeCSR->csrRows.size() << ", NNZs received: " << nodeCSR->csrData.size() << std::endl;
 
 				MPI_Recv(&nodeCSR->csrRows[0], assignedRowCount, MPI_INT, 0, 0, control.row_comm, MPI_STATUS_IGNORE);
 				MPI_Recv(&nodeCSR->csrCols[0], control.elementCount, MPI_INT, 0, 0, control.row_comm,
