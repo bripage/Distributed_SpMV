@@ -809,7 +809,7 @@ int main(int argc, char *argv[]) {
 			if (control.debug && control.myId == 0) std::cout << "Starting MPI Gather" << std::endl;
 			if (control.myId == 0) {
 				MPI_Gather(MPI_IN_PLACE, control.maxRowsAssigned, MPI_DOUBLE, &gatheredResult[0], control.maxRowsAssigned,
-					           MPI_DOUBLE, 0, MPI_COMM_WORLD);
+				           MPI_DOUBLE, 0, MPI_COMM_WORLD);
 			} else {
 				MPI_Gather(&result[0], control.maxRowsAssigned, MPI_DOUBLE, &gatheredResult[0], control.maxRowsAssigned,
 				           MPI_DOUBLE, 0, MPI_COMM_WORLD);
@@ -817,10 +817,9 @@ int main(int argc, char *argv[]) {
 			if (control.debug && control.myId == 0) std::cout << "MPI Gather complete" << std::endl;
 
 			if(control.myId == 0) {
-				for (int i = 0; i < control.processCount; i++) {
-					for (int j = 0; j < control.maxRowsAssigned; j++) {
-						result[clusterColData[i%control.clusterCols]->assignedRowIds[(j/control.clusterRows)+j]] += gatheredResult[(i*control.maxRowsAssigned)+j];
-					}
+				for (int i = 0; i < gatheredResult.size(); i++) {
+					//result[clusterColData[i%control.clusterCols]->assignedRowIds[(j/control.clusterRows)+j]] += gatheredResult[(i*control.maxRowsAssigned)+j];
+					result[clusterColData[i%control.clusterCols]->assignedRowIds[((i/control.clusterRows)*control.maxRowsAssigned)+(i%control.maxRowsAssigned)]] += gatheredResult[i];
 				}
 			}
 		}
