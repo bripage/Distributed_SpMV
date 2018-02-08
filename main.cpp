@@ -834,6 +834,7 @@ int main(int argc, char *argv[]) {
 							std::cout << col << ", " << row << ", " << assignedRowElement << ", " << matrixRow << ", "
 							          << gatheredResult[(i * control.maxRowsAssigned) + j] << std::endl;
 						}
+						result[matrixRow] += gatheredResult[(i * control.maxRowsAssigned) + j];
 					}
 				}
 
