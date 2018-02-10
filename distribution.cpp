@@ -493,12 +493,12 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 	int avgNNZperRow = ceil((double)control.nonZeros / (double)control.rowCount);
 	previousRow = -1;
 	for (int i = 0; i < elements.size(); i++){
-		if (elements[i].row == previousRow && distributionRows[distributionRows.size()-1].rowLength+1 <= avgNNZperRow){
+		if (elements[i].row == previousRow && distributionRows[distributionRows.size()-1].rowLength+1 <= avgNNZperProcess){
 			// add element to current row
 			distributionRows[distributionRows.size()-1].rowLength++;
 			distributionRows[distributionRows.size()-1].cols.push_back(elements[i].col);
 			distributionRows[distributionRows.size()-1].data.push_back(elements[i].data);
-		} else if (elements[i].row == previousRow && distributionRows[distributionRows.size()-1].rowLength+1 > avgNNZperRow){
+		} else if (elements[i].row == previousRow && distributionRows[distributionRows.size()-1].rowLength+1 > avgNNZperProcess){
 			// create new row by splitting the current row
 			row temp;
 			temp.processAssignment = -1;
@@ -552,6 +552,8 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 								distributionRows[j].processAssignment = i;
 								//std::cout << distributionRows[j].processAssignment << ",";
 								nnzAssignedPerProc[i] += distributionRows[j].rowLength;
+								filled = true;
+								break;
 							}
 						}
 					} else {
