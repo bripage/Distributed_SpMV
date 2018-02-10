@@ -12,7 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c65b864-9431-4078-9657-58a0aa3c15cb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Distributed SpMV Data.xlsx" afterPath="$PROJECT_DIR$/Distributed SpMV Data.xlsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/distribution.cpp" afterPath="$PROJECT_DIR$/distribution.cpp" />
     </list>
     <ignored path="Distrubuted_SpMV.iws" />
@@ -87,8 +86,8 @@
       <file leaf-file-name="distribution.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/distribution.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="510" column="83" lean-forward="true" selection-start-line="510" selection-start-column="83" selection-end-line="510" selection-end-column="83" />
+            <state relative-caret-position="553">
+              <caret line="553" column="87" lean-forward="true" selection-start-line="553" selection-start-column="87" selection-end-line="553" selection-end-column="87" />
               <folding />
             </state>
           </provider>
@@ -508,7 +507,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="800067000" />
+    <option name="totallyTimeSpent" value="800548000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="31" width="1853" height="993" extended-state="0" />
@@ -811,8 +810,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/distribution.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="510" column="83" lean-forward="true" selection-start-line="510" selection-start-column="83" selection-end-line="510" selection-end-column="83" />
+        <state relative-caret-position="553">
+          <caret line="553" column="87" lean-forward="true" selection-start-line="553" selection-start-column="87" selection-end-line="553" selection-end-column="87" />
           <folding />
         </state>
       </provider>
