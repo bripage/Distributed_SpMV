@@ -493,12 +493,12 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 	int avgNNZperRow = ceil((double)control.nonZeros / (double)control.rowCount);
 	previousRow = -1;
 	for (int i = 0; i < elements.size(); i++){
-		if (elements[i].row == previousRow && distributionRows[distributionRows.size()-1].rowLength+1 <= avgNNZperProcess){
+		if (elements[i].row == previousRow && distributionRows[distributionRows.size()-1].rowLength+1 <= avgNNZperRow){
 			// add element to current row
 			distributionRows[distributionRows.size()-1].rowLength++;
 			distributionRows[distributionRows.size()-1].cols.push_back(elements[i].col);
 			distributionRows[distributionRows.size()-1].data.push_back(elements[i].data);
-		} else if (elements[i].row == previousRow && distributionRows[distributionRows.size()-1].rowLength+1 > avgNNZperProcess){
+		} else if (elements[i].row == previousRow && distributionRows[distributionRows.size()-1].rowLength+1 > avgNNZperRow){
 			// create new row by splitting the current row
 			row temp;
 			temp.processAssignment = -1;
@@ -525,7 +525,7 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 	//sort rows based on row length
 	//
 	if (control.debug) std::cout << "Sorting Rows" << std::endl;
-	std::sort(distributionRows.begin(), distributionRows.end(), sortByLength);
+	//std::sort(distributionRows.begin(), distributionRows.end(), sortByLength);
 	if (control.debug) std::cout << "Done sorting rows" << std::endl;
 
 	//
