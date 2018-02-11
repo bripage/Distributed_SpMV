@@ -1,0 +1,150 @@
+Starting Tests on atmosmodd
+Process 0: 8814880
+NNZ Per Process Standard Deviation = 0
+
+Incorecct Rows: 0
+4.75529,7.15256e-07,0.00450158,3.97723e-321,6.95262e-310,7.7664
+Starting Tests on parabolic_fem_expanded
+Process 0: 3674625
+NNZ Per Process Standard Deviation = 0
+
+Incorecct Rows: 0
+1.96395,9.53674e-07,0.00581145,3.97723e-321,6.95334e-310,3.35309
+Starting Tests on rajat30
+Process 0: 6175244
+NNZ Per Process Standard Deviation = 0
+
+Incorecct Rows: 0
+4.02483,7.15256e-07,0.0053134,3.97723e-321,6.95326e-310,6.25571
+Starting Tests on CurlCurl_3_expanded
+Process 0: 13544618
+NNZ Per Process Standard Deviation = 0
+
+Incorecct Rows: 0
+8.19576,4.76837e-07,0.00844908,3.97723e-321,6.95309e-310,13.0384
+Starting Tests on offshore_expanded
+Process 0: 4242673
+NNZ Per Process Standard Deviation = 0
+
+Incorecct Rows: 0
+2.50927,4.76837e-07,0.0026052,3.97723e-321,6.9528e-310,4.08985
+Starting Tests on FEM_3D_thermal2
+Process 0: 3489300
+NNZ Per Process Standard Deviation = 0
+
+Incorecct Rows: 0
+2.0315,7.15256e-07,0.00236082,3.97723e-321,6.95252e-310,3.46935
+Starting Tests on nlpkkt80_expanded
+Process 0: 28192672
+NNZ Per Process Standard Deviation = 0
+
+Incorecct Rows: 0
+12.7328,4.76837e-07,0.0240474,3.97723e-321,6.95328e-310,19.3136
+Starting Tests on CO_expanded
+Process 0: 7666057
+NNZ Per Process Standard Deviation = 0
+
+Incorecct Rows: 0
+4.7741,7.15256e-07,0.00467062,3.97723e-321,6.95278e-310,7.59056
+Starting Tests on gsm_106857_expanded
+Process 0: 21758924
+NNZ Per Process Standard Deviation = 0
+
+Incorecct Rows: 0
+14.7291,7.15256e-07,0.0605936,3.97723e-321,6.95278e-310,23.7663
+Starting Tests on msdoor_expanded
+Process 0: 19173163
+NNZ Per Process Standard Deviation = 0
+
+Incorecct Rows: 0
+13.2474,7.15256e-07,0.0539856,3.97723e-321,6.95299e-310,20.2802
+Starting Tests on bmw3_2_expanded
+Process 0: 11288630
+NNZ Per Process Standard Deviation = 0
+
+Incorecct Rows: 0
+6.95037,9.53674e-07,0.00563574,3.97723e-321,6.95279e-310,10.9853
+Starting Tests on BenElechi1_expanded
+Process 0: 13150496
+NNZ Per Process Standard Deviation = 0
+
+Incorecct Rows: 0
+7.68354,7.15256e-07,0.0063622,3.97723e-321,6.95262e-310,12.6821
+Starting Tests on t3dh_expanded
+Process 0: 4352105
+NNZ Per Process Standard Deviation = 0
+
+Incorecct Rows: 0
+2.65232,7.15256e-07,0.0122712,3.97723e-321,6.95278e-310,4.40732
+Starting Tests on F2_expanded
+Process 0: 5294285
+NNZ Per Process Standard Deviation = 0
+
+Incorecct Rows: 0
+3.10811,4.76837e-07,0.00679588,3.97723e-321,6.95277e-310,5.10851
+Starting Tests on consph_expanded
+Process 0: 6010480
+NNZ Per Process Standard Deviation = 0
+
+Incorecct Rows: 0
+3.45699,4.76837e-07,0.00308847,3.97723e-321,6.95308e-310,5.70466
+Starting Tests on SiO2_expanded
+Process 0: 11283503
+NNZ Per Process Standard Deviation = 0
+
+Incorecct Rows: 0
+6.716,9.53674e-07,0.00984311,3.97723e-321,6.95309e-310,11.0351
+Starting Tests on torso1_expanded
+Process 0: 16916842
+NNZ Per Process Standard Deviation = 0
+
+Incorecct Rows: 0
+11.8371,7.15256e-07,0.0307779,3.97723e-321,6.95252e-310,18.1726
+Starting Tests on dielFilterV3real
+Process 0: 45204422
+NNZ Per Process Standard Deviation = 0
+
+Incorecct Rows: 0
+30.9709,7.15256e-07,0.0556192,3.97723e-321,6.95327e-310,50.1844
+Starting Tests on RM07R
+Process 0: 37464962
+NNZ Per Process Standard Deviation = 0
+
+Incorecct Rows: 0
+24.2413,7.15256e-07,0.0694935,3.97723e-321,6.95333e-310,39.2662
+Starting Tests on m_t1_expanded
+Process 0: 9753570
+NNZ Per Process Standard Deviation = 0
+
+Incorecct Rows: 0
+5.42016,7.15256e-07,0.00397253,3.97723e-321,6.95276e-310,9.01443
+Starting Tests on crankseg_2_expanded
+Process 0: 14148858
+NNZ Per Process Standard Deviation = 0
+
+Incorecct Rows: 0
+7.50387,4.76837e-07,0.0089221,3.97723e-321,6.95319e-310,12.5545
+Starting Tests on nd24k_expanded
+Process 0: 28715634
+NNZ Per Process Standard Deviation = 0
+
+Incorecct Rows: 0
+16.2239,7.15256e-07,0.0144722,3.97723e-321,6.95318e-310,27.0999
+Starting Tests on TSOPF_RS_b2383
+Process 0: 16171169
+NNZ Per Process Standard Deviation = 0
+
+Incorecct Rows: 0
+10.9727,7.15256e-07,0.0814524,3.97723e-321,6.95335e-310,18.1949
+Starting Tests on mouse_gene_expanded
+Process 0: 28967291
+NNZ Per Process Standard Deviation = 0
+
+Incorecct Rows: 0
+18.1385,4.76837e-07,0.0185754,3.97723e-321,6.95267e-310,29.341
+Starting Tests on human_gene1_expanded
+Process 0: 24669643
+NNZ Per Process Standard Deviation = 0
+
+Incorecct Rows: 0
+14.2488,7.15256e-07,0.0123734,3.97723e-321,6.95265e-310,23.3352

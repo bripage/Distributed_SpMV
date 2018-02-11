@@ -5,7 +5,7 @@
 #$ -pe mpi-16 80
 ##$ -q *@@cswarm
 #$ -q long
-#$ -o 9procTests_mva.txt
+#$ -o 9procTests_mva_balanced.txt
 #$ -e errorurrmahgurd.err
 #$ -N Correctness_Tests
 

@@ -1,0 +1,1998 @@
+Starting Tests on atmosmodd
+Process 0: 137732
+Process 1: 137736
+Process 2: 137736
+Process 3: 137735
+Process 4: 137732
+Process 5: 137732
+Process 6: 137732
+Process 7: 137732
+Process 8: 137732
+Process 9: 137732
+Process 10: 137732
+Process 11: 137732
+Process 12: 137732
+Process 13: 137732
+Process 14: 137732
+Process 15: 137732
+Process 16: 137732
+Process 17: 137732
+Process 18: 137732
+Process 19: 137732
+Process 20: 137732
+Process 21: 137732
+Process 22: 137732
+Process 23: 137732
+Process 24: 137732
+Process 25: 137732
+Process 26: 137732
+Process 27: 137732
+Process 28: 137732
+Process 29: 137732
+Process 30: 137732
+Process 31: 137732
+Process 32: 137732
+Process 33: 137732
+Process 34: 137732
+Process 35: 137732
+Process 36: 137732
+Process 37: 137732
+Process 38: 137732
+Process 39: 137732
+Process 40: 137732
+Process 41: 137732
+Process 42: 137732
+Process 43: 137732
+Process 44: 137732
+Process 45: 137732
+Process 46: 137732
+Process 47: 137732
+Process 48: 137732
+Process 49: 137732
+Process 50: 137732
+Process 51: 137732
+Process 52: 137732
+Process 53: 137732
+Process 54: 137732
+Process 55: 137732
+Process 56: 137732
+Process 57: 137732
+Process 58: 137732
+Process 59: 137732
+Process 60: 137732
+Process 61: 137732
+Process 62: 137732
+Process 63: 137732
+NNZ Per Process Standard Deviation = 0.781719
+
+Incorecct Rows: 0
+6.67989,2.9264,0.00512648,0.0288932,12.7261
+Starting Tests on parabolic_fem_expanded
+Process 0: 57417
+Process 1: 57414
+Process 2: 57414
+Process 3: 57414
+Process 4: 57414
+Process 5: 57414
+Process 6: 57414
+Process 7: 57414
+Process 8: 57414
+Process 9: 57414
+Process 10: 57414
+Process 11: 57414
+Process 12: 57414
+Process 13: 57414
+Process 14: 57414
+Process 15: 57414
+Process 16: 57414
+Process 17: 57414
+Process 18: 57414
+Process 19: 57414
+Process 20: 57414
+Process 21: 57414
+Process 22: 57414
+Process 23: 57414
+Process 24: 57414
+Process 25: 57414
+Process 26: 57414
+Process 27: 57414
+Process 28: 57414
+Process 29: 57414
+Process 30: 57414
+Process 31: 57414
+Process 32: 57414
+Process 33: 57414
+Process 34: 57414
+Process 35: 57414
+Process 36: 57414
+Process 37: 57414
+Process 38: 57414
+Process 39: 57414
+Process 40: 57414
+Process 41: 57414
+Process 42: 57414
+Process 43: 57414
+Process 44: 57414
+Process 45: 57414
+Process 46: 57414
+Process 47: 57414
+Process 48: 57414
+Process 49: 57414
+Process 50: 57414
+Process 51: 57414
+Process 52: 57414
+Process 53: 57414
+Process 54: 57414
+Process 55: 57414
+Process 56: 57414
+Process 57: 57414
+Process 58: 57414
+Process 59: 57414
+Process 60: 57414
+Process 61: 57414
+Process 62: 57414
+Process 63: 57414
+NNZ Per Process Standard Deviation = 0.372059
+
+Incorecct Rows: 0
+2.81589,2.86769,0.000621557,0.0114114,7.11571
+Starting Tests on rajat30
+Process 0: 96490
+Process 1: 96490
+Process 2: 96490
+Process 3: 96490
+Process 4: 96490
+Process 5: 96490
+Process 6: 96490
+Process 7: 96490
+Process 8: 96490
+Process 9: 96490
+Process 10: 96490
+Process 11: 96490
+Process 12: 96490
+Process 13: 96493
+Process 14: 96492
+Process 15: 96492
+Process 16: 96494
+Process 17: 96488
+Process 18: 96488
+Process 19: 96488
+Process 20: 96488
+Process 21: 96488
+Process 22: 96488
+Process 23: 96488
+Process 24: 96488
+Process 25: 96488
+Process 26: 96488
+Process 27: 96488
+Process 28: 96488
+Process 29: 96490
+Process 30: 96489
+Process 31: 96489
+Process 32: 96489
+Process 33: 96490
+Process 34: 96490
+Process 35: 96490
+Process 36: 96490
+Process 37: 96490
+Process 38: 96490
+Process 39: 96490
+Process 40: 96490
+Process 41: 96490
+Process 42: 96490
+Process 43: 96490
+Process 44: 96490
+Process 45: 96490
+Process 46: 96490
+Process 47: 96490
+Process 48: 96490
+Process 49: 96490
+Process 50: 96490
+Process 51: 96490
+Process 52: 96490
+Process 53: 96490
+Process 54: 96490
+Process 55: 96490
+Process 56: 96490
+Process 57: 96490
+Process 58: 96490
+Process 59: 96490
+Process 60: 96490
+Process 61: 96490
+Process 62: 96490
+Process 63: 96390
+NNZ Per Process Standard Deviation = 12.4208
+
+row 30: 1.20942e-09 != -122.422
+row 43: 6.55537e-08 != 11819.6
+row 57: -1 != 11463.6
+row 89: -1.19933e-11 != 16.5775
+row 543551: -0.998482 != -2353.05
+row 543552: 1 != 2082.62
+row 543561: 0.998474 != 30.1027
+row 543562: 1.00005 != 320.499
+Incorecct Rows: 8
+4.77886,2.88384,0.000668287,0.156195,10.1672
+Starting Tests on CurlCurl_3_expanded
+Process 0: 211638
+Process 1: 211635
+Process 2: 211635
+Process 3: 211640
+Process 4: 211640
+Process 5: 211640
+Process 6: 211640
+Process 7: 211640
+Process 8: 211640
+Process 9: 211640
+Process 10: 211640
+Process 11: 211640
+Process 12: 211640
+Process 13: 211640
+Process 14: 211640
+Process 15: 211640
+Process 16: 211640
+Process 17: 211640
+Process 18: 211640
+Process 19: 211640
+Process 20: 211640
+Process 21: 211640
+Process 22: 211640
+Process 23: 211640
+Process 24: 211640
+Process 25: 211640
+Process 26: 211640
+Process 27: 211640
+Process 28: 211640
+Process 29: 211640
+Process 30: 211640
+Process 31: 211640
+Process 32: 211640
+Process 33: 211640
+Process 34: 211640
+Process 35: 211640
+Process 36: 211640
+Process 37: 211640
+Process 38: 211640
+Process 39: 211640
+Process 40: 211640
+Process 41: 211640
+Process 42: 211640
+Process 43: 211640
+Process 44: 211640
+Process 45: 211640
+Process 46: 211640
+Process 47: 211640
+Process 48: 211640
+Process 49: 211640
+Process 50: 211640
+Process 51: 211640
+Process 52: 211640
+Process 53: 211640
+Process 54: 211640
+Process 55: 211638
+Process 56: 211632
+Process 57: 211632
+Process 58: 211632
+Process 59: 211632
+Process 60: 211632
+Process 61: 211632
+Process 62: 211632
+Process 63: 211368
+NNZ Per Process Standard Deviation = 33.695
+
+Incorecct Rows: 0
+9.26259,3.02889,0.00101113,0.0274038,17.2575
+Starting Tests on offshore_expanded
+Process 0: 66292
+Process 1: 66292
+Process 2: 66294
+Process 3: 66287
+Process 4: 66296
+Process 5: 66287
+Process 6: 66287
+Process 7: 66287
+Process 8: 66287
+Process 9: 66287
+Process 10: 66287
+Process 11: 66287
+Process 12: 66287
+Process 13: 66287
+Process 14: 66287
+Process 15: 66287
+Process 16: 66287
+Process 17: 66298
+Process 18: 66288
+Process 19: 66288
+Process 20: 66288
+Process 21: 66288
+Process 22: 66288
+Process 23: 66288
+Process 24: 66288
+Process 25: 66288
+Process 26: 66288
+Process 27: 66288
+Process 28: 66288
+Process 29: 66288
+Process 30: 66288
+Process 31: 66288
+Process 32: 66288
+Process 33: 66288
+Process 34: 66288
+Process 35: 66288
+Process 36: 66288
+Process 37: 66288
+Process 38: 66288
+Process 39: 66288
+Process 40: 66288
+Process 41: 66288
+Process 42: 66292
+Process 43: 66300
+Process 44: 66300
+Process 45: 66300
+Process 46: 66300
+Process 47: 66300
+Process 48: 66300
+Process 49: 66300
+Process 50: 66300
+Process 51: 66300
+Process 52: 66300
+Process 53: 66300
+Process 54: 66300
+Process 55: 66300
+Process 56: 66300
+Process 57: 66300
+Process 58: 66300
+Process 59: 66300
+Process 60: 66300
+Process 61: 66300
+Process 62: 66300
+Process 63: 66266
+NNZ Per Process Standard Deviation = 6.51619
+
+row 225290: 6.47587e+14 != 6.47587e+14
+row 225993: 7.20173e+14 != 7.20173e+14
+row 226249: 9.83942e+14 != 9.83942e+14
+row 226431: 8.8447e+14 != 8.8447e+14
+row 226595: 6.29368e+14 != 6.29368e+14
+row 226702: 7.09382e+14 != 7.09382e+14
+row 227109: 7.75651e+14 != 7.75651e+14
+row 227305: 5.78798e+14 != 5.78798e+14
+row 227388: 6.87139e+14 != 6.87139e+14
+row 227812: 6.40901e+14 != 6.40901e+14
+row 227840: 6.19997e+14 != 6.19997e+14
+row 227900: 5.79075e+14 != 5.79075e+14
+row 227911: 7.46416e+14 != 7.46416e+14
+row 228388: 5.39611e+14 != 5.39611e+14
+row 228963: 6.48583e+14 != 6.48583e+14
+row 229120: 4.36085e+14 != 4.36085e+14
+row 229908: 3.03511e+14 != 3.03511e+14
+row 229935: 3.66814e+14 != 3.66814e+14
+row 230174: 7.10699e+14 != 7.10699e+14
+row 230224: 8.76455e+14 != 8.76455e+14
+row 230359: 6.23114e+14 != 6.23114e+14
+row 230376: 6.19692e+14 != 6.19692e+14
+row 230386: 7.46087e+14 != 7.46087e+14
+row 230512: 5.58775e+14 != 5.58775e+14
+row 230551: 6.47276e+14 != 6.47276e+14
+row 230581: 6.86457e+14 != 6.86457e+14
+row 230586: 5.96754e+13 != 5.96754e+13
+row 230616: 5.44308e+14 != 5.44308e+14
+row 230878: 6.16736e+14 != 6.16736e+14
+row 230956: 3.19268e+14 != 3.19268e+14
+row 230992: 5.66137e+14 != 5.66137e+14
+row 231035: 6.17723e+14 != 6.17723e+14
+row 231088: 3.42639e+14 != 3.42639e+14
+row 231096: 6.25416e+14 != 6.25416e+14
+row 231199: 6.12192e+14 != 6.12192e+14
+row 231415: 5.23185e+14 != 5.23185e+14
+row 231597: 7.06637e+14 != 7.06637e+14
+row 231853: 6.03997e+14 != 6.03997e+14
+row 231928: 5.95172e+14 != 5.95172e+14
+row 231945: 5.68762e+14 != 5.68762e+14
+row 231982: 6.58212e+14 != 6.58212e+14
+row 231995: 5.97501e+14 != 5.97501e+14
+row 232007: 5.95028e+14 != 5.95028e+14
+row 232015: 3.71435e+14 != 3.71435e+14
+row 232063: 5.72466e+14 != 5.72466e+14
+row 232110: 4.10374e+14 != 4.10374e+14
+row 232145: 3.96203e+14 != 3.96203e+14
+row 232268: 5.9757e+14 != 5.9757e+14
+row 232359: 3.95792e+14 != 3.95792e+14
+row 232582: 6.23566e+14 != 6.23566e+14
+Incorecct Rows: 97
+3.0505,2.86317,0.000317097,0.00686717,7.50121
+Starting Tests on FEM_3D_thermal2
+Process 0: 54522
+Process 1: 54522
+Process 2: 54522
+Process 3: 54522
+Process 4: 54522
+Process 5: 54522
+Process 6: 54522
+Process 7: 54522
+Process 8: 54522
+Process 9: 54522
+Process 10: 54522
+Process 11: 54522
+Process 12: 54522
+Process 13: 54522
+Process 14: 54522
+Process 15: 54522
+Process 16: 54522
+Process 17: 54522
+Process 18: 54522
+Process 19: 54522
+Process 20: 54522
+Process 21: 54522
+Process 22: 54528
+Process 23: 54528
+Process 24: 54528
+Process 25: 54528
+Process 26: 54528
+Process 27: 54528
+Process 28: 54528
+Process 29: 54528
+Process 30: 54528
+Process 31: 54528
+Process 32: 54528
+Process 33: 54528
+Process 34: 54528
+Process 35: 54528
+Process 36: 54528
+Process 37: 54528
+Process 38: 54528
+Process 39: 54528
+Process 40: 54528
+Process 41: 54528
+Process 42: 54528
+Process 43: 54528
+Process 44: 54528
+Process 45: 54528
+Process 46: 54528
+Process 47: 54528
+Process 48: 54528
+Process 49: 54528
+Process 50: 54528
+Process 51: 54528
+Process 52: 54528
+Process 53: 54528
+Process 54: 54528
+Process 55: 54528
+Process 56: 54528
+Process 57: 54528
+Process 58: 54528
+Process 59: 54528
+Process 60: 54528
+Process 61: 54528
+Process 62: 54528
+Process 63: 54168
+NNZ Per Process Standard Deviation = 44.4778
+
+Incorecct Rows: 0
+2.27408,2.84386,0.000610352,0.00430202,6.52586
+Starting Tests on nlpkkt80_expanded
+Process 0: 448511
+Process 1: 448514
+Process 2: 448521
+Process 3: 448524
+Process 4: 448524
+Process 5: 448524
+Process 6: 448524
+Process 7: 448524
+Process 8: 448524
+Process 9: 448524
+Process 10: 448524
+Process 11: 448524
+Process 12: 448524
+Process 13: 448524
+Process 14: 448524
+Process 15: 448524
+Process 16: 448524
+Process 17: 448524
+Process 18: 448524
+Process 19: 448524
+Process 20: 448524
+Process 21: 448524
+Process 22: 448524
+Process 23: 448524
+Process 24: 448524
+Process 25: 448524
+Process 26: 448524
+Process 27: 448524
+Process 28: 448524
+Process 29: 448524
+Process 30: 448524
+Process 31: 448524
+Process 32: 448524
+Process 33: 448518
+Process 34: 448504
+Process 35: 448504
+Process 36: 448504
+Process 37: 448504
+Process 38: 448504
+Process 39: 448504
+Process 40: 448504
+Process 41: 448504
+Process 42: 448504
+Process 43: 448504
+Process 44: 448504
+Process 45: 448504
+Process 46: 448504
+Process 47: 448504
+Process 48: 448504
+Process 49: 448504
+Process 50: 448504
+Process 51: 448504
+Process 52: 448504
+Process 53: 448504
+Process 54: 448504
+Process 55: 448504
+Process 56: 448504
+Process 57: 448504
+Process 58: 448504
+Process 59: 448504
+Process 60: 448504
+Process 61: 448504
+Process 62: 384776
+Process 63: 0
+NNZ Per Process Standard Deviation = 56059.1
+[d8civy083.crc.nd.edu:mpi_rank_63][error_sighandler] Caught error: Segmentation fault (signal 11)
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 18708 RUNNING AT d8civy083.crc.nd.edu
+=   EXIT CODE: 11
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+[proxy:0:0@d8civy103.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:0@d8civy103.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:0@d8civy103.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:1@d8civy100.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:1@d8civy100.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:1@d8civy100.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:2@d8civy092.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:2@d8civy092.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:2@d8civy092.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:3@d8civy137.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:3@d8civy137.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:3@d8civy137.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:5@d8civy107.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:5@d8civy107.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:5@d8civy107.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:13@d8civy113.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:13@d8civy113.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:13@d8civy113.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:16@d8civy097.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:16@d8civy097.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:16@d8civy097.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:29@d8civy139.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:29@d8civy139.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:29@d8civy139.crc.nd.edu] [mpiexec@d8civy103.crc.nd.edu] HYDT_bscu_wait_for_completion (tools/bootstrap/utils/bscu_wait.c:76): one of the processes terminated badly; aborting
+[mpiexec@d8civy103.crc.nd.edu] HYDT_bsci_wait_for_completion (tools/bootstrap/src/bsci_wait.c:23): launcher returned error waiting for completion
+[mpiexec@d8civy103.crc.nd.edu] HYD_pmci_wait_for_completion (pm/pmiserv/pmiserv_pmci.c:218): launcher returned error waiting for completion
+[mpiexec@d8civy103.crc.nd.edu] main (ui/mpich/mpiexec.c:344): process manager error waiting for completion
+Starting Tests on CO_expanded
+Process 0: 119784
+Process 1: 119784
+Process 2: 119785
+Process 3: 119773
+Process 4: 119784
+Process 5: 119784
+Process 6: 119776
+Process 7: 119782
+Process 8: 119770
+Process 9: 119781
+Process 10: 119785
+Process 11: 119776
+Process 12: 119796
+Process 13: 119799
+Process 14: 119782
+Process 15: 119782
+Process 16: 119784
+Process 17: 119770
+Process 18: 119770
+Process 19: 119770
+Process 20: 119770
+Process 21: 119770
+Process 22: 119770
+Process 23: 119770
+Process 24: 119770
+Process 25: 119770
+Process 26: 119770
+Process 27: 119770
+Process 28: 119770
+Process 29: 119770
+Process 30: 119770
+Process 31: 119770
+Process 32: 119770
+Process 33: 119770
+Process 34: 119770
+Process 35: 119770
+Process 36: 119770
+Process 37: 119770
+Process 38: 119770
+Process 39: 119770
+Process 40: 119770
+Process 41: 119770
+Process 42: 119770
+Process 43: 119770
+Process 44: 119770
+Process 45: 119770
+Process 46: 119770
+Process 47: 119770
+Process 48: 119770
+Process 49: 119770
+Process 50: 119770
+Process 51: 119770
+Process 52: 119770
+Process 53: 119770
+Process 54: 119770
+Process 55: 119770
+Process 56: 119770
+Process 57: 119770
+Process 58: 119770
+Process 59: 119770
+Process 60: 119770
+Process 61: 119770
+Process 62: 119770
+Process 63: 119770
+NNZ Per Process Standard Deviation = 6.66759
+
+row 136932: -0.108837 != -0.00611772
+row 136933: -0.134663 != -0.00611772
+row 136934: -0.166825 != -0.00611772
+row 136935: -0.207196 != -0.00611772
+row 136936: -0.258534 != -0.00611772
+row 136937: -0.325129 != -0.00611772
+row 136938: -0.413905 != -0.00611772
+row 136939: -0.535985 != -0.00611772
+Incorecct Rows: 8
+4.72552,2.87658,0.000414133,0.0061512,10.4122
+Starting Tests on gsm_106857_expanded
+Process 0: 339986
+Process 1: 339985
+Process 2: 339984
+Process 3: 339989
+Process 4: 339984
+Process 5: 339984
+Process 6: 339989
+Process 7: 339986
+Process 8: 339983
+Process 9: 339984
+Process 10: 339984
+Process 11: 339984
+Process 12: 339984
+Process 13: 339984
+Process 14: 339993
+Process 15: 339975
+Process 16: 339974
+Process 17: 339971
+Process 18: 339997
+Process 19: 339990
+Process 20: 339990
+Process 21: 339990
+Process 22: 339990
+Process 23: 339990
+Process 24: 339990
+Process 25: 339976
+Process 26: 340000
+Process 27: 340000
+Process 28: 340000
+Process 29: 340000
+Process 30: 340000
+Process 31: 340000
+Process 32: 340000
+Process 33: 340000
+Process 34: 340000
+Process 35: 340000
+Process 36: 340000
+Process 37: 340000
+Process 38: 339984
+Process 39: 339979
+Process 40: 339971
+Process 41: 339972
+Process 42: 339993
+Process 43: 339993
+Process 44: 339993
+Process 45: 339993
+Process 46: 339993
+Process 47: 339993
+Process 48: 339993
+Process 49: 339993
+Process 50: 339993
+Process 51: 339993
+Process 52: 339993
+Process 53: 339993
+Process 54: 339993
+Process 55: 339993
+Process 56: 339993
+Process 57: 339993
+Process 58: 339993
+Process 59: 339993
+Process 60: 339993
+Process 61: 339993
+Process 62: 339993
+Process 63: 339549
+NNZ Per Process Standard Deviation = 55.2316
+
+Incorecct Rows: 0
+14.7192,2.99177,0.000793934,0.0128891,26.663
+Starting Tests on msdoor_expanded
+Process 0: 299582
+Process 1: 299585
+Process 2: 299582
+Process 3: 299574
+Process 4: 299584
+Process 5: 299584
+Process 6: 299584
+Process 7: 299585
+Process 8: 299574
+Process 9: 299583
+Process 10: 299574
+Process 11: 299580
+Process 12: 299574
+Process 13: 299572
+Process 14: 299565
+Process 15: 299565
+Process 16: 299565
+Process 17: 299565
+Process 18: 299565
+Process 19: 299565
+Process 20: 299565
+Process 21: 299565
+Process 22: 299574
+Process 23: 299590
+Process 24: 299574
+Process 25: 299586
+Process 26: 299586
+Process 27: 299586
+Process 28: 299570
+Process 29: 299563
+Process 30: 299599
+Process 31: 299567
+Process 32: 299578
+Process 33: 299578
+Process 34: 299578
+Process 35: 299578
+Process 36: 299578
+Process 37: 299578
+Process 38: 299578
+Process 39: 299578
+Process 40: 299578
+Process 41: 299578
+Process 42: 299578
+Process 43: 299578
+Process 44: 299578
+Process 45: 299578
+Process 46: 299578
+Process 47: 299578
+Process 48: 299578
+Process 49: 299578
+Process 50: 299578
+Process 51: 299578
+Process 52: 299578
+Process 53: 299578
+Process 54: 299578
+Process 55: 299578
+Process 56: 299578
+Process 57: 299578
+Process 58: 299578
+Process 59: 299578
+Process 60: 299578
+Process 61: 299578
+Process 62: 299578
+Process 63: 299578
+NNZ Per Process Standard Deviation = 6.70121
+
+row 72546: -5042.1 != -123554
+row 72547: -9671.81 != 1355.72
+row 251869: -4371 != -254645
+row 251870: 406313 != 74974.7
+row 251871: 35.8933 != -81605.6
+Incorecct Rows: 5
+12.4013,2.98261,0.000752926,0.0100079,22.4196
+Starting Tests on bmw3_2_expanded
+Process 0: 176385
+Process 1: 176384
+Process 2: 176388
+Process 3: 176384
+Process 4: 176395
+Process 5: 176398
+Process 6: 176388
+Process 7: 176399
+Process 8: 176395
+Process 9: 176400
+Process 10: 176366
+Process 11: 176381
+Process 12: 176400
+Process 13: 176400
+Process 14: 176386
+Process 15: 176400
+Process 16: 176398
+Process 17: 176364
+Process 18: 176400
+Process 19: 176400
+Process 20: 176400
+Process 21: 176400
+Process 22: 176400
+Process 23: 176400
+Process 24: 176369
+Process 25: 176400
+Process 26: 176400
+Process 27: 176400
+Process 28: 176400
+Process 29: 176400
+Process 30: 176400
+Process 31: 176400
+Process 32: 176400
+Process 33: 176400
+Process 34: 176400
+Process 35: 176400
+Process 36: 176400
+Process 37: 176400
+Process 38: 176400
+Process 39: 176400
+Process 40: 176400
+Process 41: 176400
+Process 42: 176400
+Process 43: 176400
+Process 44: 176400
+Process 45: 176400
+Process 46: 176400
+Process 47: 176400
+Process 48: 176400
+Process 49: 176400
+Process 50: 176400
+Process 51: 176400
+Process 52: 176400
+Process 53: 176400
+Process 54: 176400
+Process 55: 176400
+Process 56: 176400
+Process 57: 176400
+Process 58: 176400
+Process 59: 176400
+Process 60: 176400
+Process 61: 176400
+Process 62: 176400
+Process 63: 175650
+NNZ Per Process Standard Deviation = 92.9426
+
+Incorecct Rows: 0
+6.88265,2.95821,0.000385761,0.00618839,13.9055
+Starting Tests on BenElechi1_expanded
+Process 0: 205470
+Process 1: 205454
+Process 2: 205470
+Process 3: 205470
+Process 4: 205470
+Process 5: 205470
+Process 6: 205470
+Process 7: 205470
+Process 8: 205470
+Process 9: 205470
+Process 10: 205470
+Process 11: 205470
+Process 12: 205470
+Process 13: 205470
+Process 14: 205470
+Process 15: 205470
+Process 16: 205470
+Process 17: 205470
+Process 18: 205470
+Process 19: 205470
+Process 20: 205470
+Process 21: 205470
+Process 22: 205470
+Process 23: 205470
+Process 24: 205470
+Process 25: 205470
+Process 26: 205470
+Process 27: 205470
+Process 28: 205470
+Process 29: 205470
+Process 30: 205470
+Process 31: 205470
+Process 32: 205470
+Process 33: 205470
+Process 34: 205470
+Process 35: 205470
+Process 36: 205470
+Process 37: 205470
+Process 38: 205470
+Process 39: 205470
+Process 40: 205470
+Process 41: 205470
+Process 42: 205470
+Process 43: 205470
+Process 44: 205470
+Process 45: 205470
+Process 46: 205470
+Process 47: 205470
+Process 48: 205470
+Process 49: 205470
+Process 50: 205470
+Process 51: 205470
+Process 52: 205470
+Process 53: 205470
+Process 54: 205470
+Process 55: 205470
+Process 56: 205470
+Process 57: 205470
+Process 58: 205470
+Process 59: 205470
+Process 60: 205470
+Process 61: 205470
+Process 62: 205470
+Process 63: 205470
+NNZ Per Process Standard Deviation = 1.98431
+
+row 83661: 336.321 != 0
+row 83662: 172.556 != 0
+row 83663: 371.398 != 0
+row 83664: -0.144371 != 0
+row 83665: 0.969856 != 0
+row 83666: 3.04408 != 0
+row 83667: 336.171 != 0
+row 83668: 180.62 != 0
+Incorecct Rows: 8
+7.75077,2.92255,0.000633001,0.00686836,15.659
+Starting Tests on t3dh_expanded
+Process 0: 68000
+Process 1: 67990
+Process 2: 67990
+Process 3: 67990
+Process 4: 67990
+Process 5: 67990
+Process 6: 68014
+Process 7: 68000
+Process 8: 68000
+Process 9: 68000
+Process 10: 68019
+Process 11: 67983
+Process 12: 67983
+Process 13: 67983
+Process 14: 67983
+Process 15: 67983
+Process 16: 67983
+Process 17: 67983
+Process 18: 67983
+Process 19: 67983
+Process 20: 67983
+Process 21: 67983
+Process 22: 67983
+Process 23: 67983
+Process 24: 67983
+Process 25: 67983
+Process 26: 67983
+Process 27: 67983
+Process 28: 67983
+Process 29: 67983
+Process 30: 67983
+Process 31: 67983
+Process 32: 67983
+Process 33: 67983
+Process 34: 67983
+Process 35: 67983
+Process 36: 67983
+Process 37: 67983
+Process 38: 67983
+Process 39: 67983
+Process 40: 67983
+Process 41: 67983
+Process 42: 67983
+Process 43: 67983
+Process 44: 67983
+Process 45: 67983
+Process 46: 67983
+Process 47: 67983
+Process 48: 67983
+Process 49: 67983
+Process 50: 68000
+Process 51: 67980
+Process 52: 67980
+Process 53: 67980
+Process 54: 67980
+Process 55: 67980
+Process 56: 67980
+Process 57: 67980
+Process 58: 67980
+Process 59: 67980
+Process 60: 67980
+Process 61: 67980
+Process 62: 67980
+Process 63: 67980
+NNZ Per Process Standard Deviation = 7.62577
+
+Incorecct Rows: 0
+2.67582,2.84812,0.000617743,0.00282145,7.25848
+Starting Tests on F2_expanded
+Process 0: 82718
+Process 1: 82727
+Process 2: 82743
+Process 3: 82718
+Process 4: 82740
+Process 5: 82740
+Process 6: 82740
+Process 7: 82734
+Process 8: 82699
+Process 9: 82728
+Process 10: 82728
+Process 11: 82728
+Process 12: 82728
+Process 13: 82728
+Process 14: 82728
+Process 15: 82704
+Process 16: 82707
+Process 17: 82707
+Process 18: 82707
+Process 19: 82707
+Process 20: 82707
+Process 21: 82736
+Process 22: 82700
+Process 23: 82698
+Process 24: 82720
+Process 25: 82731
+Process 26: 82731
+Process 27: 82731
+Process 28: 82731
+Process 29: 82731
+Process 30: 82731
+Process 31: 82731
+Process 32: 82731
+Process 33: 82731
+Process 34: 82731
+Process 35: 82731
+Process 36: 82731
+Process 37: 82731
+Process 38: 82731
+Process 39: 82731
+Process 40: 82700
+Process 41: 82725
+Process 42: 82725
+Process 43: 82725
+Process 44: 82725
+Process 45: 82725
+Process 46: 82725
+Process 47: 82725
+Process 48: 82725
+Process 49: 82725
+Process 50: 82725
+Process 51: 82725
+Process 52: 82725
+Process 53: 82725
+Process 54: 82725
+Process 55: 82725
+Process 56: 82725
+Process 57: 82725
+Process 58: 82725
+Process 59: 82725
+Process 60: 82725
+Process 61: 82725
+Process 62: 82725
+Process 63: 82650
+NNZ Per Process Standard Deviation = 13.7252
+
+Incorecct Rows: 0
+3.1603,2.8551,0.000310898,0.00269604,8.02159
+Starting Tests on consph_expanded
+Process 0: 93914
+Process 1: 93912
+Process 2: 93912
+Process 3: 93912
+Process 4: 93912
+Process 5: 93902
+Process 6: 93915
+Process 7: 93915
+Process 8: 93903
+Process 9: 93906
+Process 10: 93885
+Process 11: 93888
+Process 12: 93888
+Process 13: 93888
+Process 14: 93888
+Process 15: 93888
+Process 16: 93888
+Process 17: 93878
+Process 18: 93878
+Process 19: 93878
+Process 20: 93878
+Process 21: 93878
+Process 22: 93878
+Process 23: 93878
+Process 24: 93878
+Process 25: 93878
+Process 26: 93878
+Process 27: 93878
+Process 28: 93878
+Process 29: 93878
+Process 30: 93878
+Process 31: 93878
+Process 32: 93878
+Process 33: 93878
+Process 34: 93878
+Process 35: 93878
+Process 36: 93878
+Process 37: 93878
+Process 38: 93878
+Process 39: 93878
+Process 40: 93878
+Process 41: 93878
+Process 42: 93878
+Process 43: 93878
+Process 44: 93878
+Process 45: 93878
+Process 46: 93878
+Process 47: 93878
+Process 48: 93878
+Process 49: 93878
+Process 50: 93878
+Process 51: 93878
+Process 52: 93878
+Process 53: 93878
+Process 54: 93878
+Process 55: 93878
+Process 56: 93878
+Process 57: 93878
+Process 58: 93878
+Process 59: 93878
+Process 60: 93878
+Process 61: 93878
+Process 62: 93878
+Process 63: 93878
+NNZ Per Process Standard Deviation = 11.8027
+
+row 15683: -1.1946e-13 != -9.90108
+row 15684: -7.93254e-14 != -5.39897
+row 15685: 2.09166e-13 != -4.61321
+row 15686: -4.52971e-14 != -10.1738
+row 15687: 9.80917e-14 != -4.88845
+row 15688: 4.02345e-13 != -4.74573
+row 15692: 5.00044e-13 != -10.8963
+row 15693: -3.26905e-13 != -3.96559
+row 15694: -4.94271e-13 != -4.9509
+row 49515: 2.6489e-11 != -7188.63
+row 49516: -8.45972e-11 != -4725.76
+row 49517: -7.54881e-11 != -6434.19
+row 49518: -2.13731e-11 != -7338.43
+row 49519: 6.06803e-12 != -5099.96
+row 49527: 1.41199e-10 != -3505.56
+row 49528: 1.93452e-10 != -3128.5
+row 49529: 1.78716e-10 != -7694.6
+row 49536: -5.22959e-11 != -4928.99
+row 49537: -2.79101e-11 != -871.106
+row 49538: -2.66027e-11 != -5470.41
+row 49539: -1.41313e-10 != -5117.74
+row 49540: 1.46656e-11 != -1178.28
+row 49541: -7.28733e-11 != -5699.76
+row 49542: -1.95541e-11 != -5313.2
+row 49543: 6.56541e-11 != -1513.73
+row 61141: 1.20309e-10 != -6612.34
+Incorecct Rows: 26
+3.62771,2.98812,0.000587225,0.00290298,8.84299
+Starting Tests on SiO2_expanded
+Process 0: 176305
+Process 1: 176297
+Process 2: 176293
+Process 3: 176302
+Process 4: 176297
+Process 5: 176289
+Process 6: 176315
+Process 7: 176291
+Process 8: 176309
+Process 9: 176292
+Process 10: 176294
+Process 11: 176305
+Process 12: 176305
+Process 13: 176305
+Process 14: 176305
+Process 15: 176305
+Process 16: 176305
+Process 17: 176305
+Process 18: 176305
+Process 19: 176305
+Process 20: 176305
+Process 21: 176305
+Process 22: 176305
+Process 23: 176305
+Process 24: 176305
+Process 25: 176305
+Process 26: 176305
+Process 27: 176305
+Process 28: 176305
+Process 29: 176291
+Process 30: 176338
+Process 31: 176295
+Process 32: 176295
+Process 33: 176295
+Process 34: 176295
+Process 35: 176295
+Process 36: 176295
+Process 37: 176295
+Process 38: 176295
+Process 39: 176295
+Process 40: 176295
+Process 41: 176295
+Process 42: 176295
+Process 43: 176295
+Process 44: 176295
+Process 45: 176295
+Process 46: 176295
+Process 47: 176295
+Process 48: 176295
+Process 49: 176295
+Process 50: 176295
+Process 51: 176295
+Process 52: 176295
+Process 53: 176295
+Process 54: 176295
+Process 55: 176295
+Process 56: 176295
+Process 57: 176295
+Process 58: 176295
+Process 59: 176295
+Process 60: 176295
+Process 61: 176295
+Process 62: 176295
+Process 63: 176295
+NNZ Per Process Standard Deviation = 7.33563
+
+row 60001: -1.09301 != -3.56964
+row 60002: -1.26651 != -3.74355
+row 60005: -1.63044 != -4.12179
+row 60007: -1.44808 != -0.871072
+row 60393: -2.66727 != 13.8011
+row 60586: -1.33282 != 28.9322
+row 63881: -2.12644 != -2.01817
+row 67057: -1.30481 != -0.696289
+row 67458: -2.08046 != -2.28272
+row 67460: -2.13036 != 13.9416
+row 70268: -1.30055 != -33.1765
+row 73892: -1.4911 != -1.67722
+row 74297: -1.22761 != -0.632588
+row 74299: -2.14343 != -2.28553
+row 77334: -2.12633 != -1.65068
+row 84537: -1.98038 != -4.66416
+row 87870: -2.13036 != 14.4532
+row 88012: -1.56704 != 15.5084
+row 88133: -1.23642 != -4.21524
+row 91451: -1.94662 != -4.75263
+row 91790: -1.54052 != -30.7535
+row 94742: -1.89458 != 14.6638
+row 95328: -1.26651 != -28.2072
+row 101684: -5.47592 != -5.75317
+Incorecct Rows: 24
+6.84811,2.89834,0.134875,0.00441527,14.194
+Starting Tests on torso1_expanded
+Process 0: 264325
+Process 1: 264333
+Process 2: 264333
+Process 3: 264333
+Process 4: 264333
+Process 5: 264333
+Process 6: 264333
+Process 7: 264316
+Process 8: 264399
+Process 9: 264260
+Process 10: 264260
+Process 11: 264260
+Process 12: 264260
+Process 13: 264260
+Process 14: 264260
+Process 15: 264260
+Process 16: 264260
+Process 17: 264260
+Process 18: 264260
+Process 19: 264260
+Process 20: 264260
+Process 21: 264260
+Process 22: 264260
+Process 23: 264260
+Process 24: 264260
+Process 25: 264260
+Process 26: 264260
+Process 27: 264260
+Process 28: 264260
+Process 29: 264260
+Process 30: 264260
+Process 31: 264260
+Process 32: 264260
+Process 33: 264260
+Process 34: 264260
+Process 35: 264260
+Process 36: 264260
+Process 37: 264260
+Process 38: 264260
+Process 39: 264260
+Process 40: 264260
+Process 41: 264260
+Process 42: 264260
+Process 43: 264260
+Process 44: 264260
+Process 45: 264260
+Process 46: 264260
+Process 47: 264260
+Process 48: 264260
+Process 49: 264260
+Process 50: 264260
+Process 51: 264260
+Process 52: 264260
+Process 53: 264260
+Process 54: 264260
+Process 55: 264260
+Process 56: 264260
+Process 57: 264260
+Process 58: 264260
+Process 59: 264260
+Process 60: 264260
+Process 61: 264260
+Process 62: 264260
+Process 63: 264260
+NNZ Per Process Standard Deviation = 28.241
+
+row 4162: -1517.89 != -1417.51
+row 12640: -2042.96 != -1617.72
+row 16708: 2551.19 != 2297.59
+row 20972: -1757.77 != -1827.59
+row 33544: -1969.74 != -1871.68
+row 37713: -1893.57 != -1668.45
+row 37748: -1627.55 != -1583.11
+row 41945: -1457.52 != -1378.4
+row 42025: -51.1041 != -47.0568
+row 50402: -76.3603 != -60.298
+row 50403: -76.8357 != -10.5055
+row 50419: -76.8333 != -67.4849
+row 83381: -215.658 != -193.996
+row 87380: -1851.58 != -1596.86
+row 87394: -1624.29 != -1614.48
+row 103767: -1678.95 != -1681.66
+row 103768: -1654.06 != -1672.59
+row 103769: -1630.2 != -1553.06
+row 103775: -1560.97 != -1474.21
+row 111935: -137.457 != -116.878
+row 116081: -5.01155 != -71.5868
+row 116154: -5.43206 != -6.52166
+row 116155: -6.1666 != 26.8682
+row 116156: -7.72387 != 160.067
+Incorecct Rows: 24
+10.6953,3.01431,0.000797033,0.00372791,19.9392
+Starting Tests on dielFilterV3real
+Process 0: 706318
+Process 1: 706321
+Process 2: 706323
+Process 3: 706323
+Process 4: 706322
+Process 5: 706326
+Process 6: 706321
+Process 7: 706327
+Process 8: 706314
+Process 9: 706312
+Process 10: 706314
+Process 11: 706313
+Process 12: 706322
+Process 13: 706314
+Process 14: 706313
+Process 15: 706329
+Process 16: 706320
+Process 17: 706316
+Process 18: 706323
+Process 19: 706335
+Process 20: 706308
+Process 21: 706330
+Process 22: 706316
+Process 23: 706320
+Process 24: 706315
+Process 25: 706318
+Process 26: 706306
+Process 27: 706323
+Process 28: 706325
+Process 29: 706307
+Process 30: 706307
+Process 31: 706307
+Process 32: 706307
+Process 33: 706307
+Process 34: 706307
+Process 35: 706307
+Process 36: 706307
+Process 37: 706307
+Process 38: 706307
+Process 39: 706307
+Process 40: 706307
+Process 41: 706307
+Process 42: 706307
+Process 43: 706307
+Process 44: 706307
+Process 45: 706307
+Process 46: 706307
+Process 47: 706307
+Process 48: 706307
+Process 49: 706307
+Process 50: 706307
+Process 51: 706307
+Process 52: 706307
+Process 53: 706307
+Process 54: 706307
+Process 55: 706307
+Process 56: 706307
+Process 57: 706307
+Process 58: 706307
+Process 59: 706307
+Process 60: 706307
+Process 61: 706307
+Process 62: 706307
+Process 63: 706307
+NNZ Per Process Standard Deviation = 7.63396
+
+row 718106: 0.149282 != 0.4087
+row 718110: 0.678794 != 1.09388
+row 718111: 0.784162 != 1.09852
+Incorecct Rows: 3
+33.222,3.25061,0.00136256,0.0275733,55.5648
+Starting Tests on RM07R
+Process 0: 585391
+Process 1: 585400
+Process 2: 585390
+Process 3: 585390
+Process 4: 585390
+Process 5: 585390
+Process 6: 585390
+Process 7: 585394
+Process 8: 585392
+Process 9: 585382
+Process 10: 585409
+Process 11: 585403
+Process 12: 585403
+Process 13: 585403
+Process 14: 585403
+Process 15: 585403
+Process 16: 585403
+Process 17: 585423
+Process 18: 585390
+Process 19: 585390
+Process 20: 585382
+Process 21: 585387
+Process 22: 585387
+Process 23: 585387
+Process 24: 585387
+Process 25: 585387
+Process 26: 585387
+Process 27: 585387
+Process 28: 585387
+Process 29: 585387
+Process 30: 585387
+Process 31: 585387
+Process 32: 585387
+Process 33: 585387
+Process 34: 585387
+Process 35: 585387
+Process 36: 585387
+Process 37: 585387
+Process 38: 585387
+Process 39: 585387
+Process 40: 585387
+Process 41: 585387
+Process 42: 585387
+Process 43: 585387
+Process 44: 585387
+Process 45: 585387
+Process 46: 585387
+Process 47: 585387
+Process 48: 585387
+Process 49: 585387
+Process 50: 585387
+Process 51: 585387
+Process 52: 585387
+Process 53: 585387
+Process 54: 585387
+Process 55: 585387
+Process 56: 585387
+Process 57: 585387
+Process 58: 585387
+Process 59: 585387
+Process 60: 585387
+Process 61: 585387
+Process 62: 585387
+Process 63: 585387
+NNZ Per Process Standard Deviation = 6.95964
+
+Incorecct Rows: 0
+24.2317,3.09887,0.00127077,0.0095861,42.0234
+Starting Tests on m_t1_expanded
+Process 0: 152412
+Process 1: 152412
+Process 2: 152412
+Process 3: 152397
+Process 4: 152411
+Process 5: 152416
+Process 6: 152424
+Process 7: 152400
+Process 8: 152412
+Process 9: 152412
+Process 10: 152412
+Process 11: 152412
+Process 12: 152412
+Process 13: 152412
+Process 14: 152412
+Process 15: 152412
+Process 16: 152412
+Process 17: 152412
+Process 18: 152412
+Process 19: 152412
+Process 20: 152412
+Process 21: 152412
+Process 22: 152412
+Process 23: 152412
+Process 24: 152412
+Process 25: 152412
+Process 26: 152412
+Process 27: 152412
+Process 28: 152412
+Process 29: 152412
+Process 30: 152370
+Process 31: 152376
+Process 32: 152376
+Process 33: 152436
+Process 34: 152424
+Process 35: 152382
+Process 36: 152370
+Process 37: 152424
+Process 38: 152448
+Process 39: 152416
+Process 40: 152400
+Process 41: 152400
+Process 42: 152400
+Process 43: 152400
+Process 44: 152400
+Process 45: 152400
+Process 46: 152400
+Process 47: 152400
+Process 48: 152400
+Process 49: 152400
+Process 50: 152400
+Process 51: 152400
+Process 52: 152400
+Process 53: 152400
+Process 54: 152400
+Process 55: 152400
+Process 56: 152400
+Process 57: 152400
+Process 58: 152400
+Process 59: 152400
+Process 60: 152400
+Process 61: 152400
+Process 62: 152400
+Process 63: 152000
+NNZ Per Process Standard Deviation = 51.9663
+
+Incorecct Rows: 0
+5.57012,2.87813,0.000604868,0.00332165,12.0259
+Starting Tests on crankseg_2_expanded
+Process 0: 221097
+Process 1: 221102
+Process 2: 221073
+Process 3: 221036
+Process 4: 221112
+Process 5: 221073
+Process 6: 221061
+Process 7: 221049
+Process 8: 221067
+Process 9: 221076
+Process 10: 221130
+Process 11: 221040
+Process 12: 221127
+Process 13: 221088
+Process 14: 221079
+Process 15: 221103
+Process 16: 221013
+Process 17: 220998
+Process 18: 221049
+Process 19: 221013
+Process 20: 221072
+Process 21: 221031
+Process 22: 221028
+Process 23: 221118
+Process 24: 221001
+Process 25: 221145
+Process 26: 220992
+Process 27: 220983
+Process 28: 221130
+Process 29: 221130
+Process 30: 221130
+Process 31: 221101
+Process 32: 220991
+Process 33: 221148
+Process 34: 221112
+Process 35: 221112
+Process 36: 221112
+Process 37: 221112
+Process 38: 221112
+Process 39: 221112
+Process 40: 221112
+Process 41: 221112
+Process 42: 221112
+Process 43: 221112
+Process 44: 221112
+Process 45: 221112
+Process 46: 221112
+Process 47: 221112
+Process 48: 221112
+Process 49: 221112
+Process 50: 221112
+Process 51: 221112
+Process 52: 221112
+Process 53: 221112
+Process 54: 221112
+Process 55: 221112
+Process 56: 221112
+Process 57: 221112
+Process 58: 221112
+Process 59: 221112
+Process 60: 221112
+Process 61: 221112
+Process 62: 221112
+Process 63: 220224
+NNZ Per Process Standard Deviation = 114.904
+
+row 5863: -7.44003e+07 != -7.98016e+07
+row 6416: 606371 != 4.36433e+06
+Incorecct Rows: 2
+7.65214,2.91799,0.000368357,0.00172853,15.6094
+Starting Tests on nd24k_expanded
+Process 0: 448694
+Process 1: 448688
+Process 2: 448682
+Process 3: 448658
+Process 4: 448659
+Process 5: 448684
+Process 6: 448799
+Process 7: 448802
+Process 8: 448713
+Process 9: 448727
+Process 10: 448624
+Process 11: 448818
+Process 12: 448746
+Process 13: 448792
+Process 14: 448632
+Process 15: 448834
+Process 16: 448773
+Process 17: 448650
+Process 18: 448757
+Process 19: 448724
+Process 20: 448565
+Process 21: 448641
+Process 22: 448875
+Process 23: 448875
+Process 24: 448875
+Process 25: 448875
+Process 26: 448875
+Process 27: 448875
+Process 28: 448875
+Process 29: 448875
+Process 30: 448875
+Process 31: 448875
+Process 32: 448875
+Process 33: 448875
+Process 34: 448875
+Process 35: 448875
+Process 36: 448875
+Process 37: 448875
+Process 38: 448875
+Process 39: 448875
+Process 40: 448875
+Process 41: 448875
+Process 42: 448875
+Process 43: 448875
+Process 44: 448875
+Process 45: 448875
+Process 46: 448875
+Process 47: 448875
+Process 48: 448875
+Process 49: 448875
+Process 50: 448875
+Process 51: 448875
+Process 52: 448875
+Process 53: 448875
+Process 54: 448875
+Process 55: 448875
+Process 56: 448875
+Process 57: 448875
+Process 58: 448875
+Process 59: 448875
+Process 60: 448875
+Process 61: 448875
+Process 62: 448875
+Process 63: 440097
+NNZ Per Process Standard Deviation = 1085.11
+
+Incorecct Rows: 0
+17.1597,3.00706,0.000594378,0.00277758,30.8424
+Starting Tests on TSOPF_RS_b2383
+Process 0: 252734
+Process 1: 252700
+Process 2: 252700
+Process 3: 252700
+Process 4: 252700
+Process 5: 252700
+Process 6: 252700
+Process 7: 252700
+Process 8: 252885
+Process 9: 252875
+Process 10: 252875
+Process 11: 252875
+Process 12: 252875
+Process 13: 252875
+Process 14: 252875
+Process 15: 252875
+Process 16: 252875
+Process 17: 252875
+Process 18: 252875
+Process 19: 252875
+Process 20: 252875
+Process 21: 252875
+Process 22: 252875
+Process 23: 252875
+Process 24: 252875
+Process 25: 252875
+Process 26: 252875
+Process 27: 252875
+Process 28: 252875
+Process 29: 252875
+Process 30: 252875
+Process 31: 252875
+Process 32: 252875
+Process 33: 252875
+Process 34: 252875
+Process 35: 252875
+Process 36: 252875
+Process 37: 252875
+Process 38: 252875
+Process 39: 252875
+Process 40: 252875
+Process 41: 252875
+Process 42: 252875
+Process 43: 252875
+Process 44: 252875
+Process 45: 252875
+Process 46: 252875
+Process 47: 252875
+Process 48: 252875
+Process 49: 252875
+Process 50: 252875
+Process 51: 252875
+Process 52: 252875
+Process 53: 252875
+Process 54: 252875
+Process 55: 252875
+Process 56: 252875
+Process 57: 252875
+Process 58: 252875
+Process 59: 252875
+Process 60: 252875
+Process 61: 252875
+Process 62: 252875
+Process 63: 241400
+NNZ Per Process Standard Deviation = 1421.58
+
+Incorecct Rows: 0
+9.82528,2.94229,0.000710249,0.00114918,19.5652
+Starting Tests on mouse_gene_expanded
+Process 0: 452586
+Process 1: 452598
+Process 2: 452532
+Process 3: 452551
+Process 4: 452606
+Process 5: 452668
+Process 6: 452673
+Process 7: 452787
+Process 8: 452627
+Process 9: 452559
+Process 10: 452609
+Process 11: 452549
+Process 12: 452386
+Process 13: 452398
+Process 14: 452777
+Process 15: 452623
+Process 16: 452360
+Process 17: 452732
+Process 18: 452573
+Process 19: 452458
+Process 20: 452672
+Process 21: 452672
+Process 22: 452672
+Process 23: 452672
+Process 24: 452672
+Process 25: 452672
+Process 26: 452672
+Process 27: 452672
+Process 28: 452672
+Process 29: 452672
+Process 30: 452672
+Process 31: 452672
+Process 32: 452672
+Process 33: 452672
+Process 34: 452672
+Process 35: 452672
+Process 36: 452672
+Process 37: 452672
+Process 38: 452672
+Process 39: 452672
+Process 40: 452672
+Process 41: 452672
+Process 42: 452672
+Process 43: 452672
+Process 44: 452672
+Process 45: 452672
+Process 46: 452672
+Process 47: 452672
+Process 48: 452672
+Process 49: 452672
+Process 50: 452672
+Process 51: 452672
+Process 52: 452672
+Process 53: 452672
+Process 54: 452672
+Process 55: 452672
+Process 56: 452672
+Process 57: 452672
+Process 58: 452672
+Process 59: 452672
+Process 60: 452672
+Process 61: 452672
+Process 62: 452672
+Process 63: 450743
+NNZ Per Process Standard Deviation = 247.822
+
+row 308: 159.977 != 150.292
+row 373: 72.5976 != 45.9975
+row 509: 49.3103 != 48.1787
+row 628: 103.332 != 101.841
+row 964: 63.5639 != 44.9069
+row 1028: 101.78 != 95.9528
+row 1636: 152.905 != 125.036
+row 6684: 237.689 != 215.044
+row 8039: 111.285 != 107.547
+row 10312: 154.036 != 149.202
+row 11019: 57.6948 != 41.627
+row 11214: 78.8155 != 54.7622
+row 11867: 85.3907 != 78.3043
+row 11881: 137.388 != 134.44
+row 11894: 138.172 != 137.544
+row 11936: 143.516 != 124.511
+row 12091: 132.228 != 126.109
+row 12101: 132.361 != 112.406
+row 12138: 80.8855 != 76.1756
+row 12164: 65.4921 != 51.4965
+row 12365: 75.632 != 55.6496
+row 12613: 92.84 != 76.2686
+row 12651: 81.6786 != 64.7979
+row 12880: 80.5044 != 80.0424
+row 13281: 48.4956 != 46.1554
+row 15051: 86.7167 != 61.596
+row 15176: 116.551 != 96.2417
+row 22508: 224.152 != 203.026
+row 33461: 42.0109 != 24.3223
+row 38098: 139.966 != 135.72
+row 39830: 149.188 != 129.201
+row 39962: 129.721 != 123.194
+row 40078: 171.11 != 151.128
+row 40590: 84.5011 != 65.1647
+row 43814: 61.304 != 46.0455
+Incorecct Rows: 35
+19.5906,3.00726,0.00106978,0.00134516,33.256
+Starting Tests on human_gene1_expanded
+Process 0: 385522
+Process 1: 385568
+Process 2: 385371
+Process 3: 385578
+Process 4: 385325
+Process 5: 385462
+Process 6: 385294
+Process 7: 385401
+Process 8: 385513
+Process 9: 385398
+Process 10: 385311
+Process 11: 385485
+Process 12: 385240
+Process 13: 385479
+Process 14: 385483
+Process 15: 385303
+Process 16: 385469
+Process 17: 385668
+Process 18: 385813
+Process 19: 384992
+Process 20: 385253
+Process 21: 385665
+Process 22: 385538
+Process 23: 385584
+Process 24: 385584
+Process 25: 385584
+Process 26: 385584
+Process 27: 385584
+Process 28: 385584
+Process 29: 385584
+Process 30: 385584
+Process 31: 385584
+Process 32: 385584
+Process 33: 385584
+Process 34: 385584
+Process 35: 385584
+Process 36: 385584
+Process 37: 385584
+Process 38: 385584
+Process 39: 385584
+Process 40: 385584
+Process 41: 385584
+Process 42: 385584
+Process 43: 385584
+Process 44: 385584
+Process 45: 385584
+Process 46: 385584
+Process 47: 385584
+Process 48: 385584
+Process 49: 385584
+Process 50: 385584
+Process 51: 385584
+Process 52: 385584
+Process 53: 385584
+Process 54: 385584
+Process 55: 385584
+Process 56: 385584
+Process 57: 385584
+Process 58: 385584
+Process 59: 385584
+Process 60: 385584
+Process 61: 385584
+Process 62: 385584
+Process 63: 381152
+NNZ Per Process Standard Deviation = 556.794
+
+row 171: 267.958 != 232.766
+row 239: 316.988 != 263.405
+row 297: 140.754 != 115.279
+row 336: 153.821 != 131.298
+row 382: 209.646 != 189.77
+row 457: 150.419 != 123.47
+row 571: 277.355 != 235.475
+row 585: 241.202 != 219.462
+row 640: 326.374 != 287.81
+row 1255: 172.597 != 135.758
+row 1516: 117.831 != 70.376
+row 3228: 210.308 != 196.524
+row 4422: 167.74 != 122.726
+row 5666: 196.046 != 166.608
+row 6251: 269.734 != 263.299
+row 6316: 182.729 != 149.104
+row 6937: 256.564 != 204.706
+row 7525: 187.458 != 141.329
+row 7768: 348.707 != 292.062
+row 8627: 143.543 != 99.3037
+row 10380: 194.287 != 147.124
+row 11273: 345.907 != 289.378
+row 11780: 170.357 != 142.932
+row 14665: 230.41 != 211.16
+row 14883: 252.724 != 235.563
+row 15700: 207.274 != 160.401
+row 15940: 239 != 191.13
+row 16412: 337.943 != 279.425
+row 16601: 287.693 != 274.564
+row 16699: 190.694 != 179.643
+row 16705: 155.448 != 149.802
+row 16710: 147.725 != 137.814
+row 16742: 136.492 != 96.4997
+row 16755: 228.971 != 208.725
+row 16763: 174.197 != 171.86
+row 16939: 211.24 != 161.29
+row 17197: 347.201 != 293.558
+row 19635: 132.347 != 129.93
+row 20269: 317.576 != 269.844
+row 20729: 351.461 != 325.849
+row 21184: 192.251 != 173.096
+row 21260: 136.213 != 110.496
+row 21269: 292.094 != 253.277
+row 21314: 213.888 != 199.036
+row 21632: 258.5 != 225.824
+row 21691: 190.763 != 159.812
+row 22097: 256.884 != 237.53
+Incorecct Rows: 47
+13.7753,2.97009,0.000705957,0.000807524,25.7896

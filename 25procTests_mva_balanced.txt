@@ -1,0 +1,862 @@
+Starting Tests on atmosmodd
+Process 0: 352598
+Process 1: 352593
+Process 2: 352597
+Process 3: 352597
+Process 4: 352597
+Process 5: 352597
+Process 6: 352597
+Process 7: 352597
+Process 8: 352597
+Process 9: 352597
+Process 10: 352597
+Process 11: 352597
+Process 12: 352597
+Process 13: 352597
+Process 14: 352597
+Process 15: 352597
+Process 16: 352597
+Process 17: 352597
+Process 18: 352597
+Process 19: 352597
+Process 20: 352597
+Process 21: 352597
+Process 22: 352597
+Process 23: 352597
+Process 24: 352555
+NNZ Per Process Standard Deviation = 8.24621
+
+Incorecct Rows: 0
+6.79489,1.1018,0.000559092,0.0224521,11.0105
+Starting Tests on parabolic_fem_expanded
+Process 0: 146982
+Process 1: 146986
+Process 2: 146986
+Process 3: 146986
+Process 4: 146986
+Process 5: 146986
+Process 6: 146986
+Process 7: 146986
+Process 8: 146986
+Process 9: 146986
+Process 10: 146986
+Process 11: 146986
+Process 12: 146986
+Process 13: 146986
+Process 14: 146986
+Process 15: 146986
+Process 16: 146986
+Process 17: 146986
+Process 18: 146986
+Process 19: 146986
+Process 20: 146986
+Process 21: 146986
+Process 22: 146986
+Process 23: 146986
+Process 24: 146965
+NNZ Per Process Standard Deviation = 4.15692
+
+Incorecct Rows: 0
+3.10307,1.04941,0.000363588,0.00988579,5.56743
+Starting Tests on rajat30
+Process 0: 247015
+Process 1: 247015
+Process 2: 247015
+Process 3: 247015
+Process 4: 247015
+Process 5: 247014
+Process 6: 247019
+Process 7: 247017
+Process 8: 247016
+Process 9: 247016
+Process 10: 247016
+Process 11: 247012
+Process 12: 247019
+Process 13: 247020
+Process 14: 247020
+Process 15: 247020
+Process 16: 247020
+Process 17: 247020
+Process 18: 247020
+Process 19: 247020
+Process 20: 247020
+Process 21: 247020
+Process 22: 247020
+Process 23: 247020
+Process 24: 246820
+NNZ Per Process Standard Deviation = 38.8137
+
+row 30: 1.20942e-09 != 399.477
+row 43: 6.55537e-08 != -5371.94
+row 57: -1 != 9825.84
+row 89: -1.19933e-11 != 2.9185
+row 543551: -0.998482 != 28.3389
+row 543552: 1 != -2531.98
+Incorecct Rows: 6
+5.00012,1.06887,0.000693083,0.0119393,8.46316
+Starting Tests on CurlCurl_3_expanded
+Process 0: 541785
+Process 1: 541780
+Process 2: 541783
+Process 3: 541783
+Process 4: 541783
+Process 5: 541783
+Process 6: 541783
+Process 7: 541783
+Process 8: 541783
+Process 9: 541783
+Process 10: 541783
+Process 11: 541783
+Process 12: 541783
+Process 13: 541783
+Process 14: 541783
+Process 15: 541783
+Process 16: 541783
+Process 17: 541783
+Process 18: 541783
+Process 19: 541783
+Process 20: 541783
+Process 21: 541788
+Process 22: 541788
+Process 23: 541788
+Process 24: 541788
+NNZ Per Process Standard Deviation = 1.98555
+
+row 295079: -1.43051e-06 != -1.32629e+09
+row 536924: 3.33786e-06 != -2.25469e+09
+Incorecct Rows: 2
+8.75698,1.11946,0.00168562,0.0216641,14.7628
+Starting Tests on offshore_expanded
+Process 0: 169708
+Process 1: 169709
+Process 2: 169702
+Process 3: 169702
+Process 4: 169702
+Process 5: 169702
+Process 6: 169714
+Process 7: 169712
+Process 8: 169712
+Process 9: 169712
+Process 10: 169712
+Process 11: 169712
+Process 12: 169712
+Process 13: 169712
+Process 14: 169712
+Process 15: 169712
+Process 16: 169706
+Process 17: 169711
+Process 18: 169711
+Process 19: 169711
+Process 20: 169711
+Process 21: 169711
+Process 22: 169711
+Process 23: 169711
+Process 24: 169643
+NNZ Per Process Standard Deviation = 13.5467
+
+row 225290: 6.47587e+14 != 6.47587e+14
+row 225993: 7.20173e+14 != 7.20173e+14
+row 226249: 9.83942e+14 != 9.83942e+14
+row 226431: 8.8447e+14 != 8.8447e+14
+row 226595: 6.29368e+14 != 6.29368e+14
+row 226702: 7.09382e+14 != 7.09382e+14
+row 227109: 7.75651e+14 != 7.75651e+14
+row 227305: 5.78798e+14 != 5.78798e+14
+row 227388: 6.87139e+14 != 6.87139e+14
+row 227812: 6.40901e+14 != 6.40901e+14
+row 227840: 6.19997e+14 != 6.19997e+14
+row 227900: 5.79075e+14 != 5.79075e+14
+row 227911: 7.46416e+14 != 7.46416e+14
+row 228388: 5.39611e+14 != 5.39611e+14
+row 228963: 6.48583e+14 != 6.48583e+14
+row 229120: 4.36085e+14 != 4.36085e+14
+row 229908: 3.03511e+14 != 3.03511e+14
+row 229935: 3.66814e+14 != 3.66814e+14
+row 230174: 7.10699e+14 != 7.10699e+14
+row 230224: 8.76455e+14 != 8.76455e+14
+row 230359: 6.23114e+14 != 6.23114e+14
+row 230376: 6.19692e+14 != 6.19692e+14
+row 230386: 7.46087e+14 != 7.46087e+14
+row 230512: 5.58775e+14 != 5.58775e+14
+row 230551: 6.47276e+14 != 6.47276e+14
+row 230581: 6.86457e+14 != 6.86457e+14
+row 230586: 5.96754e+13 != 5.96754e+13
+row 230616: 5.44308e+14 != 5.44308e+14
+row 230878: 6.16736e+14 != 6.16736e+14
+row 230956: 3.19268e+14 != 3.19268e+14
+row 230992: 5.66137e+14 != 5.66137e+14
+row 231035: 6.17723e+14 != 6.17723e+14
+row 231088: 3.42639e+14 != 3.42639e+14
+row 231096: 6.25416e+14 != 6.25416e+14
+row 231199: 6.12192e+14 != 6.12192e+14
+row 231415: 5.23185e+14 != 5.23185e+14
+row 231597: 7.06637e+14 != 7.06637e+14
+row 231853: 6.03997e+14 != 6.03997e+14
+row 231928: 5.95172e+14 != 5.95172e+14
+row 231945: 5.68762e+14 != 5.68762e+14
+row 231982: 6.58212e+14 != 6.58212e+14
+row 231995: 5.97501e+14 != 5.97501e+14
+row 232007: 5.95028e+14 != 5.95028e+14
+row 232015: 3.71435e+14 != 3.71435e+14
+row 232063: 5.72466e+14 != 5.72466e+14
+row 232110: 4.10374e+14 != 4.10374e+14
+row 232145: 3.96203e+14 != 3.96203e+14
+row 232268: 5.9757e+14 != 5.9757e+14
+row 232359: 3.95792e+14 != 3.95792e+14
+row 232582: 6.23566e+14 != 6.23566e+14
+Incorecct Rows: 97
+2.74227,1.04713,0.000560522,0.005301,5.36596
+Starting Tests on FEM_3D_thermal2
+Process 0: 139572
+Process 1: 139572
+Process 2: 139572
+Process 3: 139572
+Process 4: 139572
+Process 5: 139572
+Process 6: 139572
+Process 7: 139572
+Process 8: 139572
+Process 9: 139584
+Process 10: 139584
+Process 11: 139584
+Process 12: 139584
+Process 13: 139584
+Process 14: 139584
+Process 15: 139584
+Process 16: 139584
+Process 17: 139584
+Process 18: 139584
+Process 19: 139584
+Process 20: 139584
+Process 21: 139584
+Process 22: 139584
+Process 23: 139584
+Process 24: 139392
+NNZ Per Process Standard Deviation = 37.1806
+
+Incorecct Rows: 0
+2.3398,1.03747,0.000323296,0.00398469,4.79343
+Starting Tests on nlpkkt80_expanded
+Process 0: 1148176
+Process 1: 1148175
+Process 2: 1148175
+Process 3: 1148175
+Process 4: 1148175
+Process 5: 1148175
+Process 6: 1148175
+Process 7: 1148175
+Process 8: 1148175
+Process 9: 1148175
+Process 10: 1148175
+Process 11: 1148175
+Process 12: 1148199
+Process 13: 1148196
+Process 14: 1148196
+Process 15: 1148196
+Process 16: 1148196
+Process 17: 1148196
+Process 18: 1148196
+Process 19: 1148196
+Process 20: 1148196
+Process 21: 1148196
+Process 22: 1148196
+Process 23: 1148196
+Process 24: 636216
+NNZ Per Process Standard Deviation = 100325
+
+Incorecct Rows: 0
+13.663,1.2249,0.00201845,0.0214159,21.3763
+Starting Tests on CO_expanded
+Process 0: 306647
+Process 1: 306639
+Process 2: 306636
+Process 3: 306649
+Process 4: 306631
+Process 5: 306651
+Process 6: 306634
+Process 7: 306635
+Process 8: 306635
+Process 9: 306635
+Process 10: 306635
+Process 11: 306635
+Process 12: 306635
+Process 13: 306635
+Process 14: 306635
+Process 15: 306635
+Process 16: 306635
+Process 17: 306635
+Process 18: 306635
+Process 19: 306635
+Process 20: 306635
+Process 21: 306635
+Process 22: 306635
+Process 23: 306635
+Process 24: 306635
+NNZ Per Process Standard Deviation = 4.7305
+
+row 136936: -0.258534 != -0.00611772
+row 136937: -0.325129 != -0.00611772
+row 136938: -0.413905 != -0.00611772
+row 136939: -0.535985 != -0.00611772
+Incorecct Rows: 4
+6.18086,1.07417,0.00193572,0.00444746,10.0932
+Starting Tests on gsm_106857_expanded
+Process 0: 870355
+Process 1: 870361
+Process 2: 870358
+Process 3: 870356
+Process 4: 870360
+Process 5: 870368
+Process 6: 870343
+Process 7: 870359
+Process 8: 870360
+Process 9: 870360
+Process 10: 870372
+Process 11: 870368
+Process 12: 870368
+Process 13: 870368
+Process 14: 870368
+Process 15: 870374
+Process 16: 870355
+Process 17: 870351
+Process 18: 870351
+Process 19: 870351
+Process 20: 870351
+Process 21: 870351
+Process 22: 870351
+Process 23: 870351
+Process 24: 870314
+NNZ Per Process Standard Deviation = 11.7864
+
+Incorecct Rows: 0
+16.6105,1.15558,0.00147843,0.0106502,27.1154
+Starting Tests on msdoor_expanded
+Process 0: 766925
+Process 1: 766934
+Process 2: 766923
+Process 3: 766942
+Process 4: 766913
+Process 5: 766915
+Process 6: 766920
+Process 7: 766920
+Process 8: 766939
+Process 9: 766930
+Process 10: 766920
+Process 11: 766918
+Process 12: 766947
+Process 13: 766946
+Process 14: 766946
+Process 15: 766946
+Process 16: 766946
+Process 17: 766946
+Process 18: 766946
+Process 19: 766946
+Process 20: 766946
+Process 21: 766946
+Process 22: 766946
+Process 23: 766946
+Process 24: 766711
+NNZ Per Process Standard Deviation = 45.6229
+
+Incorecct Rows: 0
+12.9311,1.13357,0.00136447,0.00780964,21.1721
+Starting Tests on bmw3_2_expanded
+Process 0: 451543
+Process 1: 451557
+Process 2: 451547
+Process 3: 451533
+Process 4: 451561
+Process 5: 451558
+Process 6: 451552
+Process 7: 451536
+Process 8: 451536
+Process 9: 451557
+Process 10: 451550
+Process 11: 451550
+Process 12: 451550
+Process 13: 451550
+Process 14: 451550
+Process 15: 451550
+Process 16: 451550
+Process 17: 451550
+Process 18: 451550
+Process 19: 451550
+Process 20: 451550
+Process 21: 451550
+Process 22: 451550
+Process 23: 451550
+Process 24: 451450
+NNZ Per Process Standard Deviation = 20.445
+
+Incorecct Rows: 0
+7.388,1.08534,0.000773907,0.00465059,12.5348
+Starting Tests on BenElechi1_expanded
+Process 0: 525998
+Process 1: 526014
+Process 2: 526014
+Process 3: 526014
+Process 4: 526014
+Process 5: 526014
+Process 6: 526014
+Process 7: 526014
+Process 8: 526014
+Process 9: 526014
+Process 10: 526014
+Process 11: 526014
+Process 12: 526014
+Process 13: 526014
+Process 14: 526014
+Process 15: 526014
+Process 16: 526014
+Process 17: 526014
+Process 18: 526014
+Process 19: 526014
+Process 20: 526014
+Process 21: 526014
+Process 22: 526014
+Process 23: 526014
+Process 24: 526014
+NNZ Per Process Standard Deviation = 3.13535
+
+row 83666: 3.04408 != 0
+row 83667: 336.171 != 0
+row 83668: 180.62 != 0
+Incorecct Rows: 3
+9.70409,1.09735,0.00128365,0.00490022,15.8
+Starting Tests on t3dh_expanded
+Process 0: 174080
+Process 1: 174096
+Process 2: 174092
+Process 3: 174084
+Process 4: 174082
+Process 5: 174063
+Process 6: 174063
+Process 7: 174063
+Process 8: 174063
+Process 9: 174063
+Process 10: 174063
+Process 11: 174063
+Process 12: 174063
+Process 13: 174063
+Process 14: 174063
+Process 15: 174063
+Process 16: 174063
+Process 17: 174063
+Process 18: 174063
+Process 19: 174084
+Process 20: 174075
+Process 21: 174075
+Process 22: 174075
+Process 23: 174075
+Process 24: 174075
+NNZ Per Process Standard Deviation = 10.1627
+
+Incorecct Rows: 0
+3.49865,1.03638,0.000663042,0.00261378,6.28771
+Starting Tests on F2_expanded
+Process 0: 211787
+Process 1: 211771
+Process 2: 211751
+Process 3: 211796
+Process 4: 211788
+Process 5: 211775
+Process 6: 211765
+Process 7: 211755
+Process 8: 211780
+Process 9: 211801
+Process 10: 211761
+Process 11: 211761
+Process 12: 211761
+Process 13: 211761
+Process 14: 211761
+Process 15: 211736
+Process 16: 211800
+Process 17: 211800
+Process 18: 211800
+Process 19: 211800
+Process 20: 211800
+Process 21: 211800
+Process 22: 211800
+Process 23: 211800
+Process 24: 211575
+NNZ Per Process Standard Deviation = 44.5978
+
+Incorecct Rows: 0
+3.42604,1.04088,0.000486135,0.00245714,6.48956
+Starting Tests on consph_expanded
+Process 0: 240418
+Process 1: 240424
+Process 2: 240437
+Process 3: 240396
+Process 4: 240441
+Process 5: 240408
+Process 6: 240443
+Process 7: 240389
+Process 8: 240389
+Process 9: 240389
+Process 10: 240389
+Process 11: 240389
+Process 12: 240389
+Process 13: 240389
+Process 14: 240389
+Process 15: 240389
+Process 16: 240389
+Process 17: 240389
+Process 18: 240389
+Process 19: 240389
+Process 20: 240389
+Process 21: 240389
+Process 22: 240389
+Process 23: 240389
+Process 24: 240389
+NNZ Per Process Standard Deviation = 17.9093
+
+row 15686: -4.52971e-14 != -10.1738
+row 15687: 9.80917e-14 != -4.88845
+row 15688: 4.02345e-13 != -4.74573
+row 49527: 1.41199e-10 != -3505.56
+row 49528: 1.93452e-10 != -3128.5
+row 49529: 1.78716e-10 != -7694.6
+row 49536: -5.22959e-11 != -4928.99
+Incorecct Rows: 7
+3.68779,1.04531,0.000624657,0.00273466,6.98407
+Starting Tests on SiO2_expanded
+Process 0: 451346
+Process 1: 451332
+Process 2: 451326
+Process 3: 451358
+Process 4: 451345
+Process 5: 451326
+Process 6: 451326
+Process 7: 451326
+Process 8: 451326
+Process 9: 451326
+Process 10: 451326
+Process 11: 451319
+Process 12: 451359
+Process 13: 451359
+Process 14: 451359
+Process 15: 451359
+Process 16: 451359
+Process 17: 451359
+Process 18: 451359
+Process 19: 451359
+Process 20: 451359
+Process 21: 451359
+Process 22: 451359
+Process 23: 451359
+Process 24: 451213
+NNZ Per Process Standard Deviation = 30.1481
+
+row 56748: -2.16093 != -0.638184
+row 56813: -2.67188 != 16.8735
+row 73827: -2.09058 != -4.55284
+row 74294: -0.566182 != -2.94153
+row 84803: -1.07615 != -0.710824
+row 84805: -1.98038 != -1.49133
+row 84806: -2.13715 != -4.53781
+Incorecct Rows: 7
+7.08098,1.08017,0.000583887,0.00415087,12.5632
+Starting Tests on torso1_expanded
+Process 0: 676677
+Process 1: 676668
+Process 2: 676653
+Process 3: 676664
+Process 4: 676710
+Process 5: 676710
+Process 6: 676710
+Process 7: 676710
+Process 8: 676710
+Process 9: 676710
+Process 10: 676710
+Process 11: 676710
+Process 12: 676710
+Process 13: 676710
+Process 14: 676710
+Process 15: 676710
+Process 16: 676710
+Process 17: 676710
+Process 18: 676710
+Process 19: 676710
+Process 20: 676710
+Process 21: 676710
+Process 22: 676710
+Process 23: 676710
+Process 24: 675980
+NNZ Per Process Standard Deviation = 142.568
+
+row 87253: -586.58 != -608.759
+row 107840: -1426.42 != -1260.93
+row 116117: -6.36726 != 110.135
+Incorecct Rows: 3
+10.1482,1.10902,0.000737667,0.00339031,17.66
+Starting Tests on dielFilterV3real
+Process 0: 1808180
+Process 1: 1808183
+Process 2: 1808175
+Process 3: 1808169
+Process 4: 1808175
+Process 5: 1808176
+Process 6: 1808170
+Process 7: 1808190
+Process 8: 1808166
+Process 9: 1808172
+Process 10: 1808186
+Process 11: 1808196
+Process 12: 1808182
+Process 13: 1808182
+Process 14: 1808182
+Process 15: 1808182
+Process 16: 1808182
+Process 17: 1808182
+Process 18: 1808182
+Process 19: 1808182
+Process 20: 1808182
+Process 21: 1808182
+Process 22: 1808182
+Process 23: 1808182
+Process 24: 1808100
+NNZ Per Process Standard Deviation = 16.9147
+
+Incorecct Rows: 0
+35.9006,1.53563,0.00413465,0.0218883,57.0353
+Starting Tests on RM07R
+Process 0: 1498599
+Process 1: 1498588
+Process 2: 1498588
+Process 3: 1498571
+Process 4: 1498570
+Process 5: 1498588
+Process 6: 1498630
+Process 7: 1498625
+Process 8: 1498601
+Process 9: 1498563
+Process 10: 1498563
+Process 11: 1498563
+Process 12: 1498563
+Process 13: 1498563
+Process 14: 1498563
+Process 15: 1498563
+Process 16: 1498563
+Process 17: 1498563
+Process 18: 1498563
+Process 19: 1498563
+Process 20: 1498563
+Process 21: 1498563
+Process 22: 1498563
+Process 23: 1498563
+Process 24: 1498563
+NNZ Per Process Standard Deviation = 19.6235
+
+row 131096: 9.9614 != -1266.65
+row 131097: 1272.67 != -769.709
+row 131098: -645.892 != -1877.89
+row 267562: -53.0357 != 6.56515
+row 267563: 6.87919 != 3.35509
+Incorecct Rows: 5
+23.4331,1.36339,0.002352,0.00742483,39.7215
+Starting Tests on m_t1_expanded
+Process 0: 390156
+Process 1: 390148
+Process 2: 390152
+Process 3: 390156
+Process 4: 390156
+Process 5: 390156
+Process 6: 390156
+Process 7: 390156
+Process 8: 390156
+Process 9: 390156
+Process 10: 390156
+Process 11: 390156
+Process 12: 390165
+Process 13: 390117
+Process 14: 390132
+Process 15: 390096
+Process 16: 390100
+Process 17: 390100
+Process 18: 390100
+Process 19: 390100
+Process 20: 390100
+Process 21: 390100
+Process 22: 390100
+Process 23: 390100
+Process 24: 390100
+NNZ Per Process Standard Deviation = 26.9859
+
+row 16666: -2.34305e+06 != 6.59539e+06
+row 50532: -4.53957e+07 != -5.11012e+07
+row 76970: -3.53665e+10 != 5.26261e+09
+Incorecct Rows: 3
+5.44688,1.08223,0.00135994,0.00287437,10.1476
+Starting Tests on crankseg_2_expanded
+Process 0: 565928
+Process 1: 565952
+Process 2: 565920
+Process 3: 565947
+Process 4: 565974
+Process 5: 565989
+Process 6: 565959
+Process 7: 566015
+Process 8: 565983
+Process 9: 565986
+Process 10: 565983
+Process 11: 565890
+Process 12: 565920
+Process 13: 565866
+Process 14: 565878
+Process 15: 565878
+Process 16: 565878
+Process 17: 565878
+Process 18: 565878
+Process 19: 565878
+Process 20: 565878
+Process 21: 565878
+Process 22: 565878
+Process 23: 565878
+Process 24: 565878
+NNZ Per Process Standard Deviation = 47.1245
+
+row 3375: -6.65398e+06 != 6.77972e+06
+row 5886: 94809.6 != 231233
+row 5887: -286979 != 268230
+row 36343: 295234 != 869503
+row 36344: 872665 != 335151
+Incorecct Rows: 5
+7.68455,1.13678,0.00377989,0.00216413,13.8861
+Starting Tests on nd24k_expanded
+Process 0: 1148629
+Process 1: 1148684
+Process 2: 1148692
+Process 3: 1148733
+Process 4: 1148595
+Process 5: 1148533
+Process 6: 1148555
+Process 7: 1148660
+Process 8: 1148613
+Process 9: 1148721
+Process 10: 1148721
+Process 11: 1148721
+Process 12: 1148721
+Process 13: 1148721
+Process 14: 1148721
+Process 15: 1148721
+Process 16: 1148721
+Process 17: 1148721
+Process 18: 1148721
+Process 19: 1148721
+Process 20: 1148721
+Process 21: 1148721
+Process 22: 1148721
+Process 23: 1148721
+Process 24: 1147125
+NNZ Per Process Standard Deviation = 311.353
+
+Incorecct Rows: 0
+17.0822,1.26833,0.00302768,0.00240469,29.0815
+Starting Tests on TSOPF_RS_b2383
+Process 0: 646813
+Process 1: 646912
+Process 2: 646912
+Process 3: 646682
+Process 4: 646850
+Process 5: 646850
+Process 6: 646850
+Process 7: 646850
+Process 8: 646850
+Process 9: 646850
+Process 10: 646850
+Process 11: 646850
+Process 12: 646850
+Process 13: 646850
+Process 14: 646850
+Process 15: 646850
+Process 16: 646850
+Process 17: 646850
+Process 18: 646850
+Process 19: 646850
+Process 20: 646850
+Process 21: 646850
+Process 22: 646850
+Process 23: 646850
+Process 24: 646850
+NNZ Per Process Standard Deviation = 38.4804
+
+Incorecct Rows: 0
+11.4751,1.17081,0.00683308,0.00174165,19.5474
+Starting Tests on mouse_gene_expanded
+Process 0: 1158687
+Process 1: 1158781
+Process 2: 1158669
+Process 3: 1158736
+Process 4: 1158657
+Process 5: 1158828
+Process 6: 1158876
+Process 7: 1158395
+Process 8: 1158686
+Process 9: 1158686
+Process 10: 1158686
+Process 11: 1158686
+Process 12: 1158686
+Process 13: 1158686
+Process 14: 1158686
+Process 15: 1158686
+Process 16: 1158686
+Process 17: 1158686
+Process 18: 1158686
+Process 19: 1158686
+Process 20: 1158686
+Process 21: 1158686
+Process 22: 1158686
+Process 23: 1158686
+Process 24: 1158686
+NNZ Per Process Standard Deviation = 78.1808
+
+row 179: 152.415 != 152.023
+row 2915: 70.8131 != 56.5986
+row 3865: 80.8838 != 72.2842
+row 4039: 129.092 != 109.021
+row 4186: 217.034 != 204.434
+row 13361: 135.043 != 133.598
+row 13500: 126.773 != 108.53
+row 36277: 95.5254 != 84.7653
+Incorecct Rows: 8
+19.3541,1.2923,0.00515461,0.00191355,31.3242
+Starting Tests on human_gene1_expanded
+Process 0: 986892
+Process 1: 986922
+Process 2: 986905
+Process 3: 986849
+Process 4: 986789
+Process 5: 986902
+Process 6: 986344
+Process 7: 986331
+Process 8: 986709
+Process 9: 987228
+Process 10: 987228
+Process 11: 987228
+Process 12: 987228
+Process 13: 987228
+Process 14: 987228
+Process 15: 987228
+Process 16: 987228
+Process 17: 987228
+Process 18: 987228
+Process 19: 987228
+Process 20: 987228
+Process 21: 987228
+Process 22: 987228
+Process 23: 987228
+Process 24: 980580
+NNZ Per Process Standard Deviation = 1294.83
+
+row 1180: 120.974 != 62.8387
+row 6076: 293.413 != 259.396
+row 6251: 269.734 != 245.502
+row 6374: 328.611 != 265.132
+row 7001: 157.281 != 124.625
+row 7768: 348.707 != 292.156
+row 8124: 290.558 != 242.63
+row 11426: 190.955 != 144.628
+row 15145: 183.843 != 137.824
+Incorecct Rows: 9
+14.9581,1.18251,0.000891685,0.00162864,25.5223

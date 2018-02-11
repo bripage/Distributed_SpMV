@@ -1,396 +1,1775 @@
 Starting Tests on atmosmodd
-NNZ Per Process Standard Deviation = 50.3364
+Process 0: 1063306
+Process 1: 22052
+Process 2: 0
+Process 3: 0
+Process 4: 0
+Process 5: 0
+Process 6: 0
+Process 7: 0
+Process 8: 22052
+Process 9: 1063306
+Process 10: 22052
+Process 11: 0
+Process 12: 0
+Process 13: 0
+Process 14: 0
+Process 15: 0
+Process 16: 0
+Process 17: 22052
+Process 18: 1063306
+Process 19: 22052
+Process 20: 0
+Process 21: 0
+Process 22: 0
+Process 23: 0
+Process 24: 0
+Process 25: 0
+Process 26: 22052
+Process 27: 1063306
+Process 28: 21904
+Process 29: 0
+Process 30: 0
+Process 31: 0
+Process 32: 0
+Process 33: 0
+Process 34: 0
+Process 35: 21904
+Process 36: 1063306
+Process 37: 22052
+Process 38: 0
+Process 39: 0
+Process 40: 0
+Process 41: 0
+Process 42: 0
+Process 43: 0
+Process 44: 22052
+Process 45: 1063306
+Process 46: 22052
+Process 47: 0
+Process 48: 0
+Process 49: 0
+Process 50: 0
+Process 51: 0
+Process 52: 0
+Process 53: 22052
+Process 54: 1063306
+Process 55: 22052
+Process 56: 0
+Process 57: 0
+Process 58: 0
+Process 59: 0
+Process 60: 0
+Process 61: 0
+Process 62: 22052
+Process 63: 1063306
+NNZ Per Process Standard Deviation = 349948
 
 Incorecct Rows: 0
-5.64354,0.0787816,0.00528026,0.0306592,9.03178
+5.04421,0.0963736,0.000921488,0.00299048,0.0220637,8.35344
 Starting Tests on parabolic_fem_expanded
-NNZ Per Process Standard Deviation = 39.0614
+Process 0: 65729
+Process 1: 0
+Process 2: 75948
+Process 3: 43819
+Process 4: 10929
+Process 5: 130685
+Process 6: 65729
+Process 7: 65722
+Process 8: 0
+Process 9: 65729
+Process 10: 54744
+Process 11: 87639
+Process 12: 119509
+Process 13: 773
+Process 14: 65729
+Process 15: 64956
+Process 16: 75948
+Process 17: 54744
+Process 18: 196421
+Process 19: 0
+Process 20: 1412
+Process 21: 76329
+Process 22: 53971
+Process 23: 766
+Process 24: 43819
+Process 25: 87639
+Process 26: 0
+Process 27: 197185
+Process 28: 2
+Process 29: 43819
+Process 30: 31785
+Process 31: 55854
+Process 32: 10929
+Process 33: 119509
+Process 34: 1412
+Process 35: 2
+Process 36: 196989
+Process 37: 11310
+Process 38: 45898
+Process 39: 74054
+Process 40: 130685
+Process 41: 773
+Process 42: 76329
+Process 43: 43819
+Process 44: 11310
+Process 45: 131457
+Process 46: 30262
+Process 47: 35468
+Process 48: 65729
+Process 49: 65729
+Process 50: 53971
+Process 51: 31785
+Process 52: 45898
+Process 53: 30262
+Process 54: 120565
+Process 55: 46164
+Process 56: 65722
+Process 57: 64956
+Process 58: 766
+Process 59: 55854
+Process 60: 74054
+Process 61: 35468
+Process 62: 46164
+Process 63: 113998
+NNZ Per Process Standard Deviation = 47831.2
 
 Incorecct Rows: 0
-2.50106,0.0407796,0.000660896,0.013556,4.58153
+13.7981,0.0491352,0.000337839,0.00157785,0.00253296,15.2436
 Starting Tests on rajat30
-NNZ Per Process Standard Deviation = 34989.5
-[d8civy079.crc.nd.edu:mpi_rank_57][error_sighandler] Caught error: Segmentation fault (signal 11)
-[d8civy138.crc.nd.edu:mpi_rank_58][error_sighandler] Caught error: Segmentation fault (signal 11)
-[d8civy077.crc.nd.edu:mpi_rank_60][error_sighandler] Caught error: Segmentation fault (signal 11)
+Process 0: 813429
+Process 1: 165952
+Process 2: 150296
+Process 3: 146329
+Process 4: 144216
+Process 5: 138782
+Process 6: 102111
+Process 7: 11036
+Process 8: 165952
+Process 9: 464584
+Process 10: 2151
+Process 11: 236
+Process 12: 184
+Process 13: 0
+Process 14: 0
+Process 15: 0
+Process 16: 150296
+Process 17: 2151
+Process 18: 485412
+Process 19: 17984
+Process 20: 2252
+Process 21: 0
+Process 22: 253
+Process 23: 0
+Process 24: 146329
+Process 25: 236
+Process 26: 17984
+Process 27: 465338
+Process 28: 6021
+Process 29: 0
+Process 30: 0
+Process 31: 0
+Process 32: 144216
+Process 33: 184
+Process 34: 2252
+Process 35: 6021
+Process 36: 501092
+Process 37: 1192
+Process 38: 780
+Process 39: 89
+Process 40: 138782
+Process 41: 0
+Process 42: 0
+Process 43: 0
+Process 44: 1192
+Process 45: 528802
+Process 46: 3898
+Process 47: 2
+Process 48: 102111
+Process 49: 0
+Process 50: 253
+Process 51: 0
+Process 52: 780
+Process 53: 3898
+Process 54: 569776
+Process 55: 76110
+Process 56: 11038
+Process 57: 0
+Process 58: 0
+Process 59: 0
+Process 60: 89
+Process 61: 2
+Process 62: 75505
+Process 63: 407666
+NNZ Per Process Standard Deviation = 177304
 
-===================================================================================
-=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
-=   PID 12070 RUNNING AT d8civy079.crc.nd.edu
-=   EXIT CODE: 11
-=   CLEANING UP REMAINING PROCESSES
-=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
-===================================================================================
-[proxy:0:0@d8civy102.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:0@d8civy102.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:0@d8civy102.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:1@d8civy094.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:1@d8civy094.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:1@d8civy094.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:2@d8civy125.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:2@d8civy125.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:2@d8civy125.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:3@d8civy141.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:3@d8civy141.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:3@d8civy141.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:4@d8civy106.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:4@d8civy106.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:4@d8civy106.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:5@d8civy134.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:5@d8civy134.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:5@d8civy134.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:6@d8civy132.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:6@d8civy132.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:6@d8civy132.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:7@d8civy122.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:7@d8civy122.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:7@d8civy122.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:8@d8civy126.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:8@d8civy126.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:8@d8civy126.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:9@d8civy108.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:9@d8civy108.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:9@d8civy108.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:10@d8civy084.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:10@d8civy084.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:10@d8civy084.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:11@d8civy136.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:11@d8civy136.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:11@d8civy136.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:12@d8civy086.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:12@d8civy086.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:12@d8civy086.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:13@d8civy113.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:13@d8civy113.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:13@d8civy113.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:14@d8civy091.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:14@d8civy091.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:14@d8civy091.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:15@d8civy099.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:15@d8civy099.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:15@d8civy099.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:16@d8civy133.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:16@d8civy133.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:16@d8civy133.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:17@d8civy115.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:17@d8civy115.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:17@d8civy115.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:18@d8civy119.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:18@d8civy119.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:18@d8civy119.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:19@d8civy143.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:19@d8civy143.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:19@d8civy143.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:20@d8civy135.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:20@d8civy135.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:20@d8civy135.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:21@d8civy139.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:21@d8civy139.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:21@d8civy139.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:22@d8civy092.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:22@d8civy092.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:22@d8civy092.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:23@d8civy131.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:23@d8civy131.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:23@d8civy131.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:24@d8civy110.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:24@d8civy110.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:24@d8civy110.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:25@d8civy111.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:25@d8civy111.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:25@d8civy111.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:26@d8civy121.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:26@d8civy121.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:26@d8civy121.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:27@d8civy083.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:27@d8civy083.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:27@d8civy083.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:29@d8civy138.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:29@d8civy138.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:29@d8civy138.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:30@d8civy077.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:30@d8civy077.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:30@d8civy077.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:31@d8civy085.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:31@d8civy085.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:31@d8civy085.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[mpiexec@d8civy102.crc.nd.edu] HYDT_bscu_wait_for_completion (tools/bootstrap/utils/bscu_wait.c:76): one of the processes terminated badly; aborting
-[mpiexec@d8civy102.crc.nd.edu] HYDT_bsci_wait_for_completion (tools/bootstrap/src/bsci_wait.c:23): launcher returned error waiting for completion
-[mpiexec@d8civy102.crc.nd.edu] HYD_pmci_wait_for_completion (pm/pmiserv/pmiserv_pmci.c:218): launcher returned error waiting for completion
-[mpiexec@d8civy102.crc.nd.edu] main (ui/mpich/mpiexec.c:344): process manager error waiting for completion
+Incorecct Rows: 0
+3.59903,0.0644732,0.000702143,0.00199938,0.00356174,5.95299
 Starting Tests on CurlCurl_3_expanded
-NNZ Per Process Standard Deviation = 38.7146
+Process 0: 1639425
+Process 1: 34877
+Process 2: 0
+Process 3: 0
+Process 4: 0
+Process 5: 0
+Process 6: 0
+Process 7: 0
+Process 8: 34877
+Process 9: 1638263
+Process 10: 34875
+Process 11: 0
+Process 12: 0
+Process 13: 0
+Process 14: 0
+Process 15: 0
+Process 16: 0
+Process 17: 34875
+Process 18: 1638263
+Process 19: 34875
+Process 20: 0
+Process 21: 0
+Process 22: 0
+Process 23: 0
+Process 24: 0
+Process 25: 0
+Process 26: 34875
+Process 27: 1639429
+Process 28: 34875
+Process 29: 0
+Process 30: 0
+Process 31: 0
+Process 32: 0
+Process 33: 0
+Process 34: 0
+Process 35: 34875
+Process 36: 1638255
+Process 37: 34883
+Process 38: 0
+Process 39: 0
+Process 40: 0
+Process 41: 0
+Process 42: 0
+Process 43: 0
+Process 44: 34883
+Process 45: 1627269
+Process 46: 11805
+Process 47: 0
+Process 48: 0
+Process 49: 0
+Process 50: 0
+Process 51: 0
+Process 52: 0
+Process 53: 11805
+Process 54: 1639411
+Process 55: 34875
+Process 56: 0
+Process 57: 0
+Process 58: 0
+Process 59: 0
+Process 60: 0
+Process 61: 0
+Process 62: 34875
+Process 63: 1642173
+NNZ Per Process Standard Deviation = 539211
 
 Incorecct Rows: 0
-7.61153,0.112573,0.000862122,0.0289519,12.6997
+50.767,0.128083,0.000838995,0.00112414,0.00545835,55.796
 Starting Tests on offshore_expanded
-NNZ Per Process Standard Deviation = 107.506
+Process 0: 482804
+Process 1: 29993
+Process 2: 10437
+Process 3: 943
+Process 4: 4738
+Process 5: 671
+Process 6: 109
+Process 7: 1075
+Process 8: 29993
+Process 9: 410426
+Process 10: 43898
+Process 11: 23480
+Process 12: 16536
+Process 13: 1504
+Process 14: 325
+Process 15: 2250
+Process 16: 10437
+Process 17: 43898
+Process 18: 401930
+Process 19: 43811
+Process 20: 20647
+Process 21: 3154
+Process 22: 393
+Process 23: 3558
+Process 24: 943
+Process 25: 23480
+Process 26: 43811
+Process 27: 423196
+Process 28: 36943
+Process 29: 2071
+Process 30: 397
+Process 31: 2344
+Process 32: 4738
+Process 33: 16536
+Process 34: 20647
+Process 35: 36943
+Process 36: 447902
+Process 37: 9878
+Process 38: 2238
+Process 39: 0
+Process 40: 671
+Process 41: 1504
+Process 42: 3154
+Process 43: 2071
+Process 44: 9878
+Process 45: 436396
+Process 46: 69972
+Process 47: 3465
+Process 48: 109
+Process 49: 325
+Process 50: 393
+Process 51: 397
+Process 52: 2238
+Process 53: 69972
+Process 54: 427828
+Process 55: 29825
+Process 56: 1075
+Process 57: 2250
+Process 58: 3558
+Process 59: 2344
+Process 60: 0
+Process 61: 3465
+Process 62: 29825
+Process 63: 482881
+NNZ Per Process Standard Deviation = 142252
 
-Incorecct Rows: 0
-2.28996,0.0416038,0.000780344,0.00754762,4.23085
+row 226198: 4.19111e+14 != 4.19111e+14
+row 226702: 7.09382e+14 != 7.09382e+14
+row 226706: 5.90172e+14 != 5.90172e+14
+row 226775: 3.33403e+14 != 3.33403e+14
+row 226787: 6.55293e+14 != 6.55293e+14
+row 226806: 4.05158e+14 != 4.05158e+14
+row 226815: 5.11252e+14 != 5.11252e+14
+row 226841: 2.94908e+14 != 2.94908e+14
+row 226887: 4.32881e+14 != 4.32881e+14
+row 226902: 7.14708e+14 != 7.14708e+14
+row 227009: 5.9684e+14 != 5.9684e+14
+row 227051: 5.06846e+14 != 5.06846e+14
+row 227074: 2.94825e+14 != 2.94825e+14
+row 227109: 7.75651e+14 != 7.75651e+14
+row 227149: 6.87579e+14 != 6.87579e+14
+row 227211: 6.10332e+14 != 6.10332e+14
+row 227278: 3.19968e+14 != 3.19968e+14
+row 227305: 5.78798e+14 != 5.78798e+14
+row 227314: 4.41669e+14 != 4.41669e+14
+row 227364: 3.75029e+14 != 3.75029e+14
+row 227388: 6.87139e+14 != 6.87139e+14
+row 227402: 6.41156e+14 != 6.41156e+14
+row 227507: 4.41723e+14 != 4.41723e+14
+row 227613: 6.65412e+14 != 6.65412e+14
+row 227635: 6.07489e+14 != 6.07489e+14
+row 227639: 7.26682e+14 != 7.26682e+14
+row 227659: 3.33672e+14 != 3.33672e+14
+row 227681: 2.90598e+14 != 2.90598e+14
+row 227684: 3.78583e+14 != 3.78583e+14
+row 227694: 3.70606e+14 != 3.70606e+14
+row 227700: 3.59276e+14 != 3.59276e+14
+row 227753: 3.478e+14 != 3.478e+14
+row 227842: 7.9551e+14 != 7.9551e+14
+row 227846: 7.10183e+14 != 7.10183e+14
+row 227873: 5.77852e+14 != 5.77852e+14
+row 227905: 6.48325e+14 != 6.48325e+14
+row 227919: 5.91352e+14 != 5.91352e+14
+row 227956: 4.58903e+14 != 4.58903e+14
+row 228001: 3.92292e+14 != 3.92292e+14
+row 228033: 2.37472e+14 != 2.37472e+14
+row 228116: 8.44224e+14 != 8.44224e+14
+row 228130: 6.26086e+14 != 6.26086e+14
+row 228154: 5.15343e+14 != 5.15343e+14
+row 228207: 7.9011e+14 != 7.9011e+14
+row 228209: 4.7561e+14 != 4.7561e+14
+row 228211: 4.27571e+14 != 4.27571e+14
+row 228260: 6.0139e+14 != 6.0139e+14
+row 228319: 6.64956e+14 != 6.64956e+14
+row 228341: 2.73817e+14 != 2.73817e+14
+row 228373: 5.83556e+14 != 5.83556e+14
+Incorecct Rows: 56
+14.4016,0.0423453,0.000406981,0.00137782,0.00138068,16.0181
 Starting Tests on FEM_3D_thermal2
-NNZ Per Process Standard Deviation = 116.845
+Process 0: 432644
+Process 1: 2538
+Process 2: 2457
+Process 3: 2433
+Process 4: 1389
+Process 5: 0
+Process 6: 13
+Process 7: 0
+Process 8: 2538
+Process 9: 425508
+Process 10: 2289
+Process 11: 0
+Process 12: 1053
+Process 13: 2457
+Process 14: 4121
+Process 15: 13
+Process 16: 2457
+Process 17: 2289
+Process 18: 423138
+Process 19: 2289
+Process 20: 0
+Process 21: 0
+Process 22: 2457
+Process 23: 0
+Process 24: 2433
+Process 25: 0
+Process 26: 2289
+Process 27: 423152
+Process 28: 2281
+Process 29: 0
+Process 30: 1053
+Process 31: 1404
+Process 32: 1389
+Process 33: 1053
+Process 34: 0
+Process 35: 2281
+Process 36: 423192
+Process 37: 2288
+Process 38: 0
+Process 39: 2418
+Process 40: 0
+Process 41: 2457
+Process 42: 0
+Process 43: 0
+Process 44: 2288
+Process 45: 423130
+Process 46: 2289
+Process 47: 2457
+Process 48: 13
+Process 49: 4121
+Process 50: 2457
+Process 51: 1053
+Process 52: 0
+Process 53: 2289
+Process 54: 425508
+Process 55: 2538
+Process 56: 0
+Process 57: 13
+Process 58: 0
+Process 59: 1404
+Process 60: 2418
+Process 61: 2457
+Process 62: 2538
+Process 63: 432554
+NNZ Per Process Standard Deviation = 140456
 
 Incorecct Rows: 0
-2.04653,0.0340891,0.000412464,0.00474811,3.53318
+2.50593,0.033571,0.000582457,0.000957489,0.000944614,3.98119
 Starting Tests on nlpkkt80_expanded
-NNZ Per Process Standard Deviation = 56073.1
-[d8civy085.crc.nd.edu:mpi_rank_63][error_sighandler] Caught error: Segmentation fault (signal 11)
+Process 0: 132800
+Process 1: 0
+Process 2: 0
+Process 3: 0
+Process 4: 3066038
+Process 5: 184371
+Process 6: 0
+Process 7: 0
+Process 8: 0
+Process 9: 132800
+Process 10: 0
+Process 11: 0
+Process 12: 0
+Process 13: 3347602
+Process 14: 66038
+Process 15: 0
+Process 16: 0
+Process 17: 0
+Process 18: 132800
+Process 19: 0
+Process 20: 0
+Process 21: 53375
+Process 22: 3355648
+Process 23: 4563
+Process 24: 0
+Process 25: 0
+Process 26: 0
+Process 27: 132800
+Process 28: 0
+Process 29: 0
+Process 30: 163662
+Process 31: 3249978
+Process 32: 3066038
+Process 33: 0
+Process 34: 0
+Process 35: 0
+Process 36: 19200
+Process 37: 0
+Process 38: 0
+Process 39: 329861
+Process 40: 184371
+Process 41: 3347602
+Process 42: 53375
+Process 43: 0
+Process 44: 0
+Process 45: 0
+Process 46: 0
+Process 47: 0
+Process 48: 0
+Process 49: 66038
+Process 50: 3355648
+Process 51: 163662
+Process 52: 0
+Process 53: 0
+Process 54: 0
+Process 55: 0
+Process 56: 0
+Process 57: 0
+Process 58: 4563
+Process 59: 3249978
+Process 60: 329861
+Process 61: 0
+Process 62: 0
+Process 63: 0
+NNZ Per Process Standard Deviation = 1.06701e+06
 
-===================================================================================
-=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
-=   PID 17691 RUNNING AT d8civy085.crc.nd.edu
-=   EXIT CODE: 11
-=   CLEANING UP REMAINING PROCESSES
-=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
-===================================================================================
-[proxy:0:0@d8civy102.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:0@d8civy102.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:0@d8civy102.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:1@d8civy094.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:1@d8civy094.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:1@d8civy094.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:2@d8civy125.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:2@d8civy125.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:2@d8civy125.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:3@d8civy141.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:3@d8civy141.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:3@d8civy141.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:4@d8civy106.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:4@d8civy106.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:4@d8civy106.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:5@d8civy134.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:5@d8civy134.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:5@d8civy134.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:6@d8civy132.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:6@d8civy132.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:6@d8civy132.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:7@d8civy122.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:7@d8civy122.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:7@d8civy122.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:8@d8civy126.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:8@d8civy126.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:8@d8civy126.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:9@d8civy108.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:9@d8civy108.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:9@d8civy108.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:10@d8civy084.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:10@d8civy084.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:10@d8civy084.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:11@d8civy136.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:11@d8civy136.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:11@d8civy136.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:12@d8civy086.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:12@d8civy086.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:12@d8civy086.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:13@d8civy113.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:13@d8civy113.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:13@d8civy113.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:14@d8civy091.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:14@d8civy091.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:14@d8civy091.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:15@d8civy099.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:15@d8civy099.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:15@d8civy099.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:16@d8civy133.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:16@d8civy133.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:16@d8civy133.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:17@d8civy115.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:17@d8civy115.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:17@d8civy115.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:18@d8civy119.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:18@d8civy119.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:18@d8civy119.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:19@d8civy143.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:19@d8civy143.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:19@d8civy143.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:20@d8civy135.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:20@d8civy135.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:20@d8civy135.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:21@d8civy139.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:21@d8civy139.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:21@d8civy139.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:22@d8civy092.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:22@d8civy092.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:22@d8civy092.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:23@d8civy131.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:23@d8civy131.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:23@d8civy131.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:24@d8civy110.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:24@d8civy110.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:24@d8civy110.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:25@d8civy111.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:25@d8civy111.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:25@d8civy111.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:26@d8civy121.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:26@d8civy121.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:26@d8civy121.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:27@d8civy083.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:27@d8civy083.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:27@d8civy083.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:28@d8civy079.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:28@d8civy079.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:28@d8civy079.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:29@d8civy138.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:29@d8civy138.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:29@d8civy138.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
-[proxy:0:30@d8civy077.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
-[proxy:0:30@d8civy077.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
-[proxy:0:30@d8civy077.crc.nd.edu] [mpiexec@d8civy102.crc.nd.edu] HYDT_bscu_wait_for_completion (tools/bootstrap/utils/bscu_wait.c:76): one of the processes terminated badly; aborting
-[mpiexec@d8civy102.crc.nd.edu] HYDT_bsci_wait_for_completion (tools/bootstrap/src/bsci_wait.c:23): launcher returned error waiting for completion
-[mpiexec@d8civy102.crc.nd.edu] HYD_pmci_wait_for_completion (pm/pmiserv/pmiserv_pmci.c:218): launcher returned error waiting for completion
-[mpiexec@d8civy102.crc.nd.edu] main (ui/mpich/mpiexec.c:344): process manager error waiting for completion
+Incorecct Rows: 0
+62.2836,0.242313,0.00146198,0.000966549,0.00446391,69.0207
 Starting Tests on CO_expanded
-NNZ Per Process Standard Deviation = 173.485
+Process 0: 846056
+Process 1: 58630
+Process 2: 0
+Process 3: 0
+Process 4: 0
+Process 5: 0
+Process 6: 0
+Process 7: 0
+Process 8: 58630
+Process 9: 820690
+Process 10: 78883
+Process 11: 0
+Process 12: 0
+Process 13: 0
+Process 14: 0
+Process 15: 0
+Process 16: 0
+Process 17: 78883
+Process 18: 802164
+Process 19: 89394
+Process 20: 0
+Process 21: 0
+Process 22: 0
+Process 23: 0
+Process 24: 0
+Process 25: 0
+Process 26: 89394
+Process 27: 815564
+Process 28: 94897
+Process 29: 0
+Process 30: 0
+Process 31: 0
+Process 32: 0
+Process 33: 0
+Process 34: 0
+Process 35: 94897
+Process 36: 815288
+Process 37: 89394
+Process 38: 0
+Process 39: 0
+Process 40: 0
+Process 41: 0
+Process 42: 0
+Process 43: 0
+Process 44: 89394
+Process 45: 802164
+Process 46: 78883
+Process 47: 0
+Process 48: 0
+Process 49: 0
+Process 50: 0
+Process 51: 0
+Process 52: 0
+Process 53: 78883
+Process 54: 820690
+Process 55: 58627
+Process 56: 0
+Process 57: 0
+Process 58: 0
+Process 59: 0
+Process 60: 0
+Process 61: 0
+Process 62: 58627
+Process 63: 846025
+NNZ Per Process Standard Deviation = 267096
 
 Incorecct Rows: 0
-3.73521,0.0617852,0.000671148,0.00676823,6.62944
+27.8077,0.0733516,0.000558853,0.00179648,0.00117779,30.685
 Starting Tests on gsm_106857_expanded
-NNZ Per Process Standard Deviation = 47.468
+Process 0: 666857
+Process 1: 408066
+Process 2: 382887
+Process 3: 433095
+Process 4: 450223
+Process 5: 321082
+Process 6: 387301
+Process 7: 683383
+Process 8: 408066
+Process 9: 475441
+Process 10: 206189
+Process 11: 152566
+Process 12: 158438
+Process 13: 342480
+Process 14: 382568
+Process 15: 508420
+Process 16: 382887
+Process 17: 206189
+Process 18: 338783
+Process 19: 235946
+Process 20: 134296
+Process 21: 135
+Process 22: 161684
+Process 23: 261312
+Process 24: 433095
+Process 25: 152566
+Process 26: 235946
+Process 27: 359351
+Process 28: 231886
+Process 29: 52329
+Process 30: 178937
+Process 31: 355048
+Process 32: 450223
+Process 33: 158438
+Process 34: 134296
+Process 35: 231886
+Process 36: 419419
+Process 37: 181186
+Process 38: 177076
+Process 39: 493900
+Process 40: 321082
+Process 41: 342480
+Process 42: 135
+Process 43: 52329
+Process 44: 181186
+Process 45: 483973
+Process 46: 345206
+Process 47: 631401
+Process 48: 387301
+Process 49: 382568
+Process 50: 161684
+Process 51: 178937
+Process 52: 177076
+Process 53: 345206
+Process 54: 405357
+Process 55: 574829
+Process 56: 683383
+Process 57: 508420
+Process 58: 261312
+Process 59: 355048
+Process 60: 493900
+Process 61: 631401
+Process 62: 574829
+Process 63: 946005
+NNZ Per Process Standard Deviation = 182758
 
 Incorecct Rows: 0
-11.7983,0.150349,0.00109291,0.0152495,21.3044
+91.3034,0.214067,0.000854969,0.00162292,0.00292897,100.427
 Starting Tests on msdoor_expanded
-NNZ Per Process Standard Deviation = 163.789
+Process 0: 2289579
+Process 1: 130412
+Process 2: 52861
+Process 3: 4405
+Process 4: 748
+Process 5: 0
+Process 6: 0
+Process 7: 0
+Process 8: 130412
+Process 9: 2169463
+Process 10: 193749
+Process 11: 0
+Process 12: 0
+Process 13: 0
+Process 14: 0
+Process 15: 0
+Process 16: 52861
+Process 17: 193749
+Process 18: 1146913
+Process 19: 668849
+Process 20: 113768
+Process 21: 65534
+Process 22: 71195
+Process 23: 92529
+Process 24: 4405
+Process 25: 0
+Process 26: 668849
+Process 27: 1301715
+Process 28: 283750
+Process 29: 48885
+Process 30: 55731
+Process 31: 71583
+Process 32: 748
+Process 33: 0
+Process 34: 113768
+Process 35: 283750
+Process 36: 1352373
+Process 37: 382445
+Process 38: 249976
+Process 39: 201150
+Process 40: 0
+Process 41: 0
+Process 42: 65534
+Process 43: 48885
+Process 44: 382445
+Process 45: 1411243
+Process 46: 303106
+Process 47: 225414
+Process 48: 0
+Process 49: 0
+Process 50: 71195
+Process 51: 55731
+Process 52: 249976
+Process 53: 303106
+Process 54: 1345913
+Process 55: 241570
+Process 56: 0
+Process 57: 0
+Process 58: 92529
+Process 59: 71583
+Process 60: 201150
+Process 61: 225414
+Process 62: 241570
+Process 63: 1240644
+NNZ Per Process Standard Deviation = 508365
 
 Incorecct Rows: 0
-11.1028,0.149234,0.00283432,0.0105882,18.4762
+64.7672,0.141885,0.00104189,0.00194716,0.00211382,72.0683
 Starting Tests on bmw3_2_expanded
-NNZ Per Process Standard Deviation = 184.79
+Process 0: 1310217
+Process 1: 83153
+Process 2: 47839
+Process 3: 44981
+Process 4: 4126
+Process 5: 246
+Process 6: 7051
+Process 7: 6257
+Process 8: 83153
+Process 9: 1311819
+Process 10: 30955
+Process 11: 30076
+Process 12: 8645
+Process 13: 4242
+Process 14: 5043
+Process 15: 4482
+Process 16: 47839
+Process 17: 30955
+Process 18: 1344025
+Process 19: 28245
+Process 20: 384
+Process 21: 6446
+Process 22: 10145
+Process 23: 25381
+Process 24: 44981
+Process 25: 30076
+Process 26: 28245
+Process 27: 1214689
+Process 28: 53946
+Process 29: 53796
+Process 30: 49049
+Process 31: 5609
+Process 32: 4126
+Process 33: 8645
+Process 34: 384
+Process 35: 53946
+Process 36: 1329061
+Process 37: 33316
+Process 38: 42331
+Process 39: 6303
+Process 40: 246
+Process 41: 4242
+Process 42: 6446
+Process 43: 53796
+Process 44: 33316
+Process 45: 1299725
+Process 46: 62204
+Process 47: 11483
+Process 48: 7051
+Process 49: 5043
+Process 50: 10145
+Process 51: 49049
+Process 52: 42331
+Process 53: 62204
+Process 54: 1062957
+Process 55: 50391
+Process 56: 6257
+Process 57: 4482
+Process 58: 25381
+Process 59: 5609
+Process 60: 6303
+Process 61: 11483
+Process 62: 50391
+Process 63: 983887
+NNZ Per Process Standard Deviation = 402087
 
 Incorecct Rows: 0
-5.38283,0.0878625,0.000777483,0.00685215,9.72104
+35.0412,0.105541,0.000814438,0.00152969,0.00121403,39.2003
 Starting Tests on BenElechi1_expanded
-NNZ Per Process Standard Deviation = 375.007
+Process 0: 1624473
+Process 1: 14265
+Process 2: 0
+Process 3: 0
+Process 4: 0
+Process 5: 0
+Process 6: 0
+Process 7: 0
+Process 8: 14265
+Process 9: 1622817
+Process 10: 12924
+Process 11: 0
+Process 12: 0
+Process 13: 0
+Process 14: 0
+Process 15: 0
+Process 16: 0
+Process 17: 12924
+Process 18: 1624199
+Process 19: 12717
+Process 20: 0
+Process 21: 0
+Process 22: 0
+Process 23: 0
+Process 24: 0
+Process 25: 0
+Process 26: 12717
+Process 27: 1625337
+Process 28: 11700
+Process 29: 0
+Process 30: 0
+Process 31: 0
+Process 32: 0
+Process 33: 0
+Process 34: 0
+Process 35: 11700
+Process 36: 1626561
+Process 37: 9261
+Process 38: 0
+Process 39: 0
+Process 40: 0
+Process 41: 0
+Process 42: 0
+Process 43: 0
+Process 44: 9261
+Process 45: 1627287
+Process 46: 6120
+Process 47: 0
+Process 48: 0
+Process 49: 0
+Process 50: 0
+Process 51: 0
+Process 52: 0
+Process 53: 6120
+Process 54: 1614969
+Process 55: 14553
+Process 56: 0
+Process 57: 0
+Process 58: 0
+Process 59: 0
+Process 60: 0
+Process 61: 0
+Process 62: 14553
+Process 63: 1621773
+NNZ Per Process Standard Deviation = 535959
 
 Incorecct Rows: 0
-6.44027,0.0973876,0.00090909,0.00742674,11.7856
+42.5304,0.0934873,0.00063467,0.00168419,0.00132942,47.6298
 Starting Tests on t3dh_expanded
-NNZ Per Process Standard Deviation = 270.718
+Process 0: 457755
+Process 1: 52884
+Process 2: 0
+Process 3: 0
+Process 4: 0
+Process 5: 0
+Process 6: 0
+Process 7: 0
+Process 8: 52884
+Process 9: 451291
+Process 10: 52892
+Process 11: 0
+Process 12: 0
+Process 13: 0
+Process 14: 0
+Process 15: 0
+Process 16: 0
+Process 17: 52892
+Process 18: 451335
+Process 19: 52878
+Process 20: 0
+Process 21: 0
+Process 22: 0
+Process 23: 0
+Process 24: 0
+Process 25: 0
+Process 26: 52878
+Process 27: 449361
+Process 28: 53162
+Process 29: 0
+Process 30: 0
+Process 31: 0
+Process 32: 0
+Process 33: 0
+Process 34: 0
+Process 35: 53162
+Process 36: 449271
+Process 37: 53308
+Process 38: 0
+Process 39: 0
+Process 40: 0
+Process 41: 0
+Process 42: 0
+Process 43: 0
+Process 44: 53308
+Process 45: 450023
+Process 46: 52870
+Process 47: 0
+Process 48: 0
+Process 49: 0
+Process 50: 0
+Process 51: 0
+Process 52: 0
+Process 53: 52870
+Process 54: 451439
+Process 55: 52894
+Process 56: 0
+Process 57: 0
+Process 58: 0
+Process 59: 0
+Process 60: 0
+Process 61: 0
+Process 62: 52894
+Process 63: 449854
+NNZ Per Process Standard Deviation = 146454
 
 Incorecct Rows: 0
-2.24494,0.0410676,0.00359821,0.00329614,4.066
+16.3866,0.0631635,0.000383377,0.00167823,0.000586271,18.2189
 Starting Tests on F2_expanded
-NNZ Per Process Standard Deviation = 184.811
+Process 0: 173975
+Process 1: 109413
+Process 2: 107824
+Process 3: 92503
+Process 4: 56175
+Process 5: 65025
+Process 6: 69094
+Process 7: 63357
+Process 8: 109413
+Process 9: 206433
+Process 10: 10604
+Process 11: 39848
+Process 12: 35201
+Process 13: 40305
+Process 14: 44629
+Process 15: 42568
+Process 16: 107824
+Process 17: 10604
+Process 18: 193813
+Process 19: 45448
+Process 20: 29106
+Process 21: 40359
+Process 22: 44286
+Process 23: 42223
+Process 24: 92503
+Process 25: 39848
+Process 26: 45448
+Process 27: 316537
+Process 28: 144397
+Process 29: 132045
+Process 30: 127812
+Process 31: 127394
+Process 32: 56175
+Process 33: 35201
+Process 34: 29106
+Process 35: 144397
+Process 36: 244115
+Process 37: 45046
+Process 38: 39172
+Process 39: 38249
+Process 40: 65025
+Process 41: 40305
+Process 42: 40359
+Process 43: 132045
+Process 44: 45046
+Process 45: 211027
+Process 46: 48356
+Process 47: 44571
+Process 48: 69094
+Process 49: 44629
+Process 50: 44286
+Process 51: 127812
+Process 52: 39172
+Process 53: 48356
+Process 54: 181757
+Process 55: 68820
+Process 56: 63357
+Process 57: 42568
+Process 58: 42223
+Process 59: 127394
+Process 60: 38249
+Process 61: 44571
+Process 62: 68820
+Process 63: 178968
+NNZ Per Process Standard Deviation = 61454.7
 
 Incorecct Rows: 0
-2.81951,0.0459139,0.000581026,0.00290489,4.90505
+17.6191,0.0450172,0.000649691,0.00117731,0.000597477,19.6719
 Starting Tests on consph_expanded
-NNZ Per Process Standard Deviation = 351.478
+Process 0: 699209
+Process 1: 29427
+Process 2: 10172
+Process 3: 11134
+Process 4: 21380
+Process 5: 0
+Process 6: 0
+Process 7: 0
+Process 8: 29427
+Process 9: 632827
+Process 10: 28980
+Process 11: 10331
+Process 12: 20086
+Process 13: 0
+Process 14: 0
+Process 15: 0
+Process 16: 10172
+Process 17: 28980
+Process 18: 661385
+Process 19: 29623
+Process 20: 18855
+Process 21: 0
+Process 22: 0
+Process 23: 0
+Process 24: 11134
+Process 25: 10331
+Process 26: 29623
+Process 27: 698937
+Process 28: 29
+Process 29: 0
+Process 30: 0
+Process 31: 0
+Process 32: 21380
+Process 33: 20086
+Process 34: 18855
+Process 35: 29
+Process 36: 649943
+Process 37: 61506
+Process 38: 0
+Process 39: 0
+Process 40: 0
+Process 41: 0
+Process 42: 0
+Process 43: 0
+Process 44: 61506
+Process 45: 642747
+Process 46: 61792
+Process 47: 0
+Process 48: 0
+Process 49: 0
+Process 50: 0
+Process 51: 0
+Process 52: 0
+Process 53: 61792
+Process 54: 646069
+Process 55: 61477
+Process 56: 0
+Process 57: 0
+Process 58: 0
+Process 59: 0
+Process 60: 0
+Process 61: 0
+Process 62: 61477
+Process 63: 649779
+NNZ Per Process Standard Deviation = 214950
 
 Incorecct Rows: 0
-2.932,0.0483639,0.000575781,0.00316548,5.30298
+17.3644,0.0673161,0.000464916,0.00173712,0.000607252,19.6523
 Starting Tests on SiO2_expanded
-NNZ Per Process Standard Deviation = 947.937
+Process 0: 581383
+Process 1: 45036
+Process 2: 0
+Process 3: 0
+Process 4: 0
+Process 5: 0
+Process 6: 0
+Process 7: 0
+Process 8: 45036
+Process 9: 568839
+Process 10: 95880
+Process 11: 908
+Process 12: 0
+Process 13: 0
+Process 14: 0
+Process 15: 0
+Process 16: 0
+Process 17: 95880
+Process 18: 694505
+Process 19: 247558
+Process 20: 177834
+Process 21: 30625
+Process 22: 0
+Process 23: 0
+Process 24: 0
+Process 25: 908
+Process 26: 247558
+Process 27: 1546571
+Process 28: 1090459
+Process 29: 178704
+Process 30: 0
+Process 31: 0
+Process 32: 0
+Process 33: 0
+Process 34: 177834
+Process 35: 1090459
+Process 36: 1536613
+Process 37: 246691
+Process 38: 908
+Process 39: 0
+Process 40: 0
+Process 41: 0
+Process 42: 30625
+Process 43: 178704
+Process 44: 246691
+Process 45: 694517
+Process 46: 95880
+Process 47: 0
+Process 48: 0
+Process 49: 0
+Process 50: 0
+Process 51: 0
+Process 52: 908
+Process 53: 95880
+Process 54: 568839
+Process 55: 45036
+Process 56: 0
+Process 57: 0
+Process 58: 0
+Process 59: 0
+Process 60: 0
+Process 61: 0
+Process 62: 45036
+Process 63: 581198
+NNZ Per Process Standard Deviation = 350173
 
-row 46734: -0.256458 != -0.623889
-row 46736: -0.256458 != -0.623889
-row 46923: -0.256458 != -0.623889
-row 46931: -0.256458 != -0.623889
-row 47053: -0.256458 != -0.623889
-row 47061: -0.256458 != -0.623889
-row 47248: -0.256458 != -0.623889
-row 50002: -0.244193 != 2.10736
-row 50192: -0.244193 != 2.10736
-row 50200: -0.244193 != 2.10736
-row 50322: -0.244193 != 2.10736
-row 50330: -0.244193 != 2.10736
-row 50520: -0.244193 != 2.10736
-row 50522: -0.244193 != 2.10736
-row 53189: -0.123836 != -0.491267
-row 53191: -0.123836 != -0.491267
-row 53254: -0.163704 != 2.18785
-row 53256: -0.163704 != 2.18785
-row 53316: -0.138922 != 0.00908615
-row 53317: -0.168835 != -0.548513
-row 53318: -0.200936 != 2.2232
-row 53319: -0.227541 != -12.6423
-row 53320: -0.237762 != 4.46535
-row 53321: -0.227541 != -12.6423
-row 53322: -0.200936 != 2.2232
-row 53323: -0.168835 != -0.548513
-row 53324: -0.138922 != 0.00908616
-row 53381: -0.168835 != -0.548513
-row 53384: -0.318681 != 2.03288
-row 53386: -0.318681 != 2.03288
-row 53389: -0.168835 != -0.548513
-row 53446: -0.200936 != 2.2232
-row 53449: -0.519124 != -0.886637
-row 53451: -0.519124 != -0.886555
-row 53454: -0.200936 != 2.2232
-row 53509: -0.123836 != -0.491267
-row 53510: -0.163704 != 2.18785
-row 53511: -0.227541 != -12.6423
-row 53512: -0.318681 != 2.03288
-row 53513: -0.519124 != -0.886637
-row 53514: -0.67604 != -0.529456
-row 53516: -0.67604 != -0.528031
-row 53517: -0.519124 != -0.886637
-row 53518: -0.318681 != 2.03288
-row 53519: -0.227541 != -12.6423
-row 53520: -0.163704 != 2.18785
-row 53521: -0.123836 != -0.491267
-row 53576: -0.237762 != 4.46535
-row 53584: -0.237762 != 4.46535
-row 53639: -0.123836 != -0.491267
-Incorecct Rows: 188
-5.73746,0.0822113,0.00111747,0.00494528,10.4002
+Incorecct Rows: 0
+37.0716,0.0926521,0.000823498,0.00125432,0.000901937,41.4759
 Starting Tests on torso1_expanded
-NNZ Per Process Standard Deviation = 5670.09
+Process 0: 567374
+Process 1: 226568
+Process 2: 402739
+Process 3: 100359
+Process 4: 384
+Process 5: 149104
+Process 6: 394046
+Process 7: 345981
+Process 8: 226568
+Process 9: 462706
+Process 10: 299498
+Process 11: 0
+Process 12: 1154
+Process 13: 2
+Process 14: 293314
+Process 15: 293368
+Process 16: 402739
+Process 17: 299498
+Process 18: 760590
+Process 19: 174606
+Process 20: 100622
+Process 21: 197307
+Process 22: 488130
+Process 23: 490905
+Process 24: 100359
+Process 25: 0
+Process 26: 174606
+Process 27: 558666
+Process 28: 297968
+Process 29: 292458
+Process 30: 96768
+Process 31: 193536
+Process 32: 384
+Process 33: 1154
+Process 34: 100622
+Process 35: 297968
+Process 36: 637024
+Process 37: 197348
+Process 38: 8
+Process 39: 196552
+Process 40: 149104
+Process 41: 2
+Process 42: 197307
+Process 43: 292458
+Process 44: 197348
+Process 45: 551904
+Process 46: 144016
+Process 47: 167832
+Process 48: 394046
+Process 49: 293314
+Process 50: 488130
+Process 51: 96768
+Process 52: 8
+Process 53: 144016
+Process 54: 712128
+Process 55: 431792
+Process 56: 345981
+Process 57: 293368
+Process 58: 490905
+Process 59: 193536
+Process 60: 196552
+Process 61: 167832
+Process 62: 431792
+Process 63: 713720
+NNZ Per Process Standard Deviation = 194973
 
 Incorecct Rows: 0
-8.341,0.148433,0.00170398,0.0039444,14.8021
+53.7284,0.155146,0.00286722,0.00109434,0.000764132,60.1106
 Starting Tests on dielFilterV3real
-NNZ Per Process Standard Deviation = 83.9839
+Process 0: 2208564
+Process 1: 0
+Process 2: 0
+Process 3: 0
+Process 4: 0
+Process 5: 0
+Process 6: 0
+Process 7: 0
+Process 8: 1371279
+Process 9: 1907552
+Process 10: 0
+Process 11: 0
+Process 12: 0
+Process 13: 0
+Process 14: 0
+Process 15: 0
+Process 16: 2130178
+Process 17: 19234
+Process 18: 2142330
+Process 19: 0
+Process 20: 0
+Process 21: 0
+Process 22: 0
+Process 23: 0
+Process 24: 3955933
+Process 25: 183673
+Process 26: 84638
+Process 27: 2859729
+Process 28: 0
+Process 29: 0
+Process 30: 0
+Process 31: 0
+Process 32: 1130314
+Process 33: 2987681
+Process 34: 0
+Process 35: 57475
+Process 36: 2847966
+Process 37: 0
+Process 38: 0
+Process 39: 0
+Process 40: 1135833
+Process 41: 3013411
+Process 42: 0
+Process 43: 0
+Process 44: 80830
+Process 45: 2856020
+Process 46: 0
+Process 47: 0
+Process 48: 1122403
+Process 49: 1000868
+Process 50: 1988206
+Process 51: 0
+Process 52: 0
+Process 53: 75316
+Process 54: 2834972
+Process 55: 0
+Process 56: 1154250
+Process 57: 0
+Process 58: 3049527
+Process 59: 0
+Process 60: 0
+Process 61: 0
+Process 62: 85237
+Process 63: 2921003
+NNZ Per Process Standard Deviation = 1.13016e+06
 
 Incorecct Rows: 0
-27.5383,0.391018,0.00222874,0.0262601,47.9235
+32.3284,0.456623,0.00167918,0.00149727,0.00449777,52.1186
 Starting Tests on RM07R
-NNZ Per Process Standard Deviation = 294.134
+Process 0: 3725712
+Process 1: 50747
+Process 2: 145279
+Process 3: 94757
+Process 4: 88594
+Process 5: 382290
+Process 6: 156134
+Process 7: 0
+Process 8: 50737
+Process 9: 3845081
+Process 10: 50270
+Process 11: 203003
+Process 12: 306516
+Process 13: 0
+Process 14: 57027
+Process 15: 87425
+Process 16: 133855
+Process 17: 50287
+Process 18: 3786360
+Process 19: 50199
+Process 20: 113627
+Process 21: 102536
+Process 22: 43270
+Process 23: 110550
+Process 24: 94768
+Process 25: 210448
+Process 26: 50197
+Process 27: 3710407
+Process 28: 39545
+Process 29: 0
+Process 30: 341468
+Process 31: 86025
+Process 32: 82918
+Process 33: 300826
+Process 34: 115419
+Process 35: 39482
+Process 36: 3819441
+Process 37: 167904
+Process 38: 420453
+Process 39: 0
+Process 40: 376590
+Process 41: 0
+Process 42: 100746
+Process 43: 0
+Process 44: 167323
+Process 45: 4150534
+Process 46: 39498
+Process 47: 0
+Process 48: 156126
+Process 49: 52168
+Process 50: 43269
+Process 51: 340656
+Process 52: 420743
+Process 53: 39517
+Process 54: 3789014
+Process 55: 56365
+Process 56: 0
+Process 57: 99409
+Process 58: 121940
+Process 59: 94294
+Process 60: 0
+Process 61: 0
+Process 62: 54175
+Process 63: 4249038
+NNZ Per Process Standard Deviation = 1.25331e+06
 
 Incorecct Rows: 0
-19.1756,0.34174,0.00445127,0.0100529,34.4523
+24.2935,0.357671,0.00187206,0.00159431,0.00197244,39.3592
 Starting Tests on m_t1_expanded
-NNZ Per Process Standard Deviation = 207.944
+Process 0: 1046700
+Process 1: 74250
+Process 2: 0
+Process 3: 0
+Process 4: 0
+Process 5: 0
+Process 6: 0
+Process 7: 0
+Process 8: 74250
+Process 9: 1052244
+Process 10: 105534
+Process 11: 0
+Process 12: 0
+Process 13: 0
+Process 14: 0
+Process 15: 0
+Process 16: 0
+Process 17: 105534
+Process 18: 914400
+Process 19: 146106
+Process 20: 0
+Process 21: 0
+Process 22: 0
+Process 23: 0
+Process 24: 0
+Process 25: 0
+Process 26: 146106
+Process 27: 917226
+Process 28: 157689
+Process 29: 0
+Process 30: 0
+Process 31: 0
+Process 32: 0
+Process 33: 0
+Process 34: 0
+Process 35: 157689
+Process 36: 955548
+Process 37: 125307
+Process 38: 0
+Process 39: 0
+Process 40: 0
+Process 41: 0
+Process 42: 0
+Process 43: 0
+Process 44: 125307
+Process 45: 989730
+Process 46: 93465
+Process 47: 0
+Process 48: 0
+Process 49: 0
+Process 50: 0
+Process 51: 0
+Process 52: 0
+Process 53: 93465
+Process 54: 1151514
+Process 55: 68670
+Process 56: 0
+Process 57: 0
+Process 58: 0
+Process 59: 0
+Process 60: 0
+Process 61: 0
+Process 62: 68670
+Process 63: 1184166
+NNZ Per Process Standard Deviation = 335380
 
 Incorecct Rows: 0
-5.51698,0.0770967,0.000997543,0.00338435,9.26547
+30.2686,0.074497,0.000570059,0.00113964,0.000695467,34.124
 Starting Tests on crankseg_2_expanded
-NNZ Per Process Standard Deviation = 617.53
+Process 0: 498000
+Process 1: 359279
+Process 2: 380286
+Process 3: 328131
+Process 4: 350445
+Process 5: 306255
+Process 6: 226314
+Process 7: 266121
+Process 8: 359279
+Process 9: 863294
+Process 10: 81917
+Process 11: 66249
+Process 12: 39420
+Process 13: 39990
+Process 14: 217419
+Process 15: 18534
+Process 16: 380286
+Process 17: 81917
+Process 18: 882986
+Process 19: 92222
+Process 20: 44922
+Process 21: 55506
+Process 22: 146940
+Process 23: 125064
+Process 24: 328131
+Process 25: 66249
+Process 26: 92222
+Process 27: 932870
+Process 28: 39848
+Process 29: 31677
+Process 30: 84204
+Process 31: 216156
+Process 32: 350445
+Process 33: 39420
+Process 34: 44922
+Process 35: 39848
+Process 36: 961232
+Process 37: 161285
+Process 38: 109419
+Process 39: 285423
+Process 40: 306255
+Process 41: 39990
+Process 42: 55506
+Process 43: 31677
+Process 44: 161285
+Process 45: 796014
+Process 46: 98708
+Process 47: 220293
+Process 48: 226314
+Process 49: 217419
+Process 50: 146940
+Process 51: 84204
+Process 52: 109419
+Process 53: 98708
+Process 54: 113648
+Process 55: 59105
+Process 56: 266121
+Process 57: 18534
+Process 58: 125064
+Process 59: 216156
+Process 60: 285423
+Process 61: 220293
+Process 62: 59105
+Process 63: 198550
+NNZ Per Process Standard Deviation = 225895
 
 Incorecct Rows: 0
-8.19354,0.17456,0.0016377,0.00262356,13.4949
+40.9558,0.126654,0.000757456,0.000317574,0.000590801,46.1674
 Starting Tests on nd24k_expanded
-NNZ Per Process Standard Deviation = 1474.18
+Process 0: 2624268
+Process 1: 882218
+Process 2: 329281
+Process 3: 133773
+Process 4: 40389
+Process 5: 20978
+Process 6: 12870
+Process 7: 15758
+Process 8: 882218
+Process 9: 1660392
+Process 10: 830568
+Process 11: 411052
+Process 12: 129412
+Process 13: 56087
+Process 14: 33409
+Process 15: 25038
+Process 16: 329281
+Process 17: 830568
+Process 18: 1466238
+Process 19: 689462
+Process 20: 346727
+Process 21: 169943
+Process 22: 110030
+Process 23: 71504
+Process 24: 133773
+Process 25: 411052
+Process 26: 689462
+Process 27: 1316030
+Process 28: 620988
+Process 29: 366887
+Process 30: 204907
+Process 31: 180739
+Process 32: 40389
+Process 33: 129412
+Process 34: 346727
+Process 35: 620988
+Process 36: 1072158
+Process 37: 642086
+Process 38: 462814
+Process 39: 333910
+Process 40: 20978
+Process 41: 56087
+Process 42: 169943
+Process 43: 366887
+Process 44: 642086
+Process 45: 989900
+Process 46: 616617
+Process 47: 505983
+Process 48: 12870
+Process 49: 33409
+Process 50: 110030
+Process 51: 204907
+Process 52: 462814
+Process 53: 616617
+Process 54: 957684
+Process 55: 574764
+Process 56: 15758
+Process 57: 25038
+Process 58: 71504
+Process 59: 180739
+Process 60: 333910
+Process 61: 505983
+Process 62: 574764
+Process 63: 992576
+NNZ Per Process Standard Deviation = 469881
 
 Incorecct Rows: 0
-13.9558,0.299678,0.0016861,0.0028615,25.3836
+92.1533,0.316037,0.00149226,0.00119495,0.0006001,103.386
 Starting Tests on TSOPF_RS_b2383
-NNZ Per Process Standard Deviation = 3989.56
+Process 0: 31747
+Process 1: 5
+Process 2: 0
+Process 3: 0
+Process 4: 0
+Process 5: 0
+Process 6: 0
+Process 7: 0
+Process 8: 1312
+Process 9: 9529
+Process 10: 0
+Process 11: 0
+Process 12: 4110
+Process 13: 3783
+Process 14: 0
+Process 15: 0
+Process 16: 0
+Process 17: 327
+Process 18: 9203
+Process 19: 0
+Process 20: 0
+Process 21: 5747
+Process 22: 3783
+Process 23: 0
+Process 24: 0
+Process 25: 0
+Process 26: 327
+Process 27: 9203
+Process 28: 0
+Process 29: 0
+Process 30: 5747
+Process 31: 3783
+Process 32: 0
+Process 33: 2015955
+Process 34: 0
+Process 35: 327
+Process 36: 8876
+Process 37: 0
+Process 38: 0
+Process 39: 5420
+Process 40: 0
+Process 41: 3009054
+Process 42: 1665411
+Process 43: 0
+Process 44: 327
+Process 45: 9203
+Process 46: 0
+Process 47: 0
+Process 48: 0
+Process 49: 1558155
+Process 50: 1450899
+Process 51: 1665411
+Process 52: 0
+Process 53: 327
+Process 54: 9203
+Process 55: 0
+Process 56: 0
+Process 57: 1558155
+Process 58: 0
+Process 59: 1450899
+Process 60: 1665411
+Process 61: 0
+Process 62: 327
+Process 63: 9203
+NNZ Per Process Standard Deviation = 642516
 
-row 4809: 0.166679 != 0.0300109
-row 4810: 0.198573 != 0.0626713
-row 4811: 0.161462 != 0.0356442
-row 4812: 0.182697 != 0.0506219
-row 4813: 0.215338 != 0.0860008
-row 4814: 0.180507 != 0.0489986
-row 4815: 0.176998 != 0.0446158
-row 4816: 0.19506 != 0.0602927
-row 4817: 0.213449 != 0.0833878
-Incorecct Rows: 9
-8.46246,0.120108,0.00186467,0.00205135,15.5401
+Incorecct Rows: 0
+10.5364,0.157025,0.00119781,0.000297308,0.000422478,17.5094
 Starting Tests on mouse_gene_expanded
-NNZ Per Process Standard Deviation = 1446.61
+Process 0: 778494
+Process 1: 688613
+Process 2: 726896
+Process 3: 639639
+Process 4: 378573
+Process 5: 174822
+Process 6: 177486
+Process 7: 208054
+Process 8: 688613
+Process 9: 695060
+Process 10: 678528
+Process 11: 621331
+Process 12: 460462
+Process 13: 222912
+Process 14: 250971
+Process 15: 278836
+Process 16: 726896
+Process 17: 678528
+Process 18: 865548
+Process 19: 681398
+Process 20: 473889
+Process 21: 284921
+Process 22: 267561
+Process 23: 309086
+Process 24: 639639
+Process 25: 621331
+Process 26: 681398
+Process 27: 603198
+Process 28: 421234
+Process 29: 215450
+Process 30: 235245
+Process 31: 266169
+Process 32: 378573
+Process 33: 460462
+Process 34: 473889
+Process 35: 421234
+Process 36: 702866
+Process 37: 388337
+Process 38: 533531
+Process 39: 534857
+Process 40: 174822
+Process 41: 222912
+Process 42: 284921
+Process 43: 215450
+Process 44: 388337
+Process 45: 570268
+Process 46: 532972
+Process 47: 495628
+Process 48: 177486
+Process 49: 250971
+Process 50: 267561
+Process 51: 235245
+Process 52: 533531
+Process 53: 532972
+Process 54: 685672
+Process 55: 601140
+Process 56: 208054
+Process 57: 278836
+Process 58: 309086
+Process 59: 266169
+Process 60: 534857
+Process 61: 495628
+Process 62: 601140
+Process 63: 569103
+NNZ Per Process Standard Deviation = 190503
 
-row 26571: 33.2822 != 33.1514
-row 34043: 29.0427 != 28.912
-Incorecct Rows: 2
-13.4001,0.254728,0.00431418,0.00213552,24.8052
+Incorecct Rows: 0
+101.158,0.262196,0.000685453,0.000269175,0.000488997,112.1
 Starting Tests on human_gene1_expanded
-NNZ Per Process Standard Deviation = 2614.15
+Process 0: 523982
+Process 1: 246626
+Process 2: 187843
+Process 3: 304644
+Process 4: 319975
+Process 5: 197398
+Process 6: 309154
+Process 7: 211435
+Process 8: 246626
+Process 9: 186094
+Process 10: 232426
+Process 11: 211482
+Process 12: 217613
+Process 13: 226602
+Process 14: 221157
+Process 15: 230164
+Process 16: 187843
+Process 17: 232426
+Process 18: 877984
+Process 19: 460045
+Process 20: 366513
+Process 21: 863933
+Process 22: 417030
+Process 23: 792639
+Process 24: 304644
+Process 25: 211482
+Process 26: 460045
+Process 27: 342440
+Process 28: 301821
+Process 29: 462175
+Process 30: 317436
+Process 31: 434734
+Process 32: 319975
+Process 33: 217613
+Process 34: 366513
+Process 35: 301821
+Process 36: 324570
+Process 37: 374682
+Process 38: 299320
+Process 39: 361670
+Process 40: 197398
+Process 41: 226602
+Process 42: 863933
+Process 43: 462175
+Process 44: 374682
+Process 45: 917328
+Process 46: 425869
+Process 47: 806251
+Process 48: 309154
+Process 49: 221157
+Process 50: 417030
+Process 51: 317436
+Process 52: 299320
+Process 53: 425869
+Process 54: 335886
+Process 55: 409808
+Process 56: 211435
+Process 57: 230164
+Process 58: 792639
+Process 59: 434734
+Process 60: 361670
+Process 61: 806251
+Process 62: 409808
+Process 63: 740469
+NNZ Per Process Standard Deviation = 198984
 
-row 7205: 49.9605 != 49.8015
-row 15279: 51.8138 != 51.6598
-row 20434: 53.7467 != 53.5848
-Incorecct Rows: 3
-12.4922,0.23482,0.0032928,0.00168514,22.0552
+Incorecct Rows: 0
+81.6602,0.215533,0.000647306,0.00023675,0.000421286,90.8725

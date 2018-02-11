@@ -5,7 +5,7 @@
 #$ -pe mpi-16 512
 ##$ -q *@@cswarm
 #$ -q long
-#$ -o 64procTests_mva.txt
+#$ -o 64procTests_mva_balanced.txt
 #$ -e errorurrmahgurd.err
 #$ -N MVA_Correctness_Tests
 

@@ -1,11 +1,11 @@
-'#!/bin/tcsh
+#!/bin/tcsh
 #$ -M bpage1@nd.edu
 #$ -m abe
 #$ -cwd
 #$ -pe mpi-16 208
 ##$ -q *@@cswarm
 #$ -q long
-#$ -o 25procTests_mva.txt
+#$ -o 25procTests_mva_balanced.txt
 #$ -e errorurrmahgurd.err
 #$ -N Correctness_Tests
 
