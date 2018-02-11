@@ -131,6 +131,7 @@ int main(int argc, char *argv[]) {
 	// get the number of MPI processes for work split and distribution
     control.clusterRows = sqrt(control.processCount);
     control.clusterCols = control.clusterRows; // works because cluster is expected to be square
+	if (control.debug && control.myId == 0) std::cout << "clusterCols = " << control.clusterCols << ", clusterRows = " << control.clusterRows << std::endl;
     control.myCol = control.myId % control.clusterRows;
 	//std::cout << "myId = " << control.myId << ", myCol = " << control.myCol << std::endl;
 
