@@ -191,6 +191,7 @@ int main(int argc, char *argv[]) {
 			    displacements.push_back(clusterColData[i%control.clusterCols]->processData[(i/control.clusterRows)*2]);
 			    rowCounts.push_back(clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*2)+1]);
 			    rowsToGather += clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*2)+1];
+
 			    for (int j = 0; j < rowCounts[i]; j++){
 				    control.rowDistribution.push_back(clusterColData[i%control.clusterCols]->assignedRowIds[clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*2)+1]+j]);
 			    }
@@ -1037,7 +1038,9 @@ int main(int argc, char *argv[]) {
 		if (control.myId == 0){
 			result.resize(control.rowCount, 0.0);
 		}
-		if (control.myId != 0){gatheredResult.resize(nodeCSR->processData[2], 0.0);
+		if (control.myId != 0){
+			gatheredResult.resize(nodeCSR->processData[2], 0.0);
+		}
 
 		if (control.debug && control.myId == 0) std::cout << "Starting SpMV computation" << std::endl;
 		if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
