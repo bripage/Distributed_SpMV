@@ -200,7 +200,7 @@ int main(int argc, char *argv[]) {
 		    }
 
 		    for (int i = 0; i < displacements.size(); i++){
-			    std::cout << "displacement[" << i << "] = " << displacements[i] << ", rowcounts[" << i << "] = " << rowCounts << std::endl;
+			    std::cout << "displacement[" << i << "] = " << displacements[i] << ", rowcounts[" << i << "] = " << rowCounts[i] << std::endl;
 		    }
 
 
