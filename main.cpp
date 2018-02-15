@@ -199,6 +199,11 @@ int main(int argc, char *argv[]) {
 			    }
 		    }
 
+		    for (int i = 0; i < displacements.size(); i++){
+			    std::cout << "displacement[" << i << "] = " << displacements[i] << ", rowcounts[" << i << "] = " << rowCounts << std::endl;
+		    }
+
+
 		    gatheredResult.resize(rowsToGather, 0.0);
 	    }
     }
