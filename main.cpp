@@ -1005,11 +1005,15 @@ int main(int argc, char *argv[]) {
 				std::cout << "receiving csrData" << std::endl;
 				MPI_Recv(&nodeCSR->csrData[0], nodeCSR->processData[0], MPI_DOUBLE, 0, 0, control.col_comm,
 				         MPI_STATUS_IGNORE);
+                if(control.debug) std::cout << "Starting CSR rebasing" << std::endl;
 				nodeCSR->rebase_balanced();
+                if(control.debug) std::cout << "Done rebasing" << std::endl;
 			}
 			//std::cout << "Rows recieved: " << nodeCSR->csrRows.size() << ", NNZs received: " << nodeCSR->csrData.size() << ", denseVec received: " << nodeCSR->denseVec.size() << std::endl;
 			if (control.myId == 0) nodeCSR->denseVec.resize(control.rowCount, 1.0);
+            if(control.debug) std::cout << "Starting to broadcast dense vector" << std::endl;
 			MPI_Bcast(&nodeCSR->denseVec[0], control.rowCount, MPI_DOUBLE, 0, MPI_COMM_WORLD);
+            if(control.debug) std::cout << "Done broadcasting dense vector" << std::endl;
 		}
 		dataTransmissionEnd = MPI_Wtime();
 
