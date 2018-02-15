@@ -183,8 +183,8 @@ int main(int argc, char *argv[]) {
 	    } else if (control.distributionMethod == 3) {
 		    distribution_Balanced(control, clusterColData);
 
-		    displacements.resize(control.processCount,0);
-		    rowCounts.resize(control.processCount,0);
+		    //displacements.resize(control.processCount,0);
+		    //rowCounts.resize(control.processCount,0);
 		    int rowsToGather = 0;
 
 		    displacements.push_back(0);
