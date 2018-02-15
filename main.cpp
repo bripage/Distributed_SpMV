@@ -1089,7 +1089,7 @@ int main(int argc, char *argv[]) {
 								std::cout << "gatheredResult[" << i << "] += ";
 								std::cout << nodeCSR->csrData[j];
 								std::cout << " * ";
-								std::cout << nodeCSR->denseVec[nodeCSR->csrCols[j]] << std::endl;
+								std::cout << "nodeCSR->denseVec[" << nodeCSR->csrCols[j] << "]" << std::endl;
 								gatheredResult[i] += nodeCSR->csrData[j] * nodeCSR->denseVec[nodeCSR->csrCols[j]];
 							}
 						} else {
@@ -1108,7 +1108,7 @@ int main(int argc, char *argv[]) {
 							std::cout << "gatheredResult[" << i << "] += ";
 							std::cout << nodeCSR->csrData[j];
 							std::cout << " * ";
-							std::cout << nodeCSR->denseVec[nodeCSR->csrCols[j]] << std::endl;
+							std::cout << "nodeCSR->denseVec[" << nodeCSR->csrCols[j] << "]" << std::endl;
 							gatheredResult[i] += nodeCSR->csrData[j] * nodeCSR->denseVec[nodeCSR->csrCols[j]];
 						}
 					}
