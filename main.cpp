@@ -985,7 +985,7 @@ int main(int argc, char *argv[]) {
 				//MPI_Recv(&control.maxRowsAssigned, 1, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
 				//std::cout << "received maxRowsAssigned: " << control.maxRowsAssigned << std::endl;
 				MPI_Recv(&(nodeCSR->processData[0]), 2, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
-				std::cout << "received processData: " << nodeCSR->processData[0] << ", " << nodeCSR->processData[1] << std::endl;
+				std::cout << "Proc " << control.myId << " received processData: " << nodeCSR->processData[0] << ", " << nodeCSR->processData[1] << std::endl;
 
 				//nodeCSR->assignedRowIds.resize(nodeCSR->processData[1]);
 				nodeCSR->csrRows.resize(nodeCSR->processData[1]);
