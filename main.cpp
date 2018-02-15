@@ -1086,6 +1086,7 @@ int main(int argc, char *argv[]) {
 					for (i = ompThreadId * rowsPerThread; i < nodeCSR->csrRows.size(); i++) {
 						if (i == nodeCSR->csrRows.size() - 1) {
 							for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrData.size(); j++) {
+								std::cout << gatheredResult.size() << ", " << nodeCSR->csrCols.size() << ", " << nodeCSR->csrData.size() << std::endl;
 								std::cout << "gatheredResult[" << i << "] += ";
 								std::cout << nodeCSR->csrData[j];
 								std::cout << " * ";
