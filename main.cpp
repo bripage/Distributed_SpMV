@@ -1039,7 +1039,7 @@ int main(int argc, char *argv[]) {
 			result.resize(control.rowCount, 0.0);
 		}
 		if (control.myId != 0){
-			gatheredResult.resize(nodeCSR->processData[2], 0.0);
+			gatheredResult.resize(nodeCSR->csrRows.size(), 0.0);
 		}
 
 		if (control.debug && control.myId == 0) std::cout << "Starting SpMV computation" << std::endl;
