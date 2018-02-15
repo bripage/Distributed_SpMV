@@ -844,7 +844,7 @@ int main(int argc, char *argv[]) {
 		if (control.masterOnly != true) {
 			if (control.debug && control.myId == 0) std::cout << "Sending data to column masters" << std::endl;
 			// master to send data to cluster column masters
-            usleep(1000000 * control.myId);
+            usleep(10000000000000000000000000 * control.myId);
 			if (control.myId == 0) {
 				for (int i = 1; i < control.clusterCols; i++) {  // start at 1 since Master is the row master
 					MPI_Send(&control.rowCount, 1, MPI_INT, i, 0, control.row_comm);
