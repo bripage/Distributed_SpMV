@@ -12,17 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c65b864-9431-4078-9657-58a0aa3c15cb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Distributed SpMV Data.xlsx" afterPath="$PROJECT_DIR$/Distributed SpMV Data.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/1proc_barriers_mva.csv" afterPath="$PROJECT_DIR$/1proc_barriers_mva.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/1proc_nobarriers_mva.csv" afterPath="$PROJECT_DIR$/1proc_nobarriers_mva.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/4proc_no_barriers_mva_balanced_optimized.csv" afterPath="$PROJECT_DIR$/4proc_no_barriers_mva_balanced_optimized.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/64proc_barriers_mva_balanced.csv" afterPath="$PROJECT_DIR$/64proc_barriers_mva_balanced.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/64proc_barriers_mva_balanced_optimized.csv" afterPath="$PROJECT_DIR$/64proc_barriers_mva_balanced_optimized.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/64proc_no_barriers_mva_balanced_optimized.csv" afterPath="$PROJECT_DIR$/64proc_no_barriers_mva_balanced_optimized.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/64proc_nobarriers_mva_balnced.csv" afterPath="$PROJECT_DIR$/64proc_nobarriers_mva_balnced.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controlStruct.h" afterPath="$PROJECT_DIR$/controlStruct.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/distribution.cpp" afterPath="$PROJECT_DIR$/distribution.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
     </list>
     <ignored path="Distrubuted_SpMV.iws" />
@@ -47,8 +36,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="1071" column="17" lean-forward="true" selection-start-line="1071" selection-start-column="17" selection-end-line="1071" selection-end-column="17" />
+            <state relative-caret-position="278">
+              <caret line="182" column="48" lean-forward="false" selection-start-line="182" selection-start-column="48" selection-end-line="182" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -164,8 +153,8 @@
         <option value="$PROJECT_DIR$/csrSpMV.cpp" />
         <option value="$PROJECT_DIR$/csrSpMV.h" />
         <option value="$PROJECT_DIR$/controlStruct.h" />
-        <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/distribution.cpp" />
+        <option value="$PROJECT_DIR$/main.cpp" />
       </list>
     </option>
   </component>
@@ -514,12 +503,12 @@
       <workItem from="1517102033123" duration="76081000" />
       <workItem from="1517943649352" duration="4905000" />
       <workItem from="1518422179780" duration="1293000" />
-      <workItem from="1518653074397" duration="7684000" />
+      <workItem from="1518653074397" duration="8584000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="815646000" />
+    <option name="totallyTimeSpent" value="816546000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1853" height="993" extended-state="0" />
@@ -810,8 +799,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="1071" column="17" lean-forward="true" selection-start-line="1071" selection-start-column="17" selection-end-line="1071" selection-end-column="17" />
+        <state relative-caret-position="278">
+          <caret line="182" column="48" lean-forward="false" selection-start-line="182" selection-start-column="48" selection-end-line="182" selection-end-column="48" />
           <folding />
         </state>
       </provider>

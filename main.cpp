@@ -180,7 +180,7 @@ int main(int argc, char *argv[]) {
 		    distribution_SplitMatrix(control, clusterColData);
 	    } else if (control.distributionMethod == 2){
 		    distribution_Balanced(control, clusterColData);
-	    } else if (control.distributionMethod = 3) {
+	    } else if (control.distributionMethod == 3) {
 		    distribution_Balanced(control, clusterColData);
 
 		    displacements.resize(control.processCount,0);
@@ -240,6 +240,7 @@ int main(int argc, char *argv[]) {
 	        } else {
 		        // verification for balance distribution
 		        std::vector<int> seqDist(control.rowCount, 0); // sequential distribution
+		        std::cout << "made the seqDist vector" << std::endl;
 		        masterData.masterOnlySpMV(control, seqDist); // perform sequential SpMV on master process only
 	        }
         }
