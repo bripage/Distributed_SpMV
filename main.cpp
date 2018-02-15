@@ -1137,7 +1137,7 @@ int main(int argc, char *argv[]) {
 					result[control.rowDistribution[i]] += gatheredResult[i];
 				}
 			} else {
-				MPI_Gatherv(&result[0], nodeCSR->csrRows.size(), MPI_DOUBLE, &gatheredResult[0], &rowCounts[0],
+				MPI_Gatherv(&gatheredResult[0], nodeCSR->csrRows.size(), MPI_DOUBLE, &gatheredResult[0], &rowCounts[0],
 				            &displacements[0], MPI_DOUBLE, 0, MPI_COMM_WORLD);
 			}
 			if (control.debug && control.myId == 0) std::cout << "MPI Gather complete" << std::endl;
