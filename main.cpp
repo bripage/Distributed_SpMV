@@ -958,7 +958,7 @@ int main(int argc, char *argv[]) {
 					std::cout << "sending csrCols to " << i << std::endl;
 					MPI_Send(&(nodeCSR->csrCols[nnzSent]), nodeCSR->processData[(i*2)], MPI_INT, i, 0,
 					         control.col_comm);
-					std::cout << "sending csrData to " << i << std::endl;
+					std::cout << "sending " << nodeCSR->processData[(i*2)] << " csrData to " << (control.myId*control.clusterCols)+(i*control.clusterRows) << std::endl;
 					MPI_Send(&(nodeCSR->csrData[nnzSent]), nodeCSR->processData[(i*2)], MPI_DOUBLE, i, 0,
 					         control.col_comm);
 				}
