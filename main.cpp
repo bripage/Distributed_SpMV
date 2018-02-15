@@ -844,6 +844,7 @@ int main(int argc, char *argv[]) {
 		if (control.masterOnly != true) {
 			if (control.debug && control.myId == 0) std::cout << "Sending data to column masters" << std::endl;
 			// master to send data to cluster column masters
+            usleep(1000000 * control.myId);
 			if (control.myId == 0) {
 				for (int i = 1; i < control.clusterCols; i++) {  // start at 1 since Master is the row master
 					MPI_Send(&control.rowCount, 1, MPI_INT, i, 0, control.row_comm);
@@ -878,7 +879,6 @@ int main(int argc, char *argv[]) {
 				// total number of rows in matrix not process or column
 				MPI_Recv(&control.rowCount, 1, MPI_INT, 0, 0, control.row_comm, MPI_STATUS_IGNORE);
 				//MPI_Recv(&control.maxRowsAssigned, 1, MPI_INT, 0, 0, control.row_comm, MPI_STATUS_IGNORE);
-				usleep(100000 * control.myId);
 				std::cout << "rowCount = " << control.rowCount << std::endl;
 				// Get rows and nnz per proc data
 				nodeCSR->processData.resize(control.clusterRows*2);
