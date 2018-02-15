@@ -1070,7 +1070,7 @@ int main(int argc, char *argv[]) {
 				ompThreadId = omp_get_thread_num();
 				if (control.debug) {
 					ompCPUId = sched_getcpu();
-					usleep(100000000 * control.myId );
+					//usleep(100000000 * control.myId );
 					std::cout << "Rank " << control.myId << ", Thread " << ompThreadId << " on core " << ompCPUId
 					          << std::endl;
 				}
