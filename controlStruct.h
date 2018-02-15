@@ -7,6 +7,7 @@
 
 #include <string>
 #include <mpi.h>
+#include <vector>
 
 struct controlData {
     char *matrixFile;
@@ -31,6 +32,8 @@ struct controlData {
     int lastClusterColColStart; // can be calculated locally
     int elementCount;
 	int maxRowsAssigned;
+
+	std::vector <int> rowDistribution;
 
     //MPI Stuff
     int processCount;
