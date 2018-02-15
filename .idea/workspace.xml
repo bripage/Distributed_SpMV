@@ -36,8 +36,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="1088" column="150" lean-forward="false" selection-start-line="1088" selection-start-column="150" selection-end-line="1088" selection-end-column="150" />
+            <state relative-caret-position="96">
+              <caret line="1072" column="35" lean-forward="false" selection-start-line="1072" selection-start-column="35" selection-end-line="1072" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -503,12 +503,12 @@
       <workItem from="1517102033123" duration="76081000" />
       <workItem from="1517943649352" duration="4905000" />
       <workItem from="1518422179780" duration="1293000" />
-      <workItem from="1518653074397" duration="9977000" />
+      <workItem from="1518653074397" duration="10042000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="817939000" />
+    <option name="totallyTimeSpent" value="818004000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1853" height="993" extended-state="0" />
@@ -799,8 +799,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="1088" column="150" lean-forward="false" selection-start-line="1088" selection-start-column="150" selection-end-line="1088" selection-end-column="150" />
+        <state relative-caret-position="96">
+          <caret line="1072" column="35" lean-forward="false" selection-start-line="1072" selection-start-column="35" selection-end-line="1072" selection-end-column="35" />
           <folding />
         </state>
       </provider>
