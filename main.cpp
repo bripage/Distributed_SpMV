@@ -1134,7 +1134,7 @@ int main(int argc, char *argv[]) {
 				           MPI_DOUBLE, 0, MPI_COMM_WORLD);
 
 				for (int i = 1; i < gatheredResult.size(); i++) {
-					result[control.rowDistribution[i]] += gatheredResult[i];
+					//result[control.rowDistribution[i]] += gatheredResult[i];
 				}
 			} else {
 				MPI_Gatherv(&gatheredResult[0], nodeCSR->csrRows.size(), MPI_DOUBLE, &gatheredResult[0], &rowCounts[0],
@@ -1158,7 +1158,7 @@ int main(int argc, char *argv[]) {
     // This block is to be used in conjunction with single node, single thread/process SpMV and compares the results of
     // the "master only" SpMV against those of the distributed version's results.
     //
-
+/*
 	if (control.debug && control.myId == 0) std::cout << "Starting Verification" << std::endl;
 	if (control.verify) {
         if (control.myId == 0) {
@@ -1179,7 +1179,7 @@ int main(int argc, char *argv[]) {
         }
     }
 	if (control.debug && control.myId == 0) std::cout << "Verification complete" << std::endl;
-
+*/
 
 	if (control.debug && control.myId == 0) std::cout << "Starting Output" << std::endl;
     if (control.myId == 0) {
