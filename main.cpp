@@ -187,8 +187,10 @@ int main(int argc, char *argv[]) {
 		    rowCounts.resize(control.processCount,0);
 		    int rowsToGather = 0;
 
-		    for (int i = 0; i < control.processCount; i++){
-			    displacements.push_back(clusterColData[i%control.clusterCols]->processData[(i/control.clusterRows)*2]);
+		    displacements.push_back(0);
+		    rowCounts.push_back(clusterColData[0]->processData[1]);
+		    for (int i = 1; i < control.processCount; i++){
+			    displacements.push_back(rowsToGather);
 			    rowCounts.push_back(clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*2)+1]);
 			    rowsToGather += clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*2)+1];
 
