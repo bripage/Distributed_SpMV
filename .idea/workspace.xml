@@ -11,7 +11,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c65b864-9431-4078-9657-58a0aa3c15cb" name="Default" comment="" />
+    <list default="true" id="0c65b864-9431-4078-9657-58a0aa3c15cb" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
+    </list>
     <ignored path="Distrubuted_SpMV.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -34,8 +36,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="618">
-              <caret line="940" column="46" lean-forward="true" selection-start-line="940" selection-start-column="46" selection-end-line="940" selection-end-column="46" />
+            <state relative-caret-position="351">
+              <caret line="1151" column="96" lean-forward="false" selection-start-line="1151" selection-start-column="96" selection-end-line="1151" selection-end-column="96" />
               <folding />
             </state>
           </provider>
@@ -497,7 +499,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="828512000" />
+    <option name="totallyTimeSpent" value="829584000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1868" y="38" width="1853" height="993" extended-state="0" />
@@ -799,8 +801,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="618">
-          <caret line="940" column="46" lean-forward="true" selection-start-line="940" selection-start-column="46" selection-end-line="940" selection-end-column="46" />
+        <state relative-caret-position="351">
+          <caret line="1151" column="96" lean-forward="false" selection-start-line="1151" selection-start-column="96" selection-end-line="1151" selection-end-column="96" />
           <folding />
         </state>
       </provider>

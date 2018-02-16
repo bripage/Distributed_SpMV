@@ -1149,6 +1149,7 @@ int main(int argc, char *argv[]) {
 					//result[control.rowDistribution[i]] += gatheredResult[i];
 				}
 			} else {
+				std::cout << control.myId << "sending " << nodeCSR->csrRows.size() << std::endl;
 				MPI_Gatherv(&gatheredResult[0], nodeCSR->csrRows.size(), MPI_DOUBLE, &gatheredResult[0], &rowCounts[0],
 				            &displacements[0], MPI_DOUBLE, 0, MPI_COMM_WORLD);
 			}
