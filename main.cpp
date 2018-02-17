@@ -967,16 +967,16 @@ int main(int argc, char *argv[]) {
 				// Erase the excess data on the column master that has already been distributed to its row nodes
 				int myLastData = nodeCSR->csrRows[control.rowsPerNode];
 				if (!(nodeCSR->assignedRowIds.empty())) {
-					//nodeCSR->assignedRowIds.erase(nodeCSR->assignedRowIds.begin() + nodeCSR->processData[1], nodeCSR->assignedRowIds.end());
+					nodeCSR->assignedRowIds.erase(nodeCSR->assignedRowIds.begin() + nodeCSR->processData[1], nodeCSR->assignedRowIds.end());
 				}
 				if (!(nodeCSR->csrRows.empty())) {
-					//nodeCSR->csrRows.erase(nodeCSR->csrRows.begin() + nodeCSR->processData[1], nodeCSR->csrRows.end());
+					nodeCSR->csrRows.erase(nodeCSR->csrRows.begin() + nodeCSR->processData[1], nodeCSR->csrRows.end());
 				}
 				if (!(nodeCSR->csrCols.empty())) {
-					//nodeCSR->csrCols.erase(nodeCSR->csrCols.begin() + nodeCSR->processData[0], nodeCSR->csrCols.end());
+					nodeCSR->csrCols.erase(nodeCSR->csrCols.begin() + nodeCSR->processData[0], nodeCSR->csrCols.end());
 				}
 				if (!(nodeCSR->csrData.empty())) {
-					//nodeCSR->csrData.erase(nodeCSR->csrData.begin() + nodeCSR->processData[0], nodeCSR->csrData.end());
+					nodeCSR->csrData.erase(nodeCSR->csrData.begin() + nodeCSR->processData[0], nodeCSR->csrData.end());
 				}
 				//nodeCSR->rebase(control.myCol * control.colsPerNode);
 			} else if (control.myId >= control.clusterCols) {
