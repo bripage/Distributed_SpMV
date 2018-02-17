@@ -1146,6 +1146,7 @@ int main(int argc, char *argv[]) {
 				           MPI_DOUBLE, 0, MPI_COMM_WORLD);
 
 				for (int i = 1; i < gatheredResult.size(); i++) {
+					std::cout << "result[" << control.rowDistribution[i] << "]" << = result[control.rowDistribution[i]] << " + " << gatheredResult[i] << std::endl;
 					result[control.rowDistribution[i]] += gatheredResult[i];
 				}
 			} else {
@@ -1179,7 +1180,7 @@ int main(int argc, char *argv[]) {
             int incorrectRowCount = 0;
             for (int i = 0; i < control.rowCount; i++) {
                 //std::cout << "i = " << i << std::endl;
-	            std::cout << masterData.result[i] << " = " << result[i] << std::endl;
+	            //std::cout << masterData.result[i] << " = " << result[i] << std::endl;
                 if (std::abs(masterData.result[i] - result[i]) > 0.001) {
                     //std::cout << "--- ERROR: result[" << i << "] DOES NOT MATCH ---" << std::endl;
                     if (incorrectRowCount < 50) {
