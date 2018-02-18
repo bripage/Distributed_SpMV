@@ -200,7 +200,7 @@ int main(int argc, char *argv[]) {
 
 			    for (int j = 0; j < rowCounts[i]; j++){
 				    control.rowDistribution.push_back(clusterColData[i%control.clusterCols]->assignedRowIds[clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*2)+1]+j]);
-			        std::cout << control.rowDistribution[i] << std::endl;
+			        std::cout << control.rowDistribution[i] << ", ";
 			    }
 		    }
 
@@ -1086,7 +1086,7 @@ int main(int argc, char *argv[]) {
 				ompThreadId = omp_get_thread_num();
 				if (control.debug) {
 					ompCPUId = sched_getcpu();
-					usleep(1000000 * control.myId );
+					usleep(10000000 * control.myId );
 					std::cout << "Rank " << control.myId << ", Thread " << ompThreadId << " on core " << ompCPUId
 					          << std::endl;
 				}
@@ -1144,13 +1144,16 @@ int main(int argc, char *argv[]) {
 			 *      MPI GATHER FROM ALL TO MASTER
 			 */
 			masterGatherStart = MPI_Wtime();
-			if (control.debug && control.myId == 0) std::cout << "Starting MPI Gather" << std::endl;
+			if (control.debug && control.myId == 0){
+				std::cout << "Starting MPI Gather" << std::endl;
+			}
 			if (control.myId == 0) {
 				MPI_Gatherv(MPI_IN_PLACE, rowCounts[0], MPI_DOUBLE, &gatheredResult[0], &rowCounts[0], &displacements[0],
 				           MPI_DOUBLE, 0, MPI_COMM_WORLD);
 
+				std::cout << "gatheredResult.size() = " << gatheredResult.size() << std::endl;
 				for (int i = 1; i < gatheredResult.size(); i++) {
-					std::cout << "result[" << control.rowDistribution[i] << "]" << " = " << result[control.rowDistribution[i]] << " + " << gatheredResult[i] << std::endl;
+					//std::cout << "result[" << control.rowDistribution[i] << "]" << " = " << result[control.rowDistribution[i]] << " + " << gatheredResult[i] << std::endl;
 					result[control.rowDistribution[i]] += gatheredResult[i];
 				}
 			} else {
