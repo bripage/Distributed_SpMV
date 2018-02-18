@@ -197,11 +197,12 @@ int main(int argc, char *argv[]) {
 
 			    for (int j = 0; j < rowCounts[i]; j++){
 				    control.rowDistribution.push_back(clusterColData[i%control.clusterCols]->assignedRowIds[clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*2)+1]+j]);
+			        std::cout << control.rowDistribution[i] << std::endl;
 			    }
 		    }
 
 		    for (int i = 0; i < displacements.size(); i++){
-			    std::cout << "displacement[" << i << "] = " << displacements[i] << ", rowcounts[" << i << "] = " << rowCounts[i] << std::endl;
+			    //std::cout << "displacement[" << i << "] = " << displacements[i] << ", rowcounts[" << i << "] = " << rowCounts[i] << std::endl;
 		    }
 
 
