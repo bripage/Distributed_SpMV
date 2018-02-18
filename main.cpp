@@ -188,6 +188,8 @@ int main(int argc, char *argv[]) {
 		    //rowCounts.resize(control.processCount,0);
 		    int rowsToGather = 0;
 
+		    std::cout << "assignedRows[0] = " << clusterColData[0]->assignedRowIds.size() << std::endl;
+		    std::cout << "assignedRows[1] = " << clusterColData[1]->assignedRowIds.size() << std::endl;
 
 		    rowCounts.push_back(clusterColData[0]->processData[1]);
 		    for (int i = 0; i < control.processCount; i++){
@@ -201,12 +203,11 @@ int main(int argc, char *argv[]) {
 				    displacements.push_back(displacements[displacements.size() - 1] + rowCounts[i - 1]);
 			    }
 
-			    std::cout << "assignedRows[0] = " << clusterColData[0]->assignedRowIds.size() << std::endl;
-			    std::cout << "assignedRows[1] = " << clusterColData[1]->assignedRowIds.size() << std::endl;
-
 			    for (int j = 0; j < rowCounts[i]; j++){
 				    control.rowDistribution.push_back(clusterColData[i%control.clusterCols]->assignedRowIds[clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*2)+1]+j]);
-			        //std::cout << control.rowDistribution[i] << ", ";
+			        std::cout << "control.rowDistribution[" << i << "] = "
+			                  << clusterColData[i%control.clusterCols]->assignedRowIds[clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*2)+1]+j]
+			                  << std::endl;
 			    }
 		    }
 
