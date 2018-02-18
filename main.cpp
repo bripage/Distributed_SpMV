@@ -181,6 +181,7 @@ int main(int argc, char *argv[]) {
 	    } else if (control.distributionMethod == 2){
 		    distribution_Balanced(control, clusterColData);
 	    } else if (control.distributionMethod == 3) {
+		    std::cout << "inside distribution" << std::endl;
 		    distribution_Balanced(control, clusterColData);
 
 		    //displacements.resize(control.processCount,0);
@@ -190,7 +191,9 @@ int main(int argc, char *argv[]) {
 		    displacements.push_back(0);
 		    rowCounts.push_back(clusterColData[0]->processData[1]);
 		    for (int i = 1; i < control.processCount; i++){
+			    std::cout << "i = " << i << std::endl;
 			    rowCounts.push_back(clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*2)+1]);
+			    std::cout << "i = " << i << ", rowcounts[" << i << "] = " << rowCounts[i] << std::endl;
 			    rowsToGather += clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*2)+1];
                 displacements.push_back(displacements[displacements.size()-1]+rowCounts[i-1]);
 
