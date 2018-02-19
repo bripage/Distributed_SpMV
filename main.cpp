@@ -809,6 +809,7 @@ int main(int argc, char *argv[]) {
 					rowEnd = (ompThreadId + 1) * rowsPerThread;
 				}
 
+				std::cout << "denseVec.size() = " << nodeCSR->denseVec.size() << std::endl;
 				if (ompThreadId == control.ompThreads - 1) {
 					for (i = ompThreadId * rowsPerThread; i < nodeCSR->csrRows.size(); i++) {
 						std::cout << " i = " << i << std::endl;
