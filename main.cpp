@@ -257,6 +257,7 @@ int main(int argc, char *argv[]) {
 			        std::cout << "Total Incorrectly Distributed Rows = " << totalInvalidRows << std::endl;
 		        }
 	        } else {
+		        std::cout << "inside" << std::endl;
 		        // verification for balance distribution
 		        std::vector<int> seqDist(control.rowCount, 0); // sequential distribution
 		        std::cout << "made the seqDist vector" << std::endl;
