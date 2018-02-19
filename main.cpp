@@ -225,7 +225,7 @@ int main(int argc, char *argv[]) {
     // Find Distribution of Non-Zeros on both sequential and distributed distributions
 	// This checks to make sure that all nnz have been assigned and that none are forgotten or used twice
 	//
-	if (control.debug && control.myId == 0) std::cout << "Starting verification" << std::endl;
+	if (control.debug && control.myId == 0) std::cout << "Starting Distribution Verification" << std::endl;
 	csrSpMV masterData;
 	if (control.verify) {
         if (!control.myId) {
@@ -257,17 +257,16 @@ int main(int argc, char *argv[]) {
 			        std::cout << "Total Incorrectly Distributed Rows = " << totalInvalidRows << std::endl;
 		        }
 	        } else {
-		        std::cout << "inside" << std::endl;
 		        // verification for balance distribution
 		        std::vector<int> seqDist(control.rowCount, 0); // sequential distribution
-		        std::cout << "made the seqDist vector" << std::endl;
+		        //std::cout << "made the seqDist vector" << std::endl;
 		        masterData.masterOnlySpMV(control, seqDist); // perform sequential SpMV on master process only
 	        }
         }
     }
 	//
     // End distribution calculation
-	if (control.debug && control.myId == 0) std::cout << "Verification complete" << std::endl;
+	if (control.debug && control.myId == 0) std::cout << "Distribution Verification complete" << std::endl;
 
     if (control.matrixInfo && control.myId == 0) {
 	    if (control.distributionMethod == 1) {
