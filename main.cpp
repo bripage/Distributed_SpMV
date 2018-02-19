@@ -1117,10 +1117,12 @@ int main(int argc, char *argv[]) {
 					rowEnd = (ompThreadId + 1) * rowsPerThread;
 				}
 
+				std::cout << "just before computation" << std::endl;
 				if (ompThreadId == control.ompThreads - 1) {
 					for (i = ompThreadId * rowsPerThread; i < totalRows; i++) {
 						if (i == totalRows - 1) {
 							for (j = nodeCSR->csrRows[i]; j < totalData; j++) {
+								std::cout << "gatheredResult[" << i << "] += " << nodeCSR->csrData[j] << " * " << nodeCSR->denseVec[nodeCSR->csrCols[j]] << std::endl;
 								gatheredResult[i] += nodeCSR->csrData[j] * nodeCSR->denseVec[nodeCSR->csrCols[j]];
 							}
 						} else {
