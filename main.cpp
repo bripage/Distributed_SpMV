@@ -181,7 +181,7 @@ int main(int argc, char *argv[]) {
 	    } else if (control.distributionMethod == 2){
 		    distribution_Balanced(control, clusterColData);
 	    } else if (control.distributionMethod == 3) {
-		    std::cout << "inside distribution" << std::endl;
+		    //std::cout << "inside distribution" << std::endl;
 		    distribution_Balanced(control, clusterColData);
 
 		    //displacements.resize(control.processCount,0);
@@ -890,29 +890,29 @@ int main(int argc, char *argv[]) {
 				// total number of rows in matrix not process or column
 				MPI_Recv(&control.rowCount, 1, MPI_INT, 0, 0, control.row_comm, MPI_STATUS_IGNORE);
 				//MPI_Recv(&control.maxRowsAssigned, 1, MPI_INT, 0, 0, control.row_comm, MPI_STATUS_IGNORE);
-				std::cout << "rowCount = " << control.rowCount << std::endl;
+				//std::cout << "rowCount = " << control.rowCount << std::endl;
 				// Get rows and nnz per proc data
 				nodeCSR->processData.resize(control.clusterRows*2);
-				std::cout << "receiving " << control.clusterRows*2 << " processData elements" << std::endl;
+				//std::cout << "receiving " << control.clusterRows*2 << " processData elements" << std::endl;
 				MPI_Recv(&nodeCSR->processData[0], control.clusterRows*2, MPI_INT, 0, 0, control.row_comm,
 				         MPI_STATUS_IGNORE);
-				std::cout << "processData.size() = " << nodeCSR->processData.size() << std::endl;
+				//std::cout << "processData.size() = " << nodeCSR->processData.size() << std::endl;
 
-				for (int i = 0; i < nodeCSR->processData.size(); i++){
-					std::cout << nodeCSR->processData[i] << ", ";
-				}
-				std::cout << std::endl;
+				//for (int i = 0; i < nodeCSR->processData.size(); i++){
+				//	std::cout << nodeCSR->processData[i] << ", ";
+				//}
+				//std::cout << std::endl;
 
 				control.elementCount = 0;
 				for (int i = 0; i < control.clusterRows*2; i = i+2){
 					control.elementCount += nodeCSR->processData[i];
 				}
-				std::cout << "elementCount = " << control.elementCount << std::endl;
+				//std::cout << "elementCount = " << control.elementCount << std::endl;
 				int assignedRowCount = 0;
 				for (int i = 1; i < control.clusterRows*2; i = i+2){
 					assignedRowCount += nodeCSR->processData[i];
 				}
-				std::cout << "assignedRowCount = " << assignedRowCount << std::endl;
+				//std::cout << "assignedRowCount = " << assignedRowCount << std::endl;
 
 				//nodeCSR->assignedRowIds.resize(assignedRowCount);
 				nodeCSR->csrRows.resize(assignedRowCount);
@@ -958,19 +958,19 @@ int main(int argc, char *argv[]) {
 					MPI_Send(&control.rowCount, 1, MPI_INT, i, 0, control.col_comm);
 					//std::cout << "sending maxRowsAssigned = " << control.maxRowsAssigned << " to " << i << std::endl;
 					//MPI_Send(&control.maxRowsAssigned, 1, MPI_INT, i, 0, control.col_comm);
-					std::cout <<  "sending processdaata:  " << nodeCSR->processData[i*2] << ", " << nodeCSR->processData[(i*2)+1] << std::endl;
+					//std::cout <<  "sending processdaata:  " << nodeCSR->processData[i*2] << ", " << nodeCSR->processData[(i*2)+1] << std::endl;
 					MPI_Send(&(nodeCSR->processData[(i*2)]), 2, MPI_INT, i, 0, control.col_comm);
-					std::cout <<  "sent " << nodeCSR->processData[i*2] << ", " << nodeCSR->processData[(i*2)+1] << std::endl;
-					std::cout << "sending assigned Row Ids to " << i << std::endl;
+					//std::cout <<  "sent " << nodeCSR->processData[i*2] << ", " << nodeCSR->processData[(i*2)+1] << std::endl;
+					//std::cout << "sending assigned Row Ids to " << i << std::endl;
 					//MPI_Send(&(nodeCSR->assignedRowIds[rowsSent]), nodeCSR->processData[(i*2)+1], MPI_INT, i, 0,
 					//         control.col_comm);
-					std::cout << "sending csrRows to " << i << std::endl;
+					//std::cout << "sending csrRows to " << i << std::endl;
 					MPI_Send(&(nodeCSR->csrRows[rowsSent]), nodeCSR->processData[(i*2)+1], MPI_INT, i, 0,
 					         control.col_comm);
-					std::cout << "sending csrCols to " << i << std::endl;
+					//std::cout << "sending csrCols to " << i << std::endl;
 					MPI_Send(&(nodeCSR->csrCols[nnzSent]), nodeCSR->processData[(i*2)], MPI_INT, i, 0,
 					         control.col_comm);
-					std::cout << "sending " << nodeCSR->processData[(i*2)] << " csrData to " << (control.myId*control.clusterCols)+(i*control.clusterRows) << std::endl;
+					//std::cout << "sending " << nodeCSR->processData[(i*2)] << " csrData to " << (control.myId*control.clusterCols)+(i*control.clusterRows) << std::endl;
 					MPI_Send(&(nodeCSR->csrData[nnzSent]), nodeCSR->processData[(i*2)], MPI_DOUBLE, i, 0,
 					         control.col_comm);
 				}
@@ -993,11 +993,11 @@ int main(int argc, char *argv[]) {
 			} else if (control.myId >= control.clusterCols) {
 				nodeCSR->processData.resize(2,0);
 				MPI_Recv(&control.rowCount, 1, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
-				std::cout << "received rowCount: " << control.rowCount << std::endl;
+				//std::cout << "received rowCount: " << control.rowCount << std::endl;
 				//MPI_Recv(&control.maxRowsAssigned, 1, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
 				//std::cout << "received maxRowsAssigned: " << control.maxRowsAssigned << std::endl;
 				MPI_Recv(&(nodeCSR->processData[0]), 2, MPI_INT, 0, 0, control.col_comm, MPI_STATUS_IGNORE);
-				std::cout << "Proc " << control.myId << " received processData: " << nodeCSR->processData[0] << ", " << nodeCSR->processData[1] << std::endl;
+				//std::cout << "Proc " << control.myId << " received processData: " << nodeCSR->processData[0] << ", " << nodeCSR->processData[1] << std::endl;
 
 				//nodeCSR->assignedRowIds.resize(nodeCSR->processData[1]);
 				nodeCSR->csrRows.resize(nodeCSR->processData[1]);
@@ -1008,13 +1008,13 @@ int main(int argc, char *argv[]) {
 				//std::cout << "receiving assigned row ids" << std::endl;
 				//MPI_Recv(&nodeCSR->assignedRowIds[0], nodeCSR->processData[1], MPI_INT, 0, 0, control.col_comm,
 				//         MPI_STATUS_IGNORE);
-				std::cout << "receiving csrRows" << std::endl;
+				//std::cout << "receiving csrRows" << std::endl;
 				MPI_Recv(&nodeCSR->csrRows[0], nodeCSR->processData[1], MPI_INT, 0, 0, control.col_comm,
 				         MPI_STATUS_IGNORE);
-				std::cout << "receiving csrCols" << std::endl;
+				//std::cout << "receiving csrCols" << std::endl;
 				MPI_Recv(&nodeCSR->csrCols[0], nodeCSR->processData[0], MPI_INT, 0, 0, control.col_comm,
 				         MPI_STATUS_IGNORE);
-				std::cout << "receiving csrData" << std::endl;
+				//std::cout << "receiving csrData" << std::endl;
 				MPI_Recv(&nodeCSR->csrData[0], nodeCSR->processData[0], MPI_DOUBLE, 0, 0, control.col_comm,
 				         MPI_STATUS_IGNORE);
                 if(control.debug) std::cout << "Starting CSR rebasing" << std::endl;
