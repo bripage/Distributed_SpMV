@@ -1157,14 +1157,16 @@ int main(int argc, char *argv[]) {
 			if (control.myId == 0) {
 				MPI_Gatherv(MPI_IN_PLACE, rowCounts[0], MPI_DOUBLE, &gatheredResult[0], &rowCounts[0], &displacements[0],
 				           MPI_DOUBLE, 0, MPI_COMM_WORLD);
+				std::cout << " master done with gatherv" << std::endl;
 
 			} else {
 				std::cout << control.myId << "sending " << nodeCSR->csrRows.size() << std::endl;
 				MPI_Gatherv(&gatheredResult[0], nodeCSR->csrRows.size(), MPI_DOUBLE, &gatheredResult[0], &rowCounts[0],
 				            &displacements[0], MPI_DOUBLE, 0, MPI_COMM_WORLD);
+				std::cout << control.myId << " dont with gatherv" << std::endl;
 			}
 		}
-		std::cout << "DONE WITH GATHER PORTION" << std::endl;
+		std::cout << control.myId << " DONE WITH GATHER PORTION" << std::endl;
 		if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
 
 		if (control.myId == 0){
