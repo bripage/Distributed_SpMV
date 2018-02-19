@@ -186,7 +186,7 @@ int main(int argc, char *argv[]) {
 
 		    //displacements.resize(control.processCount,0);
 		    //rowCounts.resize(control.processCount,0);
-		    int rowsToGather = 0;
+		    control.rowsToGather = 0;
 
 		    //std::cout << "assignedRows[0] = " << clusterColData[0]->assignedRowIds.size() << std::endl;
 		    //std::cout << "assignedRows[1] = " << clusterColData[1]->assignedRowIds.size() << std::endl;
@@ -196,7 +196,7 @@ int main(int argc, char *argv[]) {
 			    //std::cout << "i = " << i << std::endl;
 			    rowCounts.push_back(clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*2)+1]);
 			    //std::cout << "i = " << i << ", rowcounts[" << i << "] = " << rowCounts[i] << std::endl;
-			    rowsToGather += clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*2)+1];
+			    control.rowsToGather += clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*2)+1];
 			    if (i == 0){
 				    displacements.push_back(0);
 			    } else {
@@ -1151,6 +1151,7 @@ int main(int argc, char *argv[]) {
 			}
 			//std::cout << gatheredResult.size() << ", " << rowCounts.size() << ", " << displacements.size() << std::endl;
 			if (control.myId == 0) {
+				gatheredResult.resize(control.rowsToGather);
 				//std::cout << "master in place " << rowCounts[0] << " rows" << std::endl;
 				MPI_Gatherv(MPI_IN_PLACE, rowCounts[0], MPI_DOUBLE, &gatheredResult[0], &rowCounts[0], &displacements[0],
 				           MPI_DOUBLE, 0, MPI_COMM_WORLD);

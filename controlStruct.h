@@ -32,6 +32,7 @@ struct controlData {
     int lastClusterColColStart; // can be calculated locally
     int elementCount;
 	int maxRowsAssigned;
+	int rowsToGather;
 
 	std::vector <int> rowDistribution;
 
