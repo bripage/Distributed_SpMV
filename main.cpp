@@ -1158,11 +1158,6 @@ int main(int argc, char *argv[]) {
 				MPI_Gatherv(MPI_IN_PLACE, rowCounts[0], MPI_DOUBLE, &gatheredResult[0], &rowCounts[0], &displacements[0],
 				           MPI_DOUBLE, 0, MPI_COMM_WORLD);
 
-				std::cout << "gatheredResult.size() = " << gatheredResult.size() << std::endl;
-				for (int i = 1; i < control.rowDistribution.size(); i++) {
-					std::cout << "result[" << control.rowDistribution[i] << "]" << " = " << result[control.rowDistribution[i]] << " + " << gatheredResult[i] << std::endl;
-					result[control.rowDistribution[i]] += gatheredResult[i];
-				}
 			} else {
 				std::cout << control.myId << "sending " << nodeCSR->csrRows.size() << std::endl;
 				MPI_Gatherv(&gatheredResult[0], nodeCSR->csrRows.size(), MPI_DOUBLE, &gatheredResult[0], &rowCounts[0],
@@ -1170,6 +1165,14 @@ int main(int argc, char *argv[]) {
 			}
 		}
 		if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
+
+		if (control.myId == 0){
+			std::cout << "gatheredResult.size() = " << gatheredResult.size() << std::endl;
+			for (int i = 1; i < control.rowDistribution.size(); i++) {
+				std::cout << "result[" << control.rowDistribution[i] << "]" << " = " << result[control.rowDistribution[i]] << " + " << gatheredResult[i] << std::endl;
+				result[control.rowDistribution[i]] += gatheredResult[i];
+			}
+		}
 		if (control.debug && control.myId == 0) std::cout << "MPI Gather complete" << std::endl;
 		masterGatherEnd = MPI_Wtime();
 	}
