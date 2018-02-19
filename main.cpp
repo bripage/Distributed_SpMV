@@ -214,7 +214,7 @@ int main(int argc, char *argv[]) {
 		    for (int i = 0; i < displacements.size(); i++){
 			    //std::cout << "displacement[" << i << "] = " << displacements[i] << ", rowcounts[" << i << "] = " << rowCounts[i] << std::endl;
 		    }
-		    
+
 		    //gatheredResult.resize(rowsToGather, 0.0);
 	    }
     }
@@ -1065,9 +1065,8 @@ int main(int argc, char *argv[]) {
 		if (control.myId == 0){
 			result.resize(control.rowCount, 0.0);
 		}
-		if (control.myId != 0){
-			gatheredResult.resize(nodeCSR->processData[1], 0.0);
-		}
+
+		gatheredResult.resize(nodeCSR->processData[1], 0.0);
 		std::cout << "gatheredResult.size() = " << gatheredResult.size() << std::endl;
 
 		if (control.debug && control.myId == 0) std::cout << "Starting SpMV computation" << std::endl;
