@@ -1064,6 +1064,7 @@ int main(int argc, char *argv[]) {
 		if (control.myId != 0){
 			gatheredResult.resize(nodeCSR->csrRows.size(), 0.0);
 		}
+		std::cout << "gatheredResult.size() = " << gatheredResult.size() << std::endl;
 
 		if (control.debug && control.myId == 0) std::cout << "Starting SpMV computation" << std::endl;
 		if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
@@ -1088,7 +1089,10 @@ int main(int argc, char *argv[]) {
 */
 
 			int ompThreadId, ompCPUId, start, end, i, j, k, rowsPerThread, rowEnd;
-#pragma omp parallel num_threads(control.ompThreads) shared(nodeCSR, gatheredResult) private(ompThreadId, ompCPUId, start, end, i, j, k, rowsPerThread, rowEnd)
+			int totalRows = nodeCSR->csrRows.size();
+			int totalData = nodeCSR->csrData.size();
+			int dataStart, dataEnd;
+#pragma omp parallel num_threads(control.ompThreads) shared(nodeCSR, gatheredResult, totalRows, totalData) private(ompThreadId, ompCPUId, start, end, i, j, k, rowsPerThread, rowEnd, dataStart, dataEnd)
 			{
 				ompThreadId = omp_get_thread_num();
 				if (control.debug) {
@@ -1105,36 +1109,24 @@ int main(int argc, char *argv[]) {
 					rowEnd = (ompThreadId + 1) * rowsPerThread;
 				}
 
+				dataStart = nodeCSR->csrRows[i];
+				dataEnd = nodeCSR->csrRows[i + 1];
+
 				if (ompThreadId == control.ompThreads - 1) {
-					for (i = ompThreadId * rowsPerThread; i < nodeCSR->csrRows.size(); i++) {
-						if (i == nodeCSR->csrRows.size() - 1) {
-							for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrData.size(); j++) {
-								//std::cout << gatheredResult.size() << ", " << nodeCSR->csrCols.size() << ", " << nodeCSR->csrData.size() << std::endl;
-								//std::cout << "gatheredResult[" << i << "] += ";
-								//std::cout << nodeCSR->csrData[j];
-								//std::cout << " * ";
-								//std::cout << "nodeCSR->denseVec[" << nodeCSR->csrCols[j] << "]" << std::endl;
+					for (i = ompThreadId * rowsPerThread; i < totalRows; i++) {
+						if (i == totalRows - 1) {
+							for (j = dataStart; j < totalData; j++) {
 								gatheredResult[i] += nodeCSR->csrData[j] * nodeCSR->denseVec[nodeCSR->csrCols[j]];
 							}
 						} else {
-							for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrRows[i + 1]; j++) {
-								//std::cout << gatheredResult.size() << ", " << nodeCSR->csrCols.size() << ", " << nodeCSR->csrData.size() << std::endl;
-								//std::cout << "gatheredResult[" << i << "] += ";
-								//std::cout << nodeCSR->csrData[j];
-								//std::cout << " * ";
-								//std::cout << "nodeCSR->denseVec[" << nodeCSR->csrCols[j] << "]" << std::endl;
+							for (j = dataStart; j < dataEnd; j++) {
 								gatheredResult[i] += nodeCSR->csrData[j] * nodeCSR->denseVec[nodeCSR->csrCols[j]];
 							}
 						}
 					}
 				} else {
 					for (i = ompThreadId * rowsPerThread; i < rowEnd; i++) {
-						for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrRows[i + 1]; j++) {
-							//std::cout << gatheredResult.size() << ", " << nodeCSR->csrCols.size() << ", " << nodeCSR->csrData.size() << std::endl;
-							//std::cout << "gatheredResult[" << i << "] += ";
-							//std::cout << nodeCSR->csrData[j];
-							//std::cout << " * ";
-							//std::cout << "nodeCSR->denseVec[" << nodeCSR->csrCols[j] << "]" << std::endl;
+						for (j = dataStart; j < dataEnd; j++) {
 							gatheredResult[i] += nodeCSR->csrData[j] * nodeCSR->denseVec[nodeCSR->csrCols[j]];
 						}
 					}
