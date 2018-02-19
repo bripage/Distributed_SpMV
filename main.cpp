@@ -188,14 +188,14 @@ int main(int argc, char *argv[]) {
 		    //rowCounts.resize(control.processCount,0);
 		    int rowsToGather = 0;
 
-		    std::cout << "assignedRows[0] = " << clusterColData[0]->assignedRowIds.size() << std::endl;
-		    std::cout << "assignedRows[1] = " << clusterColData[1]->assignedRowIds.size() << std::endl;
+		    //std::cout << "assignedRows[0] = " << clusterColData[0]->assignedRowIds.size() << std::endl;
+		    //std::cout << "assignedRows[1] = " << clusterColData[1]->assignedRowIds.size() << std::endl;
 
 		    //rowCounts.push_back(clusterColData[0]->processData[1]);
 		    for (int i = 0; i < control.processCount; i++){
-			    std::cout << "i = " << i << std::endl;
+			    //std::cout << "i = " << i << std::endl;
 			    rowCounts.push_back(clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*2)+1]);
-			    std::cout << "i = " << i << ", rowcounts[" << i << "] = " << rowCounts[i] << std::endl;
+			    //std::cout << "i = " << i << ", rowcounts[" << i << "] = " << rowCounts[i] << std::endl;
 			    rowsToGather += clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*2)+1];
 			    if (i == 0){
 				    displacements.push_back(0);
@@ -205,9 +205,9 @@ int main(int argc, char *argv[]) {
 
 			    for (int j = 0; j < rowCounts[i]; j++){
 				    control.rowDistribution.push_back(clusterColData[i%control.clusterCols]->assignedRowIds[clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*2)+1]+j]);
-			        std::cout << "control.rowDistribution[" << i << "] = "
-			                  << clusterColData[i%control.clusterCols]->assignedRowIds[clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*2)+1]+j]
-			                  << std::endl;
+			        //std::cout << "control.rowDistribution[" << i << "] = "
+			        //          << clusterColData[i%control.clusterCols]->assignedRowIds[clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*2)+1]+j]
+			        //          << std::endl;
 			    }
 		    }
 
@@ -1093,7 +1093,7 @@ int main(int argc, char *argv[]) {
 				ompThreadId = omp_get_thread_num();
 				if (control.debug) {
 					ompCPUId = sched_getcpu();
-					usleep(10000000 * control.myId );
+					//usleep(10000000 * control.myId );
 					std::cout << "Rank " << control.myId << ", Thread " << ompThreadId << " on core " << ompCPUId
 					          << std::endl;
 				}
@@ -1154,27 +1154,27 @@ int main(int argc, char *argv[]) {
 			if (control.debug && control.myId == 0){
 				std::cout << "Starting MPI Gather" << std::endl;
 			}
-			std::cout << gatheredResult.size() << ", " << rowCounts.size() << ", " << displacements.size() << std::endl;
+			//std::cout << gatheredResult.size() << ", " << rowCounts.size() << ", " << displacements.size() << std::endl;
 			if (control.myId == 0) {
-				std::cout << "master in place " << rowCounts[0] << " rows" << std::endl;
+				//std::cout << "master in place " << rowCounts[0] << " rows" << std::endl;
 				MPI_Gatherv(MPI_IN_PLACE, rowCounts[0], MPI_DOUBLE, &gatheredResult[0], &rowCounts[0], &displacements[0],
 				           MPI_DOUBLE, 0, MPI_COMM_WORLD);
-				std::cout << " master done with gatherv" << std::endl;
+				//std::cout << " master done with gatherv" << std::endl;
 
 			} else {
-				std::cout << control.myId << "sending " << nodeCSR->csrRows.size() << std::endl;
+				//std::cout << control.myId << "sending " << nodeCSR->csrRows.size() << std::endl;
 				MPI_Gatherv(&gatheredResult[0], nodeCSR->csrRows.size(), MPI_DOUBLE, &gatheredResult[0], &rowCounts[0],
 				            &displacements[0], MPI_DOUBLE, 0, MPI_COMM_WORLD);
-				std::cout << control.myId << " dont with gatherv" << std::endl;
+				//std::cout << control.myId << " dont with gatherv" << std::endl;
 			}
 		}
-		std::cout << control.myId << " DONE WITH GATHER PORTION" << std::endl;
+		//std::cout << control.myId << " DONE WITH GATHER PORTION" << std::endl;
 		if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
 
 		if (control.myId == 0){
-			std::cout << "gatheredResult.size() = " << gatheredResult.size() << std::endl;
+			//std::cout << "gatheredResult.size() = " << gatheredResult.size() << std::endl;
 			for (int i = 1; i < control.rowDistribution.size(); i++) {
-				std::cout << "result[" << control.rowDistribution[i] << "]" << " = " << result[control.rowDistribution[i]] << " + " << gatheredResult[i] << std::endl;
+				//std::cout << "result[" << control.rowDistribution[i] << "]" << " = " << result[control.rowDistribution[i]] << " + " << gatheredResult[i] << std::endl;
 				result[control.rowDistribution[i]] += gatheredResult[i];
 			}
 		}
