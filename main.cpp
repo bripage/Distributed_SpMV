@@ -1164,6 +1164,7 @@ int main(int argc, char *argv[]) {
 				            &displacements[0], MPI_DOUBLE, 0, MPI_COMM_WORLD);
 			}
 		}
+		std::cout << "DONE WITH GATHER PORTION" << std::endl;
 		if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
 
 		if (control.myId == 0){
