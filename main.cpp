@@ -1244,10 +1244,16 @@ int main(int argc, char *argv[]) {
 			    std::cout << distributionEndTime - distributionStartTime << ","
 			              << dataTransmissionEnd - dataTransmissionStart << "," << spmvEndTime - spmvStartTime << ","
 			              << masterGatherEnd - masterGatherStart << "," << overallEndTime - overallStartTime << std::endl;
-		    } else if (control.distributionMethod == 2){
-			    std::cout << distributionEndTime - distributionStartTime << ","
-			              << dataTransmissionEnd - dataTransmissionStart << "," << spmvEndTime - spmvStartTime << ","
-			              << reductionEndTime - reductionStartTime << "," << overallEndTime - overallStartTime << std::endl;
+		    } else if (control.distributionMethod == 2) {
+			    if (control.masterOnly) {
+				    std::cout << distributionEndTime - distributionStartTime << ","
+				              << spmvEndTime - spmvStartTime << "," << overallEndTime - overallStartTime << std::endl;
+			    } else {
+				    std::cout << distributionEndTime - distributionStartTime << ","
+				              << dataTransmissionEnd - dataTransmissionStart << "," << spmvEndTime - spmvStartTime << ","
+				              << reductionEndTime - reductionStartTime << "," << overallEndTime - overallStartTime
+				              << std::endl;
+			    }
 		    }
 	    }
 
