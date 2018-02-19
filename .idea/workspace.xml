@@ -12,7 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c65b864-9431-4078-9657-58a0aa3c15cb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controlStruct.h" afterPath="$PROJECT_DIR$/controlStruct.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
     </list>
     <ignored path="Distrubuted_SpMV.iws" />
@@ -37,8 +36,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="198" column="36" lean-forward="false" selection-start-line="198" selection-start-column="36" selection-end-line="198" selection-end-column="36" />
+            <state relative-caret-position="367">
+              <caret line="1096" column="0" lean-forward="false" selection-start-line="1096" selection-start-column="0" selection-end-line="1096" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -511,7 +510,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="840311000" />
+    <option name="totallyTimeSpent" value="840572000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="23" width="1853" height="993" extended-state="0" />
@@ -813,8 +812,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="198" column="36" lean-forward="false" selection-start-line="198" selection-start-column="36" selection-end-line="198" selection-end-column="36" />
+        <state relative-caret-position="367">
+          <caret line="1096" column="0" lean-forward="false" selection-start-line="1096" selection-start-column="0" selection-end-line="1096" selection-end-column="0" />
           <folding />
         </state>
       </provider>
