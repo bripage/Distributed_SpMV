@@ -1105,12 +1105,14 @@ int main(int argc, char *argv[]) {
 					          << std::endl;
 				}
 
-				if (control.ompThreads == 1)
-				{
+				std::cout << "Set rowsPerThread" << std::endl;
+				if (control.ompThreads == 1) {
 					rowsPerThread = nodeCSR->csrRows.size();
 				} else {
 					rowsPerThread = ceil(nodeCSR->csrRows.size() / (double) control.ompThreads);
 				}
+
+				std::cout << "Set rowEnd" << std::endl;
 				if (ompThreadId == control.ompThreads - 1) {
 					rowEnd = nodeCSR->csrRows.size();
 				} else {
