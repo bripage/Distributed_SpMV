@@ -929,6 +929,11 @@ int main(int argc, char *argv[]) {
 				         MPI_STATUS_IGNORE);
 				//std::cout << "Rows recieved: " << nodeCSR->csrRows.size() << ", NNZs received: " << nodeCSR->csrData.size() << ", denseVec received: " << nodeCSR->denseVec.size() << std::endl;
 			}
+
+			if (control.myId == 0){
+				nodeCSR->processData[0] = displacements[1];
+				nodeCSR->processData[1] = rowCounts[0];
+			}
 			if (control.debug && control.myId == 0) std::cout << "Sending to column masters complete" << std::endl;
 /*
 			usleep(10000000 * control.myId);
