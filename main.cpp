@@ -1159,7 +1159,7 @@ int main(int argc, char *argv[]) {
 				           MPI_DOUBLE, 0, MPI_COMM_WORLD);
 
 				std::cout << "gatheredResult.size() = " << gatheredResult.size() << std::endl;
-				for (int i = 1; i < gatheredResult.size(); i++) {
+				for (int i = 1; i < control.rowDistribution.size(); i++) {
 					//std::cout << "result[" << control.rowDistribution[i] << "]" << " = " << result[control.rowDistribution[i]] << " + " << gatheredResult[i] << std::endl;
 					result[control.rowDistribution[i]] += gatheredResult[i];
 				}
