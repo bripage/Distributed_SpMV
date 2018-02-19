@@ -1027,20 +1027,6 @@ int main(int argc, char *argv[]) {
 			MPI_Bcast(&nodeCSR->denseVec[0], control.rowCount, MPI_DOUBLE, 0, MPI_COMM_WORLD);
             if(control.debug) std::cout << "Done broadcasting dense vector" << std::endl;
 		}
-		if (control.myId == 0){
-			if (!(nodeCSR->assignedRowIds.empty())) {
-				nodeCSR->assignedRowIds.erase(nodeCSR->assignedRowIds.begin() + nodeCSR->processData[1], nodeCSR->assignedRowIds.end());
-			}
-			if (!(nodeCSR->csrRows.empty())) {
-				nodeCSR->csrRows.erase(nodeCSR->csrRows.begin() + nodeCSR->processData[1], nodeCSR->csrRows.end());
-			}
-			if (!(nodeCSR->csrCols.empty())) {
-				nodeCSR->csrCols.erase(nodeCSR->csrCols.begin() + nodeCSR->processData[0], nodeCSR->csrCols.end());
-			}
-			if (!(nodeCSR->csrData.empty())) {
-				nodeCSR->csrData.erase(nodeCSR->csrData.begin() + nodeCSR->processData[0], nodeCSR->csrData.end());
-			}
-		}
 		dataTransmissionEnd = MPI_Wtime();
 
 		//usleep(1000000 * control.myId);
@@ -1076,7 +1062,7 @@ int main(int argc, char *argv[]) {
 			result.resize(control.rowCount, 0.0);
 		}
 		if (control.myId != 0){
-			gatheredResult.resize(nodeCSR->csrRows.size(), 0.0);
+			gatheredResult.resize(nodeCSR->processData[1], 0.0);
 		}
 		std::cout << "gatheredResult.size() = " << gatheredResult.size() << std::endl;
 
