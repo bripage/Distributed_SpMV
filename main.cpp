@@ -795,32 +795,32 @@ int main(int argc, char *argv[]) {
 					          << std::endl;
 				}
 
-				std::cout << "Set rowsPerThread" << std::endl;
+				//std::cout << "Set rowsPerThread" << std::endl;
 				if (control.ompThreads == 1) {
 					rowsPerThread = nodeCSR->csrRows.size();
 				} else {
 					rowsPerThread = ceil(nodeCSR->csrRows.size() / (double) control.ompThreads);
 				}
 
-				std::cout << "Set rowEnd" << std::endl;
+				//std::cout << "Set rowEnd" << std::endl;
 				if (ompThreadId == control.ompThreads - 1) {
 					rowEnd = nodeCSR->csrRows.size();
 				} else {
 					rowEnd = (ompThreadId + 1) * rowsPerThread;
 				}
 
-				std::cout << "denseVec.size() = " << nodeCSR->denseVec.size() << std::endl;
+				//std::cout << "denseVec.size() = " << nodeCSR->denseVec.size() << std::endl;
 				if (ompThreadId == control.ompThreads - 1) {
 					for (i = ompThreadId * rowsPerThread; i < nodeCSR->csrRows.size(); i++) {
-						std::cout << " i = " << i << std::endl;
+						//std::cout << " i = " << i << std::endl;
 						if (i == nodeCSR->csrRows.size() - 1) {
 							for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrData.size(); j++) {
-								std::cout << "result[" << nodeCSR->assignedRowIds[i] << "] += " << nodeCSR->csrData[j] << " * " << nodeCSR->denseVec[nodeCSR->csrCols[j]] << std::endl;
+								//std::cout << "result[" << nodeCSR->assignedRowIds[i] << "] += " << nodeCSR->csrData[j] << " * " << nodeCSR->denseVec[nodeCSR->csrCols[j]] << std::endl;
 								result[nodeCSR->assignedRowIds[i]] += nodeCSR->csrData[j] * nodeCSR->denseVec[nodeCSR->csrCols[j]];
 							}
 						} else {
 							for (j = nodeCSR->csrRows[i]; j < nodeCSR->csrRows[i + 1]; j++) {
-								std::cout << "result[" << nodeCSR->assignedRowIds[i] << "] += " << nodeCSR->csrData[j] << " * " << nodeCSR->denseVec[nodeCSR->csrCols[j]] << std::endl;
+								//std::cout << "result[" << nodeCSR->assignedRowIds[i] << "] += " << nodeCSR->csrData[j] << " * " << nodeCSR->denseVec[nodeCSR->csrCols[j]] << std::endl;
 								result[nodeCSR->assignedRowIds[i]] += nodeCSR->csrData[j] * nodeCSR->denseVec[nodeCSR->csrCols[j]];
 							}
 						}
