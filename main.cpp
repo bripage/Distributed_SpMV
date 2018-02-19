@@ -191,7 +191,7 @@ int main(int argc, char *argv[]) {
 		    std::cout << "assignedRows[0] = " << clusterColData[0]->assignedRowIds.size() << std::endl;
 		    std::cout << "assignedRows[1] = " << clusterColData[1]->assignedRowIds.size() << std::endl;
 
-		    rowCounts.push_back(clusterColData[0]->processData[1]);
+		    //rowCounts.push_back(clusterColData[0]->processData[1]);
 		    for (int i = 0; i < control.processCount; i++){
 			    std::cout << "i = " << i << std::endl;
 			    rowCounts.push_back(clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*2)+1]);
