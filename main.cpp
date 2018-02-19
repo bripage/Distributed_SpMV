@@ -214,9 +214,8 @@ int main(int argc, char *argv[]) {
 		    for (int i = 0; i < displacements.size(); i++){
 			    //std::cout << "displacement[" << i << "] = " << displacements[i] << ", rowcounts[" << i << "] = " << rowCounts[i] << std::endl;
 		    }
-
-
-		    gatheredResult.resize(rowsToGather, 0.0);
+		    
+		    //gatheredResult.resize(rowsToGather, 0.0);
 	    }
     }
 	distributionEndTime = MPI_Wtime();
