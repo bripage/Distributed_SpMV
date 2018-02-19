@@ -1067,7 +1067,7 @@ int main(int argc, char *argv[]) {
 		}
 
 		gatheredResult.resize(nodeCSR->processData[1], 0.0);
-		std::cout << "gatheredResult.size() = " << gatheredResult.size() << std::endl;
+		//std::cout << "gatheredResult.size() = " << gatheredResult.size() << std::endl;
 
 		if (control.debug && control.myId == 0) std::cout << "Starting SpMV computation" << std::endl;
 		if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
