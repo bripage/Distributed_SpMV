@@ -1154,8 +1154,10 @@ int main(int argc, char *argv[]) {
 			if (control.debug && control.myId == 0){
 				std::cout << "Starting MPI Gather" << std::endl;
 			}
+			std::cout << gatheredResult.size() << "," << rowCounts.size << ", " << displacements.size() << std::endl;
 			if (control.myId == 0) {
-				MPI_Gatherv(MPI_IN_PLACE, &rowCounts[0], MPI_DOUBLE, &gatheredResult[0], &rowCounts[0], &displacements[0],
+				std::cout << "master in place " << rowCounts[0] << " rows" << std::endl;
+				MPI_Gatherv(MPI_IN_PLACE, rowCounts[0], MPI_DOUBLE, &gatheredResult[0], &rowCounts[0], &displacements[0],
 				           MPI_DOUBLE, 0, MPI_COMM_WORLD);
 				std::cout << " master done with gatherv" << std::endl;
 
