@@ -604,6 +604,11 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 			control.maxRowsAssigned = clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*2)+1];
 		}
 	}
+
+	for (int i = 0; i < control.rowCount; i++){
+		//clusterColData[0]->denseVec.push_back((double) (rand()) / (double) (RAND_MAX));
+		clusterColData[0]->denseVec.push_back(1.0);
+	}
 /*
 	for (int i = 0; i < clusterColData.size(); i++){
 		std::cout << "COLUMN " << i << std::endl;
