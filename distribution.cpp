@@ -393,7 +393,12 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 	clusterColData.resize(control.clusterCols);
 	for (int i = 0; i < control.clusterCols; i++) {
 		clusterColData[i] = new csrSpMV;
-		clusterColData[i]->processData.resize(control.clusterRows*2, 0);
+		clusterColData[i]->processData.resize(control.clusterRows * 2, 0);
+
+		for (int j = 0; j < control.clusterRows; j++) {
+			std::vector <int> temp;
+			clusterColData[i]->assignedRowIds2d.push_back(temp);
+		}
 	}
 
 	std::vector <Element> elements;
@@ -579,10 +584,7 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 		for (int j = 0; j < distributionRows.size(); j++){
 			if (distributionRows[j].processAssignment == i){
 				clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*2)+1]+=1; // increment assigned row count
-				clusterColData[i%control.clusterCols]->assignedRowIds.push_back(distributionRows[j].rowId); // add rowId to assignedRowIds vector
-				if (distributionRows[j].rowId < 0 || distributionRows[j].rowId > control.rowCount){
-					std::cout << "distributionRows[j].rowId Error: " << i << ", " << j << ", " << distributionRows[j].rowId << std::endl;
-				}
+				clusterColData[i%control.clusterCols]->assignedRowIds[i/control.clusterRows].push_back(distributionRows[j].rowId); // add rowId to assignedRowIds vector
 				//std::cout << "clusterColData[" << i%control.clusterCols << "]->assignedRowIds["
 				//          << clusterColData[i%control.clusterCols]->assignedRowIds.size()-1 << "] = "
 				//          << clusterColData[i%control.clusterCols]->assignedRowIds[clusterColData[i%control.clusterCols]->assignedRowIds.size()-1];
