@@ -209,7 +209,7 @@ int main(int argc, char *argv[]) {
 			        //          << clusterColData[i%control.clusterCols]->assignedRowIds[clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*2)+1]+j]
 			        //          << std::endl;
 				    if (control.rowDistribution[control.rowDistribution.size()-1] < 0 || control.rowDistribution[control.rowDistribution.size()-1] > control.rowCount){
-					    std::cout << "rowDist Error: " << i << ", " << j << ", " << control.rowDistribution[control.rowDistribution.size()-1] << std::endl;
+					    //std::cout << "rowDist Error: " << i << ", " << j << ", " << control.rowDistribution[control.rowDistribution.size()-1] << std::endl;
 				    }
 			    }
 		    }
