@@ -210,9 +210,9 @@ int main(int argc, char *argv[]) {
 			        //          << std::endl;
 				    control.rowDistribution.push_back(clusterColData[i%control.clusterCols]->assignedRowIds2d[i/control.clusterRows][j]);
 
-				    if (control.rowDistribution[control.rowDistribution.size()-1] < 0 || control.rowDistribution[control.rowDistribution.size()-1] > control.rowCount){
-					    std::cout << "rowDist Error: " << i << ", " << j << ", " << control.rowDistribution[control.rowDistribution.size()-1] << std::endl;
-				    }
+				    //if (control.rowDistribution[control.rowDistribution.size()-1] < 0 || control.rowDistribution[control.rowDistribution.size()-1] > control.rowCount){
+					//    std::cout << "rowDist Error: " << i << ", " << j << ", " << control.rowDistribution[control.rowDistribution.size()-1] << std::endl;
+				    //}
 			    }
 		    }
 
@@ -304,6 +304,29 @@ int main(int argc, char *argv[]) {
 		    if (control.debug && control.myId == 0)
 			    std::cout << "Done Determining NNZ Per Process Standard Deviation" << std::endl;
 	    } else if (control.distributionMethod == 2) {
+		    //get distribution process averages
+		    if (control.debug && control.myId == 0)
+			    std::cout << "Starting Determining NNZ Per Process Standard Deviation" << std::endl;
+
+		    int distProcSum = 0;
+		    double distProcAvg, distProcAvgDiff = 0.0, distStandardDeviation;
+		    std::vector<int> distDist(control.processCount, 0); //distributed distribution
+
+		    for (int i = 0; i < control.processCount; i++) {
+			    distDist[i] = clusterColData[i % control.clusterCols]->processData[(i / control.clusterRows) * 2];
+			    distProcSum += distDist[i];
+			    std::cout << "Process " << i << ": " << distDist[i] << std::endl;
+		    }
+		    distProcAvg = distProcSum / (double) control.processCount;
+		    for (int i = 0; i < control.processCount; i++) {
+			    distProcAvgDiff += (distDist[i] - distProcAvg) * (distDist[i] - distProcAvg);
+		    }
+		    distStandardDeviation = sqrt((1.0 / control.processCount) * distProcAvgDiff);
+		    std::cout << "NNZ Per Process Standard Deviation = " << distStandardDeviation << std::endl;
+
+		    if (control.debug && control.myId == 0)
+			    std::cout << "Done Determining NNZ Per Process Standard Deviation" << std::endl;
+	    } else if (control.distributionMethod == 3) {
 		    //get distribution process averages
 		    if (control.debug && control.myId == 0)
 			    std::cout << "Starting Determining NNZ Per Process Standard Deviation" << std::endl;

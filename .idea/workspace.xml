@@ -12,7 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c65b864-9431-4078-9657-58a0aa3c15cb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/distribution.cpp" afterPath="$PROJECT_DIR$/distribution.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
     </list>
     <ignored path="Distrubuted_SpMV.iws" />
@@ -37,8 +36,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="210" column="109" lean-forward="false" selection-start-line="210" selection-start-column="109" selection-end-line="210" selection-end-column="109" />
+            <state relative-caret-position="469">
+              <caret line="328" column="50" lean-forward="false" selection-start-line="328" selection-start-column="50" selection-end-line="328" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -513,7 +512,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="851194000" />
+    <option name="totallyTimeSpent" value="851624000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="23" y="23" width="1853" height="993" extended-state="0" />
@@ -815,8 +814,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="210" column="109" lean-forward="false" selection-start-line="210" selection-start-column="109" selection-end-line="210" selection-end-column="109" />
+        <state relative-caret-position="469">
+          <caret line="328" column="50" lean-forward="false" selection-start-line="328" selection-start-column="50" selection-end-line="328" selection-end-column="50" />
           <folding />
         </state>
       </provider>
