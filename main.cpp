@@ -1185,9 +1185,9 @@ int main(int argc, char *argv[]) {
 		if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
 
 		if (control.myId == 0){
-			//std::cout << "gatheredResult.size() = " << gatheredResult.size() << std::endl;
+			std::cout << "gatheredResult.size() = " << gatheredResult.size() << ", rowDistribution.size() = " << control.rowDistribution.size() << std::endl;
 			for (int i = 1; i < control.rowDistribution.size(); i++) {
-				std::cout << "result[" << control.rowDistribution[i] << "]" << " = " << result[control.rowDistribution[i]] << " + " << gatheredResult[i] << std::endl;
+				//std::cout << "result[" << control.rowDistribution[i] << "]" << " = " << result[control.rowDistribution[i]] << " + " << gatheredResult[i] << std::endl;
 				result[control.rowDistribution[i]] += gatheredResult[i];
 			}
 		}
