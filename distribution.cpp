@@ -584,7 +584,7 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 		for (int j = 0; j < distributionRows.size(); j++){
 			if (distributionRows[j].processAssignment == i){
 				clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*2)+1]+=1; // increment assigned row count
-				clusterColData[i%control.clusterCols]->assignedRowIds[i/control.clusterRows].push_back(distributionRows[j].rowId); // add rowId to assignedRowIds vector
+				clusterColData[i%control.clusterCols]->assignedRowIds2d[i/control.clusterRows].push_back(distributionRows[j].rowId); // add rowId to assignedRowIds vector
 				//std::cout << "clusterColData[" << i%control.clusterCols << "]->assignedRowIds["
 				//          << clusterColData[i%control.clusterCols]->assignedRowIds.size()-1 << "] = "
 				//          << clusterColData[i%control.clusterCols]->assignedRowIds[clusterColData[i%control.clusterCols]->assignedRowIds.size()-1];

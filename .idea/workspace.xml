@@ -12,7 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c65b864-9431-4078-9657-58a0aa3c15cb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/csrSpMV.h" afterPath="$PROJECT_DIR$/csrSpMV.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/distribution.cpp" afterPath="$PROJECT_DIR$/distribution.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
     </list>
@@ -35,11 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="213" column="24" lean-forward="true" selection-start-line="213" selection-start-column="24" selection-end-line="213" selection-end-column="24" />
+            <state relative-caret-position="522">
+              <caret line="210" column="109" lean-forward="false" selection-start-line="210" selection-start-column="109" selection-end-line="210" selection-end-column="109" />
               <folding />
             </state>
           </provider>
@@ -85,11 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="distribution.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="distribution.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/distribution.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2588">
-              <caret line="399" column="47" lean-forward="false" selection-start-line="399" selection-start-column="31" selection-end-line="399" selection-end-column="47" />
+            <state relative-caret-position="217">
+              <caret line="586" column="71" lean-forward="false" selection-start-line="586" selection-start-column="71" selection-end-line="586" selection-end-column="71" />
               <folding />
             </state>
           </provider>
@@ -514,7 +513,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="851119000" />
+    <option name="totallyTimeSpent" value="851194000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="23" y="23" width="1853" height="993" extended-state="0" />
@@ -806,18 +805,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
+    <entry file="file://$PROJECT_DIR$/distribution.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="213" column="24" lean-forward="true" selection-start-line="213" selection-start-column="24" selection-end-line="213" selection-end-column="24" />
+        <state relative-caret-position="217">
+          <caret line="586" column="71" lean-forward="false" selection-start-line="586" selection-start-column="71" selection-end-line="586" selection-end-column="71" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/distribution.cpp">
+    <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2588">
-          <caret line="399" column="47" lean-forward="false" selection-start-line="399" selection-start-column="31" selection-end-line="399" selection-end-column="47" />
+        <state relative-caret-position="522">
+          <caret line="210" column="109" lean-forward="false" selection-start-line="210" selection-start-column="109" selection-end-line="210" selection-end-column="109" />
           <folding />
         </state>
       </provider>

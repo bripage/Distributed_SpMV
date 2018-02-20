@@ -208,7 +208,7 @@ int main(int argc, char *argv[]) {
 			        //std::cout << "control.rowDistribution[" << i << "] = "
 			        //          << clusterColData[i%control.clusterCols]->assignedRowIds[clusterColData[i%control.clusterCols]->processData[((i/control.clusterRows)*2)+1]+j]
 			        //          << std::endl;
-				    control.rowDistribution.push_back(clusterColData[i%control.clusterCols]->assignedRowIds[i/control.clusterRows][j]);
+				    control.rowDistribution.push_back(clusterColData[i%control.clusterCols]->assignedRowIds2d[i/control.clusterRows][j]);
 
 				    if (control.rowDistribution[control.rowDistribution.size()-1] < 0 || control.rowDistribution[control.rowDistribution.size()-1] > control.rowCount){
 					    std::cout << "rowDist Error: " << i << ", " << j << ", " << control.rowDistribution[control.rowDistribution.size()-1] << std::endl;
