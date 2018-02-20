@@ -216,9 +216,9 @@ int main(int argc, char *argv[]) {
 			    }
 		    }
 
-		    for (int i = 0; i < displacements.size(); i++){
-			    std::cout << "displacement[" << i << "] = " << displacements[i] << ", rowcounts[" << i << "] = " << rowCounts[i] << std::endl;
-		    }
+		    //for (int i = 0; i < displacements.size(); i++){
+			//    std::cout << "displacement[" << i << "] = " << displacements[i] << ", rowcounts[" << i << "] = " << rowCounts[i] << std::endl;
+		    //}
 
 		    //gatheredResult.resize(rowsToGather, 0.0);
 	    }
@@ -1106,7 +1106,7 @@ int main(int argc, char *argv[]) {
 		}
 
 		gatheredResult.resize(nodeCSR->processData[1], 0.0);
-		std::cout << "gatheredResult.size() = " << gatheredResult.size() << std::endl;
+		//std::cout << "gatheredResult.size() = " << gatheredResult.size() << std::endl;
 
 		if (control.debug && control.myId == 0) std::cout << "Starting SpMV computation" << std::endl;
 		if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
@@ -1194,22 +1194,22 @@ int main(int argc, char *argv[]) {
 			if (control.debug && control.myId == 0){
 				std::cout << "Starting MPI Gather" << std::endl;
 			}
-			std::cout << gatheredResult.size() << ", " << rowCounts.size() << ", " << displacements.size() << std::endl;
+			//std::cout << gatheredResult.size() << ", " << rowCounts.size() << ", " << displacements.size() << std::endl;
 			if (control.myId == 0) {
 				gatheredResult.resize(control.rowsToGather);
-				std::cout << "master in place " << rowCounts[0] << " rows" << std::endl;
+				//std::cout << "master in place " << rowCounts[0] << " rows" << std::endl;
 				MPI_Gatherv(MPI_IN_PLACE, rowCounts[0], MPI_DOUBLE, &gatheredResult[0], &rowCounts[0], &displacements[0],
 				           MPI_DOUBLE, 0, MPI_COMM_WORLD);
-				std::cout << " master done with gatherv" << std::endl;
+				//std::cout << " master done with gatherv" << std::endl;
 
 			} else {
 				std::cout << control.myId << "sending " << nodeCSR->csrRows.size() << std::endl;
 				MPI_Gatherv(&gatheredResult[0], nodeCSR->csrRows.size(), MPI_DOUBLE, &gatheredResult[0], &rowCounts[0],
 				            &displacements[0], MPI_DOUBLE, 0, MPI_COMM_WORLD);
-				std::cout << control.myId << " dont with gatherv" << std::endl;
+				//std::cout << control.myId << " dont with gatherv" << std::endl;
 			}
 		}
-		std::cout << control.myId << " DONE WITH GATHER PORTION" << std::endl;
+		//std::cout << control.myId << " DONE WITH GATHER PORTION" << std::endl;
 		if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
 
 		if (control.myId == 0){
