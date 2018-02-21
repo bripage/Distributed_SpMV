@@ -289,8 +289,8 @@ int main(int argc, char *argv[]) {
 				    lastElement = clusterColData[i%control.clusterCols]->csrRows[((i/control.clusterRows) + 1) * control.rowsPerNode];
 			    }
 			    nnzCount = (lastElement - firstElement);
-			    seqDist[i] = nnzCount * (control.rowCount * control.rowCount);
-			    seqProcSum += nnzCount * (control.rowCount * control.rowCount);
+			    seqDist[i] = nnzCount / (control.rowCount * control.rowCount);
+			    seqProcSum += nnzCount / (control.rowCount * control.rowCount);
 			    //std::cout << "Process " << i << ": " << seqDist[i] << std::endl;
 		    }
 
