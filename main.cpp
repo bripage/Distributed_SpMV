@@ -323,7 +323,7 @@ int main(int argc, char *argv[]) {
 		    }
 		    distStandardDeviation = sqrt((1.0 / control.processCount) * distProcAvgDiff);
 
-		    distDist.sort();
+		    //distDist.sort();
 
 
 		    std::cout << "NNZ Per Process Standard Deviation = " << distStandardDeviation << std::endl;
