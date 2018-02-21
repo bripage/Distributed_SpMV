@@ -291,7 +291,7 @@ int main(int argc, char *argv[]) {
 			    nnzCount = (lastElement - firstElement);
 			    seqDist[i] = nnzCount;
 			    seqProcSum += nnzCount;
-			    std::cout << "Process " << i << ": " << seqDist[i] << std::endl;
+			    //std::cout << "Process " << i << ": " << seqDist[i] << std::endl;
 		    }
 
 		    seqProcAvg = seqProcSum / (double) control.processCount;
@@ -321,7 +321,7 @@ int main(int argc, char *argv[]) {
 		    }
 
 		    //std::cout << "NNZ Per Process Standard Deviation = " << seqStandardDeviation << std::endl;
-		    std::cout << MAD << std::endl;
+		    std::cout << seqProcAvg << "," << seqStandardDeviation << "," << seqMedian << "," << MAD << std::endl;
 
 		    if (control.debug && control.myId == 0)
 			    std::cout << "Done Determining NNZ Per Process Standard Deviation" << std::endl;
@@ -367,7 +367,7 @@ int main(int argc, char *argv[]) {
 		    }
 
 		    //std::cout << "NNZ Per Process Standard Deviation = " << distStandardDeviation << std::endl;
-		    std::cout << MAD << std::endl;
+            std::cout << distProcAvg << "," << distStandardDeviation << "," << distMedian << "," << MAD << std::endl;
 
 		    if (control.debug && control.myId == 0)
 			    std::cout << "Done Determining NNZ Per Process Standard Deviation" << std::endl;
@@ -383,7 +383,7 @@ int main(int argc, char *argv[]) {
 		    for (int i = 0; i < control.processCount; i++) {
 			    distDist[i] = clusterColData[i % control.clusterCols]->processData[(i / control.clusterRows) * 2];
 			    distProcSum += distDist[i];
-			    std::cout << "Process " << i << ": " << distDist[i] << std::endl;
+			    //std::cout << "Process " << i << ": " << distDist[i] << std::endl;
 		    }
 		    distProcAvg = distProcSum / (double) control.processCount;
 		    for (int i = 0; i < control.processCount; i++) {
@@ -413,7 +413,7 @@ int main(int argc, char *argv[]) {
 		    }
 
 		    //std::cout << "NNZ Per Process Standard Deviation = " << distStandardDeviation << std::endl;
-		    std::cout << MAD << std::endl;
+            std::cout << distProcAvg << "," << distStandardDeviation << "," << distMedian << "," << MAD << std::endl;
 
 
 		    if (control.debug && control.myId == 0)
