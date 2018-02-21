@@ -291,7 +291,7 @@ int main(int argc, char *argv[]) {
 			    nnzCount = (lastElement - firstElement);
 			    seqDist[i] = nnzCount;
 			    seqProcSum += nnzCount;
-			    //std::cout << "Process " << i << ": " << seqDist[i] << std::endl;
+			    std::cout << "Process " << i << ": " << seqDist[i] << std::endl;
 		    }
 
 		    seqProcAvg = seqProcSum / (double) control.processCount;
