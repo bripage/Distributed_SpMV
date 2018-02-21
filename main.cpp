@@ -291,7 +291,7 @@ int main(int argc, char *argv[]) {
 			    nnzCount = (lastElement - firstElement);
 			    seqDist[i] = nnzCount;
 			    seqProcSum += nnzCount;
-			    std::cout << "Process " << i << ": " << seqDist[i] << std::endl;
+			    //std::cout << "Process " << i << ": " << seqDist[i] << std::endl;
 		    }
 
 		    seqProcAvg = seqProcSum / (double) control.processCount;
@@ -306,7 +306,7 @@ int main(int argc, char *argv[]) {
 		    } else {
 			    seqMedian = (seqDist[control.processCount/2] + seqDist[(control.processCount/2) - 1]) / 2;
 		    }
-			std::cout << "seqMedian = " << seqMedian << std::endl;
+			//std::cout << "seqMedian = " << seqMedian << std::endl;
 		    std::vector <int> absolutes(control.processCount,0);
 		    for (int i = 0; i < control.processCount; i++){
 			    absolutes[i] = abs(seqDist[i] - seqMedian);
@@ -320,7 +320,7 @@ int main(int argc, char *argv[]) {
 			    MAD = (absolutes[control.processCount/2] + absolutes[(control.processCount/2) - 1]) / 2;
 		    }
 
-		    std::cout << "NNZ Per Process Standard Deviation = " << seqStandardDeviation << std::endl;
+		    //std::cout << "NNZ Per Process Standard Deviation = " << seqStandardDeviation << std::endl;
 		    std::cout << "Median Absolute Deviation = " << MAD << std::endl;
 
 		    if (control.debug && control.myId == 0)
@@ -1329,6 +1329,7 @@ int main(int argc, char *argv[]) {
 
 
 	if (control.debug && control.myId == 0) std::cout << "Starting Output" << std::endl;
+	/*
     if (control.myId == 0) {
 	    if (control.barrier == false) {
 		    std::cout << distributionEndTime - distributionStartTime << "," << overallEndTime - overallStartTime << std::endl;
@@ -1356,6 +1357,7 @@ int main(int argc, char *argv[]) {
 	    }
 
     }
+    */
 	if (control.debug && control.myId == 0) std::cout << "Output complete" << std::endl;
 
 
