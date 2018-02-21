@@ -277,7 +277,7 @@ int main(int argc, char *argv[]) {
 	    if (control.distributionMethod == 1) {
 		    int seqProcSum = 0;
 		    double seqProcAvg, seqProcAvgDiff = 0.0, seqStandardDeviation;
-		    std::vector<int> seqDist(control.rowCount, 0); // sequential distribution
+		    std::vector<int> seqDist(control.processCount, 0); // sequential distribution
 
 		    for (int i = 0; i < control.processCount; i++) {
 			    int firstElement = clusterColData[i%control.clusterCols]->csrRows[(i/control.clusterRows) * control.rowsPerNode];
@@ -306,7 +306,7 @@ int main(int argc, char *argv[]) {
 		    } else {
 			    seqMedian = (seqDist[control.processCount/2] + seqDist[(control.processCount/2) - 1]) / 2;
 		    }
-
+			std::cout << "seqMedian = " << seqMedian << std::endl;
 		    std::vector <int> absolutes(control.processCount,0);
 		    for (int i = 0; i < control.processCount; i++){
 			    absolutes[i] = abs(seqDist[i] - seqMedian);
