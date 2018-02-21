@@ -531,6 +531,9 @@ void distribution_Balanced(controlData& control, std::vector<csrSpMV*>& clusterC
 	//
 	if (control.debug) std::cout << "Sorting Rows" << std::endl;
 	std::sort(distributionRows.begin(), distributionRows.end(), sortByLength);
+	for (int i = 0; i < distributionRows.size(); i++){
+		std::cout << distributionRows[i].rowLength << std::endl;
+	}
 	if (control.debug) std::cout << "Done sorting rows" << std::endl;
 
 	//

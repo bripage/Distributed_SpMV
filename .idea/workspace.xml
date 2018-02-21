@@ -12,6 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c65b864-9431-4078-9657-58a0aa3c15cb" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Distributed SpMV Data.xlsx" afterPath="$PROJECT_DIR$/Distributed SpMV Data.xlsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/distribution.cpp" afterPath="$PROJECT_DIR$/distribution.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
     </list>
     <ignored path="Distrubuted_SpMV.iws" />
@@ -33,11 +35,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="1205" column="18" lean-forward="false" selection-start-line="1205" selection-start-column="18" selection-end-line="1205" selection-end-column="18" />
+            <state relative-caret-position="700">
+              <caret line="326" column="0" lean-forward="false" selection-start-line="326" selection-start-column="0" selection-end-line="326" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -83,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="distribution.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="distribution.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/distribution.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="586" column="71" lean-forward="false" selection-start-line="586" selection-start-column="71" selection-end-line="586" selection-end-column="71" />
+            <state relative-caret-position="480">
+              <caret line="534" column="64" lean-forward="false" selection-start-line="534" selection-start-column="64" selection-end-line="534" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -155,8 +157,8 @@
         <option value="$PROJECT_DIR$/csrSpMV.cpp" />
         <option value="$PROJECT_DIR$/controlStruct.h" />
         <option value="$PROJECT_DIR$/csrSpMV.h" />
-        <option value="$PROJECT_DIR$/distribution.cpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/distribution.cpp" />
       </list>
     </option>
   </component>
@@ -168,7 +170,7 @@
   </component>
   <component name="OCFindUsagesOptions" text="false" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="23" />
+    <option name="x" value="-1853" />
     <option name="y" value="23" />
     <option name="width" value="1853" />
     <option name="height" value="993" />
@@ -512,10 +514,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="851805000" />
+    <option name="totallyTimeSpent" value="854941000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="23" y="23" width="1853" height="993" extended-state="0" />
+    <frame x="-1853" y="23" width="1853" height="993" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17431192" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -592,7 +594,7 @@
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -804,18 +806,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/distribution.cpp">
+    <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="586" column="71" lean-forward="false" selection-start-line="586" selection-start-column="71" selection-end-line="586" selection-end-column="71" />
+        <state relative-caret-position="700">
+          <caret line="326" column="0" lean-forward="false" selection-start-line="326" selection-start-column="0" selection-end-line="326" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
+    <entry file="file://$PROJECT_DIR$/distribution.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="1205" column="18" lean-forward="false" selection-start-line="1205" selection-start-column="18" selection-end-line="1205" selection-end-column="18" />
+        <state relative-caret-position="480">
+          <caret line="534" column="64" lean-forward="false" selection-start-line="534" selection-start-column="64" selection-end-line="534" selection-end-column="64" />
           <folding />
         </state>
       </provider>
