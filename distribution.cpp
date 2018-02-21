@@ -18,7 +18,7 @@ bool sortRowThenCol(const Element& lhs, const Element& rhs) {
 }
 
 bool sortByLength(const row &a, const row &b){
-	return a.rowLength < b.rowLength;
+	return a.rowLength > b.rowLength;
 }
 
 //
