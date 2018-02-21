@@ -321,7 +321,7 @@ int main(int argc, char *argv[]) {
 		    }
 
 		    //std::cout << "NNZ Per Process Standard Deviation = " << seqStandardDeviation << std::endl;
-		    std::cout << << MAD << std::endl;
+		    std::cout << MAD << std::endl;
 
 		    if (control.debug && control.myId == 0)
 			    std::cout << "Done Determining NNZ Per Process Standard Deviation" << std::endl;
