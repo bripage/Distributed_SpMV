@@ -314,10 +314,10 @@ int main(int argc, char *argv[]) {
 
 		    std::sort(absolutes.begin(), absolutes.end());
 		    int MAD;
-		    if (control.processCount % 2 == 1){
-			    MAD = absolutes[control.processCount / 2];
-		    } else {
+		    if (control.processCount % 2 == 0){
 			    MAD = (absolutes[control.processCount/2] + absolutes[(control.processCount/2) - 1]) / 2;
+		    } else {
+			    MAD = absolutes[control.processCount / 2];
 		    }
 
 		    //std::cout << "NNZ Per Process Standard Deviation = " << seqStandardDeviation << std::endl;
@@ -360,10 +360,10 @@ int main(int argc, char *argv[]) {
 
 		    std::sort(absolutes.begin(), absolutes.end());
 		    int MAD;
-		    if (control.processCount % 2 == 1){
-			    MAD = absolutes[control.processCount / 2];
-		    } else {
+		    if (control.processCount % 2 == 0){
 			    MAD = (absolutes[control.processCount/2] + absolutes[(control.processCount/2) - 1]) / 2;
+		    } else {
+			    MAD = absolutes[control.processCount / 2];
 		    }
 
 		    //std::cout << "NNZ Per Process Standard Deviation = " << distStandardDeviation << std::endl;
@@ -406,10 +406,10 @@ int main(int argc, char *argv[]) {
 
 		    std::sort(absolutes.begin(), absolutes.end());
 		    int MAD;
-		    if (control.processCount % 2 == 1){
-			    MAD = absolutes[control.processCount / 2];
-		    } else {
+		    if (control.processCount % 2 == 0){
 			    MAD = (absolutes[control.processCount/2] + absolutes[(control.processCount/2) - 1]) / 2;
+		    } else {
+			    MAD = absolutes[control.processCount / 2];
 		    }
 
 		    //std::cout << "NNZ Per Process Standard Deviation = " << distStandardDeviation << std::endl;
