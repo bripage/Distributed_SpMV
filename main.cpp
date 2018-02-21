@@ -277,7 +277,7 @@ int main(int argc, char *argv[]) {
 	    if (control.distributionMethod == 1) {
 		    int seqProcSum = 0;
 		    double seqProcAvg, seqProcAvgDiff = 0.0, seqStandardDeviation;
-		    std::vector<int> seqDist(control.processCount, 0); // sequential distribution
+		    std::vector<double> seqDist(control.processCount, 0); // sequential distribution
 
 		    for (int i = 0; i < control.processCount; i++) {
 			    int firstElement = clusterColData[i%control.clusterCols]->csrRows[(i/control.clusterRows) * control.rowsPerNode];
@@ -289,8 +289,8 @@ int main(int argc, char *argv[]) {
 				    lastElement = clusterColData[i%control.clusterCols]->csrRows[((i/control.clusterRows) + 1) * control.rowsPerNode];
 			    }
 			    nnzCount = (lastElement - firstElement);
-			    seqDist[i] = nnzCount / (control.rowCount * control.rowCount);
-			    seqProcSum += nnzCount / (control.rowCount * control.rowCount);
+			    seqDist[i] = (double)nnzCount / (control.rowCount * control.rowCount);
+			    seqProcSum += (double)nnzCount / (control.rowCount * control.rowCount);
 			    //std::cout << "Process " << i << ": " << seqDist[i] << std::endl;
 		    }
 
@@ -300,20 +300,20 @@ int main(int argc, char *argv[]) {
 		    }
 		    seqStandardDeviation = sqrt((1.0 / control.processCount) * seqProcAvgDiff);
 		    std::sort(seqDist.begin(), seqDist.end());
-		    int seqMedian;
+            double seqMedian;
 		    if (control.processCount % 2 == 1){
 			    seqMedian = seqDist[control.processCount / 2];
 		    } else {
 			    seqMedian = (seqDist[control.processCount/2] + seqDist[(control.processCount/2) - 1]) / 2;
 		    }
 			//std::cout << "seqMedian = " << seqMedian << std::endl;
-		    std::vector <int> absolutes(control.processCount,0);
+		    std::vector <double> absolutes(control.processCount,0);
 		    for (int i = 0; i < control.processCount; i++){
 			    absolutes[i] = abs(seqDist[i] - seqMedian);
 		    }
 
 		    std::sort(absolutes.begin(), absolutes.end());
-		    int MAD;
+            double MAD;
 		    if (control.processCount % 2 == 0){
 			    MAD = (absolutes[control.processCount/2] + absolutes[(control.processCount/2) - 1]) / 2;
 		    } else {
@@ -332,7 +332,7 @@ int main(int argc, char *argv[]) {
 
 		    int distProcSum = 0;
 		    double distProcAvg, distProcAvgDiff = 0.0, distStandardDeviation;
-		    std::vector<int> distDist(control.processCount, 0); //distributed distribution
+		    std::vector<double> distDist(control.processCount, 0); //distributed distribution
 
 		    for (int i = 0; i < control.processCount; i++) {
 			    distDist[i] = clusterColData[i % control.clusterCols]->processData[(i / control.clusterRows) * 2];
@@ -346,7 +346,7 @@ int main(int argc, char *argv[]) {
 		    distStandardDeviation = sqrt((1.0 / control.processCount) * distProcAvgDiff);
 
 		    std::sort(distDist.begin(), distDist.end());
-		    int distMedian;
+            double distMedian;
 		    if (control.processCount % 2 == 1){
 			    distMedian = distDist[control.processCount / 2];
 		    } else {
