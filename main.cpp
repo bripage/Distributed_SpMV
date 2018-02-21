@@ -299,7 +299,29 @@ int main(int argc, char *argv[]) {
 			    seqProcAvgDiff += (seqDist[i] - seqProcAvg) * (seqDist[i] - seqProcAvg);
 		    }
 		    seqStandardDeviation = sqrt((1.0 / control.processCount) * seqProcAvgDiff);
+		    std::sort(seqDist.begin(), seqDist.end());
+		    int seqMedian;
+		    if (control.processCount % 2 == 1){
+			    seqMedian = seqDist[control.processCount / 2];
+		    } else {
+			    seqMedian = (seqDist[control.processCount/2] + seqDist[(control.processCount/2) - 1]) / 2;
+		    }
+
+		    std::vector <int> absolutes(control.processCount,0);
+		    for (int i = 0; i < control.processCount; i++){
+			    absolutes[i] = abs(seqDist[i] - seqMedian);
+		    }
+
+		    std::sort(absolutes.begin(), absolutes.end());
+		    int MAD;
+		    if (control.processCount % 2 == 1){
+			    MAD = absolutes[control.processCount / 2];
+		    } else {
+			    MAD = (absolutes[control.processCount/2] + absolutes[(control.processCount/2) - 1]) / 2;
+		    }
+
 		    std::cout << "NNZ Per Process Standard Deviation = " << seqStandardDeviation << std::endl;
+		    std::cout << "Median Absolute Deviation = " << MAD << std::endl;
 
 		    if (control.debug && control.myId == 0)
 			    std::cout << "Done Determining NNZ Per Process Standard Deviation" << std::endl;
@@ -323,10 +345,29 @@ int main(int argc, char *argv[]) {
 		    }
 		    distStandardDeviation = sqrt((1.0 / control.processCount) * distProcAvgDiff);
 
-		    //distDist.sort();
+		    std::sort(distDist.begin(), distDist.end());
+		    int distMedian;
+		    if (control.processCount % 2 == 1){
+			    distMedian = distDist[control.processCount / 2];
+		    } else {
+			    distMedian = (distDist[control.processCount/2] + distDist[(control.processCount/2) - 1]) / 2;
+		    }
 
+		    std::vector <int> absolutes(control.processCount,0);
+			for (int i = 0; i < control.processCount; i++){
+				absolutes[i] = abs(distDist[i] - distMedian);
+			}
+
+		    std::sort(absolutes.begin(), absolutes.end());
+		    int MAD;
+		    if (control.processCount % 2 == 1){
+			    MAD = absolutes[control.processCount / 2];
+		    } else {
+			    MAD = (absolutes[control.processCount/2] + absolutes[(control.processCount/2) - 1]) / 2;
+		    }
 
 		    std::cout << "NNZ Per Process Standard Deviation = " << distStandardDeviation << std::endl;
+		    std::cout << "Median Absolute Deviation = " << MAD << std::endl;
 
 		    if (control.debug && control.myId == 0)
 			    std::cout << "Done Determining NNZ Per Process Standard Deviation" << std::endl;
@@ -349,7 +390,31 @@ int main(int argc, char *argv[]) {
 			    distProcAvgDiff += (distDist[i] - distProcAvg) * (distDist[i] - distProcAvg);
 		    }
 		    distStandardDeviation = sqrt((1.0 / control.processCount) * distProcAvgDiff);
+
+		    std::sort(distDist.begin(), distDist.end());
+		    int distMedian;
+		    if (control.processCount % 2 == 1){
+			    distMedian = distDist[control.processCount / 2];
+		    } else {
+			    distMedian = (distDist[control.processCount/2] + distDist[(control.processCount/2) - 1]) / 2;
+		    }
+
+		    std::vector <int> absolutes(control.processCount,0);
+		    for (int i = 0; i < control.processCount; i++){
+			    absolutes[i] = abs(distDist[i] - distMedian);
+		    }
+
+		    std::sort(absolutes.begin(), absolutes.end());
+		    int MAD;
+		    if (control.processCount % 2 == 1){
+			    MAD = absolutes[control.processCount / 2];
+		    } else {
+			    MAD = (absolutes[control.processCount/2] + absolutes[(control.processCount/2) - 1]) / 2;
+		    }
+
 		    std::cout << "NNZ Per Process Standard Deviation = " << distStandardDeviation << std::endl;
+		    std::cout << "Median Absolute Deviation = " << MAD << std::endl;
+
 
 		    if (control.debug && control.myId == 0)
 			    std::cout << "Done Determining NNZ Per Process Standard Deviation" << std::endl;
