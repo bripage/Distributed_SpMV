@@ -292,9 +292,9 @@ int main(int argc, char *argv[]) {
 			    nnzCount = (lastElement - firstElement);
 			    unsigned long long int totalElementsPossible = (unsigned int)control.nonZeros;
 			    seqDist[i] = (double)nnzCount / control.nonZeros;
-			    std::cout << "seqDist[i] = " << seqDist[i] << std::endl;
+			    //std::cout << "seqDist[i] = " << seqDist[i] << std::endl;
 			    seqProcSum += seqDist[i];
-			    std::cout << "seqProcSum =  " << seqProcSum << std::endl;
+			    //std::cout << "seqProcSum =  " << seqProcSum << std::endl;
 		    }
 
 		    seqProcAvg = (double) seqProcSum / control.processCount;
@@ -331,9 +331,9 @@ int main(int argc, char *argv[]) {
 
 		    double MeanAD, sumMeanAbsolutes = 0;
 		    for (int i = 0; i < control.processCount; i++){
-			    std::cout << "abs(" << seqDist[i] << " - " << seqProcAvg << ") = " << fabs(seqDist[i]-seqProcAvg) << std::endl;
+			    //std::cout << "abs(" << seqDist[i] << " - " << seqProcAvg << ") = " << fabs(seqDist[i]-seqProcAvg) << std::endl;
 			    sumMeanAbsolutes += fabs(seqDist[i]-seqProcAvg);
-			    std::cout << "sumMeanAbsolutes = " << sumMeanAbsolutes << std::endl;
+			    //std::cout << "sumMeanAbsolutes = " << sumMeanAbsolutes << std::endl;
 		    }
 		    MeanAD = sumMeanAbsolutes/control.processCount;
 
