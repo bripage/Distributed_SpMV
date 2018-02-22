@@ -318,6 +318,9 @@ int main(int argc, char *argv[]) {
 		    std::sort(absolutes.begin(), absolutes.end());
             double MAD;
 		    if (control.processCount % 2 == 0){
+			    std::cout  << (absolutes[control.processCount/2] + absolutes[(control.processCount/2) - 1]) / 2
+			               << " = (" << absolutes[control.processCount/2] << " - "
+			               << absolutes[(control.processCount/2) - 1] << ")/2" << std::endl;
 			    MAD = (absolutes[control.processCount/2] + absolutes[(control.processCount/2) - 1]) / 2;
 		    } else {
 			    MAD = absolutes[control.processCount / 2];
