@@ -1,0 +1,100 @@
+Starting Tests on atmosmodd
+
+Incorecct Rows: 0
+5.41796,0.00409031,8.46502
+Starting Tests on parabolic_fem_expanded
+
+Incorecct Rows: 0
+2.46355,0.00172091,3.90228
+Starting Tests on rajat30
+
+Incorecct Rows: 0
+3.60437,0.00581765,5.9572
+Starting Tests on CurlCurl_3_expanded
+
+Incorecct Rows: 0
+7.61352,0.0107093,12.6358
+Starting Tests on offshore_expanded
+
+Incorecct Rows: 0
+2.40122,0.00265813,3.98126
+Starting Tests on FEM_3D_thermal2
+
+Incorecct Rows: 0
+1.95164,0.00128937,3.38901
+Starting Tests on nlpkkt80_expanded
+
+Incorecct Rows: 0
+11.777,0.0400147,18.6614
+Starting Tests on CO_expanded
+
+Incorecct Rows: 0
+3.95242,0.00323677,6.87772
+Starting Tests on gsm_106857_expanded
+
+Incorecct Rows: 0
+12.7772,0.0145373,21.7528
+Starting Tests on msdoor_expanded
+
+Incorecct Rows: 0
+10.3726,0.0109792,17.4994
+Starting Tests on bmw3_2_expanded
+
+Incorecct Rows: 0
+5.65769,0.00411057,9.72087
+Starting Tests on BenElechi1_expanded
+
+Incorecct Rows: 0
+6.74635,0.00368357,11.724
+Starting Tests on t3dh_expanded
+
+Incorecct Rows: 0
+2.39621,0.00174952,4.11325
+Starting Tests on F2_expanded
+
+Incorecct Rows: 0
+2.73713,0.00293708,4.74168
+Starting Tests on consph_expanded
+
+Incorecct Rows: 0
+3.03714,0.00174928,5.24749
+Starting Tests on SiO2_expanded
+
+Incorecct Rows: 0
+5.84538,0.00887656,10.2016
+Starting Tests on torso1_expanded
+
+Incorecct Rows: 0
+8.76797,0.0262609,15.0376
+Starting Tests on dielFilterV3real
+
+Incorecct Rows: 0
+28.4215,0.0570507,47.3499
+Starting Tests on RM07R
+
+Incorecct Rows: 0
+20.8391,0.0209653,35.6183
+Starting Tests on m_t1_expanded
+
+Incorecct Rows: 0
+4.85858,0.00322437,8.42626
+Starting Tests on crankseg_2_expanded
+
+Incorecct Rows: 0
+6.83199,0.00505662,11.8947
+Starting Tests on nd24k_expanded
+
+Incorecct Rows: 0
+14.521,0.0139599,25.8015
+Starting Tests on TSOPF_RS_b2383
+
+Incorecct Rows: 0
+8.74764,0.00613999,15.5803
+Starting Tests on mouse_gene_expanded
+
+Incorecct Rows: 0
+14.5168,0.0302022,25.0364
+Starting Tests on human_gene1_expanded
+
+Incorecct Rows: 0
+12.4065,0.0170054,21.631

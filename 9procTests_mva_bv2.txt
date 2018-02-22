@@ -1,0 +1,50 @@
+0.111111,6.06087e-07,0.111111,0,0.111111,3.8095e-07
+0.111111,1.79601e-06,0.111112,0,0.111111,1.12886e-06
+0.111109,0.014366,0.111111,0,0.111109,0.00677437
+[d8civy128.crc.nd.edu:mpi_rank_0][error_sighandler] Caught error: Segmentation fault (signal 11)
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 22895 RUNNING AT d8civy128.crc.nd.edu
+=   EXIT CODE: 11
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+[proxy:0:1@d8civy090.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:1@d8civy090.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:1@d8civy090.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:2@d8civy104.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:2@d8civy104.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:2@d8civy104.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:3@d8civy140.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:3@d8civy140.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:3@d8civy140.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:4@d8civy097.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:4@d8civy097.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:4@d8civy097.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[mpiexec@d8civy128.crc.nd.edu] HYDT_bscu_wait_for_completion (tools/bootstrap/utils/bscu_wait.c:76): one of the processes terminated badly; aborting
+[mpiexec@d8civy128.crc.nd.edu] HYDT_bsci_wait_for_completion (tools/bootstrap/src/bsci_wait.c:23): launcher returned error waiting for completion
+[mpiexec@d8civy128.crc.nd.edu] HYD_pmci_wait_for_completion (pm/pmiserv/pmiserv_pmci.c:218): launcher returned error waiting for completion
+[mpiexec@d8civy128.crc.nd.edu] main (ui/mpich/mpiexec.c:344): process manager error waiting for completion
+0.111111,8.02838e-07,0.111111,0,0.111111,5.01315e-07
+0.111111,1.45908e-06,0.111111,0,0.111111,8.67145e-07
+0.111111,3.46289e-06,0.111113,0,0.111111,2.16535e-06
+0.109129,0.00560636,0.111111,0,0.109129,0.00352382
+0.111111,3.24424e-06,0.111112,0,0.111111,2.03559e-06
+0.111111,1.23657e-06,0.111111,0,0.111111,8.26112e-07
+0.111111,2.16071e-06,0.111112,0,0.111111,1.32644e-06
+0.111111,3.9844e-06,0.111112,0,0.111111,2.46506e-06
+0.111111,4.25383e-06,0.111113,0,0.111111,2.6737e-06
+0.111111,7.41139e-06,0.111115,0,0.111111,4.60682e-06
+0.111111,1.01897e-05,0.111115,0,0.111111,6.58059e-06
+0.111111,6.02458e-06,0.111113,0,0.111111,3.7753e-06
+0.111111,2.39054e-05,0.111112,0,0.111111,1.38474e-05
+0.111111,0.00010154,0.111112,0,0.111111,5.70007e-05
+0.111111,7.1524e-07,0.111111,0,0.111111,4.35334e-07
+0.111111,2.24513e-06,0.111112,0,0.111111,1.39126e-06
+0.111111,5.48685e-06,0.111111,0,0.111111,3.41755e-06
+0.111111,1.03825e-05,0.111115,0,0.111111,6.54417e-06
+0.111111,1.03036e-05,0.111114,0,0.111111,6.39992e-06
+0.111111,2.22907e-05,0.111119,0,0.111111,1.40106e-05
+0.111111,3.61896e-05,0.111113,0,0.111111,2.0482e-05
+0.111111,0.000111718,0.111138,0,0.111111,6.8221e-05
