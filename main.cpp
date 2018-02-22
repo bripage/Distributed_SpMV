@@ -333,6 +333,7 @@ int main(int argc, char *argv[]) {
 		    for (int i = 0; i < control.processCount; i++){
 			    std::cout << "sumMeanAbsolutes += abs(" << seqDist[i] << " - " << seqProcAvg << ")" << std::endl;
 			    sumMeanAbsolutes += abs(seqDist[i]-seqProcAvg);
+			    std::cout << "sumMeanAbsolutes = " << sumMeanAbsolutes << std::endl;
 		    }
 		    MeanAD = sumMeanAbsolutes/control.processCount;
 
