@@ -293,7 +293,7 @@ int main(int argc, char *argv[]) {
 			    unsigned long long int totalElementsPossible = (unsigned int)control.nonZeros;
 			    seqDist[i] = (double)nnzCount / control.nonZeros;
 			    //std::cout << "seqDist[" << i << "] = " << (double)nnzCount << " / " << totalElementsPossible << std::endl;
-			    seqProcSum += (double)nnzCount / control.nonZeros;
+			    seqProcSum += seqDist[i];
 			    std::cout << "seqProcSum =  " << seqProcSum << std::endl;
 		    }
 
