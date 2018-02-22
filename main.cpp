@@ -331,8 +331,8 @@ int main(int argc, char *argv[]) {
 
 		    double MeanAD, sumMeanAbsolutes = 0;
 		    for (int i = 0; i < control.processCount; i++){
-			    std::cout << "abs(" << seqDist[i] << " - " << seqProcAvg << ") = " << abs(seqDist[i]-seqProcAvg) << std::endl;
-			    sumMeanAbsolutes += abs(seqDist[i]-seqProcAvg);
+			    std::cout << "abs(" << seqDist[i] << " - " << seqProcAvg << ") = " << fabs(seqDist[i]-seqProcAvg) << std::endl;
+			    sumMeanAbsolutes += fabs(seqDist[i]-seqProcAvg);
 			    std::cout << "sumMeanAbsolutes = " << sumMeanAbsolutes << std::endl;
 		    }
 		    MeanAD = sumMeanAbsolutes/control.processCount;
@@ -434,7 +434,7 @@ int main(int argc, char *argv[]) {
 
 		    double MeanAD, sumMeanAbsolutes = 0;
 		    for (int i = 0; i < control.processCount; i++){
-			    sumMeanAbsolutes += abs(distDist[i]-distProcAvg);
+			    sumMeanAbsolutes += fabs(distDist[i]-distProcAvg);
 		    }
 		    MeanAD = sumMeanAbsolutes/control.processCount;
 
