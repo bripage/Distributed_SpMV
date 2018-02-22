@@ -290,10 +290,9 @@ int main(int argc, char *argv[]) {
 			    }
 			    std::cout << "control.rowCount = " << control.rowCount << std::endl;
 			    nnzCount = (lastElement - firstElement);
-			    unsigned long long int totalElementsPossible = (unsigned int)control.nonZeros * (unsigned int)control.nonZeros;
-			    seqDist[i] = (double)nnzCount / totalElementsPossible;
+			    seqDist[i] = (double)nnzCount / control.nonZeros;
 			    //std::cout << "seqDist[" << i << "] = " << (double)nnzCount << " / " << totalElementsPossible << std::endl;
-			    seqProcSum += (double)nnzCount / totalElementsPossible;
+			    seqProcSum += (double)nnzCount / control.nonZeros;
 			    //std::cout << "Process " << i << ": " << seqDist[i] << std::endl;
 		    }
 
