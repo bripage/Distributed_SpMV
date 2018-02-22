@@ -290,10 +290,11 @@ int main(int argc, char *argv[]) {
 			    }
 			    //std::cout << "control.rowCount = " << control.rowCount << std::endl;
 			    nnzCount = (lastElement - firstElement);
-			    seqDist[i] = (double)nnzCount;
+			    unsigned long long int totalElementsPossible = (unsigned int)control.nonZeros;
+			    seqDist[i] = (double)nnzCount / control.nonZeros;
 			    //std::cout << "seqDist[" << i << "] = " << (double)nnzCount << " / " << totalElementsPossible << std::endl;
-			    seqProcSum += (double)nnzCount;
-			    std::cout << "Process " << i << ": " << seqDist[i] << std::endl;
+			    seqProcSum += (double)nnzCount / control.nonZeros;
+			    //std::cout << "Process " << i << ": " << seqDist[i] << std::endl;
 		    }
 
 		    seqProcAvg = seqProcSum / (double) control.processCount;
@@ -342,8 +343,9 @@ int main(int argc, char *argv[]) {
 		    double distProcAvg, distProcAvgDiff = 0.0, distStandardDeviation;
 		    std::vector<double> distDist(control.processCount, 0); //distributed distribution
 
+		    unsigned long long int totalElementsPossible = (unsigned int)control.nonZeros;
 		    for (int i = 0; i < control.processCount; i++) {
-			    distDist[i] = clusterColData[i % control.clusterCols]->processData[(i / control.clusterRows) * 2];
+			    distDist[i] = (double) clusterColData[i % control.clusterCols]->processData[(i / control.clusterRows) * 2]/totalElementsPossible;
 			    distProcSum += distDist[i];
 			    //std::cout << "Process " << i << ": " << distDist[i] << std::endl;
 		    }
@@ -367,7 +369,7 @@ int main(int argc, char *argv[]) {
 			}
 
 		    std::sort(absolutes.begin(), absolutes.end());
-		    int MAD;
+		    double MAD;
 		    if (control.processCount % 2 == 0){
 			    MAD = (absolutes[control.processCount/2] + absolutes[(control.processCount/2) - 1]) / 2;
 		    } else {
@@ -386,10 +388,11 @@ int main(int argc, char *argv[]) {
 
 		    int distProcSum = 0;
 		    double distProcAvg, distProcAvgDiff = 0.0, distStandardDeviation;
-		    std::vector<int> distDist(control.processCount, 0); //distributed distribution
+		    std::vector<double> distDist(control.processCount, 0); //distributed distribution
 
+		    unsigned long long int totalElementsPossible = (unsigned int)control.nonZeros;
 		    for (int i = 0; i < control.processCount; i++) {
-			    distDist[i] = clusterColData[i % control.clusterCols]->processData[(i / control.clusterRows) * 2];
+			    distDist[i] = (double)clusterColData[i % control.clusterCols]->processData[(i / control.clusterRows) * 2]/totalElementsPossible;
 			    distProcSum += distDist[i];
 			    //std::cout << "Process " << i << ": " << distDist[i] << std::endl;
 		    }
@@ -400,20 +403,20 @@ int main(int argc, char *argv[]) {
 		    distStandardDeviation = sqrt((1.0 / control.processCount) * distProcAvgDiff);
 
 		    std::sort(distDist.begin(), distDist.end());
-		    int distMedian;
+		    double distMedian;
 		    if (control.processCount % 2 == 1){
 			    distMedian = distDist[control.processCount / 2];
 		    } else {
 			    distMedian = (distDist[control.processCount/2] + distDist[(control.processCount/2) - 1]) / 2;
 		    }
 
-		    std::vector <int> absolutes(control.processCount,0);
+		    std::vector <double> absolutes(control.processCount,0);
 		    for (int i = 0; i < control.processCount; i++){
 			    absolutes[i] = abs(distDist[i] - distMedian);
 		    }
 
 		    std::sort(absolutes.begin(), absolutes.end());
-		    int MAD;
+		    double MAD;
 		    if (control.processCount % 2 == 0){
 			    MAD = (absolutes[control.processCount/2] + absolutes[(control.processCount/2) - 1]) / 2;
 		    } else {
