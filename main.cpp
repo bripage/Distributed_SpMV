@@ -288,6 +288,7 @@ int main(int argc, char *argv[]) {
 			    } else {
 				    lastElement = clusterColData[i%control.clusterCols]->csrRows[((i/control.clusterRows) + 1) * control.rowsPerNode];
 			    }
+			    std::cout << "control.rowCount = " << control.rowCount << std::endl;
 			    nnzCount = (lastElement - firstElement);
 			    seqDist[i] = (double)nnzCount / (control.rowCount * control.rowCount);
 			    std::cout << "seqDist[" << i << "] = " << (double)nnzCount << " / " << (control.rowCount * control.rowCount) << std::endl;
