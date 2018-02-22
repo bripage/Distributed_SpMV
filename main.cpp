@@ -288,12 +288,12 @@ int main(int argc, char *argv[]) {
 			    } else {
 				    lastElement = clusterColData[i%control.clusterCols]->csrRows[((i/control.clusterRows) + 1) * control.rowsPerNode];
 			    }
-			    std::cout << "control.rowCount = " << control.rowCount << std::endl;
+			    //std::cout << "control.rowCount = " << control.rowCount << std::endl;
 			    nnzCount = (lastElement - firstElement);
-			    seqDist[i] = (double)nnzCount / control.nonZeros;
+			    seqDist[i] = (double)nnzCount;
 			    //std::cout << "seqDist[" << i << "] = " << (double)nnzCount << " / " << totalElementsPossible << std::endl;
-			    seqProcSum += (double)nnzCount / control.nonZeros;
-			    //std::cout << "Process " << i << ": " << seqDist[i] << std::endl;
+			    seqProcSum += (double)nnzCount;
+			    std::cout << "Process " << i << ": " << seqDist[i] << std::endl;
 		    }
 
 		    seqProcAvg = seqProcSum / (double) control.processCount;
