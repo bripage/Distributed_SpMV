@@ -307,9 +307,9 @@ int main(int argc, char *argv[]) {
 		    if (control.processCount % 2 == 1){
 			    seqMedian = seqDist[control.processCount / 2];
 		    } else {
-			    std::cout  << (seqDist[control.processCount/2] + seqDist[(control.processCount/2) - 1]) / 2
-			               << " = (" << seqDist[control.processCount/2] << " - "
-			               << seqDist[(control.processCount/2) - 1] << ")/2" << std::endl;
+			    //std::cout  << (seqDist[control.processCount/2] + seqDist[(control.processCount/2) - 1]) / 2
+			    //           << " = (" << seqDist[control.processCount/2] << " - "
+			    //           << seqDist[(control.processCount/2) - 1] << ")/2" << std::endl;
 			    seqMedian = (seqDist[control.processCount/2] + seqDist[(control.processCount/2) - 1]) / 2;
 		    }
 			//std::cout << "seqMedian = " << seqMedian << std::endl;
@@ -319,18 +319,25 @@ int main(int argc, char *argv[]) {
 		    }
 
 		    std::sort(absolutes.begin(), absolutes.end());
-            double MAD;
+            double MedianAD;
 		    if (control.processCount % 2 == 0){
-			    std::cout  << (absolutes[control.processCount/2] + absolutes[(control.processCount/2) - 1]) / 2
-			               << " = (" << absolutes[control.processCount/2] << " - "
-			               << absolutes[(control.processCount/2) - 1] << ")/2" << std::endl;
-			    MAD = (absolutes[control.processCount/2] + absolutes[(control.processCount/2) - 1]) / 2;
+			    //std::cout  << (absolutes[control.processCount/2] + absolutes[(control.processCount/2) - 1]) / 2
+			    //          << " = (" << absolutes[control.processCount/2] << " - "
+			    //           << absolutes[(control.processCount/2) - 1] << ")/2" << std::endl;
+			    MedianAD = (absolutes[control.processCount/2] + absolutes[(control.processCount/2) - 1]) / 2;
 		    } else {
-			    MAD = absolutes[control.processCount / 2];
+			    MedianAD = absolutes[control.processCount / 2];
 		    }
 
+		    double MeanAD, sumMeanAbsolutes = 0;
+		    for (int i = 0; i << control.processCount; i++){
+			    sumMeanAbsolutes += abs(seqDist[i]-seqProcAvg);
+		    }
+		    MeanAD = sumMeanAbsolutes/seqProcAvg;
+
+
 		    //std::cout << "NNZ Per Process Standard Deviation = " << seqStandardDeviation << std::endl;
-		    std::cout << seqProcAvg << "," << seqStandardDeviation << "," << seqMedian << "," << MAD << std::endl;
+		    std::cout << seqProcAvg << "," << seqStandardDeviation << "," << seqMedian << "," << MedianAD << "," << seqProcAvg << "," <<  MeanAD << std::endl;
 
 		    if (control.debug && control.myId == 0)
 			    std::cout << "Done Determining NNZ Per Process Standard Deviation" << std::endl;
@@ -416,15 +423,21 @@ int main(int argc, char *argv[]) {
 		    }
 
 		    std::sort(absolutes.begin(), absolutes.end());
-		    double MAD;
+		    double MedianAD;
 		    if (control.processCount % 2 == 0){
-			    MAD = (absolutes[control.processCount/2] + absolutes[(control.processCount/2) - 1]) / 2;
+			    MedianAD = (absolutes[control.processCount/2] + absolutes[(control.processCount/2) - 1]) / 2;
 		    } else {
-			    MAD = absolutes[control.processCount / 2];
+			    MedianAD = absolutes[control.processCount / 2];
 		    }
 
+		    double MeanAD, sumMeanAbsolutes = 0;
+		    for (int i = 0; i << control.processCount; i++){
+			    sumMeanAbsolutes += abs(distDist[i]-distProcAvg);
+		    }
+		    MeanAD = sumMeanAbsolutes/distProcAvg;
+
 		    //std::cout << "NNZ Per Process Standard Deviation = " << distStandardDeviation << std::endl;
-            std::cout << distProcAvg << "," << distStandardDeviation << "," << distMedian << "," << MAD << std::endl;
+            std::cout << distProcAvg << "," << distStandardDeviation << "," << distMedian << "," << MedianAD << "," << distProcAvg << "," <<  MeanAD << std::endl;
 
 
 		    if (control.debug && control.myId == 0)
