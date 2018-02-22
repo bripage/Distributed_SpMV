@@ -11,9 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c65b864-9431-4078-9657-58a0aa3c15cb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
-    </list>
+    <list default="true" id="0c65b864-9431-4078-9657-58a0aa3c15cb" name="Default" comment="" />
     <ignored path="Distrubuted_SpMV.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -502,7 +500,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="868708000" />
+    <option name="totallyTimeSpent" value="868941000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1853" y="23" width="1853" height="993" extended-state="0" />
