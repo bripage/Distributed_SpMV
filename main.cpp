@@ -294,10 +294,10 @@ int main(int argc, char *argv[]) {
 			    seqDist[i] = (double)nnzCount / control.nonZeros;
 			    //std::cout << "seqDist[" << i << "] = " << (double)nnzCount << " / " << totalElementsPossible << std::endl;
 			    seqProcSum += (double)nnzCount / control.nonZeros;
-			    //std::cout << "Process " << i << ": " << seqDist[i] << std::endl;
+			    std::cout << "seqProcSum =  " << seqProcSum << std::endl;
 		    }
 
-		    seqProcAvg = seqProcSum / (double) control.processCount;
+		    seqProcAvg = (double) seqProcSum / control.processCount;
 		    for (int i = 0; i < control.processCount; i++) {
 			    seqProcAvgDiff += (seqDist[i] - seqProcAvg) * (seqDist[i] - seqProcAvg);
 		    }
@@ -432,7 +432,7 @@ int main(int argc, char *argv[]) {
 		    }
 
 		    double MeanAD, sumMeanAbsolutes = 0;
-		    for (int i = 0; i << control.processCount; i++){
+		    for (int i = 0; i < control.processCount; i++){
 			    sumMeanAbsolutes += abs(distDist[i]-distProcAvg);
 		    }
 		    MeanAD = sumMeanAbsolutes/distProcAvg;
