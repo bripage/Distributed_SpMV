@@ -304,6 +304,7 @@ int main(int argc, char *argv[]) {
 		    if (control.processCount % 2 == 1){
 			    seqMedian = seqDist[control.processCount / 2];
 		    } else {
+			    std::cout  << (seqDist[control.processCount/2] + seqDist[(control.processCount/2) - 1]) / 2 << " = (" << seqDist[control.processCount/2] << " - " << seqDist[(control.processCount/2) - 1] << ")/2"
 			    seqMedian = (seqDist[control.processCount/2] + seqDist[(control.processCount/2) - 1]) / 2;
 		    }
 			//std::cout << "seqMedian = " << seqMedian << std::endl;
