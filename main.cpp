@@ -275,7 +275,7 @@ int main(int argc, char *argv[]) {
 
     if (control.matrixInfo && control.myId == 0) {
 	    if (control.distributionMethod == 1) {
-		    int seqProcSum = 0;
+		    double seqProcSum = 0;
 		    double seqProcAvg, seqProcAvgDiff = 0.0, seqStandardDeviation;
 		    std::vector<double> seqDist(control.processCount, 0); // sequential distribution
 
@@ -394,7 +394,7 @@ int main(int argc, char *argv[]) {
 		    if (control.debug && control.myId == 0)
 			    std::cout << "Starting Determining NNZ Per Process Standard Deviation" << std::endl;
 
-		    int distProcSum = 0;
+		    double distProcSum = 0;
 		    double distProcAvg, distProcAvgDiff = 0.0, distStandardDeviation;
 		    std::vector<double> distDist(control.processCount, 0); //distributed distribution
 
