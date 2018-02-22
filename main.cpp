@@ -334,7 +334,7 @@ int main(int argc, char *argv[]) {
 			    std::cout << "sumMeanAbsolutes += abs(" << seqDist[i] << " - " << seqProcAvg << ")" << std::endl;
 			    sumMeanAbsolutes += abs(seqDist[i]-seqProcAvg);
 		    }
-		    MeanAD = sumMeanAbsolutes/seqProcAvg;
+		    MeanAD = sumMeanAbsolutes/control.processCount;
 
 
 		    //std::cout << "NNZ Per Process Standard Deviation = " << seqStandardDeviation << std::endl;
@@ -435,7 +435,7 @@ int main(int argc, char *argv[]) {
 		    for (int i = 0; i < control.processCount; i++){
 			    sumMeanAbsolutes += abs(distDist[i]-distProcAvg);
 		    }
-		    MeanAD = sumMeanAbsolutes/distProcAvg;
+		    MeanAD = sumMeanAbsolutes/control.processCount;
 
 		    //std::cout << "NNZ Per Process Standard Deviation = " << distStandardDeviation << std::endl;
             std::cout << distProcAvg << "," << distStandardDeviation << "," << distMedian << "," << MedianAD << "," << distProcAvg << "," <<  MeanAD << std::endl;
