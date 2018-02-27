@@ -26,6 +26,46 @@ foreach m ($matrix)
   mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
   mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
   mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
+  mpirun -np 4 -ppn 2 -genv MV2_ENABLE_AFFINITY=0 -genv OMP_NUM_THREADS=8 -bind-to socket -map-by socket  ./main -lm ../sample_matrices/$m.mtx --omp-threads 8 --use-barriers true --distribution-method bv2
   echo "\n\n"
 end
 
