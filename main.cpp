@@ -1355,7 +1355,7 @@ int main(int argc, char *argv[]) {
 
 
 	if (control.debug && control.myId == 0) std::cout << "Starting Output" << std::endl;
-	/*
+
     if (control.myId == 0) {
 	    if (control.barrier == false) {
 		    std::cout << distributionEndTime - distributionStartTime << "," << overallEndTime - overallStartTime << std::endl;
@@ -1383,7 +1383,7 @@ int main(int argc, char *argv[]) {
 	    }
 
     }
-    */
+
 	if (control.debug && control.myId == 0) std::cout << "Output complete" << std::endl;
 
 
