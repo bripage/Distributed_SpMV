@@ -1305,7 +1305,7 @@ int main(int argc, char *argv[]) {
 			}
 		}
 		//std::cout << control.myId << " DONE WITH GATHER PORTION" << std::endl;
-		if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
+		//if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
 
 		if (control.myId == 0){
 			//std::cout << "gatheredResult.size() = " << gatheredResult.size() << ", rowDistribution.size() = " << control.rowDistribution.size() << std::endl;
