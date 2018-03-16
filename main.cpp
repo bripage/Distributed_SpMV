@@ -663,7 +663,7 @@ int main(int argc, char *argv[]) {
 					MPI_Reduce(&result[0], &result[0], control.rowCount, MPI_DOUBLE, MPI_SUM, 0, control.row_comm);
 				}
 			}
-			if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
+			//if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
 			if (control.debug && control.myId == 0) std::cout << "MPI Reduction complete" << std::endl;
 			reductionEndTime = MPI_Wtime();
 
@@ -974,7 +974,7 @@ int main(int argc, char *argv[]) {
 			} else {
 				MPI_Reduce(&result[0], &result[0], control.rowCount, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
 			}
-			if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
+			//if (control.barrier) MPI_Barrier(MPI_COMM_WORLD);
 			if (control.debug && control.myId == 0) std::cout << "MPI Reduction complete" << std::endl;
 			reductionEndTime = MPI_Wtime();
 		}
