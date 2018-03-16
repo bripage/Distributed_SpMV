@@ -1,0 +1,74 @@
+0.111111,6.06087e-07,0.111111,0,0.111111,3.8095e-07
+6.01111,0.0701282,0.000846624,0.00518656,6.09005
+0.111111,1.79601e-06,0.111112,0,0.111111,1.12886e-06
+3.11685,0.032002,0.000590086,0.00208974,3.15358
+0.111109,0.014366,0.111111,0,0.111109,0.00677437
+[d8civy082.crc.nd.edu:mpi_rank_0][error_sighandler] Caught error: Segmentation fault (signal 11)
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 13631 RUNNING AT d8civy082.crc.nd.edu
+=   EXIT CODE: 11
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+[proxy:0:2@d8civy138.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:2@d8civy138.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:2@d8civy138.crc.nd.edu] main (pm/pmiserv/pmip.c:206): [proxy:0:3@d8civy088.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:3@d8civy088.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:3@d8civy088.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:1@d8civy133.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:1@d8civy133.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:1@d8civy133.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:4@d8civy102.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:4@d8civy102.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:4@d8civy102.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+demux engine error waiting for event
+[mpiexec@d8civy082.crc.nd.edu] HYDT_bscu_wait_for_completion (tools/bootstrap/utils/bscu_wait.c:76): one of the processes terminated badly; aborting
+[mpiexec@d8civy082.crc.nd.edu] HYDT_bsci_wait_for_completion (tools/bootstrap/src/bsci_wait.c:23): launcher returned error waiting for completion
+[mpiexec@d8civy082.crc.nd.edu] HYD_pmci_wait_for_completion (pm/pmiserv/pmiserv_pmci.c:218): launcher returned error waiting for completion
+[mpiexec@d8civy082.crc.nd.edu] main (ui/mpich/mpiexec.c:344): process manager error waiting for completion
+0.111111,8.02838e-07,0.111111,0,0.111111,5.01315e-07
+10.7945,0.0927896,0.00154543,0.00662589,10.8982
+0.111111,1.45908e-06,0.111111,0,0.111111,8.67145e-07
+2.65916,0.0310819,0.000616312,0.00146914,2.69413
+0.111111,3.46289e-06,0.111113,0,0.111111,2.16535e-06
+2.56046,0.0255063,0.000384808,0.00104475,2.58914
+0.109129,0.00560636,0.111111,0,0.109129,0.00352382
+13.7239,0.166205,0.00271749,0.00542116,13.9012
+0.111111,3.24424e-06,0.111112,0,0.111111,2.03559e-06
+5.06738,0.0483179,0.000949383,0.00151968,5.12003
+0.111111,1.23657e-06,0.111111,0,0.111111,8.26112e-07
+13.9343,0.126331,0.00268602,0.00308323,14.0687
+0.111111,2.16071e-06,0.111112,0,0.111111,1.32644e-06
+13.4622,0.108824,0.00196266,0.00402284,13.5791
+0.111111,3.9844e-06,0.111112,0,0.111111,2.46506e-06
+6.86911,0.0665309,0.00133991,0.00179219,6.94082
+0.111111,4.25383e-06,0.111113,0,0.111111,2.6737e-06
+8.18104,0.0771942,0.00138497,0.00166893,8.26321
+0.111111,7.41139e-06,0.111115,0,0.111111,4.60682e-06
+3.37669,0.0287576,0.00054431,0.000938892,3.40852
+0.111111,1.01897e-05,0.111115,0,0.111111,6.58059e-06
+3.18545,0.032861,0.000685692,0.00098443,3.22184
+0.111111,6.02458e-06,0.111113,0,0.111111,3.7753e-06
+4.20169,0.0368421,0.000782251,0.000968218,4.24189
+0.111111,2.39054e-05,0.111112,0,0.111111,1.38474e-05
+7.12741,0.0646501,0.00134969,0.0011816,7.1964
+0.111111,0.00010154,0.111112,0,0.111111,5.70007e-05
+10.0073,0.200592,0.00129795,0.00119138,10.2119
+0.111111,7.1524e-07,0.111111,0,0.111111,4.35334e-07
+33.4879,0.25429,0.00344777,0.00736427,33.7555
+0.111111,2.24513e-06,0.111112,0,0.111111,1.39126e-06
+22.675,0.203822,0.00313663,0.00312805,22.8872
+0.111111,5.48685e-06,0.111111,0,0.111111,3.41755e-06
+5.4073,0.0565991,0.000774384,0.000950098,5.46724
+0.111111,1.03825e-05,0.111115,0,0.111111,6.54417e-06
+7.45124,0.0779197,0.00107718,0.000908375,7.5329
+0.111111,1.03036e-05,0.111114,0,0.111111,6.39992e-06
+16.1916,0.155346,0.00156021,0.00107288,16.3513
+0.111111,2.22907e-05,0.111119,0,0.111111,1.40106e-05
+10.2556,0.0864608,0.00212789,0.000471115,10.3465
+0.111111,3.61896e-05,0.111113,0,0.111111,2.0482e-05
+19.6869,0.159919,0.00380206,0.00100398,19.8534
+0.111111,0.000111718,0.111138,0,0.111111,6.8221e-05
+14.8398,0.342553,0.00193167,0.000735521,15.1867
