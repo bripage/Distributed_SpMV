@@ -1,325 +1,1530 @@
-5.81615,2.26845,0.00519514,0.0290158,8.12295
-5.79143,2.26896,0.000664234,0.028723,8.09365
-5.67965,2.26828,0.000808239,0.0286379,7.98181
-5.69641,2.26794,0.00042367,0.0286429,7.99782
-5.6374,2.26719,0.000770807,0.0286334,7.93816
-5.68885,2.26911,0.000413656,0.0289052,7.99148
-5.65492,2.26656,0.000408411,0.0287125,7.95449
-5.64833,2.26917,0.00357246,0.0284858,7.9538
-5.65499,2.26901,0.000442028,0.0284004,7.95704
-5.65704,2.26808,0.000404835,0.0284898,7.95913
-
-
-
-2.50046,2.17124,0.000313044,0.0111845,4.68546
-2.49138,2.17126,0.000638485,0.0111382,4.67687
-2.48933,2.17189,0.000329971,0.0110202,4.67478
-2.52202,2.17083,0.00061655,0.0112398,4.7069
-2.49241,2.16975,0.00073576,0.0111756,4.67639
-2.48979,2.17129,0.000320435,0.0109627,4.67462
-2.56464,2.17145,0.000639439,0.011116,4.75002
-2.4943,2.17115,0.000638485,0.0111511,4.67943
-2.56807,2.17107,0.000316143,0.0109396,4.75273
-2.59786,2.17183,0.000319242,0.0110118,4.7843
-
-
-
-4.107,2.26452,0.000486374,0.0138233,6.38824
-4.08811,2.26282,0.000919104,0.0137382,6.36826
-4.10905,2.26292,0.000500917,0.0137389,6.38876
-4.19013,2.25884,0.000625134,0.0138063,6.46622
-4.21911,2.26133,0.000688553,0.0137446,6.49873
-4.08307,2.26324,0.000479937,0.0138805,6.36348
-4.22299,2.26036,0.000679016,0.0138783,6.50054
-4.08601,2.26445,0.000873804,0.0139747,6.36784
-4.07692,2.26224,0.000504255,0.0139046,6.35607
-4.10959,2.26264,0.000705719,0.0138068,6.38927
-
-
-
-8.51834,2.32829,0.000928879,0.0271838,10.879
-8.45705,2.32754,0.000969172,0.026942,10.8166
-8.57888,2.32754,0.000930071,0.026581,10.938
-8.86242,2.32724,0.0035789,0.0274045,11.2251
-8.90491,2.32813,0.000946522,0.0265987,11.2646
-8.72266,2.32616,0.000991821,0.0265691,11.0805
-8.62363,2.32778,0.000948668,0.0266593,10.9832
-8.53556,2.32705,0.000961781,0.0266402,10.8946
-8.57722,2.32658,0.000932932,0.0265441,10.9357
-8.45569,2.32614,0.000925779,0.0266724,10.8135
-
-
-
-2.58745,2.16321,0.00064373,0.00658441,4.75969
-2.59308,2.16382,0.000673056,0.0065105,4.76631
-2.58954,2.16386,0.000591755,0.00650072,4.7624
-2.58795,2.16208,0.00339055,0.00647402,4.76205
-2.67439,2.16482,0.000629187,0.00657225,4.84857
-2.59047,2.16445,0.000380516,0.00662851,4.76388
-2.64645,2.16373,0.000609398,0.00655937,4.8191
-2.59709,2.16407,0.000368595,0.00660825,4.77099
-2.57789,2.16288,0.000647783,0.00650954,4.74981
-2.58266,2.16373,0.000778437,0.00651836,4.75549
-
-
-
-2.08904,2.14221,0.000653028,0.00421643,4.23755
-2.09387,2.14125,0.000576258,0.00420856,4.24116
-2.108,2.14137,0.000644445,0.00419354,4.25552
-2.10165,2.14172,0.000295639,0.00424814,4.24915
-2.12759,2.14148,0.00310898,0.00413394,4.27776
-2.08867,2.14114,0.000276327,0.00421691,4.23608
-2.1069,2.14167,0.00027585,0.00422645,4.25425
-2.13826,2.14119,0.000271082,0.00421834,4.28538
-2.08649,2.14101,0.000303984,0.0042007,4.23332
-2.08806,2.14124,0.00029397,0.00417829,4.23502
-
-
-
-12.7358,2.31156,0.0011158,0.0232558,15.0755
-12.8803,2.30993,0.000674963,0.02332,15.2179
-13.0262,2.31238,0.00104165,0.0236413,15.3667
-12.8507,2.30912,0.000668764,0.023303,15.1872
-13.1799,2.31294,0.000828505,0.0230992,15.5203
-12.977,2.30869,0.000691891,0.0230622,15.3129
-12.9945,2.3131,0.000739574,0.0234315,15.3352
-13.2412,2.31062,0.000786066,0.0233243,15.5795
-12.9728,2.31308,0.000768661,0.0233843,15.3136
-12.8349,2.31246,0.000973225,0.0231149,15.1752
-
-
-
-4.27202,2.15833,0.000616312,0.00572824,6.43836
-4.27433,2.15829,0.000349045,0.00582886,6.44052
-4.28984,2.15839,0.000641823,0.00579906,6.45676
-4.38146,2.15766,0.000623703,0.00570846,6.54742
-4.39955,2.15763,0.000607729,0.00574899,6.56524
-4.26319,2.15859,0.000356197,0.00576997,6.42965
-4.39042,2.15825,0.000581741,0.00579953,6.5571
-4.27736,2.15873,0.00182199,0.00564313,6.44533
-4.42173,2.15762,0.000605583,0.00571918,6.58725
-4.29147,2.15766,0.000340223,0.00574255,6.45684
-
-
-
-14.0579,2.25856,0.000671148,0.0124383,16.3321
-14.0479,2.25869,0.000711203,0.0124836,16.3222
-13.9168,2.25676,0.000964165,0.0124748,16.1894
-14.0138,2.25768,0.000791788,0.0124269,16.287
-14.1975,2.25801,0.000839472,0.012917,16.472
-13.5218,2.25734,0.000761747,0.0123973,15.7947
-13.9606,2.25752,0.000791073,0.0125122,16.2338
-14.2932,2.25912,0.0011971,0.012296,16.5683
-13.8389,2.25693,0.00063014,0.0124943,16.1113
-13.9294,2.25775,0.000765324,0.0122464,16.2079
-
-
-
-11.2771,2.23689,0.000740051,0.00842571,13.5255
-11.5455,2.23484,0.000715017,0.00835013,13.7916
-11.1807,2.23365,0.000715971,0.00828004,13.4276
-11.2986,2.23403,0.000814915,0.100744,13.6363
-10.9074,2.23458,0.000766516,0.0105786,13.1555
-10.8485,2.23361,0.000685215,0.00841498,13.0933
-11.3858,2.23562,0.000640154,0.00845361,13.6325
-11.3617,2.23502,0.000782013,0.00828815,13.608
-11.1154,2.23607,0.000577927,0.00832653,13.3635
-11.1582,2.23387,0.000861883,0.00835824,13.4044
-
-
-
-5.94591,2.18059,0.000836849,0.00593829,8.13707
-5.96177,2.17996,0.000797033,0.00586176,8.15097
-6.0563,2.17975,0.000415564,0.00585485,8.24704
-6.13213,2.18058,0.000417948,0.00592947,8.3212
-5.95888,2.17983,0.000647306,0.00586057,8.14739
-5.96451,2.18,0.000438213,0.0059607,8.15311
-5.96875,2.17933,0.00071311,0.00596881,8.15923
-5.93928,2.18006,0.000701427,0.00586414,8.12762
-6.12668,2.17952,0.000437737,0.00591731,8.31468
-6.1224,2.17972,0.000724077,0.00587463,8.31096
-
-
-
-7.03633,2.19229,0.000872374,0.00622463,9.23745
-6.7895,2.19056,0.000427961,0.00626421,8.98826
-6.78758,2.19148,0.000397921,0.00632429,8.98742
-6.76065,2.19032,0.000382185,0.00624514,8.95932
-7.01096,2.19076,0.000440359,0.00622797,9.2102
-6.76554,2.19135,0.000663519,0.00622725,8.96547
-6.97185,2.19103,0.00040555,0.00628328,9.17129
-6.77251,2.19137,0.000617266,0.00620985,8.97249
-6.77129,2.19129,0.000635386,0.00627708,8.97121
-6.91773,2.19111,0.000448704,0.00623298,9.11703
-
-
-
-2.45587,2.13398,0.000645638,0.00273609,4.59419
-2.42663,2.13363,0.000285625,0.00283146,4.56437
-2.40766,2.13433,0.00242591,0.00273299,4.553
-2.42143,2.13421,0.000660419,0.00274706,4.56012
-2.45904,2.13385,0.000290632,0.00278592,4.59703
-2.39742,2.13396,0.000280619,0.00278974,4.5356
-2.46008,2.13397,0.000658035,0.00275588,4.59857
-2.39109,2.13349,0.000284672,0.00279856,4.52897
-2.41167,2.13383,0.0006392,0.00274062,4.55005
-2.41022,2.13447,0.000709772,0.00275207,4.54907
-
-
-
-2.76418,2.13829,0.000332355,0.00268149,4.90658
-2.77409,2.13859,0.000674486,0.00261521,4.91805
-2.77329,2.13916,0.000357866,0.0026269,4.91652
-2.77012,2.13842,0.000309706,0.00262094,4.91268
-2.77497,2.13866,0.000694036,0.00264668,4.91806
-2.76649,2.13847,0.000654936,0.00258231,4.90913
-2.79773,2.13875,0.000730276,0.00261807,4.94081
-2.84629,2.13939,0.00035882,0.00264621,4.99223
-2.76409,2.1387,0.000573635,0.00262451,4.90708
-2.7678,2.13846,0.000347137,0.0026679,4.91039
-
-
-
-3.12592,2.14309,0.000605583,0.00286078,5.27378
-3.1782,2.14265,0.000330925,0.00287724,5.32511
-3.09656,2.1432,0.000323534,0.00291014,5.24415
-3.09414,2.14323,0.000673056,0.00286865,5.24194
-3.11196,2.14318,0.000675201,0.00288725,5.25966
-3.11809,2.14295,0.000301838,0.00286889,5.26532
-3.10643,2.14284,0.000663996,0.00283575,5.25377
-3.11097,2.14288,0.000299454,0.00286055,5.25811
-3.0975,2.14439,0.000690222,0.00287199,5.24645
-3.11237,2.14308,0.000296593,0.0028863,5.25967
-
-
-
-6.01022,2.17619,0.0004251,0.00433445,8.19306
-6.14405,2.17626,0.000397921,0.00450134,8.32826
-6.01217,2.17607,0.000431061,0.00437784,8.19464
-6.05809,2.17671,0.000735998,0.00435901,8.24147
-5.99915,2.17672,0.00360823,0.00417852,8.18496
-5.98423,2.17651,0.000626564,0.0043478,8.16742
-6.16489,2.17729,0.000704765,0.00442219,8.34868
-6.16265,2.17716,0.000707865,0.00434875,8.3465
-6.1478,2.1759,0.000630379,0.00438046,8.33065
-6.04934,2.17619,0.000652313,0.00436497,8.23202
-
-
-
-8.86125,2.20425,0.000626802,0.00354958,11.071
-8.7407,2.20684,0.000393867,0.00362968,10.9531
-8.64015,2.20565,0.000378132,0.00357199,10.8511
-8.75586,2.20725,0.000750542,0.00355983,10.9688
-8.88314,2.20557,0.000450134,0.00351787,11.0942
-8.71784,2.20847,0.000607014,0.00358582,10.9318
-8.74793,2.2074,0.0035677,0.0034287,10.9634
-8.72402,2.20757,0.000401497,0.00354457,10.9368
-8.84898,2.20832,0.000922441,0.00352573,11.0633
-8.79259,2.20722,0.000636578,0.00354004,11.0062
-
-
-
-29.8923,2.57119,0.00176859,0.0413203,32.5515
-32.7634,2.5515,0.00347114,0.0511763,35.3755
-29.6075,2.55217,0.00169325,0.0270703,32.1948
-32.0276,2.55071,0.00160336,0.0241218,34.6078
-30.2602,2.54949,0.00158358,0.0297961,32.8448
-33.6394,2.55247,0.00164104,0.042686,36.2399
-29.7972,2.54827,0.00162315,0.0242112,32.375
-30.1193,2.55077,0.00170803,0.0239985,32.6994
-32.9734,2.54942,0.00164413,0.133684,35.6619
-32.0656,2.55014,0.00154233,0.0279102,34.649
-
-
-
-22.1765,2.34372,0.00147367,0.00872564,24.5333
-22.9747,2.34434,0.000929594,0.00894141,25.331
-21.6511,2.34533,0.00140738,0.0087738,24.0089
-21.9913,2.346,0.00182438,0.00892854,24.3508
-21.5991,2.34474,0.00139499,0.00890112,23.9562
-21.8398,2.34463,0.00146008,0.00873232,24.1969
-21.8232,2.3463,0.00148487,0.00861955,24.1825
-22.2727,2.34481,0.00140929,0.00867414,24.6302
-22.0787,2.34486,0.00143361,0.00893021,24.4362
-21.8827,2.34583,0.00186467,0.00866151,24.2413
-
-
-
-4.92076,2.1633,0.000290394,0.00315976,7.08851
-4.92586,2.16339,0.000317812,0.00316024,7.09396
-4.93599,2.1632,0.000319004,0.00324416,7.10388
-4.9392,2.16358,0.000310659,0.00315356,7.10729
-4.91537,2.16351,0.000654459,0.00318623,7.08395
-4.91924,2.16324,0.000303507,0.00316834,7.08704
-5.04368,2.16332,0.000311852,0.00317192,7.21175
-5.03965,2.16345,0.000304222,0.00315452,7.20793
-4.94241,2.16352,0.000294209,0.00322318,7.11052
-5.0539,2.16305,0.000634909,0.00314569,7.22188
-
-
-
-6.82827,2.188,0.000406027,0.00254297,9.0203
-6.97608,2.18734,0.000732899,0.00247574,9.16777
-6.97325,2.18709,0.000453234,0.00248933,9.1644
-6.94644,2.18736,0.000426531,0.00250506,9.13769
-6.84528,2.1875,0.000417948,0.00252557,9.03674
-6.81025,2.18838,0.00040555,0.00253391,9.00277
-6.90865,2.18782,0.000392675,0.00248718,9.10034
-6.9539,2.18728,0.000397921,0.0025425,9.14514
-6.82126,2.1882,0.000400066,0.00248885,9.01346
-7.22326,2.18811,0.000741959,0.00248098,9.41558
-
-
-
-15.5925,2.28138,0.000685453,0.00272417,17.8783
-16.1858,2.28152,0.000613689,0.00270414,18.4716
-16.1181,2.28144,0.000693798,0.00272465,18.4041
-16.1686,2.28218,0.000576258,0.00269794,18.4551
-16.2072,2.28408,0.000597,0.00268602,18.4956
-15.5005,2.2851,0.000561953,0.00268888,17.7899
-16.0792,2.28274,0.000644922,0.00273681,18.3667
-16.1493,2.28309,0.000569344,0.00270438,18.4367
-15.5094,2.28121,0.000584126,0.00271201,17.7951
-16.1196,2.2847,0.0007267,0.00271344,18.4089
-
-
-
-8.9764,2.20168,0.00359869,0.00190282,11.1844
-8.88914,2.20077,0.00061512,0.00192404,11.0933
-8.99087,2.20113,0.000581026,0.00192523,11.1955
-9.09337,2.20054,0.000958443,0.00192165,11.2978
-9.14079,2.20149,0.000635147,0.00193381,11.3458
-8.92896,2.20074,0.000589132,0.00196052,11.1332
-9.19177,2.20215,0.000636816,0.00198793,11.3974
-9.08213,2.20121,0.000607729,0.00192809,11.2868
-8.98948,2.2017,0.000595093,0.00193906,11.1948
-9.23142,2.20071,0.000647783,0.00195265,11.4378
-
-
-
-15.652,2.28438,0.000999451,0.00205684,17.9404
-15.5793,2.28254,0.000983238,0.00209308,17.8657
-16.3371,2.28294,0.00100493,0.00206947,18.624
-15.4962,2.28328,0.00100589,0.00207925,17.7836
-16.4827,2.2834,0.00096941,0.00212193,18.7702
-15.9309,2.28332,0.00101519,0.00210714,18.2182
-16.4332,2.28244,0.00101614,0.00209117,18.7198
-16.0087,2.28336,0.00100756,0.00209808,18.2961
-15.8003,2.28228,0.00103569,0.00207996,18.0865
-16.9038,2.28303,0.00102949,0.00209165,19.1911
-
-
-
-13.5141,2.25275,0.000507116,0.00157046,15.77
-13.9028,2.25323,0.000669718,0.00161219,16.1594
-13.616,2.2539,0.000526428,0.00160599,15.8728
-13.0042,2.25721,0.000655174,0.00162077,15.2647
-13.9022,2.25315,0.000662088,0.00159597,16.1587
-13.4107,2.25402,0.000689268,0.00161791,15.6678
-13.4149,2.25534,0.00053072,0.00158095,15.6733
-12.9741,2.25886,0.000880241,0.00162745,15.2364
-13.6145,2.2529,0.000691652,0.0015924,15.8719
-13.4576,2.25454,0.000504494,0.00159454,15.7152
+6.65952,0.0992994,0.00509048,0.00681877,6.77372
+6.15447,0.0921404,0.00355077,0.00535536,6.25928
+6.03758,0.0944207,0.00351644,0.00619841,6.14589
+6.03761,0.096369,0.000672579,0.00550771,6.14647
+6.0095,0.0948048,0.000665665,0.00597692,6.1138
+6.10324,0.0917802,0.000701666,0.0061419,6.20537
+6.09348,0.0918489,0.000337839,0.00558758,6.1947
+6.08526,0.0956397,0.000406504,0.00625968,6.19224
+6.17952,0.0936766,0.000377178,0.00602913,6.28385
+6.14975,0.0960126,0.000360727,0.0064044,6.25686
+6.19224,0.096288,0.000377417,0.00594354,6.30108
+6.11185,0.0959365,0.000661373,0.00552058,6.21863
+6.22448,0.094594,0.000670195,0.00630903,6.32897
+6.04499,0.0915709,0.000658751,0.00569606,6.14583
+6.26116,0.0963762,0.000654459,0.00527143,6.36764
+6.13025,0.0952835,0.000645638,0.00623989,6.236
+6.10349,0.0917001,0.000387907,0.00633144,6.20818
+6.19235,0.0947521,0.000374317,0.00545406,6.29596
+6.07374,0.0946848,0.000377178,0.00641012,6.17872
+6.23111,0.0952907,0.000673771,0.00648427,6.33788
+
+
+
+3.3371,0.0457866,0.000624657,0.00196266,3.38903
+2.53825,0.0440855,0.00344253,0.00209022,2.5914
+2.53312,0.0434356,0.000297785,0.00201297,2.58262
+2.54988,0.043963,0.000650644,0.00191355,2.59917
+2.51951,0.0438604,0.000588894,0.00196075,2.56942
+2.55324,0.0440662,0.000659227,0.00192738,2.60449
+2.51845,0.0454206,0.000319242,0.00201559,2.57039
+2.51731,0.0440791,0.000298262,0.00199413,2.56763
+2.55013,0.044636,0.000300407,0.00197124,2.59956
+2.60105,0.044138,0.000584126,0.00195503,2.6505
+2.56113,0.0434859,0.000305176,0.00199246,2.60962
+2.51548,0.0440199,0.000315905,0.00200486,2.5635
+2.50909,0.0442598,0.000644207,0.00206995,2.5598
+2.52859,0.0440257,0.000310183,0.00198698,2.57836
+2.55438,0.0454037,0.000646591,0.00194955,2.60815
+2.61376,0.04546,0.000627279,0.00195551,2.66646
+2.52013,0.044066,0.000638723,0.00195122,2.57024
+2.51586,0.0459473,0.00153756,0.00193524,2.56812
+2.5315,0.0440571,0.000300407,0.00199389,2.58102
+2.51345,0.0441058,0.000659704,0.00194383,2.56273
+
+
+
+[d8civy128.crc.nd.edu:mpi_rank_7][error_sighandler] Caught error: Segmentation fault (signal 11)
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 6107 RUNNING AT d8civy128.crc.nd.edu
+=   EXIT CODE: 11
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+[proxy:0:0@d8civy089.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:0@d8civy089.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:0@d8civy089.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:2@d8civy081.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:2@d8civy081.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:2@d8civy081.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:4@d8civy111.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:4@d8civy111.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:4@d8civy111.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:5@d8civy110.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:5@d8civy110.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:5@d8civy110.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:7@d8civy137.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:7@d8civy137.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:7@d8civy137.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:8@d8civy118.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:8@d8civy118.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:8@d8civy118.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:9@d8civy112.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:9@d8civy112.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:9@d8civy112.crc.nd.edu] main (pm/pmiserv/pmip.c:206): [proxy:0:21@d8civy099.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:21@d8civy099.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:21@d8civy099.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:24@d8civy076.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:24@d8civy076.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:24@d8civy076.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[mpiexec@d8civy089.crc.nd.edu] HYDT_bscu_wait_for_completion (tools/bootstrap/utils/bscu_wait.c:76): one of the processes terminated badly; aborting
+[mpiexec@d8civy089.crc.nd.edu] HYDT_bsci_wait_for_completion (tools/bootstrap/src/bsci_wait.c:23): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] HYD_pmci_wait_for_completion (pm/pmiserv/pmiserv_pmci.c:218): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] main (ui/mpich/mpiexec.c:344): process manager error waiting for completion
+[d8civy128.crc.nd.edu:mpi_rank_7][error_sighandler] Caught error: Segmentation fault (signal 11)
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 6263 RUNNING AT d8civy128.crc.nd.edu
+=   EXIT CODE: 11
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+[proxy:0:0@d8civy089.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:0@d8civy089.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:0@d8civy089.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:1@d8civy134.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:1@d8civy134.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:1@d8civy134.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:2@d8civy081.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:2@d8civy081.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:2@d8civy081.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:4@d8civy111.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:4@d8civy111.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:4@d8civy111.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:5@d8civy110.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:5@d8civy110.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:5@d8civy110.crc.nd.edu] [proxy:0:6@d8civy083.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:6@d8civy083.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:6@d8civy083.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:7@d8civy137.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:7@d8civy137.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:7@d8civy137.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:8@d8civy118.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:8@d8civy118.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:8@d8civy118.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:9@d8civy112.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:9@d8civy112.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:9@d8civy112.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:10@d8civy129.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:10@d8civy129.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:10@d8civy129.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:11@d8civy116.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:11@d8civy116.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:11@d8civy116.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:12@d8civy141.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:12@d8civy141.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:12@d8civy141.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:13@d8civy108.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:13@d8civy108.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:13@d8civy108.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:14@d8civy103.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:14@d8civy103.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:14@d8civy103.crc.nd.edu] main (pm/pmiserv/pmip.c:206): [proxy:0:15@d8civy106.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:15@d8civy106.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:15@d8civy106.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:16@d8civy122.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:16@d8civy122.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:16@d8civy122.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:17@d8civy136.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:17@d8civy136.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:17@d8civy136.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:18@d8civy135.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:18@d8civy135.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:18@d8civy135.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:19@d8civy084.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:19@d8civy084.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:19@d8civy084.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:20@d8civy073.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:20@d8civy073.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:20@d8civy073.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:21@d8civy099.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:21@d8civy099.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:21@d8civy099.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:22@d8civy127.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:22@d8civy127.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:22@d8civy127.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:23@d8civy095.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:23@d8civy095.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:23@d8civy095.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:24@d8civy076.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:24@d8civy076.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:24@d8civy076.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[mpiexec@d8civy089.crc.nd.edu] HYDT_bscu_wait_for_completion (tools/bootstrap/utils/bscu_wait.c:76): one of the processes terminated badly; aborting
+[mpiexec@d8civy089.crc.nd.edu] HYDT_bsci_wait_for_completion (tools/bootstrap/src/bsci_wait.c:23): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] HYD_pmci_wait_for_completion (pm/pmiserv/pmiserv_pmci.c:218): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] main (ui/mpich/mpiexec.c:344): process manager error waiting for completion
+[d8civy128.crc.nd.edu:mpi_rank_7][error_sighandler] Caught error: Segmentation fault (signal 11)
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 6420 RUNNING AT d8civy128.crc.nd.edu
+=   EXIT CODE: 11
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+[proxy:0:0@d8civy089.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:0@d8civy089.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:0@d8civy089.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:1@d8civy134.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:1@d8civy134.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:1@d8civy134.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:2@d8civy081.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:2@d8civy081.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:2@d8civy081.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:4@d8civy111.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:4@d8civy111.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:4@d8civy111.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:5@d8civy110.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:5@d8civy110.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:5@d8civy110.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:6@d8civy083.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:6@d8civy083.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:6@d8civy083.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:16@d8civy122.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:16@d8civy122.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:16@d8civy122.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:17@d8civy136.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:17@d8civy136.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:17@d8civy136.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[mpiexec@d8civy089.crc.nd.edu] HYDT_bscu_wait_for_completion (tools/bootstrap/utils/bscu_wait.c:76): one of the processes terminated badly; aborting
+[mpiexec@d8civy089.crc.nd.edu] HYDT_bsci_wait_for_completion (tools/bootstrap/src/bsci_wait.c:23): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] HYD_pmci_wait_for_completion (pm/pmiserv/pmiserv_pmci.c:218): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] main (ui/mpich/mpiexec.c:344): process manager error waiting for completion
+[d8civy128.crc.nd.edu:mpi_rank_7][error_sighandler] Caught error: Segmentation fault (signal 11)
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 6576 RUNNING AT d8civy128.crc.nd.edu
+=   EXIT CODE: 11
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+[proxy:0:0@d8civy089.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:0@d8civy089.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:0@d8civy089.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:9@d8civy112.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:9@d8civy112.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:9@d8civy112.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:10@d8civy129.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:10@d8civy129.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:10@d8civy129.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:11@d8civy116.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:11@d8civy116.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:11@d8civy116.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:19@d8civy084.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:19@d8civy084.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:19@d8civy084.crc.nd.edu] [proxy:0:20@d8civy073.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:20@d8civy073.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:20@d8civy073.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:21@d8civy099.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:21@d8civy099.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:21@d8civy099.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:24@d8civy076.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:24@d8civy076.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:24@d8civy076.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[mpiexec@d8civy089.crc.nd.edu] HYDT_bscu_wait_for_completion (tools/bootstrap/utils/bscu_wait.c:76): one of the processes terminated badly; aborting
+[mpiexec@d8civy089.crc.nd.edu] HYDT_bsci_wait_for_completion (tools/bootstrap/src/bsci_wait.c:23): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] HYD_pmci_wait_for_completion (pm/pmiserv/pmiserv_pmci.c:218): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] main (ui/mpich/mpiexec.c:344): process manager error waiting for completion
+[d8civy128.crc.nd.edu:mpi_rank_7][error_sighandler] Caught error: Segmentation fault (signal 11)
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 6732 RUNNING AT d8civy128.crc.nd.edu
+=   EXIT CODE: 11
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+[proxy:0:0@d8civy089.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:0@d8civy089.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:0@d8civy089.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:5@d8civy110.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:5@d8civy110.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:5@d8civy110.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:7@d8civy137.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:7@d8civy137.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:7@d8civy137.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:13@d8civy108.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:13@d8civy108.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:13@d8civy108.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:18@d8civy135.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:18@d8civy135.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:18@d8civy135.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[mpiexec@d8civy089.crc.nd.edu] HYDT_bscu_wait_for_completion (tools/bootstrap/utils/bscu_wait.c:76): one of the processes terminated badly; aborting
+[mpiexec@d8civy089.crc.nd.edu] HYDT_bsci_wait_for_completion (tools/bootstrap/src/bsci_wait.c:23): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] HYD_pmci_wait_for_completion (pm/pmiserv/pmiserv_pmci.c:218): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] main (ui/mpich/mpiexec.c:344): process manager error waiting for completion
+[d8civy128.crc.nd.edu:mpi_rank_7][error_sighandler] Caught error: Segmentation fault (signal 11)
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 6994 RUNNING AT d8civy128.crc.nd.edu
+=   EXIT CODE: 11
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+[proxy:0:0@d8civy089.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:0@d8civy089.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:0@d8civy089.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:1@d8civy134.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:1@d8civy134.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:1@d8civy134.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:4@d8civy111.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:4@d8civy111.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:4@d8civy111.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:5@d8civy110.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:5@d8civy110.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:5@d8civy110.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:7@d8civy137.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:7@d8civy137.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:7@d8civy137.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:11@d8civy116.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:11@d8civy116.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:11@d8civy116.crc.nd.edu] [proxy:0:13@d8civy108.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:13@d8civy108.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:13@d8civy108.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:15@d8civy106.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:15@d8civy106.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:15@d8civy106.crc.nd.edu] [mpiexec@d8civy089.crc.nd.edu] HYDT_bscu_wait_for_completion (tools/bootstrap/utils/bscu_wait.c:76): one of the processes terminated badly; aborting
+[mpiexec@d8civy089.crc.nd.edu] HYDT_bsci_wait_for_completion (tools/bootstrap/src/bsci_wait.c:23): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] HYD_pmci_wait_for_completion (pm/pmiserv/pmiserv_pmci.c:218): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] main (ui/mpich/mpiexec.c:344): process manager error waiting for completion
+[d8civy128.crc.nd.edu:mpi_rank_7][error_sighandler] Caught error: Segmentation fault (signal 11)
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 7150 RUNNING AT d8civy128.crc.nd.edu
+=   EXIT CODE: 11
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+[proxy:0:0@d8civy089.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:0@d8civy089.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:0@d8civy089.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:1@d8civy134.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:1@d8civy134.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:1@d8civy134.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:2@d8civy081.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:2@d8civy081.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:2@d8civy081.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:4@d8civy111.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:4@d8civy111.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:4@d8civy111.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:5@d8civy110.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:5@d8civy110.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:5@d8civy110.crc.nd.edu] [proxy:0:6@d8civy083.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:6@d8civy083.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:6@d8civy083.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:7@d8civy137.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:7@d8civy137.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:7@d8civy137.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:8@d8civy118.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:8@d8civy118.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:8@d8civy118.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:9@d8civy112.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:9@d8civy112.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:9@d8civy112.crc.nd.edu] main (pm/pmiserv/pmip.c:206): [proxy:0:10@d8civy129.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:10@d8civy129.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:10@d8civy129.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:11@d8civy116.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:11@d8civy116.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:11@d8civy116.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:12@d8civy141.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:12@d8civy141.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:12@d8civy141.crc.nd.edu] main (pm/pmiserv/pmip.c:206): [proxy:0:13@d8civy108.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:13@d8civy108.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:13@d8civy108.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:14@d8civy103.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:14@d8civy103.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:14@d8civy103.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:15@d8civy106.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:15@d8civy106.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:15@d8civy106.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:16@d8civy122.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:16@d8civy122.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:16@d8civy122.crc.nd.edu] main (pm/pmiserv/pmip.c:206): [proxy:0:17@d8civy136.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:17@d8civy136.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:17@d8civy136.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:18@d8civy135.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:18@d8civy135.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:18@d8civy135.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:19@d8civy084.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:19@d8civy084.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:19@d8civy084.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:20@d8civy073.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:20@d8civy073.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:20@d8civy073.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:21@d8civy099.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:21@d8civy099.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:21@d8civy099.crc.nd.edu] main (pm/pmiserv/pmip.c:206): [proxy:0:22@d8civy127.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:22@d8civy127.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:22@d8civy127.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:23@d8civy095.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:23@d8civy095.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:23@d8civy095.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:24@d8civy076.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:24@d8civy076.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:24@d8civy076.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[mpiexec@d8civy089.crc.nd.edu] HYDT_bscu_wait_for_completion (tools/bootstrap/utils/bscu_wait.c:76): one of the processes terminated badly; aborting
+[mpiexec@d8civy089.crc.nd.edu] HYDT_bsci_wait_for_completion (tools/bootstrap/src/bsci_wait.c:23): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] HYD_pmci_wait_for_completion (pm/pmiserv/pmiserv_pmci.c:218): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] main (ui/mpich/mpiexec.c:344): process manager error waiting for completion
+[d8civy128.crc.nd.edu:mpi_rank_7][error_sighandler] Caught error: Segmentation fault (signal 11)
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 7306 RUNNING AT d8civy128.crc.nd.edu
+=   EXIT CODE: 11
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+[proxy:0:0@d8civy089.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:0@d8civy089.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:0@d8civy089.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:2@d8civy081.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:2@d8civy081.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:2@d8civy081.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:4@d8civy111.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:4@d8civy111.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:4@d8civy111.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:6@d8civy083.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:6@d8civy083.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:6@d8civy083.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:7@d8civy137.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:7@d8civy137.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:7@d8civy137.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:8@d8civy118.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:8@d8civy118.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:8@d8civy118.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:10@d8civy129.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:10@d8civy129.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:10@d8civy129.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:12@d8civy141.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:12@d8civy141.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:12@d8civy141.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:14@d8civy103.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:14@d8civy103.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:14@d8civy103.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:21@d8civy099.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:21@d8civy099.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:21@d8civy099.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[mpiexec@d8civy089.crc.nd.edu] HYDT_bscu_wait_for_completion (tools/bootstrap/utils/bscu_wait.c:76): one of the processes terminated badly; aborting
+[mpiexec@d8civy089.crc.nd.edu] HYDT_bsci_wait_for_completion (tools/bootstrap/src/bsci_wait.c:23): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] HYD_pmci_wait_for_completion (pm/pmiserv/pmiserv_pmci.c:218): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] main (ui/mpich/mpiexec.c:344): process manager error waiting for completion
+[d8civy128.crc.nd.edu:mpi_rank_7][error_sighandler] Caught error: Segmentation fault (signal 11)
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 7462 RUNNING AT d8civy128.crc.nd.edu
+=   EXIT CODE: 11
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+[proxy:0:0@d8civy089.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:0@d8civy089.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:0@d8civy089.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:1@d8civy134.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:1@d8civy134.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:1@d8civy134.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:2@d8civy081.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:2@d8civy081.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:2@d8civy081.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:4@d8civy111.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:4@d8civy111.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:4@d8civy111.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:6@d8civy083.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:6@d8civy083.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:6@d8civy083.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:8@d8civy118.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:8@d8civy118.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:8@d8civy118.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:11@d8civy116.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:11@d8civy116.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:11@d8civy116.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:13@d8civy108.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:13@d8civy108.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:13@d8civy108.crc.nd.edu] main (pm/pmiserv/pmip.c:206): [proxy:0:16@d8civy122.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:16@d8civy122.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:16@d8civy122.crc.nd.edu] main (pm/pmiserv/pmip.c:206): [proxy:0:23@d8civy095.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:23@d8civy095.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:23@d8civy095.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[mpiexec@d8civy089.crc.nd.edu] HYDT_bscu_wait_for_completion (tools/bootstrap/utils/bscu_wait.c:76): one of the processes terminated badly; aborting
+[mpiexec@d8civy089.crc.nd.edu] HYDT_bsci_wait_for_completion (tools/bootstrap/src/bsci_wait.c:23): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] HYD_pmci_wait_for_completion (pm/pmiserv/pmiserv_pmci.c:218): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] main (ui/mpich/mpiexec.c:344): process manager error waiting for completion
+[d8civy128.crc.nd.edu:mpi_rank_7][error_sighandler] Caught error: Segmentation fault (signal 11)
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 7618 RUNNING AT d8civy128.crc.nd.edu
+=   EXIT CODE: 11
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+[proxy:0:0@d8civy089.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:0@d8civy089.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:0@d8civy089.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:1@d8civy134.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:1@d8civy134.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:1@d8civy134.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:2@d8civy081.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:2@d8civy081.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:2@d8civy081.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:4@d8civy111.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:4@d8civy111.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:4@d8civy111.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:7@d8civy137.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:7@d8civy137.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:7@d8civy137.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:8@d8civy118.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:8@d8civy118.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:8@d8civy118.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:12@d8civy141.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:12@d8civy141.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:12@d8civy141.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:17@d8civy136.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:17@d8civy136.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:17@d8civy136.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:24@d8civy076.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:24@d8civy076.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:24@d8civy076.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[mpiexec@d8civy089.crc.nd.edu] HYDT_bscu_wait_for_completion (tools/bootstrap/utils/bscu_wait.c:76): one of the processes terminated badly; aborting
+[mpiexec@d8civy089.crc.nd.edu] HYDT_bsci_wait_for_completion (tools/bootstrap/src/bsci_wait.c:23): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] HYD_pmci_wait_for_completion (pm/pmiserv/pmiserv_pmci.c:218): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] main (ui/mpich/mpiexec.c:344): process manager error waiting for completion
+[d8civy128.crc.nd.edu:mpi_rank_7][error_sighandler] Caught error: Segmentation fault (signal 11)
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 7774 RUNNING AT d8civy128.crc.nd.edu
+=   EXIT CODE: 11
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+[proxy:0:0@d8civy089.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:0@d8civy089.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:0@d8civy089.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:4@d8civy111.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:4@d8civy111.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:4@d8civy111.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:8@d8civy118.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:8@d8civy118.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:8@d8civy118.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:9@d8civy112.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:9@d8civy112.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:9@d8civy112.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:10@d8civy129.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:10@d8civy129.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:10@d8civy129.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:11@d8civy116.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:11@d8civy116.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:11@d8civy116.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:13@d8civy108.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:13@d8civy108.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:13@d8civy108.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:15@d8civy106.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:15@d8civy106.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:15@d8civy106.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:21@d8civy099.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:21@d8civy099.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:21@d8civy099.crc.nd.edu] [mpiexec@d8civy089.crc.nd.edu] HYDT_bscu_wait_for_completion (tools/bootstrap/utils/bscu_wait.c:76): one of the processes terminated badly; aborting
+[mpiexec@d8civy089.crc.nd.edu] HYDT_bsci_wait_for_completion (tools/bootstrap/src/bsci_wait.c:23): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] HYD_pmci_wait_for_completion (pm/pmiserv/pmiserv_pmci.c:218): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] main (ui/mpich/mpiexec.c:344): process manager error waiting for completion
+[d8civy128.crc.nd.edu:mpi_rank_7][error_sighandler] Caught error: Segmentation fault (signal 11)
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 7930 RUNNING AT d8civy128.crc.nd.edu
+=   EXIT CODE: 11
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+[proxy:0:0@d8civy089.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:0@d8civy089.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:0@d8civy089.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:1@d8civy134.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:1@d8civy134.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:1@d8civy134.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:2@d8civy081.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:2@d8civy081.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:2@d8civy081.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:4@d8civy111.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:4@d8civy111.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:4@d8civy111.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:5@d8civy110.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:5@d8civy110.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:5@d8civy110.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:7@d8civy137.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:7@d8civy137.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:7@d8civy137.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:10@d8civy129.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:10@d8civy129.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:10@d8civy129.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:11@d8civy116.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:11@d8civy116.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:11@d8civy116.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:12@d8civy141.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:12@d8civy141.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:12@d8civy141.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:13@d8civy108.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:13@d8civy108.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:13@d8civy108.crc.nd.edu] main (pm/pmiserv/pmip.c:206): [proxy:0:15@d8civy106.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:15@d8civy106.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:15@d8civy106.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:16@d8civy122.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:16@d8civy122.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:16@d8civy122.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[mpiexec@d8civy089.crc.nd.edu] HYDT_bscu_wait_for_completion (tools/bootstrap/utils/bscu_wait.c:76): one of the processes terminated badly; aborting
+[mpiexec@d8civy089.crc.nd.edu] HYDT_bsci_wait_for_completion (tools/bootstrap/src/bsci_wait.c:23): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] HYD_pmci_wait_for_completion (pm/pmiserv/pmiserv_pmci.c:218): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] main (ui/mpich/mpiexec.c:344): process manager error waiting for completion
+[d8civy128.crc.nd.edu:mpi_rank_7][error_sighandler] Caught error: Segmentation fault (signal 11)
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 8087 RUNNING AT d8civy128.crc.nd.edu
+=   EXIT CODE: 11
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+[proxy:0:0@d8civy089.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:0@d8civy089.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:0@d8civy089.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:1@d8civy134.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:1@d8civy134.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:1@d8civy134.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:2@d8civy081.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:2@d8civy081.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:2@d8civy081.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:4@d8civy111.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:4@d8civy111.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:4@d8civy111.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:5@d8civy110.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:5@d8civy110.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:5@d8civy110.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:6@d8civy083.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:6@d8civy083.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:6@d8civy083.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:7@d8civy137.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:7@d8civy137.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:7@d8civy137.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:8@d8civy118.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:8@d8civy118.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:8@d8civy118.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:9@d8civy112.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:9@d8civy112.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:9@d8civy112.crc.nd.edu] main (pm/pmiserv/pmip.c:206): [proxy:0:10@d8civy129.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:10@d8civy129.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:10@d8civy129.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:11@d8civy116.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:11@d8civy116.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:11@d8civy116.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:12@d8civy141.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:12@d8civy141.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:12@d8civy141.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:13@d8civy108.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:13@d8civy108.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:13@d8civy108.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:14@d8civy103.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:14@d8civy103.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:14@d8civy103.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:15@d8civy106.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:15@d8civy106.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:15@d8civy106.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:16@d8civy122.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:16@d8civy122.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:16@d8civy122.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:17@d8civy136.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:17@d8civy136.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:17@d8civy136.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:18@d8civy135.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:18@d8civy135.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:18@d8civy135.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:19@d8civy084.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:19@d8civy084.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:19@d8civy084.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:20@d8civy073.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:20@d8civy073.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:20@d8civy073.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:21@d8civy099.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:21@d8civy099.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:21@d8civy099.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:22@d8civy127.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:22@d8civy127.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:22@d8civy127.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:23@d8civy095.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:23@d8civy095.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:23@d8civy095.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:24@d8civy076.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:24@d8civy076.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:24@d8civy076.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[mpiexec@d8civy089.crc.nd.edu] HYDT_bscu_wait_for_completion (tools/bootstrap/utils/bscu_wait.c:76): one of the processes terminated badly; aborting
+[mpiexec@d8civy089.crc.nd.edu] HYDT_bsci_wait_for_completion (tools/bootstrap/src/bsci_wait.c:23): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] HYD_pmci_wait_for_completion (pm/pmiserv/pmiserv_pmci.c:218): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] main (ui/mpich/mpiexec.c:344): process manager error waiting for completion
+[d8civy128.crc.nd.edu:mpi_rank_7][error_sighandler] Caught error: Segmentation fault (signal 11)
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 8243 RUNNING AT d8civy128.crc.nd.edu
+=   EXIT CODE: 11
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+[proxy:0:0@d8civy089.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:0@d8civy089.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:0@d8civy089.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:1@d8civy134.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:1@d8civy134.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:1@d8civy134.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:6@d8civy083.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:6@d8civy083.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:6@d8civy083.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:7@d8civy137.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:7@d8civy137.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:7@d8civy137.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:8@d8civy118.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:8@d8civy118.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:8@d8civy118.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:9@d8civy112.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:9@d8civy112.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:9@d8civy112.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:13@d8civy108.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:13@d8civy108.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:13@d8civy108.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:18@d8civy135.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:18@d8civy135.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:18@d8civy135.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:19@d8civy084.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:19@d8civy084.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:19@d8civy084.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[mpiexec@d8civy089.crc.nd.edu] HYDT_bscu_wait_for_completion (tools/bootstrap/utils/bscu_wait.c:76): one of the processes terminated badly; aborting
+[mpiexec@d8civy089.crc.nd.edu] HYDT_bsci_wait_for_completion (tools/bootstrap/src/bsci_wait.c:23): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] HYD_pmci_wait_for_completion (pm/pmiserv/pmiserv_pmci.c:218): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] main (ui/mpich/mpiexec.c:344): process manager error waiting for completion
+[d8civy128.crc.nd.edu:mpi_rank_7][error_sighandler] Caught error: Segmentation fault (signal 11)
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 8399 RUNNING AT d8civy128.crc.nd.edu
+=   EXIT CODE: 11
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+[proxy:0:0@d8civy089.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:0@d8civy089.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:0@d8civy089.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:4@d8civy111.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:4@d8civy111.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:4@d8civy111.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:6@d8civy083.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:6@d8civy083.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:6@d8civy083.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:7@d8civy137.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:7@d8civy137.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:7@d8civy137.crc.nd.edu] [proxy:0:10@d8civy129.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:10@d8civy129.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:10@d8civy129.crc.nd.edu] main (pm/pmiserv/pmip.c:206): [proxy:0:11@d8civy116.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:11@d8civy116.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:11@d8civy116.crc.nd.edu] [proxy:0:16@d8civy122.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:16@d8civy122.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:16@d8civy122.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:24@d8civy076.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:24@d8civy076.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:24@d8civy076.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[mpiexec@d8civy089.crc.nd.edu] HYDT_bscu_wait_for_completion (tools/bootstrap/utils/bscu_wait.c:76): one of the processes terminated badly; aborting
+[mpiexec@d8civy089.crc.nd.edu] HYDT_bsci_wait_for_completion (tools/bootstrap/src/bsci_wait.c:23): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] HYD_pmci_wait_for_completion (pm/pmiserv/pmiserv_pmci.c:218): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] main (ui/mpich/mpiexec.c:344): process manager error waiting for completion
+[d8civy128.crc.nd.edu:mpi_rank_7][error_sighandler] Caught error: Segmentation fault (signal 11)
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 8555 RUNNING AT d8civy128.crc.nd.edu
+=   EXIT CODE: 11
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+[proxy:0:0@d8civy089.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:0@d8civy089.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:0@d8civy089.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:5@d8civy110.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:5@d8civy110.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:5@d8civy110.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:8@d8civy118.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:8@d8civy118.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:8@d8civy118.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:9@d8civy112.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:9@d8civy112.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:9@d8civy112.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:11@d8civy116.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:11@d8civy116.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:11@d8civy116.crc.nd.edu] main (pm/pmiserv/pmip.c:206): [proxy:0:12@d8civy141.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:12@d8civy141.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:12@d8civy141.crc.nd.edu] [proxy:0:13@d8civy108.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:13@d8civy108.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:13@d8civy108.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:14@d8civy103.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:14@d8civy103.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:14@d8civy103.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:24@d8civy076.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:24@d8civy076.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:24@d8civy076.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[mpiexec@d8civy089.crc.nd.edu] HYDT_bscu_wait_for_completion (tools/bootstrap/utils/bscu_wait.c:76): one of the processes terminated badly; aborting
+[mpiexec@d8civy089.crc.nd.edu] HYDT_bsci_wait_for_completion (tools/bootstrap/src/bsci_wait.c:23): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] HYD_pmci_wait_for_completion (pm/pmiserv/pmiserv_pmci.c:218): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] main (ui/mpich/mpiexec.c:344): process manager error waiting for completion
+[d8civy128.crc.nd.edu:mpi_rank_7][error_sighandler] Caught error: Segmentation fault (signal 11)
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 8711 RUNNING AT d8civy128.crc.nd.edu
+=   EXIT CODE: 11
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+[proxy:0:0@d8civy089.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:0@d8civy089.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:0@d8civy089.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:1@d8civy134.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:1@d8civy134.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:1@d8civy134.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:5@d8civy110.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:5@d8civy110.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:5@d8civy110.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:22@d8civy127.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:22@d8civy127.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:22@d8civy127.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:23@d8civy095.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:23@d8civy095.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:23@d8civy095.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:24@d8civy076.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:24@d8civy076.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:24@d8civy076.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[mpiexec@d8civy089.crc.nd.edu] HYDT_bscu_wait_for_completion (tools/bootstrap/utils/bscu_wait.c:76): one of the processes terminated badly; aborting
+[mpiexec@d8civy089.crc.nd.edu] HYDT_bsci_wait_for_completion (tools/bootstrap/src/bsci_wait.c:23): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] HYD_pmci_wait_for_completion (pm/pmiserv/pmiserv_pmci.c:218): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] main (ui/mpich/mpiexec.c:344): process manager error waiting for completion
+[d8civy128.crc.nd.edu:mpi_rank_7][error_sighandler] Caught error: Segmentation fault (signal 11)
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 8867 RUNNING AT d8civy128.crc.nd.edu
+=   EXIT CODE: 11
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+[proxy:0:0@d8civy089.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:0@d8civy089.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:0@d8civy089.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:1@d8civy134.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:1@d8civy134.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:1@d8civy134.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:2@d8civy081.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:2@d8civy081.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:2@d8civy081.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:4@d8civy111.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:4@d8civy111.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:4@d8civy111.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:5@d8civy110.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:5@d8civy110.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:5@d8civy110.crc.nd.edu] [proxy:0:6@d8civy083.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:6@d8civy083.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:6@d8civy083.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:7@d8civy137.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:7@d8civy137.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:7@d8civy137.crc.nd.edu] main (pm/pmiserv/pmip.c:206): [proxy:0:8@d8civy118.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:8@d8civy118.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:8@d8civy118.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:9@d8civy112.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:9@d8civy112.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:9@d8civy112.crc.nd.edu] main (pm/pmiserv/pmip.c:206): [proxy:0:10@d8civy129.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:10@d8civy129.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:10@d8civy129.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:11@d8civy116.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:11@d8civy116.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:11@d8civy116.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:12@d8civy141.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:12@d8civy141.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:12@d8civy141.crc.nd.edu] [proxy:0:13@d8civy108.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:13@d8civy108.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:13@d8civy108.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:14@d8civy103.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:14@d8civy103.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:14@d8civy103.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:15@d8civy106.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:15@d8civy106.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:15@d8civy106.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:16@d8civy122.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:16@d8civy122.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:16@d8civy122.crc.nd.edu] [proxy:0:17@d8civy136.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:17@d8civy136.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:17@d8civy136.crc.nd.edu] main (pm/pmiserv/pmip.c:206): [proxy:0:18@d8civy135.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:18@d8civy135.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:18@d8civy135.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:19@d8civy084.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:19@d8civy084.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:19@d8civy084.crc.nd.edu] main (pm/pmiserv/pmip.c:206): [proxy:0:20@d8civy073.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:20@d8civy073.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:20@d8civy073.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:21@d8civy099.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:21@d8civy099.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:21@d8civy099.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:22@d8civy127.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:22@d8civy127.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:22@d8civy127.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:23@d8civy095.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:23@d8civy095.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:23@d8civy095.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:24@d8civy076.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:24@d8civy076.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:24@d8civy076.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[mpiexec@d8civy089.crc.nd.edu] HYDT_bscu_wait_for_completion (tools/bootstrap/utils/bscu_wait.c:76): one of the processes terminated badly; aborting
+[mpiexec@d8civy089.crc.nd.edu] HYDT_bsci_wait_for_completion (tools/bootstrap/src/bsci_wait.c:23): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] HYD_pmci_wait_for_completion (pm/pmiserv/pmiserv_pmci.c:218): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] main (ui/mpich/mpiexec.c:344): process manager error waiting for completion
+[d8civy128.crc.nd.edu:mpi_rank_7][error_sighandler] Caught error: Segmentation fault (signal 11)
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 9023 RUNNING AT d8civy128.crc.nd.edu
+=   EXIT CODE: 11
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+[proxy:0:0@d8civy089.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:0@d8civy089.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:0@d8civy089.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:1@d8civy134.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:1@d8civy134.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:1@d8civy134.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:2@d8civy081.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:2@d8civy081.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:2@d8civy081.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:4@d8civy111.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:4@d8civy111.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:4@d8civy111.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:5@d8civy110.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:5@d8civy110.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:5@d8civy110.crc.nd.edu] main (pm/pmiserv/pmip.c:206): [proxy:0:6@d8civy083.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:6@d8civy083.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:6@d8civy083.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:7@d8civy137.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:7@d8civy137.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:7@d8civy137.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:8@d8civy118.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:8@d8civy118.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:8@d8civy118.crc.nd.edu] [proxy:0:9@d8civy112.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:9@d8civy112.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:9@d8civy112.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:10@d8civy129.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:10@d8civy129.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:10@d8civy129.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:11@d8civy116.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:11@d8civy116.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:11@d8civy116.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:12@d8civy141.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:12@d8civy141.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:12@d8civy141.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:13@d8civy108.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:13@d8civy108.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:13@d8civy108.crc.nd.edu] [proxy:0:14@d8civy103.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:14@d8civy103.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:14@d8civy103.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:15@d8civy106.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:15@d8civy106.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:15@d8civy106.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:16@d8civy122.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:16@d8civy122.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:16@d8civy122.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:17@d8civy136.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:17@d8civy136.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:17@d8civy136.crc.nd.edu] main (pm/pmiserv/pmip.c:206): [proxy:0:18@d8civy135.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:18@d8civy135.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:18@d8civy135.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:19@d8civy084.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:19@d8civy084.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:19@d8civy084.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:20@d8civy073.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:20@d8civy073.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:20@d8civy073.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:21@d8civy099.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:21@d8civy099.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:21@d8civy099.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:22@d8civy127.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:22@d8civy127.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:22@d8civy127.crc.nd.edu] main (pm/pmiserv/pmip.c:206): [proxy:0:23@d8civy095.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:23@d8civy095.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:23@d8civy095.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:24@d8civy076.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:24@d8civy076.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:24@d8civy076.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[mpiexec@d8civy089.crc.nd.edu] HYDT_bscu_wait_for_completion (tools/bootstrap/utils/bscu_wait.c:76): one of the processes terminated badly; aborting
+[mpiexec@d8civy089.crc.nd.edu] HYDT_bsci_wait_for_completion (tools/bootstrap/src/bsci_wait.c:23): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] HYD_pmci_wait_for_completion (pm/pmiserv/pmiserv_pmci.c:218): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] main (ui/mpich/mpiexec.c:344): process manager error waiting for completion
+[d8civy128.crc.nd.edu:mpi_rank_7][error_sighandler] Caught error: Segmentation fault (signal 11)
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 9179 RUNNING AT d8civy128.crc.nd.edu
+=   EXIT CODE: 11
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+[proxy:0:0@d8civy089.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:0@d8civy089.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:0@d8civy089.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:1@d8civy134.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:1@d8civy134.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:1@d8civy134.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:5@d8civy110.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:5@d8civy110.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:5@d8civy110.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:7@d8civy137.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:7@d8civy137.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:7@d8civy137.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:8@d8civy118.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:8@d8civy118.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:8@d8civy118.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:11@d8civy116.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:11@d8civy116.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:11@d8civy116.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:15@d8civy106.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:15@d8civy106.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:15@d8civy106.crc.nd.edu] [proxy:0:18@d8civy135.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:18@d8civy135.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:18@d8civy135.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:21@d8civy099.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:21@d8civy099.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:21@d8civy099.crc.nd.edu] main (pm/pmiserv/pmip.c:206): [proxy:0:22@d8civy127.crc.nd.edu] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:909): assert (!closed) failed
+[proxy:0:22@d8civy127.crc.nd.edu] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:22@d8civy127.crc.nd.edu] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[mpiexec@d8civy089.crc.nd.edu] HYDT_bscu_wait_for_completion (tools/bootstrap/utils/bscu_wait.c:76): one of the processes terminated badly; aborting
+[mpiexec@d8civy089.crc.nd.edu] HYDT_bsci_wait_for_completion (tools/bootstrap/src/bsci_wait.c:23): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] HYD_pmci_wait_for_completion (pm/pmiserv/pmiserv_pmci.c:218): launcher returned error waiting for completion
+[mpiexec@d8civy089.crc.nd.edu] main (ui/mpich/mpiexec.c:344): process manager error waiting for completion
+
+
+
+10.1046,0.119123,0.000560522,0.00649142,10.2365
+8.71632,0.121022,0.000540495,0.00789404,8.85031
+8.5935,0.114805,0.000668287,0.00545955,8.72059
+8.69088,0.121305,0.000525475,0.00617099,8.82291
+8.66896,0.119599,0.000556469,0.00669932,8.7993
+8.72059,0.119192,0.000687122,0.00780892,8.8543
+8.64735,0.120513,0.00055027,0.00672245,8.77847
+8.64089,0.116055,0.000683069,0.00624847,8.76767
+8.71092,0.11527,0.000581026,0.00648046,8.83666
+8.73882,0.120473,0.000806808,0.00743628,8.87387
+8.66734,0.115603,0.000680685,0.0081749,8.79672
+8.69887,0.119972,0.000780821,0.00670266,8.83166
+10.1507,0.120457,0.000689268,0.00633836,10.2832
+8.93663,0.115525,0.000567913,0.00654054,9.06223
+8.59384,0.119638,0.000551701,0.00671935,8.7269
+8.61901,0.12013,0.000663757,0.00657415,8.74982
+8.63291,0.119964,0.00075388,0.00619125,8.76669
+8.62049,0.115641,0.000720024,0.00635886,8.74658
+8.7288,0.11445,0.000562191,0.00621462,8.85429
+8.73768,0.119836,0.000869036,0.00619626,8.86756
+
+
+
+2.96068,0.0402145,0.000318766,0.00131869,3.00678
+2.4785,0.0399134,0.000327826,0.00127673,2.52293
+2.49355,0.0394118,0.00027442,0.00129724,2.53715
+2.54057,0.0396464,0.00061965,0.00128746,2.5847
+2.58217,0.0388095,0.000298977,0.0012939,2.62532
+2.50215,0.0391924,0.000628471,0.00127769,2.54576
+2.47569,0.0385091,0.000274181,0.00130439,2.51893
+2.47634,0.0405381,0.000615358,0.00130725,2.52152
+2.48752,0.038861,0.000289679,0.00131273,2.5319
+2.4871,0.039748,0.00274754,0.00116682,2.53684
+2.48459,0.0379632,0.000654459,0.00129271,2.52718
+2.50865,0.0391865,0.000632286,0.00130701,2.55354
+2.47934,0.0387125,0.000264168,0.00131845,2.52508
+2.48747,0.0389321,0.000314474,0.00127769,2.5321
+2.51594,0.0384252,0.000266552,0.00129223,2.55902
+2.5651,0.0392466,0.000617981,0.00129604,2.61155
+2.52055,0.0398953,0.000339031,0.00128651,2.56584
+2.56498,0.0403342,0.000318289,0.00130796,2.60994
+2.4779,0.0385618,0.000290155,0.00128865,2.52377
+2.4891,0.0399897,0.000375986,0.00129104,2.53428
+
+
+
+2.09711,0.0305598,0.000583887,0.000786543,2.13326
+1.96449,0.0343421,0.000562429,0.000801802,2.00304
+1.9441,0.0340092,0.000300407,0.00112295,1.98056
+1.97251,0.0358875,0.000305176,0.000794649,2.01201
+1.95264,0.0362036,0.000603437,0.00112009,1.99306
+1.94932,0.0365281,0.000259638,0.00112009,1.99087
+2.03598,0.0311687,0.000296831,0.000787973,2.07184
+1.9567,0.0363994,0.000579119,0.00105333,1.998
+1.95129,0.0357461,0.000604391,0.00115013,1.9912
+2.07337,0.030206,0.00026536,0.000813961,2.10744
+1.96153,0.0355785,0.00059104,0.000960827,2.00194
+1.96354,0.0367494,0.000274658,0.000796795,2.00724
+1.95994,0.0353837,0.00181746,0.000936985,2.00136
+1.95091,0.0361319,0.000588179,0.0011425,1.99337
+1.96874,0.0361409,0.000310898,0.000802755,2.01015
+2.0388,0.0309601,0.000286579,0.00080657,2.0746
+2.00815,0.0321269,0.000567913,0.000797987,2.04586
+2.04052,0.0311048,0.00338984,0.000716448,2.07961
+1.94169,0.032975,0.000605583,0.00114131,1.97882
+1.97968,0.0362368,0.000317097,0.000808477,2.02277
+
+
+
+13.3419,0.202536,0.000935555,0.00583148,13.5557
+12.0992,0.187824,0.000876904,0.0045135,12.2954
+12.1051,0.187038,0.000785351,0.00601935,12.3029
+12.1392,0.186875,0.000724077,0.00528502,12.3384
+12.0715,0.187557,0.00069809,0.0055809,12.2722
+11.9716,0.187105,0.00059247,0.00444818,12.167
+12.4582,0.195791,0.000691175,0.0054996,12.6641
+12.487,0.195618,0.00302052,0.00440359,12.6957
+12.1088,0.188077,0.000716209,0.00493979,12.3093
+12.0611,0.197787,0.000634193,0.00446987,12.2667
+12.0549,0.18808,0.000679255,0.00594258,12.2541
+12.1798,0.199231,0.00146008,0.00448179,12.3887
+12.4644,0.193352,0.000655413,0.00452614,12.6656
+12.074,0.189897,0.000606537,0.00530338,12.2748
+12.1045,0.195994,0.00077939,0.0056417,12.3099
+12.4305,0.190439,0.000623941,0.00442147,12.6296
+12.1024,0.189823,0.000601292,0.0043714,12.3016
+11.9683,0.191379,0.00061512,0.00566673,12.1693
+12.4507,0.188964,0.000624895,0.00435853,12.6477
+12.0482,0.198392,0.000658512,0.00437927,12.2544
+
+
+
+4.98689,0.0564573,0.000633955,0.00112009,5.04956
+4.23797,0.0551591,0.000305414,0.00111246,4.29832
+4.07536,0.0550823,0.000330687,0.00113678,4.13451
+4.11691,0.0561781,0.000607491,0.00113273,4.17774
+4.16421,0.057595,0.000601768,0.00112629,4.22634
+4.30292,0.0576611,0.000316858,0.00114012,4.36498
+4.11066,0.0556657,0.000357866,0.00113297,4.17331
+4.10289,0.0575562,0.0010941,0.00111413,4.16662
+4.07363,0.0578105,0.000580311,0.00111508,4.1353
+4.12939,0.0562277,0.000643253,0.0011425,4.19183
+4.09099,0.058151,0.000318527,0.0011313,4.15395
+4.28244,0.0556126,0.000681877,0.00111175,4.34546
+4.07747,0.0575294,0.00034523,0.00111651,4.13976
+4.24005,0.0566516,0.00349212,0.000981569,4.30537
+4.26233,0.0547605,0.000336885,0.00112247,4.32224
+4.09795,0.0565996,0.000629663,0.0011282,4.16176
+4.21449,0.0572226,0.000341654,0.00113297,4.27553
+4.19303,0.055706,0.000308514,0.00113106,4.25413
+4.16161,0.0555127,0.000345469,0.00111747,4.22279
+4.15269,0.0554295,0.000334978,0.00113869,4.21312
+
+
+
+13.6309,0.141609,0.000668526,0.00239277,13.7786
+12.8284,0.17089,0.000884056,0.0024848,13.0053
+13.0567,0.159522,0.000783682,0.00245905,13.222
+13.2418,0.143432,0.000701904,0.00238323,13.3907
+13.2543,0.151047,0.000882387,0.00241351,13.412
+13.3474,0.143208,0.000730038,0.00243568,13.4968
+12.8632,0.163522,0.000800371,0.00247693,13.0355
+12.8645,0.170224,0.000810862,0.00248241,13.0434
+13.0467,0.158212,0.000929356,0.00238204,13.2108
+13.403,0.149437,0.00063467,0.00243354,13.5581
+13.1993,0.142672,0.00103951,0.00236559,13.3481
+12.8628,0.164035,0.000843287,0.00244713,13.0342
+12.8873,0.163357,0.00102592,0.00257564,13.0572
+12.7918,0.174683,0.000791311,0.00249386,12.9723
+12.8383,0.165985,0.000626564,0.00246334,13.0102
+12.9288,0.158886,0.000641346,0.00251532,13.0933
+13.0497,0.151458,0.00065732,0.00247312,13.2093
+12.8463,0.164957,0.000622988,0.00252247,13.0172
+12.9464,0.163953,0.000785589,0.00249743,13.1167
+12.9387,0.166625,0.000654697,0.00251484,13.1135
+
+
+
+11.2229,0.131187,0.000429869,0.00195169,11.361
+10.2612,0.12737,0.000485897,0.00183105,10.3942
+10.619,0.124331,0.000405073,0.00183892,10.7512
+10.4425,0.130276,0.000478983,0.00188971,10.58
+10.7135,0.125109,0.000463486,0.00185585,10.8443
+10.3229,0.131091,0.000741482,0.00183916,10.4595
+10.3512,0.124028,0.000446796,0.00185966,10.4826
+10.6134,0.12361,0.000483751,0.00184441,10.7417
+10.236,0.125141,0.000752687,0.00180984,10.3669
+10.3618,0.124005,0.000698566,0.00184107,10.4916
+10.3234,0.124133,0.00049901,0.0018878,10.4524
+10.2907,0.129866,0.000692606,0.00185084,10.4286
+10.3588,0.122999,0.000679493,0.00183511,10.4886
+10.6798,0.124794,0.000396013,0.00185704,10.8094
+10.2898,0.130426,0.00352526,0.00166607,10.4295
+10.2657,0.12349,0.000695229,0.00189686,10.3948
+10.2283,0.131253,0.000463009,0.00190282,10.3634
+10.28,0.130682,0.00067687,0.00185561,10.4155
+10.2382,0.125196,0.000481844,0.00184917,10.3686
+10.2734,0.133525,0.00136352,0.00176382,10.4126
+
+
+
+6.32127,0.0785635,0.000654936,0.0010941,6.40392
+5.75205,0.0792849,0.00038147,0.00107789,5.83511
+5.83362,0.0762143,0.000363588,0.00108385,5.91453
+5.77991,0.0797546,0.000357628,0.00108695,5.86438
+5.80102,0.0790849,0.00073719,0.0010891,5.88498
+6.78876,0.078923,0.000657082,0.0010798,6.87203
+5.76285,0.0763707,0.000720739,0.0010829,5.84347
+6.02948,0.079792,0.000369072,0.0010891,6.11482
+5.79659,0.0761778,0.000618458,0.00109792,5.87866
+5.793,0.0799375,0.000377655,0.00108027,5.87829
+5.78468,0.0770664,0.000781775,0.0010798,5.86763
+6.96044,0.0803642,0.000637054,0.00109553,7.04566
+5.81284,0.0766981,0.00065732,0.00110936,5.89639
+5.92912,0.0766382,0.000360012,0.00110459,6.00942
+6.00037,0.0792863,0.000365496,0.00112081,6.08325
+5.94707,0.0790877,0.000366211,0.00109673,6.03184
+5.79763,0.0760093,0.000384092,0.0010972,5.87774
+5.76093,0.0789554,0.000646353,0.00109363,5.84383
+5.76446,0.0756428,0.000600815,0.0010705,5.84754
+6.01344,0.0797482,0.00062108,0.00110269,6.09722
+
+
+
+7.92345,0.086885,0.000653744,0.00114298,8.01481
+7.18508,0.0895803,0.000616312,0.00113988,7.2794
+7.13427,0.0875587,0.000758886,0.00113821,7.22866
+7.34269,0.091588,0.000413895,0.00115347,7.43926
+7.19044,0.0877891,0.000671625,0.00114036,7.2834
+7.26938,0.0920017,0.000844002,0.00114989,7.36746
+7.34931,0.0867655,0.000643969,0.0011425,7.44061
+7.25666,0.0875392,0.000637293,0.00114298,7.34883
+7.17761,0.0910068,0.000470638,0.0011425,7.27339
+7.14144,0.0923181,0.000760078,0.00114441,7.2388
+8.29257,0.0911741,0.00075984,0.00116491,8.38882
+7.14359,0.0876517,0.00041914,0.00115728,7.23539
+7.15448,0.0917625,0.000644445,0.00114012,7.25266
+7.13156,0.0904868,0.000604868,0.00114799,7.22725
+7.42936,0.0915802,0.000413418,0.00115252,7.52539
+7.10092,0.08687,0.000427485,0.00113511,7.1946
+7.14288,0.0888512,0.000465393,0.00113702,7.23906
+7.17356,0.0875094,0.000716448,0.00114489,7.26536
+7.17835,0.0921388,0.00071907,0.00115657,7.27776
+7.14238,0.0915787,0.000423431,0.00115657,7.23765
+
+
+
+3.29955,0.0308912,0.000302792,0.000535727,3.33328
+2.52704,0.0319569,0.000594139,0.000535011,2.56213
+2.53485,0.0322647,0.000629425,0.000547171,2.57106
+2.52155,0.0307539,0.000636816,0.000533104,2.55847
+2.51691,0.0312059,0.00077033,0.000537872,2.55162
+2.60378,0.0326741,0.00347495,0.000492573,2.64335
+2.51688,0.0318418,0.000605583,0.000532866,2.5529
+2.49846,0.0311472,0.000594854,0.000546455,2.53682
+2.49905,0.032023,0.000309944,0.000549793,2.53556
+2.61768,0.0319102,0.000259399,0.000550747,2.65326
+2.51422,0.0308766,0.000282526,0.00053525,2.5508
+2.50202,0.0314698,0.000353336,0.000535965,2.53678
+2.49932,0.0314956,0.000579596,0.000529528,2.53491
+2.55532,0.032094,0.000300646,0.000534058,2.59187
+2.51405,0.0313284,0.000581741,0.000538349,2.54864
+2.54089,0.0318816,0.000615597,0.000534773,2.57638
+2.52271,0.0315599,0.000623703,0.000536203,2.55741
+2.46313,0.0311422,0.000355959,0.000534773,2.50017
+2.50008,0.0321882,0.000602961,0.000538826,2.53668
+2.54797,0.0312393,0.000268936,0.000537872,2.58253
+
+
+
+3.10465,0.0364859,0.000294447,0.000471115,3.14483
+2.89504,0.0360317,0.0002985,0.000482559,2.9369
+3.19747,0.0373366,0.000346422,0.000469923,3.23899
+2.88154,0.0361598,0.00061202,0.00047636,2.9209
+2.89243,0.038054,0.000600338,0.000533342,2.93483
+2.89683,0.0356879,0.000309229,0.000515223,2.9355
+2.86688,0.0363796,0.000654459,0.000474215,2.9062
+2.97504,0.0359819,0.000290632,0.000470877,3.0152
+2.88153,0.0373213,0.00034523,0.000469446,2.92212
+2.86171,0.0361054,0.000653028,0.000481129,2.9019
+2.87662,0.0372384,0.000338316,0.000477552,2.91679
+2.87987,0.0365305,0.000625849,0.00046587,2.92076
+2.85945,0.0371406,0.000965834,0.000463247,2.90098
+2.86991,0.0356338,0.00027585,0.000478029,2.91077
+2.90885,0.0361645,0.000298977,0.000466347,2.94959
+2.8694,0.0367603,0.000624657,0.000443935,2.91256
+2.85336,0.0366504,0.000627995,0.000458956,2.89322
+2.86275,0.0363066,0.000289917,0.000475883,2.90334
+2.87601,0.0371885,0.000326633,0.00046587,2.91827
+2.87028,0.0364907,0.000328779,0.000467777,2.90888
+
+
+
+3.54443,0.040791,0.000608206,0.000547171,3.58864
+3.22621,0.0419014,0.000315189,0.000540257,3.27173
+3.38149,0.0408289,0.000615358,0.000542164,3.42579
+3.1982,0.0413888,0.000333548,0.000539541,3.2453
+3.2218,0.0421066,0.000644445,0.000551939,3.26882
+3.2035,0.0414979,0.00061059,0.000557423,3.2509
+3.22854,0.0414524,0.000659227,0.000538349,3.2756
+3.2004,0.0414658,0.000612259,0.000554562,3.2455
+3.21644,0.0404272,0.000272036,0.000551462,3.26011
+3.19899,0.041842,0.000342369,0.000539541,3.24366
+3.21175,0.0404997,0.000298738,0.000543356,3.25514
+3.2859,0.0421,0.00056982,0.000537157,3.33199
+3.2349,0.0405715,0.00124741,0.000535011,3.2793
+3.32685,0.0420055,0.000587225,0.000542402,3.37418
+3.32578,0.0398803,0.000294209,0.000554562,3.37078
+3.2086,0.0400491,0.000330448,0.000540495,3.25544
+3.19647,0.0421667,0.000586987,0.000546455,3.24205
+3.33865,0.0417974,0.000587702,0.000550747,3.38289
+3.19727,0.0416129,0.000317097,0.000553131,3.24567
+3.20129,0.042258,0.000619888,0.000549555,3.24871
+
+
+
+6.72175,0.0770741,0.000430346,0.000948191,6.80399
+6.23912,0.0768404,0.000570536,0.000954151,6.32048
+6.43453,0.0728309,0.000359058,0.000925064,6.51229
+6.62697,0.0773022,0.000636816,0.000934362,6.71171
+6.22918,0.0740774,0.000639915,0.000957012,6.3108
+6.19489,0.0733829,0.000359774,0.000945807,6.27478
+6.36725,0.0740576,0.00036931,0.000883818,6.44532
+6.22218,0.124336,0.000364304,0.000905991,6.35033
+6.91532,0.0732646,0.00339365,0.00079608,6.99538
+6.39428,0.0727663,0.000365734,0.000863314,6.47083
+6.43113,0.074409,0.000640869,0.00092411,6.51
+6.21607,0.0759723,0.000612259,0.000876904,6.29568
+6.18097,0.0734334,0.000760794,0.000889301,6.2583
+6.464,0.0736864,0.000666142,0.000893831,6.54124
+6.17054,0.0728798,0.000649691,0.000896454,6.25114
+6.16432,0.0753777,0.000412226,0.000890255,6.2431
+6.19956,0.0765526,0.000649929,0.000910044,6.28202
+6.25164,0.0733862,0.000371218,0.000889778,6.32961
+6.20882,0.0771713,0.000867605,0.000882387,6.29328
+6.48093,0.122254,0.000431299,0.000901461,6.6074
+
+
+
+9.67067,0.108588,0.000474215,0.000971317,9.78395
+8.96116,0.10645,0.000648737,0.000994921,9.07538
+9.13411,0.116869,0.0004673,0.000983238,9.25717
+9.11293,0.104015,0.000640869,0.000991106,9.22326
+9.00847,0.109554,0.000720739,0.00100732,9.1241
+9.34445,0.100953,0.000467539,0.000994682,9.44911
+9.48299,0.106259,0.0004704,0.000977039,9.5942
+8.97981,0.10208,0.000464201,0.000974178,9.0866
+9.07376,0.107011,0.000691414,0.000982523,9.18626
+9.03651,0.101269,0.000614643,0.00101829,9.14208
+9.01453,0.11458,0.000647068,0.000854731,9.13569
+9.14604,0.106587,0.0006423,0.0010097,9.25639
+9.41377,0.108203,0.000466108,0.000901937,9.5271
+9.0635,0.108327,0.00075841,0.000992298,9.1766
+9.00787,0.116964,0.000502825,0.000936747,9.13107
+9.03684,0.108674,0.000661612,0.000879526,9.15317
+9.0107,0.104377,0.000471592,0.000971317,9.1202
+9.27346,0.105839,0.000458241,0.00101733,9.38341
+9.03567,0.192098,0.000618458,0.000992775,9.23315
+9.29722,0.201833,0.000632286,0.000859261,9.503
+
+
+
+33.8136,0.37517,0.00135422,0.00958776,34.203
+29.5997,0.308277,0.00130892,0.00963974,29.9222
+29.2162,0.294132,0.00132275,0.0095706,29.5266
+29.3714,0.442966,0.00134587,0.0132513,29.8348
+29.0557,0.386416,0.00132227,0.00958943,29.458
+30.1703,0.302309,0.00133109,0.00966191,30.4891
+29.071,0.373055,0.00134206,0.00965428,29.4583
+29.0705,0.339717,0.00132465,0.0130231,29.4309
+29.0632,0.42156,0.00137424,0.0112722,29.5033
+29.5156,0.290698,0.00139308,0.00956845,29.8204
+30.0066,0.367665,0.0013175,0.0100682,30.3911
+28.5691,0.380142,0.00131941,0.0130432,28.9707
+29.943,0.290163,0.0013063,0.00958538,30.2491
+28.5201,0.359922,0.001333,0.00958395,28.8944
+29.0951,0.330197,0.00133991,0.0095861,29.4395
+29.8141,0.437977,0.00133514,0.0111535,30.2693
+28.9547,0.375543,0.00499892,0.0126157,29.3558
+29.2121,0.292089,0.00131965,0.0095675,29.5198
+29.0791,0.372519,0.0013392,0.00958443,29.4659
+28.9668,0.293476,0.00135255,0.00965476,29.2771
+
+
+
+24.2392,0.293587,0.00109911,0.00228524,24.5399
+21.2801,0.227464,0.00107813,0.00217199,21.5153
+21.7203,0.293473,0.00111198,0.00211382,22.0195
+21.3083,0.225446,0.0010643,0.00210595,21.5412
+21.2088,0.307103,0.00108171,0.00226045,21.5237
+21.4262,0.225471,0.001086,0.00214148,21.6577
+21.364,0.23758,0.00109673,0.00202656,21.6084
+21.3323,0.298115,0.00108314,0.0021081,21.6366
+21.7965,0.236115,0.00108171,0.00214529,22.0391
+21.819,0.302486,0.0011003,0.00213289,22.1299
+21.1993,0.236602,0.00109291,0.00228786,21.4419
+21.2573,0.365655,0.001091,0.00194836,21.6288
+21.1741,0.226735,0.00108886,0.00211716,21.4064
+21.8219,0.308976,0.00109076,0.00203991,22.1377
+22.075,0.227615,0.00106955,0.00210333,22.3084
+21.2615,0.227661,0.00107431,0.00206232,21.4958
+21.8401,0.293588,0.00107551,0.00215149,22.1426
+21.1845,0.236609,0.00111008,0.00230622,21.427
+21.3225,0.293025,0.00107408,0.00215673,21.622
+21.3058,0.236344,0.00107551,0.0021255,21.5498
+
+
+
+5.58302,0.0638425,0.000705719,0.000627041,5.65103
+5.12079,0.0628643,0.000324249,0.000625372,5.18905
+5.11291,0.0611207,0.000661373,0.000614643,5.1781
+5.12322,0.063154,0.000621796,0.000665665,5.19015
+5.11723,0.060982,0.00184083,0.000641108,5.18283
+5.43823,0.0609934,0.000633478,0.000602245,5.50468
+5.38516,0.0606959,0.000683069,0.000595093,5.45228
+5.11478,0.0610812,0.000325203,0.000597954,5.18007
+5.16985,0.0620732,0.000618219,0.000602961,5.23505
+5.12181,0.0624712,0.000584602,0.000602007,5.19069
+5.25959,0.0625391,0.000293732,0.000606298,5.3264
+5.34759,0.0635936,0.000605345,0.000593185,5.41522
+5.32497,0.0610061,0.000624895,0.000579596,5.3901
+5.28235,0.0605314,0.000601292,0.000597477,5.34981
+5.30518,0.0627711,0.000353575,0.000602245,5.37027
+5.44993,0.0636325,0.000322104,0.000610352,5.51667
+5.64086,0.060849,0.00032115,0.000608683,5.70673
+5.22175,0.0639088,0.000344753,0.000605345,5.28895
+5.10065,0.0622005,0.000312328,0.000608444,5.16623
+5.25978,0.062336,0.000622988,0.00059247,5.32526
+
+
+
+7.62494,0.0906773,0.000652075,0.000463724,7.72097
+7.45386,0.155661,0.000384331,0.000458717,7.61294
+7.34054,0.0850987,0.000417471,0.000445843,7.42928
+7.11924,0.0852127,0.000425577,0.000442743,7.21109
+7.1436,0.0885341,0.000613451,0.000463247,7.23849
+7.32421,0.0896113,0.000629663,0.000442982,7.41991
+7.10666,0.089577,0.000649214,0.000450611,7.19869
+7.14665,0.0879836,0.000418901,0.000456095,7.23942
+7.1066,0.0887334,0.000627518,0.000446796,7.19996
+7.10721,0.0899458,0.000641108,0.000442266,7.20158
+7.08469,0.0870657,0.000394344,0.000447035,7.17451
+7.11195,0.0856218,0.000636339,0.000454187,7.2026
+7.12709,0.0898919,0.000664473,0.000436783,7.22022
+7.08453,0.0913236,0.00045228,0.000442505,7.17925
+7.1598,0.091759,0.000642061,0.000441313,7.25529
+7.12071,0.0910156,0.000442505,0.000442266,7.21887
+7.1106,0.0876615,0.000386715,0.000442028,7.20112
+7.17131,0.160835,0.000750303,0.000457048,7.33797
+7.09708,0.088866,0.000643492,0.000442743,7.19002
+7.12663,0.0878808,0.000644922,0.000458956,7.21893
+
+
+
+17.4362,0.194556,0.000990152,0.000549555,17.6342
+15.2423,0.168268,0.000420809,0.000500917,15.4135
+15.1728,0.236576,0.000741005,0.000483274,15.4151
+15.3223,0.167744,0.000692606,0.000509501,15.4948
+15.3352,0.167556,0.000695705,0.000502586,15.5065
+15.6185,0.232881,0.000455856,0.000492334,15.8541
+15.8291,0.169532,0.000425816,0.000521898,16.0016
+15.812,0.169053,0.000711679,0.000488758,15.9847
+16.3895,0.250039,0.000717163,0.000496864,16.6446
+16.4838,0.176924,0.000772715,0.000488997,16.6638
+16.2764,0.175487,0.000771046,0.000486135,16.4575
+16.8496,0.230798,0.000770569,0.000485897,17.0849
+15.4623,0.167598,0.000699282,0.000508547,15.6338
+17.1134,0.167114,0.00047636,0.000510454,17.2848
+15.4685,0.169155,0.000436306,0.000520229,15.641
+16.2407,0.443655,0.00041008,0.000520945,16.6891
+16.8089,0.191702,0.000786066,0.000495911,17.0037
+15.417,0.174169,0.000473738,0.000496387,15.5948
+16.1059,0.199012,0.000470161,0.000522852,16.3076
+15.9607,0.169064,0.000723124,0.000523567,16.1372
+
+
+
+12.3263,0.125367,0.000452042,0.000404596,12.4544
+9.82782,0.0945816,0.000447512,0.00164843,9.93097
+9.46371,0.0950506,0.00062418,0.000392914,9.56374
+9.72982,0.0993619,0.000624895,0.000416279,9.83293
+9.64731,0.0991411,0.000464201,0.000393629,9.7504
+9.70949,0.098717,0.000451326,0.000409126,9.81118
+10.2493,0.0967987,0.00201392,0.000394821,10.3544
+9.73264,0.096864,0.000628471,0.000402927,9.83292
+9.49635,0.101576,0.000448465,0.000409842,9.60234
+9.43077,0.161862,0.000459194,0.000406742,9.59665
+9.45006,0.0947721,0.000721216,0.000393391,9.548
+10.021,0.0988154,0.000457287,0.000392914,10.1227
+9.79452,0.098448,0.000456095,0.000356913,9.8957
+9.60113,0.096668,0.000647783,0.000393391,9.70161
+9.66804,0.094502,0.000605106,0.000394821,9.7672
+9.45634,0.0949833,0.000607014,0.000413895,9.55611
+9.37685,0.0957701,0.000451803,0.000407696,9.47547
+9.64071,0.0966337,0.000458241,0.000414133,9.74245
+9.4497,0.100415,0.000448465,0.0016284,9.55552
+9.33424,0.170193,0.000673294,0.000392437,9.50932
+
+
+
+18.4373,0.168034,0.000786304,0.000560045,18.6086
+15.8974,0.168485,0.000618696,0.000484228,16.0701
+16.0415,0.238834,0.00526786,0.000433683,16.2885
+16.5587,0.176899,0.000645876,0.00047493,16.7392
+16.1033,0.176083,0.000630379,0.000487804,16.2846
+16.5589,0.248335,0.00108695,0.000490427,16.812
+15.9442,0.176264,0.000797749,0.000471592,16.124
+15.858,0.16812,0.00234032,0.000442743,16.0318
+16.3072,0.25001,0.0020237,0.000514984,16.5639
+16.2936,0.166929,0.000813961,0.000487804,16.4663
+17.2865,0.176236,0.000734806,0.000491619,17.4672
+16.5322,0.36352,0.000627279,0.000498533,16.8989
+15.4205,0.175647,0.000620604,0.00050211,15.5989
+15.6384,0.167612,0.000833035,0.000486612,15.8119
+17.0424,0.22298,0.000636816,0.000489712,17.2708
+15.475,0.167554,0.00072813,0.000490189,15.6458
+16.2681,0.168688,0.000631094,0.000484705,16.442
+15.9121,0.253781,0.000752926,0.00047636,16.1715
+15.646,0.175689,0.000624657,0.000473976,15.8259
+16.3318,0.17223,0.000816822,0.000474215,16.5088
+
+
+
+14.2957,0.226685,0.000452757,0.000466347,14.5261
+14.669,0.143698,0.000490189,0.000386,14.8165
+13.9963,0.151212,0.00353384,0.000451088,14.1535
+13.6109,0.146319,0.000468969,0.000403166,13.7637
+14.073,0.229149,0.00212145,0.000407219,14.3072
+13.8677,0.146643,0.000459671,0.000401974,14.0175
+14.0661,0.157129,0.000450611,0.000398397,14.226
+14.3157,0.148502,0.000437975,0.000377178,14.4674
+13.5644,0.219109,0.000457764,0.000370979,13.7887
+13.9929,0.146483,0.000693798,0.000467062,14.1452
+13.7516,0.146643,0.00210881,0.000396729,13.9027
+13.6937,0.147931,0.000517845,0.000374556,13.8458
+14.5125,0.215508,0.00163841,0.000400782,14.7337
+14.7848,0.143178,0.000463247,0.00043869,14.9312
+15.4077,0.151601,0.000711918,0.000421047,15.5623
+14.3146,0.217192,0.000739336,0.000451326,14.5363
+14.8567,0.144655,0.000520706,0.00039196,15.0069
+13.7779,0.147637,0.00050807,0.00040102,13.9288
+13.9886,0.15397,0.00208616,0.00046277,14.1471
+14.701,0.215045,0.000444174,0.000396013,14.9191
 
 
 
