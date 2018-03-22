@@ -12,37 +12,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c65b864-9431-4078-9657-58a0aa3c15cb" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plots/Balanced/BDR.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plots/Balanced/m1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plots/Balanced/m10.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plots/Balanced/m11.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plots/Balanced/m12.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plots/Balanced/m13.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plots/Balanced/m14.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plots/Balanced/m15.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plots/Balanced/m16.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plots/Balanced/m17.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plots/Balanced/m18.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plots/Balanced/m19.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plots/Balanced/m2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plots/Balanced/m20.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plots/Balanced/m21.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plots/Balanced/m22.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plots/Balanced/m23.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plots/Balanced/m24.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plots/Balanced/m25.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plots/Balanced/m3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plots/Balanced/m4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plots/Balanced/m5.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plots/Balanced/m6.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plots/Balanced/m7.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plots/Balanced/m8.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plots/Balanced/m9.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/50run_data.xlsx" afterPath="$PROJECT_DIR$/50run_data.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m1.pdf" afterPath="$PROJECT_DIR$/plots/Balanced/m1.pdf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/Mval.txt" afterPath="$PROJECT_DIR$/plots/Balanced/Mval.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/balanced.m" afterPath="$PROJECT_DIR$/plots/Balanced/balanced.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m11l.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m11l.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m11r.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m11r.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m12l.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m12l.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m12r.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m12r.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m13l.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m13l.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m13r.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m13r.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m14l.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m14l.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m14r.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m14r.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m15l.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m15l.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m15r.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m15r.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m16l.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m16l.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m16r.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m16r.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m17l.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m17l.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m17r.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m17r.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m18l.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m18l.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m18r.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m18r.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m19l.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m19l.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m19r.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m19r.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m20l.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m20l.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m20r.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m20r.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m21l.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m21l.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m21r.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m21r.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m22l.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m22l.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m22r.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m22r.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m23l.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m23l.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m23r.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m23r.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m24l.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m24l.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m24r.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m24r.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m25l.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m25l.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m25r.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m25r.txt" />
     </list>
     <ignored path="Distrubuted_SpMV.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,8 +69,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="639" column="57" lean-forward="true" selection-start-line="639" selection-start-column="57" selection-end-line="639" selection-end-column="57" />
+            <state relative-caret-position="269">
+              <caret line="643" column="41" lean-forward="true" selection-start-line="643" selection-start-column="41" selection-end-line="643" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -540,15 +543,15 @@
       <workItem from="1519236041756" duration="4063000" />
       <workItem from="1519338354802" duration="57000" />
       <workItem from="1519613665019" duration="1468000" />
-      <workItem from="1521072470064" duration="5013000" />
+      <workItem from="1521072470064" duration="6280000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="875617000" />
+    <option name="totallyTimeSpent" value="876884000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="31" width="1853" height="993" extended-state="0" />
+    <frame x="0" y="31" width="1853" height="993" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17754991" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -844,8 +847,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="639" column="57" lean-forward="true" selection-start-line="639" selection-start-column="57" selection-end-line="639" selection-end-column="57" />
+        <state relative-caret-position="269">
+          <caret line="643" column="41" lean-forward="true" selection-start-line="643" selection-start-column="41" selection-end-line="643" selection-end-column="41" />
           <folding />
         </state>
       </provider>

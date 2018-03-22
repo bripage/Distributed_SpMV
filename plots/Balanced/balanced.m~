@@ -1,5 +1,5 @@
 clear; clc;
-Nfiles = 25;
+Nfiles = 5;
 PHI = zeros(Nfiles,1);
 B = zeros(Nfiles,1);
 Ms = [1270432 525825 643994 1219574 259789 147900 1062400 221119 589446 415863 227632 245874 79171 71505 83334 155331 116158 1102824 381689 97578 63838 72000 38120 45101 22283];
@@ -60,7 +60,6 @@ title('Normalized MPI Reduction Time', 'FontSize', 24);
 end
 
 x1 = linspace(1,100,100)';
-%y1 = log2(x1);
 y1 = log2(x1);
 x2 = linspace(81,121,100)';
 y2 = 1.5*log2(x2-81);
