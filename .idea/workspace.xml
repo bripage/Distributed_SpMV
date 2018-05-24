@@ -12,40 +12,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c65b864-9431-4078-9657-58a0aa3c15cb" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/1proc_balanced_varyingThreadCounts.xlsx" afterPath="$PROJECT_DIR$/1proc_balanced_varyingThreadCounts.xlsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/50run_data.xlsx" afterPath="$PROJECT_DIR$/50run_data.xlsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Distributed SpMV Data.xlsx" afterPath="$PROJECT_DIR$/Distributed SpMV Data.xlsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/Mval.txt" afterPath="$PROJECT_DIR$/plots/Balanced/Mval.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/balanced.m" afterPath="$PROJECT_DIR$/plots/Balanced/balanced.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m11l.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m11l.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m11r.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m11r.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m12l.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m12l.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m12r.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m12r.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m13l.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m13l.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m13r.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m13r.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m14l.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m14l.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m14r.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m14r.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m15l.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m15l.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m15r.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m15r.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m16l.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m16l.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m16r.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m16r.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m17l.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m17l.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m17r.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m17r.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m18l.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m18l.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m18r.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m18r.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m19l.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m19l.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m19r.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m19r.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m20l.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m20l.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m20r.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m20r.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m21l.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m21l.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m21r.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m21r.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m22l.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m22l.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m22r.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m22r.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m23l.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m23l.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m23r.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m23r.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m24l.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m24l.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m24r.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m24r.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m25l.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m25l.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots/Balanced/m25r.txt" afterPath="$PROJECT_DIR$/plots/Balanced/m25r.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
     </list>
     <ignored path="Distrubuted_SpMV.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -69,8 +40,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="643" column="41" lean-forward="true" selection-start-line="643" selection-start-column="41" selection-end-line="643" selection-end-column="41" />
+            <state relative-caret-position="600">
+              <caret line="711" column="47" lean-forward="true" selection-start-line="711" selection-start-column="47" selection-end-line="711" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -212,9 +183,10 @@
   </component>
   <component name="OCFindUsagesOptions" text="false" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="y" value="31" />
-    <option name="width" value="1853" />
-    <option name="height" value="993" />
+    <option name="x" value="-1920" />
+    <option name="y" value="23" />
+    <option name="width" value="1920" />
+    <option name="height" value="1009" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -544,26 +516,29 @@
       <workItem from="1519338354802" duration="57000" />
       <workItem from="1519613665019" duration="1468000" />
       <workItem from="1521072470064" duration="6280000" />
+      <workItem from="1525007993608" duration="508000" />
+      <workItem from="1526427149875" duration="590000" />
+      <workItem from="1526824883080" duration="2432000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="876884000" />
+    <option name="totallyTimeSpent" value="880414000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="31" width="1853" height="993" extended-state="1" />
+    <frame x="-1920" y="23" width="1920" height="1009" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17754991" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17708333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32834226" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290735" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.524024" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -833,7 +808,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -847,8 +821,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="643" column="41" lean-forward="true" selection-start-line="643" selection-start-column="41" selection-end-line="643" selection-end-column="41" />
+        <state relative-caret-position="600">
+          <caret line="711" column="47" lean-forward="true" selection-start-line="711" selection-start-column="47" selection-end-line="711" selection-end-column="47" />
           <folding />
         </state>
       </provider>

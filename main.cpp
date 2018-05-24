@@ -667,11 +667,11 @@ int main(int argc, char *argv[]) {
 			if (control.debug && control.myId == 0) std::cout << "MPI Reduction complete" << std::endl;
 			reductionEndTime = MPI_Wtime();
 
-			/*
 			 *      MPI GATHER FROM ROW MASTERS TO GLOBAL MASTER
 			 */
 			if (control.barrier) MPI_Barrier(control.col_comm);
 			masterGatherStart = MPI_Wtime();
+			/*
 			if (control.debug && control.myId == 0) std::cout << "Starting MPI Gather" << std::endl;
 			if (control.myId % control.clusterCols == 0) {
 				if (control.col_rank == 0) {
